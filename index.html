@@ -12,28 +12,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <style>
 :root {
-  /* ── DARK (default) ── */
-  --bg:#0d1117; --surface:#161b22; --surface2:#1c2330; --surface3:#21272f;
-  --border:#21282f; --border2:#2d3748; --border3:#3d4752;
-  --text:#e6edf3; --text2:#8b949e; --text3:#484f58;
-  --navy:#1f4e79; --accent:#3b82f6; --accent2:#1d4ed8;
-  --s-ip-bg:#2d2008; --s-ip-t:#fbbf24; --s-ip-b:#92400e;
-  --s-ns-bg:#161b22; --s-ns-t:#8b949e; --s-ns-b:#30363d;
-  --s-bl-bg:#2d0f0f; --s-bl-t:#f87171; --s-bl-b:#7f1d1d;
-  --s-cp-bg:#0d2d1a; --s-cp-t:#4ade80; --s-cp-b:#14532d;
-  --s-pp-bg:#1e1030; --s-pp-t:#c084fc; --s-pp-b:#581c87;
-  --p-hi-bg:#2d0f0f; --p-hi-t:#fca5a5;
-  --p-md-bg:#2d2008; --p-md-t:#fcd34d;
-  --p-lo-bg:#0d2d1a; --p-lo-t:#86efac;
-  --e-bg:#0d1a2d; --e-t:#60a5fa; --e-b:#1e3a5f;
-  --m-bg:#2d1a0d; --m-t:#fb923c; --m-b:#7c2d12;
-  --radius:10px; --radius-lg:14px;
-  --shadow:0 1px 3px rgba(0,0,0,.4);
-  --shadow-lg:0 8px 24px rgba(0,0,0,.4);
-}
-
-/* ── LIGHT THEME ── */
-[data-theme="light"] {
+  /* ── LIGHT (default) ── */
   --bg:#f0f4f8;
   --surface:#ffffff;
   --surface2:#f8fafc;
@@ -57,8 +36,29 @@
   --p-lo-bg:#f0fdf4; --p-lo-t:#166534;
   --e-bg:#eff6ff; --e-t:#1d4ed8; --e-b:#bfdbfe;
   --m-bg:#fff7ed; --m-t:#c2410c; --m-b:#fed7aa;
+  --radius:10px; --radius-lg:14px;
   --shadow:0 1px 3px rgba(0,0,0,.08);
   --shadow-lg:0 8px 24px rgba(0,0,0,.12);
+}
+
+/* ── DARK THEME ── */
+[data-theme="dark"] {
+  --bg:#0d1117; --surface:#161b22; --surface2:#1c2330; --surface3:#21272f;
+  --border:#21282f; --border2:#2d3748; --border3:#3d4752;
+  --text:#e6edf3; --text2:#8b949e; --text3:#484f58;
+  --navy:#1f4e79; --accent:#3b82f6; --accent2:#1d4ed8;
+  --s-ip-bg:#2d2008; --s-ip-t:#fbbf24; --s-ip-b:#92400e;
+  --s-ns-bg:#161b22; --s-ns-t:#8b949e; --s-ns-b:#30363d;
+  --s-bl-bg:#2d0f0f; --s-bl-t:#f87171; --s-bl-b:#7f1d1d;
+  --s-cp-bg:#0d2d1a; --s-cp-t:#4ade80; --s-cp-b:#14532d;
+  --s-pp-bg:#1e1030; --s-pp-t:#c084fc; --s-pp-b:#581c87;
+  --p-hi-bg:#2d0f0f; --p-hi-t:#fca5a5;
+  --p-md-bg:#2d2008; --p-md-t:#fcd34d;
+  --p-lo-bg:#0d2d1a; --p-lo-t:#86efac;
+  --e-bg:#0d1a2d; --e-t:#60a5fa; --e-b:#1e3a5f;
+  --m-bg:#2d1a0d; --m-t:#fb923c; --m-b:#7c2d12;
+  --shadow:0 1px 3px rgba(0,0,0,.4);
+  --shadow-lg:0 8px 24px rgba(0,0,0,.4);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{font-size:15px;scroll-behavior:smooth}
@@ -256,6 +256,108 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
 @keyframes toast-out{to{opacity:0;transform:translateY(8px)}}
 .empty{text-align:center;padding:2.5rem 1rem;color:var(--text3);font-size:.85rem}
 
+/* ── CARD IMAGES & GALLERY ── */
+.card-img-container {
+  width: 100%;
+  height: 130px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 0.8rem;
+  position: relative;
+  border: 1px solid var(--border);
+  background: var(--surface2);
+}
+.card-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.machine-card:hover .card-img-container img {
+  transform: scale(1.05);
+}
+.card-img-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  color: var(--text2);
+  background: linear-gradient(135deg, var(--surface2), var(--surface3));
+}
+.detail-gallery {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding: 0.2rem 0 1rem;
+  margin-bottom: 1.25rem;
+  scrollbar-width: thin;
+}
+.detail-gallery::-webkit-scrollbar {
+  height: 6px;
+}
+.detail-gallery::-webkit-scrollbar-thumb {
+  background: var(--border2);
+  border-radius: 3px;
+}
+.gallery-img-wrap {
+  flex: 0 0 200px;
+  height: 130px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  position: relative;
+  background: var(--surface2);
+}
+.gallery-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+.gallery-img-wrap:hover img {
+  transform: scale(1.05);
+}
+.lightbox-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+.lightbox-content {
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+  object-fit: contain;
+}
+.lightbox-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.lightbox-close:hover {
+  background: rgba(255,255,255,0.3);
+}
+
 @media(max-width:640px){
   header{padding:.85rem 1rem}
   .kpi-bar{padding:.75rem 1rem}
@@ -318,6 +420,7 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
         <button class="add-task-btn" onclick="openAddModal(currentMachine)">+ Add Task</button>
       </div>
     </div>
+    <div class="detail-gallery" id="detail-gallery" style="display:none"></div>
     <div id="detail-body"></div>
   </div>
 
@@ -475,6 +578,12 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
 <!-- Toast container -->
 <div class="toast-wrap" id="toast-wrap"></div>
 
+<!-- Lightbox Modal -->
+<div class="lightbox-modal" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img class="lightbox-content" id="lightbox-img" src="" onclick="event.stopPropagation()">
+</div>
+
 <script>
 // ═══════════════════════════════════════════════════════
 //  CONFIG
@@ -482,6 +591,66 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
 const STORAGE_KEY = 'aerosol_tracker_v1';
 const MACHINE_ORDER = ['Press','Trimming','Washing','Lacquer','Base Coat','Printing','Over Varnish','Main Oven','Necking','Mixer','General'];
 const ICONS = {Press:'⚙️',Trimming:'✂️',Washing:'💧',Lacquer:'🎨','Base Coat':'🖌️',Printing:'🖨️','Over Varnish':'✨','Main Oven':'🔥',Necking:'🔩',Mixer:'🔄',General:'📋'};
+const MACHINE_IMAGES = {
+  Press: [
+    'Press/Extrusion Press/IMG_20220518_132614.jpg',
+    'Press/Extrusion Press/IMG_20220518_140759.jpg',
+    'Press/Extrusion Press/IMG_20220518_140805.jpg',
+    'Press/Extrusion Press/IMG_20220518_140817.jpg',
+    'Press/Extrusion Press/IMG_20220518_140828.jpg'
+  ],
+  Trimming: [
+    'Trimming/Trimming & Brushing Machine/IMG_20220518_140702.jpg',
+    'Trimming/Trimming & Brushing Machine/IMG_20220518_140709.jpg',
+    'Trimming/Trimming & Brushing Machine/IMG_20220518_140716.jpg',
+    'Trimming/Trimming & Brushing Machine/IMG_20220518_140731.jpg'
+  ],
+  Washing: [
+    'Washing/Washing Machine/IMG_20220518_140555.jpg',
+    'Washing/Washing Machine/IMG_20220518_140618.jpg',
+    'Washing/Washing Machine/IMG_20220518_140642.jpg',
+    'Washing/Washing Machine/IMG_20220518_140649.jpg',
+    'Washing/Washing Machine/IMG_20220518_140655.jpg'
+  ],
+  Lacquer: [
+    'Lacquer/Internal Lacquering Machine/IMG_20220518_140428.jpg',
+    'Lacquer/Internal Lacquering Machine/IMG_20220518_140446.jpg',
+    'Lacquer/Internal Lacquering Machine/IMG_20220518_140452.jpg',
+    'Lacquer/Internal Lacquering Machine/IMG_20220518_140519.jpg'
+  ],
+  'Base Coat': [
+    'Base Coat/Base Lacquering Machine/IMG_20220518_135811.jpg',
+    'Base Coat/Base Lacquering Machine/IMG_20220518_135822.jpg',
+    'Base Coat/Base Lacquering Machine/IMG_20220518_135848.jpg',
+    'Base Coat/Base Lacquering Machine/IMG_20220518_135855.jpg',
+    'Base Coat/Base Lacquering Machine/IMG_20220518_135905.jpg'
+  ],
+  Printing: [],
+  'Over Varnish': [
+    'Over Varnish/Overvarnishing Machine/IMG_20220518_140017.jpg',
+    'Over Varnish/Overvarnishing Machine/IMG_20220518_140031.jpg',
+    'Over Varnish/Overvarnishing Machine/IMG_20220518_140036.jpg',
+    'Over Varnish/Overvarnishing Machine/IMG_20220518_140046.jpg',
+    'Over Varnish/Overvarnishing Machine/IMG_20220518_140058.jpg'
+  ],
+  'Main Oven': [
+    'Internal Lacquer Baking Oven/Internal Lacquer Baking Oven/IMG_20220518_140300.jpg',
+    'Internal Lacquer Baking Oven/Internal Lacquer Baking Oven/IMG_20220518_140312.jpg',
+    'Internal Lacquer Baking Oven/Internal Lacquer Baking Oven/IMG_20220518_140330.jpg',
+    'Internal Lacquer Baking Oven/Internal Lacquer Baking Oven/IMG_20220518_140347.jpg',
+    'Internal Lacquer Baking Oven/Internal Lacquer Baking Oven/IMG_20220518_140402.jpg',
+    'Internal Lacquer Baking Oven/Internal Lacquer Baking Oven/IMG_20220518_140408.jpg'
+  ],
+  Necking: [],
+  Mixer: [
+    'Accumulator/Accumulator/IMG_20220518_140139.jpg',
+    'Accumulator/Accumulator/IMG_20220518_140151.jpg',
+    'Accumulator/Accumulator/IMG_20220518_140206.jpg',
+    'Accumulator/Accumulator/IMG_20220518_140224.jpg',
+    'Accumulator/Accumulator/IMG_20220518_140237.jpg'
+  ],
+  General: []
+};
 const STATUS_CLASS = {'In Progress':'ip','Not Started':'ns','Completed':'cp','Blocked':'bl','Pending Procurement':'pp'};
 const SEED = [["Press","Electrical","Close all electrical panels and cable trays","High",10,"In Progress",""],["Press","Electrical","SOV pneumatic press clutch service","–",100,"Completed",""],["Press","Electrical","Hopper motor installation and testing (Dry Run)","–",100,"Completed",""],["Press","Electrical","Hopper Motor installation","–",100,"Completed",""],["Press","Electrical","Cable trays installation","–",100,"Completed",""],["Press","Mechanical","Slug Feeding Hopper with switch — complete unit","High",50,"In Progress",""],["Press","Mechanical","Gear Oil Lubrication pumping system setup","High",40,"In Progress","Pump sent for repairing"],["Press","Mechanical","Welding & fixing gear oil tank brackets and sheet","Medium",40,"In Progress",""],["Press","Mechanical","02 Dust collection pipes to be installed","Medium",0,"Not Started",""],["Press","Mechanical","Dust Collection blower — connection with piping","Medium",0,"Not Started","Blower to be procured"],["Press","Mechanical","Fix lubrication tray with slope for drainage","Medium",0,"Not Started",""],["Press","Mechanical","Oil collection tank — place directly under tray","Medium",0,"Not Started",""],["Press","Mechanical","Operator Platform (incomplete stand) to be made","Low",0,"Not Started",""],["Press","Mechanical","Damping rubber pads over slug feeding tray","Low",0,"Not Started",""],["Press","Mechanical","Scoop (chamach) required for slug handling","Low",0,"Not Started","Khalid sb"],["Press","Mechanical","Baling machine check from local vendor","Low",0,"Not Started","Khalid sb"],["Press","Mechanical","Auto gripper fitting / checking","–",100,"Completed",""],["Press","Mechanical","Slug Holder channel","–",100,"Completed",""],["Press","Mechanical","Press main slide installation","–",100,"Completed",""],["Press","Mechanical","Press conveyor fixation","–",100,"Completed",""],["Press","Mechanical","Oil pump motor repairing","–",100,"Completed",""],["Press","Mechanical","Press & Trimming compressor line fixed","–",100,"Completed",""],["Press","Mechanical","Press Clutch NRV repaired","–",100,"Completed",""],["Press","Mechanical","Oil pump replacing and troubleshooting","–",100,"Completed",""],["Press","Mechanical","Press timing and alignment with testing","–",100,"Completed",""],["Press","Mechanical","Die & punch stroke setting","–",100,"Completed",""],["Press","Mechanical","Press machine auto lubrication — pending tasks","High",30,"In Progress","Procurement in process"],["Press","Mechanical","Press machine auto running on slug","High",0,"Not Started","Awaiting pending task completion"],["Press","Mechanical","Tools for press machine — urgent procurement","High",20,"In Progress","In progress"],["Trimming","Electrical","Scrap collector wiring and troubleshooting","High",90,"In Progress","Magnetic switch faulty — to be changed"],["Trimming","Electrical","Electrical Panel checked / Tested","–",100,"Completed",""],["Trimming","Electrical","Startup main motor","–",100,"Completed",""],["Trimming","Electrical","Pneumatic and Electrical operation check","–",100,"Completed",""],["Trimming","Mechanical","Oiling / greasing / parts replacement / testing","High",80,"In Progress","Oil pump maintenance pending"],["Trimming","Mechanical","Trimming machine dry run","High",0,"Blocked","Dry run awaiting — cutter blade sent for sharpening"],["Trimming","Mechanical","Trimming startup","–",100,"Completed",""],["Trimming","Mechanical","Conveyor alignment — Trimming to Washing","–",100,"Completed",""],["Trimming","Mechanical","Conveyor — Press to Trimming input","–",100,"Completed",""],["Washing","Electrical","Heaters to be checked and replaced if required","High",30,"In Progress","After press & trimming startup"],["Washing","Electrical","Disconnect wiring before washing the machine","High",0,"In Progress","Khalid sb"],["Washing","Electrical","Ensure all exhaust fans on floor are operational","High",0,"In Progress","Cable & connection required — UTI team"],["Washing","Mechanical","Chain Repairing","High",0,"In Progress","Sent to Karachi for repairing"],["Washing","Mechanical","Process identification, missing parts, inspection","High",0,"In Progress","In collaboration with Lindsay"],["Washing","Mechanical","Rinsing Recycling Tank — decoating & cleaning","High",50,"In Progress",""],["Washing","Mechanical","Spraying Jets Section — cleaning / scraping","High",50,"In Progress",""],["Washing","Mechanical","Inspect all rubber pipes — replace if damaged","High",0,"Blocked","After chain arrival — Khalid sb"],["Washing","Mechanical","Separate storage tanks (detergent / cold / hot water)","High",0,"Not Started","Khalid sb"],["Washing","Mechanical","Washing rinse recycling tank (rusty) — clean","High",0,"Not Started","Khalid sb"],["Washing","Mechanical","Heat exchanger for washing system — procure & install","High",0,"Not Started","Khalid sb"],["Washing","Mechanical","Washing process flow — review and implement","High",0,"Not Started","Khalid sb"],["Washing","Mechanical","Washing unit tanks — sizes and quantities for quotation","High",0,"Not Started","Khalid sb"],["Washing","Mechanical","Washing unit drain plan — flexible pipes after tank installation","Medium",0,"Not Started","To be installed after tank installation"],["Washing","Mechanical","Washing machine chain — repair and reinstallation check","High",30,"In Progress","Repairing in progress in Karachi — to be checked after installation"],["Washing","Mechanical","Washing machine piping and blower installation","High",20,"In Progress","To be checked with Lindsay — blower available for installation"],["Washing","Mechanical","All gears greasing","–",100,"Completed",""],["Washing","Mechanical","Gears alignment","–",100,"Completed",""],["Lacquer","Electrical","Air filter to be installed before lacquer line","High",0,"Not Started","Khalid sb"],["Lacquer","Electrical","All heaters — check, fix or replace faulty","High",90,"In Progress","2 faulty heaters need replacement"],["Lacquer","Electrical","Blower main motor connection and testing","–",100,"Completed",""],["Lacquer","Mechanical","Cans Holders — dismantled, clean with thinner","Medium",50,"In Progress",""],["Lacquer","Mechanical","Small dedicated air tank / receiver for lacquer","Medium",0,"Not Started","Khalid sb"],["Lacquer","Mechanical","Spray Guns — cleaned with thinner","–",100,"Completed",""],["Lacquer","Mechanical","Spray Mount Drum — scraped & cleaned","–",100,"Completed",""],["Lacquer","Mechanical","Mandrel Plate — scraped & cleaned","–",100,"Completed",""],["Lacquer","Mechanical","Exhaust Sieve — cleaned","–",100,"Completed",""],["Lacquer","Mechanical","Frame Body — cleaned","–",100,"Completed",""],["Lacquer","Mechanical","Oven Chain cleaning","–",100,"Completed",""],["Base Coat","Mechanical","Rollers — dismantled, to be chrome plated","Medium",50,"In Progress","Sent for chrome plating"],["Base Coat","Mechanical","Rollers Housing — cleaned and greased","–",100,"Completed",""],["Base Coat","Mechanical","Mandrels — cleaned","–",100,"Completed",""],["Base Coat","Mechanical","Frame Body — cleaned","–",100,"Completed",""],["Printing","Electrical","Servo motor troubleshooting","High",0,"Not Started",""],["Printing","Electrical","White LED lighting for printing and oven area","Medium",0,"Not Started","Khalid sb"],["Printing","Electrical","Final printing plan and PLC delivery & inspection","High",20,"Pending Procurement","PLC and supporting items to be delivered — Material in transit"],["Printing","Electrical","CTC cleaning of machine panels interface","–",100,"Completed",""],["Printing","Electrical","PLC installation","–",100,"Completed",""],["Printing","Mechanical","All printing rollers — dismantle, clean, buff, chrome plate","High",60,"In Progress",""],["Printing","Mechanical","Rollers (Tubex team) — ready for chrome plating","High",70,"In Progress",""],["Printing","Mechanical","Bearings — cleaning & greasing","Medium",50,"In Progress",""],["Printing","Mechanical","Ink Fountain — cleaning","Medium",50,"In Progress",""],["Printing","Mechanical","Roller Train Frame — cleaning","Medium",50,"In Progress",""],["Printing","Mechanical","Aluminium oil tank — fabricate & install","Medium",0,"Not Started","Khalid sb"],["Printing","Mechanical","Printing machine rollers — deep clean, rubber & chrome inspection","High",40,"In Progress","Deep cleaning in progress; rubber roller quotation taken; chrome coating to be checked"],["Over Varnish","Electrical","Motors checking and troubleshooting","–",100,"Completed",""],["Over Varnish","Mechanical","Rollers — dismantled, to be chrome plated","Medium",50,"In Progress","Sent for chrome plating"],["Over Varnish","Mechanical","Mandrels — cleaned","–",100,"Completed",""],["Over Varnish","Mechanical","Rollers Housing — cleaned and greased","–",100,"Completed",""],["Over Varnish","Mechanical","Frame Body — cleaned","–",100,"Completed",""],["Main Oven","Electrical","Cable trays installation","–",100,"Completed",""],["Main Oven","Electrical","Blower motor connection and testing","–",100,"Completed",""],["Main Oven","Mechanical","Motors alignment w.r.t marking","–",100,"Completed",""],["Necking","Electrical","Electrical troubleshooting and testing","–",100,"Completed",""],["Necking","Electrical","Necking machine — electrical supply troubleshooting for dry run","High",20,"In Progress","Interlocking will be redesigned and checked"],["Necking","Mechanical","Two sets of press dies, springs & nut bolts required","High",0,"Not Started","Khalid sb"],["Necking","Mechanical","Buffing and polishing on necking machine tools","Medium",0,"Not Started","Khalid sb"],["Necking","Mechanical","Kluber oil & grease for necking machine","Medium",0,"Not Started","Khalid sb"],["Necking","Mechanical","Cans Grippers / Holders — cleaning","Medium",50,"In Progress","Tubex team"],["Mixer","Electrical","Main motor testing","–",100,"Completed",""],["Mixer","Electrical","Mixer installation and automation — auto feeding flow design","Medium",0,"Pending Procurement","Flow to be designed for auto feeding on press — quotation awaiting for conveyor"],["General","Electrical","Main Power Cable Termination & Execution Plan","High",0,"Pending Procurement","Wires and auxiliaries to be ordered against BOQ"],["General","Electrical","Electrical panels for power distribution — procurement review","High",0,"Pending Procurement","New panels arranged; feedback needed on further procurement items"],["General","Electrical","Transformer load increase to 625 kW — utility application","High",30,"In Progress","Application in process"],["General","Electrical","Verify electrical panels, wiring & interlocks — Press to Washing","High",0,"Blocked","Pending until Washing Machine electrical work is completed"],["General","Electrical","Verify electrical panels, wiring & interlocks — Washing to Necking","High",0,"Blocked","After material procurement; electrical revamping team to be deputed"],["General","Electrical","Ensure all electrical circuits & cable trays closed","High",0,"In Progress","After each section completion — Khalid sb"],["General","Electrical","Testing of Control Logics & Circuits","High",0,"Not Started","Target: 05-Apr-2026"],["General","Electrical","Termination of cables & wires — Pre-commissioning","High",0,"Not Started","Target: 15-Apr-2026"],["General","Electrical","Verify electrical panels, control wiring, interlocks","High",0,"Not Started","Target: 10-May-2026"],["General","Electrical","Identify faulty machines / panels for rectification","High",0,"Not Started","Target: 15-May-2026"],["General","Mechanical","Compressor piping — dryer and auto drain system","High",50,"In Progress","Mechanical and electrical installation in process"],["General","Mechanical","Machine Operating Manuals — arrange from OEM","Medium",10,"In Progress","Required in Russian and German language"],["General","Mechanical","Mr. Lindsay next visit — finalize commissioning dates","Medium",0,"Not Started","Final commissioning visit dates to be finalized upon startup"],["General","Mechanical","Daily coordination & reporting mechanism","Low",0,"In Progress","As per the plan"],["General","Mechanical","Check motors, conveyors, spindles, ovens, actuators","High",0,"Not Started",""],["General","Mechanical","Test each machine individually without load","High",0,"Not Started",""],["General","Mechanical","Overall machine paint","Medium",0,"Not Started",""],["General","Mechanical","Ensure proper cleaning of entire machine","High",0,"In Progress","Khalid sb"],["General","Mechanical","Full unit inspection with Mr. Babar's team","High",0,"In Progress","Khalid sb"],["General","Mechanical","Modify exhaust duct pipes — prevent rainwater entry","Medium",0,"Not Started","Awaiting quotation — Khalid sb"],["General","Mechanical","Check & install lubrication drum foundation","Medium",0,"Not Started","On startup — Khalid sb"],["General","Mechanical","Make stands for all spare rolls","Low",0,"Not Started","Awaiting quotation — Khalid sb"],["General","Mechanical","Full operator toolset & tool trolley system","Medium",0,"Not Started","Khalid sb"],["General","Mechanical","Lab equipment to be sourced","Medium",0,"Not Started","Khalid sb"],["General","Mechanical","Filter plant — fix for drinking water","Low",0,"Not Started","Khalid sb"],["General","Mechanical","Dust bins for office areas","Low",0,"Not Started","Khalid sb"],["General","Mechanical","Big cartons for temporary storage of cans","Low",0,"Not Started","Khalid sb"],["General","Mechanical","Boxes / Bins for cans packing (Alpha Container)","Low",0,"Not Started","Khalid sb"],["General","Mechanical","Dismantle all rollers for inspection","–",100,"Completed","Done — Khalid sb"]];
 
@@ -582,6 +751,10 @@ function renderDashboard(){
     card.style.setProperty('--i', i);
     card.onclick = () => navigate('detail', m);
     card.innerHTML = `
+      <div class="card-img-container">
+        ${MACHINE_IMAGES[m] && MACHINE_IMAGES[m].length ? `<img src="${MACHINE_IMAGES[m][0]}" alt="${m}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">` : ''}
+        <div class="card-img-placeholder" style="${MACHINE_IMAGES[m] && MACHINE_IMAGES[m].length ? 'display:none;' : ''}">${ICONS[m]||'🔧'}</div>
+      </div>
       <div class="card-top">
         <div class="card-icon">${ICONS[m]||'🔧'}</div>
         <div class="ring-wrap">
@@ -630,6 +803,21 @@ function showMachine(m){
   fill.style.width = '0%';
   document.getElementById('d-pct').textContent = `${pct}% · ${done}/${mt.length}`;
   requestAnimationFrame(() => requestAnimationFrame(() => fill.style.width = pct + '%'));
+
+  // Render Machine Photos Gallery
+  const gal = document.getElementById('detail-gallery');
+  const imgs = MACHINE_IMAGES[m] || [];
+  if(imgs.length){
+    gal.style.display = 'flex';
+    gal.innerHTML = imgs.map(img => `
+      <div class="gallery-img-wrap" onclick="openLightbox('${img}')">
+        <img src="${img}" alt="${m}" onerror="this.parentElement.style.display='none';">
+      </div>
+    `).join('');
+  } else {
+    gal.style.display = 'none';
+    gal.innerHTML = '';
+  }
 
   renderDetail();
 }
@@ -1084,6 +1272,18 @@ function installPWA(){
 //  BOOT
 // ═══════════════════════════════════════════════════════
 // ── THEME ──────────────────────────────────────────────
+function openLightbox(src){
+  const lb = document.getElementById('lightbox');
+  const img = document.getElementById('lightbox-img');
+  img.src = src;
+  lb.style.display = 'flex';
+}
+
+function closeLightbox(){
+  const lb = document.getElementById('lightbox');
+  lb.style.display = 'none';
+}
+
 function applyTheme(t){
   document.documentElement.setAttribute('data-theme', t);
   const btn = document.getElementById('theme-btn');
@@ -1092,7 +1292,7 @@ function applyTheme(t){
 }
 
 function toggleTheme(){
-  const current = document.documentElement.getAttribute('data-theme') || 'dark';
+  const current = document.documentElement.getAttribute('data-theme') || 'light';
   const next = current === 'dark' ? 'light' : 'dark';
   applyTheme(next);
   localStorage.setItem('aerosol_theme', next);
@@ -1100,7 +1300,7 @@ function toggleTheme(){
 
 // Load saved theme before first paint
 (function(){
-  const saved = localStorage.getItem('aerosol_theme') || 'dark';
+  const saved = localStorage.getItem('aerosol_theme') || 'light';
   applyTheme(saved);
 })();
 
@@ -1117,7 +1317,7 @@ if(settings.syncKey){
 }
 
 document.addEventListener('keydown', e => {
-  if(e.key === 'Escape'){ closeModal(); closeCtx(); }
+  if(e.key === 'Escape'){ closeModal(); closeCtx(); closeLightbox(); }
 });
 </script>
 </body>
