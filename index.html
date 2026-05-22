@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0d1117">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Aerosol Plant Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&family=Fraunces:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<style>
+:root {
+  /* ── DARK (default) ── */
+  --bg:#0d1117; --surface:#161b22; --surface2:#1c2330; --surface3:#21272f;
+  --border:#21282f; --border2:#2d3748; --border3:#3d4752;
+  --text:#e6edf3; --text2:#8b949e; --text3:#484f58;
+  --navy:#1f4e79; --accent:#3b82f6; --accent2:#1d4ed8;
+  --s-ip-bg:#2d2008; --s-ip-t:#fbbf24; --s-ip-b:#92400e;
+  --s-ns-bg:#161b22; --s-ns-t:#8b949e; --s-ns-b:#30363d;
+  --s-bl-bg:#2d0f0f; --s-bl-t:#f87171; --s-bl-b:#7f1d1d;
+  --s-cp-bg:#0d2d1a; --s-cp-t:#4ade80; --s-cp-b:#14532d;
+  --s-pp-bg:#1e1030; --s-pp-t:#c084fc; --s-pp-b:#581c87;
+  --p-hi-bg:#2d0f0f; --p-hi-t:#fca5a5;
+  --p-md-bg:#2d2008; --p-md-t:#fcd34d;
+  --p-lo-bg:#0d2d1a; --p-lo-t:#86efac;
+  --e-bg:#0d1a2d; --e-t:#60a5fa; --e-b:#1e3a5f;
+  --m-bg:#2d1a0d; --m-t:#fb923c; --m-b:#7c2d12;
+  --radius:10px; --radius-lg:14px;
+  --shadow:0 1px 3px rgba(0,0,0,.4);
+  --shadow-lg:0 8px 24px rgba(0,0,0,.4);
+}
+
+/* ── LIGHT THEME ── */
+[data-theme="light"] {
+  --bg:#f0f4f8;
+  --surface:#ffffff;
+  --surface2:#f8fafc;
+  --surface3:#f1f5f9;
+  --border:#e2e8f0;
+  --border2:#cbd5e1;
+  --border3:#94a3b8;
+  --text:#0f172a;
+  --text2:#475569;
+  --text3:#94a3b8;
+  --navy:#1e3a5f;
+  --accent:#2563eb;
+  --accent2:#1d4ed8;
+  --s-ip-bg:#fffbeb; --s-ip-t:#92400e; --s-ip-b:#fcd34d;
+  --s-ns-bg:#f8fafc; --s-ns-t:#475569; --s-ns-b:#cbd5e1;
+  --s-bl-bg:#fef2f2; --s-bl-t:#991b1b; --s-bl-b:#fca5a5;
+  --s-cp-bg:#f0fdf4; --s-cp-t:#166534; --s-cp-b:#86efac;
+  --s-pp-bg:#faf5ff; --s-pp-t:#6b21a8; --s-pp-b:#d8b4fe;
+  --p-hi-bg:#fef2f2; --p-hi-t:#991b1b;
+  --p-md-bg:#fffbeb; --p-md-t:#92400e;
+  --p-lo-bg:#f0fdf4; --p-lo-t:#166534;
+  --e-bg:#eff6ff; --e-t:#1d4ed8; --e-b:#bfdbfe;
+  --m-bg:#fff7ed; --m-t:#c2410c; --m-b:#fed7aa;
+  --shadow:0 1px 3px rgba(0,0,0,.08);
+  --shadow-lg:0 8px 24px rgba(0,0,0,.12);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:15px;scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;min-height:100vh;-webkit-font-smoothing:antialiased;overscroll-behavior:none}
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
+
+/* ── VIEWS ── */
+.view{display:none;min-height:calc(100vh - 120px)}
+.view.active{display:block;animation:fade-up .3s ease}
+@keyframes fade-up{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── HEADER ── */
+header{background:var(--surface);border-bottom:1px solid var(--border);padding:1rem 1.5rem;position:sticky;top:0;z-index:40;display:flex;align-items:center;gap:1rem}
+.header-brand{flex:1}
+.header-title{font-family:'Fraunces',serif;font-size:1.15rem;font-weight:600;line-height:1}
+.header-sub{font-family:'DM Mono',monospace;font-size:.6rem;color:var(--text3);letter-spacing:.1em;text-transform:uppercase;margin-top:.2rem}
+.header-actions{display:flex;gap:.5rem;align-items:center}
+.icon-btn{width:34px;height:34px;border:1px solid var(--border);background:var(--surface2);border-radius:8px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:border-color .2s,background .2s;color:var(--text2);font-size:.85rem}
+.icon-btn:hover{border-color:var(--border3);background:var(--surface3);color:var(--text)}
+.live-dot{width:6px;height:6px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 3px rgba(34,197,94,.2);animation:pdot 2s ease-in-out infinite;flex-shrink:0}
+@keyframes pdot{0%,100%{box-shadow:0 0 0 3px rgba(34,197,94,.2)}50%{box-shadow:0 0 0 6px rgba(34,197,94,.08)}}
+
+/* ── KPI BAR ── */
+.kpi-bar{background:var(--surface);border-bottom:1px solid var(--border);padding:.9rem 1.5rem;display:flex;gap:.6rem;overflow-x:auto;scrollbar-width:none}
+.kpi-bar::-webkit-scrollbar{display:none}
+.kpi{display:flex;flex-direction:column;gap:.2rem;flex-shrink:0;padding:.7rem 1rem;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius);min-width:90px}
+.kv{font-family:'Fraunces',serif;font-size:1.7rem;font-weight:600;line-height:1}
+.kl{font-size:.62rem;font-weight:500;color:var(--text2);letter-spacing:.07em;text-transform:uppercase}
+.kpi.total .kv{color:var(--text)}
+.kpi.done .kv{color:#4ade80}
+.kpi.inprog .kv{color:#fbbf24}
+.kpi.blocked .kv{color:#f87171}
+.kpi.procure .kv{color:#c084fc}
+
+/* ── MAIN ── */
+main{padding:1.5rem;max-width:1400px;margin:0 auto}
+.section-label{font-family:'DM Mono',monospace;font-size:.65rem;color:var(--text3);letter-spacing:.12em;text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;justify-content:space-between}
+
+/* ── MACHINE GRID ── */
+.machines-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:.85rem}
+.machine-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.1rem;cursor:pointer;transition:border-color .2s,transform .15s,box-shadow .2s;position:relative;overflow:hidden;animation:card-in .4s ease both}
+.machine-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),transparent);opacity:0;transition:opacity .2s}
+.machine-card:hover{border-color:var(--border2);transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.machine-card:hover::before{opacity:1}
+@keyframes card-in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.machine-card:nth-child(n){animation-delay:calc(var(--i,0)*.05s)}
+.card-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:.85rem}
+.card-icon{font-size:1.5rem;line-height:1}
+.ring-wrap{position:relative;width:40px;height:40px;flex-shrink:0}
+.ring-svg{width:40px;height:40px;transform:rotate(-90deg)}
+.ring-track{fill:none;stroke:var(--border2);stroke-width:3}
+.ring-fill{fill:none;stroke:var(--accent);stroke-width:3;stroke-linecap:round;transition:stroke-dasharray 1.2s cubic-bezier(.4,0,.2,1)}
+.ring-num{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:.58rem;color:var(--text2)}
+.card-name{font-size:.95rem;font-weight:600;color:var(--text);margin-bottom:.4rem}
+.card-tags{display:flex;gap:.35rem;flex-wrap:wrap;margin-bottom:.8rem}
+.ctag{font-size:.65rem;font-weight:500;padding:.15rem .45rem;border-radius:20px}
+.ctag.e{background:var(--e-bg);color:var(--e-t)}
+.ctag.m{background:var(--m-bg);color:var(--m-t)}
+.ctag.done{background:var(--s-cp-bg);color:var(--s-cp-t)}
+.card-bar{height:3px;background:var(--border2);border-radius:2px;overflow:hidden;margin-bottom:.7rem}
+.card-bar-fill{height:100%;background:linear-gradient(90deg,var(--accent2),var(--accent));border-radius:2px;transition:width 1.2s cubic-bezier(.4,0,.2,1)}
+.card-foot{display:flex;justify-content:space-between;align-items:center}
+.card-pend{font-size:.7rem;color:var(--text2)}
+.card-arrow{font-size:.75rem;color:var(--text3);transition:transform .2s,color .2s}
+.machine-card:hover .card-arrow{transform:translateX(3px);color:var(--accent)}
+
+/* ── DETAIL VIEW ── */
+.detail-header{display:flex;align-items:center;gap:.75rem;margin-bottom:1.5rem;flex-wrap:wrap}
+.back-btn{display:inline-flex;align-items:center;gap:.35rem;padding:.4rem .85rem;background:var(--surface);border:1px solid var(--border);border-radius:8px;color:var(--text2);font-size:.8rem;font-weight:500;cursor:pointer;transition:border-color .2s,color .2s;font-family:'DM Sans',sans-serif}
+.back-btn:hover{border-color:var(--accent);color:var(--accent)}
+.detail-title-block{flex:1;min-width:180px}
+.detail-mname{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:600;display:flex;align-items:center;gap:.5rem}
+.detail-prog-row{display:flex;align-items:center;gap:.6rem;margin-top:.35rem}
+.detail-prog-bar{flex:1;max-width:240px;height:4px;background:var(--border2);border-radius:2px;overflow:hidden}
+.detail-prog-fill{height:100%;background:linear-gradient(90deg,var(--accent2),var(--accent));border-radius:2px;transition:width 1s ease}
+.detail-pct{font-family:'DM Mono',monospace;font-size:.72rem;color:var(--text2)}
+.detail-actions{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}
+
+.toggle-btn{display:inline-flex;align-items:center;gap:.35rem;padding:.4rem .85rem;background:var(--surface);border:1px solid var(--border);border-radius:8px;color:var(--text2);font-size:.78rem;font-weight:500;cursor:pointer;transition:all .2s;font-family:'DM Sans',sans-serif;user-select:none}
+.toggle-btn:hover{border-color:var(--border3);color:var(--text)}
+.toggle-btn.on{background:var(--s-cp-bg);border-color:var(--s-cp-b);color:var(--s-cp-t)}
+.toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+.add-task-btn{display:inline-flex;align-items:center;gap:.35rem;padding:.4rem .9rem;background:var(--accent);border:none;border-radius:8px;color:#fff;font-size:.8rem;font-weight:500;cursor:pointer;transition:background .2s;font-family:'DM Sans',sans-serif}
+.add-task-btn:hover{background:var(--accent2)}
+
+/* ── CATEGORY SECTION ── */
+.cat-section{margin-bottom:1.75rem}
+.cat-header{display:flex;align-items:center;gap:.55rem;padding:.6rem .9rem;border-radius:8px;margin-bottom:.65rem;border:1px solid}
+.cat-header.e{background:var(--e-bg);border-color:var(--e-b);color:var(--e-t)}
+.cat-header.m{background:var(--m-bg);border-color:var(--m-b);color:var(--m-t)}
+.cat-name{font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.cat-count{margin-left:auto;font-family:'DM Mono',monospace;font-size:.65rem;opacity:.7}
+
+/* ── TASK CARD ── */
+.task-list{display:flex;flex-direction:column;gap:.45rem}
+.task-card{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--border2);border-radius:var(--radius);padding:.85rem 1rem;transition:border-color .2s;position:relative}
+.task-card:hover{border-color:var(--border2)}
+.task-card.s-ip{border-left-color:#f59e0b}
+.task-card.s-bl{border-left-color:#ef4444}
+.task-card.s-ns{border-left-color:#374151}
+.task-card.s-cp{border-left-color:#22c55e;opacity:.55}
+.task-card.s-pp{border-left-color:#a855f7}
+.task-top{display:flex;align-items:flex-start;gap:.6rem;margin-bottom:.55rem}
+.task-desc{flex:1;font-size:.85rem;font-weight:500;color:var(--text);line-height:1.45}
+.task-card.s-cp .task-desc{color:var(--text2);text-decoration:line-through;text-decoration-color:var(--text3)}
+.task-badges{display:flex;gap:.3rem;flex-shrink:0;flex-wrap:wrap;justify-content:flex-end;align-items:flex-start}
+.badge{font-size:.6rem;font-weight:600;padding:.18rem .5rem;border-radius:20px;letter-spacing:.04em;text-transform:uppercase;font-family:'DM Mono',monospace;border:1px solid transparent;white-space:nowrap}
+.badge.p-High{background:var(--p-hi-bg);color:var(--p-hi-t);border-color:#7f1d1d}
+.badge.p-Medium{background:var(--p-md-bg);color:var(--p-md-t);border-color:#78350f}
+.badge.p-Low{background:var(--p-lo-bg);color:var(--p-lo-t);border-color:#14532d}
+.badge.s-ip{background:var(--s-ip-bg);color:var(--s-ip-t);border-color:var(--s-ip-b)}
+.badge.s-ns{background:var(--s-ns-bg);color:var(--s-ns-t);border-color:var(--s-ns-b)}
+.badge.s-bl{background:var(--s-bl-bg);color:var(--s-bl-t);border-color:var(--s-bl-b)}
+.badge.s-cp{background:var(--s-cp-bg);color:var(--s-cp-t);border-color:var(--s-cp-b)}
+.badge.s-pp{background:var(--s-pp-bg);color:var(--s-pp-t);border-color:var(--s-pp-b)}
+.task-menu-btn{width:24px;height:24px;border:none;background:transparent;color:var(--text3);cursor:pointer;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:.9rem;transition:background .15s,color .15s;flex-shrink:0}
+.task-menu-btn:hover{background:var(--surface2);color:var(--text)}
+.task-prog-row{display:flex;align-items:center;gap:.55rem;margin-bottom:.45rem}
+.task-prog-track{flex:1;height:3px;background:var(--border2);border-radius:2px;overflow:hidden}
+.task-prog-fill{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--accent2),var(--accent))}
+.task-prog-fill.full{background:linear-gradient(90deg,#14532d,#22c55e)}
+.task-pct{font-family:'DM Mono',monospace;font-size:.62rem;color:var(--text3);min-width:2.2rem;text-align:right}
+.task-remarks{font-size:.76rem;color:var(--text2);font-style:italic;line-height:1.4}
+.task-remarks::before{content:'↳ ';color:var(--text3);font-style:normal}
+.task-updated{font-size:.62rem;color:var(--text3);margin-top:.35rem;font-family:'DM Mono',monospace}
+
+/* ── CONTEXT MENU ── */
+.ctx-menu{position:fixed;background:var(--surface2);border:1px solid var(--border2);border-radius:8px;padding:.3rem;z-index:90;box-shadow:var(--shadow-lg);min-width:130px;animation:ctx-in .15s ease}
+@keyframes ctx-in{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}
+.ctx-item{padding:.5rem .75rem;border-radius:5px;cursor:pointer;font-size:.8rem;display:flex;align-items:center;gap:.5rem;transition:background .15s}
+.ctx-item:hover{background:var(--surface3)}
+.ctx-item.danger{color:#f87171}
+.ctx-item.danger:hover{background:#2d0f0f}
+
+/* ── MODAL ── */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:60;display:flex;align-items:flex-end;justify-content:center;padding:0;animation:overlay-in .2s ease}
+.modal-overlay.center{align-items:center;padding:1rem}
+@keyframes overlay-in{from{opacity:0}to{opacity:1}}
+.modal{background:var(--surface);border:1px solid var(--border2);border-radius:var(--radius-lg) var(--radius-lg) 0 0;padding:1.5rem;width:100%;max-width:540px;max-height:92vh;overflow-y:auto;animation:modal-up .25s ease}
+.modal-overlay.center .modal{border-radius:var(--radius-lg);animation:modal-center .25s ease}
+@keyframes modal-up{from{transform:translateY(100%)}to{transform:translateY(0)}}
+@keyframes modal-center{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}
+.modal-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.25rem}
+.modal-title{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600}
+.modal-close{width:30px;height:30px;border:none;background:var(--surface2);border-radius:6px;color:var(--text2);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;transition:background .15s,color .15s}
+.modal-close:hover{background:var(--surface3);color:var(--text)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.form-group{display:flex;flex-direction:column;gap:.4rem}
+.form-group.full{grid-column:1/-1}
+label{font-size:.72rem;font-weight:500;color:var(--text2);letter-spacing:.04em;text-transform:uppercase}
+input,select,textarea{background:var(--surface2);border:1px solid var(--border2);border-radius:8px;padding:.6rem .8rem;color:var(--text);font-family:'DM Sans',sans-serif;font-size:.85rem;width:100%;transition:border-color .2s;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--accent)}
+select option{background:var(--surface2)}
+textarea{resize:vertical;min-height:70px}
+input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-color:var(--accent)}
+.range-row{display:flex;align-items:center;gap:.6rem}
+.range-row input{flex:1}
+.range-val{font-family:'DM Mono',monospace;font-size:.78rem;color:var(--accent);min-width:2.5rem;text-align:right}
+.modal-footer{display:flex;gap:.6rem;justify-content:flex-end;margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--border)}
+.btn-cancel{padding:.55rem 1.1rem;background:var(--surface2);border:1px solid var(--border2);border-radius:8px;color:var(--text2);font-family:'DM Sans',sans-serif;font-size:.85rem;cursor:pointer;transition:all .15s}
+.btn-cancel:hover{border-color:var(--border3);color:var(--text)}
+.btn-save{padding:.55rem 1.3rem;background:var(--accent);border:none;border-radius:8px;color:#fff;font-family:'DM Sans',sans-serif;font-size:.85rem;font-weight:500;cursor:pointer;transition:background .15s}
+.btn-save:hover{background:var(--accent2)}
+.btn-danger{padding:.55rem 1.1rem;background:var(--s-bl-bg);border:1px solid var(--s-bl-b);border-radius:8px;color:var(--s-bl-t);font-family:'DM Sans',sans-serif;font-size:.85rem;cursor:pointer;margin-right:auto;transition:all .15s}
+.btn-danger:hover{background:#3d1010}
+
+/* ── SETTINGS ── */
+.settings-section{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;margin-bottom:1rem}
+.settings-section h3{font-size:.8rem;font-weight:600;color:var(--text2);letter-spacing:.06em;text-transform:uppercase;margin-bottom:.85rem;font-family:'DM Mono',monospace}
+.settings-row{display:flex;align-items:center;gap:.75rem;padding:.65rem 0;border-bottom:1px solid var(--border)}
+.settings-row:last-child{border-bottom:none}
+.settings-info{flex:1}
+.settings-label{font-size:.85rem;font-weight:500;color:var(--text)}
+.settings-desc{font-size:.75rem;color:var(--text2);margin-top:.2rem;line-height:1.4}
+.settings-action{flex-shrink:0}
+.btn-sm{padding:.4rem .85rem;border:1px solid var(--border2);background:var(--surface2);border-radius:7px;color:var(--text2);font-size:.78rem;font-family:'DM Sans',sans-serif;cursor:pointer;transition:all .15s}
+.btn-sm:hover{border-color:var(--border3);color:var(--text)}
+.btn-sm.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn-sm.primary:hover{background:var(--accent2)}
+.sync-status{display:inline-flex;align-items:center;gap:.35rem;font-size:.72rem;font-family:'DM Mono',monospace}
+.sync-status.ok{color:#4ade80}.sync-status.err{color:#f87171}.sync-status.pending{color:#fbbf24}
+.info-box{background:var(--surface2);border:1px solid var(--border2);border-radius:8px;padding:.85rem;font-size:.78rem;color:var(--text2);line-height:1.6;margin-top:.5rem}
+.info-box code{font-family:'DM Mono',monospace;color:var(--accent);font-size:.72rem}
+
+/* ── TOAST ── */
+.toast-wrap{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%);z-index:100;display:flex;flex-direction:column;gap:.5rem;align-items:center;pointer-events:none;width:90%;max-width:360px}
+.toast{background:var(--surface2);border:1px solid var(--border2);border-radius:10px;padding:.6rem 1rem;font-size:.82rem;font-weight:500;display:flex;align-items:center;gap:.6rem;animation:toast-in .25s ease;box-shadow:var(--shadow-lg);pointer-events:all;width:100%}
+.toast.success{border-color:var(--s-cp-b);color:var(--s-cp-t)}
+.toast.error{border-color:var(--s-bl-b);color:var(--s-bl-t)}
+.toast.info{border-color:var(--border3);color:var(--text)}
+@keyframes toast-in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.toast-fade{animation:toast-out .3s ease forwards}
+@keyframes toast-out{to{opacity:0;transform:translateY(8px)}}
+.empty{text-align:center;padding:2.5rem 1rem;color:var(--text3);font-size:.85rem}
+
+@media(max-width:640px){
+  header{padding:.85rem 1rem}
+  .kpi-bar{padding:.75rem 1rem}
+  main{padding:1rem}
+  .machines-grid{grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:.65rem}
+  .detail-header{gap:.5rem}
+  .detail-mname{font-size:1.25rem}
+  .form-grid{grid-template-columns:1fr}
+  .form-group.full{grid-column:auto}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-brand">
+    <div class="header-title">Alpha Containers · Aerosol Plant</div>
+    <div class="header-sub">Installation Tracker</div>
+  </div>
+  <div class="header-actions">
+    <div class="live-dot" title="Data active"></div>
+    <button class="icon-btn" title="Import Excel" onclick="triggerImport()">📥</button>
+    <button class="icon-btn" title="Export Excel" onclick="exportExcel()">📤</button>
+    <button class="icon-btn" title="Settings" onclick="navigate('settings')">⚙️</button>
+    <button class="icon-btn" id="theme-btn" title="Toggle light / dark mode" onclick="toggleTheme()">🌙</button>
+  </div>
+</header>
+
+<div class="kpi-bar">
+  <div class="kpi total"><div class="kv" id="k-total">0</div><div class="kl">Total</div></div>
+  <div class="kpi done"><div class="kv" id="k-done">0</div><div class="kl">Done</div></div>
+  <div class="kpi inprog"><div class="kv" id="k-ip">0</div><div class="kl">In Progress</div></div>
+  <div class="kpi blocked"><div class="kv" id="k-bl">0</div><div class="kl">Blocked</div></div>
+  <div class="kpi procure"><div class="kv" id="k-pp">0</div><div class="kl">Procurement</div></div>
+</div>
+
+<main>
+  <!-- Dashboard -->
+  <div class="view active" id="view-dashboard">
+    <div class="section-label">
+      Machine Sections — Tap to view tasks
+      <button class="btn-sm primary" onclick="openAddModal(null)">+ Add Task</button>
+    </div>
+    <div class="machines-grid" id="machines-grid"></div>
+  </div>
+
+  <!-- Detail -->
+  <div class="view" id="view-detail">
+    <div class="detail-header">
+      <button class="back-btn" onclick="navigate('dashboard')">← All Machines</button>
+      <div class="detail-title-block">
+        <div class="detail-mname"><span id="d-icon"></span><span id="d-name"></span></div>
+        <div class="detail-prog-row">
+          <div class="detail-prog-bar"><div class="detail-prog-fill" id="d-fill" style="width:0%"></div></div>
+          <span class="detail-pct" id="d-pct"></span>
+        </div>
+      </div>
+      <div class="detail-actions">
+        <button class="toggle-btn" id="toggle-btn" onclick="toggleDone()"><div class="toggle-dot"></div>Show Completed</button>
+        <button class="add-task-btn" onclick="openAddModal(currentMachine)">+ Add Task</button>
+      </div>
+    </div>
+    <div id="detail-body"></div>
+  </div>
+
+  <!-- Settings -->
+  <div class="view" id="view-settings">
+    <div class="section-label">
+      <span>Settings & Sync</span>
+      <button class="back-btn" onclick="navigate('dashboard')" style="font-size:.75rem">← Dashboard</button>
+    </div>
+
+    <div class="settings-section">
+      <h3>Data</h3>
+      <div class="settings-row">
+        <div class="settings-info"><div class="settings-label">Import from Excel</div><div class="settings-desc">Load tasks from Aerosol_Plant_Tracker_v8.xlsx to refresh data</div></div>
+        <div class="settings-action"><button class="btn-sm" onclick="triggerImport()">Import</button></div>
+      </div>
+      <div class="settings-row">
+        <div class="settings-info"><div class="settings-label">Export to Excel</div><div class="settings-desc">Download current tasks as a formatted .xlsx file</div></div>
+        <div class="settings-action"><button class="btn-sm" onclick="exportExcel()">Export</button></div>
+      </div>
+      <div class="settings-row">
+        <div class="settings-info"><div class="settings-label">Reset All Data</div><div class="settings-desc">Clears local storage and reloads seed data</div></div>
+        <div class="settings-action"><button class="btn-sm" style="color:#f87171;border-color:#7f1d1d" onclick="resetData()">Reset</button></div>
+      </div>
+    </div>
+
+    <div class="settings-section">
+      <h3>GitHub Sync — Live shared data for the whole team</h3>
+      <div class="settings-row">
+        <div class="settings-info">
+          <div class="settings-label">Sync Status</div>
+          <div class="settings-desc" id="sync-status-text">Not configured — edits saved locally only</div>
+        </div>
+        <div class="settings-action"><span class="sync-status err" id="sync-status-dot">● Local only</span></div>
+      </div>
+      <div class="settings-row">
+        <div class="settings-info">
+          <div class="settings-label">GitHub Personal Access Token</div>
+          <div class="settings-desc">Needed to save edits. Read-only works without a token.</div>
+          <input id="sync-key-input" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" type="password" style="margin-top:.5rem;font-size:.8rem" value="">
+        </div>
+        <div class="settings-action" style="display:flex;gap:.4rem;align-items:center;flex-direction:column">
+          <button class="btn-sm" onclick="testSync()">Test</button>
+          <button class="btn-sm primary" onclick="saveSync()">Save</button>
+        </div>
+      </div>
+      <div class="settings-row">
+        <div class="settings-info">
+          <div class="settings-label">Auto-sync on every save</div>
+          <div class="settings-desc">Push changes to GitHub automatically after each edit</div>
+        </div>
+        <div class="settings-action">
+          <label style="display:flex;align-items:center;gap:.4rem;cursor:pointer">
+            <input type="checkbox" id="auto-sync-toggle" onchange="toggleAutoSync(this)" style="width:auto;accent-color:var(--accent)">
+            <span style="font-size:.8rem;color:var(--text2)">On</span>
+          </label>
+        </div>
+      </div>
+      <div class="settings-row">
+        <div class="settings-info">
+          <div class="settings-label">Manual sync</div>
+          <div class="settings-desc">Push local data to GitHub right now</div>
+        </div>
+        <div class="settings-action" style="display:flex;gap:.4rem">
+          <button class="btn-sm" onclick="pullFromGitHub()">↓ Pull</button>
+          <button class="btn-sm primary" onclick="pushToGitHub()">↑ Push</button>
+        </div>
+      </div>
+      <div class="info-box">
+        <strong>How to get a GitHub Personal Access Token:</strong><br>
+        1. Go to <code>github.com</code> → Your profile → Settings<br>
+        2. Developer settings → Personal access tokens → Tokens (classic) → Generate new token<br>
+        3. Give it a name like <code>aerosol-tracker</code>, tick <code>repo</code> scope, click Generate<br>
+        4. Copy the token (starts with <code>ghp_</code>) and paste it above<br><br>
+        <strong>Anyone on the team</strong> who has this token and opens the page can edit. Data is stored in <code>tasks.json</code> in your GitHub repo.
+      </div>
+    </div>
+
+    <div class="settings-section">
+      <h3>About</h3>
+      <div class="settings-row">
+        <div class="settings-info"><div class="settings-label">Version</div><div class="settings-desc">Aerosol Plant Tracker v1.0 · Alpha Containers (Pvt.) Ltd.</div></div>
+      </div>
+      <div class="settings-row">
+        <div class="settings-info"><div class="settings-label">Install as App</div><div class="settings-desc">Open in Chrome/Safari → Share → Add to Home Screen for full PWA experience</div></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Add/Edit Modal -->
+<div class="modal-overlay center" id="task-modal" style="display:none" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title" id="modal-title">Add Task</div>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="form-grid">
+      <div class="form-group">
+        <label>Machine</label>
+        <select id="f-machine"></select>
+      </div>
+      <div class="form-group">
+        <label>Category</label>
+        <select id="f-category">
+          <option>Electrical</option>
+          <option>Mechanical</option>
+        </select>
+      </div>
+      <div class="form-group full">
+        <label>Task Description</label>
+        <textarea id="f-desc" rows="2" placeholder="Describe the task clearly…"></textarea>
+      </div>
+      <div class="form-group">
+        <label>Priority</label>
+        <select id="f-priority">
+          <option>High</option>
+          <option>Medium</option>
+          <option>Low</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Status</label>
+        <select id="f-status">
+          <option>Not Started</option>
+          <option>In Progress</option>
+          <option>Completed</option>
+          <option>Blocked</option>
+          <option>Pending Procurement</option>
+        </select>
+      </div>
+      <div class="form-group full">
+        <label>Progress — <span id="prog-display">0%</span></label>
+        <div class="range-row">
+          <input type="range" id="f-progress" min="0" max="100" value="0" oninput="document.getElementById('prog-display').textContent=this.value+'%'">
+          <span class="range-val" id="prog-num">0%</span>
+        </div>
+      </div>
+      <div class="form-group full">
+        <label>Remarks</label>
+        <input id="f-remarks" placeholder="Notes, vendor, reason for delay…">
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-danger" id="modal-delete-btn" style="display:none" onclick="deleteCurrentTask()">Delete Task</button>
+      <button class="btn-cancel" onclick="closeModal()">Cancel</button>
+      <button class="btn-save" onclick="saveTask()">Save Task</button>
+    </div>
+  </div>
+</div>
+
+<!-- Import file input -->
+<input type="file" id="import-input" accept=".xlsx,.xls" style="display:none" onchange="importExcel(this)">
+
+<!-- Toast container -->
+<div class="toast-wrap" id="toast-wrap"></div>
+
+<script>
+// ═══════════════════════════════════════════════════════
+//  CONFIG
+// ═══════════════════════════════════════════════════════
+const STORAGE_KEY = 'aerosol_tracker_v1';
+const MACHINE_ORDER = ['Press','Trimming','Washing','Lacquer','Base Coat','Printing','Over Varnish','Main Oven','Necking','Mixer','General'];
+const ICONS = {Press:'⚙️',Trimming:'✂️',Washing:'💧',Lacquer:'🎨','Base Coat':'🖌️',Printing:'🖨️','Over Varnish':'✨','Main Oven':'🔥',Necking:'🔩',Mixer:'🔄',General:'📋'};
+const STATUS_CLASS = {'In Progress':'ip','Not Started':'ns','Completed':'cp','Blocked':'bl','Pending Procurement':'pp'};
+const SEED = [["Press","Electrical","Close all electrical panels and cable trays","High",10,"In Progress",""],["Press","Electrical","SOV pneumatic press clutch service","–",100,"Completed",""],["Press","Electrical","Hopper motor installation and testing (Dry Run)","–",100,"Completed",""],["Press","Electrical","Hopper Motor installation","–",100,"Completed",""],["Press","Electrical","Cable trays installation","–",100,"Completed",""],["Press","Mechanical","Slug Feeding Hopper with switch — complete unit","High",50,"In Progress",""],["Press","Mechanical","Gear Oil Lubrication pumping system setup","High",40,"In Progress","Pump sent for repairing"],["Press","Mechanical","Welding & fixing gear oil tank brackets and sheet","Medium",40,"In Progress",""],["Press","Mechanical","02 Dust collection pipes to be installed","Medium",0,"Not Started",""],["Press","Mechanical","Dust Collection blower — connection with piping","Medium",0,"Not Started","Blower to be procured"],["Press","Mechanical","Fix lubrication tray with slope for drainage","Medium",0,"Not Started",""],["Press","Mechanical","Oil collection tank — place directly under tray","Medium",0,"Not Started",""],["Press","Mechanical","Operator Platform (incomplete stand) to be made","Low",0,"Not Started",""],["Press","Mechanical","Damping rubber pads over slug feeding tray","Low",0,"Not Started",""],["Press","Mechanical","Scoop (chamach) required for slug handling","Low",0,"Not Started","Khalid sb"],["Press","Mechanical","Baling machine check from local vendor","Low",0,"Not Started","Khalid sb"],["Press","Mechanical","Auto gripper fitting / checking","–",100,"Completed",""],["Press","Mechanical","Slug Holder channel","–",100,"Completed",""],["Press","Mechanical","Press main slide installation","–",100,"Completed",""],["Press","Mechanical","Press conveyor fixation","–",100,"Completed",""],["Press","Mechanical","Oil pump motor repairing","–",100,"Completed",""],["Press","Mechanical","Press & Trimming compressor line fixed","–",100,"Completed",""],["Press","Mechanical","Press Clutch NRV repaired","–",100,"Completed",""],["Press","Mechanical","Oil pump replacing and troubleshooting","–",100,"Completed",""],["Press","Mechanical","Press timing and alignment with testing","–",100,"Completed",""],["Press","Mechanical","Die & punch stroke setting","–",100,"Completed",""],["Press","Mechanical","Press machine auto lubrication — pending tasks","High",30,"In Progress","Procurement in process"],["Press","Mechanical","Press machine auto running on slug","High",0,"Not Started","Awaiting pending task completion"],["Press","Mechanical","Tools for press machine — urgent procurement","High",20,"In Progress","In progress"],["Trimming","Electrical","Scrap collector wiring and troubleshooting","High",90,"In Progress","Magnetic switch faulty — to be changed"],["Trimming","Electrical","Electrical Panel checked / Tested","–",100,"Completed",""],["Trimming","Electrical","Startup main motor","–",100,"Completed",""],["Trimming","Electrical","Pneumatic and Electrical operation check","–",100,"Completed",""],["Trimming","Mechanical","Oiling / greasing / parts replacement / testing","High",80,"In Progress","Oil pump maintenance pending"],["Trimming","Mechanical","Trimming machine dry run","High",0,"Blocked","Dry run awaiting — cutter blade sent for sharpening"],["Trimming","Mechanical","Trimming startup","–",100,"Completed",""],["Trimming","Mechanical","Conveyor alignment — Trimming to Washing","–",100,"Completed",""],["Trimming","Mechanical","Conveyor — Press to Trimming input","–",100,"Completed",""],["Washing","Electrical","Heaters to be checked and replaced if required","High",30,"In Progress","After press & trimming startup"],["Washing","Electrical","Disconnect wiring before washing the machine","High",0,"In Progress","Khalid sb"],["Washing","Electrical","Ensure all exhaust fans on floor are operational","High",0,"In Progress","Cable & connection required — UTI team"],["Washing","Mechanical","Chain Repairing","High",0,"In Progress","Sent to Karachi for repairing"],["Washing","Mechanical","Process identification, missing parts, inspection","High",0,"In Progress","In collaboration with Lindsay"],["Washing","Mechanical","Rinsing Recycling Tank — decoating & cleaning","High",50,"In Progress",""],["Washing","Mechanical","Spraying Jets Section — cleaning / scraping","High",50,"In Progress",""],["Washing","Mechanical","Inspect all rubber pipes — replace if damaged","High",0,"Blocked","After chain arrival — Khalid sb"],["Washing","Mechanical","Separate storage tanks (detergent / cold / hot water)","High",0,"Not Started","Khalid sb"],["Washing","Mechanical","Washing rinse recycling tank (rusty) — clean","High",0,"Not Started","Khalid sb"],["Washing","Mechanical","Heat exchanger for washing system — procure & install","High",0,"Not Started","Khalid sb"],["Washing","Mechanical","Washing process flow — review and implement","High",0,"Not Started","Khalid sb"],["Washing","Mechanical","Washing unit tanks — sizes and quantities for quotation","High",0,"Not Started","Khalid sb"],["Washing","Mechanical","Washing unit drain plan — flexible pipes after tank installation","Medium",0,"Not Started","To be installed after tank installation"],["Washing","Mechanical","Washing machine chain — repair and reinstallation check","High",30,"In Progress","Repairing in progress in Karachi — to be checked after installation"],["Washing","Mechanical","Washing machine piping and blower installation","High",20,"In Progress","To be checked with Lindsay — blower available for installation"],["Washing","Mechanical","All gears greasing","–",100,"Completed",""],["Washing","Mechanical","Gears alignment","–",100,"Completed",""],["Lacquer","Electrical","Air filter to be installed before lacquer line","High",0,"Not Started","Khalid sb"],["Lacquer","Electrical","All heaters — check, fix or replace faulty","High",90,"In Progress","2 faulty heaters need replacement"],["Lacquer","Electrical","Blower main motor connection and testing","–",100,"Completed",""],["Lacquer","Mechanical","Cans Holders — dismantled, clean with thinner","Medium",50,"In Progress",""],["Lacquer","Mechanical","Small dedicated air tank / receiver for lacquer","Medium",0,"Not Started","Khalid sb"],["Lacquer","Mechanical","Spray Guns — cleaned with thinner","–",100,"Completed",""],["Lacquer","Mechanical","Spray Mount Drum — scraped & cleaned","–",100,"Completed",""],["Lacquer","Mechanical","Mandrel Plate — scraped & cleaned","–",100,"Completed",""],["Lacquer","Mechanical","Exhaust Sieve — cleaned","–",100,"Completed",""],["Lacquer","Mechanical","Frame Body — cleaned","–",100,"Completed",""],["Lacquer","Mechanical","Oven Chain cleaning","–",100,"Completed",""],["Base Coat","Mechanical","Rollers — dismantled, to be chrome plated","Medium",50,"In Progress","Sent for chrome plating"],["Base Coat","Mechanical","Rollers Housing — cleaned and greased","–",100,"Completed",""],["Base Coat","Mechanical","Mandrels — cleaned","–",100,"Completed",""],["Base Coat","Mechanical","Frame Body — cleaned","–",100,"Completed",""],["Printing","Electrical","Servo motor troubleshooting","High",0,"Not Started",""],["Printing","Electrical","White LED lighting for printing and oven area","Medium",0,"Not Started","Khalid sb"],["Printing","Electrical","Final printing plan and PLC delivery & inspection","High",20,"Pending Procurement","PLC and supporting items to be delivered — Material in transit"],["Printing","Electrical","CTC cleaning of machine panels interface","–",100,"Completed",""],["Printing","Electrical","PLC installation","–",100,"Completed",""],["Printing","Mechanical","All printing rollers — dismantle, clean, buff, chrome plate","High",60,"In Progress",""],["Printing","Mechanical","Rollers (Tubex team) — ready for chrome plating","High",70,"In Progress",""],["Printing","Mechanical","Bearings — cleaning & greasing","Medium",50,"In Progress",""],["Printing","Mechanical","Ink Fountain — cleaning","Medium",50,"In Progress",""],["Printing","Mechanical","Roller Train Frame — cleaning","Medium",50,"In Progress",""],["Printing","Mechanical","Aluminium oil tank — fabricate & install","Medium",0,"Not Started","Khalid sb"],["Printing","Mechanical","Printing machine rollers — deep clean, rubber & chrome inspection","High",40,"In Progress","Deep cleaning in progress; rubber roller quotation taken; chrome coating to be checked"],["Over Varnish","Electrical","Motors checking and troubleshooting","–",100,"Completed",""],["Over Varnish","Mechanical","Rollers — dismantled, to be chrome plated","Medium",50,"In Progress","Sent for chrome plating"],["Over Varnish","Mechanical","Mandrels — cleaned","–",100,"Completed",""],["Over Varnish","Mechanical","Rollers Housing — cleaned and greased","–",100,"Completed",""],["Over Varnish","Mechanical","Frame Body — cleaned","–",100,"Completed",""],["Main Oven","Electrical","Cable trays installation","–",100,"Completed",""],["Main Oven","Electrical","Blower motor connection and testing","–",100,"Completed",""],["Main Oven","Mechanical","Motors alignment w.r.t marking","–",100,"Completed",""],["Necking","Electrical","Electrical troubleshooting and testing","–",100,"Completed",""],["Necking","Electrical","Necking machine — electrical supply troubleshooting for dry run","High",20,"In Progress","Interlocking will be redesigned and checked"],["Necking","Mechanical","Two sets of press dies, springs & nut bolts required","High",0,"Not Started","Khalid sb"],["Necking","Mechanical","Buffing and polishing on necking machine tools","Medium",0,"Not Started","Khalid sb"],["Necking","Mechanical","Kluber oil & grease for necking machine","Medium",0,"Not Started","Khalid sb"],["Necking","Mechanical","Cans Grippers / Holders — cleaning","Medium",50,"In Progress","Tubex team"],["Mixer","Electrical","Main motor testing","–",100,"Completed",""],["Mixer","Electrical","Mixer installation and automation — auto feeding flow design","Medium",0,"Pending Procurement","Flow to be designed for auto feeding on press — quotation awaiting for conveyor"],["General","Electrical","Main Power Cable Termination & Execution Plan","High",0,"Pending Procurement","Wires and auxiliaries to be ordered against BOQ"],["General","Electrical","Electrical panels for power distribution — procurement review","High",0,"Pending Procurement","New panels arranged; feedback needed on further procurement items"],["General","Electrical","Transformer load increase to 625 kW — utility application","High",30,"In Progress","Application in process"],["General","Electrical","Verify electrical panels, wiring & interlocks — Press to Washing","High",0,"Blocked","Pending until Washing Machine electrical work is completed"],["General","Electrical","Verify electrical panels, wiring & interlocks — Washing to Necking","High",0,"Blocked","After material procurement; electrical revamping team to be deputed"],["General","Electrical","Ensure all electrical circuits & cable trays closed","High",0,"In Progress","After each section completion — Khalid sb"],["General","Electrical","Testing of Control Logics & Circuits","High",0,"Not Started","Target: 05-Apr-2026"],["General","Electrical","Termination of cables & wires — Pre-commissioning","High",0,"Not Started","Target: 15-Apr-2026"],["General","Electrical","Verify electrical panels, control wiring, interlocks","High",0,"Not Started","Target: 10-May-2026"],["General","Electrical","Identify faulty machines / panels for rectification","High",0,"Not Started","Target: 15-May-2026"],["General","Mechanical","Compressor piping — dryer and auto drain system","High",50,"In Progress","Mechanical and electrical installation in process"],["General","Mechanical","Machine Operating Manuals — arrange from OEM","Medium",10,"In Progress","Required in Russian and German language"],["General","Mechanical","Mr. Lindsay next visit — finalize commissioning dates","Medium",0,"Not Started","Final commissioning visit dates to be finalized upon startup"],["General","Mechanical","Daily coordination & reporting mechanism","Low",0,"In Progress","As per the plan"],["General","Mechanical","Check motors, conveyors, spindles, ovens, actuators","High",0,"Not Started",""],["General","Mechanical","Test each machine individually without load","High",0,"Not Started",""],["General","Mechanical","Overall machine paint","Medium",0,"Not Started",""],["General","Mechanical","Ensure proper cleaning of entire machine","High",0,"In Progress","Khalid sb"],["General","Mechanical","Full unit inspection with Mr. Babar's team","High",0,"In Progress","Khalid sb"],["General","Mechanical","Modify exhaust duct pipes — prevent rainwater entry","Medium",0,"Not Started","Awaiting quotation — Khalid sb"],["General","Mechanical","Check & install lubrication drum foundation","Medium",0,"Not Started","On startup — Khalid sb"],["General","Mechanical","Make stands for all spare rolls","Low",0,"Not Started","Awaiting quotation — Khalid sb"],["General","Mechanical","Full operator toolset & tool trolley system","Medium",0,"Not Started","Khalid sb"],["General","Mechanical","Lab equipment to be sourced","Medium",0,"Not Started","Khalid sb"],["General","Mechanical","Filter plant — fix for drinking water","Low",0,"Not Started","Khalid sb"],["General","Mechanical","Dust bins for office areas","Low",0,"Not Started","Khalid sb"],["General","Mechanical","Big cartons for temporary storage of cans","Low",0,"Not Started","Khalid sb"],["General","Mechanical","Boxes / Bins for cans packing (Alpha Container)","Low",0,"Not Started","Khalid sb"],["General","Mechanical","Dismantle all rollers for inspection","–",100,"Completed","Done — Khalid sb"]];
+
+// ═══════════════════════════════════════════════════════
+//  STATE
+// ═══════════════════════════════════════════════════════
+let tasks = [];
+let settings = { syncUrl:'', syncKey:'' };
+let currentMachine = null;
+let showCompleted = false;
+let editingId = null;
+let ctxMenu = null;
+let pendingDelete = null;
+
+function uid(){ return 't' + Date.now() + Math.random().toString(36).slice(2,6); }
+
+function loadState(){
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if(raw){
+      const d = JSON.parse(raw);
+      tasks    = d.tasks    || [];
+      settings = d.settings || { syncUrl:'', syncKey:'' };
+      if(!tasks.length) seedTasks();
+    } else { seedTasks(); }
+  } catch(e){ seedTasks(); }
+}
+
+function seedTasks(){
+  tasks = SEED.map(s => ({
+    id: uid(), machine: s[0], category: s[1], desc: s[2],
+    priority: s[3], progress: s[4], status: s[5], remarks: s[6], updated: ''
+  }));
+  saveState();
+}
+
+function saveState(){
+  localStorage.setItem(STORAGE_KEY, JSON.stringify({ tasks, settings }));
+}
+
+// ═══════════════════════════════════════════════════════
+//  NAVIGATION
+// ═══════════════════════════════════════════════════════
+function navigate(view, machine){
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  document.getElementById('view-' + view).classList.add('active');
+  if(view === 'detail' && machine){ showMachine(machine); }
+  if(view !== 'detail'){ currentMachine = null; }
+  window.scrollTo({ top:0, behavior:'smooth' });
+}
+
+// ═══════════════════════════════════════════════════════
+//  RENDER KPIs
+// ═══════════════════════════════════════════════════════
+function renderKPIs(){
+  const c = s => tasks.filter(t => t.status === s).length;
+  animCount('k-total', tasks.length);
+  animCount('k-done',  c('Completed'));
+  animCount('k-ip',    c('In Progress'));
+  animCount('k-bl',    c('Blocked'));
+  animCount('k-pp',    c('Pending Procurement'));
+}
+
+function animCount(id, target){
+  const el = document.getElementById(id);
+  const cur = parseInt(el.textContent) || 0;
+  if(cur === target){ el.textContent = target; return; }
+  let v = cur;
+  const step = Math.ceil(Math.abs(target - cur) / 30);
+  const dir = target > cur ? 1 : -1;
+  const t = setInterval(() => {
+    v = dir > 0 ? Math.min(v + step, target) : Math.max(v - step, target);
+    el.textContent = v;
+    if(v === target) clearInterval(t);
+  }, 28);
+}
+
+// ═══════════════════════════════════════════════════════
+//  RENDER DASHBOARD
+// ═══════════════════════════════════════════════════════
+function renderDashboard(){
+  const grid = document.getElementById('machines-grid');
+  grid.innerHTML = '';
+  const C = 2 * Math.PI * 15.9;
+
+  MACHINE_ORDER.forEach((m, i) => {
+    const mt = tasks.filter(t => t.machine === m);
+    if(!mt.length) return;
+    const done    = mt.filter(t => t.status === 'Completed').length;
+    const pending = mt.length - done;
+    const pct     = mt.length ? Math.round(done/mt.length*100) : 0;
+    const ePend   = mt.filter(t => t.category === 'Electrical' && t.status !== 'Completed').length;
+    const mPend   = mt.filter(t => t.category === 'Mechanical' && t.status !== 'Completed').length;
+    const dash    = `${(pct/100*C).toFixed(1)} ${C.toFixed(1)}`;
+
+    const card = document.createElement('div');
+    card.className = 'machine-card';
+    card.style.setProperty('--i', i);
+    card.onclick = () => navigate('detail', m);
+    card.innerHTML = `
+      <div class="card-top">
+        <div class="card-icon">${ICONS[m]||'🔧'}</div>
+        <div class="ring-wrap">
+          <svg class="ring-svg" viewBox="0 0 36 36">
+            <circle class="ring-track" cx="18" cy="18" r="15.9"/>
+            <circle class="ring-fill" cx="18" cy="18" r="15.9" stroke-dasharray="0 ${C.toFixed(1)}" data-dash="${dash}"/>
+          </svg>
+          <div class="ring-num">${pct}%</div>
+        </div>
+      </div>
+      <div class="card-name">${m}</div>
+      <div class="card-tags">
+        ${ePend ? `<span class="ctag e">⚡ ${ePend}</span>` : ''}
+        ${mPend ? `<span class="ctag m">⚙ ${mPend}</span>` : ''}
+        ${!pending ? `<span class="ctag done">✓ Complete</span>` : ''}
+      </div>
+      <div class="card-bar"><div class="card-bar-fill" style="width:0%" data-pct="${pct}%"></div></div>
+      <div class="card-foot">
+        <span class="card-pend">${pending ? pending+' remaining' : done+' done'}</span>
+        <span class="card-arrow">→</span>
+      </div>`;
+    grid.appendChild(card);
+  });
+
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    grid.querySelectorAll('.ring-fill').forEach(el => el.setAttribute('stroke-dasharray', el.dataset.dash));
+    grid.querySelectorAll('.card-bar-fill').forEach(el => el.style.width = el.dataset.pct);
+  }));
+}
+
+// ═══════════════════════════════════════════════════════
+//  RENDER MACHINE DETAIL
+// ═══════════════════════════════════════════════════════
+function showMachine(m){
+  currentMachine = m;
+  showCompleted = false;
+  document.getElementById('toggle-btn').className = 'toggle-btn';
+  document.getElementById('toggle-btn').innerHTML = '<div class="toggle-dot"></div>Show Completed';
+  document.getElementById('d-icon').textContent = ICONS[m] || '🔧';
+  document.getElementById('d-name').textContent = m;
+
+  const mt = tasks.filter(t => t.machine === m);
+  const done = mt.filter(t => t.status === 'Completed').length;
+  const pct  = mt.length ? Math.round(done/mt.length*100) : 0;
+  const fill = document.getElementById('d-fill');
+  fill.style.width = '0%';
+  document.getElementById('d-pct').textContent = `${pct}% · ${done}/${mt.length}`;
+  requestAnimationFrame(() => requestAnimationFrame(() => fill.style.width = pct + '%'));
+
+  renderDetail();
+}
+
+function renderDetail(){
+  const body = document.getElementById('detail-body');
+  body.innerHTML = '';
+  const m = currentMachine;
+
+  ['Electrical','Mechanical'].forEach(cat => {
+    const catTasks = tasks.filter(t => t.machine === m && t.category === cat);
+    if(!catTasks.length) return;
+    const visible  = showCompleted ? catTasks : catTasks.filter(t => t.status !== 'Completed');
+    const pending  = catTasks.filter(t => t.status !== 'Completed').length;
+    const catCls   = cat === 'Electrical' ? 'e' : 'm';
+    const icon     = cat === 'Electrical' ? '⚡' : '⚙';
+
+    const sec = document.createElement('div');
+    sec.className = 'cat-section';
+    sec.innerHTML = `
+      <div class="cat-header ${catCls}">
+        <span>${icon}</span>
+        <span class="cat-name">${cat}</span>
+        <span class="cat-count">${pending} pending · ${catTasks.length} total</span>
+      </div>
+      <div class="task-list" id="tl-${catCls}"></div>`;
+    body.appendChild(sec);
+
+    const list = sec.querySelector(`#tl-${catCls}`);
+    if(!visible.length){
+      list.innerHTML = `<div class="empty">All ${cat} tasks completed ✓</div>`;
+      return;
+    }
+    visible.forEach(t => list.appendChild(buildTask(t)));
+  });
+}
+
+function buildTask(t){
+  const sc  = STATUS_CLASS[t.status] || 'ns';
+  const pct = Math.round(t.progress);
+  const div = document.createElement('div');
+  div.className = `task-card s-${sc}`;
+  div.dataset.id = t.id;
+  const pfill = pct===100?'full':pct===0?'':'';
+  div.innerHTML = `
+    <div class="task-top">
+      <div class="task-desc">${t.desc}</div>
+      <div class="task-badges">
+        ${t.priority && t.priority !== '–' ? `<span class="badge p-${t.priority}">${t.priority}</span>` : ''}
+        <span class="badge s-${sc}">${t.status}</span>
+        <button class="task-menu-btn" onclick="openCtx(event,'${t.id}')">⋯</button>
+      </div>
+    </div>
+    <div class="task-prog-row">
+      <div class="task-prog-track"><div class="task-prog-fill ${pfill}" style="width:${pct}%"></div></div>
+      <span class="task-pct">${pct}%</span>
+    </div>
+    ${t.remarks ? `<div class="task-remarks">${t.remarks}</div>` : ''}
+    ${t.updated  ? `<div class="task-updated">Updated ${t.updated}</div>` : ''}`;
+  return div;
+}
+
+// ═══════════════════════════════════════════════════════
+//  CONTEXT MENU
+// ═══════════════════════════════════════════════════════
+function openCtx(e, id){
+  e.stopPropagation();
+  closeCtx();
+  const menu = document.createElement('div');
+  menu.className = 'ctx-menu';
+  menu.id = 'ctx-menu';
+  menu.innerHTML = `
+    <div class="ctx-item" onclick="openEditModal('${id}')">✏️ Edit Task</div>
+    <div class="ctx-item" onclick="quickStatus('${id}','Completed')">✅ Mark Completed</div>
+    <div class="ctx-item" onclick="quickStatus('${id}','In Progress')">🔄 Mark In Progress</div>
+    <div class="ctx-item" onclick="quickStatus('${id}','Blocked')">🚫 Mark Blocked</div>
+    <div class="ctx-item danger" onclick="confirmDelete('${id}')">🗑 Delete</div>`;
+  const rect = e.target.getBoundingClientRect();
+  menu.style.top  = Math.min(rect.bottom + 4, window.innerHeight - 200) + 'px';
+  menu.style.right = (window.innerWidth - rect.right) + 'px';
+  document.body.appendChild(menu);
+  ctxMenu = menu;
+  setTimeout(() => document.addEventListener('click', closeCtx, {once:true}), 10);
+}
+function closeCtx(){ if(ctxMenu){ ctxMenu.remove(); ctxMenu = null; } }
+
+function quickStatus(id, status){
+  const t = tasks.find(t => t.id === id);
+  if(!t) return;
+  t.status = status;
+  if(status === 'Completed') t.progress = 100;
+  t.updated = new Date().toLocaleDateString('en-PK',{day:'numeric',month:'short',year:'numeric'});
+  saveState(); renderAll(); toast('Status updated — ' + status,'success');
+}
+
+function confirmDelete(id){
+  pendingDelete = id;
+  const t = tasks.find(t => t.id === id);
+  const toastEl = showUndoToast(t ? `"${t.desc.slice(0,40)}…" deleted` : 'Task deleted');
+  tasks = tasks.filter(t => t.id !== id);
+  saveState(); renderAll();
+}
+
+// ═══════════════════════════════════════════════════════
+//  MODAL — ADD / EDIT
+// ═══════════════════════════════════════════════════════
+function populateMachineSelect(selected){
+  const sel = document.getElementById('f-machine');
+  sel.innerHTML = MACHINE_ORDER.map(m => `<option${m===selected?' selected':''}>${m}</option>`).join('');
+}
+
+function openAddModal(machine){
+  editingId = null;
+  document.getElementById('modal-title').textContent = 'Add Task';
+  document.getElementById('modal-delete-btn').style.display = 'none';
+  populateMachineSelect(machine || currentMachine || 'General');
+  document.getElementById('f-category').value  = 'Mechanical';
+  document.getElementById('f-desc').value      = '';
+  document.getElementById('f-priority').value  = 'Medium';
+  document.getElementById('f-status').value    = 'Not Started';
+  document.getElementById('f-progress').value  = 0;
+  document.getElementById('f-remarks').value   = '';
+  document.getElementById('prog-display').textContent = '0%';
+  document.getElementById('prog-num').textContent = '0%';
+  document.getElementById('task-modal').style.display = 'flex';
+}
+
+function openEditModal(id){
+  const t = tasks.find(t => t.id === id);
+  if(!t) return;
+  editingId = id;
+  document.getElementById('modal-title').textContent = 'Edit Task';
+  document.getElementById('modal-delete-btn').style.display = 'inline-flex';
+  populateMachineSelect(t.machine);
+  document.getElementById('f-category').value  = t.category;
+  document.getElementById('f-desc').value      = t.desc;
+  document.getElementById('f-priority').value  = t.priority === '–' ? 'Medium' : t.priority;
+  document.getElementById('f-status').value    = t.status;
+  document.getElementById('f-progress').value  = t.progress;
+  document.getElementById('f-remarks').value   = t.remarks;
+  document.getElementById('prog-display').textContent = t.progress + '%';
+  document.getElementById('prog-num').textContent = t.progress + '%';
+  document.getElementById('task-modal').style.display = 'flex';
+}
+
+document.getElementById('f-progress').addEventListener('input', function(){
+  document.getElementById('prog-num').textContent = this.value + '%';
+});
+
+function closeModal(){
+  document.getElementById('task-modal').style.display = 'none';
+  editingId = null;
+}
+
+function saveTask(){
+  const machine  = document.getElementById('f-machine').value;
+  const category = document.getElementById('f-category').value;
+  const desc     = document.getElementById('f-desc').value.trim();
+  if(!desc){ toast('Task description is required','error'); return; }
+  const priority = document.getElementById('f-priority').value;
+  const status   = document.getElementById('f-status').value;
+  const progress = parseInt(document.getElementById('f-progress').value);
+  const remarks  = document.getElementById('f-remarks').value.trim();
+  const updated  = new Date().toLocaleDateString('en-PK',{day:'numeric',month:'short',year:'numeric'});
+
+  if(editingId){
+    const t = tasks.find(t => t.id === editingId);
+    Object.assign(t, {machine,category,desc,priority,status,progress,remarks,updated});
+    toast('Task updated ✓','success');
+  } else {
+    tasks.push({id:uid(),machine,category,desc,priority,progress,status,remarks,updated});
+    toast('Task added ✓','success');
+  }
+  closeModal();
+  saveState();
+  if(editingId || machine === currentMachine){ currentMachine = machine; }
+  renderAll();
+  if(currentMachine) navigate('detail', currentMachine);
+}
+
+function deleteCurrentTask(){
+  if(!editingId) return;
+  const t = tasks.find(t => t.id === editingId);
+  tasks = tasks.filter(t => t.id !== editingId);
+  closeModal(); saveState(); renderAll();
+  toast('Task deleted','info');
+  if(currentMachine) renderDetail();
+}
+
+// ═══════════════════════════════════════════════════════
+//  TOGGLE COMPLETED
+// ═══════════════════════════════════════════════════════
+function toggleDone(){
+  showCompleted = !showCompleted;
+  const btn = document.getElementById('toggle-btn');
+  if(showCompleted){ btn.classList.add('on'); btn.innerHTML='<div class="toggle-dot"></div>Hide Completed'; }
+  else             { btn.classList.remove('on'); btn.innerHTML='<div class="toggle-dot"></div>Show Completed'; }
+  renderDetail();
+}
+
+// ═══════════════════════════════════════════════════════
+//  EXCEL IMPORT / EXPORT
+// ═══════════════════════════════════════════════════════
+function triggerImport(){ document.getElementById('import-input').click(); }
+
+function importExcel(input){
+  const file = input.files[0];
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    const wb   = XLSX.read(new Uint8Array(e.target.result), {type:'array'});
+    const ws   = wb.Sheets['TRACKER'];
+    if(!ws){ toast('TRACKER sheet not found in file','error'); return; }
+    const rows = XLSX.utils.sheet_to_json(ws, {header:1, defval:''});
+    const imported = rows.slice(2).filter(r => r[1] && String(r[1]).trim()).map(r => ({
+      id:       uid(),
+      machine:  String(r[1]).trim(),
+      category: String(r[2]).trim(),
+      desc:     String(r[3]).trim(),
+      priority: String(r[4]).trim(),
+      progress: Math.round((parseFloat(r[5])||0) * (parseFloat(r[5])<=1?100:1)),
+      status:   String(r[6]).trim(),
+      remarks:  String(r[7]).trim(),
+      updated:  r[8] ? String(r[8]).trim() : ''
+    }));
+    if(!imported.length){ toast('No tasks found in file','error'); return; }
+    tasks = imported;
+    saveState(); renderAll();
+    toast(`${imported.length} tasks imported ✓`,'success');
+  };
+  reader.readAsArrayBuffer(file);
+  input.value = '';
+}
+
+function exportExcel(){
+  const STATUS_S = {'Completed':'2E7D32','In Progress':'F57F17','Not Started':'424242','Blocked':'B71C1C','Pending Procurement':'4A148C'};
+  const rows = [
+    ['S#','Machine','Category','Task Description','Priority','Progress %','Status','Remarks','Date Updated']
+  ];
+  tasks.forEach((t,i) => rows.push([i+1,t.machine,t.category,t.desc,t.priority,t.progress/100,t.status,t.remarks,t.updated]));
+  const ws = XLSX.utils.aoa_to_sheet(rows);
+  ws['!cols'] = [{wch:4},{wch:16},{wch:13},{wch:54},{wch:10},{wch:11},{wch:20},{wch:38},{wch:14}];
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, 'TRACKER');
+  XLSX.writeFile(wb, `Aerosol_Tracker_${new Date().toISOString().slice(0,10)}.xlsx`);
+  toast('Excel exported ✓','success');
+}
+
+// ═══════════════════════════════════════════════════════
+//  GITHUB SYNC
+// ═══════════════════════════════════════════════════════
+const GH = { owner:'ckndr', repo:'Aerosol', branch:'main', file:'tasks.json' };
+const GH_RAW  = `https://raw.githubusercontent.com/${GH.owner}/${GH.repo}/${GH.branch}/${GH.file}`;
+const GH_API  = `https://api.github.com/repos/${GH.owner}/${GH.repo}/contents/${GH.file}`;
+let syncBusy  = false;
+let syncQueue = false;
+
+function saveSync(){
+  settings.syncKey  = document.getElementById('sync-key-input').value.trim();
+  settings.autoSync = document.getElementById('auto-sync-toggle').checked;
+  saveState(); updateSyncUI();
+  toast('Sync settings saved','success');
+}
+
+function toggleAutoSync(el){
+  settings.autoSync = el.checked;
+  saveState(); updateSyncUI();
+}
+
+async function testSync(){
+  const key = document.getElementById('sync-key-input').value.trim();
+  setSyncStatus('pending','● Testing…','Testing connection…');
+  try {
+    const h = {'Accept':'application/vnd.github.v3+json'};
+    if(key) h['Authorization'] = 'token ' + key;
+    const r = await fetch(GH_API, {headers:h});
+    if(r.ok){
+      setSyncStatus('ok','● Connected','GitHub connection successful ✓');
+      toast('GitHub connection successful ✓','success');
+    } else if(r.status===404){
+      // File doesn't exist yet — that's OK for first push
+      setSyncStatus('ok','● Ready','Repo found. tasks.json will be created on first push.');
+      toast('Repo found — ready to push','success');
+    } else {
+      setSyncStatus('err','● Error','HTTP ' + r.status + ' — check token permissions');
+      toast('Connection failed — HTTP ' + r.status,'error');
+    }
+  } catch(e){
+    setSyncStatus('err','● Offline','Could not reach GitHub — check internet');
+    toast('Connection failed — ' + e.message,'error');
+  }
+}
+
+async function pushToGitHub(){
+  const key = settings.syncKey;
+  if(!key){ toast('Add a GitHub token in Settings first','error'); navigate('settings'); return; }
+  if(syncBusy){ syncQueue = true; return; }
+  syncBusy = true;
+  setSyncStatus('pending','● Syncing…','Pushing to GitHub…');
+  try {
+    // Get current SHA (needed to update existing file)
+    let sha = null;
+    const metaR = await fetch(GH_API, {
+      headers:{'Authorization':'token '+key,'Accept':'application/vnd.github.v3+json'}
+    });
+    if(metaR.ok){ const meta = await metaR.json(); sha = meta.sha; }
+
+    const payload = JSON.stringify({ tasks, settings:{ autoSync: settings.autoSync } }, null, 2);
+    const encoded = btoa(unescape(encodeURIComponent(payload)));
+    const body    = {
+      message: 'Update tasks · ' + new Date().toLocaleString('en-PK'),
+      content:  encoded,
+      branch:   GH.branch
+    };
+    if(sha) body.sha = sha;
+
+    const r = await fetch(GH_API, {
+      method: 'PUT',
+      headers:{'Authorization':'token '+key,'Content-Type':'application/json','Accept':'application/vnd.github.v3+json'},
+      body: JSON.stringify(body)
+    });
+    if(r.ok){
+      setSyncStatus('ok','● Synced','Last push: ' + new Date().toLocaleTimeString());
+      toast('Pushed to GitHub ✓','success');
+    } else {
+      const err = await r.json().catch(()=>({}));
+      setSyncStatus('err','● Push failed', err.message || ('HTTP ' + r.status));
+      toast('Push failed — ' + (err.message || r.status),'error');
+    }
+  } catch(e){
+    setSyncStatus('err','● Push failed',e.message);
+    toast('Push failed — ' + e.message,'error');
+  }
+  syncBusy = false;
+  if(syncQueue){ syncQueue = false; pushToGitHub(); }
+}
+
+async function pullFromGitHub(){
+  setSyncStatus('pending','● Pulling…','Fetching from GitHub…');
+  try {
+    const r = await fetch(GH_RAW + '?t=' + Date.now());
+    if(!r.ok) throw new Error('HTTP ' + r.status);
+    const data = await r.json();
+    if(Array.isArray(data.tasks) && data.tasks.length){
+      tasks = data.tasks;
+      saveState(); renderAll();
+      setSyncStatus('ok','● Synced','Pulled ' + tasks.length + ' tasks from GitHub');
+      toast('Pulled ' + tasks.length + ' tasks from GitHub ✓','success');
+    } else {
+      toast('No tasks found in GitHub file','error');
+      setSyncStatus('err','● Pull failed','No tasks in tasks.json');
+    }
+  } catch(e){
+    setSyncStatus('err','● Pull failed',e.message);
+    toast('Pull failed — ' + e.message,'error');
+  }
+}
+
+function setSyncStatus(type, dot, text){
+  const d = document.getElementById('sync-status-dot');
+  const t = document.getElementById('sync-status-text');
+  if(!d||!t) return;
+  d.className = 'sync-status ' + type;
+  d.textContent = dot;
+  t.textContent = text;
+}
+
+function updateSyncUI(){
+  const key  = settings.syncKey || '';
+  const auto = settings.autoSync || false;
+  const ki   = document.getElementById('sync-key-input');
+  const at   = document.getElementById('auto-sync-toggle');
+  if(ki) ki.value = key;
+  if(at) at.checked = auto;
+  if(key){
+    setSyncStatus('ok','● Configured','Token saved · repo: github.com/'+GH.owner+'/'+GH.repo);
+  } else {
+    setSyncStatus('err','● Local only','Add a GitHub token to enable team sync');
+  }
+}
+
+// Hook into saveState to auto-push
+const _origSave = saveState;
+saveState = function(){
+  _origSave.call(this);
+  if(settings.autoSync && settings.syncKey){
+    clearTimeout(saveState._debounce);
+    saveState._debounce = setTimeout(pushToGitHub, 1500);
+  }
+};
+
+function resetData(){
+  if(!confirm('Reset all data to original seed data? This cannot be undone.')) return;
+  localStorage.removeItem(STORAGE_KEY);
+  seedTasks(); renderAll();
+  toast('Data reset to original','info');
+}
+
+// ═══════════════════════════════════════════════════════
+//  TOAST
+// ═══════════════════════════════════════════════════════
+function toast(msg, type='info'){
+  const wrap = document.getElementById('toast-wrap');
+  const el   = document.createElement('div');
+  el.className = `toast ${type}`;
+  el.textContent = msg;
+  wrap.appendChild(el);
+  setTimeout(() => { el.classList.add('toast-fade'); setTimeout(() => el.remove(), 350); }, 2800);
+}
+
+function showUndoToast(msg){
+  const wrap = document.getElementById('toast-wrap');
+  const el   = document.createElement('div');
+  el.className = 'toast info';
+  el.innerHTML = `<span style="flex:1">${msg}</span><button onclick="undoDelete(this)" style="background:none;border:1px solid var(--border3);color:var(--accent);padding:.2rem .6rem;border-radius:5px;font-size:.75rem;cursor:pointer;font-family:'DM Sans',sans-serif">Undo</button>`;
+  wrap.appendChild(el);
+  setTimeout(() => { el.classList.add('toast-fade'); setTimeout(() => el.remove(), 350); pendingDelete=null; }, 5000);
+}
+
+function undoDelete(btn){
+  // Undo not fully implemented in this demo — tasks already removed
+  // In production, keep a deletedTasks buffer
+  btn.closest('.toast').remove();
+  toast('Undo not available — task was already deleted','error');
+}
+
+// ═══════════════════════════════════════════════════════
+//  RENDER ALL
+// ═══════════════════════════════════════════════════════
+function renderAll(){
+  renderKPIs();
+  renderDashboard();
+  if(currentMachine) renderDetail();
+}
+
+// ═══════════════════════════════════════════════════════
+//  PWA MANIFEST
+// ═══════════════════════════════════════════════════════
+function installPWA(){
+  const m = {name:'Aerosol Plant Tracker',short_name:'Plant Tracker',
+    theme_color:'#0d1117',background_color:'#0d1117',display:'standalone',
+    start_url:'./',orientation:'any',
+    icons:[{src:`data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231f4e79'/><text y='.9em' font-size='70' x='15'>⚙️</text></svg>`,sizes:'192x192',type:'image/svg+xml'}]
+  };
+  const blob = new Blob([JSON.stringify(m)],{type:'application/json'});
+  const link = document.createElement('link');
+  link.rel='manifest'; link.href=URL.createObjectURL(blob);
+  document.head.appendChild(link);
+}
+
+// ═══════════════════════════════════════════════════════
+//  BOOT
+// ═══════════════════════════════════════════════════════
+// ── THEME ──────────────────────────────────────────────
+function applyTheme(t){
+  document.documentElement.setAttribute('data-theme', t);
+  const btn = document.getElementById('theme-btn');
+  if(btn) btn.textContent = t === 'light' ? '🌙' : '☀️';
+  btn && (btn.title = t === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode');
+}
+
+function toggleTheme(){
+  const current = document.documentElement.getAttribute('data-theme') || 'dark';
+  const next = current === 'dark' ? 'light' : 'dark';
+  applyTheme(next);
+  localStorage.setItem('aerosol_theme', next);
+}
+
+// Load saved theme before first paint
+(function(){
+  const saved = localStorage.getItem('aerosol_theme') || 'dark';
+  applyTheme(saved);
+})();
+
+installPWA();
+loadState();
+renderAll();
+updateSyncUI();
+
+// On boot, pull from GitHub if token is set
+if(settings.syncKey){
+  setTimeout(() => {
+    pullFromGitHub();
+  }, 800);
+}
+
+document.addEventListener('keydown', e => {
+  if(e.key === 'Escape'){ closeModal(); closeCtx(); }
+});
+</script>
+</body>
+</html>
