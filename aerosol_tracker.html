@@ -82,6 +82,10 @@ header{background:var(--surface);border-bottom:1px solid var(--border);padding:1
 .header-actions{display:flex;gap:.5rem;align-items:center}
 .icon-btn{width:34px;height:34px;border:1px solid var(--border);background:var(--surface2);border-radius:8px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:border-color .2s,background .2s;color:var(--text2);font-size:.85rem}
 .icon-btn:hover{border-color:var(--border3);background:var(--surface3);color:var(--text)}
+.icon-btn.active{background:var(--accent);border-color:var(--accent);color:#fff}
+.resp-chip{padding:.3rem .75rem;border:1px solid var(--border2);border-radius:20px;background:var(--surface2);color:var(--text2);font-size:.75rem;font-weight:500;cursor:pointer;transition:all .15s;font-family:'DM Sans',sans-serif;}
+.resp-chip:hover{border-color:var(--border3);color:var(--text);}
+.resp-chip.active{background:var(--accent);border-color:var(--accent);color:#fff;}
 .live-dot{width:6px;height:6px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 3px rgba(34,197,94,.2);animation:pdot 2s ease-in-out infinite;flex-shrink:0}
 @keyframes pdot{0%,100%{box-shadow:0 0 0 3px rgba(34,197,94,.2)}50%{box-shadow:0 0 0 6px rgba(34,197,94,.08)}}
 
@@ -119,6 +123,8 @@ main{padding:1.5rem;max-width:1400px;margin:0 auto}
 .machine-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),transparent);opacity:0;transition:opacity .2s}
 .machine-card:hover{border-color:var(--border2);transform:translateY(-2px);box-shadow:var(--shadow-lg)}
 .machine-card:hover::before{opacity:1}
+.machine-complete{border-color:var(--s-cp-b)!important;}
+.machine-complete::before{opacity:1!important;background:linear-gradient(90deg,#22c55e,#4ade80)!important;}
 @keyframes card-in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 .machine-card:nth-child(n){animation-delay:calc(var(--i,0)*.05s)}
 .card-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:.85rem}
@@ -127,7 +133,7 @@ main{padding:1.5rem;max-width:1400px;margin:0 auto}
 .ring-svg{width:40px;height:40px;transform:rotate(-90deg)}
 .ring-track{fill:none;stroke:var(--border2);stroke-width:3}
 .ring-fill{fill:none;stroke:var(--accent);stroke-width:3;stroke-linecap:round;transition:stroke-dasharray 1.2s cubic-bezier(.4,0,.2,1)}
-.ring-num{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:.58rem;color:var(--text2)}
+.ring-num{display:none}
 .card-name{font-size:.95rem;font-weight:600;color:var(--text);margin-bottom:.4rem}
 .card-tags{display:flex;gap:.35rem;flex-wrap:wrap;margin-bottom:.8rem}
 .ctag{font-size:.65rem;font-weight:500;padding:.15rem .45rem;border-radius:20px}
@@ -200,7 +206,7 @@ main{padding:1.5rem;max-width:1400px;margin:0 auto}
 .task-pct{font-family:'DM Mono',monospace;font-size:.62rem;color:var(--text3);min-width:2.2rem;text-align:right}
 .task-remarks{font-size:.76rem;color:var(--text2);font-style:italic;line-height:1.4}
 .task-remarks::before{content:'↳ ';color:var(--text3);font-style:normal}
-.task-updated{font-size:.62rem;color:var(--text3);margin-top:.35rem;font-family:'DM Mono',monospace}
+.task-updated{font-size:.62rem;color:var(--text3);margin-top:.3rem;font-family:'DM Mono',monospace;letter-spacing:.02em;}
 
 /* ── CONTEXT MENU ── */
 .ctx-menu{position:fixed;background:var(--surface2);border:1px solid var(--border2);border-radius:8px;padding:.3rem;z-index:90;box-shadow:var(--shadow-lg);min-width:130px;animation:ctx-in .15s ease}
@@ -421,12 +427,13 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
 }
 .readonly-banner{
   background:var(--s-ip-bg);
-  color:var(--s-ip-t);
-  text-align:center;
-  padding:.45rem;
-  font-size:.76rem;
-  font-weight:500;
   border-bottom:1px solid var(--s-ip-b);
+  color:var(--s-ip-t);
+  padding:.55rem 1.5rem;
+  font-size:.78rem;
+  font-weight:500;
+  text-align:center;
+  letter-spacing:.01em;
 }
 
 @media print {
@@ -470,7 +477,7 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
     display: none !important;
   }
 }
-
+#timeline-strip{background:var(--surface);border-bottom:1px solid var(--border);}
 </style>
 </head>
 <body>
@@ -488,11 +495,14 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
   <div class="header-actions">
     <div class="live-dot" title="Data active"></div>
     <span id="auth-name" style="font-size:.68rem;font-family:'DM Mono',monospace;color:var(--text3);white-space:nowrap;margin-right:0.25rem;">Read-Only</span>
+    <button class="icon-btn" id="my-tasks-btn" title="My Tasks" onclick="toggleMyTasks()" style="display:none;width:auto;padding:0 .65rem;gap:.35rem;font-size:.75rem;font-weight:500;">
+      👤 <span id="my-tasks-label">My Tasks</span>
+    </button>
     <button class="icon-btn" id="auth-btn" title="Login to edit" onclick="handleAuthClick()">🔓</button>
     <button class="icon-btn" id="filter-toggle-btn" title="Toggle Search & Filters" onclick="toggleFilterBar()" style="position:relative">🔍<span class="badge" id="filter-active-badge" style="display:none;position:absolute;top:-4px;right:-4px;background:var(--accent);color:#fff;font-size:9px;width:14px;height:14px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold;">0</span></button>
     <button class="icon-btn" title="Import Excel" onclick="triggerImport()">📥</button>
     <button class="icon-btn" title="Export Excel" onclick="exportExcel()">📤</button>
-    <button class="icon-btn" title="Print Report" onclick="window.print()">🖨️</button>
+    <button class="icon-btn" title="Print / Export PDF" onclick="window.print()" style="gap:.3rem;width:auto;padding:0 .6rem;font-size:.72rem;">🖨️ <span style="font-family:'DM Sans',sans-serif;font-weight:500;">Print</span></button>
     <button class="icon-btn" title="Settings" onclick="navigate('settings')">⚙️</button>
     <button class="icon-btn" id="theme-btn" title="Toggle light / dark mode" onclick="toggleTheme()">🌙</button>
   </div>
@@ -503,9 +513,26 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
   <div class="kpi done" onclick="filterByStatus('Completed')"><div class="kv" id="k-done">0</div><div class="kl">Done</div></div>
   <div class="kpi inprog" onclick="filterByStatus('In Progress')"><div class="kv" id="k-ip">0</div><div class="kl">In Progress</div></div>
   <div class="kpi blocked" onclick="filterByStatus('Blocked')"><div class="kv" id="k-bl">0</div><div class="kl">Blocked</div></div>
-  <div class="kpi procure" onclick="filterByStatus('Pending Procurement')"><div class="kv" id="k-pp">0</div><div class="kl">Procurement</div></div>
+  <div class="kpi procure" onclick="navigate('procurement')"><div class="kv" id="k-pp">0</div><div class="kl">Procure</div></div>
   <div class="kpi notstarted" onclick="filterByStatus('Not Started')"><div class="kv" id="k-ns">0</div><div class="kl">Not Started</div></div>
 </div>
+
+  <div id="timeline-strip" style="display:none">
+    <div style="max-width:1200px;margin:0 auto;padding:.75rem 1.5rem">
+      <div style="display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;margin-bottom:.5rem">
+        <span id="tl-start-label" style="font-family:'DM Mono',monospace;font-size:.68rem;color:var(--text3)"></span>
+        <div style="flex:1;height:6px;background:var(--border2);border-radius:3px;overflow:hidden;min-width:80px">
+          <div id="tl-bar-fill" style="height:100%;background:linear-gradient(90deg,var(--accent2),var(--accent));border-radius:3px;width:0%;transition:width 1s ease"></div>
+        </div>
+        <span id="tl-end-label" style="font-family:'DM Mono',monospace;font-size:.68rem;color:var(--text3)"></span>
+      </div>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap">
+        <span id="tl-elapsed" style="font-family:'DM Mono',monospace;font-size:.65rem;color:var(--text2)"></span>
+        <span id="tl-remaining" style="font-family:'DM Mono',monospace;font-size:.65rem;color:var(--text2)"></span>
+        <span id="tl-pct-time" style="font-family:'DM Mono',monospace;font-size:.65rem;color:var(--accent);font-weight:500"></span>
+      </div>
+    </div>
+  </div>
 
 <div class="readonly-banner" id="readonly-banner" style="display:none">
   🔒 Read-only mode — <a href="#" onclick="event.preventDefault();openLoginModal()" style="color:var(--accent);text-decoration:underline">Login</a> to make changes
@@ -534,9 +561,12 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
     <option>Mechanical</option>
     <option>General</option>
   </select>
-  <select class="filter-select" id="ff-responsible" onchange="applyFilters()">
-    <option value="">All Responsible</option>
-  </select>
+  <div style="display:flex;gap:.35rem;align-items:center;flex-shrink:0" id="resp-chips">
+    <button class="resp-chip" id="chip-all" onclick="setRespFilter('')">All</button>
+    <button class="resp-chip" id="chip-arsalan" onclick="setRespFilter('Arsalan')">Arsalan</button>
+    <button class="resp-chip" id="chip-saqib" onclick="setRespFilter('Saqib')">Saqib</button>
+  </div>
+  <input type="hidden" id="ff-responsible" value="">
   <select class="filter-select" id="ff-sort" onchange="applyFilters()">
     <option value="">Sort By</option>
     <option value="priority">Priority (High first)</option>
@@ -552,9 +582,26 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
   <div class="view active" id="view-dashboard">
     <div class="section-label">
       Machine Sections — Tap to view tasks
-      <button class="btn-sm primary" onclick="openAddModal(null)">+ Add Task</button>
     </div>
     <div class="machines-grid" id="machines-grid"></div>
+    
+    <div id="blockers-section" style="margin-top:1.75rem">
+      <div class="section-label" style="cursor:pointer" onclick="toggleBlockers()">
+        <span id="blockers-label">Top Blockers</span>
+        <span id="blockers-toggle-icon" style="font-family:'DM Mono',monospace;font-size:.65rem;color:var(--text3)">▼ Show</span>
+      </div>
+      <div id="blockers-body" style="display:none;display:flex;flex-direction:column;gap:.4rem"></div>
+    </div>
+
+    <div id="dashboard-log-section" style="margin-top:2rem">
+      <div class="section-label" style="cursor:pointer" onclick="toggleDashboardLog()">
+        <span>Recent Activity</span>
+        <span id="dash-log-toggle" style="font-family:'DM Mono',monospace;font-size:.65rem;color:var(--text3)">▼ Show</span>
+      </div>
+      <div id="dashboard-log-body" style="display:none;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:.85rem;font-family:'DM Mono',monospace;font-size:.7rem;color:var(--text2);line-height:1.6;max-height:200px;overflow-y:auto">
+        <div style="color:var(--text3);font-style:italic">No activity yet</div>
+      </div>
+    </div>
   </div>
 
   <!-- Detail -->
@@ -566,6 +613,11 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
         <div class="detail-prog-row">
           <div class="detail-prog-bar"><div class="detail-prog-fill" id="d-fill" style="width:0%"></div></div>
           <span class="detail-pct" id="d-pct"></span>
+        </div>
+        <div style="margin-top:.4rem;display:flex;align-items:center;gap:.5rem">
+          <span style="font-size:.68rem;color:var(--text3);font-family:'DM Mono',monospace">🎯 Target:</span>
+          <input type="date" id="d-target-date" style="background:transparent;border:none;border-bottom:1px dashed var(--border2);font-family:'DM Mono',monospace;font-size:.7rem;color:var(--text2);padding:.1rem .2rem;outline:none;width:130px"
+            onchange="saveTargetDate(this.dataset.machine, this.value)">
         </div>
       </div>
       <div class="detail-actions">
@@ -583,74 +635,6 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
     <div class="section-label">
       <span>Settings & Sync</span>
       <button class="back-btn" onclick="navigate('dashboard')" style="font-size:.75rem">← Dashboard</button>
-    </div>
-
-    <div class="settings-section">
-      <h3>Data</h3>
-      <div class="settings-row">
-        <div class="settings-info"><div class="settings-label">Import from Excel</div><div class="settings-desc">Load tasks from Aerosol_Plant_Tracker_v8.xlsx to refresh data</div></div>
-        <div class="settings-action"><button class="btn-sm" onclick="triggerImport()">Import</button></div>
-      </div>
-      <div class="settings-row">
-        <div class="settings-info"><div class="settings-label">Export to Excel</div><div class="settings-desc">Download current tasks as a formatted .xlsx file</div></div>
-        <div class="settings-action"><button class="btn-sm" onclick="exportExcel()">Export</button></div>
-      </div>
-      <div class="settings-row">
-        <div class="settings-info"><div class="settings-label">Reset All Data</div><div class="settings-desc">Clears local storage and reloads seed data</div></div>
-        <div class="settings-action"><button class="btn-sm" style="color:#f87171;border-color:#7f1d1d" onclick="resetData()">Reset</button></div>
-      </div>
-    </div>
-
-    <div class="settings-section">
-      <h3>GitHub Sync — Live shared data for the whole team</h3>
-      <div class="settings-row">
-        <div class="settings-info">
-          <div class="settings-label">Sync Status</div>
-          <div class="settings-desc" id="sync-status-text">Not configured — edits saved locally only</div>
-        </div>
-        <div class="settings-action"><span class="sync-status err" id="sync-status-dot">● Local only</span></div>
-      </div>
-      <div class="settings-row">
-        <div class="settings-info">
-          <div class="settings-label">GitHub Personal Access Token</div>
-          <div class="settings-desc">Needed to save edits. Read-only works without a token.</div>
-          <input id="sync-key-input" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" type="password" style="margin-top:.5rem;font-size:.8rem" value="">
-        </div>
-        <div class="settings-action" style="display:flex;gap:.4rem;align-items:center;flex-direction:column">
-          <button class="btn-sm" onclick="testSync()">Test</button>
-          <button class="btn-sm primary" onclick="saveSync()">Save</button>
-        </div>
-      </div>
-      <div class="settings-row">
-        <div class="settings-info">
-          <div class="settings-label">Auto-sync on every save</div>
-          <div class="settings-desc">Push changes to GitHub automatically after each edit</div>
-        </div>
-        <div class="settings-action">
-          <label style="display:flex;align-items:center;gap:.4rem;cursor:pointer">
-            <input type="checkbox" id="auto-sync-toggle" onchange="toggleAutoSync(this)" style="width:auto;accent-color:var(--accent)">
-            <span style="font-size:.8rem;color:var(--text2)">On</span>
-          </label>
-        </div>
-      </div>
-      <div class="settings-row">
-        <div class="settings-info">
-          <div class="settings-label">Manual sync</div>
-          <div class="settings-desc">Push local data to GitHub right now</div>
-        </div>
-        <div class="settings-action" style="display:flex;gap:.4rem">
-          <button class="btn-sm" onclick="pullFromGitHub()">↓ Pull</button>
-          <button class="btn-sm primary" onclick="pushToGitHub()">↑ Push</button>
-        </div>
-      </div>
-      <div class="info-box">
-        <strong>How to get a GitHub Personal Access Token:</strong><br>
-        1. Go to <code>github.com</code> → Your profile → Settings<br>
-        2. Developer settings → Personal access tokens → Tokens (classic) → Generate new token<br>
-        3. Give it a name like <code>aerosol-tracker</code>, tick <code>repo</code> scope, click Generate<br>
-        4. Copy the token (starts with <code>ghp_</code>) and paste it above<br><br>
-        <strong>Anyone on the team</strong> who has this token and opens the page can edit. Data is stored in <code>tasks.json</code> in your GitHub repo.
-      </div>
     </div>
 
     <div class="settings-section">
@@ -672,6 +656,119 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
         <div style="color:var(--text3);font-style:italic">No activity logged yet</div>
       </div>
     </div>
+
+    <div class="settings-section">
+      <h3>Data</h3>
+      <div class="settings-row">
+        <div class="settings-info"><div class="settings-label">Import from Excel</div><div class="settings-desc">Load tasks from Aerosol_Plant_Tracker_v8.xlsx to refresh data</div></div>
+        <div class="settings-action"><button class="btn-sm" onclick="triggerImport()">Import</button></div>
+      </div>
+      <div class="settings-row">
+        <div class="settings-info"><div class="settings-label">Export to Excel</div><div class="settings-desc">Download current tasks as a formatted .xlsx file</div></div>
+        <div class="settings-action"><button class="btn-sm" onclick="exportExcel()">Export</button></div>
+      </div>
+    </div>
+
+  <div class="settings-section">
+    <h3>Commissioning Timeline</h3>
+    <div class="settings-row">
+      <div class="settings-info">
+        <div class="settings-label">Project Start Date</div>
+        <div class="settings-desc">When installation work began</div>
+      </div>
+      <div class="settings-action">
+        <input type="date" id="tl-start-input" style="background:var(--surface2);border:1px solid var(--border2);border-radius:8px;padding:.4rem .6rem;font-family:'DM Mono',monospace;font-size:.78rem;color:var(--text);outline:none" onchange="updateTimeline()">
+      </div>
+    </div>
+    <div class="settings-row">
+      <div class="settings-info">
+        <div class="settings-label">Target Commissioning Date</div>
+        <div class="settings-desc">Expected date plant is ready for production</div>
+      </div>
+      <div class="settings-action">
+        <input type="date" id="tl-end-input" style="background:var(--surface2);border:1px solid var(--border2);border-radius:8px;padding:.4rem .6rem;font-family:'DM Mono',monospace;font-size:.78rem;color:var(--text);outline:none" onchange="updateTimeline()">
+      </div>
+    </div>
+  </div>
+
+    <div class="settings-section">
+      <h3 style="display:flex;align-items:center;justify-content:space-between;cursor:pointer" onclick="toggleAdvancedSettings()">
+        Advanced & Sync
+        <span id="adv-toggle-icon" style="font-size:.75rem;transition:transform .2s">▼</span>
+      </h3>
+      <div id="adv-settings-body" style="display:none">
+        <div style="font-size:.72rem;font-weight:600;color:var(--text3);letter-spacing:.06em;text-transform:uppercase;margin-bottom:.85rem;font-family:'DM Mono',monospace">GitHub Sync — Live shared data for the whole team</div>
+        <div class="settings-row">
+          <div class="settings-info">
+            <div class="settings-label">Sync Status</div>
+            <div class="settings-desc" id="sync-status-text">Not configured — edits saved locally only</div>
+          </div>
+          <div class="settings-action"><span class="sync-status err" id="sync-status-dot">● Local only</span></div>
+        </div>
+        <div class="settings-row">
+          <div class="settings-info">
+            <div class="settings-label">GitHub Personal Access Token</div>
+            <div class="settings-desc">Needed to save edits. Read-only works without a token.</div>
+            <input id="sync-key-input" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" type="password" style="margin-top:.5rem;font-size:.8rem" value="">
+          </div>
+          <div class="settings-action" style="display:flex;gap:.4rem;align-items:center;flex-direction:column">
+            <button class="btn-sm" onclick="testSync()">Test</button>
+            <button class="btn-sm primary" onclick="saveSync()">Save</button>
+          </div>
+        </div>
+        <div class="settings-row">
+          <div class="settings-info">
+            <div class="settings-label">Auto-sync on every save</div>
+            <div class="settings-desc">Push changes to GitHub automatically after each edit</div>
+          </div>
+          <div class="settings-action">
+            <label style="display:flex;align-items:center;gap:.4rem;cursor:pointer">
+              <input type="checkbox" id="auto-sync-toggle" onchange="toggleAutoSync(this)" style="width:auto;accent-color:var(--accent)">
+              <span style="font-size:.8rem;color:var(--text2)">On</span>
+            </label>
+          </div>
+        </div>
+        <div class="settings-row">
+          <div class="settings-info">
+            <div class="settings-label">Manual sync</div>
+            <div class="settings-desc">Push local data to GitHub right now</div>
+          </div>
+          <div class="settings-action" style="display:flex;gap:.4rem">
+            <button class="btn-sm" onclick="pullFromGitHub()">↓ Pull</button>
+            <button class="btn-sm primary" onclick="pushToGitHub()">↑ Push</button>
+          </div>
+        </div>
+        <details style="margin-top:.5rem">
+          <summary style="font-size:.75rem;color:var(--accent);cursor:pointer;font-family:'DM Mono',monospace">How to get a token ▸</summary>
+          <div class="info-box">
+            <strong>How to get a GitHub Personal Access Token:</strong><br>
+            1. Go to <code>github.com</code> → Your profile → Settings<br>
+            2. Developer settings → Personal access tokens → Tokens (classic) → Generate new token<br>
+            3. Give it a name like <code>aerosol-tracker</code>, tick <code>repo</code> scope, click Generate<br>
+            4. Copy the token (starts with <code>ghp_</code>) and paste it above<br><br>
+            <strong>Anyone on the team</strong> who has this token and opens the page can edit. Data is stored in <code>tasks.json</code> in your GitHub repo.
+          </div>
+        </details>
+        <div class="settings-row" style="margin-top:1.5rem">
+          <div class="settings-info">
+            <div class="settings-label">Reset All Data</div>
+            <div class="settings-desc">⚠️ Clears all local data and reloads defaults. Cannot be undone.</div>
+          </div>
+          <div class="settings-action">
+            <button class="btn-sm" style="color:#f87171;border-color:#7f1d1d" onclick="resetData()">Reset</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Procurement Board -->
+  <div class="view" id="view-procurement">
+    <div class="section-label">
+      <span>Procurement Board</span>
+      <button class="back-btn" onclick="navigate('dashboard')">← Dashboard</button>
+    </div>
+    <div id="procure-body"></div>
   </div>
 </main>
 
@@ -727,6 +824,10 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
       <div class="form-group full">
         <label>Remarks</label>
         <input id="f-remarks" placeholder="Notes, vendor, reason for delay…">
+      </div>
+      <div class="form-group full">
+        <label>Waiting On <span style="font-weight:400;color:var(--text3)">(optional — vendor, person, delivery)</span></label>
+        <input id="f-waitingon" placeholder="e.g. Chain delivery from supplier, Lindsay confirmation…">
       </div>
       <div class="form-group full">
         <label>Responsible (Assigned To)</label>
@@ -817,6 +918,8 @@ const ICONS = {
   'Overall Machine Operation': '🏭',
   General: '📋'
 };
+const MACHINE_META = {};
+// Loaded from localStorage on init
 const MACHINE_IMAGES = {
   Press: [
     'Photos/Press/Extrusion Press/IMG_20220518_132614.jpg',
@@ -1107,6 +1210,66 @@ let pendingDelete = null;
 let activityLog = [];
 const MAX_LOG = 100;
 
+let timelineData = { startDate: '2026-03-01', targetDate: '' };
+
+function loadTimeline(){
+  try{
+    const raw = localStorage.getItem('aerosol_tracker_timeline');
+    if(raw) timelineData = {...timelineData, ...JSON.parse(raw)};
+  } catch(e){}
+}
+
+function saveTimeline(){
+  try{ localStorage.setItem('aerosol_tracker_timeline', JSON.stringify(timelineData)); } catch(e){}
+}
+
+function renderTimeline(){
+  const strip = document.getElementById('timeline-strip');
+  if(!strip) return;
+  const { startDate, targetDate } = timelineData;
+  if(!startDate){ strip.style.display = 'none'; return; }
+  strip.style.display = 'block';
+  const start = new Date(startDate);
+  const today = new Date();
+  today.setHours(0,0,0,0);
+  const elapsed = Math.floor((today - start) / 86400000);
+  document.getElementById('tl-elapsed').textContent = elapsed + ' days elapsed';
+  document.getElementById('tl-start-label').textContent = formatTimelineDate(startDate);
+
+  if(targetDate){
+    const target = new Date(targetDate);
+    const total = Math.floor((target - start) / 86400000);
+    const remaining = Math.floor((target - today) / 86400000);
+    const pct = Math.min(100, Math.max(0, Math.round(elapsed / total * 100)));
+    document.getElementById('tl-end-label').textContent = formatTimelineDate(targetDate);
+    document.getElementById('tl-remaining').textContent = remaining > 0 ? remaining + ' days remaining' : Math.abs(remaining) + ' days overdue';
+    document.getElementById('tl-pct-time').textContent = pct + '% of timeline used';
+    document.getElementById('tl-remaining').style.color = remaining < 0 ? '#f87171' : remaining < 14 ? '#fbbf24' : 'var(--text2)';
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      document.getElementById('tl-bar-fill').style.width = pct + '%';
+    }));
+  } else {
+    document.getElementById('tl-end-label').textContent = 'Target TBD';
+    document.getElementById('tl-remaining').textContent = 'Set a target date in Settings';
+    document.getElementById('tl-pct-time').textContent = '';
+    document.getElementById('tl-bar-fill').style.width = '0%';
+  }
+}
+
+function formatTimelineDate(iso){
+  if(!iso) return '';
+  const d = new Date(iso);
+  return ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][d.getMonth()] + ' ' + d.getFullYear();
+}
+
+function updateTimeline(){
+  timelineData.startDate = document.getElementById('tl-start-input').value || '2026-03-01';
+  timelineData.targetDate = document.getElementById('tl-end-input').value || '';
+  saveTimeline();
+  renderTimeline();
+  toast('Timeline updated','success');
+}
+
 function uid(){ return 't' + Date.now() + Math.random().toString(36).slice(2,6); }
 
 function loadState(){
@@ -1119,19 +1282,47 @@ function loadState(){
       if(!tasks.length || tasks.length <= 128) seedTasks();
     } else { seedTasks(); }
   } catch(e){ seedTasks(); }
-  tasks.forEach(t => { if(!t.responsible) t.responsible = ''; });
+  tasks.forEach(t => {
+    if(!t.responsible) t.responsible = '';
+    if(!t.waitingOn) t.waitingOn = '';
+  });
+  loadMeta();
+  loadTimeline();
 }
 
 function seedTasks(){
   tasks = SEED.map(s => ({
     id: uid(), machine: s[0], category: s[1], desc: s[2],
-    priority: s[3], progress: s[4], status: s[5], remarks: s[6], responsible: s[7] || '', updated: ''
+    priority: s[3], progress: s[4], status: s[5], remarks: s[6], responsible: s[7] || '', updated: '', waitingOn: ''
   }));
   saveState();
 }
 
 function saveState(){
   localStorage.setItem(STORAGE_KEY, JSON.stringify({ tasks, settings }));
+}
+
+function loadMeta(){
+  try{
+    const raw = localStorage.getItem('aerosol_tracker_meta');
+    if(raw) Object.assign(MACHINE_META, JSON.parse(raw));
+  } catch(e){}
+}
+function saveMeta(){
+  try{ localStorage.setItem('aerosol_tracker_meta', JSON.stringify(MACHINE_META)); } catch(e){}
+}
+function formatTargetDate(iso){
+  if(!iso) return '';
+  const d = new Date(iso);
+  return 'Target: ' + d.getDate() + ' ' + ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][d.getMonth()];
+}
+function saveTargetDate(machine, date){
+  if(!machine) return;
+  if(!MACHINE_META[machine]) MACHINE_META[machine] = {};
+  MACHINE_META[machine].targetDate = date;
+  saveMeta();
+  renderDashboard();
+  toast('Target date saved','success');
 }
 
 // ═══════════════════════════════════════════════════════
@@ -1242,9 +1433,8 @@ function clearFilters(){
   document.getElementById('ff-status').value = '';
   document.getElementById('ff-priority').value = '';
   document.getElementById('ff-category').value = '';
-  document.getElementById('ff-responsible').value = '';
   document.getElementById('ff-sort').value = '';
-  applyFilters();
+  setRespFilter('');
 }
 
 function updateFilterUI(){
@@ -1276,7 +1466,7 @@ function populateFilterDropdowns(){
   }
   // Responsible
   const rSel = document.getElementById('ff-responsible');
-  if(rSel){
+  if(rSel && rSel.tagName === 'SELECT'){
     const rVal = rSel.value;
     const ppl = [...new Set(tasks.map(t => t.responsible).filter(Boolean))].sort();
     rSel.innerHTML = '<option value="">All Responsible</option>';
@@ -1293,8 +1483,26 @@ function navigate(view, machine){
   document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
   document.getElementById('view-' + view).classList.add('active');
   if(view === 'detail' && machine){ showMachine(machine); }
-  if(view === 'settings'){ renderActivityLog(); }
+  if(view === 'settings'){
+    renderActivityLog();
+    const si = document.getElementById('tl-start-input');
+    const ei = document.getElementById('tl-end-input');
+    if(si) si.value = timelineData.startDate || '';
+    if(ei) ei.value = timelineData.targetDate || '';
+  }
+  else if(view === 'procurement'){
+    document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+    document.getElementById('view-procurement').classList.add('active');
+    renderProcurement();
+  }
   if(view !== 'detail'){ currentMachine = null; }
+
+  const strip = document.getElementById('timeline-strip');
+  if(strip) strip.style.display = view === 'dashboard' ? 'block' : 'none';
+  if(view === 'dashboard') {
+    renderTimeline();
+  }
+
   window.scrollTo({ top:0, behavior:'smooth' });
 }
 
@@ -1358,6 +1566,41 @@ function animCount(id, target){
   }, 28);
 }
 
+function renderProcurement(){
+  const body = document.getElementById('procure-body');
+  if(!body) return;
+  const ppTasks = tasks.filter(t => t.status === 'Pending Procurement');
+  if(!ppTasks.length){
+    body.innerHTML = '<div class="empty">No procurement tasks — all clear ✓</div>';
+    return;
+  }
+  // Group by machine
+  const grouped = {};
+  ppTasks.forEach(t => {
+    if(!grouped[t.machine]) grouped[t.machine] = [];
+    grouped[t.machine].push(t);
+  });
+  body.innerHTML = Object.entries(grouped).map(([machine, taskList]) => `
+    <div style="margin-bottom:1.5rem">
+      <div style="display:flex;align-items:center;gap:.5rem;padding:.5rem .75rem;background:var(--s-pp-bg);border:1px solid var(--s-pp-b);border-radius:8px;margin-bottom:.65rem">
+        <span>${ICONS[machine]||'🔧'}</span>
+        <span style="font-size:.82rem;font-weight:600;color:var(--s-pp-t)">${machine}</span>
+        <span style="margin-left:auto;font-family:'DM Mono',monospace;font-size:.65rem;color:var(--s-pp-t);opacity:.7">${taskList.length} item${taskList.length>1?'s':''}</span>
+      </div>
+      ${taskList.map(t => `
+        <div style="background:var(--surface);border:1px solid var(--border);border-left:3px solid #a855f7;border-radius:var(--radius);padding:.8rem 1rem;margin-bottom:.4rem">
+          <div style="font-size:.85rem;font-weight:500;color:var(--text);margin-bottom:.35rem">${t.desc}</div>
+          ${t.remarks ? `<div style="font-size:.76rem;color:var(--text2);font-style:italic">↳ ${t.remarks}</div>` : ''}
+          ${(t.waitingOn || '') ? `<div style="margin-top:.3rem"><span style="font-size:.67rem;font-weight:600;color:#c2410c;background:#fff7ed;border:1px solid #fed7aa;border-radius:20px;padding:.15rem .5rem;font-family:'DM Mono',monospace">⏳ ${t.waitingOn || ''}</span></div>` : ''}
+          <div style="margin-top:.4rem;font-family:'DM Mono',monospace;font-size:.62rem;color:var(--text3)">
+            ${t.priority} priority · ${t.responsible||'—'}${t.updated?' · '+t.updated:''}
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  `).join('');
+}
+
 // ═══════════════════════════════════════════════════════
 //  RENDER DASHBOARD
 // ═══════════════════════════════════════════════════════
@@ -1380,10 +1623,13 @@ function renderDashboard(){
     const ePend   = mt.filter(t => t.category === 'Electrical' && t.status !== 'Completed').length;
     const mPend   = mt.filter(t => t.category === 'Mechanical' && t.status !== 'Completed').length;
     const gPend   = mt.filter(t => t.category === 'General' && t.status !== 'Completed').length;
+    const dryRunTask = mt.find(t => t.desc.toLowerCase().includes('dry run'));
+    const dryRunStatus = dryRunTask ? dryRunTask.status : null;
     const dash    = `${(pct/100*C).toFixed(1)} ${C.toFixed(1)}`;
 
     const card = document.createElement('div');
     card.className = 'machine-card';
+    if(pct === 100) card.classList.add('machine-complete');
     card.style.setProperty('--i', i);
     card.onclick = () => navigate('detail', m);
     card.innerHTML = `
@@ -1398,6 +1644,9 @@ function renderDashboard(){
         </div>
       </div>
       <div class="card-name">${m}</div>
+      ${MACHINE_META[m]?.targetDate
+        ? `<div style="font-family:'DM Mono',monospace;font-size:.62rem;color:var(--text3);margin-bottom:.4rem">🎯 ${formatTargetDate(MACHINE_META[m].targetDate)}</div>`
+        : ''}
       <div class="card-tags">
         ${ePend ? `<span class="ctag e">⚡ ${ePend}</span>` : ''}
         ${mPend ? `<span class="ctag m">⚙ ${mPend}</span>` : ''}
@@ -1407,6 +1656,11 @@ function renderDashboard(){
       <div class="card-bar"><div class="card-bar-fill" style="width:0%" data-pct="${pct}%"></div></div>
       <div class="card-foot">
         <span class="card-pend">${pending ? pending+' remaining' : done+' done'}</span>
+        ${dryRunStatus === 'Completed'
+          ? `<span style="font-size:.62rem;font-weight:600;color:var(--s-cp-t);background:var(--s-cp-bg);border:1px solid var(--s-cp-b);border-radius:20px;padding:.15rem .5rem;font-family:'DM Mono',monospace;">✓ Dry Run</span>`
+          : dryRunStatus
+            ? `<span style="font-size:.62rem;font-weight:600;color:var(--s-ip-t);background:var(--s-ip-bg);border:1px solid var(--s-ip-b);border-radius:20px;padding:.15rem .5rem;font-family:'DM Mono',monospace;">⚡ Dry Run</span>`
+            : ''}
         <span class="card-arrow">→</span>
       </div>`;
     grid.appendChild(card);
@@ -1420,6 +1674,14 @@ function renderDashboard(){
     grid.querySelectorAll('.ring-fill').forEach(el => el.setAttribute('stroke-dasharray', el.dataset.dash));
     grid.querySelectorAll('.card-bar-fill').forEach(el => el.style.width = el.dataset.pct);
   }));
+
+  const blockersCount = tasks.filter(t => t.priority === 'High' && t.status !== 'Completed').length;
+  const lbl = document.getElementById('blockers-label');
+  if(lbl) lbl.textContent = 'Top Blockers (' + blockersCount + ' high-priority pending)';
+  const bBody = document.getElementById('blockers-body');
+  if(bBody && bBody.style.display === 'flex') {
+    renderBlockers();
+  }
 }
 
 // ═══════════════════════════════════════════════════════
@@ -1440,6 +1702,13 @@ function showMachine(m){
   fill.style.width = '0%';
   document.getElementById('d-pct').textContent = `${pct}% · ${done}/${mt.length}`;
   requestAnimationFrame(() => requestAnimationFrame(() => fill.style.width = pct + '%'));
+
+  const meta = MACHINE_META[m] || {};
+  const dtEl = document.getElementById('d-target-date');
+  if(dtEl){
+    dtEl.value = meta.targetDate || '';
+    dtEl.dataset.machine = m;
+  }
 
   // Gallery — HIDE by default, show button if photos exist
   const gal = document.getElementById('detail-gallery');
@@ -1517,7 +1786,7 @@ function renderDetail(){
   });
 }
 
-function buildTask(t){
+function buildTask(t, showMachineName){
   const sc  = STATUS_CLASS[t.status] || 'ns';
   const pct = Math.round(t.progress);
   const div = document.createElement('div');
@@ -1525,6 +1794,15 @@ function buildTask(t){
   div.dataset.id = t.id;
   div.onclick = () => openEditModal(t.id);
   const pfill = pct===100?'full':pct===0?'':'';
+  const editMeta = [];
+  if(t.responsible) editMeta.push(t.responsible);
+  if(t.updated) editMeta.push(t.updated);
+  const editLine = editMeta.length
+    ? `<div class="task-updated">— ${editMeta.join(' · ')}</div>`
+    : '';
+  const waitingTag = t.waitingOn
+    ? `<div style="margin-top:.35rem"><span style="display:inline-flex;align-items:center;gap:.3rem;font-size:.67rem;font-weight:600;color:#c2410c;background:#fff7ed;border:1px solid #fed7aa;border-radius:20px;padding:.18rem .55rem;font-family:'DM Mono',monospace;">⏳ ${t.waitingOn}</span></div>`
+    : '';
   div.innerHTML = `
     <div class="task-top">
       ${isLoggedIn() ? `<input type="checkbox" class="task-select-cb" data-id="${t.id}" onclick="event.stopPropagation(); handleCheckboxChange()" style="margin-right: 0.6rem; cursor: pointer; width: 16px; height: 16px; accent-color: var(--accent); flex-shrink: 0; align-self: center;">` : ''}<div class="task-desc">${t.desc}</div>
@@ -1542,7 +1820,8 @@ function buildTask(t){
       <span class="task-pct">${pct}%</span>
     </div>
     ${t.remarks ? `<div class="task-remarks">${t.remarks}</div>` : ''}
-    ${t.updated  ? `<div class="task-updated">Updated ${t.updated}</div>` : ''}`;
+    ${waitingTag}
+    ${editLine}`;
   return div;
 }
 
@@ -1610,6 +1889,7 @@ function toggleModalFields(readOnly) {
   document.getElementById('f-status').disabled = readOnly;
   document.getElementById('f-progress').disabled = readOnly;
   document.getElementById('f-remarks').disabled = readOnly;
+  document.getElementById('f-waitingon').disabled = readOnly;
   document.getElementById('f-responsible').disabled = readOnly;
   
   const imgInput = document.getElementById('f-image');
@@ -1640,6 +1920,7 @@ function openAddModal(machine){
   document.getElementById('f-status').value    = 'Not Started';
   document.getElementById('f-progress').value  = 0;
   document.getElementById('f-remarks').value   = '';
+  document.getElementById('f-waitingon').value = '';
   document.getElementById('f-responsible').value = '';
   document.getElementById('f-image').value     = '';
   document.getElementById('f-image-preview').style.display = 'none';
@@ -1662,6 +1943,7 @@ function openEditModal(id){
   document.getElementById('f-status').value    = t.status;
   document.getElementById('f-progress').value  = t.progress;
   document.getElementById('f-remarks').value   = t.remarks;
+  document.getElementById('f-waitingon').value = t.waitingOn || '';
   document.getElementById('f-responsible').value = t.responsible || '';
   document.getElementById('f-image').value     = '';
   if(t.image){
@@ -1762,11 +2044,11 @@ async function saveTask(){
   const lastEditedBy = isLoggedIn() ? currentUser.name : 'Unknown';
   if(editingId){
     const t = tasks.find(t => t.id === editingId);
-    Object.assign(t, {machine,category,desc,priority,status,progress,remarks,responsible,updated,lastEditedBy,image:imagePath});
+    Object.assign(t, {machine,category,desc,priority,status,progress,remarks,responsible,updated,lastEditedBy,image:imagePath, waitingOn: document.getElementById('f-waitingon').value.trim()});
     logActivity(`Updated task "${desc.slice(0,30)}..." on ${machine}`);
     toast('Task updated ✓','success');
   } else {
-    tasks.push({id:uid(),machine,category,desc,priority,progress,status,remarks,responsible,updated,lastEditedBy,image:imagePath});
+    tasks.push({id:uid(),machine,category,desc,priority,progress,status,remarks,responsible,updated,lastEditedBy,image:imagePath, waitingOn: document.getElementById('f-waitingon').value.trim()});
     logActivity(`Added task "${desc.slice(0,30)}..." to ${machine}`);
     toast('Task added ✓','success');
   }
@@ -1832,7 +2114,8 @@ function importExcel(input){
         status:   String(r[6]).trim(),
         responsible: r[7] ? String(r[7]).trim() : '',
         remarks:  r[8] ? String(r[8]).trim() : '',
-        updated:  r[9] ? String(r[9]).trim() : ''
+        updated:  r[9] ? String(r[9]).trim() : '',
+        waitingOn: r[10] ? String(r[10]).trim() : ''
       };
     });
     if(!imported.length){ toast('No tasks found in file','error'); return; }
@@ -1846,8 +2129,8 @@ function importExcel(input){
 
 function exportExcel(){
   const rows = [
-    ['AEROSOL PLANT  ·  INSTALLATION TRACKER', '', '', '', '', '', '', '', '', '← Dashboard'],
-    ['#', 'Machine', 'Category', 'Task Description', 'Priority', 'Progress', 'Status', 'Responsible', 'Remarks', 'Updated']
+    ['AEROSOL PLANT  ·  INSTALLATION TRACKER', '', '', '', '', '', '', '', '', '', '← Dashboard'],
+    ['#', 'Machine', 'Category', 'Task Description', 'Priority', 'Progress', 'Status', 'Responsible', 'Remarks', 'Updated', 'Waiting On']
   ];
   tasks.forEach((t,i) => rows.push([
     i+1,
@@ -1859,10 +2142,11 @@ function exportExcel(){
     t.status,
     t.responsible || '',
     t.remarks || '',
-    t.updated || ''
+    t.updated || '',
+    t.waitingOn || ''
   ]));
   const ws = XLSX.utils.aoa_to_sheet(rows);
-  ws['!cols'] = [{wch:4},{wch:18},{wch:13},{wch:54},{wch:10},{wch:11},{wch:20},{wch:15},{wch:38},{wch:14}];
+  ws['!cols'] = [{wch:4},{wch:18},{wch:13},{wch:54},{wch:10},{wch:11},{wch:20},{wch:15},{wch:38},{wch:14},{wch:25}];
   const wb = XLSX.utils.book_new();
   XLSX.utils.book_append_sheet(wb, ws, 'TRACKER');
   XLSX.writeFile(wb, `Aerosol_Tracker_${new Date().toISOString().slice(0,10)}.xlsx`);
@@ -1973,6 +2257,10 @@ async function pullFromGitHub(){
       const data = JSON.parse(content);
       if(Array.isArray(data.tasks) && data.tasks.length){
         tasks = data.tasks;
+        tasks.forEach(t => {
+          if(!t.responsible) t.responsible = '';
+          if(!t.waitingOn) t.waitingOn = '';
+        });
         if(Array.isArray(data.activityLog)){
           activityLog = data.activityLog;
           try { localStorage.setItem(STORAGE_KEY+'_log', JSON.stringify(activityLog)); } catch(e){}
@@ -1990,6 +2278,10 @@ async function pullFromGitHub(){
       const data = await r.json();
       if(Array.isArray(data.tasks) && data.tasks.length){
         tasks = data.tasks;
+        tasks.forEach(t => {
+          if(!t.responsible) t.responsible = '';
+          if(!t.waitingOn) t.waitingOn = '';
+        });
         if(Array.isArray(data.activityLog)){
           activityLog = data.activityLog;
           try { localStorage.setItem(STORAGE_KEY+'_log', JSON.stringify(activityLog)); } catch(e){}
@@ -2081,6 +2373,14 @@ function resetData(){
   toast('Data reset to original','info');
 }
 
+function toggleAdvancedSettings(){
+  const body = document.getElementById('adv-settings-body');
+  const icon = document.getElementById('adv-toggle-icon');
+  const open = body.style.display === 'block';
+  body.style.display = open ? 'none' : 'block';
+  icon.style.transform = open ? '' : 'rotate(180deg)';
+}
+
 // ═══════════════════════════════════════════════════════
 //  TOAST
 // ═══════════════════════════════════════════════════════
@@ -2119,6 +2419,16 @@ function renderAll(){
   
   const pd = document.getElementById('print-date');
   if(pd) pd.textContent = 'Generated: ' + new Date().toLocaleDateString('en-PK', {day:'numeric',month:'short',year:'numeric'});
+
+  // Keep My Tasks count and visibility updated in real-time
+  updateAuthUI();
+  
+  // Keep dashboard activity log updated if visible
+  const dbBody = document.getElementById('dashboard-log-body');
+  if(dbBody && dbBody.style.display === 'block') {
+    renderDashboardLog();
+  }
+  renderTimeline();
 }
 
 // ═══════════════════════════════════════════════════════
@@ -2204,6 +2514,9 @@ function openLoginModal(){
   document.getElementById('login-modal').style.display = 'flex';
 }
 
+// ═══════════════════════════════════════════════════════
+//  ADDITIONAL UTILITIES & HELPERS
+// ═══════════════════════════════════════════════════════
 function closeLoginModal(){
   document.getElementById('login-modal').style.display = 'none';
 }
@@ -2235,11 +2548,26 @@ function updateAuthUI(){
   
   const banner = document.getElementById('readonly-banner');
   if(banner) banner.style.display = isLoggedIn() ? 'none' : 'block';
+
+  // My Tasks button logic
+  const myBtn = document.getElementById('my-tasks-btn');
+  const myLabel = document.getElementById('my-tasks-label');
+  if(myBtn){
+    if(isLoggedIn() && currentUser && currentUser.name){
+      myBtn.style.display = 'inline-flex';
+      // Count tasks assigned to current user
+      const myCount = tasks.filter(t => t.responsible === currentUser.name && t.status !== 'Completed').length;
+      if(myLabel) myLabel.textContent = 'My Tasks (' + myCount + ')';
+    } else {
+      myBtn.style.display = 'none';
+      myBtn.classList.remove('active');
+    }
+  }
 }
 
 function logActivity(action){
   const who = isLoggedIn() ? currentUser.name : 'Anonymous';
-  const entry = {time: new Date().toISOString(), action: `[${who}] ${action}`};
+  const entry = {time: new Date().toISOString(), action: `[${who}] ${action}`, user: who};
   activityLog.unshift(entry);
   if(activityLog.length > MAX_LOG) activityLog.length = MAX_LOG;
   try { localStorage.setItem(STORAGE_KEY+'_log', JSON.stringify(activityLog)); } catch(e){}
@@ -2271,7 +2599,129 @@ function escapeHTML(str){
   return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
 }
 
-// ═══════════════════════════════════════════════════════
+function setRespFilter(name){
+  document.querySelectorAll('.resp-chip').forEach(c => c.classList.remove('active'));
+  const chip = name === '' ? document.getElementById('chip-all') : document.getElementById('chip-' + name.toLowerCase());
+  if(chip) chip.classList.add('active');
+  // Mirror to a hidden input so existing filterTasks() logic still works
+  let hidden = document.getElementById('ff-responsible');
+  if(!hidden){
+    hidden = document.createElement('input');
+    hidden.id = 'ff-responsible';
+    hidden.type = 'hidden';
+    document.body.appendChild(hidden);
+  }
+  hidden.value = name;
+  
+  // Sync the "My Tasks" button state
+  const myBtn = document.getElementById('my-tasks-btn');
+  if(myBtn){
+    if(isLoggedIn() && currentUser && name === currentUser.name){
+      myBtn.classList.add('active');
+    } else {
+      myBtn.classList.remove('active');
+    }
+  }
+  
+  applyFilters();
+}
+
+function toggleMyTasks(){
+  const btn = document.getElementById('my-tasks-btn');
+  if(!btn) return;
+  const isOn = btn.classList.contains('active');
+  if(isOn){
+    btn.classList.remove('active');
+    setRespFilter('');
+  } else {
+    btn.classList.add('active');
+    if(currentUser && currentUser.name) setRespFilter(currentUser.name);
+  }
+}
+
+function toggleDashboardLog(){
+  const body = document.getElementById('dashboard-log-body');
+  const lbl = document.getElementById('dash-log-toggle');
+  const open = body.style.display === 'block';
+  body.style.display = open ? 'none' : 'block';
+  lbl.textContent = open ? '▼ Show' : '▲ Hide';
+  if(!open) renderDashboardLog();
+}
+
+function renderDashboardLog(){
+  const body = document.getElementById('dashboard-log-body');
+  if(!body) return;
+  if(!activityLog || !activityLog.length){
+    body.innerHTML = '<div style="color:var(--text3);font-style:italic">No activity yet</div>';
+    return;
+  }
+  body.innerHTML = activityLog.slice(0,10).map(e => {
+    let tStr = e.time || '';
+    if(tStr) {
+      try {
+        tStr = new Date(e.time).toLocaleString('en-PK', {hour12:true, hour:'2-digit', minute:'2-digit', second:'2-digit', day:'numeric', month:'short'});
+      } catch(err){}
+    }
+    let user = e.user;
+    let displayAction = e.action || '';
+    if(!user) {
+      const match = displayAction.match(/^\[(.*?)\]/);
+      if(match) {
+        user = match[1];
+        displayAction = displayAction.substring(match[0].length).trim();
+      } else {
+        user = '—';
+      }
+    } else {
+      const prefix = `[${user}]`;
+      if(displayAction.startsWith(prefix)) {
+        displayAction = displayAction.substring(prefix.length).trim();
+      }
+    }
+    return `<div style="display:flex;gap:.75rem;padding:.25rem 0;border-bottom:1px solid var(--border)">
+      <span style="color:var(--text3);flex-shrink:0">${tStr}</span>
+      <span style="color:var(--accent);flex-shrink:0">${user}</span>
+      <span>${escapeHTML(displayAction)}</span>
+    </div>`;
+  }).join('');
+}
+
+function toggleBlockers(){
+  const body = document.getElementById('blockers-body');
+  const icon = document.getElementById('blockers-toggle-icon');
+  const open = body.style.display === 'flex';
+  body.style.display = open ? 'none' : 'flex';
+  icon.textContent = open ? '▼ Show' : '▲ Hide';
+  if(!open) renderBlockers();
+}
+
+function renderBlockers(){
+  const body = document.getElementById('blockers-body');
+  const label = document.getElementById('blockers-label');
+  if(!body) return;
+  const STATUS_RANK = {'In Progress':0,'Not Started':1,'Pending Procurement':2};
+  const blockers = tasks
+    .filter(t => t.priority === 'High' && t.status !== 'Completed')
+    .sort((a,b) => (STATUS_RANK[a.status]??3) - (STATUS_RANK[b.status]??3))
+    .slice(0, 6);
+  if(label) label.textContent = 'Top Blockers (' + blockers.length + ' of ' + tasks.filter(t=>t.priority==='High'&&t.status!=='Completed').length + ' high-priority pending)';
+  if(!blockers.length){
+    body.innerHTML = '<div class="empty">No high-priority blockers — great progress!</div>';
+    return;
+  }
+  body.innerHTML = blockers.map(t => {
+    const sc = STATUS_CLASS[t.status] || 'ns';
+    return `<div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:.75rem 1rem;display:flex;gap:.75rem;align-items:flex-start">
+      <span style="font-size:1.1rem;flex-shrink:0">${ICONS[t.machine]||'🔧'}</span>
+      <div style="flex:1;min-width:0">
+        <div style="font-size:.82rem;font-weight:500;color:var(--text);margin-bottom:.25rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${t.desc}</div>
+        <div style="font-family:'DM Mono',monospace;font-size:.62rem;color:var(--text3)">${t.machine} · ${t.responsible||'—'}</div>
+        ${t.remarks ? `<div style="font-size:.72rem;color:var(--text2);font-style:italic;margin-top:.2rem">↳ ${t.remarks}</div>` : ''}
+      </div>
+      <span class="badge s-${sc}" style="flex-shrink:0">${t.status}</span>
+    </div>`;
+  }).join('');
+}
 
 // ═══════════════════════════════════════════════════════
 //  BULK ACTIONS
@@ -2366,8 +2816,7 @@ installPWA();
 loadUser();
 loadState();
 loadActivityLog();
-renderAll();
-updateAuthUI();
+setRespFilter('');
 updateSyncUI();
 
 // On boot, pull from GitHub if token is set
@@ -2426,7 +2875,7 @@ document.getElementById('f-image').addEventListener('change', function(e){
   <button class="btn-sm" onclick="bulkUpdateStatus('Completed')" style="background:var(--s-cp-bg); color:var(--s-cp-t); border-color:var(--s-cp-b); font-size: 0.78rem; cursor: pointer; padding: .35rem .75rem; border-radius: 6px;">Mark Completed</button>
   <button class="btn-sm" onclick="clearSelection()" style="font-size: 0.78rem; cursor: pointer; padding: .35rem .75rem; border-radius: 6px;">Cancel</button>
 </div>
-
+
 <div class="credit-watermark">
   <span>Planned & Designed by Sikander</span>
   Alpha Containers (Pvt.) Ltd. · Aerosol Plant Tracker
