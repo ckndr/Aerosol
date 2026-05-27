@@ -36,6 +36,7 @@
   --p-lo-bg:#f0fdf4; --p-lo-t:#166534;
   --e-bg:#eff6ff; --e-t:#1d4ed8; --e-b:#bfdbfe;
   --m-bg:#fff7ed; --m-t:#c2410c; --m-b:#fed7aa;
+  --g-bg:#faf5ff; --g-t:#7e22ce; --g-b:#e9d5ff;
   --radius:10px; --radius-lg:14px;
   --shadow:0 1px 3px rgba(0,0,0,.08);
   --shadow-lg:0 8px 24px rgba(0,0,0,.12);
@@ -57,6 +58,7 @@
   --p-lo-bg:#0d2d1a; --p-lo-t:#86efac;
   --e-bg:#0d1a2d; --e-t:#60a5fa; --e-b:#1e3a5f;
   --m-bg:#2d1a0d; --m-t:#fb923c; --m-b:#7c2d12;
+  --g-bg:#1e152a; --g-t:#c084fc; --g-b:#581c87;
   --shadow:0 1px 3px rgba(0,0,0,.4);
   --shadow-lg:0 8px 24px rgba(0,0,0,.4);
 }
@@ -86,7 +88,9 @@ header{background:var(--surface);border-bottom:1px solid var(--border);padding:1
 /* ── KPI BAR ── */
 .kpi-bar{background:var(--surface);border-bottom:1px solid var(--border);padding:.9rem 1.5rem;display:flex;gap:.6rem;overflow-x:auto;scrollbar-width:none}
 .kpi-bar::-webkit-scrollbar{display:none}
-.kpi{display:flex;flex-direction:column;gap:.2rem;flex-shrink:0;padding:.7rem 1rem;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius);min-width:90px}
+.kpi{display:flex;flex-direction:column;gap:.2rem;flex-shrink:0;padding:.7rem 1rem;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius);min-width:90px;cursor:pointer;transition:border-color .2s,background .2s,transform .15s,box-shadow .2s}
+.kpi:hover{border-color:var(--border2);transform:translateY(-1px);background:var(--surface3)}
+.kpi.active{border-color:var(--accent);background:var(--surface3);box-shadow:inset 0 0 0 1px var(--accent)}
 .kv{font-family:'Fraunces',serif;font-size:1.7rem;font-weight:600;line-height:1}
 .kl{font-size:.62rem;font-weight:500;color:var(--text2);letter-spacing:.07em;text-transform:uppercase}
 .kpi.total .kv{color:var(--text)}
@@ -94,6 +98,16 @@ header{background:var(--surface);border-bottom:1px solid var(--border);padding:1
 .kpi.inprog .kv{color:#fbbf24}
 .kpi.blocked .kv{color:#f87171}
 .kpi.procure .kv{color:#c084fc}
+
+/* ── FILTER BAR ── */
+.filter-bar{background:var(--surface);border-bottom:1px solid var(--border);padding:.75rem 1.5rem;display:none;flex-wrap:wrap;gap:.6rem;align-items:center}
+.filter-bar.show{display:flex}
+.filter-search{flex:2;min-width:200px}
+.filter-select{flex:1;min-width:140px;background:var(--surface2)}
+.btn-clear{background:var(--surface3);border:1px solid var(--border2);border-radius:8px;padding:.6rem 1rem;color:var(--text2);font-size:.85rem;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;justify-content:center;white-space:nowrap}
+.btn-clear:hover{border-color:var(--border3);background:var(--surface2);color:var(--text)}
+#filter-info{font-family:'DM Mono',monospace;font-size:.7rem;color:var(--text3);margin-left:auto}
+
 
 /* ── MAIN ── */
 main{padding:1.5rem;max-width:1400px;margin:0 auto}
@@ -119,6 +133,7 @@ main{padding:1.5rem;max-width:1400px;margin:0 auto}
 .ctag{font-size:.65rem;font-weight:500;padding:.15rem .45rem;border-radius:20px}
 .ctag.e{background:var(--e-bg);color:var(--e-t)}
 .ctag.m{background:var(--m-bg);color:var(--m-t)}
+.ctag.g{background:var(--g-bg);color:var(--g-t)}
 .ctag.done{background:var(--s-cp-bg);color:var(--s-cp-t)}
 .card-bar{height:3px;background:var(--border2);border-radius:2px;overflow:hidden;margin-bottom:.7rem}
 .card-bar-fill{height:100%;background:linear-gradient(90deg,var(--accent2),var(--accent));border-radius:2px;transition:width 1.2s cubic-bezier(.4,0,.2,1)}
@@ -156,8 +171,8 @@ main{padding:1.5rem;max-width:1400px;margin:0 auto}
 
 /* ── TASK CARD ── */
 .task-list{display:flex;flex-direction:column;gap:.45rem}
-.task-card{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--border2);border-radius:var(--radius);padding:.85rem 1rem;transition:border-color .2s;position:relative}
-.task-card:hover{border-color:var(--border2)}
+.task-card{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--border2);border-radius:var(--radius);padding:.85rem 1rem;transition:border-color .2s,transform .15s,box-shadow .2s;position:relative;cursor:pointer}
+.task-card:hover{border-color:var(--border2);transform:translateY(-1px);box-shadow:var(--shadow-lg)}
 .task-card.s-ip{border-left-color:#f59e0b}
 .task-card.s-bl{border-left-color:#ef4444}
 .task-card.s-ns{border-left-color:#374151}
@@ -368,9 +383,102 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
   .form-grid{grid-template-columns:1fr}
   .form-group.full{grid-column:auto}
 }
+/* WATERMARK / CREDIT */
+.credit-watermark{
+  position:fixed;
+  bottom:.75rem;
+  left:.75rem;
+  font-family:'DM Mono',monospace;
+  font-size:.6rem;
+  color:var(--text3);
+  opacity:.55;
+  letter-spacing:.06em;
+  z-index:35;
+  pointer-events:none;
+  user-select:none;
+  line-height:1.4;
+}
+.credit-watermark span{
+  display:block;
+  font-family:'Fraunces',serif;
+  font-size:.68rem;
+  font-weight:600;
+  letter-spacing:.02em;
+  color:var(--text2);
+  opacity:.7;
+}
+@media print{
+  .credit-watermark{
+    position:static;
+    opacity:1;
+    text-align:center;
+    margin-top:2rem;
+    padding-top:1rem;
+    border-top:1px solid #ccc;
+    font-size:9px;
+    color:#666;
+  }
+}
+.readonly-banner{
+  background:var(--s-ip-bg);
+  color:var(--s-ip-t);
+  text-align:center;
+  padding:.45rem;
+  font-size:.76rem;
+  font-weight:500;
+  border-bottom:1px solid var(--s-ip-b);
+}
+
+@media print {
+  header, .filter-bar, .detail-actions, .kpi-bar, .readonly-banner, button, .modal-overlay, .sync-status, #bulk-action-bar {
+    display: none !important;
+  }
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 10pt !important;
+  }
+  main {
+    padding: 0 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+  .machine-card {
+    break-inside: avoid;
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+    background: #fff !important;
+    margin-bottom: 1rem !important;
+  }
+  .task-card {
+    break-inside: avoid;
+    border: 1px solid #ccc !important;
+    background: #fff !important;
+    margin-bottom: 0.5rem !important;
+  }
+  .print-only-header {
+    display: block !important;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Fraunces', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+}
+@media screen {
+  .print-only-header {
+    display: none !important;
+  }
+}
+
 </style>
 </head>
 <body>
+<div class="print-only-header">
+  Alpha Containers (Pvt.) Ltd. · Aerosol Plant Installation Report
+  <div id="print-date" style="font-size:0.8rem; font-family:'DM Mono',monospace; font-weight:normal; margin-top:0.3rem; margin-bottom: 1.5rem;"></div>
+</div>
+
 
 <header>
   <div class="header-brand">
@@ -379,19 +487,64 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
   </div>
   <div class="header-actions">
     <div class="live-dot" title="Data active"></div>
+    <span id="auth-name" style="font-size:.68rem;font-family:'DM Mono',monospace;color:var(--text3);white-space:nowrap;margin-right:0.25rem;">Read-Only</span>
+    <button class="icon-btn" id="auth-btn" title="Login to edit" onclick="handleAuthClick()">🔓</button>
+    <button class="icon-btn" id="filter-toggle-btn" title="Toggle Search & Filters" onclick="toggleFilterBar()" style="position:relative">🔍<span class="badge" id="filter-active-badge" style="display:none;position:absolute;top:-4px;right:-4px;background:var(--accent);color:#fff;font-size:9px;width:14px;height:14px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold;">0</span></button>
     <button class="icon-btn" title="Import Excel" onclick="triggerImport()">📥</button>
     <button class="icon-btn" title="Export Excel" onclick="exportExcel()">📤</button>
+    <button class="icon-btn" title="Print Report" onclick="window.print()">🖨️</button>
     <button class="icon-btn" title="Settings" onclick="navigate('settings')">⚙️</button>
     <button class="icon-btn" id="theme-btn" title="Toggle light / dark mode" onclick="toggleTheme()">🌙</button>
   </div>
 </header>
 
 <div class="kpi-bar">
-  <div class="kpi total"><div class="kv" id="k-total">0</div><div class="kl">Total</div></div>
-  <div class="kpi done"><div class="kv" id="k-done">0</div><div class="kl">Done</div></div>
-  <div class="kpi inprog"><div class="kv" id="k-ip">0</div><div class="kl">In Progress</div></div>
-  <div class="kpi blocked"><div class="kv" id="k-bl">0</div><div class="kl">Blocked</div></div>
-  <div class="kpi procure"><div class="kv" id="k-pp">0</div><div class="kl">Procurement</div></div>
+  <div class="kpi total" onclick="resetFilters()"><div class="kv" id="k-total">0</div><div class="kl">Total</div></div>
+  <div class="kpi done" onclick="filterByStatus('Completed')"><div class="kv" id="k-done">0</div><div class="kl">Done</div></div>
+  <div class="kpi inprog" onclick="filterByStatus('In Progress')"><div class="kv" id="k-ip">0</div><div class="kl">In Progress</div></div>
+  <div class="kpi blocked" onclick="filterByStatus('Blocked')"><div class="kv" id="k-bl">0</div><div class="kl">Blocked</div></div>
+  <div class="kpi procure" onclick="filterByStatus('Pending Procurement')"><div class="kv" id="k-pp">0</div><div class="kl">Procurement</div></div>
+  <div class="kpi notstarted" onclick="filterByStatus('Not Started')"><div class="kv" id="k-ns">0</div><div class="kl">Not Started</div></div>
+</div>
+
+<div class="readonly-banner" id="readonly-banner" style="display:none">
+  🔒 Read-only mode — <a href="#" onclick="event.preventDefault();openLoginModal()" style="color:var(--accent);text-decoration:underline">Login</a> to make changes
+</div>
+
+<div class="filter-bar" id="filter-bar">
+  <div class="filter-search"><input type="text" id="f-search" placeholder="Search tasks, remarks, responsible…" oninput="applyFilters()"></div>
+  <select class="filter-select" id="ff-machine" onchange="applyFilters()"><option value="">All Machines</option></select>
+  <select class="filter-select" id="ff-status" onchange="applyFilters()">
+    <option value="">All Statuses</option>
+    <option>Not Started</option>
+    <option>In Progress</option>
+    <option>Blocked</option>
+    <option>Pending Procurement</option>
+    <option>Completed</option>
+  </select>
+  <select class="filter-select" id="ff-priority" onchange="applyFilters()">
+    <option value="">All Priorities</option>
+    <option>High</option>
+    <option>Medium</option>
+    <option>Low</option>
+  </select>
+  <select class="filter-select" id="ff-category" onchange="applyFilters()">
+    <option value="">All Categories</option>
+    <option>Electrical</option>
+    <option>Mechanical</option>
+    <option>General</option>
+  </select>
+  <select class="filter-select" id="ff-responsible" onchange="applyFilters()">
+    <option value="">All Responsible</option>
+  </select>
+  <select class="filter-select" id="ff-sort" onchange="applyFilters()">
+    <option value="">Sort By</option>
+    <option value="priority">Priority (High first)</option>
+    <option value="progress">Progress % (High first)</option>
+    <option value="status">Status</option>
+  </select>
+  <button class="btn-clear" id="filter-clear-btn" onclick="clearFilters()" style="display:none">Clear Filters</button>
+  <span id="filter-info">0 tasks</span>
 </div>
 
 <main>
@@ -416,6 +569,7 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
         </div>
       </div>
       <div class="detail-actions">
+        <button class="toggle-btn" id="photos-toggle-btn" onclick="togglePhotos()" style="display:none"><div class="toggle-dot"></div>📷 View Photos</button>
         <button class="toggle-btn" id="toggle-btn" onclick="toggleDone()"><div class="toggle-dot"></div>Show Completed</button>
         <button class="add-task-btn" onclick="openAddModal(currentMachine)">+ Add Task</button>
       </div>
@@ -502,10 +656,20 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
     <div class="settings-section">
       <h3>About</h3>
       <div class="settings-row">
-        <div class="settings-info"><div class="settings-label">Version</div><div class="settings-desc">Aerosol Plant Tracker v1.0 · Alpha Containers (Pvt.) Ltd.</div></div>
+        <div class="settings-info"><div class="settings-label">Version</div><div class="settings-desc">Aerosol Plant Tracker v4.0 · Alpha Containers (Pvt.) Ltd.</div></div>
+      </div>
+      <div class="settings-row">
+        <div class="settings-info"><div class="settings-label">Credit</div><div class="settings-desc">Planned & Designed by <strong>Sikander</strong> — Project Planning Lead</div></div>
       </div>
       <div class="settings-row">
         <div class="settings-info"><div class="settings-label">Install as App</div><div class="settings-desc">Open in Chrome/Safari → Share → Add to Home Screen for full PWA experience</div></div>
+      </div>
+    </div>
+
+    <div class="settings-section">
+      <h3>Activity Log</h3>
+      <div id="activity-log-container" style="max-height:220px;overflow-y:auto;background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:.75rem;font-family:'DM Mono',monospace;font-size:.7rem;line-height:1.45;display:flex;flex-direction:column;gap:.3rem;color:var(--text2)">
+        <div style="color:var(--text3);font-style:italic">No activity logged yet</div>
       </div>
     </div>
   </div>
@@ -528,6 +692,7 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
         <select id="f-category">
           <option>Electrical</option>
           <option>Mechanical</option>
+          <option>General</option>
         </select>
       </div>
       <div class="form-group full">
@@ -563,6 +728,21 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
         <label>Remarks</label>
         <input id="f-remarks" placeholder="Notes, vendor, reason for delay…">
       </div>
+      <div class="form-group full">
+        <label>Responsible (Assigned To)</label>
+        <input id="f-responsible" list="responsible-list" placeholder="e.g. Arsalan, Saqib…">
+        <datalist id="responsible-list">
+          <option value="Arsalan">
+          <option value="Saqib">
+        </datalist>
+      </div>
+      <div class="form-group full">
+        <label>Task Photo</label>
+        <input type="file" id="f-image" accept="image/*" style="font-size:.8rem">
+        <div id="f-image-preview" style="display:none;margin-top:.5rem;position:relative;width:80px;height:80px;border-radius:8px;overflow:hidden;border:1px solid var(--border)">
+          <img id="f-image-img" style="width:100%;height:100%;object-fit:cover;cursor:pointer" onclick="openLightbox(this.src)">
+        </div>
+      </div>
     </div>
     <div class="modal-footer">
       <button class="btn-danger" id="modal-delete-btn" style="display:none" onclick="deleteCurrentTask()">Delete Task</button>
@@ -584,79 +764,339 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
   <img class="lightbox-content" id="lightbox-img" src="" onclick="event.stopPropagation()">
 </div>
 
+<!-- Login Modal -->
+<div class="modal-overlay center" id="login-modal" style="display:none" onclick="if(event.target===this&&currentUser)closeLoginModal()">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title">🔐 Login to Edit</div>
+      <button class="modal-close" onclick="closeLoginModal()" id="login-close-btn" style="display:none">✕</button>
+    </div>
+    <p style="font-size:.82rem;color:var(--text2);margin-bottom:1rem;line-height:1.5">
+      Enter the project GitHub token to enable editing. Without logging in, you can view tasks in read-only mode.
+    </p>
+    <div class="form-grid" style="grid-template-columns:1fr">
+      <div class="form-group full">
+        <label>Your Display Name</label>
+        <input id="login-name" placeholder="e.g. Sikander, Arsalan, Saqib…" autocomplete="name">
+      </div>
+      <div class="form-group full">
+        <label>GitHub Token</label>
+        <input id="login-token" type="password" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx">
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-cancel" onclick="closeLoginModal()">View Read-Only</button>
+      <button class="btn-save" onclick="attemptLogin()">Login</button>
+    </div>
+  </div>
+</div>
+
 <script>
 // ═══════════════════════════════════════════════════════
 //  CONFIG
 // ═══════════════════════════════════════════════════════
 const STORAGE_KEY = 'aerosol_tracker_v1';
-const MACHINE_ORDER = ['Press','Trimming','Washing','Lacquer','Base Coat','Printing','Over Varnish','Main Oven','Necking','Mixer','General'];
-const ICONS = {Press:'⚙️',Trimming:'✂️',Washing:'💧',Lacquer:'🎨','Base Coat':'🖌️',Printing:'🖨️','Over Varnish':'✨','Main Oven':'🔥',Necking:'🔩',Mixer:'🔄',General:'📋'};
+const MACHINE_ORDER = ['Press', 'Trimming', 'Washing', 'Lacquer', 'Lacquer Oven', 'Base Coat', 'Printing', 'Decoration Oven', 'Over Varnish', 'Necking', 'Accumulator', 'Tumbler', 'Compressor', 'FG Conveyor', 'Auto Strapping Machine', 'Manual Strapping Machine', 'Overall Machine Operation', 'General'];
+const ICONS = {
+  Press: '⚙️',
+  Trimming: '✂️',
+  Washing: '💧',
+  Lacquer: '🎨',
+  'Lacquer Oven': '🔥',
+  'Base Coat': '🖌️',
+  Printing: '🖨️',
+  'Decoration Oven': '♨️',
+  'Over Varnish': '✨',
+  Necking: '🔩',
+  Accumulator: '📦',
+  Tumbler: '🔄',
+  Compressor: '💨',
+  'FG Conveyor': '🔁',
+  'Auto Strapping Machine': '🎗️',
+  'Manual Strapping Machine': '🏷️',
+  'Overall Machine Operation': '🏭',
+  General: '📋'
+};
 const MACHINE_IMAGES = {
   Press: [
-    'Press/Extrusion Press/IMG_20220518_132614.jpg',
-    'Press/Extrusion Press/IMG_20220518_140759.jpg',
-    'Press/Extrusion Press/IMG_20220518_140805.jpg',
-    'Press/Extrusion Press/IMG_20220518_140817.jpg',
-    'Press/Extrusion Press/IMG_20220518_140828.jpg'
+    'Photos/Press/Extrusion Press/IMG_20220518_132614.jpg',
+    'Photos/Press/Extrusion Press/IMG_20220518_140759.jpg',
+    'Photos/Press/Extrusion Press/IMG_20220518_140805.jpg',
+    'Photos/Press/Extrusion Press/IMG_20220518_140817.jpg',
+    'Photos/Press/Extrusion Press/IMG_20220518_140828.jpg'
   ],
   Trimming: [
-    'Trimming/Trimming & Brushing Machine/IMG_20220518_140702.jpg',
-    'Trimming/Trimming & Brushing Machine/IMG_20220518_140709.jpg',
-    'Trimming/Trimming & Brushing Machine/IMG_20220518_140716.jpg',
-    'Trimming/Trimming & Brushing Machine/IMG_20220518_140731.jpg'
+    'Photos/Trimming/Trimming & Brushing Machine/IMG_20220518_140702.jpg',
+    'Photos/Trimming/Trimming & Brushing Machine/IMG_20220518_140709.jpg',
+    'Photos/Trimming/Trimming & Brushing Machine/IMG_20220518_140716.jpg',
+    'Photos/Trimming/Trimming & Brushing Machine/IMG_20220518_140731.jpg'
   ],
   Washing: [
-    'Washing/Washing Machine/IMG_20220518_140555.jpg',
-    'Washing/Washing Machine/IMG_20220518_140618.jpg',
-    'Washing/Washing Machine/IMG_20220518_140642.jpg',
-    'Washing/Washing Machine/IMG_20220518_140649.jpg',
-    'Washing/Washing Machine/IMG_20220518_140655.jpg'
+    'Photos/Washing/Washing Machine/IMG_20220518_140555.jpg',
+    'Photos/Washing/Washing Machine/IMG_20220518_140618.jpg',
+    'Photos/Washing/Washing Machine/IMG_20220518_140642.jpg',
+    'Photos/Washing/Washing Machine/IMG_20220518_140649.jpg',
+    'Photos/Washing/Washing Machine/IMG_20220518_140655.jpg'
   ],
   Lacquer: [
-    'Lacquer/Internal Lacquering Machine/IMG_20220518_140428.jpg',
-    'Lacquer/Internal Lacquering Machine/IMG_20220518_140446.jpg',
-    'Lacquer/Internal Lacquering Machine/IMG_20220518_140452.jpg',
-    'Lacquer/Internal Lacquering Machine/IMG_20220518_140519.jpg'
+    'Photos/Lacquer/Internal Lacquering Machine/IMG_20220518_140428.jpg',
+    'Photos/Lacquer/Internal Lacquering Machine/IMG_20220518_140446.jpg',
+    'Photos/Lacquer/Internal Lacquering Machine/IMG_20220518_140452.jpg',
+    'Photos/Lacquer/Internal Lacquering Machine/IMG_20220518_140519.jpg'
+  ],
+  'Lacquer Oven': [
+    'Photos/Internal Lacquer Baking Oven/Internal Lacquer Baking Oven/IMG_20220518_140300.jpg',
+    'Photos/Internal Lacquer Baking Oven/Internal Lacquer Baking Oven/IMG_20220518_140312.jpg',
+    'Photos/Internal Lacquer Baking Oven/Internal Lacquer Baking Oven/IMG_20220518_140330.jpg',
+    'Photos/Internal Lacquer Baking Oven/Internal Lacquer Baking Oven/IMG_20220518_140347.jpg',
+    'Photos/Internal Lacquer Baking Oven/Internal Lacquer Baking Oven/IMG_20220518_140402.jpg',
+    'Photos/Internal Lacquer Baking Oven/Internal Lacquer Baking Oven/IMG_20220518_140408.jpg'
   ],
   'Base Coat': [
-    'Base Coat/Base Lacquering Machine/IMG_20220518_135811.jpg',
-    'Base Coat/Base Lacquering Machine/IMG_20220518_135822.jpg',
-    'Base Coat/Base Lacquering Machine/IMG_20220518_135848.jpg',
-    'Base Coat/Base Lacquering Machine/IMG_20220518_135855.jpg',
-    'Base Coat/Base Lacquering Machine/IMG_20220518_135905.jpg'
+    'Photos/Base Coat/Base Lacquering Machine/IMG_20220518_135811.jpg',
+    'Photos/Base Coat/Base Lacquering Machine/IMG_20220518_135822.jpg',
+    'Photos/Base Coat/Base Lacquering Machine/IMG_20220518_135848.jpg',
+    'Photos/Base Coat/Base Lacquering Machine/IMG_20220518_135855.jpg',
+    'Photos/Base Coat/Base Lacquering Machine/IMG_20220518_135905.jpg'
   ],
-  Printing: [],
+  Printing: [
+    'Photos/Printing/IMG_20220518_135916.jpg',
+    'Photos/Printing/IMG_20220518_135922.jpg',
+    'Photos/Printing/IMG_20220518_135934.jpg',
+    'Photos/Printing/IMG_20220518_135946.jpg',
+    'Photos/Printing/IMG_20220518_135951.jpg',
+    'Photos/Printing/IMG_20220518_140003.jpg'
+  ],
+  'Decoration Oven': [
+    'Photos/Decodation Oven/1652880599922.jpg',
+    'Photos/Decodation Oven/IMG_20220518_135630.jpg',
+    'Photos/Decodation Oven/IMG_20220518_135644.jpg',
+    'Photos/Decodation Oven/IMG_20220518_135709.jpg',
+    'Photos/Decodation Oven/IMG_20220518_135725.jpg',
+    'Photos/Decodation Oven/IMG_20220518_135748.jpg'
+  ],
   'Over Varnish': [
-    'Over Varnish/Overvarnishing Machine/IMG_20220518_140017.jpg',
-    'Over Varnish/Overvarnishing Machine/IMG_20220518_140031.jpg',
-    'Over Varnish/Overvarnishing Machine/IMG_20220518_140036.jpg',
-    'Over Varnish/Overvarnishing Machine/IMG_20220518_140046.jpg',
-    'Over Varnish/Overvarnishing Machine/IMG_20220518_140058.jpg'
+    'Photos/Over Varnish/Overvarnishing Machine/IMG_20220518_140017.jpg',
+    'Photos/Over Varnish/Overvarnishing Machine/IMG_20220518_140031.jpg',
+    'Photos/Over Varnish/Overvarnishing Machine/IMG_20220518_140036.jpg',
+    'Photos/Over Varnish/Overvarnishing Machine/IMG_20220518_140046.jpg',
+    'Photos/Over Varnish/Overvarnishing Machine/IMG_20220518_140058.jpg'
   ],
-  'Main Oven': [
-    'Internal Lacquer Baking Oven/Internal Lacquer Baking Oven/IMG_20220518_140300.jpg',
-    'Internal Lacquer Baking Oven/Internal Lacquer Baking Oven/IMG_20220518_140312.jpg',
-    'Internal Lacquer Baking Oven/Internal Lacquer Baking Oven/IMG_20220518_140330.jpg',
-    'Internal Lacquer Baking Oven/Internal Lacquer Baking Oven/IMG_20220518_140347.jpg',
-    'Internal Lacquer Baking Oven/Internal Lacquer Baking Oven/IMG_20220518_140402.jpg',
-    'Internal Lacquer Baking Oven/Internal Lacquer Baking Oven/IMG_20220518_140408.jpg'
+  Necking: [
+    'Photos/Necking/IMG_20220518_135455.jpg',
+    'Photos/Necking/IMG_20220518_135509.jpg',
+    'Photos/Necking/IMG_20220518_135515.jpg',
+    'Photos/Necking/IMG_20220518_135517.jpg',
+    'Photos/Necking/IMG_20220518_135533.jpg',
+    'Photos/Necking/IMG_20220518_135543.jpg',
+    'Photos/Necking/IMG_20220518_135556.jpg',
+    'Photos/Necking/IMG_20220518_135835.jpg'
   ],
-  Necking: [],
-  Mixer: [
-    'Accumulator/Accumulator/IMG_20220518_140139.jpg',
-    'Accumulator/Accumulator/IMG_20220518_140151.jpg',
-    'Accumulator/Accumulator/IMG_20220518_140206.jpg',
-    'Accumulator/Accumulator/IMG_20220518_140224.jpg',
-    'Accumulator/Accumulator/IMG_20220518_140237.jpg'
+  Accumulator: [
+    'Photos/Accumulator/Accumulator/IMG_20220518_140139.jpg',
+    'Photos/Accumulator/Accumulator/IMG_20220518_140151.jpg',
+    'Photos/Accumulator/Accumulator/IMG_20220518_140206.jpg',
+    'Photos/Accumulator/Accumulator/IMG_20220518_140224.jpg',
+    'Photos/Accumulator/Accumulator/IMG_20220518_140237.jpg'
   ],
+  Tumbler: [],
+  Compressor: [],
+  'FG Conveyor': [],
+  'Auto Strapping Machine': [
+    'Photos/Strapping/IMG_20220518_135309.jpg',
+    'Photos/Strapping/IMG_20220518_135331.jpg',
+    'Photos/Strapping/IMG_20220518_135343.jpg',
+    'Photos/Strapping/IMG_20220518_135424.jpg',
+    'Photos/Strapping/IMG_20220518_135431.jpg',
+    'Photos/Strapping/IMG_20220518_135443.jpg'
+  ],
+  'Manual Strapping Machine': [
+    'Photos/Strapping/IMG_20220518_135309.jpg',
+    'Photos/Strapping/IMG_20220518_135331.jpg',
+    'Photos/Strapping/IMG_20220518_135343.jpg',
+    'Photos/Strapping/IMG_20220518_135424.jpg',
+    'Photos/Strapping/IMG_20220518_135431.jpg',
+    'Photos/Strapping/IMG_20220518_135443.jpg'
+  ],
+  'Overall Machine Operation': [],
   General: []
 };
 const STATUS_CLASS = {'In Progress':'ip','Not Started':'ns','Completed':'cp','Blocked':'bl','Pending Procurement':'pp'};
-const SEED = [["Press","Electrical","Close all electrical panels and cable trays","High",10,"In Progress",""],["Press","Electrical","SOV pneumatic press clutch service","–",100,"Completed",""],["Press","Electrical","Hopper motor installation and testing (Dry Run)","–",100,"Completed",""],["Press","Electrical","Hopper Motor installation","–",100,"Completed",""],["Press","Electrical","Cable trays installation","–",100,"Completed",""],["Press","Mechanical","Slug Feeding Hopper with switch — complete unit","High",50,"In Progress",""],["Press","Mechanical","Gear Oil Lubrication pumping system setup","High",40,"In Progress","Pump sent for repairing"],["Press","Mechanical","Welding & fixing gear oil tank brackets and sheet","Medium",40,"In Progress",""],["Press","Mechanical","02 Dust collection pipes to be installed","Medium",0,"Not Started",""],["Press","Mechanical","Dust Collection blower — connection with piping","Medium",0,"Not Started","Blower to be procured"],["Press","Mechanical","Fix lubrication tray with slope for drainage","Medium",0,"Not Started",""],["Press","Mechanical","Oil collection tank — place directly under tray","Medium",0,"Not Started",""],["Press","Mechanical","Operator Platform (incomplete stand) to be made","Low",0,"Not Started",""],["Press","Mechanical","Damping rubber pads over slug feeding tray","Low",0,"Not Started",""],["Press","Mechanical","Scoop (chamach) required for slug handling","Low",0,"Not Started","Khalid sb"],["Press","Mechanical","Baling machine check from local vendor","Low",0,"Not Started","Khalid sb"],["Press","Mechanical","Auto gripper fitting / checking","–",100,"Completed",""],["Press","Mechanical","Slug Holder channel","–",100,"Completed",""],["Press","Mechanical","Press main slide installation","–",100,"Completed",""],["Press","Mechanical","Press conveyor fixation","–",100,"Completed",""],["Press","Mechanical","Oil pump motor repairing","–",100,"Completed",""],["Press","Mechanical","Press & Trimming compressor line fixed","–",100,"Completed",""],["Press","Mechanical","Press Clutch NRV repaired","–",100,"Completed",""],["Press","Mechanical","Oil pump replacing and troubleshooting","–",100,"Completed",""],["Press","Mechanical","Press timing and alignment with testing","–",100,"Completed",""],["Press","Mechanical","Die & punch stroke setting","–",100,"Completed",""],["Press","Mechanical","Press machine auto lubrication — pending tasks","High",30,"In Progress","Procurement in process"],["Press","Mechanical","Press machine auto running on slug","High",0,"Not Started","Awaiting pending task completion"],["Press","Mechanical","Tools for press machine — urgent procurement","High",20,"In Progress","In progress"],["Trimming","Electrical","Scrap collector wiring and troubleshooting","High",90,"In Progress","Magnetic switch faulty — to be changed"],["Trimming","Electrical","Electrical Panel checked / Tested","–",100,"Completed",""],["Trimming","Electrical","Startup main motor","–",100,"Completed",""],["Trimming","Electrical","Pneumatic and Electrical operation check","–",100,"Completed",""],["Trimming","Mechanical","Oiling / greasing / parts replacement / testing","High",80,"In Progress","Oil pump maintenance pending"],["Trimming","Mechanical","Trimming machine dry run","High",0,"Blocked","Dry run awaiting — cutter blade sent for sharpening"],["Trimming","Mechanical","Trimming startup","–",100,"Completed",""],["Trimming","Mechanical","Conveyor alignment — Trimming to Washing","–",100,"Completed",""],["Trimming","Mechanical","Conveyor — Press to Trimming input","–",100,"Completed",""],["Washing","Electrical","Heaters to be checked and replaced if required","High",30,"In Progress","After press & trimming startup"],["Washing","Electrical","Disconnect wiring before washing the machine","High",0,"In Progress","Khalid sb"],["Washing","Electrical","Ensure all exhaust fans on floor are operational","High",0,"In Progress","Cable & connection required — UTI team"],["Washing","Mechanical","Chain Repairing","High",0,"In Progress","Sent to Karachi for repairing"],["Washing","Mechanical","Process identification, missing parts, inspection","High",0,"In Progress","In collaboration with Lindsay"],["Washing","Mechanical","Rinsing Recycling Tank — decoating & cleaning","High",50,"In Progress",""],["Washing","Mechanical","Spraying Jets Section — cleaning / scraping","High",50,"In Progress",""],["Washing","Mechanical","Inspect all rubber pipes — replace if damaged","High",0,"Blocked","After chain arrival — Khalid sb"],["Washing","Mechanical","Separate storage tanks (detergent / cold / hot water)","High",0,"Not Started","Khalid sb"],["Washing","Mechanical","Washing rinse recycling tank (rusty) — clean","High",0,"Not Started","Khalid sb"],["Washing","Mechanical","Heat exchanger for washing system — procure & install","High",0,"Not Started","Khalid sb"],["Washing","Mechanical","Washing process flow — review and implement","High",0,"Not Started","Khalid sb"],["Washing","Mechanical","Washing unit tanks — sizes and quantities for quotation","High",0,"Not Started","Khalid sb"],["Washing","Mechanical","Washing unit drain plan — flexible pipes after tank installation","Medium",0,"Not Started","To be installed after tank installation"],["Washing","Mechanical","Washing machine chain — repair and reinstallation check","High",30,"In Progress","Repairing in progress in Karachi — to be checked after installation"],["Washing","Mechanical","Washing machine piping and blower installation","High",20,"In Progress","To be checked with Lindsay — blower available for installation"],["Washing","Mechanical","All gears greasing","–",100,"Completed",""],["Washing","Mechanical","Gears alignment","–",100,"Completed",""],["Lacquer","Electrical","Air filter to be installed before lacquer line","High",0,"Not Started","Khalid sb"],["Lacquer","Electrical","All heaters — check, fix or replace faulty","High",90,"In Progress","2 faulty heaters need replacement"],["Lacquer","Electrical","Blower main motor connection and testing","–",100,"Completed",""],["Lacquer","Mechanical","Cans Holders — dismantled, clean with thinner","Medium",50,"In Progress",""],["Lacquer","Mechanical","Small dedicated air tank / receiver for lacquer","Medium",0,"Not Started","Khalid sb"],["Lacquer","Mechanical","Spray Guns — cleaned with thinner","–",100,"Completed",""],["Lacquer","Mechanical","Spray Mount Drum — scraped & cleaned","–",100,"Completed",""],["Lacquer","Mechanical","Mandrel Plate — scraped & cleaned","–",100,"Completed",""],["Lacquer","Mechanical","Exhaust Sieve — cleaned","–",100,"Completed",""],["Lacquer","Mechanical","Frame Body — cleaned","–",100,"Completed",""],["Lacquer","Mechanical","Oven Chain cleaning","–",100,"Completed",""],["Base Coat","Mechanical","Rollers — dismantled, to be chrome plated","Medium",50,"In Progress","Sent for chrome plating"],["Base Coat","Mechanical","Rollers Housing — cleaned and greased","–",100,"Completed",""],["Base Coat","Mechanical","Mandrels — cleaned","–",100,"Completed",""],["Base Coat","Mechanical","Frame Body — cleaned","–",100,"Completed",""],["Printing","Electrical","Servo motor troubleshooting","High",0,"Not Started",""],["Printing","Electrical","White LED lighting for printing and oven area","Medium",0,"Not Started","Khalid sb"],["Printing","Electrical","Final printing plan and PLC delivery & inspection","High",20,"Pending Procurement","PLC and supporting items to be delivered — Material in transit"],["Printing","Electrical","CTC cleaning of machine panels interface","–",100,"Completed",""],["Printing","Electrical","PLC installation","–",100,"Completed",""],["Printing","Mechanical","All printing rollers — dismantle, clean, buff, chrome plate","High",60,"In Progress",""],["Printing","Mechanical","Rollers (Tubex team) — ready for chrome plating","High",70,"In Progress",""],["Printing","Mechanical","Bearings — cleaning & greasing","Medium",50,"In Progress",""],["Printing","Mechanical","Ink Fountain — cleaning","Medium",50,"In Progress",""],["Printing","Mechanical","Roller Train Frame — cleaning","Medium",50,"In Progress",""],["Printing","Mechanical","Aluminium oil tank — fabricate & install","Medium",0,"Not Started","Khalid sb"],["Printing","Mechanical","Printing machine rollers — deep clean, rubber & chrome inspection","High",40,"In Progress","Deep cleaning in progress; rubber roller quotation taken; chrome coating to be checked"],["Over Varnish","Electrical","Motors checking and troubleshooting","–",100,"Completed",""],["Over Varnish","Mechanical","Rollers — dismantled, to be chrome plated","Medium",50,"In Progress","Sent for chrome plating"],["Over Varnish","Mechanical","Mandrels — cleaned","–",100,"Completed",""],["Over Varnish","Mechanical","Rollers Housing — cleaned and greased","–",100,"Completed",""],["Over Varnish","Mechanical","Frame Body — cleaned","–",100,"Completed",""],["Main Oven","Electrical","Cable trays installation","–",100,"Completed",""],["Main Oven","Electrical","Blower motor connection and testing","–",100,"Completed",""],["Main Oven","Mechanical","Motors alignment w.r.t marking","–",100,"Completed",""],["Necking","Electrical","Electrical troubleshooting and testing","–",100,"Completed",""],["Necking","Electrical","Necking machine — electrical supply troubleshooting for dry run","High",20,"In Progress","Interlocking will be redesigned and checked"],["Necking","Mechanical","Two sets of press dies, springs & nut bolts required","High",0,"Not Started","Khalid sb"],["Necking","Mechanical","Buffing and polishing on necking machine tools","Medium",0,"Not Started","Khalid sb"],["Necking","Mechanical","Kluber oil & grease for necking machine","Medium",0,"Not Started","Khalid sb"],["Necking","Mechanical","Cans Grippers / Holders — cleaning","Medium",50,"In Progress","Tubex team"],["Mixer","Electrical","Main motor testing","–",100,"Completed",""],["Mixer","Electrical","Mixer installation and automation — auto feeding flow design","Medium",0,"Pending Procurement","Flow to be designed for auto feeding on press — quotation awaiting for conveyor"],["General","Electrical","Main Power Cable Termination & Execution Plan","High",0,"Pending Procurement","Wires and auxiliaries to be ordered against BOQ"],["General","Electrical","Electrical panels for power distribution — procurement review","High",0,"Pending Procurement","New panels arranged; feedback needed on further procurement items"],["General","Electrical","Transformer load increase to 625 kW — utility application","High",30,"In Progress","Application in process"],["General","Electrical","Verify electrical panels, wiring & interlocks — Press to Washing","High",0,"Blocked","Pending until Washing Machine electrical work is completed"],["General","Electrical","Verify electrical panels, wiring & interlocks — Washing to Necking","High",0,"Blocked","After material procurement; electrical revamping team to be deputed"],["General","Electrical","Ensure all electrical circuits & cable trays closed","High",0,"In Progress","After each section completion — Khalid sb"],["General","Electrical","Testing of Control Logics & Circuits","High",0,"Not Started","Target: 05-Apr-2026"],["General","Electrical","Termination of cables & wires — Pre-commissioning","High",0,"Not Started","Target: 15-Apr-2026"],["General","Electrical","Verify electrical panels, control wiring, interlocks","High",0,"Not Started","Target: 10-May-2026"],["General","Electrical","Identify faulty machines / panels for rectification","High",0,"Not Started","Target: 15-May-2026"],["General","Mechanical","Compressor piping — dryer and auto drain system","High",50,"In Progress","Mechanical and electrical installation in process"],["General","Mechanical","Machine Operating Manuals — arrange from OEM","Medium",10,"In Progress","Required in Russian and German language"],["General","Mechanical","Mr. Lindsay next visit — finalize commissioning dates","Medium",0,"Not Started","Final commissioning visit dates to be finalized upon startup"],["General","Mechanical","Daily coordination & reporting mechanism","Low",0,"In Progress","As per the plan"],["General","Mechanical","Check motors, conveyors, spindles, ovens, actuators","High",0,"Not Started",""],["General","Mechanical","Test each machine individually without load","High",0,"Not Started",""],["General","Mechanical","Overall machine paint","Medium",0,"Not Started",""],["General","Mechanical","Ensure proper cleaning of entire machine","High",0,"In Progress","Khalid sb"],["General","Mechanical","Full unit inspection with Mr. Babar's team","High",0,"In Progress","Khalid sb"],["General","Mechanical","Modify exhaust duct pipes — prevent rainwater entry","Medium",0,"Not Started","Awaiting quotation — Khalid sb"],["General","Mechanical","Check & install lubrication drum foundation","Medium",0,"Not Started","On startup — Khalid sb"],["General","Mechanical","Make stands for all spare rolls","Low",0,"Not Started","Awaiting quotation — Khalid sb"],["General","Mechanical","Full operator toolset & tool trolley system","Medium",0,"Not Started","Khalid sb"],["General","Mechanical","Lab equipment to be sourced","Medium",0,"Not Started","Khalid sb"],["General","Mechanical","Filter plant — fix for drinking water","Low",0,"Not Started","Khalid sb"],["General","Mechanical","Dust bins for office areas","Low",0,"Not Started","Khalid sb"],["General","Mechanical","Big cartons for temporary storage of cans","Low",0,"Not Started","Khalid sb"],["General","Mechanical","Boxes / Bins for cans packing (Alpha Container)","Low",0,"Not Started","Khalid sb"],["General","Mechanical","Dismantle all rollers for inspection","–",100,"Completed","Done — Khalid sb"]];
+const SEED = [
+  ["Accumulator", "Electrical", "Dry run", "High", 0, "Not Started", "Arsalan", "on machine testing"],
+  ["Accumulator", "Mechanical", "chain & bearing greasing", "Medium", 50, "In Progress", "Arsalan", ""],
+  ["Auto Strapping Machine", "Mechanical", "to place and install at designated location", "Medium", 0, "Not Started", "Arsalan", ""],
+  ["Auto Strapping Machine", "Mechanical", "Dry run", "Low", 0, "Not Started", "Arsalan", ""],
+  ["Auto Strapping Machine", "Electrical", "wiring and connections to be done", "Medium", 0, "Not Started", "Arsalan", ""],
+  ["Base Coat", "Mechanical", "Fumes collector piping to install", "Medium", 0, "Not Started", "Arsalan", "piping layout is needed, either to be connected from the existing ducting or through a new pipe via a blower."],
+  ["Base Coat", "Mechanical", "Rollers Housing — cleaned and greased", "Medium", 60, "In Progress", "Saqib", ""],
+  ["Base Coat", "Mechanical", "Mandrels — cleaned", "Medium", 60, "In Progress", "Saqib", ""],
+  ["Base Coat", "Mechanical", "Frame Body — cleaned", "Medium", 60, "In Progress", "Saqib", ""],
+  ["Base Coat", "Mechanical", "Spare Rubberize rollers", "High", 50, "In Progress", "Saqib", "ordering done (05-06-2026)"],
+  ["Base Coat", "Mechanical", "Spare Rubberize rollers", "High", 50, "In Progress", "Saqib", "ordering done (05-06-2026)"],
+  ["Base Coat", "Mechanical", "Air regulator pneumatic fitting to check and rectify and fixation", "Medium", 0, "Not Started", "Arsalan", ""],
+  ["Base Coat", "Mechanical", "driving gear chain box enclosure at back", "Medium", 0, "Not Started", "Arsalan", ""],
+  ["Base Coat", "Electrical", "closure of all cable trays/ panels", "Medium", 0, "Not Started", "Arsalan", ""],
+  ["Base Coat", "Mechanical", "Rawal bolts anchoring to be done on the foundation", "High", 0, "Not Started", "Arsalan", ""],
+  ["Compressor", "Electrical", "Compressor  dryer and auto drain electrical connection", "High", 50, "In Progress", "Arsalan", ""],
+  ["Compressor", "Mechanical", "Compressor piping — dryer and auto drain system", "High", 95, "In Progress", "Arsalan", ""],
+  ["Compressor", "Mechanical", "main pipe to be elevated downward for smooth drainage", "Medium", 0, "Not Started", "Arsalan", ""],
+  ["Compressor", "Mechanical", "individual section pipes/ branches to be supported/fixed/welded", "Medium", 0, "Not Started", "Arsalan", ""],
+  ["Compressor", "Electrical", "dryer wiring and connection to be done.", "High", 0, "Not Started", "Arsalan", ""],
+  ["Decoration Oven", "Electrical", "Heaters to be checked and replaced if required", "High", 0, "Not Started", "Arsalan", "sample needed for ordering"],
+  ["Decoration Oven", "Electrical", "Cable trays installation", "High", 100, "Completed", "Arsalan", ""],
+  ["Decoration Oven", "Electrical", "Blower motor connection and testing", "High", 100, "Completed", "Arsalan", ""],
+  ["Decoration Oven", "Electrical", "temperature gauges to be checked & installed", "High", 0, "Not Started", "Arsalan", ""],
+  ["Decoration Oven", "General", "Lacquer Oven Dry run", "High", 100, "Completed", "Arsalan", "Cleaning in progress & Heater testing in progress"],
+  ["Decoration Oven", "Mechanical", "Motors alignment w.r.t marking", "High", 100, "Completed", "Arsalan", "Khalid Shb observations"],
+  ["FG Conveyor", "Mechanical", "Realignment of conveyor to be done as per Lindsay recommendation", "Medium", 0, "Not Started", "Arsalan", ""],
+  ["FG Conveyor", "Electrical", "connection/wiring to be done", "Medium", 0, "Not Started", "Arsalan", ""],
+  ["General", "General", "Machine Operating Manuals", "Medium", 10, "In Progress", "Saqib", ""],
+  ["General", "General", "Overall machine paint", "Medium", 0, "Not Started", "Saqib", "to be start after compressor piping work"],
+  ["General", "Mechanical", "Modify exhaust duct pipes — prevent rainwater entry bends installation", "Medium", 100, "Completed", "Saqib", ""],
+  ["General", "Mechanical", "Test each machine individually without load", "Medium", 50, "In Progress", "Arsalan", ""],
+  ["General", "General", "Ensure proper cleaning of entire machine", "Medium", 0, "Not Started", "Saqib", ""],
+  ["General", "Mechanical", "Scoop required for slug handling", "Medium", 0, "Not Started", "Saqib", ""],
+  ["General", "Mechanical", "Baling machine procurement", "Medium", 0, "Not Started", "Saqib", ""],
+  ["General", "Mechanical", "scrap collector container to be made/procured for trimming", "Medium", 0, "Not Started", "Saqib", ""],
+  ["General", "Electrical", "White LED lighting for printing and oven area", "Medium", 0, "Not Started", "Saqib", ""],
+  ["General", "General", "Make stands for all spare rolls", "Medium", 0, "Not Started", "Saqib", ""],
+  ["General", "General", "Full operator toolset & tool trolley system", "Medium", 0, "Not Started", "Saqib", ""],
+  ["General", "General", "Lab equipment to be sourced", "Medium", 0, "Not Started", "Saqib", ""],
+  ["General", "General", "Dust bins for office areas", "Medium", 0, "Not Started", "Saqib", ""],
+  ["General", "General", "Big cartons for temporary storage of cans", "Medium", 0, "Not Started", "Saqib", ""],
+  ["General", "General", "Boxes / Bins for cans packing (Alpha Container)", "Medium", 0, "Not Started", "Saqib", ""],
+  ["General", "Electrical", "Transformer load increase to 625 kW — utility application", "High", 0, "Not Started", "Saqib", "Application in process"],
+  ["General", "Electrical", "Ensure all exhaust fans on floor are operational", "High", 70, "In Progress", "Saqib", "partially operational"],
+  ["General", "Mechanical", "Operator's Platform", "Medium", 0, "Not Started", "Saqib", "new to be ordered"],
+  ["Lacquer", "Electrical", "All heaters — check, fix or replace faulty", "High", 50, "In Progress", "Arsalan", "sample needed for ordering"],
+  ["Lacquer", "General", "Internal Lacquering Dry run", "High", 0, "Not Started", "Arsalan", "wrong connection done"],
+  ["Lacquer", "Mechanical", "lacquer Storage vessel installation with pneumatic fittings", "Medium", 0, "Not Started", "Saqib", ""],
+  ["Lacquer", "Mechanical", "fixing  can holders after cleaning", "Medium", 0, "Not Started", "Arsalan", ""],
+  ["Lacquer", "Mechanical", "Cans Holders — dismantled, clean with thinner", "Medium", 50, "In Progress", "Saqib", ""],
+  ["Lacquer", "Electrical", "Blower main motor connection and testing", "High", 100, "Completed", "Arsalan", ""],
+  ["Lacquer", "Mechanical", "Spray Guns — cleaned with thinner", "High", 100, "Completed", "Arsalan", ""],
+  ["Lacquer", "Mechanical", "Spray Mount Drum — scraped & cleaned", "High", 100, "Completed", "Arsalan", ""],
+  ["Lacquer", "Mechanical", "Mandrel Plate — scraped & cleaned", "Medium", 100, "Completed", "Arsalan", ""],
+  ["Lacquer", "Mechanical", "Exhaust Sieve — cleaned", "Medium", 100, "Completed", "Arsalan", ""],
+  ["Lacquer", "Mechanical", "Frame Body — cleaned", "Medium", 100, "Completed", "Arsalan", ""],
+  ["Lacquer", "Mechanical", "Oven Chain cleaning", "Medium", 100, "Completed", "Arsalan", ""],
+  ["Lacquer", "Mechanical", "Small dedicated air tank / receiver for lacquer", "Medium", 0, "Not Started", "Saqib", "Khalid sb recommendation"],
+  ["Lacquer Oven", "Mechanical", "Oven Chain & bearing greasing", "Medium", 50, "In Progress", "Arsalan", ""],
+  ["Lacquer Oven", "Electrical", "closure of electrical panels", "Medium", 0, "Not Started", "Arsalan", ""],
+  ["Lacquer Oven", "Mechanical", "Oven back metallic cover sheet to place", "Medium", 0, "Not Started", "Arsalan", ""],
+  ["Manual Strapping Machine", "Mechanical", "to place and install at designated location", "Low", 0, "Not Started", "Arsalan", ""],
+  ["Manual Strapping Machine", "Electrical", "wiring and connections to be done", "Low", 0, "Not Started", "Arsalan", ""],
+  ["Necking", "Mechanical", "Infeed tray installation from feeding unit to necking machine", "Medium", 0, "Not Started", "Arsalan", ""],
+  ["Necking", "Mechanical", "PVC ejection pipe installation from necking for cans discharge", "Medium", 0, "Not Started", "Arsalan", ""],
+  ["Necking", "Mechanical", "scrap collection tank to install from necking", "Medium", 0, "Not Started", "Arsalan", ""],
+  ["Necking", "Mechanical", "Conveyor installation after ejection pipe", "Medium", 0, "Not Started", "Arsalan", ""],
+  ["Necking", "General", "Necking machine Dry run", "High", 50, "In Progress", "Arsalan", ""],
+  ["Necking", "Electrical", "Electrical troubleshooting and testing", "High", 100, "Completed", "Arsalan", ""],
+  ["Necking", "Mechanical", "Cans Grippers / Holders — cleaning", "Medium", 100, "Completed", "Saqib", ""],
+  ["Necking", "Mechanical", "Buffing and polishing on necking machine tools", "Medium", 100, "Not Started", "Saqib", ""],
+  ["Necking", "Mechanical", "Two sets of press dies, springs & nut bolts required", "High", 0, "Not Started", "Saqib", ""],
+  ["Necking", "Mechanical", "Kluber oil & grease for necking machine", "Medium", 0, "Not Started", "Saqib", ""],
+  ["Necking", "Electrical", "Necking machine — electrical supply troubleshooting for dry run", "High", 20, "In Progress", "Arsalan", "Interlocking will be redesigned and checked"],
+  ["Over Varnish", "Mechanical", "Fumes collector piping to install", "High", 0, "Not Started", "Arsalan", "piping layout is needed, either to be connected from the existing ducting or through a new pipe via a blower."],
+  ["Over Varnish", "Mechanical", "Spare Rubberize rollers", "High", 50, "In Progress", "Saqib", "ordering done (05-06-2026)"],
+  ["Over Varnish", "Mechanical", "Rollers — dismantled, to be chrome plated", "High", 50, "In Progress", "Saqib", "Sent for chrome plating"],
+  ["Over Varnish", "Electrical", "closure of all cable trays/ panels", "High", 0, "Not Started", "Arsalan", ""],
+  ["Over Varnish", "Mechanical", "Rawal bolts anchoring to be done on the foundation", "High", 0, "Not Started", "Arsalan", ""],
+  ["Over Varnish", "Mechanical", "varnish pump placement and installation with piping", "High", 0, "Not Started", "Arsalan", ""],
+  ["Over Varnish", "General", "Printing Oven Dry run", "High", 0, "Not Started", "Arsalan", ""],
+  ["Over Varnish", "Electrical", "Motors checking and troubleshooting", "High", 100, "Completed", "Arsalan", ""],
+  ["Over Varnish", "Mechanical", "Mandrels — cleaned", "High", 100, "Completed", "Arsalan", ""],
+  ["Over Varnish", "Mechanical", "Rollers Housing — cleaned and greased", "High", 100, "Completed", "Arsalan", ""],
+  ["Over Varnish", "Mechanical", "Frame Body — cleaned", "High", 100, "Completed", "Arsalan", ""],
+  ["Overall Machine Operation", "Electrical", "Main Power Cable Termination & Execution Plan", "High", 0, "Not Started", "Arsalan", "Quotation awaiting for execution"],
+  ["Overall Machine Operation", "Electrical", "Main Power Cable procurement", "High", 0, "Pending Procurement", "Saqib", "Quotation awaiting for execution"],
+  ["Overall Machine Operation", "Electrical", "Electrical panels for power distribution", "High", 0, "Pending Procurement", "Arsalan", "Quotation awaiting for execution"],
+  ["Overall Machine Operation", "Electrical", "Verify electrical panels, wiring & interlocks — Press to Washing", "High", 50, "In Progress", "Arsalan", "Till Washing Machine electrical Work is completed"],
+  ["Overall Machine Operation", "Electrical", "Testing of Control Logics & Circuits", "High", 0, "Not Started", "Arsalan", ""],
+  ["Overall Machine Operation", "Electrical", "Verify electrical panels, wiring & interlocks — Washing to Necking", "High", 50, "In Progress", "Arsalan", ""],
+  ["Press", "Electrical", "Close all electrical panels and cable trays", "High", 10, "In Progress", "Arsalan", ""],
+  ["Press", "Mechanical", "Damping rubber pads over slug feeding tray", "Low", 0, "Pending Procurement", "Saqib", "Procurement in process (23-05-2026)"],
+  ["Press", "Mechanical", "Gear Oil Lubrication pumping system setup", "High", 0, "Not Started", "Arsalan", ""],
+  ["Press", "Mechanical", "Slug Feeding Hopper sheet to be fixed", "High", 100, "Completed", "Saqib", ""],
+  ["Press", "Mechanical", "Tools for press machine", "High", 80, "In Progress", "Saqib", ""],
+  ["Press", "Electrical", "Dust Collection blower installation", "Medium", 0, "Pending Procurement", "Saqib", "Require New Blower"],
+  ["Press", "Electrical", "SOV pneumatic press clutch service", "High", 100, "Completed", "Arsalan", ""],
+  ["Press", "Electrical", "Hopper motor installation and testing", "High", 100, "Completed", "Arsalan", ""],
+  ["Press", "Electrical", "Cable trays installation", "High", 100, "Completed", "Arsalan", ""],
+  ["Press", "Mechanical", "Press & Trimming compressor temporary line fixed", "High", 100, "Completed", "Arsalan", ""],
+  ["Press", "Mechanical", "Press Clutch NRV repaired", "High", 100, "Completed", "Arsalan", ""],
+  ["Press", "Mechanical", "Press timing and alignment with testing", "High", 100, "Completed", "Arsalan", ""],
+  ["Press", "Mechanical", "Die & punch stroke setting", "High", 100, "Completed", "Arsalan", ""],
+  ["Press", "Mechanical", "Slug tray on/of switch to be installed", "High", 0, "Not Started", "Arsalan", ""],
+  ["Press", "Mechanical", "Dust Collection blower piping", "Medium", 0, "Pending Procurement", "Saqib", ""],
+  ["Press", "Mechanical", "Welding & fixing gear oil tank brackets and sheet", "Medium", 40, "In Progress", "Arsalan", "Not fixed Yet"],
+  ["Press", "Mechanical", "Fixing the lubrication tray properly with a slope for drainage", "Medium", 0, "Not Started", "Arsalan", "Not fixed Yet"],
+  ["Press", "Mechanical", "Place and install the Oil collection tank directly under the tray", "Medium", 0, "Not Started", "Arsalan", "Not Installed Yet"],
+  ["Press", "Mechanical", "Installation of Level sensor and Filter on the oil tank", "Medium", 0, "Not Started", "Arsalan", "Not Installed Yet"],
+  ["Printing", "Mechanical", "Rollers — dismantled, to be chrome plated", "High", 50, "In Progress", "Saqib", "Sent for chrome plating"],
+  ["Printing", "Electrical", "PLC installation & termination", "High", 20, "In Progress", "Arsalan", ""],
+  ["Printing", "Mechanical", "Printing machine rollers — deep clean, rubber & chrome inspection", "High", 40, "In Progress", "Saqib", ""],
+  ["Printing", "Mechanical", "Bearings — cleaning & greasing", "High", 50, "In Progress", "Saqib", ""],
+  ["Printing", "Mechanical", "Ink Fountain — cleaning", "High", 50, "In Progress", "Saqib", ""],
+  ["Printing", "Mechanical", "Roller Train Frame — cleaning", "High", 50, "In Progress", "Saqib", ""],
+  ["Printing", "Mechanical", "Dismantle all rollers for inspection & Cleaning", "High", 50, "In Progress", "Saqib", ""],
+  ["Printing", "Mechanical", "All printing rollers — dismantle, clean, buff, chrome plate", "High", 60, "In Progress", "Saqib", ""],
+  ["Printing", "Electrical", "CTC cleaning of machine panels interface", "High", 100, "Completed", "Arsalan", ""],
+  ["Printing", "Electrical", "PLC installation", "High", 100, "Completed", "Arsalan", ""],
+  ["Printing", "Electrical", "Servo motor troubleshooting", "High", 0, "Not Started", "Arsalan", ""],
+  ["Printing", "Mechanical", "Aluminum oil tank — fabricate & install", "High", 0, "Not Started", "Arsalan", ""],
+  ["Printing", "Electrical", "closure of all cable trays/ panels", "High", 0, "Not Started", "Arsalan", ""],
+  ["Printing", "Mechanical", "Rawlbolts anchoring to be done on the foundation", "High", 0, "Not Started", "Arsalan", ""],
+  ["Printing", "General", "Printing Machine Dry run", "High", 0, "Not Started", "Arsalan", ""],
+  ["Trimming", "Mechanical", "Installation of piping of Trimming Of blower", "High", 0, "Pending Procurement", "Arsalan", "Procurement in process(23-05-2026)"],
+  ["Trimming", "Mechanical", "Conveyor alignment — Trimming to Washing", "High", 50, "In Progress", "Arsalan", ""],
+  ["Trimming", "Electrical", "Trimming Scrap collector wiring and troubleshooting", "High", 0, "Not Started", "Arsalan", ""],
+  ["Trimming", "Electrical", "Electrical Panel checked / Tested", "High", 100, "Completed", "Arsalan", ""],
+  ["Trimming", "Electrical", "Startup main motor", "High", 100, "Completed", "Arsalan", ""],
+  ["Trimming", "Electrical", "Pneumatic and Electrical operation check", "High", 100, "Completed", "Arsalan", ""],
+  ["Trimming", "Mechanical", "Trimming startup", "High", 100, "Completed", "Arsalan", ""],
+  ["Trimming", "Mechanical", "Conveyor — Press to Trimming input", "High", 100, "Completed", "Arsalan", ""],
+  ["Trimming", "Mechanical", "Trimming machine dry run", "High", 100, "Completed", "Arsalan", ""],
+  ["Trimming", "Mechanical", "Install safety guard for suction at scrap generation point", "High", 0, "Not Started", "Arsalan", ""],
+  ["Trimming", "Mechanical", "closure of chain/gears/pneumatic assembly with box", "High", 0, "Not Started", "Arsalan", ""],
+  ["Trimming", "Electrical", "closure of all cable trays/ panels", "High", 0, "Not Started", "Arsalan", ""],
+  ["Trimming", "Mechanical", "pneumatic pressure valve for ejector pressure to install", "High", 0, "Not Started", "Arsalan", ""],
+  ["Trimming", "Mechanical", "Installation of trimming blower", "High", 0, "Not Started", "Arsalan", ""],
+  ["Trimming", "Mechanical", "Fixing of Manual Oil Lubrication System", "High", 0, "Not Started", "Arsalan", "Not fixed Yet"],
+  ["Trimming", "Mechanical", "Addition of closed cabinet for trim collection on machine side", "High", 0, "Not Started", "Arsalan", "Not fixed Yet"],
+  ["Trimming", "Mechanical", "Oiling / greasing / parts replacement / testing", "High", 80, "In Progress", "Arsalan", "Oil pump maintenance pending"],
+  ["Tumbler", "Electrical", "Mixer installation and automation — auto feeding flow design", "Medium", 0, "Pending Procurement", "Arsalan", "quotation awaiting for conveyor from Arsalan & Lindsay"],
+  ["Tumbler", "General", "Slug Mixing Unit Dry run", "Medium", 100, "Completed", "Arsalan", "Working on its auto feeding system"],
+  ["Tumbler", "Mechanical", "Tumbler/Mixer wiring and connections to be done", "High", 0, "Not Started", "Arsalan", ""],
+  ["Tumbler", "Electrical", "Main motor testing", "High", 100, "Completed", "Arsalan", ""],
+  ["Tumbler", "Mechanical", "Tumbler/Mixer installation on platform", "High", 50, "In Progress", "Arsalan", ""],
+  ["Washing", "Mechanical", "Washing machine piping and blower installation", "High", 20, "In Progress", "Arsalan", "To be checked with Lindsay — blower available for installation"],
+  ["Washing", "Mechanical", "Washing unit drain flexible pipes after tank installation", "High", 0, "Not Started", "Arsalan", "to be installed after tank installation"],
+  ["Washing", "Mechanical", "Washing Machine Dry run", "High", 0, "Not Started", "Arsalan", "Waiting For chain"],
+  ["Washing", "Mechanical", "chain installation", "High", 0, "Not Started", "Arsalan", ""],
+  ["Washing", "Electrical", "Electrical Operating control panel to be relocated from trimming to washing", "High", 0, "Not Started", "Arsalan", ""],
+  ["Washing", "Mechanical", "pressure gauge to install on rinse recycle loop pipes", "High", 0, "Not Started", "Arsalan", ""],
+  ["Washing", "Mechanical", "contamination/ fumes collector to be checked and installed on top", "High", 0, "Not Started", "Arsalan", ""],
+  ["Washing", "Mechanical", "to install Pvc & wire brush on washing chain at top", "High", 0, "Not Started", "Arsalan", ""],
+  ["Washing", "Mechanical", "Spray and Drying section's windows to be installed", "High", 0, "Not Started", "Arsalan", ""],
+  ["Washing", "Electrical", "Heaters to be checked and replaced if required", "High", 100, "Completed", "Arsalan", ""],
+  ["Washing", "Mechanical", "Rinsing Recycling Tank — recoating & cleaning", "High", 50, "In Progress", "Saqib", ""],
+  ["Washing", "Mechanical", "Spraying Jets Section — cleaning / scraping", "High", 50, "In Progress", "Saqib", ""],
+  ["Washing", "Electrical", "Heaters to be Replaced", "High", 0, "Pending Procurement", "Saqib", ""],
+  ["Washing", "Mechanical", "All gears greasing", "High", 100, "Completed", "Arsalan", ""],
+  ["Washing", "Mechanical", "Gears alignment", "High", 100, "Completed", "Arsalan", ""],
+  ["Washing", "Mechanical", "Separate storage tanks installation(detergent / cold / hot water)", "High", 0, "Not Started", "Saqib", ""],
+  ["Washing", "Mechanical", "Heat exchanger for washing system — procure & install", "High", 0, "Not Started", "Saqib", ""],
+  ["Washing", "Mechanical", "Inspect all rubber pipes — replace if damaged", "High", 0, "Not Started", "Arsalan", "After chain arrival"],
+  ["Washing", "Mechanical", "Washing unit tanks — sizes and quantities for quotation", "Medium", 0, "Not Started", "Saqib", "awaiting confirmation from Lindsay"]
+];
 
 // ═══════════════════════════════════════════════════════
 //  STATE
 // ═══════════════════════════════════════════════════════
+const STORAGE_KEY_USER = 'aerosol_tracker_user';
+let currentUser = null;
 let tasks = [];
 let settings = { syncUrl:'', syncKey:'' };
 let currentMachine = null;
@@ -664,6 +1104,8 @@ let showCompleted = false;
 let editingId = null;
 let ctxMenu = null;
 let pendingDelete = null;
+let activityLog = [];
+const MAX_LOG = 100;
 
 function uid(){ return 't' + Date.now() + Math.random().toString(36).slice(2,6); }
 
@@ -674,15 +1116,16 @@ function loadState(){
       const d = JSON.parse(raw);
       tasks    = d.tasks    || [];
       settings = d.settings || { syncUrl:'', syncKey:'' };
-      if(!tasks.length) seedTasks();
+      if(!tasks.length || tasks.length <= 128) seedTasks();
     } else { seedTasks(); }
   } catch(e){ seedTasks(); }
+  tasks.forEach(t => { if(!t.responsible) t.responsible = ''; });
 }
 
 function seedTasks(){
   tasks = SEED.map(s => ({
     id: uid(), machine: s[0], category: s[1], desc: s[2],
-    priority: s[3], progress: s[4], status: s[5], remarks: s[6], updated: ''
+    priority: s[3], progress: s[4], status: s[5], remarks: s[6], responsible: s[7] || '', updated: ''
   }));
   saveState();
 }
@@ -692,12 +1135,165 @@ function saveState(){
 }
 
 // ═══════════════════════════════════════════════════════
+//  COLLAPSIBLE FILTERING SYSTEM
+// ═══════════════════════════════════════════════════════
+const PRIORITY_SORT = {High:0,Medium:1,Low:2};
+const STATUS_SORT = {'In Progress':0,'Not Started':1,'Pending Procurement':2,'Completed':3};
+
+function toggleFilterBar(){
+  const bar = document.getElementById('filter-bar');
+  const btn = document.getElementById('filter-toggle-btn');
+  if(bar.style.display === 'flex' || bar.classList.contains('show')){
+    bar.style.display = 'none';
+    bar.classList.remove('show');
+    btn.classList.remove('active');
+  } else {
+    bar.style.display = 'flex';
+    bar.classList.add('show');
+    btn.classList.add('active');
+  }
+}
+
+function filterByStatus(status){
+  const select = document.getElementById('ff-status');
+  if(select){
+    select.value = status;
+    applyFilters();
+  }
+}
+
+function resetFilters(){
+  clearFilters();
+}
+
+function updateFilterBadge(){
+  const f = getFilters();
+  let count = 0;
+  if(f.search) count++;
+  if(f.machine) count++;
+  if(f.status) count++;
+  if(f.priority) count++;
+  if(f.category) count++;
+  if(f.responsible) count++;
+  if(f.sort) count++;
+  
+  const badge = document.getElementById('filter-active-badge');
+  if(badge){
+    if(count > 0){
+      badge.textContent = count;
+      badge.style.display = 'block';
+    } else {
+      badge.style.display = 'none';
+    }
+  }
+}
+
+function getFilters(){
+  return {
+    search: (document.getElementById('f-search').value||'').toLowerCase().trim(),
+    machine: document.getElementById('ff-machine').value,
+    status: document.getElementById('ff-status').value,
+    priority: document.getElementById('ff-priority').value,
+    category: document.getElementById('ff-category').value,
+    responsible: document.getElementById('ff-responsible').value,
+    sort: document.getElementById('ff-sort').value
+  };
+}
+
+function filterTasks(arr){
+  const f = getFilters();
+  let result = arr;
+  if(f.search){
+    result = result.filter(t => t.desc.toLowerCase().includes(f.search) || (t.remarks||'').toLowerCase().includes(f.search) || (t.responsible||'').toLowerCase().includes(f.search));
+  }
+  if(f.machine) result = result.filter(t => t.machine === f.machine);
+  if(f.status) result = result.filter(t => t.status === f.status);
+  if(f.priority) result = result.filter(t => t.priority === f.priority);
+  if(f.category) result = result.filter(t => t.category === f.category);
+  if(f.responsible) result = result.filter(t => t.responsible === f.responsible);
+  // Sort
+  if(f.sort === 'priority'){
+    result = [...result].sort((a,b) => (PRIORITY_SORT[a.priority]??9) - (PRIORITY_SORT[b.priority]??9));
+  } else if(f.sort === 'progress'){
+    result = [...result].sort((a,b) => b.progress - a.progress);
+  } else if(f.sort === 'status'){
+    result = [...result].sort((a,b) => (STATUS_SORT[a.status]??9) - (STATUS_SORT[b.status]??9));
+  }
+  return result;
+}
+
+function activeFilterCount(){
+  const f = getFilters();
+  let c = 0;
+  if(f.search) c++;
+  if(f.machine) c++;
+  if(f.status) c++;
+  if(f.priority) c++;
+  if(f.category) c++;
+  if(f.responsible) c++;
+  return c;
+}
+
+function applyFilters(){ updateFilterBadge(); renderAll(); updateFilterUI(); }
+
+function clearFilters(){
+  document.getElementById('f-search').value = '';
+  document.getElementById('ff-machine').value = '';
+  document.getElementById('ff-status').value = '';
+  document.getElementById('ff-priority').value = '';
+  document.getElementById('ff-category').value = '';
+  document.getElementById('ff-responsible').value = '';
+  document.getElementById('ff-sort').value = '';
+  applyFilters();
+}
+
+function updateFilterUI(){
+  const c = activeFilterCount();
+  const btn = document.getElementById('filter-clear-btn');
+  if(btn) btn.style.display = c > 0 ? 'inline-flex' : 'none';
+  const info = document.getElementById('filter-info');
+  const filtered = filterTasks(tasks);
+  if(info){
+    if(c > 0){
+      info.textContent = `${filtered.length} of ${tasks.length} tasks`;
+    } else {
+      info.textContent = `${tasks.length} tasks`;
+    }
+  }
+}
+
+function populateFilterDropdowns(){
+  // Machines
+  const mSel = document.getElementById('ff-machine');
+  if(mSel){
+    const mVal = mSel.value;
+    mSel.innerHTML = '<option value="">All Machines</option>';
+    MACHINE_ORDER.forEach(m => {
+      const ct = tasks.filter(t => t.machine === m).length;
+      if(ct > 0) mSel.innerHTML += `<option value="${m}">${m} (${ct})</option>`;
+    });
+    mSel.value = mVal;
+  }
+  // Responsible
+  const rSel = document.getElementById('ff-responsible');
+  if(rSel){
+    const rVal = rSel.value;
+    const ppl = [...new Set(tasks.map(t => t.responsible).filter(Boolean))].sort();
+    rSel.innerHTML = '<option value="">All Responsible</option>';
+    ppl.forEach(p => rSel.innerHTML += `<option>${p}</option>`);
+    rSel.value = rVal;
+  }
+}
+
+// ═══════════════════════════════════════════════════════
 //  NAVIGATION
 // ═══════════════════════════════════════════════════════
 function navigate(view, machine){
+  clearSelection();
   document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
   document.getElementById('view-' + view).classList.add('active');
   if(view === 'detail' && machine){ showMachine(machine); }
+  if(view === 'settings'){ renderActivityLog(); }
   if(view !== 'detail'){ currentMachine = null; }
   window.scrollTo({ top:0, behavior:'smooth' });
 }
@@ -706,12 +1302,46 @@ function navigate(view, machine){
 //  RENDER KPIs
 // ═══════════════════════════════════════════════════════
 function renderKPIs(){
-  const c = s => tasks.filter(t => t.status === s).length;
-  animCount('k-total', tasks.length);
+  const ft = filterTasks(tasks);
+  const c = s => ft.filter(t => t.status === s).length;
+  
+  let overall = 0;
+  if(ft.length > 0) {
+    const totalProg = ft.reduce((sum, t) => sum + (Number(t.progress) || 0), 0);
+    overall = Math.round(totalProg / ft.length);
+  }
+  
+  const activeStatus = document.getElementById('ff-status').value;
+  highlightKPI(activeStatus);
+  
+  animCount('k-total', ft.length);
   animCount('k-done',  c('Completed'));
   animCount('k-ip',    c('In Progress'));
   animCount('k-bl',    c('Blocked'));
   animCount('k-pp',    c('Pending Procurement'));
+  animCount('k-ns',    c('Not Started'));
+}
+
+function highlightKPI(status){
+  const cards = document.querySelectorAll('.kpi');
+  cards.forEach(c => c.classList.remove('active'));
+  
+  if(!status){
+    const totalCard = document.querySelector('.kpi.total');
+    if(totalCard) totalCard.classList.add('active');
+  } else {
+    let cls = '';
+    if(status === 'Completed') cls = '.kpi.done';
+    else if(status === 'In Progress') cls = '.kpi.inprog';
+    else if(status === 'Blocked') cls = '.kpi.blocked';
+    else if(status === 'Pending Procurement') cls = '.kpi.procure';
+    else if(status === 'Not Started') cls = '.kpi.notstarted';
+    
+    if(cls){
+      const card = document.querySelector(cls);
+      if(card) card.classList.add('active');
+    }
+  }
 }
 
 function animCount(id, target){
@@ -736,14 +1366,20 @@ function renderDashboard(){
   grid.innerHTML = '';
   const C = 2 * Math.PI * 15.9;
 
+  const filtered = filterTasks(tasks);
+
   MACHINE_ORDER.forEach((m, i) => {
-    const mt = tasks.filter(t => t.machine === m);
-    if(!mt.length) return;
+    const mt = filtered.filter(t => t.machine === m);
+    if(mt.length === 0 && activeFilterCount() > 0) return;
+    const allMt = tasks.filter(t => t.machine === m);
+    if(allMt.length === 0) return;
+    
     const done    = mt.filter(t => t.status === 'Completed').length;
     const pending = mt.length - done;
     const pct     = mt.length ? Math.round(done/mt.length*100) : 0;
     const ePend   = mt.filter(t => t.category === 'Electrical' && t.status !== 'Completed').length;
     const mPend   = mt.filter(t => t.category === 'Mechanical' && t.status !== 'Completed').length;
+    const gPend   = mt.filter(t => t.category === 'General' && t.status !== 'Completed').length;
     const dash    = `${(pct/100*C).toFixed(1)} ${C.toFixed(1)}`;
 
     const card = document.createElement('div');
@@ -751,10 +1387,6 @@ function renderDashboard(){
     card.style.setProperty('--i', i);
     card.onclick = () => navigate('detail', m);
     card.innerHTML = `
-      <div class="card-img-container">
-        ${MACHINE_IMAGES[m] && MACHINE_IMAGES[m].length ? `<img src="${MACHINE_IMAGES[m][0]}" alt="${m}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">` : ''}
-        <div class="card-img-placeholder" style="${MACHINE_IMAGES[m] && MACHINE_IMAGES[m].length ? 'display:none;' : ''}">${ICONS[m]||'🔧'}</div>
-      </div>
       <div class="card-top">
         <div class="card-icon">${ICONS[m]||'🔧'}</div>
         <div class="ring-wrap">
@@ -769,6 +1401,7 @@ function renderDashboard(){
       <div class="card-tags">
         ${ePend ? `<span class="ctag e">⚡ ${ePend}</span>` : ''}
         ${mPend ? `<span class="ctag m">⚙ ${mPend}</span>` : ''}
+        ${gPend ? `<span class="ctag g">📋 ${gPend}</span>` : ''}
         ${!pending ? `<span class="ctag done">✓ Complete</span>` : ''}
       </div>
       <div class="card-bar"><div class="card-bar-fill" style="width:0%" data-pct="${pct}%"></div></div>
@@ -778,6 +1411,10 @@ function renderDashboard(){
       </div>`;
     grid.appendChild(card);
   });
+
+  if(!grid.children.length){
+    grid.innerHTML = '<div class="empty">No machines match your filters</div>';
+  }
 
   requestAnimationFrame(() => requestAnimationFrame(() => {
     grid.querySelectorAll('.ring-fill').forEach(el => el.setAttribute('stroke-dasharray', el.dataset.dash));
@@ -804,22 +1441,47 @@ function showMachine(m){
   document.getElementById('d-pct').textContent = `${pct}% · ${done}/${mt.length}`;
   requestAnimationFrame(() => requestAnimationFrame(() => fill.style.width = pct + '%'));
 
-  // Render Machine Photos Gallery
+  // Gallery — HIDE by default, show button if photos exist
   const gal = document.getElementById('detail-gallery');
-  const imgs = MACHINE_IMAGES[m] || [];
-  if(imgs.length){
-    gal.style.display = 'flex';
-    gal.innerHTML = imgs.map(img => `
-      <div class="gallery-img-wrap" onclick="openLightbox('${img}')">
-        <img src="${img}" alt="${m}" onerror="this.parentElement.style.display='none';">
-      </div>
-    `).join('');
+  const allImgs = getAllMachinePhotos(m);
+  
+  const photosBtn = document.getElementById('photos-toggle-btn');
+  if(allImgs.length){
+    photosBtn.style.display = 'inline-flex';
+    photosBtn.classList.remove('on');
+    photosBtn.innerHTML = '<div class="toggle-dot"></div>📷 View Photos (' + allImgs.length + ')';
   } else {
-    gal.style.display = 'none';
-    gal.innerHTML = '';
+    photosBtn.style.display = 'none';
   }
-
+  gal.style.display = 'none';
+  gal.innerHTML = '';
+  
   renderDetail();
+}
+
+function togglePhotos(){
+  const gal = document.getElementById('detail-gallery');
+  const btn = document.getElementById('photos-toggle-btn');
+  const m = currentMachine;
+  if(!m) return;
+  
+  if(gal.style.display === 'flex'){
+    gal.style.display = 'none';
+    btn.classList.remove('on');
+    btn.innerHTML = '<div class="toggle-dot"></div>📷 View Photos (' + getAllMachinePhotos(m).length + ')';
+  } else {
+    const allImgs = getAllMachinePhotos(m);
+    gal.style.display = 'flex';
+    gal.innerHTML = allImgs.map(img => `<div class="gallery-img-wrap" onclick="openLightbox('${img}')"><img src="${img}" alt="${m}" onerror="this.parentElement.style.display='none';"></div>`).join('');
+    btn.classList.add('on');
+    btn.innerHTML = '<div class="toggle-dot"></div>📷 Hide Photos';
+  }
+}
+
+function getAllMachinePhotos(m){
+  const machineImgs = MACHINE_IMAGES[m] || [];
+  const taskImgs = tasks.filter(t => t.machine === m && t.image).map(t => t.image);
+  return [...machineImgs, ...taskImgs];
 }
 
 function renderDetail(){
@@ -827,13 +1489,13 @@ function renderDetail(){
   body.innerHTML = '';
   const m = currentMachine;
 
-  ['Electrical','Mechanical'].forEach(cat => {
+  ['Electrical','Mechanical','General'].forEach(cat => {
     const catTasks = tasks.filter(t => t.machine === m && t.category === cat);
     if(!catTasks.length) return;
     const visible  = showCompleted ? catTasks : catTasks.filter(t => t.status !== 'Completed');
     const pending  = catTasks.filter(t => t.status !== 'Completed').length;
-    const catCls   = cat === 'Electrical' ? 'e' : 'm';
-    const icon     = cat === 'Electrical' ? '⚡' : '⚙';
+    const catCls   = cat === 'Electrical' ? 'e' : cat === 'Mechanical' ? 'm' : 'g';
+    const icon     = cat === 'Electrical' ? '⚡' : cat === 'Mechanical' ? '⚙' : '📋';
 
     const sec = document.createElement('div');
     sec.className = 'cat-section';
@@ -861,13 +1523,17 @@ function buildTask(t){
   const div = document.createElement('div');
   div.className = `task-card s-${sc}`;
   div.dataset.id = t.id;
+  div.onclick = () => openEditModal(t.id);
   const pfill = pct===100?'full':pct===0?'':'';
   div.innerHTML = `
     <div class="task-top">
-      <div class="task-desc">${t.desc}</div>
+      ${isLoggedIn() ? `<input type="checkbox" class="task-select-cb" data-id="${t.id}" onclick="event.stopPropagation(); handleCheckboxChange()" style="margin-right: 0.6rem; cursor: pointer; width: 16px; height: 16px; accent-color: var(--accent); flex-shrink: 0; align-self: center;">` : ''}<div class="task-desc">${t.desc}</div>
       <div class="task-badges">
+        ${t.responsible ? `<span class="badge" style="background:var(--g-bg);color:var(--g-t);border:1px solid var(--g-b)">👤 ${t.responsible}</span>` : ''}
+        ${t.lastEditedBy ? `<span class="badge" style="background:var(--s-ip-bg);color:var(--s-ip-t);border:1px solid var(--s-ip-b)">✏️ ${t.lastEditedBy}</span>` : ''}
         ${t.priority && t.priority !== '–' ? `<span class="badge p-${t.priority}">${t.priority}</span>` : ''}
         <span class="badge s-${sc}">${t.status}</span>
+        ${isLoggedIn() ? `<button class="task-menu-btn" style="color: #f87171" onclick="event.stopPropagation(); confirmDelete('${t.id}')" title="Delete Task">🗑</button>` : ''}
         <button class="task-menu-btn" onclick="openCtx(event,'${t.id}')">⋯</button>
       </div>
     </div>
@@ -905,17 +1571,24 @@ function openCtx(e, id){
 function closeCtx(){ if(ctxMenu){ ctxMenu.remove(); ctxMenu = null; } }
 
 function quickStatus(id, status){
+  if(!isLoggedIn()){ openLoginModal(); return; }
   const t = tasks.find(t => t.id === id);
   if(!t) return;
   t.status = status;
   if(status === 'Completed') t.progress = 100;
+  t.lastEditedBy = isLoggedIn() ? currentUser.name : 'Unknown';
   t.updated = new Date().toLocaleDateString('en-PK',{day:'numeric',month:'short',year:'numeric'});
+  logActivity(`Changed status of "${t.desc.slice(0, 30)}..." on ${t.machine} to "${status}"`);
   saveState(); renderAll(); toast('Status updated — ' + status,'success');
 }
 
 function confirmDelete(id){
+  if(!isLoggedIn()){ openLoginModal(); return; }
   pendingDelete = id;
   const t = tasks.find(t => t.id === id);
+  const desc = t ? t.desc : '';
+  const mach = t ? t.machine : '';
+  logActivity(`Deleted task "${desc.slice(0, 30)}..." from ${mach}`);
   const toastEl = showUndoToast(t ? `"${t.desc.slice(0,40)}…" deleted` : 'Task deleted');
   tasks = tasks.filter(t => t.id !== id);
   saveState(); renderAll();
@@ -929,10 +1602,37 @@ function populateMachineSelect(selected){
   sel.innerHTML = MACHINE_ORDER.map(m => `<option${m===selected?' selected':''}>${m}</option>`).join('');
 }
 
+function toggleModalFields(readOnly) {
+  document.getElementById('f-machine').disabled = readOnly;
+  document.getElementById('f-category').disabled = readOnly;
+  document.getElementById('f-desc').disabled = readOnly;
+  document.getElementById('f-priority').disabled = readOnly;
+  document.getElementById('f-status').disabled = readOnly;
+  document.getElementById('f-progress').disabled = readOnly;
+  document.getElementById('f-remarks').disabled = readOnly;
+  document.getElementById('f-responsible').disabled = readOnly;
+  
+  const imgInput = document.getElementById('f-image');
+  if (imgInput) imgInput.disabled = readOnly;
+  
+  const saveBtn = document.querySelector('.btn-save');
+  if (saveBtn) saveBtn.style.display = readOnly ? 'none' : 'inline-flex';
+  
+  const deleteBtn = document.getElementById('modal-delete-btn');
+  if (deleteBtn) {
+    if (readOnly) {
+      deleteBtn.style.display = 'none';
+    } else {
+      deleteBtn.style.display = editingId ? 'inline-flex' : 'none';
+    }
+  }
+}
+
 function openAddModal(machine){
+  if(!isLoggedIn()){ openLoginModal(); return; }
   editingId = null;
   document.getElementById('modal-title').textContent = 'Add Task';
-  document.getElementById('modal-delete-btn').style.display = 'none';
+  toggleModalFields(false);
   populateMachineSelect(machine || currentMachine || 'General');
   document.getElementById('f-category').value  = 'Mechanical';
   document.getElementById('f-desc').value      = '';
@@ -940,6 +1640,9 @@ function openAddModal(machine){
   document.getElementById('f-status').value    = 'Not Started';
   document.getElementById('f-progress').value  = 0;
   document.getElementById('f-remarks').value   = '';
+  document.getElementById('f-responsible').value = '';
+  document.getElementById('f-image').value     = '';
+  document.getElementById('f-image-preview').style.display = 'none';
   document.getElementById('prog-display').textContent = '0%';
   document.getElementById('prog-num').textContent = '0%';
   document.getElementById('task-modal').style.display = 'flex';
@@ -949,8 +1652,9 @@ function openEditModal(id){
   const t = tasks.find(t => t.id === id);
   if(!t) return;
   editingId = id;
-  document.getElementById('modal-title').textContent = 'Edit Task';
-  document.getElementById('modal-delete-btn').style.display = 'inline-flex';
+  const isWritable = isLoggedIn();
+  document.getElementById('modal-title').textContent = isWritable ? 'Edit Task' : 'View Task (Read-Only)';
+  
   populateMachineSelect(t.machine);
   document.getElementById('f-category').value  = t.category;
   document.getElementById('f-desc').value      = t.desc;
@@ -958,8 +1662,19 @@ function openEditModal(id){
   document.getElementById('f-status').value    = t.status;
   document.getElementById('f-progress').value  = t.progress;
   document.getElementById('f-remarks').value   = t.remarks;
+  document.getElementById('f-responsible').value = t.responsible || '';
+  document.getElementById('f-image').value     = '';
+  if(t.image){
+    document.getElementById('f-image-img').src = t.image;
+    document.getElementById('f-image-preview').style.display = 'block';
+  } else {
+    document.getElementById('f-image-preview').style.display = 'none';
+  }
   document.getElementById('prog-display').textContent = t.progress + '%';
   document.getElementById('prog-num').textContent = t.progress + '%';
+  
+  toggleModalFields(!isWritable);
+  
   document.getElementById('task-modal').style.display = 'flex';
 }
 
@@ -972,7 +1687,45 @@ function closeModal(){
   editingId = null;
 }
 
-function saveTask(){
+function optimizeImage(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      const img = new Image();
+      img.onload = function() {
+        const canvas = document.createElement('canvas');
+        let width = img.width;
+        let height = img.height;
+        const maxDim = 1024;
+        
+        if (width > maxDim || height > maxDim) {
+          if (width > height) {
+            height = Math.round((height * maxDim) / width);
+            width = maxDim;
+          } else {
+            width = Math.round((width * maxDim) / height);
+            height = maxDim;
+          }
+        }
+        
+        canvas.width = width;
+        canvas.height = height;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0, width, height);
+        
+        // Convert to quality 0.7 JPEG
+        const dataUrl = canvas.toDataURL('image/jpeg', 0.7);
+        resolve(dataUrl);
+      };
+      img.onerror = reject;
+      img.src = e.target.result;
+    };
+    reader.onerror = reject;
+    reader.readAsDataURL(file);
+  });
+}
+
+async function saveTask(){
   const machine  = document.getElementById('f-machine').value;
   const category = document.getElementById('f-category').value;
   const desc     = document.getElementById('f-desc').value.trim();
@@ -981,14 +1734,40 @@ function saveTask(){
   const status   = document.getElementById('f-status').value;
   const progress = parseInt(document.getElementById('f-progress').value);
   const remarks  = document.getElementById('f-remarks').value.trim();
+  const responsible = document.getElementById('f-responsible').value.trim();
   const updated  = new Date().toLocaleDateString('en-PK',{day:'numeric',month:'short',year:'numeric'});
 
+  let imagePath = null;
+  if(editingId) {
+    const existingTask = tasks.find(t => t.id === editingId);
+    if (existingTask) imagePath = existingTask.image || null;
+  }
+
+  const fileInput = document.getElementById('f-image');
+  if(fileInput.files.length > 0){
+    try {
+      const file = fileInput.files[0];
+      toast('Optimizing image...','info');
+      const base64Data = await optimizeImage(file);
+      const filename = `task_img_${Date.now()}.jpg`;
+      toast('Uploading optimized image...','info');
+      imagePath = await uploadImageToGitHub(base64Data, filename, machine);
+      toast('Image uploaded successfully','success');
+    } catch(e) {
+      toast('Image upload failed: ' + e.message,'error');
+      return;
+    }
+  }
+
+  const lastEditedBy = isLoggedIn() ? currentUser.name : 'Unknown';
   if(editingId){
     const t = tasks.find(t => t.id === editingId);
-    Object.assign(t, {machine,category,desc,priority,status,progress,remarks,updated});
+    Object.assign(t, {machine,category,desc,priority,status,progress,remarks,responsible,updated,lastEditedBy,image:imagePath});
+    logActivity(`Updated task "${desc.slice(0,30)}..." on ${machine}`);
     toast('Task updated ✓','success');
   } else {
-    tasks.push({id:uid(),machine,category,desc,priority,progress,status,remarks,updated});
+    tasks.push({id:uid(),machine,category,desc,priority,progress,status,remarks,responsible,updated,lastEditedBy,image:imagePath});
+    logActivity(`Added task "${desc.slice(0,30)}..." to ${machine}`);
     toast('Task added ✓','success');
   }
   closeModal();
@@ -999,8 +1778,12 @@ function saveTask(){
 }
 
 function deleteCurrentTask(){
+  if(!isLoggedIn()){ openLoginModal(); return; }
   if(!editingId) return;
   const t = tasks.find(t => t.id === editingId);
+  const desc = t ? t.desc : '';
+  const mach = t ? t.machine : '';
+  logActivity(`Deleted task "${desc.slice(0,30)}..." from ${mach}`);
   tasks = tasks.filter(t => t.id !== editingId);
   closeModal(); saveState(); renderAll();
   toast('Task deleted','info');
@@ -1032,17 +1815,26 @@ function importExcel(input){
     const ws   = wb.Sheets['TRACKER'];
     if(!ws){ toast('TRACKER sheet not found in file','error'); return; }
     const rows = XLSX.utils.sheet_to_json(ws, {header:1, defval:''});
-    const imported = rows.slice(2).filter(r => r[1] && String(r[1]).trim()).map(r => ({
-      id:       uid(),
-      machine:  String(r[1]).trim(),
-      category: String(r[2]).trim(),
-      desc:     String(r[3]).trim(),
-      priority: String(r[4]).trim(),
-      progress: Math.round((parseFloat(r[5])||0) * (parseFloat(r[5])<=1?100:1)),
-      status:   String(r[6]).trim(),
-      remarks:  String(r[7]).trim(),
-      updated:  r[8] ? String(r[8]).trim() : ''
-    }));
+    const imported = rows.slice(2).filter(r => r[1] && String(r[1]).trim()).map(r => {
+      let machine = String(r[1]).trim();
+      if (machine === 'decoration  Oven') machine = 'Decoration Oven';
+      else if (machine === 'Lacquer oven') machine = 'Lacquer Oven';
+      else if (machine === 'Auto strapping machine') machine = 'Auto Strapping Machine';
+      else if (machine === 'Overall Machine operation') machine = 'Overall Machine Operation';
+
+      return {
+        id:       uid(),
+        machine:  machine,
+        category: String(r[2]).trim(),
+        desc:     String(r[3]).trim(),
+        priority: String(r[4]).trim() || '–',
+        progress: Math.round((parseFloat(r[5])||0) * (parseFloat(r[5])<=1?100:1)),
+        status:   String(r[6]).trim(),
+        responsible: r[7] ? String(r[7]).trim() : '',
+        remarks:  r[8] ? String(r[8]).trim() : '',
+        updated:  r[9] ? String(r[9]).trim() : ''
+      };
+    });
     if(!imported.length){ toast('No tasks found in file','error'); return; }
     tasks = imported;
     saveState(); renderAll();
@@ -1053,13 +1845,24 @@ function importExcel(input){
 }
 
 function exportExcel(){
-  const STATUS_S = {'Completed':'2E7D32','In Progress':'F57F17','Not Started':'424242','Blocked':'B71C1C','Pending Procurement':'4A148C'};
   const rows = [
-    ['S#','Machine','Category','Task Description','Priority','Progress %','Status','Remarks','Date Updated']
+    ['AEROSOL PLANT  ·  INSTALLATION TRACKER', '', '', '', '', '', '', '', '', '← Dashboard'],
+    ['#', 'Machine', 'Category', 'Task Description', 'Priority', 'Progress', 'Status', 'Responsible', 'Remarks', 'Updated']
   ];
-  tasks.forEach((t,i) => rows.push([i+1,t.machine,t.category,t.desc,t.priority,t.progress/100,t.status,t.remarks,t.updated]));
+  tasks.forEach((t,i) => rows.push([
+    i+1,
+    t.machine,
+    t.category,
+    t.desc,
+    t.priority,
+    t.progress/100,
+    t.status,
+    t.responsible || '',
+    t.remarks || '',
+    t.updated || ''
+  ]));
   const ws = XLSX.utils.aoa_to_sheet(rows);
-  ws['!cols'] = [{wch:4},{wch:16},{wch:13},{wch:54},{wch:10},{wch:11},{wch:20},{wch:38},{wch:14}];
+  ws['!cols'] = [{wch:4},{wch:18},{wch:13},{wch:54},{wch:10},{wch:11},{wch:20},{wch:15},{wch:38},{wch:14}];
   const wb = XLSX.utils.book_new();
   XLSX.utils.book_append_sheet(wb, ws, 'TRACKER');
   XLSX.writeFile(wb, `Aerosol_Tracker_${new Date().toISOString().slice(0,10)}.xlsx`);
@@ -1125,7 +1928,7 @@ async function pushToGitHub(){
     });
     if(metaR.ok){ const meta = await metaR.json(); sha = meta.sha; }
 
-    const payload = JSON.stringify({ tasks, settings:{ autoSync: settings.autoSync } }, null, 2);
+    const payload = JSON.stringify({ tasks, settings:{ autoSync: settings.autoSync }, activityLog: activityLog.slice(0, 50) }, null, 2);
     const encoded = btoa(unescape(encodeURIComponent(payload)));
     const body    = {
       message: 'Update tasks · ' + new Date().toLocaleString('en-PK'),
@@ -1158,22 +1961,84 @@ async function pushToGitHub(){
 async function pullFromGitHub(){
   setSyncStatus('pending','● Pulling…','Fetching from GitHub…');
   try {
-    const r = await fetch(GH_RAW + '?t=' + Date.now());
-    if(!r.ok) throw new Error('HTTP ' + r.status);
-    const data = await r.json();
-    if(Array.isArray(data.tasks) && data.tasks.length){
-      tasks = data.tasks;
-      saveState(); renderAll();
-      setSyncStatus('ok','● Synced','Pulled ' + tasks.length + ' tasks from GitHub');
-      toast('Pulled ' + tasks.length + ' tasks from GitHub ✓','success');
+    const key = settings.syncKey || (currentUser && currentUser.token);
+    const headers = {};
+    if(key) {
+      headers['Authorization'] = 'token ' + key;
+      headers['Accept'] = 'application/vnd.github.v3+json';
+      const r = await fetch(GH_API + '?t=' + Date.now(), { headers });
+      if(!r.ok) throw new Error('HTTP ' + r.status);
+      const meta = await r.json();
+      const content = decodeURIComponent(escape(atob(meta.content)));
+      const data = JSON.parse(content);
+      if(Array.isArray(data.tasks) && data.tasks.length){
+        tasks = data.tasks;
+        if(Array.isArray(data.activityLog)){
+          activityLog = data.activityLog;
+          try { localStorage.setItem(STORAGE_KEY+'_log', JSON.stringify(activityLog)); } catch(e){}
+        }
+        saveState(); renderAll();
+        setSyncStatus('ok','● Synced','Pulled ' + tasks.length + ' tasks from GitHub');
+        toast('Pulled ' + tasks.length + ' tasks from GitHub ✓','success');
+      } else {
+        toast('No tasks found in GitHub file','error');
+        setSyncStatus('err','● Pull failed','No tasks in tasks.json');
+      }
     } else {
-      toast('No tasks found in GitHub file','error');
-      setSyncStatus('err','● Pull failed','No tasks in tasks.json');
+      const r = await fetch(GH_RAW + '?t=' + Date.now());
+      if(!r.ok) throw new Error('HTTP ' + r.status);
+      const data = await r.json();
+      if(Array.isArray(data.tasks) && data.tasks.length){
+        tasks = data.tasks;
+        if(Array.isArray(data.activityLog)){
+          activityLog = data.activityLog;
+          try { localStorage.setItem(STORAGE_KEY+'_log', JSON.stringify(activityLog)); } catch(e){}
+        }
+        saveState(); renderAll();
+        setSyncStatus('ok','● Synced','Pulled ' + tasks.length + ' tasks from GitHub');
+        toast('Pulled ' + tasks.length + ' tasks from GitHub ✓','success');
+      } else {
+        toast('No tasks found in GitHub file','error');
+        setSyncStatus('err','● Pull failed','No tasks in tasks.json');
+      }
     }
   } catch(e){
     setSyncStatus('err','● Pull failed',e.message);
     toast('Pull failed — ' + e.message,'error');
   }
+}
+
+async function uploadImageToGitHub(base64Data, filename, machineName){
+  const key = settings.syncKey || (currentUser && currentUser.token);
+  if(!key) throw new Error("GitHub token required to upload images.");
+  
+  // Sanitize machine name for folder path
+  const safeFolder = (machineName || 'General').replace(/[^a-zA-Z0-9 _-]/g, '').trim();
+  const path = `Photos/${safeFolder}/${filename}`;
+  const apiUri = `https://api.github.com/repos/${GH.owner}/${GH.repo}/contents/${path}`;
+  
+  const payload = {
+    message: `Upload photo for ${machineName} · ${filename}`,
+    content: base64Data.split(',')[1],
+    branch: GH.branch
+  };
+  
+  const r = await fetch(apiUri, {
+    method: 'PUT',
+    headers: {
+      'Authorization': 'token ' + key,
+      'Content-Type': 'application/json',
+      'Accept': 'application/vnd.github.v3+json'
+    },
+    body: JSON.stringify(payload)
+  });
+  
+  if(!r.ok) {
+    const err = await r.json().catch(() => ({}));
+    throw new Error(err.message || `HTTP ${r.status}`);
+  }
+  
+  return path;
 }
 
 function setSyncStatus(type, dot, text){
@@ -1251,6 +2116,9 @@ function renderAll(){
   renderKPIs();
   renderDashboard();
   if(currentMachine) renderDetail();
+  
+  const pd = document.getElementById('print-date');
+  if(pd) pd.textContent = 'Generated: ' + new Date().toLocaleDateString('en-PK', {day:'numeric',month:'short',year:'numeric'});
 }
 
 // ═══════════════════════════════════════════════════════
@@ -1269,6 +2137,196 @@ function installPWA(){
 }
 
 // ═══════════════════════════════════════════════════════
+//  AUTH
+// ═══════════════════════════════════════════════════════
+function loadUser(){
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY_USER);
+    if(raw){
+      currentUser = JSON.parse(raw);
+      if(currentUser && currentUser.token){
+        settings.syncKey = currentUser.token;
+      }
+    }
+  } catch(e){ currentUser = null; }
+}
+
+function saveUser(){
+  if(currentUser){
+    localStorage.setItem(STORAGE_KEY_USER, JSON.stringify(currentUser));
+  } else {
+    localStorage.removeItem(STORAGE_KEY_USER);
+  }
+}
+
+function isLoggedIn(){ return currentUser && currentUser.token && currentUser.name; }
+
+function attemptLogin(){
+  const name = document.getElementById('login-name').value.trim();
+  const token = document.getElementById('login-token').value.trim();
+  if(!name){ toast('Please enter your display name','error'); return; }
+  if(!token || !token.startsWith('ghp_')){ toast('Please enter a valid GitHub token (starts with ghp_)','error'); return; }
+  
+  currentUser = { name, token };
+  settings.syncKey = token;
+  saveUser();
+  saveState();
+  updateAuthUI();
+  closeLoginModal();
+  toast(`Welcome, ${name}! You can now edit tasks.`, 'success');
+  setTimeout(pullFromGitHub, 500);
+}
+
+function logout(){
+  if(!confirm('Log out? You will no longer be able to make edits.')) return;
+  currentUser = null;
+  settings.syncKey = '';
+  saveUser();
+  saveState();
+  updateAuthUI();
+  updateSyncUI();
+  renderAll();
+  toast('Logged out — read-only mode','info');
+}
+
+function handleAuthClick(){
+  if(isLoggedIn()){
+    logout();
+  } else {
+    openLoginModal();
+  }
+}
+
+function openLoginModal(){
+  document.getElementById('login-name').value = currentUser ? currentUser.name : '';
+  document.getElementById('login-token').value = currentUser ? currentUser.token : (settings.syncKey || '');
+  document.getElementById('login-close-btn').style.display = isLoggedIn() ? 'flex' : 'none';
+  document.getElementById('login-modal').style.display = 'flex';
+}
+
+function closeLoginModal(){
+  document.getElementById('login-modal').style.display = 'none';
+}
+
+function updateAuthUI(){
+  const btn = document.getElementById('auth-btn');
+  if(!btn) return;
+  if(isLoggedIn()){
+    btn.textContent = '👤';
+    btn.title = `Logged in as ${currentUser.name} — click to logout`;
+  } else {
+    btn.textContent = '🔓';
+    btn.title = 'Login to edit';
+  }
+  
+  const authName = document.getElementById('auth-name');
+  if(authName){
+    authName.textContent = isLoggedIn() ? currentUser.name : 'Read-Only';
+    authName.style.color = isLoggedIn() ? 'var(--s-cp-t)' : 'var(--text3)';
+  }
+  
+  const editEls = document.querySelectorAll('.add-task-btn, .task-menu-btn, .btn-danger, #modal-delete-btn');
+  editEls.forEach(el => {
+    el.style.display = isLoggedIn() ? '' : 'none';
+  });
+  
+  const dashAddBtn = document.querySelector('#view-dashboard .btn-sm.primary');
+  if(dashAddBtn) dashAddBtn.style.display = isLoggedIn() ? '' : 'none';
+  
+  const banner = document.getElementById('readonly-banner');
+  if(banner) banner.style.display = isLoggedIn() ? 'none' : 'block';
+}
+
+function logActivity(action){
+  const who = isLoggedIn() ? currentUser.name : 'Anonymous';
+  const entry = {time: new Date().toISOString(), action: `[${who}] ${action}`};
+  activityLog.unshift(entry);
+  if(activityLog.length > MAX_LOG) activityLog.length = MAX_LOG;
+  try { localStorage.setItem(STORAGE_KEY+'_log', JSON.stringify(activityLog)); } catch(e){}
+}
+
+function loadActivityLog(){
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY+'_log');
+    if(raw) activityLog = JSON.parse(raw);
+  } catch(e){ activityLog = []; }
+}
+
+function renderActivityLog(){
+  const container = document.getElementById('activity-log-container');
+  if(!container) return;
+  if(!activityLog || !activityLog.length){
+    container.innerHTML = `<div style="color:var(--text3);font-style:italic">No activity logged yet</div>`;
+    return;
+  }
+  container.innerHTML = activityLog.map(entry => {
+    const date = new Date(entry.time).toLocaleString('en-PK', {hour12:true, hour:'2-digit', minute:'2-digit', second:'2-digit', day:'numeric', month:'short'});
+    return `<div style="border-bottom:1px solid var(--border);padding-bottom:.25rem;margin-bottom:.25rem">
+      <span style="color:var(--text3)">[${date}]</span> ${escapeHTML(entry.action)}
+    </div>`;
+  }).join('');
+}
+
+function escapeHTML(str){
+  return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+}
+
+// ═══════════════════════════════════════════════════════
+
+// ═══════════════════════════════════════════════════════
+//  BULK ACTIONS
+// ═══════════════════════════════════════════════════════
+function handleCheckboxChange() {
+  const bar = document.getElementById('bulk-action-bar');
+  const countSpan = document.getElementById('bulk-count');
+  if(!bar || !countSpan) return;
+  
+  const checked = document.querySelectorAll('.task-select-cb:checked');
+  if(checked.length > 0) {
+    countSpan.textContent = checked.length + ' selected';
+    bar.style.display = 'flex';
+  } else {
+    bar.style.display = 'none';
+  }
+}
+
+function clearSelection() {
+  const checkboxes = document.querySelectorAll('.task-select-cb');
+  checkboxes.forEach(cb => cb.checked = false);
+  const bar = document.getElementById('bulk-action-bar');
+  if(bar) bar.style.display = 'none';
+}
+
+function bulkUpdateStatus(status) {
+  if(!isLoggedIn()) { openLoginModal(); return; }
+  const checked = document.querySelectorAll('.task-select-cb:checked');
+  if(!checked.length) return;
+  
+  const ids = Array.from(checked).map(cb => cb.dataset.id);
+  const who = isLoggedIn() ? currentUser.name : 'Unknown';
+  const updatedDate = new Date().toLocaleDateString('en-PK', {day:'numeric',month:'short',year:'numeric'});
+  
+  let updatedCount = 0;
+  ids.forEach(id => {
+    const t = tasks.find(t => t.id === id);
+    if(t) {
+      t.status = status;
+      if(status === 'Completed') t.progress = 100;
+      t.lastEditedBy = who;
+      t.updated = updatedDate;
+      updatedCount++;
+    }
+  });
+  
+  if(updatedCount > 0) {
+    logActivity(`Bulk updated ${updatedCount} tasks to status "${status}"`);
+    saveState();
+    clearSelection();
+    renderAll();
+    toast(`Bulk updated ${updatedCount} tasks to "${status}" ✓`, 'success');
+  }
+}
+
 //  BOOT
 // ═══════════════════════════════════════════════════════
 // ── THEME ──────────────────────────────────────────────
@@ -1305,8 +2363,11 @@ function toggleTheme(){
 })();
 
 installPWA();
+loadUser();
 loadState();
+loadActivityLog();
 renderAll();
+updateAuthUI();
 updateSyncUI();
 
 // On boot, pull from GitHub if token is set
@@ -1317,8 +2378,59 @@ if(settings.syncKey){
 }
 
 document.addEventListener('keydown', e => {
-  if(e.key === 'Escape'){ closeModal(); closeCtx(); closeLightbox(); }
+  if(e.key === 'Escape'){ 
+    closeModal(); 
+    closeCtx(); 
+    closeLightbox(); 
+    closeLoginModal(); 
+    clearSelection();
+  }
+  if((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'f'){
+    const searchEl = document.getElementById('f-search');
+    if(searchEl){
+      e.preventDefault();
+      searchEl.focus();
+      searchEl.select();
+    }
+  }
+});
+
+window.addEventListener('beforeunload', (e) => {
+  if(syncBusy){
+    e.preventDefault();
+    e.returnValue = 'Changes are still syncing to GitHub. Leave anyway?';
+  }
+});
+
+// File input change preview handler
+document.getElementById('f-image').addEventListener('change', function(e){
+  const file = e.target.files[0];
+  if(!file) {
+    document.getElementById('f-image-preview').style.display = 'none';
+    return;
+  }
+  const r = new FileReader();
+  r.onload = ev => {
+    document.getElementById('f-image-img').src = ev.target.result;
+    document.getElementById('f-image-preview').style.display = 'block';
+  };
+  r.readAsDataURL(file);
 });
 </script>
+
+
+<!-- Bulk Action Bar -->
+<div id="bulk-action-bar" style="display:none; position:fixed; bottom:3rem; left:50%; transform:translateX(-50%); background:var(--surface); border:1px solid var(--border); box-shadow:var(--shadow-lg); padding:0.75rem 1.5rem; border-radius:var(--radius-lg); z-index:100; gap:0.8rem; align-items:center; transition: all 0.2s ease;">
+  <span id="bulk-count" style="font-size:0.82rem; font-weight:600; color:var(--text2);">0 selected</span>
+  <button class="btn-sm" onclick="bulkUpdateStatus('In Progress')" style="background:var(--s-ip-bg); color:var(--s-ip-t); border-color:var(--s-ip-b); font-size: 0.78rem; cursor: pointer; padding: .35rem .75rem; border-radius: 6px;">Mark In Progress</button>
+  <button class="btn-sm" onclick="bulkUpdateStatus('Completed')" style="background:var(--s-cp-bg); color:var(--s-cp-t); border-color:var(--s-cp-b); font-size: 0.78rem; cursor: pointer; padding: .35rem .75rem; border-radius: 6px;">Mark Completed</button>
+  <button class="btn-sm" onclick="clearSelection()" style="font-size: 0.78rem; cursor: pointer; padding: .35rem .75rem; border-radius: 6px;">Cancel</button>
+</div>
+
+<div class="credit-watermark">
+  <span>Planned & Designed by Sikander</span>
+  Alpha Containers (Pvt.) Ltd. · Aerosol Plant Tracker
+</div>
+
 </body>
 </html>
