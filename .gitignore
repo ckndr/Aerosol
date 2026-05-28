@@ -1,9 +1,16 @@
+# Dependencies
 node_modules/
+# OS artifacts
 Thumbs.db
+**/Thumbs.db
 .DS_Store
+**/.DS_Store
+# Logs
 *.log
+# Backups (created by AI sessions)
 *.bak
-*.bak.*
+*.bak[0-9]*
+index.html.bak*
+# Build artifacts
 repomix-output.xml
 repomix-output.txt
-node_modules/

@@ -62,18 +62,18 @@
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{font-size:15px;scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;min-height:100vh;-webkit-font-smoothing:antialiased;overscroll-behavior:none}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;min-height:100dvh;-webkit-font-smoothing:antialiased;overscroll-behavior:none;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom);padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)}
 ::-webkit-scrollbar{width:5px;height:5px}
 ::-webkit-scrollbar-track{background:var(--bg)}
 ::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
 
 /* ── VIEWS ── */
-.view{display:none;min-height:calc(100vh - 120px)}
+.view{display:none;min-height:calc(100dvh - 120px)}
 .view.active{display:block;animation:fade-up .3s ease}
 @keyframes fade-up{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 
 /* ── HEADER ── */
-header{background:var(--surface);border-bottom:1px solid var(--border);padding:1.5rem 1.5rem;position:sticky;top:0;z-index:40}
+header{background:var(--surface);border-bottom:1px solid var(--border);padding:1.5rem 1.5rem;position:sticky;top:env(safe-area-inset-top);z-index:40}
 .header-container{max-width:1200px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:1.1rem;text-align:center;width:100%}
 .header-brand{display:flex;flex-direction:column;align-items:center;text-decoration:none}
 .header-title{font-family:'Fraunces',serif;font-size:1.85rem;font-weight:600;line-height:1.25;color:var(--text);letter-spacing:-0.015em;transition:color .2s}
@@ -88,14 +88,13 @@ header{background:var(--surface);border-bottom:1px solid var(--border);padding:1
 @keyframes pdot{0%,100%{box-shadow:0 0 0 3px rgba(34,197,94,.2)}50%{box-shadow:0 0 0 6px rgba(34,197,94,.08)}}
 
 /* ── KPI BAR ── */
-.kpi-bar{background:var(--surface);border-bottom:1px solid var(--border);padding:.9rem 1.5rem;display:flex;gap:.6rem;overflow-x:auto;scrollbar-width:none;justify-content:center}
-@media (max-width:768px){.kpi-bar{justify-content:flex-start}}
+.kpi-bar{background:var(--surface);border-bottom:1px solid var(--border);padding:.75rem 1rem;display:flex;gap:.4rem;overflow-x:auto;scrollbar-width:none;justify-content:center;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory}
 .kpi-bar::-webkit-scrollbar{display:none}
-.kpi{display:flex;flex-direction:column;gap:.2rem;flex-shrink:0;padding:.7rem 1rem;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius);min-width:90px;cursor:pointer;transition:border-color .2s,background .2s,transform .15s,box-shadow .2s}
+.kpi{display:flex;flex-direction:column;gap:.2rem;scroll-snap-align:start;flex:1 1 0;min-width:0;max-width:120px;padding:.6rem .5rem;text-align:center;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius);cursor:pointer;transition:border-color .2s,background .2s,transform .15s,box-shadow .2s}
 .kpi:hover{border-color:var(--border2);transform:translateY(-1px);background:var(--surface3)}
 .kpi.active{border-color:var(--accent);background:var(--surface3);box-shadow:inset 0 0 0 1px var(--accent)}
-.kv{font-family:'Fraunces',serif;font-size:1.7rem;font-weight:600;line-height:1}
-.kl{font-size:.62rem;font-weight:500;color:var(--text2);letter-spacing:.07em;text-transform:uppercase}
+.kv{font-family:'Fraunces',serif;font-size:clamp(1.1rem,4vw,1.7rem);font-weight:600;line-height:1}
+.kl{font-size:clamp(0.55rem,1.5vw,0.62rem);font-weight:500;color:var(--text2);letter-spacing:.07em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .kpi.overall .kv{color:var(--accent)}
 .kpi.total .kv{color:var(--text)}
 .kpi.done .kv{color:#4ade80}
@@ -207,6 +206,12 @@ main{padding:1.5rem;max-width:1400px;margin:0 auto}
 .task-remarks::before{content:'↳ ';color:var(--text3);font-style:normal}
 .task-updated{font-size:.62rem;color:var(--text3);margin-top:.3rem;font-family:'DM Mono',monospace;letter-spacing:.02em;}
 
+/* ── BLOCKER STATUS VISUAL URGENCY ── */
+.task-card.has-blocker{border-left-width:4px;border-left-color:#ef4444;background:linear-gradient(90deg,rgba(239,68,68,0.04),transparent 30%)}
+.task-card.has-dependency{border-left-width:4px;border-left-color:#f59e0b;background:linear-gradient(90deg,rgba(245,158,11,0.04),transparent 30%)}
+.task-card.has-procurement{border-left-width:4px;border-left-color:#a855f7;background:linear-gradient(90deg,rgba(168,85,247,0.06),transparent 30%);animation:blocker-pulse 3s ease-in-out infinite}
+@keyframes blocker-pulse{0%,100%{box-shadow:inset 0 0 0 0 transparent}50%{box-shadow:inset 0 0 0 1px rgba(168,85,247,0.15)}}
+
 /* ── CONTEXT MENU ── */
 .ctx-menu{position:fixed;background:var(--surface2);border:1px solid var(--border2);border-radius:8px;padding:.3rem;z-index:90;box-shadow:var(--shadow-lg);min-width:130px;animation:ctx-in .15s ease}
 @keyframes ctx-in{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}
@@ -219,7 +224,7 @@ main{padding:1.5rem;max-width:1400px;margin:0 auto}
 .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:60;display:flex;align-items:flex-end;justify-content:center;padding:0;animation:overlay-in .2s ease}
 .modal-overlay.center{align-items:center;padding:1rem}
 @keyframes overlay-in{from{opacity:0}to{opacity:1}}
-.modal{background:var(--surface);border:1px solid var(--border2);border-radius:var(--radius-lg) var(--radius-lg) 0 0;padding:1.5rem;width:100%;max-width:540px;max-height:92vh;overflow-y:auto;animation:modal-up .25s ease}
+.modal{background:var(--surface);border:1px solid var(--border2);border-radius:var(--radius-lg) var(--radius-lg) 0 0;padding:1.5rem;padding-bottom:calc(1.5rem + env(safe-area-inset-bottom, 0px));width:100%;max-width:540px;max-height:calc(92dvh - env(safe-area-inset-bottom, 0px));overflow-y:auto;animation:modal-up .25s ease}
 .modal-overlay.center .modal{border-radius:var(--radius-lg);animation:modal-center .25s ease}
 @keyframes modal-up{from{transform:translateY(100%)}to{transform:translateY(0)}}
 @keyframes modal-center{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}
@@ -266,7 +271,7 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
 .info-box code{font-family:'DM Mono',monospace;color:var(--accent);font-size:.72rem}
 
 /* ── TOAST ── */
-.toast-wrap{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%);z-index:100;display:flex;flex-direction:column;gap:.5rem;align-items:center;pointer-events:none;width:90%;max-width:360px}
+.toast-wrap{position:fixed;bottom:calc(1.5rem + env(safe-area-inset-bottom, 0px));left:50%;transform:translateX(-50%);z-index:100;display:flex;flex-direction:column;gap:.5rem;align-items:center;pointer-events:none;width:90%;max-width:360px}
 .toast{background:var(--surface2);border:1px solid var(--border2);border-radius:10px;padding:.6rem 1rem;font-size:.82rem;font-weight:500;display:flex;align-items:center;gap:.6rem;animation:toast-in .25s ease;box-shadow:var(--shadow-lg);pointer-events:all;width:100%}
 .toast.success{border-color:var(--s-cp-b);color:var(--s-cp-t)}
 .toast.error{border-color:var(--s-bl-b);color:var(--s-bl-t)}
@@ -387,12 +392,28 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
   .detail-mname{font-size:1.25rem}
   .form-grid{grid-template-columns:1fr}
   .form-group.full{grid-column:auto}
+  /* ── TOUCH TARGET EXPANSION (44px minimum) ── */
+  .task-menu-btn{width:44px;height:44px;min-width:44px;min-height:44px;font-size:1.1rem}
+  .icon-btn{width:44px;height:44px;min-width:44px;min-height:44px}
+  .kpi{padding:0.85rem 1rem;min-height:48px}
+  .ctx-item{padding:0.75rem 1rem;min-height:48px}
+  .back-btn,.toggle-btn,.add-task-btn,.btn-sm,.btn-clear,.btn-cancel,.btn-save{min-height:44px;padding:0.6rem 1rem}
+  select,input{min-height:44px;font-size:16px}
+  .task-card{padding:1rem 1.1rem}
+  .machine-card{padding:1.2rem}
+}
+@media(max-width:480px){
+  .kpi-bar{display:grid;grid-template-columns:repeat(3,1fr);gap:.4rem;overflow-x:visible;justify-content:stretch}
+  .kpi{max-width:none;min-width:0}
+}
+@media(max-width:320px){
+  .kpi-bar{grid-template-columns:repeat(2,1fr)}
 }
 /* WATERMARK / CREDIT */
 .credit-watermark{
   position:fixed;
-  bottom:.75rem;
-  left:.75rem;
+  bottom:calc(0.75rem + env(safe-area-inset-bottom, 0px));
+  left:calc(0.75rem + env(safe-area-inset-left, 0px));
   font-family:'DM Mono',monospace;
   font-size:.6rem;
   color:var(--text3);
@@ -522,6 +543,11 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
     </div>
   </div>
 </header>
+
+<div id="unsaved-banner" style="display:none; background:#f59e0b; color:#000; text-align:center; padding:0.4rem 1rem; font-size:0.78rem; font-weight:600; font-family:'DM Sans',sans-serif;">
+  ⚠ Unsaved changes failed to sync. They will retry on next launch.
+  <button onclick="syncEngine.flush()" style="margin-left:0.5rem; background:#000; color:#f59e0b; border:none; padding:0.2rem 0.6rem; border-radius:4px; cursor:pointer; font-size:0.72rem; font-family:'DM Sans',sans-serif;">Retry Now</button>
+</div>
 
 <div class="kpi-bar">
   <div class="kpi overall"><div class="kv" id="k-overall">0%</div><div class="kl">Overall</div></div>
@@ -913,6 +939,151 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
 //  CONFIG
 // ═══════════════════════════════════════════════════════
 const STORAGE_KEY = 'aerosol_tracker_v1';
+
+// ═══════════════════════════════════════════════════════
+//  SYNC ENGINE — Async Request Queue
+// ═══════════════════════════════════════════════════════
+class SyncEngine {
+  constructor(apiUrl, branch) {
+    this.apiUrl = apiUrl;
+    this.branch = branch;
+    this.queue = [];
+    this.isFlushing = false;
+    this.lastKnownSha = null;
+    this.maxRetries = 3;
+    this.retryDelayMs = 2000;
+    this.failedPayloads = [];
+    this.uiLocked = false;
+  }
+  enqueue(tasksData, settingsData, activityLogData) {
+    const payload = JSON.stringify({
+      tasks: tasksData,
+      settings: { autoSync: settingsData.autoSync },
+      activityLog: activityLogData.slice(0, 50)
+    }, null, 2);
+    if (this.queue.length > 0) {
+      this.queue[this.queue.length - 1] = { payload, timestamp: Date.now() };
+    } else {
+      this.queue.push({ payload, timestamp: Date.now() });
+    }
+    clearTimeout(this._flushTimer);
+    this._flushTimer = setTimeout(() => this.flush(), 1500);
+  }
+  async flush() {
+    if (this.isFlushing || this.queue.length === 0) return;
+    this.isFlushing = true;
+    this.setUILock(true);
+    while (this.queue.length > 0) {
+      const entry = this.queue.shift();
+      const success = await this.pushWithRetry(entry.payload);
+      if (!success) {
+        this.failedPayloads.push(entry);
+        try {
+          localStorage.setItem('aerosol_failed_sync',
+            JSON.stringify(this.failedPayloads.slice(-5)));
+        } catch(e) {}
+      }
+    }
+    this.isFlushing = false;
+    this.setUILock(false);
+    this.updateUnsavedBanner();
+  }
+  async pushWithRetry(payload) {
+    for (let attempt = 0; attempt <= this.maxRetries; attempt++) {
+      try {
+        const sha = await this.fetchCurrentSha();
+        const encoded = btoa(unescape(encodeURIComponent(payload)));
+        const body = {
+          message: 'Update tasks · ' + new Date().toLocaleString('en-PK'),
+          content: encoded,
+          branch: this.branch
+        };
+        if (sha) body.sha = sha;
+        const r = await fetch(this.apiUrl, {
+          method: 'PUT',
+          headers: {
+            'Authorization': 'token ' + settings.syncKey,
+            'Content-Type': 'application/json',
+            'Accept': 'application/vnd.github.v3+json'
+          },
+          body: JSON.stringify(body)
+        });
+        if (r.ok) {
+          const result = await r.json();
+          this.lastKnownSha = result.content.sha;
+          setSyncStatus('ok', '● Synced', 'Last push: ' + new Date().toLocaleTimeString());
+          toast('Pushed to GitHub ✓', 'success');
+          return true;
+        }
+        if (r.status === 409) {
+          this.lastKnownSha = null;
+          toast('Sync conflict — retrying...', 'info');
+          continue;
+        }
+        const err = await r.json().catch(() => ({}));
+        throw new Error(err.message || 'HTTP ' + r.status);
+      } catch (e) {
+        if (attempt < this.maxRetries) {
+          const delay = this.retryDelayMs * Math.pow(2, attempt);
+          await new Promise(resolve => setTimeout(resolve, delay));
+        } else {
+          setSyncStatus('err', '● Push failed', e.message);
+          toast('Push failed after retries — ' + e.message, 'error');
+          return false;
+        }
+      }
+    }
+    return false;
+  }
+  async fetchCurrentSha() {
+    if (this.lastKnownSha) return this.lastKnownSha;
+    try {
+      const r = await fetch(this.apiUrl, {
+        headers: {
+          'Authorization': 'token ' + settings.syncKey,
+          'Accept': 'application/vnd.github.v3+json'
+        }
+      });
+      if (r.ok) {
+        const meta = await r.json();
+        this.lastKnownSha = meta.sha;
+        return meta.sha;
+      }
+    } catch(e) {}
+    return null;
+  }
+  setUILock(locked) {
+    this.uiLocked = locked;
+    const btns = document.querySelectorAll('.add-task-btn, .btn-save, .ctx-item, .task-menu-btn');
+    btns.forEach(b => {
+      b.style.pointerEvents = locked ? 'none' : '';
+      b.style.opacity = locked ? '0.5' : '';
+    });
+    if (locked) {
+      setSyncStatus('pending', '● Syncing…', 'Pushing changes…');
+    }
+  }
+  updateUnsavedBanner() {
+    const banner = document.getElementById('unsaved-banner');
+    if (!banner) return;
+    const hasLocal = this.failedPayloads.length > 0;
+    let hasStored = false;
+    try { hasStored = !!localStorage.getItem('aerosol_failed_sync'); } catch(e){}
+    banner.style.display = (hasLocal || hasStored) ? 'block' : 'none';
+  }
+  retryFailedOnBoot() {
+    try {
+      const raw = localStorage.getItem('aerosol_failed_sync');
+      if (raw) {
+        const failed = JSON.parse(raw);
+        failed.forEach(entry => this.queue.push(entry));
+        localStorage.removeItem('aerosol_failed_sync');
+        if (this.queue.length > 0) this.flush();
+      }
+    } catch(e) {}
+    this.updateUnsavedBanner();
+  }
+}
 const MACHINE_ORDER = ['Press', 'Trimming', 'Washing', 'Lacquer', 'Lacquer Oven', 'Base Coat', 'Printing', 'Decoration Oven', 'Over Varnish', 'Necking', 'Accumulator', 'Tumbler', 'Compressor', 'FG Conveyor', 'Auto Strapping Machine', 'Manual Strapping Machine', 'Overall Machine Operation', 'General'];
 const ICONS = {
   Press: '⚙️',
@@ -1052,7 +1223,6 @@ const SEED = [
   ["Base Coat", "Mechanical", "Rollers Housing — cleaned and greased", "Medium", 60, "In Progress", "Saqib", ""],
   ["Base Coat", "Mechanical", "Mandrels — cleaned", "Medium", 60, "In Progress", "Saqib", ""],
   ["Base Coat", "Mechanical", "Frame Body — cleaned", "Medium", 60, "In Progress", "Saqib", ""],
-  ["Base Coat", "Mechanical", "Spare Rubberize rollers", "High", 50, "In Progress", "Saqib", "ordering done (05-06-2026)"],
   ["Base Coat", "Mechanical", "Spare Rubberize rollers", "High", 50, "In Progress", "Saqib", "ordering done (05-06-2026)"],
   ["Base Coat", "Mechanical", "Air regulator pneumatic fitting to check and rectify and fixation", "Medium", 0, "Not Started", "Arsalan", ""],
   ["Base Coat", "Mechanical", "driving gear chain box enclosure at back", "Medium", 0, "Not Started", "Arsalan", ""],
@@ -1226,7 +1396,7 @@ let editingId = null;
 let ctxMenu = null;
 let pendingDelete = null;
 let activityLog = [];
-const MAX_LOG = 100;
+const MAX_LOG = 50;
 
 let timelineData = { startDate: '2026-03-01', targetDate: '' };
 
@@ -1288,6 +1458,109 @@ function updateTimeline(){
   toast('Timeline updated','success');
 }
 
+// ═══════════════════════════════════════════════════════
+//  IMPORT UTILITIES — Fuzzy Matching & Validation
+// ═══════════════════════════════════════════════════════
+function levenshtein(a, b) {
+  if (a.length === 0) return b.length;
+  if (b.length === 0) return a.length;
+  const matrix = [];
+  for (let i = 0; i <= b.length; i++) matrix[i] = [i];
+  for (let j = 0; j <= a.length; j++) matrix[0][j] = j;
+  for (let i = 1; i <= b.length; i++) {
+    for (let j = 1; j <= a.length; j++) {
+      const cost = b.charAt(i - 1) === a.charAt(j - 1) ? 0 : 1;
+      matrix[i][j] = Math.min(
+        matrix[i - 1][j] + 1,
+        matrix[i][j - 1] + 1,
+        matrix[i - 1][j - 1] + cost
+      );
+    }
+  }
+  return matrix[b.length][a.length];
+}
+function normalizeMachineName(raw) {
+  if (!raw) return 'General';
+  let cleaned = raw.trim().replace(/\s+/g, ' ');
+  const exactMatch = MACHINE_ORDER.find(m =>
+    m.toLowerCase() === cleaned.toLowerCase()
+  );
+  if (exactMatch) return exactMatch;
+  const inputTokens = cleaned.toLowerCase().split(/[\s\-\/]+/).filter(Boolean);
+  let bestMatch = null;
+  let bestScore = 0;
+  for (const canonical of MACHINE_ORDER) {
+    const canonTokens = canonical.toLowerCase().split(/[\s\-\/]+/).filter(Boolean);
+    let matchCount = 0;
+    for (const inputTok of inputTokens) {
+      for (const canonTok of canonTokens) {
+        if (canonTok.includes(inputTok) || inputTok.includes(canonTok)) {
+          matchCount++;
+          break;
+        }
+        if (levenshtein(inputTok, canonTok) <= 2 && canonTok.length > 3) {
+          matchCount += 0.7;
+          break;
+        }
+      }
+    }
+    const score = matchCount / Math.max(inputTokens.length, canonTokens.length);
+    if (score > bestScore) {
+      bestScore = score;
+      bestMatch = canonical;
+    }
+  }
+  if (bestScore >= 0.5 && bestMatch) return bestMatch;
+  console.warn(`[Import] Unmapped machine: "${raw}" → defaulting to "General"`);
+  return 'General';
+}
+function normalizeDate(raw) {
+  if (!raw) return '';
+  const str = String(raw).trim();
+  if (!str) return '';
+  if (/^\d{5}$/.test(str)) {
+    const epoch = new Date((parseInt(str) - 25569) * 86400 * 1000);
+    return epoch.toISOString().slice(0, 10);
+  }
+  if (/^\d{4}-\d{2}-\d{2}/.test(str)) return str.slice(0, 10);
+  const dmy = str.match(/^(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{4})$/);
+  if (dmy) return `${dmy[3]}-${dmy[2].padStart(2,'0')}-${dmy[1].padStart(2,'0')}`;
+  return '';
+}
+function validateImportedRow(r) {
+  const VALID_STATUSES = ['Not Started', 'In Progress', 'Completed', 'Pending Procurement'];
+  const VALID_PRIORITIES = ['High', 'Medium', 'Low'];
+  const VALID_CATEGORIES = ['Electrical', 'Mechanical', 'General'];
+  const rawStatus = String(r[6] || '').trim();
+  const rawPriority = String(r[4] || '').trim();
+  const rawCategory = String(r[2] || '').trim();
+  const rawProgress = parseFloat(r[5]);
+  return {
+    id: uid(),
+    machine: normalizeMachineName(String(r[1])),
+    category: VALID_CATEGORIES.find(c =>
+      c.toLowerCase() === rawCategory.toLowerCase()
+    ) || 'General',
+    desc: String(r[3] || '').trim() || 'Untitled Task',
+    priority: VALID_PRIORITIES.find(p =>
+      p.toLowerCase() === rawPriority.toLowerCase()
+    ) || 'Medium',
+    progress: isNaN(rawProgress)
+      ? 0
+      : Math.max(0, Math.min(100, Math.round(rawProgress <= 1 ? rawProgress * 100 : rawProgress))),
+    status: VALID_STATUSES.find(s =>
+      s.toLowerCase() === rawStatus.toLowerCase()
+    ) || 'Not Started',
+    responsible: String(r[7] || '').trim() || '',
+    remarks: String(r[8] || '').trim() || '',
+    updated: String(r[9] || '').trim() || '',
+    waitingOn: String(r[10] || '').trim() || '',
+    dateStarted: normalizeDate(r[11]),
+    dateFinished: normalizeDate(r[12]),
+    lastEditedBy: '',
+    image: ''
+  };
+}
 function uid(){ return 't' + Date.now() + Math.random().toString(36).slice(2,6); }
 
 function sanitizeTasks(){
@@ -1607,16 +1880,20 @@ function highlightKPI(status){
 
 function animCount(id, target){
   const el = document.getElementById(id);
+  const suffix = id === 'k-overall' ? '%' : '';
   const cur = parseInt(el.textContent) || 0;
-  if(cur === target){ el.textContent = target + (id === 'k-overall' ? '%' : ''); return; }
-  let v = cur;
-  const step = Math.ceil(Math.abs(target - cur) / 30);
-  const dir = target > cur ? 1 : -1;
-  const t = setInterval(() => {
-    v = dir > 0 ? Math.min(v + step, target) : Math.max(v - step, target);
-    el.textContent = v + (id === 'k-overall' ? '%' : '');
-    if(v === target) clearInterval(t);
-  }, 28);
+  if(cur === target){ el.textContent = target + suffix; return; }
+  const start = performance.now();
+  const duration = 600;
+  function step(now) {
+    const elapsed = now - start;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const value = Math.round(cur + (target - cur) * eased);
+    el.textContent = value + suffix;
+    if(progress < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
 }
 
 function renderProcurement(){
@@ -1936,6 +2213,9 @@ function buildTask(t, showMachineName){
   const pct = Math.round(t.progress);
   const div = document.createElement('div');
   div.className = `task-card s-${sc}`;
+  if(t.priority === 'High' && t.status !== 'Completed') div.classList.add('has-blocker');
+  if(t.waitingOn) div.classList.add('has-dependency');
+  if(t.status === 'Pending Procurement') div.classList.add('has-procurement');
   div.dataset.id = t.id;
   div.onclick = () => openEditModal(t.id);
   const pfill = pct===100?'full':pct===0?'':'';
@@ -2269,30 +2549,20 @@ function importExcel(input){
     const ws   = wb.Sheets['TRACKER'];
     if(!ws){ toast('TRACKER sheet not found in file','error'); return; }
     const rows = XLSX.utils.sheet_to_json(ws, {header:1, defval:''});
+    const unmappedMachines = [];
     const imported = rows.slice(2).filter(r => r[1] && String(r[1]).trim()).map(r => {
-      let machine = String(r[1]).trim();
-      if (machine === 'decoration  Oven') machine = 'Decoration Oven';
-      else if (machine === 'Lacquer oven') machine = 'Lacquer Oven';
-      else if (machine === 'Auto strapping machine') machine = 'Auto Strapping Machine';
-      else if (machine === 'Overall Machine operation') machine = 'Overall Machine Operation';
-
-      return {
-        id:       uid(),
-        machine:  machine,
-        category: String(r[2]).trim(),
-        desc:     String(r[3]).trim(),
-        priority: String(r[4]).trim() || '–',
-        progress: Math.round((parseFloat(r[5])||0) * (parseFloat(r[5])<=1?100:1)),
-        status:   String(r[6]).trim(),
-        responsible: r[7] ? String(r[7]).trim() : '',
-        remarks:  r[8] ? String(r[8]).trim() : '',
-        updated:  r[9] ? String(r[9]).trim() : '',
-        waitingOn: r[10] ? String(r[10]).trim() : '',
-        dateStarted:  r[11] ? String(r[11]).trim() : '',
-        dateFinished: r[12] ? String(r[12]).trim() : ''
-      };
+      const task = validateImportedRow(r);
+      const rawMachine = String(r[1]).trim();
+      if(task.machine === 'General' && rawMachine.toLowerCase() !== 'general'){
+        unmappedMachines.push(rawMachine);
+      }
+      return task;
     });
     if(!imported.length){ toast('No tasks found in file','error'); return; }
+    if(unmappedMachines.length > 0){
+      toast(`${unmappedMachines.length} tasks had unrecognized machines → assigned to General`, 'info');
+      console.warn('[Import] Unmapped machines:', unmappedMachines);
+    }
     tasks = imported;
     saveState(); renderAll();
     toast(`${imported.length} tasks imported ✓`,'success');
@@ -2335,8 +2605,7 @@ function exportExcel(){
 const GH = { owner:'ckndr', repo:'Aerosol', branch:'main', file:'tasks.json' };
 const GH_RAW  = `https://raw.githubusercontent.com/${GH.owner}/${GH.repo}/${GH.branch}/${GH.file}`;
 const GH_API  = `https://api.github.com/repos/${GH.owner}/${GH.repo}/contents/${GH.file}`;
-let syncBusy  = false;
-let syncQueue = false;
+const syncEngine = new SyncEngine(GH_API, GH.branch);
 
 function saveSync(){
   settings.syncKey  = document.getElementById('sync-key-input').value.trim();
@@ -2377,45 +2646,8 @@ async function testSync(){
 async function pushToGitHub(){
   const key = settings.syncKey;
   if(!key){ toast('Add a GitHub token in Settings first','error'); navigate('settings'); return; }
-  if(syncBusy){ syncQueue = true; return; }
-  syncBusy = true;
-  setSyncStatus('pending','● Syncing…','Pushing to GitHub…');
-  try {
-    // Get current SHA (needed to update existing file)
-    let sha = null;
-    const metaR = await fetch(GH_API, {
-      headers:{'Authorization':'token '+key,'Accept':'application/vnd.github.v3+json'}
-    });
-    if(metaR.ok){ const meta = await metaR.json(); sha = meta.sha; }
-
-    const payload = JSON.stringify({ tasks, settings:{ autoSync: settings.autoSync }, activityLog: activityLog.slice(0, 50) }, null, 2);
-    const encoded = btoa(unescape(encodeURIComponent(payload)));
-    const body    = {
-      message: 'Update tasks · ' + new Date().toLocaleString('en-PK'),
-      content:  encoded,
-      branch:   GH.branch
-    };
-    if(sha) body.sha = sha;
-
-    const r = await fetch(GH_API, {
-      method: 'PUT',
-      headers:{'Authorization':'token '+key,'Content-Type':'application/json','Accept':'application/vnd.github.v3+json'},
-      body: JSON.stringify(body)
-    });
-    if(r.ok){
-      setSyncStatus('ok','● Synced','Last push: ' + new Date().toLocaleTimeString());
-      toast('Pushed to GitHub ✓','success');
-    } else {
-      const err = await r.json().catch(()=>({}));
-      setSyncStatus('err','● Push failed', err.message || ('HTTP ' + r.status));
-      toast('Push failed — ' + (err.message || r.status),'error');
-    }
-  } catch(e){
-    setSyncStatus('err','● Push failed',e.message);
-    toast('Push failed — ' + e.message,'error');
-  }
-  syncBusy = false;
-  if(syncQueue){ syncQueue = false; pushToGitHub(); }
+  syncEngine.enqueue(tasks, settings, activityLog);
+  syncEngine.flush();
 }
 
 async function pullFromGitHub(){
@@ -2541,8 +2773,7 @@ const _origSave = saveState;
 saveState = function(){
   _origSave.call(this);
   if(settings.autoSync && settings.syncKey){
-    clearTimeout(saveState._debounce);
-    saveState._debounce = setTimeout(pushToGitHub, 1500);
+    syncEngine.enqueue(tasks, settings, activityLog);
   }
 };
 
@@ -2632,13 +2863,18 @@ function renderAll(){
 function installPWA(){
   const m = {name:'Aerosol Plant Tracker',short_name:'Plant Tracker',
     theme_color:'#0d1117',background_color:'#0d1117',display:'standalone',
-    start_url:'./',orientation:'any',
+    start_url:'./',scope:'./',orientation:'any',
     icons:[{src:`data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231f4e79'/><text y='.9em' font-size='70' x='15'>⚙️</text></svg>`,sizes:'192x192',type:'image/svg+xml'}]
   };
   const blob = new Blob([JSON.stringify(m)],{type:'application/json'});
   const link = document.createElement('link');
   link.rel='manifest'; link.href=URL.createObjectURL(blob);
   document.head.appendChild(link);
+  if('serviceWorker' in navigator){
+    navigator.serviceWorker.register('./sw.js')
+      .then(reg => console.log('[SW] Registered:', reg.scope))
+      .catch(err => console.warn('[SW] Registration failed:', err));
+  }
 }
 
 // ═══════════════════════════════════════════════════════
@@ -2766,14 +3002,22 @@ function updateAuthUI(){
   }
 }
 
+let _logDirty = false;
 function logActivity(action, taskId){
   const who = isLoggedIn() ? currentUser.name : 'Anonymous';
   const entry = {time: new Date().toISOString(), action: `[${who}] ${action}`, user: who};
   if(taskId) entry.taskId = taskId;
   activityLog.unshift(entry);
   if(activityLog.length > MAX_LOG) activityLog.length = MAX_LOG;
-  try { localStorage.setItem(STORAGE_KEY+'_log', JSON.stringify(activityLog)); } catch(e){}
+  _logDirty = true;
 }
+// Flush activity log to localStorage every 5 seconds instead of every edit
+setInterval(() => {
+  if(_logDirty){
+    try { localStorage.setItem(STORAGE_KEY+'_log', JSON.stringify(activityLog)); } catch(e){}
+    _logDirty = false;
+  }
+}, 5000);
 
 function loadActivityLog(){
   try {
@@ -2978,6 +3222,7 @@ if(settings.syncKey){
     pullFromGitHub();
   }, 800);
 }
+syncEngine.retryFailedOnBoot();
 
 document.addEventListener('keydown', e => {
   if(e.key === 'Escape'){ 
@@ -3022,7 +3267,7 @@ document.getElementById('f-image').addEventListener('change', function(e){
 
 
 <!-- Bulk Action Bar -->
-<div id="bulk-action-bar" style="display:none; position:fixed; bottom:3rem; left:50%; transform:translateX(-50%); background:var(--surface); border:1px solid var(--border); box-shadow:var(--shadow-lg); padding:0.75rem 1.5rem; border-radius:var(--radius-lg); z-index:100; gap:0.8rem; align-items:center; transition: all 0.2s ease;">
+<div id="bulk-action-bar" style="display:none; position:fixed; bottom:calc(3rem + env(safe-area-inset-bottom, 0px)); left:50%; transform:translateX(-50%); background:var(--surface); border:1px solid var(--border); box-shadow:var(--shadow-lg); padding:0.75rem 1.5rem; border-radius:var(--radius-lg); z-index:100; gap:0.8rem; align-items:center; transition: all 0.2s ease;">
   <span id="bulk-count" style="font-size:0.82rem; font-weight:600; color:var(--text2);">0 selected</span>
   <button class="btn-sm" onclick="bulkUpdateStatus('In Progress')" style="background:var(--s-ip-bg); color:var(--s-ip-t); border-color:var(--s-ip-b); font-size: 0.78rem; cursor: pointer; padding: .35rem .75rem; border-radius: 6px;">Mark In Progress</button>
   <button class="btn-sm" onclick="bulkUpdateStatus('Completed')" style="background:var(--s-cp-bg); color:var(--s-cp-t); border-color:var(--s-cp-b); font-size: 0.78rem; cursor: pointer; padding: .35rem .75rem; border-radius: 6px;">Mark Completed</button>

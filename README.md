@@ -16,12 +16,14 @@ Before making any updates or modifying the codebase, **you MUST create a backup*
 ## Files
 
 | File | Purpose |
-|------|---------|
+|------|---------| 
 | `index.html` | The full PWA application — open this in any browser (GitHub Pages main entry point) |
 | `tasks.json` | Live task data — updated by the app via GitHub sync |
+| `sw.js` | Service Worker — enables offline caching and fast startup on Android home screen |
 | `Aerosol Plant Project Tracker.xlsx` | Excel spreadsheet containing task source of truth |
 | `push.bat` | Double-click to stage, commit, and push changes to GitHub |
 | `pull.bat` | Double-click to pull latest updates from GitHub |
+| `commit.bat` | Double-click to create a local checkpoint (no push) |
 
 ## Usage
 

@@ -35,9 +35,16 @@ echo Syncing with GitHub...
 git pull origin main --rebase
 if errorlevel 1 (
     echo.
-    echo Rebase conflict detected. Aborting rebase and pushing anyway...
+    echo Rebase conflict detected. Falling back to merge...
     git rebase --abort
-    git push origin main --force-with-lease
+    git pull origin main --no-rebase
+    if errorlevel 1 (
+        echo.
+        echo MERGE CONFLICT — resolve manually before pushing.
+        pause
+        exit /b 1
+    )
+    git push origin main
     goto done
 )
 
