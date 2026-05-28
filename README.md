@@ -2,14 +2,13 @@
 
 Live progress tracker for Alpha Containers (Pvt.) Ltd. Aerosol Plant installation.
 
-🔗 **Live App:** https://ckndr.github.io/Aerosol/aerosol_tracker.html
+🔗 **Live App:** https://ckndr.github.io/Aerosol/index.html
 
 ---
 
 ## ⚠️ Critical Rule for All Future AI Prompts
-Before making any updates or modifying the codebase, **you MUST create a backup** of the current HTML file(s).
+Before making any updates or modifying the codebase, **you MUST create a backup** of the current HTML file.
 1. Copy `index.html` to a backup file (e.g., `index.html.bak` or `backups/index_YYYY_MM_DD.html`).
-2. Copy `aerosol_tracker.html` to a backup file (e.g., `aerosol_tracker.html.bak`).
 *This prevents accidental regression of features and makes rollback simple if any merging bugs occur.*
 
 ---
@@ -18,8 +17,7 @@ Before making any updates or modifying the codebase, **you MUST create a backup*
 
 | File | Purpose |
 |------|---------|
-| `aerosol_tracker.html` | The full PWA application — open this in any browser (GitHub Pages main entry point) |
-| `index.html` | Development / local testing copy of the app |
+| `index.html` | The full PWA application — open this in any browser (GitHub Pages main entry point) |
 | `tasks.json` | Live task data — updated by the app via GitHub sync |
 | `Aerosol Plant Project Tracker.xlsx` | Excel spreadsheet containing task source of truth |
 | `push.bat` | Double-click to stage, commit, and push changes to GitHub |
