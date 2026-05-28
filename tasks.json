@@ -171,26 +171,6 @@
       "dateFinished": ""
     },
     {
-<<<<<<< HEAD
-=======
-      "id": "t_923145",
-      "machine": "Base Coat",
-      "category": "Mechanical",
-      "desc": "Spare Rubberize rollers",
-      "priority": "High",
-      "progress": 50,
-      "status": "In Progress",
-      "responsible": "Saqib",
-      "remarks": "ordering done (05-06-2026)",
-      "updated": "",
-      "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
-      "dateStarted": "",
-      "dateFinished": ""
-    },
-    {
->>>>>>> 0c424c982fdfafdca1955de489bdbe9ceac80e32
       "id": "t_305707",
       "machine": "Base Coat",
       "category": "Mechanical",
