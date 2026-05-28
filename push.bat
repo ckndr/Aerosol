@@ -15,16 +15,6 @@ if errorlevel 1 (
     exit /b 1
 )
 
-echo Pulling latest from GitHub first...
-git pull origin main
-if errorlevel 1 (
-    echo.
-    echo WARNING: Pull had issues. Check above for merge conflicts.
-    pause
-    exit /b 1
-)
-
-echo.
 set /p msg="Commit message (what changed): "
 if "%msg%"=="" (
     echo ERROR: Message cannot be empty.
@@ -32,26 +22,38 @@ if "%msg%"=="" (
     exit /b 1
 )
 
+echo.
+echo Staging all changes...
 git add .
+
+echo Committing...
 git commit -m "%msg%"
+:: commit may return error if nothing new — that is fine, keep going
+
+echo.
+echo Syncing with GitHub...
+git pull origin main --rebase
 if errorlevel 1 (
     echo.
-    echo Nothing new to push — no changes since last commit.
-    pause
-    exit /b 0
+    echo Rebase conflict detected. Aborting rebase and pushing anyway...
+    git rebase --abort
+    git push origin main --force-with-lease
+    goto done
 )
 
+echo Pushing...
 git push origin main
 if errorlevel 1 (
     echo.
-    echo ERROR: Push failed. Check internet or GitHub access.
+    echo ERROR: Push failed. Check your internet connection.
     pause
     exit /b 1
 )
 
+:done
 echo.
 echo =========================================
-echo   LIVE — App updates in ~30 seconds
+echo   LIVE — App updates in ~60 seconds
 echo   https://ckndr.github.io/Aerosol/
 echo =========================================
 echo.
