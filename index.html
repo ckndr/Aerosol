@@ -477,6 +477,13 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
   }
 }
 #timeline-strip{background:var(--surface);border-bottom:1px solid var(--border);}
+.task-dates{
+  font-size:.62rem;
+  color:var(--text3);
+  font-family:'DM Mono',monospace;
+  margin-top:.25rem;
+  letter-spacing:.02em;
+}
 </style>
 </head>
 <body>
@@ -822,6 +829,14 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
       <div class="form-group full">
         <label>Waiting On <span style="font-weight:400;color:var(--text3)">(optional — vendor, person, delivery)</span></label>
         <input id="f-waitingon" placeholder="e.g. Chain delivery from supplier, Lindsay confirmation…">
+      </div>
+      <div class="form-group">
+        <label>Date Started</label>
+        <input type="date" id="f-datestarted">
+      </div>
+      <div class="form-group">
+        <label>Date Finished</label>
+        <input type="date" id="f-datefinished">
       </div>
       <div class="form-group full">
         <label>Responsible (Assigned To)</label>
@@ -1308,6 +1323,8 @@ function loadState(){
   tasks.forEach(t => {
     if(!t.responsible) t.responsible = '';
     if(!t.waitingOn) t.waitingOn = '';
+    if(!t.dateStarted) t.dateStarted = '';
+    if(!t.dateFinished) t.dateFinished = '';
   });
   loadMeta();
   loadTimeline();
@@ -1316,7 +1333,9 @@ function loadState(){
 function seedTasks(){
   tasks = SEED.map(s => ({
     id: uid(), machine: s[0], category: s[1], desc: s[2],
-    priority: s[3], progress: s[4], status: s[5], responsible: s[6] || '', remarks: s[7] || '', updated: '', waitingOn: ''
+    priority: s[3], progress: s[4], status: s[5], responsible: s[6] || '', remarks: s[7] || '', updated: '', waitingOn: '',
+    dateStarted: '',
+    dateFinished: ''
   }));
   sanitizeTasks();
   saveState();
@@ -1858,6 +1877,12 @@ function buildTask(t, showMachineName){
   const waitingTag = t.waitingOn
     ? `<div style="margin-top:.35rem"><span style="display:inline-flex;align-items:center;gap:.3rem;font-size:.67rem;font-weight:600;color:#c2410c;background:#fff7ed;border:1px solid #fed7aa;border-radius:20px;padding:.18rem .55rem;font-family:'DM Mono',monospace;">⏳ ${t.waitingOn}</span></div>`
     : '';
+  const datesMeta = [];
+  if(t.dateStarted)  datesMeta.push('Started: ' + t.dateStarted);
+  if(t.dateFinished) datesMeta.push('Finished: ' + t.dateFinished);
+  const datesLine = datesMeta.length
+    ? `<div class="task-dates">${datesMeta.join('  ·  ')}</div>`
+    : '';
   div.innerHTML = `
     <div class="task-top">
       ${isLoggedIn() ? `<input type="checkbox" class="task-select-cb" data-id="${t.id}" onclick="event.stopPropagation(); handleCheckboxChange()" style="margin-right: 0.6rem; cursor: pointer; width: 16px; height: 16px; accent-color: var(--accent); flex-shrink: 0; align-self: center;">` : ''}<div class="task-desc">${t.desc}</div>
@@ -1877,6 +1902,7 @@ function buildTask(t, showMachineName){
     </div>
     ${t.remarks ? `<div class="task-remarks">${t.remarks}</div>` : ''}
     ${waitingTag}
+    ${datesLine}
     ${editLine}`;
   return div;
 }
@@ -1946,6 +1972,10 @@ function toggleModalFields(readOnly) {
   document.getElementById('f-remarks').disabled = readOnly;
   document.getElementById('f-waitingon').disabled = readOnly;
   document.getElementById('f-responsible').disabled = readOnly;
+  const dsEl = document.getElementById('f-datestarted');
+  const dfEl = document.getElementById('f-datefinished');
+  if (dsEl) dsEl.disabled = readOnly;
+  if (dfEl) dfEl.disabled = readOnly;
   
   const imgInput = document.getElementById('f-image');
   if (imgInput) imgInput.disabled = readOnly;
@@ -1978,6 +2008,10 @@ function openAddModal(machine){
   document.getElementById('f-waitingon').value = '';
   document.getElementById('f-responsible').value = '';
   document.getElementById('f-image').value     = '';
+  const dsEl = document.getElementById('f-datestarted');
+  const dfEl = document.getElementById('f-datefinished');
+  if(dsEl) dsEl.value = '';
+  if(dfEl) dfEl.value = '';
   document.getElementById('f-image-preview').style.display = 'none';
   document.getElementById('prog-display').textContent = '0%';
   document.getElementById('prog-num').textContent = '0%';
@@ -2001,6 +2035,10 @@ function openEditModal(id){
   document.getElementById('f-waitingon').value = t.waitingOn || '';
   document.getElementById('f-responsible').value = t.responsible || '';
   document.getElementById('f-image').value     = '';
+  const dsEl = document.getElementById('f-datestarted');
+  const dfEl = document.getElementById('f-datefinished');
+  if(dsEl) dsEl.value = t.dateStarted || '';
+  if(dfEl) dfEl.value = t.dateFinished || '';
   if(t.image){
     document.getElementById('f-image-img').src = t.image;
     document.getElementById('f-image-preview').style.display = 'block';
@@ -2099,11 +2137,21 @@ async function saveTask(){
   const lastEditedBy = isLoggedIn() ? currentUser.name : 'Unknown';
   if(editingId){
     const t = tasks.find(t => t.id === editingId);
-    Object.assign(t, {machine,category,desc,priority,status,progress,remarks,responsible,updated,lastEditedBy,image:imagePath, waitingOn: document.getElementById('f-waitingon').value.trim()});
+    Object.assign(t, {
+      machine,category,desc,priority,status,progress,remarks,responsible,updated,lastEditedBy,image:imagePath, 
+      waitingOn: document.getElementById('f-waitingon').value.trim(),
+      dateStarted:  document.getElementById('f-datestarted')?.value  || '',
+      dateFinished: document.getElementById('f-datefinished')?.value || ''
+    });
     logActivity(`Updated task "${desc.slice(0,30)}..." on ${machine}`);
     toast('Task updated ✓','success');
   } else {
-    tasks.push({id:uid(),machine,category,desc,priority,progress,status,remarks,responsible,updated,lastEditedBy,image:imagePath, waitingOn: document.getElementById('f-waitingon').value.trim()});
+    tasks.push({
+      id:uid(),machine,category,desc,priority,progress,status,remarks,responsible,updated,lastEditedBy,image:imagePath, 
+      waitingOn: document.getElementById('f-waitingon').value.trim(),
+      dateStarted:  document.getElementById('f-datestarted')?.value  || '',
+      dateFinished: document.getElementById('f-datefinished')?.value || ''
+    });
     logActivity(`Added task "${desc.slice(0,30)}..." to ${machine}`);
     toast('Task added ✓','success');
   }
@@ -2170,7 +2218,9 @@ function importExcel(input){
         responsible: r[7] ? String(r[7]).trim() : '',
         remarks:  r[8] ? String(r[8]).trim() : '',
         updated:  r[9] ? String(r[9]).trim() : '',
-        waitingOn: r[10] ? String(r[10]).trim() : ''
+        waitingOn: r[10] ? String(r[10]).trim() : '',
+        dateStarted:  r[11] ? String(r[11]).trim() : '',
+        dateFinished: r[12] ? String(r[12]).trim() : ''
       };
     });
     if(!imported.length){ toast('No tasks found in file','error'); return; }
@@ -2185,7 +2235,7 @@ function importExcel(input){
 function exportExcel(){
   const rows = [
     ['AEROSOL PLANT  ·  INSTALLATION TRACKER', '', '', '', '', '', '', '', '', '', '← Dashboard'],
-    ['#', 'Machine', 'Category', 'Task Description', 'Priority', 'Progress', 'Status', 'Responsible', 'Remarks', 'Updated', 'Waiting On']
+    ['#', 'Machine', 'Category', 'Task Description', 'Priority', 'Progress', 'Status', 'Responsible', 'Remarks', 'Updated', 'Waiting On', 'Date Started', 'Date Finished']
   ];
   tasks.forEach((t,i) => rows.push([
     i+1,
@@ -2198,10 +2248,12 @@ function exportExcel(){
     t.responsible || '',
     t.remarks || '',
     t.updated || '',
-    t.waitingOn || ''
+    t.waitingOn || '',
+    t.dateStarted || '',
+    t.dateFinished || ''
   ]));
   const ws = XLSX.utils.aoa_to_sheet(rows);
-  ws['!cols'] = [{wch:4},{wch:18},{wch:13},{wch:54},{wch:10},{wch:11},{wch:20},{wch:15},{wch:38},{wch:14},{wch:25}];
+  ws['!cols'] = [{wch:4},{wch:18},{wch:13},{wch:54},{wch:10},{wch:11},{wch:20},{wch:15},{wch:38},{wch:14},{wch:25},{wch:14},{wch:14}];
   const wb = XLSX.utils.book_new();
   XLSX.utils.book_append_sheet(wb, ws, 'TRACKER');
   XLSX.writeFile(wb, `Aerosol_Tracker_${new Date().toISOString().slice(0,10)}.xlsx`);
@@ -2315,6 +2367,8 @@ async function pullFromGitHub(){
         tasks.forEach(t => {
           if(!t.responsible) t.responsible = '';
           if(!t.waitingOn) t.waitingOn = '';
+          if(!t.dateStarted) t.dateStarted = '';
+          if(!t.dateFinished) t.dateFinished = '';
         });
         if(Array.isArray(data.activityLog)){
           activityLog = data.activityLog;
@@ -2336,6 +2390,8 @@ async function pullFromGitHub(){
         tasks.forEach(t => {
           if(!t.responsible) t.responsible = '';
           if(!t.waitingOn) t.waitingOn = '';
+          if(!t.dateStarted) t.dateStarted = '';
+          if(!t.dateFinished) t.dateFinished = '';
         });
         if(Array.isArray(data.activityLog)){
           activityLog = data.activityLog;
