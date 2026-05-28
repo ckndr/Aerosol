@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#0d1117">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>Aerosol Plant Tracker · Alpha Containers</title>
+<title>Aerosol Plant Tracker</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&family=Fraunces:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
@@ -28,6 +28,7 @@
   --accent2:#1d4ed8;
   --s-ip-bg:#fffbeb; --s-ip-t:#92400e; --s-ip-b:#fcd34d;
   --s-ns-bg:#f8fafc; --s-ns-t:#475569; --s-ns-b:#cbd5e1;
+  --s-bl-bg:#fef2f2; --s-bl-t:#991b1b; --s-bl-b:#fca5a5;
   --s-cp-bg:#f0fdf4; --s-cp-t:#166534; --s-cp-b:#86efac;
   --s-pp-bg:#faf5ff; --s-pp-t:#6b21a8; --s-pp-b:#d8b4fe;
   --p-hi-bg:#fef2f2; --p-hi-t:#991b1b;
@@ -35,7 +36,7 @@
   --p-lo-bg:#f0fdf4; --p-lo-t:#166534;
   --e-bg:#eff6ff; --e-t:#1d4ed8; --e-b:#bfdbfe;
   --m-bg:#fff7ed; --m-t:#c2410c; --m-b:#fed7aa;
-  --g-bg:#f8fafc; --g-t:#475569; --g-b:#cbd5e1;
+  --g-bg:#faf5ff; --g-t:#7e22ce; --g-b:#e9d5ff;
   --radius:10px; --radius-lg:14px;
   --shadow:0 1px 3px rgba(0,0,0,.08);
   --shadow-lg:0 8px 24px rgba(0,0,0,.12);
@@ -49,6 +50,7 @@
   --navy:#1f4e79; --accent:#3b82f6; --accent2:#1d4ed8;
   --s-ip-bg:#2d2008; --s-ip-t:#fbbf24; --s-ip-b:#92400e;
   --s-ns-bg:#161b22; --s-ns-t:#8b949e; --s-ns-b:#30363d;
+  --s-bl-bg:#2d0f0f; --s-bl-t:#f87171; --s-bl-b:#7f1d1d;
   --s-cp-bg:#0d2d1a; --s-cp-t:#4ade80; --s-cp-b:#14532d;
   --s-pp-bg:#1e1030; --s-pp-t:#c084fc; --s-pp-b:#581c87;
   --p-hi-bg:#2d0f0f; --p-hi-t:#fca5a5;
@@ -56,7 +58,7 @@
   --p-lo-bg:#0d2d1a; --p-lo-t:#86efac;
   --e-bg:#0d1a2d; --e-t:#60a5fa; --e-b:#1e3a5f;
   --m-bg:#2d1a0d; --m-t:#fb923c; --m-b:#7c2d12;
-  --g-bg:#1c2330; --g-t:#8b949e; --g-b:#2d3748;
+  --g-bg:#1e152a; --g-t:#c084fc; --g-b:#581c87;
   --shadow:0 1px 3px rgba(0,0,0,.4);
   --shadow-lg:0 8px 24px rgba(0,0,0,.4);
 }
@@ -102,7 +104,7 @@ header{background:var(--surface);border-bottom:1px solid var(--border);padding:1
 .kpi.total .kv{color:var(--text)}
 .kpi.done .kv{color:#4ade80}
 .kpi.inprog .kv{color:#fbbf24}
-.kpi.procure .kv{color:#d97706}
+.kpi.procure .kv{color:#c084fc}
 
 /* ── FILTER BAR ── */
 .filter-bar{background:var(--surface);border-bottom:1px solid var(--border);padding:.75rem 1.5rem;display:none;flex-wrap:wrap;gap:.6rem;align-items:center}
@@ -181,7 +183,7 @@ main{padding:1.5rem;max-width:1400px;margin:0 auto}
 .task-card{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--border2);border-radius:var(--radius);padding:.85rem 1rem;transition:border-color .2s,transform .15s,box-shadow .2s;position:relative;cursor:pointer}
 .task-card:hover{border-color:var(--border2);transform:translateY(-1px);box-shadow:var(--shadow-lg)}
 .task-card.s-ip{border-left-color:#f59e0b}
-.task-card
+.task-card.s-bl{border-left-color:#ef4444}
 .task-card.s-ns{border-left-color:#374151}
 .task-card.s-cp{border-left-color:#22c55e;opacity:.55}
 .task-card.s-pp{border-left-color:#a855f7}
@@ -195,7 +197,7 @@ main{padding:1.5rem;max-width:1400px;margin:0 auto}
 .badge.p-Low{background:var(--p-lo-bg);color:var(--p-lo-t);border-color:#14532d}
 .badge.s-ip{background:var(--s-ip-bg);color:var(--s-ip-t);border-color:var(--s-ip-b)}
 .badge.s-ns{background:var(--s-ns-bg);color:var(--s-ns-t);border-color:var(--s-ns-b)}
-
+.badge.s-bl{background:var(--s-bl-bg);color:var(--s-bl-t);border-color:var(--s-bl-b)}
 .badge.s-cp{background:var(--s-cp-bg);color:var(--s-cp-t);border-color:var(--s-cp-b)}
 .badge.s-pp{background:var(--s-pp-bg);color:var(--s-pp-t);border-color:var(--s-pp-b)}
 .task-menu-btn{width:24px;height:24px;border:none;background:transparent;color:var(--text3);cursor:pointer;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:.9rem;transition:background .15s,color .15s;flex-shrink:0}
@@ -492,7 +494,7 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
   <div class="header-container">
     <div class="header-brand" onclick="resetFilters(); navigate('dashboard');" style="cursor: pointer;">
       <div class="header-title">Aerosol Plant Project Tracker</div>
-      <div class="header-sub">Created by Sikander · Planning Lead</div>
+      <div class="header-sub">Created by Sikander - Planning Lead</div>
     </div>
     <div class="header-actions">
       <div class="live-dot" title="Data active"></div>
@@ -502,8 +504,8 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
       </button>
       <button class="icon-btn" id="auth-btn" title="Login to edit" onclick="handleAuthClick()">🔓</button>
       <button class="icon-btn" id="filter-toggle-btn" title="Toggle Search & Filters" onclick="toggleFilterBar()" style="position:relative">🔍<span class="badge" id="filter-active-badge" style="display:none;position:absolute;top:-4px;right:-4px;background:var(--accent);color:#fff;font-size:9px;width:14px;height:14px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold;">0</span></button>
-      <button class="icon-btn" id="btn-import" title="Import Excel" onclick="triggerImport()">📥</button>
-      <button class="icon-btn" id="btn-export" title="Export Excel" onclick="exportExcel()">📤</button>
+      <button class="icon-btn" title="Import Excel" onclick="triggerImport()">📥</button>
+      <button class="icon-btn" title="Export Excel" onclick="exportExcel()">📤</button>
       <button class="icon-btn" title="Print / Export PDF" onclick="window.print()" style="gap:.3rem;width:auto;padding:0 .6rem;font-size:.72rem;">🖨️ <span style="font-family:'DM Sans',sans-serif;font-weight:500;">Print</span></button>
       <button class="icon-btn" title="Settings" onclick="navigate('settings')">⚙️</button>
       <button class="icon-btn" id="theme-btn" title="Toggle light / dark mode" onclick="toggleTheme()">🌙</button>
@@ -516,7 +518,7 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
   <div class="kpi total" onclick="resetFilters()"><div class="kv" id="k-total">0</div><div class="kl">Total</div></div>
   <div class="kpi done" onclick="filterByStatus('Completed')"><div class="kv" id="k-done">0</div><div class="kl">Done</div></div>
   <div class="kpi inprog" onclick="filterByStatus('In Progress')"><div class="kv" id="k-ip">0</div><div class="kl">In Progress</div></div>
-  <div class="kpi procure" onclick="navigate('procurement')"><div class="kv" id="k-pp">0</div><div class="kl">Procure</div></div>
+  <div class="kpi procure" onclick="filterByStatus('Pending Procurement')"><div class="kv" id="k-pp">0</div><div class="kl">Procurement</div></div>
   <div class="kpi notstarted" onclick="filterByStatus('Not Started')"><div class="kv" id="k-ns">0</div><div class="kl">Not Started</div></div>
 </div>
 
@@ -1016,7 +1018,6 @@ const MACHINE_IMAGES = {
     'Photos/Strapping/IMG_20220518_135431.jpg',
     'Photos/Strapping/IMG_20220518_135443.jpg'
   ],
-  // ⚠️ FLAG: Manual Strapping Machine uses same photos as Auto Strapping Machine. Confirm if correct or replace with dedicated photos.
   'Manual Strapping Machine': [
     'Photos/Strapping/IMG_20220518_135309.jpg',
     'Photos/Strapping/IMG_20220518_135331.jpg',
@@ -1028,7 +1029,7 @@ const MACHINE_IMAGES = {
   'Overall Machine Operation': [],
   General: []
 };
-const STATUS_CLASS = {'In Progress':'ip','Not Started':'ns','Completed':'cp','Pending Procurement':'pp'};
+const STATUS_CLASS = {'In Progress':'ip','Not Started':'ns','Completed':'cp','Blocked':'bl','Pending Procurement':'pp'};
 const SEED = [
   ["Accumulator", "Electrical", "Dry run", "High", 0, "Not Started", "Arsalan", "on machine testing"],
   ["Accumulator", "Mechanical", "chain & bearing greasing", "Medium", 50, "In Progress", "Arsalan", ""],
@@ -1101,7 +1102,7 @@ const SEED = [
   ["Necking", "General", "Necking machine Dry run", "High", 50, "In Progress", "Arsalan", ""],
   ["Necking", "Electrical", "Electrical troubleshooting and testing", "High", 100, "Completed", "Arsalan", ""],
   ["Necking", "Mechanical", "Cans Grippers / Holders — cleaning", "Medium", 100, "Completed", "Saqib", ""],
-  ["Necking", "Mechanical", "Buffing and polishing on necking machine tools", "Medium", 100, "Completed", "Saqib", ""],
+  ["Necking", "Mechanical", "Buffing and polishing on necking machine tools", "Medium", 100, "Not Started", "Saqib", ""],
   ["Necking", "Mechanical", "Two sets of press dies, springs & nut bolts required", "High", 0, "Not Started", "Saqib", ""],
   ["Necking", "Mechanical", "Kluber oil & grease for necking machine", "Medium", 0, "Not Started", "Saqib", ""],
   ["Necking", "Electrical", "Necking machine — electrical supply troubleshooting for dry run", "High", 20, "In Progress", "Arsalan", "Interlocking will be redesigned and checked"],
@@ -2611,12 +2612,6 @@ function updateAuthUI(){
   
   const banner = document.getElementById('readonly-banner');
   if(banner) banner.style.display = isLoggedIn() ? 'none' : 'block';
-
-  // Hide import/export from read-only guests — keeps header clean for presentation
-  const btnImport = document.getElementById('btn-import');
-  const btnExport = document.getElementById('btn-export');
-  if(btnImport) btnImport.style.display = isLoggedIn() ? '' : 'none';
-  if(btnExport) btnExport.style.display = isLoggedIn() ? '' : 'none';
 
   // My Tasks button logic
   const myBtn = document.getElementById('my-tasks-btn');
