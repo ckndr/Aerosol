@@ -23,6 +23,18 @@ if errorlevel 1 (
 
 :: Restore any stashed local changes on top of the pull
 git stash pop
+if errorlevel 1 (
+    echo.
+    echo =======================================================
+    echo   CONFLICTS DETECTED when restoring local changes!
+    echo =======================================================
+    git grep -n "^<<<<<<< "
+    echo.
+    echo   Please resolve these conflicts before committing or pushing.
+    echo.
+    pause
+    exit /b 1
+)
 
 echo.
 echo =========================================

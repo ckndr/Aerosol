@@ -12,6 +12,22 @@ echo.
 set /p msg="Checkpoint message: "
 if "%msg%"=="" set msg=Local checkpoint - Aerosol Tracker
 
+:: Check for unresolved conflict markers before doing anything
+git grep -q "^<<<<<<< "
+if %errorlevel% equ 0 (
+    echo.
+    echo =======================================================
+    echo   ERROR: Unresolved git conflict markers detected!
+    echo =======================================================
+    git grep -n "^<<<<<<< "
+    echo.
+    echo   Please open these files and resolve the conflicts.
+    echo   Search for "<<<<<<<", "=======", and ">>>>>>>"
+    echo.
+    pause
+    exit /b 1
+)
+
 git add .
 git commit -m "%msg%"
 if errorlevel 1 (
