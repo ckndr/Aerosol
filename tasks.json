@@ -13,7 +13,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_823995",
@@ -28,7 +30,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_437972",
@@ -43,7 +47,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_330182",
@@ -58,7 +64,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_412945",
@@ -73,7 +81,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_186924",
@@ -88,7 +98,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_229908",
@@ -103,7 +115,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_555287",
@@ -118,7 +132,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_933715",
@@ -133,7 +149,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_871623",
@@ -148,9 +166,31 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
+<<<<<<< HEAD
+=======
+      "id": "t_923145",
+      "machine": "Base Coat",
+      "category": "Mechanical",
+      "desc": "Spare Rubberize rollers",
+      "priority": "High",
+      "progress": 50,
+      "status": "In Progress",
+      "responsible": "Saqib",
+      "remarks": "ordering done (05-06-2026)",
+      "updated": "",
+      "waitingOn": "",
+      "image": "",
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
+    },
+    {
+>>>>>>> 0c424c982fdfafdca1955de489bdbe9ceac80e32
       "id": "t_305707",
       "machine": "Base Coat",
       "category": "Mechanical",
@@ -163,7 +203,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_429174",
@@ -178,7 +220,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_512291",
@@ -193,7 +237,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_511680",
@@ -208,7 +254,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_145174",
@@ -223,7 +271,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_878682",
@@ -238,7 +288,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_790598",
@@ -253,7 +305,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_601008",
@@ -268,7 +322,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_489187",
@@ -283,7 +339,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_224710",
@@ -298,7 +356,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_194945",
@@ -313,7 +373,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_379293",
@@ -328,7 +390,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_593209",
@@ -343,7 +407,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_325587",
@@ -358,7 +424,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_406263",
@@ -373,7 +441,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_788726",
@@ -388,7 +458,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_951895",
@@ -403,7 +475,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_938713",
@@ -418,7 +492,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_963673",
@@ -433,7 +509,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_350925",
@@ -448,7 +526,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_515621",
@@ -463,7 +543,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_791541",
@@ -478,7 +560,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_533804",
@@ -493,7 +577,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_127701",
@@ -508,7 +594,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_895031",
@@ -523,7 +611,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_357094",
@@ -538,7 +628,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_366746",
@@ -553,7 +645,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_799734",
@@ -568,7 +662,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_542466",
@@ -583,7 +679,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_329620",
@@ -598,7 +696,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_297932",
@@ -613,7 +713,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_307331",
@@ -628,7 +730,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_978287",
@@ -643,7 +747,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_329394",
@@ -658,7 +764,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_928391",
@@ -673,7 +781,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_908360",
@@ -688,7 +798,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_264832",
@@ -703,7 +815,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_529872",
@@ -718,7 +832,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_674413",
@@ -733,7 +849,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_841433",
@@ -748,7 +866,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_881010",
@@ -763,7 +883,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_269714",
@@ -778,7 +900,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_106305",
@@ -793,7 +917,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_166395",
@@ -808,7 +934,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_753071",
@@ -823,7 +951,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_641856",
@@ -838,7 +968,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_311685",
@@ -853,7 +985,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_879262",
@@ -868,7 +1002,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_378618",
@@ -883,7 +1019,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_757434",
@@ -898,7 +1036,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_922079",
@@ -913,7 +1053,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_563602",
@@ -928,7 +1070,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_660179",
@@ -943,7 +1087,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_944329",
@@ -958,7 +1104,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_294274",
@@ -973,7 +1121,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_457725",
@@ -988,7 +1138,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_569875",
@@ -1003,7 +1155,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_503221",
@@ -1018,7 +1172,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_475606",
@@ -1033,7 +1189,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_620649",
@@ -1048,7 +1206,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_865041",
@@ -1063,7 +1223,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_707076",
@@ -1078,7 +1240,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_862890",
@@ -1093,7 +1257,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_974583",
@@ -1108,7 +1274,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_424547",
@@ -1123,7 +1291,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_895006",
@@ -1138,7 +1308,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_475430",
@@ -1153,7 +1325,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_967900",
@@ -1168,7 +1342,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_404937",
@@ -1183,7 +1359,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_993093",
@@ -1198,7 +1376,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_476856",
@@ -1213,7 +1393,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_309542",
@@ -1228,7 +1410,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_718985",
@@ -1243,7 +1427,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_390647",
@@ -1258,7 +1444,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_251655",
@@ -1273,7 +1461,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_378091",
@@ -1288,7 +1478,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_460094",
@@ -1303,7 +1495,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_756784",
@@ -1318,7 +1512,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_414385",
@@ -1333,7 +1529,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_242396",
@@ -1348,7 +1546,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_357049",
@@ -1363,7 +1563,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_928413",
@@ -1378,7 +1580,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_471552",
@@ -1393,7 +1597,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_775918",
@@ -1408,7 +1614,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_168139",
@@ -1423,7 +1631,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_695590",
@@ -1438,7 +1648,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_877884",
@@ -1453,7 +1665,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_365723",
@@ -1468,7 +1682,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_588884",
@@ -1483,7 +1699,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_445622",
@@ -1498,7 +1716,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_918367",
@@ -1513,7 +1733,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_939173",
@@ -1528,7 +1750,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_881256",
@@ -1543,7 +1767,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_742374",
@@ -1558,7 +1784,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_725515",
@@ -1573,7 +1801,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_464018",
@@ -1588,7 +1818,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_773553",
@@ -1603,7 +1835,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_130617",
@@ -1618,7 +1852,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_604104",
@@ -1633,7 +1869,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_339310",
@@ -1648,7 +1886,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_542931",
@@ -1663,7 +1903,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_735418",
@@ -1678,7 +1920,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_220583",
@@ -1693,7 +1937,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_472460",
@@ -1708,7 +1954,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_223177",
@@ -1723,7 +1971,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_309734",
@@ -1738,7 +1988,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_154909",
@@ -1753,7 +2005,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_319786",
@@ -1768,7 +2022,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_587038",
@@ -1783,7 +2039,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_910949",
@@ -1798,7 +2056,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_589414",
@@ -1813,7 +2073,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_308933",
@@ -1828,7 +2090,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_522663",
@@ -1843,7 +2107,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_801432",
@@ -1858,7 +2124,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_999528",
@@ -1873,7 +2141,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_141486",
@@ -1888,7 +2158,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_809507",
@@ -1903,7 +2175,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_513566",
@@ -1918,7 +2192,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_648597",
@@ -1933,7 +2209,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_587568",
@@ -1948,7 +2226,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_262771",
@@ -1963,7 +2243,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_886216",
@@ -1978,7 +2260,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_409243",
@@ -1993,7 +2277,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_387687",
@@ -2008,7 +2294,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_253492",
@@ -2023,7 +2311,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_467409",
@@ -2038,7 +2328,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_461252",
@@ -2053,7 +2345,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_934362",
@@ -2068,7 +2362,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_492086",
@@ -2083,7 +2379,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_982251",
@@ -2098,7 +2396,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_583440",
@@ -2113,7 +2413,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_979590",
@@ -2128,7 +2430,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_385603",
@@ -2143,7 +2447,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_194637",
@@ -2158,7 +2464,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_163143",
@@ -2173,7 +2481,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_748679",
@@ -2188,7 +2498,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_581544",
@@ -2203,7 +2515,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_990649",
@@ -2218,7 +2532,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_297468",
@@ -2233,7 +2549,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_757596",
@@ -2248,7 +2566,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_195315",
@@ -2263,7 +2583,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_417725",
@@ -2278,7 +2600,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_196498",
@@ -2293,7 +2617,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_214906",
@@ -2308,7 +2634,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_329291",
@@ -2323,7 +2651,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_717625",
@@ -2338,7 +2668,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_141010",
@@ -2353,7 +2685,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_957628",
@@ -2368,7 +2702,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_148426",
@@ -2383,7 +2719,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_122888",
@@ -2398,7 +2736,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_784046",
@@ -2413,7 +2753,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_225213",
@@ -2428,7 +2770,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_612787",
@@ -2443,7 +2787,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_764635",
@@ -2458,7 +2804,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_788779",
@@ -2473,7 +2821,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t_186021",
@@ -2488,7 +2838,9 @@
       "updated": "",
       "waitingOn": "",
       "image": "",
-      "lastEditedBy": ""
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     },
     {
       "id": "t1779994195720uz68",
@@ -2503,7 +2855,9 @@
       "updated": "28 May 2026",
       "lastEditedBy": "Sikander",
       "image": "Photos/General/task_img_1779994194166.jpg",
-      "waitingOn": "Test"
+      "waitingOn": "Test",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
