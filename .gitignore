@@ -2,3 +2,8 @@ node_modules/
 Thumbs.db
 .DS_Store
 *.log
+*.bak
+*.bak.*
+repomix-output.xml
+repomix-output.txt
+node_modules/
