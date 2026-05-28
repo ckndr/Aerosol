@@ -2504,10 +2504,31 @@
       "waitingOn": "",
       "image": "",
       "lastEditedBy": ""
+    },
+    {
+      "id": "t1779994195720uz68",
+      "machine": "General",
+      "category": "General",
+      "desc": "Test",
+      "priority": "High",
+      "progress": 49,
+      "status": "In Progress",
+      "remarks": "Test",
+      "responsible": "Test",
+      "updated": "28 May 2026",
+      "lastEditedBy": "Sikander",
+      "image": "Photos/General/task_img_1779994194166.jpg",
+      "waitingOn": "Test"
     }
   ],
   "settings": {
-    "autoSync": false
+    "autoSync": true
   },
-  "activityLog": []
+  "activityLog": [
+    {
+      "time": "2026-05-28T18:49:55.720Z",
+      "action": "[Sikander] Added task \"Test...\" to General",
+      "user": "Sikander"
+    }
+  ]
 }
