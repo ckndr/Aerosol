@@ -92,7 +92,8 @@ header{background:var(--surface);border-bottom:1px solid var(--border);padding:1
 @keyframes pdot{0%,100%{box-shadow:0 0 0 3px rgba(34,197,94,.2)}50%{box-shadow:0 0 0 6px rgba(34,197,94,.08)}}
 
 /* ── KPI BAR ── */
-.kpi-bar{background:var(--surface);border-bottom:1px solid var(--border);padding:.9rem 1.5rem;display:flex;gap:.6rem;overflow-x:auto;scrollbar-width:none}
+.kpi-bar{background:var(--surface);border-bottom:1px solid var(--border);padding:.9rem 1.5rem;display:flex;gap:.6rem;overflow-x:auto;scrollbar-width:none;justify-content:center}
+@media (max-width:768px){.kpi-bar{justify-content:flex-start}}
 .kpi-bar::-webkit-scrollbar{display:none}
 .kpi{display:flex;flex-direction:column;gap:.2rem;flex-shrink:0;padding:.7rem 1rem;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius);min-width:90px;cursor:pointer;transition:border-color .2s,background .2s,transform .15s,box-shadow .2s}
 .kpi:hover{border-color:var(--border2);transform:translateY(-1px);background:var(--surface3)}
@@ -491,7 +492,7 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
 
 <header>
   <div class="header-container">
-    <div class="header-brand" onclick="navigate('dashboard')" style="cursor: pointer;">
+    <div class="header-brand" onclick="resetFilters(); navigate('dashboard');" style="cursor: pointer;">
       <div class="header-title">Aerosol Plant Project Tracker</div>
       <div class="header-sub">Created by Sikander - Planning Lead</div>
     </div>
@@ -1813,11 +1814,22 @@ function renderDetail(){
   body.innerHTML = '';
   const m = currentMachine;
 
+  // Filter tasks based on global filters but restricted to currentMachine
+  const globalFiltered = filterTasks(tasks);
+  const mTasks = globalFiltered.filter(t => t.machine === m);
+
   ['Electrical','Mechanical','General'].forEach(cat => {
-    const catTasks = tasks.filter(t => t.machine === m && t.category === cat);
-    if(!catTasks.length) return;
-    const visible  = showCompleted ? catTasks : catTasks.filter(t => t.status !== 'Completed');
-    const pending  = catTasks.filter(t => t.status !== 'Completed').length;
+    const machineCatTasks = tasks.filter(t => t.machine === m && t.category === cat);
+    if(!machineCatTasks.length) return;
+    
+    // Tasks in this category that match the active filters
+    const catTasks = mTasks.filter(t => t.category === cat);
+    const activeStatusFilter = document.getElementById('ff-status').value;
+    const visible = (showCompleted || activeStatusFilter === 'Completed') 
+      ? catTasks 
+      : catTasks.filter(t => t.status !== 'Completed');
+
+    const pending  = machineCatTasks.filter(t => t.status !== 'Completed').length;
     const catCls   = cat === 'Electrical' ? 'e' : cat === 'Mechanical' ? 'm' : 'g';
     const icon     = cat === 'Electrical' ? '⚡' : cat === 'Mechanical' ? '⚙' : '📋';
 
@@ -1827,14 +1839,14 @@ function renderDetail(){
       <div class="cat-header ${catCls}">
         <span>${icon}</span>
         <span class="cat-name">${cat}</span>
-        <span class="cat-count">${pending} pending · ${catTasks.length} total</span>
+        <span class="cat-count">${pending} pending · ${machineCatTasks.length} total</span>
       </div>
       <div class="task-list" id="tl-${catCls}"></div>`;
     body.appendChild(sec);
 
     const list = sec.querySelector(`#tl-${catCls}`);
     if(!visible.length){
-      list.innerHTML = `<div class="empty">All ${cat} tasks completed ✓</div>`;
+      list.innerHTML = `<div class="empty">No tasks match your filters</div>`;
       return;
     }
     visible.forEach(t => list.appendChild(buildTask(t)));
@@ -1849,11 +1861,8 @@ function buildTask(t, showMachineName){
   div.dataset.id = t.id;
   div.onclick = () => openEditModal(t.id);
   const pfill = pct===100?'full':pct===0?'':'';
-  const editMeta = [];
-  if(t.responsible) editMeta.push(t.responsible);
-  if(t.updated) editMeta.push(t.updated);
-  const editLine = editMeta.length
-    ? `<div class="task-updated">— ${editMeta.join(' · ')}</div>`
+  const editLine = t.updated
+    ? `<div class="task-updated">Updated ${t.updated}</div>`
     : '';
   const waitingTag = t.waitingOn
     ? `<div style="margin-top:.35rem"><span style="display:inline-flex;align-items:center;gap:.3rem;font-size:.67rem;font-weight:600;color:#c2410c;background:#fff7ed;border:1px solid #fed7aa;border-radius:20px;padding:.18rem .55rem;font-family:'DM Mono',monospace;">⏳ ${t.waitingOn}</span></div>`
