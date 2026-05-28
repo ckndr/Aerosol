@@ -506,6 +506,13 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
         👤 <span id="my-tasks-label">My Tasks</span>
       </button>
       <button class="icon-btn" id="auth-btn" title="Login to edit" onclick="handleAuthClick()">🔓</button>
+      <button class="icon-btn" id="recent-btn" 
+              title="Recently added or updated tasks"
+              onclick="toggleRecentTasks()"
+              style="width:auto;padding:0 .65rem;font-size:.75rem;
+                     font-weight:500;gap:.3rem">
+        🕐 <span>Recent</span>
+      </button>
       <button class="icon-btn" id="filter-toggle-btn" title="Toggle Search & Filters" onclick="toggleFilterBar()" style="position:relative">🔍<span class="badge" id="filter-active-badge" style="display:none;position:absolute;top:-4px;right:-4px;background:var(--accent);color:#fff;font-size:9px;width:14px;height:14px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold;">0</span></button>
       <button class="icon-btn" id="btn-import" title="Import Excel" onclick="triggerImport()">📥</button>
       <button class="icon-btn" id="btn-export" title="Export Excel" onclick="exportExcel()">📤</button>
@@ -1214,6 +1221,7 @@ let tasks = [];
 let settings = { syncUrl:'', syncKey:'' };
 let currentMachine = null;
 let showCompleted = false;
+let currentRecentFilter = false;
 let editingId = null;
 let ctxMenu = null;
 let pendingDelete = null;
@@ -1522,6 +1530,9 @@ function populateFilterDropdowns(){
 //  NAVIGATION
 // ═══════════════════════════════════════════════════════
 function navigate(view, machine){
+  const recentBtn = document.getElementById('recent-btn');
+  if(recentBtn) recentBtn.classList.remove('active');
+  currentRecentFilter = false;
   clearSelection();
   document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
   document.getElementById('view-' + view).classList.add('active');
@@ -1750,6 +1761,63 @@ function renderDashboard(){
 
 }
 
+function toggleRecentTasks(){
+  const btn = document.getElementById('recent-btn');
+  const isOn = btn.classList.contains('active');
+  if(isOn){
+    btn.classList.remove('active');
+    // Clear recent filter — restore normal view
+    currentRecentFilter = false;
+    renderDashboard();
+  } else {
+    btn.classList.add('active');
+    currentRecentFilter = true;
+    showRecentTasks();
+  }
+}
+
+function showRecentTasks(){
+  // Get tasks sorted by dateStarted desc, then dateFinished, 
+  // then updated, falling back to id (which encodes creation order)
+  const recent = [...tasks]
+    .filter(t => t.dateStarted || t.dateFinished || t.updated)
+    .sort((a,b) => {
+      const da = a.dateFinished || a.dateStarted || a.updated || '';
+      const db = b.dateFinished || b.dateStarted || b.updated || '';
+      return db.localeCompare(da);
+    })
+    .slice(0, 20);
+
+  // Show in the dashboard-task-list area (already exists for filters)
+  navigate('dashboard');
+  
+  // Re-active button and flag after navigate resets them
+  const btn = document.getElementById('recent-btn');
+  if(btn) btn.classList.add('active');
+  currentRecentFilter = true;
+
+  const grid = document.getElementById('machines-grid');
+  if(grid) grid.style.display = 'none';
+
+  const listEl = document.getElementById('dashboard-task-list');
+  if(!listEl) return;
+  listEl.style.display = 'block';
+  listEl.innerHTML = '';
+
+  const header = document.createElement('div');
+  header.className = 'section-label';
+  header.innerHTML = '<span>Recent Tasks (last 20 updated)</span>';
+  listEl.appendChild(header);
+
+  if(!recent.length){
+    listEl.innerHTML += '<div class="empty">No tasks with dates yet — add Date Started or Date Finished to tasks.</div>';
+    return;
+  }
+  recent.forEach(t => {
+    listEl.appendChild(buildTask(t, true));
+  });
+}
+
 // ═══════════════════════════════════════════════════════
 //  RENDER MACHINE DETAIL
 // ═══════════════════════════════════════════════════════
@@ -1938,7 +2006,7 @@ function quickStatus(id, status){
   if(status === 'Completed') t.progress = 100;
   t.lastEditedBy = isLoggedIn() ? currentUser.name : 'Unknown';
   t.updated = new Date().toLocaleDateString('en-PK',{day:'numeric',month:'short',year:'numeric'});
-  logActivity(`Changed status of "${t.desc.slice(0, 30)}..." on ${t.machine} to "${status}"`);
+  logActivity(`Changed status of "${t.desc.slice(0, 30)}..." on ${t.machine} to "${status}"`, id);
   saveState(); renderAll(); toast('Status updated — ' + status,'success');
 }
 
@@ -2143,16 +2211,17 @@ async function saveTask(){
       dateStarted:  document.getElementById('f-datestarted')?.value  || '',
       dateFinished: document.getElementById('f-datefinished')?.value || ''
     });
-    logActivity(`Updated task "${desc.slice(0,30)}..." on ${machine}`);
+    logActivity(`Updated task "${desc.slice(0,30)}..." on ${machine}`, editingId);
     toast('Task updated ✓','success');
   } else {
+    const newId = uid();
     tasks.push({
-      id:uid(),machine,category,desc,priority,progress,status,remarks,responsible,updated,lastEditedBy,image:imagePath, 
+      id:newId,machine,category,desc,priority,progress,status,remarks,responsible,updated,lastEditedBy,image:imagePath, 
       waitingOn: document.getElementById('f-waitingon').value.trim(),
       dateStarted:  document.getElementById('f-datestarted')?.value  || '',
       dateFinished: document.getElementById('f-datefinished')?.value || ''
     });
-    logActivity(`Added task "${desc.slice(0,30)}..." to ${machine}`);
+    logActivity(`Added task "${desc.slice(0,30)}..." to ${machine}`, newId);
     toast('Task added ✓','success');
   }
   closeModal();
@@ -2697,9 +2766,10 @@ function updateAuthUI(){
   }
 }
 
-function logActivity(action){
+function logActivity(action, taskId){
   const who = isLoggedIn() ? currentUser.name : 'Anonymous';
   const entry = {time: new Date().toISOString(), action: `[${who}] ${action}`, user: who};
+  if(taskId) entry.taskId = taskId;
   activityLog.unshift(entry);
   if(activityLog.length > MAX_LOG) activityLog.length = MAX_LOG;
   try { localStorage.setItem(STORAGE_KEY+'_log', JSON.stringify(activityLog)); } catch(e){}
@@ -2721,8 +2791,12 @@ function renderActivityLog(){
   }
   container.innerHTML = activityLog.map(entry => {
     const date = new Date(entry.time).toLocaleString('en-PK', {hour12:true, hour:'2-digit', minute:'2-digit', second:'2-digit', day:'numeric', month:'short'});
+    const task = entry.taskId ? tasks.find(t => t.id === entry.taskId) : null;
+    const actionHtml = task
+      ? `<span style="cursor:pointer;color:var(--accent);text-decoration:underline;text-underline-offset:2px" onclick="openEditModal('${entry.taskId}')">${escapeHTML(entry.action)}</span>`
+      : `<span>${escapeHTML(entry.action || '')}</span>`;
     return `<div style="border-bottom:1px solid var(--border);padding-bottom:.25rem;margin-bottom:.25rem">
-      <span style="color:var(--text3)">[${date}]</span> ${escapeHTML(entry.action)}
+      <span style="color:var(--text3)">[${date}]</span> ${actionHtml}
     </div>`;
   }).join('');
 }
@@ -2788,10 +2862,14 @@ function renderDashboardLog(){
         displayAction = displayAction.substring(prefix.length).trim();
       }
     }
+    const task = e.taskId ? tasks.find(t => t.id === e.taskId) : null;
+    const actionHtml = task
+      ? `<span style="cursor:pointer;color:var(--accent);text-decoration:underline;text-underline-offset:2px" onclick="openEditModal('${e.taskId}')">${escapeHTML(displayAction)}</span>`
+      : `<span>${escapeHTML(displayAction || '')}</span>`;
     return `<div style="display:flex;gap:.75rem;padding:.25rem 0;border-bottom:1px solid var(--border)">
       <span style="color:var(--text3);flex-shrink:0">${tStr}</span>
       <span style="color:var(--accent);flex-shrink:0">${user}</span>
-      <span>${escapeHTML(displayAction)}</span>
+      ${actionHtml}
     </div>`;
   }).join('');
 }
