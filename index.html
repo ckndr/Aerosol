@@ -83,9 +83,7 @@ header{background:var(--surface);border-bottom:1px solid var(--border);padding:1
 .icon-btn{width:34px;height:34px;border:1px solid var(--border);background:var(--surface2);border-radius:8px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:border-color .2s,background .2s;color:var(--text2);font-size:.85rem}
 .icon-btn:hover{border-color:var(--border3);background:var(--surface3);color:var(--text)}
 .icon-btn.active{background:var(--accent);border-color:var(--accent);color:#fff}
-.resp-chip{padding:.3rem .75rem;border:1px solid var(--border2);border-radius:20px;background:var(--surface2);color:var(--text2);font-size:.75rem;font-weight:500;cursor:pointer;transition:all .15s;font-family:'DM Sans',sans-serif;}
-.resp-chip:hover{border-color:var(--border3);color:var(--text);}
-.resp-chip.active{background:var(--accent);border-color:var(--accent);color:#fff;}
+
 .live-dot{width:6px;height:6px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 3px rgba(34,197,94,.2);animation:pdot 2s ease-in-out infinite;flex-shrink:0}
 @keyframes pdot{0%,100%{box-shadow:0 0 0 3px rgba(34,197,94,.2)}50%{box-shadow:0 0 0 6px rgba(34,197,94,.08)}}
 
@@ -563,12 +561,11 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
     <option>Mechanical</option>
     <option>General</option>
   </select>
-  <div style="display:flex;gap:.35rem;align-items:center;flex-shrink:0" id="resp-chips">
-    <button class="resp-chip" id="chip-all" onclick="setRespFilter('')">All</button>
-    <button class="resp-chip" id="chip-arsalan" onclick="setRespFilter('Arsalan')">Arsalan</button>
-    <button class="resp-chip" id="chip-saqib" onclick="setRespFilter('Saqib')">Saqib</button>
-  </div>
-  <input type="hidden" id="ff-responsible" value="">
+  <select class="filter-select" id="ff-responsible" 
+          onchange="applyFilters()" 
+          style="min-width:110px">
+    <option value="">All Responsible</option>
+  </select>
   <select class="filter-select" id="ff-sort" onchange="applyFilters()">
     <option value="">Sort By</option>
     <option value="priority">Priority (High first)</option>
@@ -589,13 +586,7 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
     <div class="machines-grid" id="machines-grid"></div>
     <div class="task-list" id="dashboard-task-list" style="display:none"></div>
     
-    <div id="blockers-section" style="margin-top:1.75rem">
-      <div class="section-label" style="cursor:pointer" onclick="toggleBlockers()">
-        <span id="blockers-label">Top Blockers</span>
-        <span id="blockers-toggle-icon" style="font-family:'DM Mono',monospace;font-size:.65rem;color:var(--text3)">▼ Show</span>
-      </div>
-      <div id="blockers-body" style="display:none;display:flex;flex-direction:column;gap:.4rem"></div>
-    </div>
+
 
     <div id="dashboard-log-section" style="margin-top:2rem">
       <div class="section-label" style="cursor:pointer" onclick="toggleDashboardLog()">
@@ -881,7 +872,7 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
     <div class="form-grid" style="grid-template-columns:1fr">
       <div class="form-group full">
         <label>Your Display Name</label>
-        <input id="login-name" placeholder="e.g. Sikander, Arsalan, Saqib…" autocomplete="name">
+        <input id="login-name" placeholder="Your name" autocomplete="name">
       </div>
       <div class="form-group full">
         <label>GitHub Token</label>
@@ -1419,7 +1410,7 @@ function getFilters(){
     status: document.getElementById('ff-status').value,
     priority: document.getElementById('ff-priority').value,
     category: document.getElementById('ff-category').value,
-    responsible: document.getElementById('ff-responsible').value,
+    responsible: document.getElementById('ff-responsible')?.value || '',
     sort: document.getElementById('ff-sort').value
   };
 }
@@ -1710,11 +1701,18 @@ function renderDashboard(){
         <div class="card-bar"><div class="card-bar-fill" style="width:0%" data-pct="${pct}%"></div></div>
         <div class="card-foot">
           <span class="card-pend">${pending ? pending+' remaining' : done+' done'}</span>
-          ${dryRunStatus === 'Completed'
-            ? `<span style="font-size:.62rem;font-weight:600;color:var(--s-cp-t);background:var(--s-cp-bg);border:1px solid var(--s-cp-b);border-radius:20px;padding:.15rem .5rem;font-family:'DM Mono',monospace;">✓ Dry Run</span>`
-            : dryRunStatus
-              ? `<span style="font-size:.62rem;font-weight:600;color:var(--s-ip-t);background:var(--s-ip-bg);border:1px solid var(--s-ip-b);border-radius:20px;padding:.15rem .5rem;font-family:'DM Mono',monospace;">⚡ Dry Run</span>`
-              : ''}
+          ${(() => {
+            if (!dryRunStatus) return '';
+            if (dryRunStatus === 'Completed') {
+              return `<span style="font-size:.62rem;font-weight:600;color:var(--s-cp-t);background:var(--s-cp-bg);border:1px solid var(--s-cp-b);border-radius:20px;padding:.15rem .5rem;font-family:'DM Mono',monospace;">✓ Dry Run Complete</span>`;
+            } else if (dryRunStatus === 'In Progress') {
+              return `<span style="font-size:.62rem;font-weight:600;color:var(--s-ip-t);background:var(--s-ip-bg);border:1px solid var(--s-ip-b);border-radius:20px;padding:.15rem .5rem;font-family:'DM Mono',monospace;">⏳ Dry Run In Progress</span>`;
+            } else if (dryRunStatus === 'Not Started') {
+              return `<span style="font-size:.62rem;font-weight:600;color:var(--s-ns-t);background:var(--s-ns-bg);border:1px solid var(--s-ns-b);border-radius:20px;padding:.15rem .5rem;font-family:'DM Mono',monospace;">✗ Dry Run Pending</span>`;
+            } else {
+              return `<span style="font-size:.62rem;font-weight:600;color:var(--s-ip-t);background:var(--s-ip-bg);border:1px solid var(--s-ip-b);border-radius:20px;padding:.15rem .5rem;font-family:'DM Mono',monospace;">⏳ Dry Run Pending</span>`;
+            }
+          })()}
           <span class="card-arrow">→</span>
         </div>`;
       grid.appendChild(card);
@@ -1730,13 +1728,7 @@ function renderDashboard(){
     grid.querySelectorAll('.card-bar-fill').forEach(el => el.style.width = el.dataset.pct);
   }));
 
-  const blockersCount = tasks.filter(t => t.priority === 'High' && t.status !== 'Completed').length;
-  const lbl = document.getElementById('blockers-label');
-  if(lbl) lbl.textContent = 'Top Blockers (' + blockersCount + ' high-priority pending)';
-  const bBody = document.getElementById('blockers-body');
-  if(bBody && bBody.style.display === 'flex') {
-    renderBlockers();
-  }
+
 }
 
 // ═══════════════════════════════════════════════════════
@@ -2475,6 +2467,20 @@ function undoDelete(btn){
 // ═══════════════════════════════════════════════════════
 //  RENDER ALL
 // ═══════════════════════════════════════════════════════
+function populateResponsibleFilter(){
+  const sel = document.getElementById('ff-responsible');
+  if(!sel) return;
+  const current = sel.value;
+  const names = [...new Set(tasks
+    .map(t => t.responsible)
+    .filter(Boolean)
+  )].sort();
+  sel.innerHTML = '<option value="">All Responsible</option>' +
+    names.map(n => 
+      `<option value="${n}"${n===current?' selected':''}>${n}</option>`
+    ).join('');
+}
+
 function renderAll(){
   renderKPIs();
   renderDashboard();
@@ -2492,6 +2498,7 @@ function renderAll(){
     renderDashboardLog();
   }
   renderTimeline();
+  populateResponsibleFilter();
 }
 
 // ═══════════════════════════════════════════════════════
@@ -2669,30 +2676,8 @@ function escapeHTML(str){
 }
 
 function setRespFilter(name){
-  document.querySelectorAll('.resp-chip').forEach(c => c.classList.remove('active'));
-  const chip = name === '' ? document.getElementById('chip-all') : document.getElementById('chip-' + name.toLowerCase());
-  if(chip) chip.classList.add('active');
-  // Mirror to a hidden input so existing filterTasks() logic still works
-  let hidden = document.getElementById('ff-responsible');
-  if(!hidden){
-    hidden = document.createElement('input');
-    hidden.id = 'ff-responsible';
-    hidden.type = 'hidden';
-    document.body.appendChild(hidden);
-  }
-  hidden.value = name;
-  
-  // Sync the "My Tasks" button state
-  const myBtn = document.getElementById('my-tasks-btn');
-  if(myBtn){
-    if(isLoggedIn() && currentUser && name === currentUser.name){
-      myBtn.classList.add('active');
-    } else {
-      myBtn.classList.remove('active');
-    }
-  }
-  
-  applyFilters();
+  const sel = document.getElementById('ff-responsible');
+  if(sel){ sel.value = name; applyFilters(); }
 }
 
 function toggleMyTasks(){
@@ -2755,42 +2740,7 @@ function renderDashboardLog(){
   }).join('');
 }
 
-function toggleBlockers(){
-  const body = document.getElementById('blockers-body');
-  const icon = document.getElementById('blockers-toggle-icon');
-  const open = body.style.display === 'flex';
-  body.style.display = open ? 'none' : 'flex';
-  icon.textContent = open ? '▼ Show' : '▲ Hide';
-  if(!open) renderBlockers();
-}
 
-function renderBlockers(){
-  const body = document.getElementById('blockers-body');
-  const label = document.getElementById('blockers-label');
-  if(!body) return;
-  const STATUS_RANK = {'In Progress':0,'Not Started':1,'Pending Procurement':2};
-  const blockers = tasks
-    .filter(t => t.priority === 'High' && t.status !== 'Completed')
-    .sort((a,b) => (STATUS_RANK[a.status]??3) - (STATUS_RANK[b.status]??3))
-    .slice(0, 6);
-  if(label) label.textContent = 'Top Blockers (' + blockers.length + ' of ' + tasks.filter(t=>t.priority==='High'&&t.status!=='Completed').length + ' high-priority pending)';
-  if(!blockers.length){
-    body.innerHTML = '<div class="empty">No high-priority blockers — great progress!</div>';
-    return;
-  }
-  body.innerHTML = blockers.map(t => {
-    const sc = STATUS_CLASS[t.status] || 'ns';
-    return `<div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:.75rem 1rem;display:flex;gap:.75rem;align-items:flex-start">
-      <span style="font-size:1.1rem;flex-shrink:0">${ICONS[t.machine]||'🔧'}</span>
-      <div style="flex:1;min-width:0">
-        <div style="font-size:.82rem;font-weight:500;color:var(--text);margin-bottom:.25rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${t.desc}</div>
-        <div style="font-family:'DM Mono',monospace;font-size:.62rem;color:var(--text3)">${t.machine} · ${t.responsible||'—'}</div>
-        ${t.remarks ? `<div style="font-size:.72rem;color:var(--text2);font-style:italic;margin-top:.2rem">↳ ${t.remarks}</div>` : ''}
-      </div>
-      <span class="badge s-${sc}" style="flex-shrink:0">${t.status}</span>
-    </div>`;
-  }).join('');
-}
 
 // ═══════════════════════════════════════════════════════
 //  BULK ACTIONS
