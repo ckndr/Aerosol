@@ -2849,5 +2849,65 @@
       "action": "[Sikander] Added task \"Test...\" to General",
       "user": "Sikander"
     }
-  ]
+  ],
+  "machineMeta": {
+    "Press": {
+      "dryRun": "None"
+    },
+    "Trimming": {
+      "dryRun": "Complete"
+    },
+    "Washing": {
+      "dryRun": "Pending"
+    },
+    "Lacquer": {
+      "dryRun": "Pending"
+    },
+    "Lacquer Oven": {
+      "dryRun": "None"
+    },
+    "Base Coat": {
+      "dryRun": "None"
+    },
+    "Printing": {
+      "dryRun": "Pending"
+    },
+    "Decoration Oven": {
+      "dryRun": "Complete"
+    },
+    "Over Varnish": {
+      "dryRun": "Pending"
+    },
+    "Necking": {
+      "dryRun": "Pending"
+    },
+    "Accumulator": {
+      "dryRun": "Pending"
+    },
+    "Tumbler": {
+      "dryRun": "Complete"
+    },
+    "Compressor": {
+      "dryRun": "None"
+    },
+    "FG Conveyor": {
+      "dryRun": "None"
+    },
+    "Auto Strapping Machine": {
+      "dryRun": "Pending"
+    },
+    "Manual Strapping Machine": {
+      "dryRun": "None"
+    },
+    "Overall Machine Operation": {
+      "dryRun": "None"
+    },
+    "General": {
+      "dryRun": "None"
+    }
+  },
+  "timelineData": {
+    "startDate": "2026-03-01",
+    "targetDate": ""
+  }
 }
