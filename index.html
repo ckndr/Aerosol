@@ -649,10 +649,17 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
           <div class="detail-prog-bar"><div class="detail-prog-fill" id="d-fill" style="width:0%"></div></div>
           <span class="detail-pct" id="d-pct"></span>
         </div>
-        <div style="margin-top:.4rem;display:flex;align-items:center;gap:.5rem">
+        <div style="margin-top:.4rem;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap">
           <span style="font-size:.68rem;color:var(--text3);font-family:'DM Mono',monospace">🎯 Target:</span>
           <input type="date" id="d-target-date" style="background:transparent;border:none;border-bottom:1px dashed var(--border2);font-family:'DM Mono',monospace;font-size:.7rem;color:var(--text2);padding:.1rem .2rem;outline:none;width:130px"
             onchange="saveTargetDate(this.dataset.machine, this.value)">
+          <span style="font-size:.68rem;color:var(--text3);font-family:'DM Mono',monospace;margin-left:0.5rem">🏁 Dry Run:</span>
+          <select id="d-dryrun-status" style="background:transparent;border:none;border-bottom:1px dashed var(--border2);font-family:'DM Mono',monospace;font-size:.7rem;color:var(--text2);outline:none;cursor:pointer"
+            onchange="saveDryRunStatus(this.dataset.machine, this.value)">
+            <option value="None" style="background:var(--surface)">None</option>
+            <option value="Pending" style="background:var(--surface)">Dry Run Pending</option>
+            <option value="Complete" style="background:var(--surface)">Dry Run Complete</option>
+          </select>
         </div>
       </div>
       <div class="detail-actions">
@@ -955,11 +962,13 @@ class SyncEngine {
     this.failedPayloads = [];
     this.uiLocked = false;
   }
-  enqueue(tasksData, settingsData, activityLogData) {
+  enqueue(tasksData, settingsData, activityLogData, machineMetaData, timelineDataVal) {
     const payload = JSON.stringify({
       tasks: tasksData,
       settings: { autoSync: settingsData.autoSync },
-      activityLog: activityLogData.slice(0, 50)
+      activityLog: activityLogData.slice(0, 50),
+      machineMeta: machineMetaData || {},
+      timelineData: timelineDataVal || {}
     }, null, 2);
     if (this.queue.length > 0) {
       this.queue[this.queue.length - 1] = { payload, timestamp: Date.now() };
@@ -1052,7 +1061,7 @@ class SyncEngine {
     } catch(e) {}
     return null;
   }
-  setUILock(locked) {
+  setUILock(locked, customDot, customText) {
     this.uiLocked = locked;
     const btns = document.querySelectorAll('.add-task-btn, .btn-save, .ctx-item, .task-menu-btn');
     btns.forEach(b => {
@@ -1060,7 +1069,7 @@ class SyncEngine {
       b.style.opacity = locked ? '0.5' : '';
     });
     if (locked) {
-      setSyncStatus('pending', '● Syncing…', 'Pushing changes…');
+      setSyncStatus('pending', customDot || '● Syncing…', customText || 'Pushing changes…');
     }
   }
   updateUnsavedBanner() {
@@ -1399,6 +1408,7 @@ let activityLog = [];
 const MAX_LOG = 50;
 
 let timelineData = { startDate: '2026-03-01', targetDate: '' };
+let hasInitialPullCompleted = false;
 
 function loadTimeline(){
   try{
@@ -1608,6 +1618,21 @@ function loadState(){
     if(!t.dateFinished) t.dateFinished = '';
   });
   loadMeta();
+  
+  // Initialize dryRun status for machines from their tasks on startup if not set yet
+  MACHINE_ORDER.forEach(m => {
+    if (!MACHINE_META[m]) MACHINE_META[m] = {};
+    if (MACHINE_META[m].dryRun === undefined) {
+      const mt = tasks.filter(t => t.machine === m);
+      const dryRunTask = mt.find(t => t.desc.toLowerCase().includes('dry run'));
+      if (dryRunTask) {
+        MACHINE_META[m].dryRun = dryRunTask.status === 'Completed' ? 'Complete' : 'Pending';
+      } else {
+        MACHINE_META[m].dryRun = 'None';
+      }
+    }
+  });
+  saveMeta();
   loadTimeline();
 }
 
@@ -1642,11 +1667,24 @@ function formatTargetDate(iso){
 }
 function saveTargetDate(machine, date){
   if(!machine) return;
+  if(!isLoggedIn()){ openLoginModal(); return; }
   if(!MACHINE_META[machine]) MACHINE_META[machine] = {};
   MACHINE_META[machine].targetDate = date;
   saveMeta();
+  saveState(); // trigger auto-sync
   renderDashboard();
   toast('Target date saved','success');
+}
+
+function saveDryRunStatus(machine, status){
+  if(!machine) return;
+  if(!isLoggedIn()){ openLoginModal(); return; }
+  if(!MACHINE_META[machine]) MACHINE_META[machine] = {};
+  MACHINE_META[machine].dryRun = status;
+  saveMeta();
+  saveState(); // trigger auto-sync
+  renderDashboard();
+  toast('Dry run status saved','success');
 }
 
 // ═══════════════════════════════════════════════════════
@@ -1981,8 +2019,7 @@ function renderDashboard(){
       const ePend   = mt.filter(t => t.category === 'Electrical' && t.status !== 'Completed').length;
       const mPend   = mt.filter(t => t.category === 'Mechanical' && t.status !== 'Completed').length;
       const gPend   = mt.filter(t => t.category === 'General' && t.status !== 'Completed').length;
-      const dryRunTask = mt.find(t => t.desc.toLowerCase().includes('dry run'));
-      const dryRunStatus = dryRunTask ? dryRunTask.status : null;
+      const dryRunStatus = MACHINE_META[m]?.dryRun || 'None';
       const dash    = `${(pct/100*C).toFixed(1)} ${C.toFixed(1)}`;
 
       const card = document.createElement('div');
@@ -2015,16 +2052,12 @@ function renderDashboard(){
         <div class="card-foot">
           <span class="card-pend">${pending ? pending+' remaining' : done+' done'}</span>
           ${(() => {
-            if (!dryRunStatus) return '';
-            if (dryRunStatus === 'Completed') {
+            if (dryRunStatus === 'Complete') {
               return `<span style="font-size:.62rem;font-weight:600;color:var(--s-cp-t);background:var(--s-cp-bg);border:1px solid var(--s-cp-b);border-radius:20px;padding:.15rem .5rem;font-family:'DM Mono',monospace;">✓ Dry Run Complete</span>`;
-            } else if (dryRunStatus === 'In Progress') {
-              return `<span style="font-size:.62rem;font-weight:600;color:var(--s-ip-t);background:var(--s-ip-bg);border:1px solid var(--s-ip-b);border-radius:20px;padding:.15rem .5rem;font-family:'DM Mono',monospace;">⏳ Dry Run In Progress</span>`;
-            } else if (dryRunStatus === 'Not Started') {
+            } else if (dryRunStatus === 'Pending') {
               return `<span style="font-size:.62rem;font-weight:600;color:var(--s-ns-t);background:var(--s-ns-bg);border:1px solid var(--s-ns-b);border-radius:20px;padding:.15rem .5rem;font-family:'DM Mono',monospace;">✗ Dry Run Pending</span>`;
-            } else {
-              return `<span style="font-size:.62rem;font-weight:600;color:var(--s-ip-t);background:var(--s-ip-bg);border:1px solid var(--s-ip-b);border-radius:20px;padding:.15rem .5rem;font-family:'DM Mono',monospace;">⏳ Dry Run Pending</span>`;
             }
+            return '';
           })()}
           <span class="card-arrow">→</span>
         </div>`;
@@ -2125,6 +2158,13 @@ function showMachine(m){
   if(dtEl){
     dtEl.value = meta.targetDate || '';
     dtEl.dataset.machine = m;
+    dtEl.disabled = !isLoggedIn();
+  }
+  const drEl = document.getElementById('d-dryrun-status');
+  if(drEl){
+    drEl.value = meta.dryRun || 'None';
+    drEl.dataset.machine = m;
+    drEl.disabled = !isLoggedIn();
   }
 
   // Gallery — HIDE by default, show button if photos exist
@@ -2652,12 +2692,13 @@ async function testSync(){
 async function pushToGitHub(){
   const key = settings.syncKey;
   if(!key){ toast('Add a GitHub token in Settings first','error'); navigate('settings'); return; }
-  syncEngine.enqueue(tasks, settings, activityLog);
+  syncEngine.enqueue(tasks, settings, activityLog, MACHINE_META, timelineData);
   syncEngine.flush();
 }
 
 async function pullFromGitHub(){
   setSyncStatus('pending','● Pulling…','Fetching from GitHub…');
+  syncEngine.setUILock(true, '● Pulling…', 'Fetching from GitHub…');
   try {
     const key = settings.syncKey || (currentUser && currentUser.token);
     const headers = {};
@@ -2680,6 +2721,14 @@ async function pullFromGitHub(){
         if(Array.isArray(data.activityLog)){
           activityLog = data.activityLog;
           try { localStorage.setItem(STORAGE_KEY+'_log', JSON.stringify(activityLog)); } catch(e){}
+        }
+        if(data.machineMeta){
+          Object.assign(MACHINE_META, data.machineMeta);
+          saveMeta();
+        }
+        if(data.timelineData){
+          timelineData = {...timelineData, ...data.timelineData};
+          saveTimeline();
         }
         saveState(); renderAll();
         setSyncStatus('ok','● Synced','Pulled ' + tasks.length + ' tasks from GitHub');
@@ -2704,6 +2753,14 @@ async function pullFromGitHub(){
           activityLog = data.activityLog;
           try { localStorage.setItem(STORAGE_KEY+'_log', JSON.stringify(activityLog)); } catch(e){}
         }
+        if(data.machineMeta){
+          Object.assign(MACHINE_META, data.machineMeta);
+          saveMeta();
+        }
+        if(data.timelineData){
+          timelineData = {...timelineData, ...data.timelineData};
+          saveTimeline();
+        }
         saveState(); renderAll();
         setSyncStatus('ok','● Synced','Pulled ' + tasks.length + ' tasks from GitHub');
         toast('Pulled ' + tasks.length + ' tasks from GitHub ✓','success');
@@ -2715,6 +2772,10 @@ async function pullFromGitHub(){
   } catch(e){
     setSyncStatus('err','● Pull failed',e.message);
     toast('Pull failed — ' + e.message,'error');
+  } finally {
+    hasInitialPullCompleted = true;
+    syncEngine.setUILock(false);
+    updateSyncUI();
   }
 }
 
@@ -2778,8 +2839,8 @@ function updateSyncUI(){
 const _origSave = saveState;
 saveState = function(){
   _origSave.call(this);
-  if(settings.autoSync && settings.syncKey){
-    syncEngine.enqueue(tasks, settings, activityLog);
+  if(hasInitialPullCompleted && settings.autoSync && settings.syncKey){
+    syncEngine.enqueue(tasks, settings, activityLog, MACHINE_META, timelineData);
   }
 };
 
@@ -2980,6 +3041,11 @@ function updateAuthUI(){
   editEls.forEach(el => {
     el.style.display = isLoggedIn() ? '' : 'none';
   });
+  
+  const dtEl = document.getElementById('d-target-date');
+  if(dtEl) dtEl.disabled = !isLoggedIn();
+  const drEl = document.getElementById('d-dryrun-status');
+  if(drEl) drEl.disabled = !isLoggedIn();
   
   const dashAddBtn = document.querySelector('#view-dashboard .btn-sm.primary');
   if(dashAddBtn) dashAddBtn.style.display = isLoggedIn() ? '' : 'none';
@@ -3248,7 +3314,7 @@ document.addEventListener('keydown', e => {
 });
 
 window.addEventListener('beforeunload', (e) => {
-  if(syncBusy){
+  if(syncEngine && syncEngine.isFlushing){
     e.preventDefault();
     e.returnValue = 'Changes are still syncing to GitHub. Leave anyway?';
   }
