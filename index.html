@@ -518,7 +518,7 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
   <div class="header-container">
     <div class="header-brand" onclick="resetFilters(); navigate('dashboard');" style="cursor: pointer;">
       <div class="header-title">Aerosol Plant Project Tracker</div>
-      <div class="header-sub">Created by Sikander · Planning Lead</div>
+      <div class="header-sub">Created by <strong>Sikander</strong> -- Planning Lead</div>
     </div>
     <div class="header-actions">
       <div class="live-dot" title="Data active"></div>
@@ -922,16 +922,13 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
       <button class="modal-close" onclick="closeLoginModal()" id="login-close-btn" style="display:none">✕</button>
     </div>
     <p style="font-size:.82rem;color:var(--text2);margin-bottom:1rem;line-height:1.5">
-      Enter the project GitHub token to enable editing. Without logging in, you can view tasks in read-only mode.
+      Enter your personal GitHub token to log in. Your name will be verified automatically.
+      To get a personal token, contact <strong>Sikander</strong> - <span style="display:inline-flex;align-items:center;gap:3px;vertical-align:middle;color:var(--accent);font-weight:600"><svg style="width:14px;height:14px;fill:#25D366;vertical-align:middle" viewBox="0 0 24 24"><path d="M12.004 2c-5.518 0-9.996 4.478-9.996 9.996 0 1.874.52 3.63 1.426 5.148l-1.434 5.252 5.378-1.412c1.472.84 3.16 1.316 4.962 1.316 5.518 0 9.996-4.478 9.996-9.996S17.522 2 12.004 2zm0 1.5c4.686 0 8.496 3.81 8.496 8.496 0 4.686-3.81 8.496-8.496 8.496-1.58 0-3.064-.436-4.346-1.196l-.312-.184-3.184.836.852-3.116-.202-.322c-.822-1.328-1.298-2.902-1.298-4.59 0-4.686 3.81-8.496 8.496-8.496zm-2.822 3.19c-.198 0-.398.058-.564.174-.462.324-.766.864-.766 1.47 0 .866.47 1.834 1.386 2.87 1.042 1.184 2.372 2.228 3.626 2.846.52.256 1.156.41 1.766.41.628 0 1.2-.218 1.542-.612.3-.346.402-.822.402-1.22 0-.256-.056-.474-.15-.626-.14-.226-.402-.34-.728-.492l-1.354-.626c-.282-.132-.564-.176-.798.026l-.548.514c-.13.12-.294.154-.452.07-.464-.24-.926-.548-1.344-.926-.418-.378-.766-.826-1.018-1.318-.088-.172-.058-.352.08-.48l.432-.4c.184-.174.22-.382.15-.62L9.91 7.15c-.11-.382-.346-.62-.728-.62v.004z"/></svg>0336-0842895</span>
     </p>
     <div class="form-grid" style="grid-template-columns:1fr">
       <div class="form-group full">
-        <label>Your Display Name</label>
-        <input id="login-name" placeholder="Your name" autocomplete="name">
-      </div>
-      <div class="form-group full">
         <label>GitHub Token</label>
-        <input id="login-token" type="password" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx">
+        <input id="login-token" type="password" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx or github_pat_...">
       </div>
     </div>
     <div class="modal-footer">
@@ -2970,20 +2967,63 @@ function saveUser(){
 
 function isLoggedIn(){ return currentUser && currentUser.token && currentUser.name; }
 
-function attemptLogin(){
-  const name = document.getElementById('login-name').value.trim();
+async function attemptLogin(){
   const token = document.getElementById('login-token').value.trim();
-  if(!name){ toast('Please enter your display name','error'); return; }
-  if(!token || !token.startsWith('ghp_')){ toast('Please enter a valid GitHub token (starts with ghp_)','error'); return; }
+  if(!token || (!token.startsWith('ghp_') && !token.startsWith('github_pat_'))){ 
+    toast('Please enter a valid GitHub token (starts with ghp_ or github_pat_)','error'); 
+    return; 
+  }
   
-  currentUser = { name, token };
-  settings.syncKey = token;
-  saveUser();
-  saveState();
-  updateAuthUI();
-  closeLoginModal();
-  toast(`Welcome, ${name}! You can now edit tasks.`, 'success');
-  setTimeout(pullFromGitHub, 500);
+  // Get the last 6 characters of the token as a identifier/suffix
+  const suffix = token.slice(-6).toLowerCase();
+  
+  // Mapping from the token suffix (last 6 characters) to Display Name
+  // Replace these placeholder suffixes with the last 6 characters of your actual generated tokens!
+  const TOKEN_MAP = {
+    'abcdef': 'Sikander', // Replace 'abcdef' with the last 6 characters of Sikander's token
+    '123456': 'Saqib',    // Replace '123456' with the last 6 characters of Saqib's token
+    '789012': 'Arsalan'   // Replace '789012' with the last 6 characters of Arsalan's token
+  };
+  
+  const name = TOKEN_MAP[suffix];
+  if(!name){
+    toast('Unauthorized token suffix. Contact Sikander to map your token.','error');
+    return;
+  }
+  
+  // Show loading indicator
+  const loginBtn = document.querySelector('#login-modal .btn-save');
+  const origText = loginBtn.textContent;
+  loginBtn.textContent = 'Verifying…';
+  loginBtn.disabled = true;
+  
+  try {
+    // Check if the token has repository access by fetching the api
+    const r = await fetch(GH_API, {
+      headers: {
+        'Authorization': 'token ' + token,
+        'Accept': 'application/vnd.github.v3+json'
+      }
+    });
+    
+    if(!r.ok && r.status !== 404) { // 404 is OK (means the repository is accessible but file doesn't exist yet)
+      throw new Error(r.status === 401 ? 'Invalid token' : 'HTTP ' + r.status);
+    }
+    
+    currentUser = { name, token };
+    settings.syncKey = token;
+    saveUser();
+    saveState();
+    updateAuthUI();
+    closeLoginModal();
+    toast(`Welcome, ${name}! You can now edit tasks.`, 'success');
+    setTimeout(pullFromGitHub, 500);
+  } catch(e) {
+    toast('Login failed — ' + e.message, 'error');
+  } finally {
+    loginBtn.textContent = origText;
+    loginBtn.disabled = false;
+  }
 }
 
 function logout(){
@@ -3007,8 +3047,10 @@ function handleAuthClick(){
 }
 
 function openLoginModal(){
-  document.getElementById('login-name').value = currentUser ? currentUser.name : '';
-  document.getElementById('login-token').value = currentUser ? currentUser.token : (settings.syncKey || '');
+  const tokenInput = document.getElementById('login-token');
+  if(tokenInput) {
+    tokenInput.value = currentUser ? currentUser.token : (settings.syncKey || '');
+  }
   document.getElementById('login-close-btn').style.display = isLoggedIn() ? 'flex' : 'none';
   document.getElementById('login-modal').style.display = 'flex';
 }
