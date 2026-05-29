@@ -2852,7 +2852,7 @@
   ],
   "machineMeta": {
     "Press": {
-      "dryRun": "None"
+      "dryRun": "Complete"
     },
     "Trimming": {
       "dryRun": "Complete"
