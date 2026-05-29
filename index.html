@@ -73,13 +73,13 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;min
 @keyframes fade-up{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 
 /* ── HEADER ── */
-header{background:var(--surface);border-bottom:1px solid var(--border);padding:1.5rem 1.5rem;position:sticky;top:env(safe-area-inset-top);z-index:40}
-.header-container{max-width:1200px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:1.1rem;text-align:center;width:100%}
-.header-brand{display:flex;flex-direction:column;align-items:center;text-decoration:none}
-.header-title{font-family:'Fraunces',serif;font-size:1.85rem;font-weight:600;line-height:1.25;color:var(--text);letter-spacing:-0.015em;transition:color .2s}
+header{background:var(--surface);border-bottom:1px solid var(--border);padding:.75rem 1.5rem;position:sticky;top:env(safe-area-inset-top);z-index:40}
+.header-container{max-width:1400px;margin:0 auto;display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:1rem;width:100%}
+.header-brand{display:flex;flex-direction:column;align-items:flex-start;text-decoration:none;flex-shrink:0}
+.header-title{font-family:'Fraunces',serif;font-size:1.35rem;font-weight:600;line-height:1.2;color:var(--text);letter-spacing:-0.015em;transition:color .2s}
 .header-title:hover{color:var(--accent)}
-.header-sub{font-family:'DM Mono',monospace;font-size:.68rem;color:var(--text3);letter-spacing:.08em;text-transform:uppercase;margin-top:.35rem}
-.header-actions{display:flex;gap:.5rem;align-items:center;justify-content:center;flex-wrap:wrap}
+.header-sub{font-family:'DM Mono',monospace;font-size:.62rem;color:var(--text3);letter-spacing:.06em;margin-top:.2rem}
+.header-actions{display:flex;gap:.4rem;align-items:center;flex-wrap:nowrap}
 .icon-btn{width:34px;height:34px;border:1px solid var(--border);background:var(--surface2);border-radius:8px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:border-color .2s,background .2s;color:var(--text2);font-size:.85rem}
 .icon-btn:hover{border-color:var(--border3);background:var(--surface3);color:var(--text)}
 .icon-btn.active{background:var(--accent);border-color:var(--accent);color:#fff}
@@ -96,10 +96,16 @@ header{background:var(--surface);border-bottom:1px solid var(--border);padding:1
 .kv{font-family:'Fraunces',serif;font-size:clamp(1.1rem,4vw,1.7rem);font-weight:600;line-height:1}
 .kl{font-size:clamp(0.55rem,1.5vw,0.62rem);font-weight:500;color:var(--text2);letter-spacing:.07em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .kpi.overall .kv{color:var(--accent)}
+.kpi.overall{border-left:3px solid var(--accent)}
 .kpi.total .kv{color:var(--text)}
 .kpi.done .kv{color:#4ade80}
+.kpi.done{border-left:3px solid #4ade80}
 .kpi.inprog .kv{color:#fbbf24}
+.kpi.inprog{border-left:3px solid #f59e0b}
 .kpi.procure .kv{color:#d97706}
+.kpi.procure{border-left:3px solid #d97706}
+.kpi.notstarted{border-left:3px solid var(--border3)}
+.kpi.active{border-left-color:var(--accent)!important}
 
 /* ── FILTER BAR ── */
 .filter-bar{background:var(--surface);border-bottom:1px solid var(--border);padding:.75rem 1.5rem;display:none;flex-wrap:wrap;gap:.6rem;align-items:center}
@@ -131,7 +137,9 @@ main{padding:1.5rem;max-width:1400px;margin:0 auto}
 .ring-svg{width:40px;height:40px;transform:rotate(-90deg)}
 .ring-track{fill:none;stroke:var(--border2);stroke-width:3}
 .ring-fill{fill:none;stroke:var(--accent);stroke-width:3;stroke-linecap:round;transition:stroke-dasharray 1.2s cubic-bezier(.4,0,.2,1)}
-.ring-num{display:none}
+.ring-num{display:none;position:absolute;inset:0;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:.5rem;font-weight:500;color:var(--text2)}
+.ring-wrap:hover .ring-num{display:flex}
+.ring-wrap:hover .ring-svg{opacity:.35}
 .card-name{font-size:.95rem;font-weight:600;color:var(--text);margin-bottom:.4rem}
 .card-tags{display:flex;gap:.35rem;flex-wrap:wrap;margin-bottom:.8rem}
 .ctag{font-size:.65rem;font-weight:500;padding:.15rem .45rem;border-radius:20px}
@@ -505,6 +513,10 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
   margin-top:.25rem;
   letter-spacing:.02em;
 }
+@media(max-width:900px){
+  .btn-label{display:none}
+  .icon-btn[style*="width:auto"]{width:34px;padding:0}
+}
 </style>
 </head>
 <body>
@@ -516,9 +528,9 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
 
 <header>
   <div class="header-container">
-    <div class="header-brand" onclick="resetFilters(); navigate('dashboard');" style="cursor: pointer;">
+    <div class="header-brand" onclick="resetFilters(); navigate('dashboard');" style="cursor:pointer;">
       <div class="header-title">Aerosol Plant Project Tracker</div>
-      <div class="header-sub">Created by <strong>Sikander</strong> -- Planning Lead</div>
+      <div class="header-sub">Planned & developed by <strong>Sikander</strong> · Planning Lead, Alpha Containers</div>
     </div>
     <div class="header-actions">
       <div class="live-dot" title="Data active"></div>
@@ -527,17 +539,13 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
         👤 <span id="my-tasks-label">My Tasks</span>
       </button>
       <button class="icon-btn" id="auth-btn" title="Login to edit" onclick="handleAuthClick()">🔓</button>
-      <button class="icon-btn" id="recent-btn" 
-              title="Recently added or updated tasks"
-              onclick="toggleRecentTasks()"
-              style="width:auto;padding:0 .65rem;font-size:.75rem;
-                     font-weight:500;gap:.3rem">
-        🕐 <span>Recent</span>
+      <button class="icon-btn" id="recent-btn" title="Recently updated tasks" onclick="toggleRecentTasks()" style="width:auto;padding:0 .65rem;font-size:.75rem;font-weight:500;gap:.3rem">
+        🕐 <span class="btn-label">Recent</span>
       </button>
       <button class="icon-btn" id="filter-toggle-btn" title="Toggle Search & Filters" onclick="toggleFilterBar()" style="position:relative">🔍<span class="badge" id="filter-active-badge" style="display:none;position:absolute;top:-4px;right:-4px;background:var(--accent);color:#fff;font-size:9px;width:14px;height:14px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold;">0</span></button>
       <button class="icon-btn" id="btn-import" title="Import Excel" onclick="triggerImport()">📥</button>
       <button class="icon-btn" id="btn-export" title="Export Excel" onclick="exportExcel()">📤</button>
-      <button class="icon-btn" title="Print / Export PDF" onclick="window.print()" style="gap:.3rem;width:auto;padding:0 .6rem;font-size:.72rem;">🖨️ <span style="font-family:'DM Sans',sans-serif;font-weight:500;">Print</span></button>
+      <button class="icon-btn" title="Print / Export PDF" onclick="window.print()" style="gap:.3rem;width:auto;padding:0 .6rem;font-size:.72rem;">🖨️ <span class="btn-label" style="font-family:'DM Sans',sans-serif;font-weight:500;">Print</span></button>
       <button class="icon-btn" title="Settings" onclick="navigate('settings')">⚙️</button>
       <button class="icon-btn" id="theme-btn" title="Toggle light / dark mode" onclick="toggleTheme()">🌙</button>
     </div>
@@ -685,7 +693,7 @@ input[type=range]{padding:.3rem 0;background:transparent;border:none;accent-colo
         <div class="settings-info"><div class="settings-label">Version</div><div class="settings-desc">Aerosol Plant Tracker v4.0 · Alpha Containers (Pvt.) Ltd.</div></div>
       </div>
       <div class="settings-row">
-        <div class="settings-info"><div class="settings-label">Credit</div><div class="settings-desc">Planned & Designed by <strong>Sikander</strong> — Project Planning Lead</div></div>
+        <div class="settings-info"><div class="settings-label">Credit</div><div class="settings-desc">Planned & developed by <strong>Sikander</strong> · Planning Lead, Alpha Aerosol</div></div>
       </div>
       <div class="settings-row">
         <div class="settings-info"><div class="settings-label">Install as App</div><div class="settings-desc">Open in Chrome/Safari → Share → Add to Home Screen for full PWA experience</div></div>
@@ -3444,6 +3452,10 @@ function closePieModal(){
     </div>
     <div id="pie-chart-container"></div>
   </div>
+</div>
+
+<div class="credit-watermark">
+  <span>Planned & developed by Sikander · Planning Lead</span>
 </div>
 
 </body>
