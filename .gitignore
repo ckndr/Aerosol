@@ -1,5 +1,6 @@
 # Dependencies
 node_modules/
+package*.json
 # OS artifacts
 Thumbs.db
 **/Thumbs.db
