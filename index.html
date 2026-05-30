@@ -8,6 +8,16 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="apple-touch-startup-image" href="splash/apple-splash-1179-2556.png" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="splash/apple-splash-1290-2796.png" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="splash/apple-splash-1170-2532.png" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="splash/apple-splash-1284-2778.png" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="splash/apple-splash-828-1792.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="splash/apple-splash-1242-2688.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="splash/apple-splash-1125-2436.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="splash/apple-splash-750-1334.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="splash/apple-splash-1242-2208.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
   <meta name="description" content="Live installation progress tracker for Alpha Containers Aerosol Plant">
   <meta property="og:title" content="Aerosol Plant Tracker · Alpha Containers">
   <meta property="og:description" content="Real-time aerosol plant installation progress tracker">
@@ -2050,9 +2060,14 @@
 
   <header>
     <div class="header-container">
-      <div class="header-brand" onclick="clearFilters(); navigate('dashboard');" style="cursor:pointer;">
-        <div class="header-title">Aerosol Plant Project Tracker</div>
-        <div class="header-sub">Planned & developed by <strong>Sikander</strong> · Planning Lead, Alpha Aerosol</div>
+      <div class="header-brand" onclick="clearFilters(); navigate('dashboard');" style="cursor:pointer;" aria-label="Aerosol Plant Project Tracker Home">
+        <div style="display:flex; align-items:center; gap:0.85rem;">
+          <img src="logo_light.png" id="header-logo" alt="Alpha Containers Logo" style="height:32px; width:auto; display:block; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.05)); transition: transform 0.2s ease-in-out;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          <div style="display:flex; flex-direction:column; align-items:flex-start;">
+            <div class="header-title">Aerosol Plant Project Tracker</div>
+            <div class="header-sub">Planned & developed by <strong>Sikander</strong> · Planning Lead, Alpha Aerosol</div>
+          </div>
+        </div>
       </div>
       <div class="header-actions">
         <div class="live-dot" title="Data active"></div>
@@ -2521,7 +2536,10 @@
   <div class="modal-overlay center" id="login-modal" role="dialog" aria-modal="true" style="display:none"
     onclick="if(event.target===this&&currentUser)closeLoginModal()">
     <div class="modal">
-      <div class="modal-header">
+      <div style="text-align:center; margin:1.25rem 0 0.75rem 0;">
+        <img src="logo_light.png" class="login-logo" alt="Alpha Containers Logo" style="height:48px; width:auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.08));">
+      </div>
+      <div class="modal-header" style="justify-content:center; border-bottom:none; padding-bottom:0.25rem;">
         <div class="modal-title">🔐 Login to Edit</div>
         <button class="modal-close" onclick="closeLoginModal()" id="login-close-btn" style="display:none">✕</button>
       </div>
@@ -4907,6 +4925,16 @@
       const btn = document.getElementById('theme-btn');
       if (btn) btn.textContent = t === 'light' ? '🌙' : '☀️';
       btn && (btn.title = t === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode');
+      
+      // Update logo image source based on theme
+      const logoImg = document.getElementById('header-logo');
+      if (logoImg) {
+        logoImg.src = t === 'light' ? 'logo_light.png' : 'logo_dark.png';
+      }
+      const loginLogo = document.querySelector('.login-logo');
+      if (loginLogo) {
+        loginLogo.src = t === 'light' ? 'logo_light.png' : 'logo_dark.png';
+      }
     }
 
     function toggleTheme() {
