@@ -2821,6 +2821,23 @@
       "waitingOn": "Test",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t_194945",
+      "machine": "Decoration Oven",
+      "category": "Electrical",
+      "desc": "Cable trays installation",
+      "priority": "High",
+      "progress": 100,
+      "status": "Completed",
+      "responsible": "Arsalan",
+      "remarks": "",
+      "updated": "",
+      "waitingOn": "",
+      "image": "",
+      "lastEditedBy": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
