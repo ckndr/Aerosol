@@ -3950,22 +3950,25 @@
       if (!isLoggedIn()) { openLoginModal(); return; }
       const t = tasks.find(t => t.id === id);
       if (!t) return;
+      const prevTask = JSON.parse(JSON.stringify(t));
       t.status = status;
       if (status === 'Completed') t.progress = 100;
       t.lastEditedBy = isLoggedIn() ? currentUser.name : 'Unknown';
       t.updated = new Date().toLocaleDateString('en-PK', { day: 'numeric', month: 'short', year: 'numeric' });
-      logActivity(`Changed status of "${t.desc.slice(0, 30)}..." on ${t.machine} to "${status}"`, id);
+      logActivity(`Changed status of "${t.desc.slice(0, 30)}..." on ${t.machine} to "${status}"`, id, { type: 'status', prevTask });
       saveState(); renderAll(); toast('Status updated — ' + status, 'success');
     }
 
     function confirmDelete(id) {
       if (!isLoggedIn()) { openLoginModal(); return; }
       const t = tasks.find(t => t.id === id);
-      const desc = t ? t.desc : '';
-      const mach = t ? t.machine : '';
-      logActivity(`Deleted task "${desc.slice(0, 30)}..." from ${mach}`);
-      const toastEl = showUndoToast(t ? `"${t.desc.slice(0, 40)}…" deleted` : 'Task deleted');
-      lastDeletedTask = JSON.parse(JSON.stringify(tasks.find(t => t.id === id)));
+      if (!t) return;
+      const desc = t.desc;
+      const mach = t.machine;
+      const prevTask = JSON.parse(JSON.stringify(t));
+      logActivity(`Deleted task "${desc.slice(0, 30)}..." from ${mach}`, null, { type: 'delete', prevTask });
+      const toastEl = showUndoToast(`"${t.desc.slice(0, 40)}…" deleted`);
+      lastDeletedTask = prevTask;
       tasks = tasks.filter(t => t.id !== id);
       saveState(); renderAll();
     }
@@ -4153,14 +4156,17 @@
       const lastEditedBy = isLoggedIn() ? currentUser.name : 'Unknown';
       if (editingId) {
         const t = tasks.find(t => t.id === editingId);
-        Object.assign(t, {
-          machine, category, desc, priority, status, progress, remarks, responsible, updated, lastEditedBy, image: imagePath,
-          waitingOn: document.getElementById('f-waitingon').value.trim(),
-          dateStarted: document.getElementById('f-datestarted')?.value || '',
-          dateFinished: document.getElementById('f-datefinished')?.value || ''
-        });
-        logActivity(`Updated task "${desc.slice(0, 30)}..." on ${machine}`, editingId);
-        toast('Task updated ✓', 'success');
+        if (t) {
+          const prevTask = JSON.parse(JSON.stringify(t));
+          Object.assign(t, {
+            machine, category, desc, priority, status, progress, remarks, responsible, updated, lastEditedBy, image: imagePath,
+            waitingOn: document.getElementById('f-waitingon').value.trim(),
+            dateStarted: document.getElementById('f-datestarted')?.value || '',
+            dateFinished: document.getElementById('f-datefinished')?.value || ''
+          });
+          logActivity(`Updated task "${desc.slice(0, 30)}..." on ${machine}`, editingId, { type: 'edit', prevTask });
+          toast('Task updated ✓', 'success');
+        }
       } else {
         const newId = uid();
         tasks.push({
@@ -4169,7 +4175,7 @@
           dateStarted: document.getElementById('f-datestarted')?.value || '',
           dateFinished: document.getElementById('f-datefinished')?.value || ''
         });
-        logActivity(`Added task "${desc.slice(0, 30)}..." to ${machine}`, newId);
+        logActivity(`Added task "${desc.slice(0, 30)}..." to ${machine}`, newId, { type: 'add', taskId: newId });
         toast('Task added ✓', 'success');
       }
       closeModal();
@@ -4183,9 +4189,11 @@
       if (!isLoggedIn()) { openLoginModal(); return; }
       if (!editingId) return;
       const t = tasks.find(t => t.id === editingId);
-      const desc = t ? t.desc : '';
-      const mach = t ? t.machine : '';
-      logActivity(`Deleted task "${desc.slice(0, 30)}..." from ${mach}`);
+      if (!t) return;
+      const desc = t.desc;
+      const mach = t.machine;
+      const prevTask = JSON.parse(JSON.stringify(t));
+      logActivity(`Deleted task "${desc.slice(0, 30)}..." from ${mach}`, null, { type: 'delete', prevTask });
       tasks = tasks.filter(t => t.id !== editingId);
       closeModal(); saveState(); renderAll();
       toast('Task deleted', 'info');
@@ -4587,11 +4595,10 @@
       const suffix = token.slice(-6).toLowerCase();
 
       // Mapping from the token suffix (last 6 characters) to Display Name
-      // Replace these placeholder suffixes with the last 6 characters of your actual generated tokens!
       const TOKEN_MAP = {
-        'abcdef': 'Sikander', // Replace 'abcdef' with the last 6 characters of Sikander's token
-        '123456': 'Saqib',    // Replace '123456' with the last 6 characters of Saqib's token
-        '789012': 'Arsalan'   // Replace '789012' with the last 6 characters of Arsalan's token
+        '2hnye2': 'Sikander',
+        '2zpn5z': 'Saqib',
+        '789012': 'Arsalan'
       };
 
       const name = TOKEN_MAP[suffix];
@@ -4727,9 +4734,15 @@
     }
 
     let _logDirty = false;
-    function logActivity(action, taskId) {
+    function logActivity(action, taskId, undoData = null) {
       const who = isLoggedIn() ? currentUser.name : 'Anonymous';
-      const entry = { time: new Date().toISOString(), action: `[${who}] ${action}`, user: who };
+      const entry = {
+        id: uid(),
+        time: new Date().toISOString(),
+        action: `[${who}] ${action}`,
+        user: who,
+        undoData
+      };
       if (taskId) entry.taskId = taskId;
       activityLog.unshift(entry);
       if (activityLog.length > MAX_LOG) activityLog.length = MAX_LOG;
@@ -4750,6 +4763,66 @@
       } catch (e) { activityLog = []; }
     }
 
+    function undoActivity(entryId) {
+      if (!isLoggedIn() || currentUser.name !== 'Sikander') {
+        toast('Only Sikander can undo actions', 'error');
+        return;
+      }
+      const entry = activityLog.find(e => e.id === entryId);
+      if (!entry) {
+        toast('Activity not found', 'error');
+        return;
+      }
+      if (entry.undone) {
+        toast('Action already undone', 'info');
+        return;
+      }
+
+      const undo = entry.undoData;
+      if (!undo) {
+        toast('This action cannot be undone', 'error');
+        return;
+      }
+
+      try {
+        if (undo.type === 'add') {
+          tasks = tasks.filter(t => t.id !== undo.taskId);
+        } else if (undo.type === 'delete') {
+          if (undo.prevTask) {
+            tasks.push(undo.prevTask);
+          }
+        } else if (undo.type === 'edit' || undo.type === 'status') {
+          if (undo.prevTask) {
+            const index = tasks.findIndex(t => t.id === undo.prevTask.id);
+            if (index !== -1) {
+              tasks[index] = undo.prevTask;
+            } else {
+              tasks.push(undo.prevTask);
+            }
+          }
+        } else if (undo.type === 'bulk') {
+          if (Array.isArray(undo.prevTasks)) {
+            undo.prevTasks.forEach(pt => {
+              const index = tasks.findIndex(t => t.id === pt.id);
+              if (index !== -1) {
+                tasks[index] = pt;
+              } else {
+                tasks.push(pt);
+              }
+            });
+          }
+        }
+
+        entry.undone = true;
+        logActivity(`Undid action: "${entry.action.replace(/^\[.*?\]\s*/, '')}"`);
+        saveState();
+        renderAll();
+        toast('Action undone successfully ✓', 'success');
+      } catch (e) {
+        toast('Failed to undo: ' + e.message, 'error');
+      }
+    }
+
     function renderActivityLog() {
       const container = document.getElementById('activity-log-container');
       if (!container) return;
@@ -4763,8 +4836,15 @@
         const actionHtml = task
           ? `<span style="cursor:pointer;color:var(--accent);text-decoration:underline;text-underline-offset:2px" onclick="openEditModal('${entry.taskId}')">${escapeHTML(entry.action)}</span>`
           : `<span>${escapeHTML(entry.action || '')}</span>`;
-        return `<div style="border-bottom:1px solid var(--border);padding-bottom:.25rem;margin-bottom:.25rem">
-      <span style="color:var(--text3)">[${date}]</span> ${actionHtml}
+
+        const showUndo = isLoggedIn() && currentUser.name === 'Sikander' && entry.undoData && !entry.undone;
+        const undoBtnHtml = showUndo
+          ? `<button onclick="event.stopPropagation(); undoActivity('${entry.id}')" style="background:none;border:1px solid var(--border3);color:var(--accent);padding:0 .4rem;border-radius:4px;font-size:.7rem;cursor:pointer;font-family:'DM Sans',sans-serif;height:20px;display:flex;align-items:center;transition:all 0.2s;" onmouseover="this.style.background='var(--accent)';this.style.color='white'" onmouseout="this.style.background='none';this.style.color='var(--accent)'">Undo</button>`
+          : entry.undone ? `<span style="color:var(--text3);font-size:.7rem;font-style:italic">Undone</span>` : '';
+
+        return `<div style="display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);padding-bottom:.25rem;margin-bottom:.25rem;gap:.5rem">
+      <div><span style="color:var(--text3)">[${date}]</span> ${actionHtml}</div>
+      ${undoBtnHtml}
     </div>`;
       }).join('');
     }
@@ -4835,10 +4915,17 @@
         const actionHtml = task
           ? `<span style="cursor:pointer;color:var(--accent);text-decoration:underline;text-underline-offset:2px" onclick="openEditModal('${e.taskId}')">${escapeHTML(displayAction)}</span>`
           : `<span>${escapeHTML(displayAction || '')}</span>`;
-        return `<div style="display:flex;gap:.75rem;padding:.25rem 0;border-bottom:1px solid var(--border)">
+
+        const showUndo = isLoggedIn() && currentUser.name === 'Sikander' && e.undoData && !e.undone;
+        const undoBtnHtml = showUndo
+          ? `<button onclick="event.stopPropagation(); undoActivity('${e.id}')" style="background:none;border:1px solid var(--border3);color:var(--accent);padding:0 .4rem;border-radius:4px;font-size:.7rem;cursor:pointer;font-family:'DM Sans',sans-serif;height:20px;display:flex;align-items:center;transition:all 0.2s;" onmouseover="this.style.background='var(--accent)';this.style.color='white'" onmouseout="this.style.background='none';this.style.color='var(--accent)'">Undo</button>`
+          : e.undone ? `<span style="color:var(--text3);font-size:.7rem;font-style:italic">Undone</span>` : '';
+
+        return `<div style="display:flex;align-items:center;gap:.75rem;padding:.25rem 0;border-bottom:1px solid var(--border)">
       <span style="color:var(--text3);flex-shrink:0">${tStr}</span>
       <span style="color:var(--accent);flex-shrink:0">${user}</span>
-      ${actionHtml}
+      <div style="flex:1">${actionHtml}</div>
+      ${undoBtnHtml}
     </div>`;
       }).join('');
     }
@@ -4878,10 +4965,12 @@
       const who = isLoggedIn() ? currentUser.name : 'Unknown';
       const updatedDate = new Date().toLocaleDateString('en-PK', { day: 'numeric', month: 'short', year: 'numeric' });
 
+      const prevTasks = [];
       let updatedCount = 0;
       ids.forEach(id => {
         const t = tasks.find(t => t.id === id);
         if (t) {
+          prevTasks.push(JSON.parse(JSON.stringify(t)));
           t.status = status;
           if (status === 'Completed') t.progress = 100;
           t.lastEditedBy = who;
@@ -4891,7 +4980,7 @@
       });
 
       if (updatedCount > 0) {
-        logActivity(`Bulk updated ${updatedCount} tasks to status "${status}"`);
+        logActivity(`Bulk updated ${updatedCount} tasks to status "${status}"`, null, { type: 'bulk', prevTasks });
         saveState();
         clearSelection();
         renderAll();
