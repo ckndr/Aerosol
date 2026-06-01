@@ -2373,10 +2373,10 @@
       "status": "In Progress",
       "responsible": "Arsalan",
       "remarks": "Oil pump maintenance pending",
-      "updated": "",
+      "updated": "1 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": "Photos/Trimming/task_img_1780311740183.jpg",
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
     },
@@ -2844,6 +2844,33 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1780311742469rsfz",
+      "time": "2026-06-01T11:02:22.469Z",
+      "action": "[Aurangzeb] Updated task \"Oiling / greasing / parts repl...\" on Trimming",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_979590",
+          "machine": "Trimming",
+          "category": "Mechanical",
+          "desc": "Oiling / greasing / parts replacement / testing",
+          "priority": "High",
+          "progress": 80,
+          "status": "In Progress",
+          "responsible": "Arsalan",
+          "remarks": "Oil pump maintenance pending",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_979590"
+    },
     {
       "id": "t17803117066320lrq",
       "time": "2026-06-01T11:01:46.632Z",
