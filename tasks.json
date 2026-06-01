@@ -2288,10 +2288,10 @@
       "status": "Not Started",
       "responsible": "Arsalan",
       "remarks": "",
-      "updated": "",
+      "updated": "1 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": "Photos/Trimming/task_img_1780311501816.jpg",
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
     },
@@ -2861,6 +2861,33 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17803115040823pbc",
+      "time": "2026-06-01T10:58:24.082Z",
+      "action": "[Aurangzeb] Updated task \"closure of chain/gears/pneumat...\" on Trimming",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_467409",
+          "machine": "Trimming",
+          "category": "Mechanical",
+          "desc": "closure of chain/gears/pneumatic assembly with box",
+          "priority": "High",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Arsalan",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_467409"
+    },
     {
       "id": "t1780311429642cbab",
       "time": "2026-06-01T10:57:09.642Z",
