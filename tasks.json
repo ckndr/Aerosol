@@ -1761,10 +1761,10 @@
       "status": "Not Started",
       "responsible": "Arsalan",
       "remarks": "",
-      "updated": "",
+      "updated": "1 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": "Photos/Press/task_img_1780311001799.jpg",
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
     },
@@ -2861,6 +2861,33 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1780311004779y5l5",
+      "time": "2026-06-01T10:50:04.779Z",
+      "action": "[Aurangzeb] Updated task \"Slug tray on/of switch to be i...\" on Press",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_725515",
+          "machine": "Press",
+          "category": "Mechanical",
+          "desc": "Slug tray on/of switch to be installed",
+          "priority": "High",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Arsalan",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_725515"
+    },
     {
       "id": "t1780310942727kgwd",
       "time": "2026-06-01T10:49:02.727Z",
