@@ -1829,10 +1829,10 @@
       "status": "Not Started",
       "responsible": "Arsalan",
       "remarks": "Not Installed Yet",
-      "updated": "",
+      "updated": "1 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": "Photos/Press/task_img_1780311148176.jpg",
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
     },
@@ -2861,6 +2861,33 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1780311150385vxs9",
+      "time": "2026-06-01T10:52:30.385Z",
+      "action": "[Aurangzeb] Updated task \"Place and install the Oil coll...\" on Press",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_604104",
+          "machine": "Press",
+          "category": "Mechanical",
+          "desc": "Place and install the Oil collection tank directly under the tray",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Arsalan",
+          "remarks": "Not Installed Yet",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_604104"
+    },
     {
       "id": "t1780311080038y13i",
       "time": "2026-06-01T10:51:20.038Z",
