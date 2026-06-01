@@ -3837,9 +3837,7 @@
     }
 
     function getAllMachinePhotos(m) {
-      const machineImgs = MACHINE_IMAGES[m] || [];
-      const taskImgs = tasks.filter(t => t.machine === m && t.image).map(t => t.image);
-      return [...machineImgs, ...taskImgs];
+      return MACHINE_IMAGES[m] || [];
     }
 
     function renderDetail() {
