@@ -1,5 +1,5 @@
 // sw.js — Production-ready Service Worker for Aerosol Plant Tracker
-const CACHE_NAME = 'aerosol-tracker-v6';
+const CACHE_NAME = 'aerosol-tracker-v7';
 const PRECACHE_URLS = [
   './',
   './index.html',
@@ -28,6 +28,11 @@ self.addEventListener('activate', event => {
         keys.filter(k => k !== CACHE_NAME).map(k => caches.delete(k))
       )
     ).then(() => self.clients.claim())
+     .then(() => {
+       return self.clients.matchAll({ type: 'window' }).then(clients => {
+         clients.forEach(client => client.postMessage({ type: 'SW_UPDATED' }));
+       });
+     })
   );
 });
 // Fetch — Stale-While-Revalidate for HTML/CSS/JS, Network-First for API
