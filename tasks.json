@@ -909,12 +909,12 @@
       "priority": "Medium",
       "progress": 100,
       "status": "Completed",
-      "responsible": "Arsalan",
+      "responsible": "Saqib",
       "remarks": "",
-      "updated": "",
+      "updated": "1 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": null,
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
     },
@@ -2861,6 +2861,33 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1780310754590ccp9",
+      "time": "2026-06-01T10:45:54.590Z",
+      "action": "[Aurangzeb] Updated task \"Exhaust Sieve — cleaned...\" on Lacquer",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_753071",
+          "machine": "Lacquer",
+          "category": "Mechanical",
+          "desc": "Exhaust Sieve — cleaned",
+          "priority": "Medium",
+          "progress": 100,
+          "status": "Completed",
+          "responsible": "Arsalan",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_753071"
+    },
     {
       "id": "t1780310735656ovps",
       "time": "2026-06-01T10:45:35.656Z",
