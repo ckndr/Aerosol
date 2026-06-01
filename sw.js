@@ -1,5 +1,5 @@
 // sw.js — Production-ready Service Worker for Aerosol Plant Tracker
-const CACHE_NAME = 'aerosol-tracker-v5';
+const CACHE_NAME = 'aerosol-tracker-v6';
 const PRECACHE_URLS = [
   './',
   './index.html',
@@ -33,9 +33,10 @@ self.addEventListener('activate', event => {
 // Fetch — Stale-While-Revalidate for HTML/CSS/JS, Network-First for API
 self.addEventListener('fetch', event => {
   const url = new URL(event.request.url);
-  // GitHub API calls — always network, never cache
+  // GitHub API calls — always network, never cache.
+  // By returning without calling event.respondWith(), we let the browser handle these cross-origin requests natively.
+  // This avoids issues with authorization headers being stripped in standalone PWA/webview modes.
   if (url.hostname === 'api.github.com' || url.hostname === 'raw.githubusercontent.com') {
-    event.respondWith(fetch(event.request));
     return;
   }
   // Google Fonts — Cache-First (fonts rarely change)

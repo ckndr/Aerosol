@@ -2499,11 +2499,19 @@
         </div>
         <div class="form-group full">
           <label>Task Photo</label>
-          <input type="file" id="f-image" accept="image/*" style="font-size:.8rem">
-          <div id="f-image-preview"
-            style="display:none;margin-top:.5rem;position:relative;width:80px;height:80px;border-radius:8px;overflow:hidden;border:1px solid var(--border)">
-            <img id="f-image-img" style="width:100%;height:100%;object-fit:cover;cursor:pointer"
-              onclick="openLightbox(this.src)" alt="Task photo preview">
+          <div style="display:flex;gap:0.5rem;align-items:center;flex-wrap:wrap">
+            <button type="button" id="take-photo-btn" class="btn-sm">📷 Take Photo</button>
+            <button type="button" id="gallery-photo-btn" class="btn-sm">🖼 Choose from Gallery</button>
+            <input type="file" id="f-camera" accept="image/*" capture="environment" style="display:none">
+            <input type="file" id="f-image" accept="image/*" style="display:none">
+          </div>
+          <div style="display:flex;align-items:center;margin-top:.5rem">
+            <div id="f-image-preview"
+              style="display:none;position:relative;width:80px;height:80px;border-radius:8px;overflow:hidden;border:1px solid var(--border)">
+              <img id="f-image-img" style="width:100%;height:100%;object-fit:cover;cursor:pointer"
+                onclick="openLightbox(this.src)" alt="Task photo preview">
+            </div>
+            <button type="button" id="remove-photo-btn" class="btn-sm" style="display:none;color:#f87171;border-color:#7f1d1d;margin-left:0.5rem">✕ Remove Photo</button>
           </div>
         </div>
       </div>
@@ -3998,8 +4006,18 @@
       if (dsEl) dsEl.disabled = readOnly;
       if (dfEl) dfEl.disabled = readOnly;
 
+      const cameraInput = document.getElementById('f-camera');
+      if (cameraInput) cameraInput.disabled = readOnly;
       const imgInput = document.getElementById('f-image');
       if (imgInput) imgInput.disabled = readOnly;
+
+      const takePhotoBtn = document.getElementById('take-photo-btn');
+      if (takePhotoBtn) takePhotoBtn.disabled = readOnly;
+      const galleryBtn = document.getElementById('gallery-photo-btn');
+      if (galleryBtn) galleryBtn.disabled = readOnly;
+
+      const removePhotoBtn = document.getElementById('remove-photo-btn');
+      if (removePhotoBtn && readOnly) removePhotoBtn.style.display = 'none';
 
       const saveBtn = document.querySelector('.btn-save');
       if (saveBtn) saveBtn.style.display = readOnly ? 'none' : 'inline-flex';
@@ -4028,12 +4046,15 @@
       document.getElementById('f-remarks').value = '';
       document.getElementById('f-waitingon').value = '';
       document.getElementById('f-responsible').value = '';
+      document.getElementById('f-camera').value = '';
       document.getElementById('f-image').value = '';
       const dsEl = document.getElementById('f-datestarted');
       const dfEl = document.getElementById('f-datefinished');
       if (dsEl) dsEl.value = '';
       if (dfEl) dfEl.value = '';
       document.getElementById('f-image-preview').style.display = 'none';
+      const removePhotoBtn = document.getElementById('remove-photo-btn');
+      if (removePhotoBtn) removePhotoBtn.style.display = 'none';
       document.getElementById('prog-display').textContent = '0%';
       document.getElementById('prog-num').textContent = '0%';
       document.getElementById('task-modal').style.display = 'flex';
@@ -4055,6 +4076,7 @@
       document.getElementById('f-remarks').value = t.remarks;
       document.getElementById('f-waitingon').value = t.waitingOn || '';
       document.getElementById('f-responsible').value = t.responsible || '';
+      document.getElementById('f-camera').value = '';
       document.getElementById('f-image').value = '';
       const dsEl = document.getElementById('f-datestarted');
       const dfEl = document.getElementById('f-datefinished');
@@ -4063,8 +4085,14 @@
       if (t.image) {
         document.getElementById('f-image-img').src = t.image;
         document.getElementById('f-image-preview').style.display = 'block';
+        const removePhotoBtn = document.getElementById('remove-photo-btn');
+        if (removePhotoBtn) {
+          removePhotoBtn.style.display = isWritable ? 'inline-block' : 'none';
+        }
       } else {
         document.getElementById('f-image-preview').style.display = 'none';
+        const removePhotoBtn = document.getElementById('remove-photo-btn');
+        if (removePhotoBtn) removePhotoBtn.style.display = 'none';
       }
       document.getElementById('prog-display').textContent = t.progress + '%';
       document.getElementById('prog-num').textContent = t.progress + '%';
@@ -4139,10 +4167,9 @@
         if (existingTask) imagePath = existingTask.image || null;
       }
 
-      const fileInput = document.getElementById('f-image');
-      if (fileInput.files.length > 0) {
+      const file = document.getElementById('f-camera').files[0] || document.getElementById('f-image').files[0];
+      if (file) {
         try {
-          const file = fileInput.files[0];
           toast('Optimizing image...', 'info');
           const base64Data = await optimizeImage(file);
           const filename = `task_img_${Date.now()}.jpg`;
@@ -5075,18 +5102,57 @@
     });
 
     // File input change preview handler
-    document.getElementById('f-image').addEventListener('change', function (e) {
+    document.getElementById('f-camera').addEventListener('change', function (e) {
       const file = e.target.files[0];
       if (!file) {
         document.getElementById('f-image-preview').style.display = 'none';
         return;
       }
+      document.getElementById('f-image').value = '';
       const r = new FileReader();
       r.onload = ev => {
         document.getElementById('f-image-img').src = ev.target.result;
         document.getElementById('f-image-preview').style.display = 'block';
       };
       r.readAsDataURL(file);
+    });
+
+    document.getElementById('f-image').addEventListener('change', function (e) {
+      const file = e.target.files[0];
+      if (!file) {
+        document.getElementById('f-image-preview').style.display = 'none';
+        return;
+      }
+      document.getElementById('f-camera').value = '';
+      const r = new FileReader();
+      r.onload = ev => {
+        document.getElementById('f-image-img').src = ev.target.result;
+        document.getElementById('f-image-preview').style.display = 'block';
+      };
+      r.readAsDataURL(file);
+    });
+
+    // Custom buttons to trigger hidden file inputs
+    document.getElementById('take-photo-btn').addEventListener('click', function () {
+      document.getElementById('f-camera').click();
+    });
+
+    document.getElementById('gallery-photo-btn').addEventListener('click', function () {
+      document.getElementById('f-image').click();
+    });
+
+    // Remove photo listener
+    document.getElementById('remove-photo-btn').addEventListener('click', function () {
+      if (editingId) {
+        const t = tasks.find(t => t.id === editingId);
+        if (t) {
+          t.image = null;
+        }
+      }
+      document.getElementById('f-camera').value = '';
+      document.getElementById('f-image').value = '';
+      document.getElementById('f-image-preview').style.display = 'none';
+      this.style.display = 'none';
     });
 
     function showOverallPieChart() {
