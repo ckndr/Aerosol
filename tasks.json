@@ -2356,10 +2356,10 @@
       "status": "Not Started",
       "responsible": "Arsalan",
       "remarks": "Not fixed Yet",
-      "updated": "",
+      "updated": "1 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": "Photos/Trimming/task_img_1780311586986.jpg",
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
     },
@@ -2861,6 +2861,33 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17803115892796tyg",
+      "time": "2026-06-01T10:59:49.279Z",
+      "action": "[Aurangzeb] Updated task \"Fixing of Manual Oil Lubricati...\" on Trimming",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_982251",
+          "machine": "Trimming",
+          "category": "Mechanical",
+          "desc": "Fixing of Manual Oil Lubrication System",
+          "priority": "High",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Arsalan",
+          "remarks": "Not fixed Yet",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_982251"
+    },
     {
       "id": "t1780311554260l2gp",
       "time": "2026-06-01T10:59:14.260Z",
