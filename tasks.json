@@ -2364,23 +2364,6 @@
       "dateFinished": ""
     },
     {
-      "id": "t_583440",
-      "machine": "Trimming",
-      "category": "Mechanical",
-      "desc": "Addition of closed cabinet for trim collection on machine side",
-      "priority": "High",
-      "progress": 0,
-      "status": "Not Started",
-      "responsible": "Arsalan",
-      "remarks": "Not fixed Yet",
-      "updated": "",
-      "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
-      "dateStarted": "",
-      "dateFinished": ""
-    },
-    {
       "id": "t_979590",
       "machine": "Trimming",
       "category": "Mechanical",
@@ -2861,6 +2844,32 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1780311677529k0bd",
+      "time": "2026-06-01T11:01:17.529Z",
+      "action": "[Aurangzeb] Deleted task \"Addition of closed cabinet for...\" from Trimming",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "delete",
+        "prevTask": {
+          "id": "t_583440",
+          "machine": "Trimming",
+          "category": "Mechanical",
+          "desc": "Addition of closed cabinet for trim collection on machine side",
+          "priority": "High",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Arsalan",
+          "remarks": "Not fixed Yet",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      }
+    },
     {
       "id": "t17803115892796tyg",
       "time": "2026-06-01T10:59:49.279Z",
