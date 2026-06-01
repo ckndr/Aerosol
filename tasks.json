@@ -962,10 +962,10 @@
       "status": "Not Started",
       "responsible": "Saqib",
       "remarks": "Khalid sb recommendation",
-      "updated": "",
+      "updated": "1 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": "Photos/Lacquer/task_img_1780312917535.jpg",
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
     },
@@ -2879,6 +2879,33 @@
   },
   "activityLog": [
     {
+      "id": "t1780312919702lkpn",
+      "time": "2026-06-01T11:21:59.702Z",
+      "action": "[Aurangzeb] Updated task \"Small dedicated air tank / rec...\" on Lacquer",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_879262",
+          "machine": "Lacquer",
+          "category": "Mechanical",
+          "desc": "Small dedicated air tank / receiver for lacquer",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Saqib",
+          "remarks": "Khalid sb recommendation",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_879262"
+    },
+    {
       "id": "t1780312803052fhib",
       "time": "2026-06-01T11:20:03.052Z",
       "action": "[Aurangzeb] Added task \"Cans Holders — dismantled, cle...\" to Lacquer",
@@ -4151,32 +4178,6 @@
         }
       },
       "taskId": "t_928413"
-    },
-    {
-      "id": "t1780288484778fyt4",
-      "time": "2026-06-01T04:34:44.778Z",
-      "action": "[Sikander] Deleted task \"Test...\" from General",
-      "user": "Sikander",
-      "undoData": {
-        "type": "delete",
-        "prevTask": {
-          "id": "t1779994195720uz68",
-          "machine": "General",
-          "category": "General",
-          "desc": "Test",
-          "priority": "High",
-          "progress": 49,
-          "status": "In Progress",
-          "remarks": "Test",
-          "responsible": "Test",
-          "updated": "28 May 2026",
-          "lastEditedBy": "Sikander",
-          "image": "Photos/General/task_img_1779994194166.jpg",
-          "waitingOn": "Test",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      }
     }
   ],
   "machineMeta": {
