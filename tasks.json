@@ -2662,10 +2662,10 @@
       "status": "In Progress",
       "responsible": "Saqib",
       "remarks": "",
-      "updated": "",
+      "updated": "1 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": "Photos/Washing/task_img_1780312497172.jpg",
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
     },
@@ -2844,6 +2844,33 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1780312500053ld18",
+      "time": "2026-06-01T11:15:00.053Z",
+      "action": "[Aurangzeb] Updated task \"Spraying Jets Section — cleani...\" on Washing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_148426",
+          "machine": "Washing",
+          "category": "Mechanical",
+          "desc": "Spraying Jets Section — cleaning / scraping",
+          "priority": "High",
+          "progress": 50,
+          "status": "In Progress",
+          "responsible": "Saqib",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_148426"
+    },
     {
       "id": "t1780312374812ljej",
       "time": "2026-06-01T11:12:54.812Z",
