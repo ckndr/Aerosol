@@ -2577,10 +2577,10 @@
       "status": "Not Started",
       "responsible": "Arsalan",
       "remarks": "",
-      "updated": "",
+      "updated": "1 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": "Photos/Washing/task_img_1780312241814.jpg",
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
     },
@@ -2844,6 +2844,33 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1780312246769fu4l",
+      "time": "2026-06-01T11:10:46.769Z",
+      "action": "[Aurangzeb] Updated task \"contamination/ fumes collector...\" on Washing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_214906",
+          "machine": "Washing",
+          "category": "Mechanical",
+          "desc": "contamination/ fumes collector to be checked and installed on top",
+          "priority": "High",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Arsalan",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_214906"
+    },
     {
       "id": "t1780311976870ig11",
       "time": "2026-06-01T11:06:16.870Z",
