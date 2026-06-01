@@ -2493,6 +2493,8 @@
           <datalist id="responsible-list">
             <option value="Arsalan">
             <option value="Saqib">
+            <option value="Sikander">
+            <option value="Aurangzeb">
           </datalist>
         </div>
         <div class="form-group full">
@@ -3193,7 +3195,7 @@
 
     function sanitizeTasks() {
       let changed = false;
-      const pList = ['Arsalan', 'Saqib', 'Sikander', 'Anonymous', 'Unknown'];
+      const pList = ['Arsalan', 'Saqib', 'Sikander', 'Aurangzeb', 'Anonymous', 'Unknown'];
       tasks.forEach(t => {
         // Swap remarks and responsible if they are in the wrong columns
         const isRespName = pList.includes((t.remarks || '').trim());
@@ -4598,7 +4600,8 @@
       const TOKEN_MAP = {
         '2hnye2': 'Sikander',
         '2zpn5z': 'Saqib',
-        '789012': 'Arsalan'
+        '789012': 'Arsalan',
+        '10pqgo': 'Aurangzeb'
       };
 
       const name = TOKEN_MAP[suffix];
