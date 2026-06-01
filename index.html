@@ -408,6 +408,13 @@
       border-left-color: var(--accent) !important
     }
 
+    .kpi.procure.active {
+      border-color: var(--accent);
+      background: var(--surface3);
+      box-shadow: inset 0 0 0 1px var(--accent);
+      border-left-color: var(--accent) !important;
+    }
+
     /* ── FILTER BAR ── */
     .filter-bar {
       background: var(--surface);
@@ -2161,7 +2168,7 @@
     </div>
     <div class="kpi done" role="button" tabindex="0" onclick="filterByStatus('Completed')">
       <div class="kv" id="k-done">0</div>
-      <div class="kl">Done</div>
+      <div class="kl">Completed</div>
     </div>
     <div class="kpi inprog" role="button" tabindex="0" onclick="filterByStatus('In Progress')">
       <div class="kv" id="k-ip">0</div>
@@ -2169,7 +2176,7 @@
     </div>
     <div class="kpi procure" role="button" tabindex="0" onclick="navigate('procurement')">
       <div class="kv" id="k-pp">0</div>
-      <div class="kl">Procure</div>
+      <div class="kl">Procurement</div>
     </div>
     <div class="kpi notstarted" role="button" tabindex="0" onclick="filterByStatus('Not Started')">
       <div class="kv" id="k-ns">0</div>
@@ -2640,7 +2647,7 @@
         const payload = JSON.stringify({
           tasks: tasksData,
           settings: { autoSync: settingsData.autoSync },
-          activityLog: activityLogData.slice(0, 50),
+          activityLog: activityLogData.slice(0, 100),
           machineMeta: machineMetaData || {},
           timelineData: timelineDataVal || {}
         }, null, 2);
@@ -3079,7 +3086,7 @@
     let ctxMenu = null;
     let lastDeletedTask = null;
     let activityLog = [];
-    const MAX_LOG = 50;
+    const MAX_LOG = 100;
 
     let timelineData = { startDate: '2026-03-01', targetDate: '' };
     let hasInitialPullCompleted = false;
@@ -3780,7 +3787,7 @@
           const db = b.dateFinished || b.dateStarted || b.updated || '';
           return db.localeCompare(da);
         })
-        .slice(0, 20);
+        .slice(0, 40);
 
       // Show in the dashboard-task-list area (already exists for filters)
       navigate('dashboard');
@@ -3800,7 +3807,7 @@
 
       const header = document.createElement('div');
       header.className = 'section-label';
-      header.innerHTML = '<span>Recent Tasks (last 20 updated)</span>';
+      header.innerHTML = '<span>Recent Tasks (last 40 updated)</span>';
       listEl.appendChild(header);
 
       if (!recent.length) {
@@ -4238,7 +4245,19 @@
             dateStarted: document.getElementById('f-datestarted')?.value || '',
             dateFinished: document.getElementById('f-datefinished')?.value || ''
           });
-          logActivity(`Updated task "${desc.slice(0, 30)}..." on ${machine}`, editingId, { type: 'edit', prevTask });
+          // Build a human-readable diff
+          const changes = [];
+          if (prevTask.status !== status) changes.push(`Status: ${prevTask.status} → ${status}`);
+          if (prevTask.progress !== progress) changes.push(`Progress: ${prevTask.progress}% → ${progress}%`);
+          if ((prevTask.remarks || '') !== remarks) changes.push('Remarks updated');
+          if ((prevTask.responsible || '') !== responsible) changes.push(`Responsible: ${prevTask.responsible || '—'} → ${responsible || '—'}`);
+          if ((prevTask.priority || '') !== priority) changes.push(`Priority: ${prevTask.priority} → ${priority}`);
+          if ((prevTask.waitingOn || '') !== document.getElementById('f-waitingon').value.trim()) changes.push('Waiting On updated');
+          if ((prevTask.image || null) !== imagePath) changes.push(imagePath ? 'Photo added' : 'Photo removed');
+          if ((prevTask.dateStarted || '') !== (document.getElementById('f-datestarted')?.value || '')) changes.push('Date Started updated');
+          if ((prevTask.dateFinished || '') !== (document.getElementById('f-datefinished')?.value || '')) changes.push('Date Finished updated');
+          const changeDetail = changes.length > 0 ? ' [' + changes.join(', ') + ']' : '';
+          logActivity(`Updated task "${desc.slice(0, 30)}..."${changeDetail} on ${machine}`, editingId, { type: 'edit', prevTask });
           toast('Task updated ✓', 'success');
         }
       } else {
@@ -4963,7 +4982,7 @@
         body.innerHTML = '<div style="color:var(--text3);font-style:italic">No activity yet</div>';
         return;
       }
-      body.innerHTML = activityLog.slice(0, 10).map(e => {
+      body.innerHTML = activityLog.slice(0, 20).map(e => {
         let tStr = e.time || '';
         if (tStr) {
           try {
