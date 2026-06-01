@@ -2645,10 +2645,10 @@
       "status": "In Progress",
       "responsible": "Saqib",
       "remarks": "",
-      "updated": "",
+      "updated": "1 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": "Photos/Washing/task_img_1780312372173.jpg",
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
     },
@@ -2844,6 +2844,33 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1780312374812ljej",
+      "time": "2026-06-01T11:12:54.812Z",
+      "action": "[Aurangzeb] Updated task \"Rinsing Recycling Tank — recoa...\" on Washing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_957628",
+          "machine": "Washing",
+          "category": "Mechanical",
+          "desc": "Rinsing Recycling Tank — recoating & cleaning",
+          "priority": "High",
+          "progress": 50,
+          "status": "In Progress",
+          "responsible": "Saqib",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_957628"
+    },
     {
       "id": "t17803123582231zgm",
       "time": "2026-06-01T11:12:38.223Z",
