@@ -1540,10 +1540,10 @@
       "status": "In Progress",
       "responsible": "Arsalan",
       "remarks": "",
-      "updated": "",
+      "updated": "1 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": "Photos/Press/task_img_1780307555524.jpg",
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
     },
@@ -2844,6 +2844,33 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1780307557333dmuv",
+      "time": "2026-06-01T09:52:37.333Z",
+      "action": "[Aurangzeb] Updated task \"Close all electrical panels an...\" on Press",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_928413",
+          "machine": "Press",
+          "category": "Electrical",
+          "desc": "Close all electrical panels and cable trays",
+          "priority": "High",
+          "progress": 10,
+          "status": "In Progress",
+          "responsible": "Arsalan",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_928413"
+    },
     {
       "id": "t1780288484778fyt4",
       "time": "2026-06-01T04:34:44.778Z",
