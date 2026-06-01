@@ -1557,10 +1557,10 @@
       "status": "Pending Procurement",
       "responsible": "Saqib",
       "remarks": "Procurement in process (23-05-2026)",
-      "updated": "",
+      "updated": "1 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": "Photos/Press/task_img_1780310919112.jpg",
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
     },
@@ -2861,6 +2861,33 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17803109211036oih",
+      "time": "2026-06-01T10:48:41.103Z",
+      "action": "[Aurangzeb] Updated task \"Damping rubber pads over slug ...\" on Press",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_471552",
+          "machine": "Press",
+          "category": "Mechanical",
+          "desc": "Damping rubber pads over slug feeding tray",
+          "priority": "Low",
+          "progress": 0,
+          "status": "Pending Procurement",
+          "responsible": "Saqib",
+          "remarks": "Procurement in process (23-05-2026)",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_471552"
+    },
     {
       "id": "t1780310901040kfn1",
       "time": "2026-06-01T10:48:21.040Z",
