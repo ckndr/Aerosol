@@ -2152,10 +2152,10 @@
       "status": "Not Started",
       "responsible": "Arsalan",
       "remarks": "",
-      "updated": "",
+      "updated": "1 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": "Photos/Trimming/task_img_1780311363688.jpg",
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
     },
@@ -2861,6 +2861,33 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1780311365816704o",
+      "time": "2026-06-01T10:56:05.817Z",
+      "action": "[Aurangzeb] Updated task \"Trimming Scrap collector wirin...\" on Trimming",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_513566",
+          "machine": "Trimming",
+          "category": "Electrical",
+          "desc": "Trimming Scrap collector wiring and troubleshooting",
+          "priority": "High",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Arsalan",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_513566"
+    },
     {
       "id": "t1780311234869uo1l",
       "time": "2026-06-01T10:53:54.869Z",
