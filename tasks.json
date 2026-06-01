@@ -826,10 +826,10 @@
       "status": "In Progress",
       "responsible": "Saqib",
       "remarks": "",
-      "updated": "",
+      "updated": "1 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": "Photos/Lacquer/task_img_1780312783382.jpg",
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
     },
@@ -2862,6 +2862,33 @@
   },
   "activityLog": [
     {
+      "id": "t1780312801064fk0b",
+      "time": "2026-06-01T11:20:01.064Z",
+      "action": "[Aurangzeb] Updated task \"Cans Holders — dismantled, cle...\" on Lacquer",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_841433",
+          "machine": "Lacquer",
+          "category": "Mechanical",
+          "desc": "Cans Holders — dismantled, clean with thinner",
+          "priority": "Medium",
+          "progress": 50,
+          "status": "In Progress",
+          "responsible": "Saqib",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_841433"
+    },
+    {
       "id": "t178031277408137z7",
       "time": "2026-06-01T11:19:34.081Z",
       "action": "[Aurangzeb] Updated task \"fixing  can holders after clea...\" on Lacquer",
@@ -4133,11 +4160,6 @@
         "taskId": "t1780286553630cung"
       },
       "taskId": "t1780286553630cung"
-    },
-    {
-      "time": "2026-05-30T08:13:40.104Z",
-      "action": "[Sikander] Deleted task \"Cable trays installation...\" from Decoration Oven",
-      "user": "Sikander"
     }
   ],
   "machineMeta": {
