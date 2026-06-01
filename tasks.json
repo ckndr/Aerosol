@@ -2855,29 +2855,38 @@
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": ""
-    },
-    {
-      "id": "t1780312803051a077",
-      "machine": "Lacquer",
-      "category": "Mechanical",
-      "desc": "Cans Holders — dismantled, clean with thinner",
-      "priority": "Medium",
-      "progress": 50,
-      "status": "In Progress",
-      "remarks": "",
-      "responsible": "Saqib",
-      "updated": "1 Jun 2026",
-      "lastEditedBy": "Aurangzeb",
-      "image": "Photos/Lacquer/task_img_1780312788586.jpg",
-      "waitingOn": "",
-      "dateStarted": "",
-      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1780312935290xjx5",
+      "time": "2026-06-01T11:22:15.290Z",
+      "action": "[Aurangzeb] Deleted task \"Cans Holders — dismantled, cle...\" from Lacquer",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "delete",
+        "prevTask": {
+          "id": "t1780312803051a077",
+          "machine": "Lacquer",
+          "category": "Mechanical",
+          "desc": "Cans Holders — dismantled, clean with thinner",
+          "priority": "Medium",
+          "progress": 50,
+          "status": "In Progress",
+          "remarks": "",
+          "responsible": "Saqib",
+          "updated": "1 Jun 2026",
+          "lastEditedBy": "Aurangzeb",
+          "image": "Photos/Lacquer/task_img_1780312788586.jpg",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      }
+    },
     {
       "id": "t1780312919702lkpn",
       "time": "2026-06-01T11:21:59.702Z",
@@ -4151,33 +4160,6 @@
         "taskId": "t1780310527373qu7y"
       },
       "taskId": "t1780310527373qu7y"
-    },
-    {
-      "id": "t1780307557333dmuv",
-      "time": "2026-06-01T09:52:37.333Z",
-      "action": "[Aurangzeb] Updated task \"Close all electrical panels an...\" on Press",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_928413",
-          "machine": "Press",
-          "category": "Electrical",
-          "desc": "Close all electrical panels and cable trays",
-          "priority": "High",
-          "progress": 10,
-          "status": "In Progress",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_928413"
     }
   ],
   "machineMeta": {
