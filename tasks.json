@@ -2322,10 +2322,10 @@
       "status": "Not Started",
       "responsible": "Arsalan",
       "remarks": "",
-      "updated": "",
+      "updated": "1 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": "Photos/Trimming/task_img_1780311531849.jpg",
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
     },
@@ -2861,6 +2861,33 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1780311533681spe6",
+      "time": "2026-06-01T10:58:53.681Z",
+      "action": "[Aurangzeb] Updated task \"pneumatic pressure valve for e...\" on Trimming",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_934362",
+          "machine": "Trimming",
+          "category": "Mechanical",
+          "desc": "pneumatic pressure valve for ejector pressure to install",
+          "priority": "High",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Arsalan",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_934362"
+    },
     {
       "id": "t17803115040823pbc",
       "time": "2026-06-01T10:58:24.082Z",
