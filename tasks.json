@@ -2806,23 +2806,6 @@
       "dateFinished": ""
     },
     {
-      "id": "t1779994195720uz68",
-      "machine": "General",
-      "category": "General",
-      "desc": "Test",
-      "priority": "High",
-      "progress": 49,
-      "status": "In Progress",
-      "remarks": "Test",
-      "responsible": "Test",
-      "updated": "28 May 2026",
-      "lastEditedBy": "Sikander",
-      "image": "Photos/General/task_img_1779994194166.jpg",
-      "waitingOn": "Test",
-      "dateStarted": "",
-      "dateFinished": ""
-    },
-    {
       "id": "t_194945",
       "machine": "Decoration Oven",
       "category": "Electrical",
@@ -2861,6 +2844,32 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1780288484778fyt4",
+      "time": "2026-06-01T04:34:44.778Z",
+      "action": "[Sikander] Deleted task \"Test...\" from General",
+      "user": "Sikander",
+      "undoData": {
+        "type": "delete",
+        "prevTask": {
+          "id": "t1779994195720uz68",
+          "machine": "General",
+          "category": "General",
+          "desc": "Test",
+          "priority": "High",
+          "progress": 49,
+          "status": "In Progress",
+          "remarks": "Test",
+          "responsible": "Test",
+          "updated": "28 May 2026",
+          "lastEditedBy": "Sikander",
+          "image": "Photos/General/task_img_1779994194166.jpg",
+          "waitingOn": "Test",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      }
+    },
     {
       "id": "t1780286553630gmtd",
       "time": "2026-06-01T04:02:33.630Z",
@@ -2940,7 +2949,7 @@
     }
   },
   "timelineData": {
-    "startDate": "2026-03-01",
-    "targetDate": ""
+    "startDate": "2025-10-15",
+    "targetDate": "2026-06-30"
   }
 }
