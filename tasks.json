@@ -2135,10 +2135,10 @@
       "status": "In Progress",
       "responsible": "Arsalan",
       "remarks": "",
-      "updated": "",
+      "updated": "1 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": "Photos/Trimming/task_img_1780311408335.jpg",
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
     },
@@ -2861,6 +2861,33 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1780311410177jy57",
+      "time": "2026-06-01T10:56:50.177Z",
+      "action": "[Aurangzeb] Updated task \"Conveyor alignment — Trimming ...\" on Trimming",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_809507",
+          "machine": "Trimming",
+          "category": "Mechanical",
+          "desc": "Conveyor alignment — Trimming to Washing",
+          "priority": "High",
+          "progress": 50,
+          "status": "In Progress",
+          "responsible": "Arsalan",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_809507"
+    },
     {
       "id": "t1780311397584r1q4",
       "time": "2026-06-01T10:56:37.584Z",
