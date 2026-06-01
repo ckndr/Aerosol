@@ -2838,12 +2838,40 @@
       "lastEditedBy": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t1780286553630cung",
+      "machine": "Trimming",
+      "category": "Mechanical",
+      "desc": "cutter sharpness",
+      "priority": "High",
+      "progress": 100,
+      "status": "Completed",
+      "remarks": "",
+      "responsible": "Saqib",
+      "updated": "1 Jun 2026",
+      "lastEditedBy": "Saqib",
+      "image": null,
+      "waitingOn": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1780286553630gmtd",
+      "time": "2026-06-01T04:02:33.630Z",
+      "action": "[Saqib] Added task \"cutter sharpness...\" to Trimming",
+      "user": "Saqib",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1780286553630cung"
+      },
+      "taskId": "t1780286553630cung"
+    },
     {
       "time": "2026-05-30T08:13:40.104Z",
       "action": "[Sikander] Deleted task \"Cable trays installation...\" from Decoration Oven",
