@@ -2679,10 +2679,10 @@
       "status": "Pending Procurement",
       "responsible": "Saqib",
       "remarks": "",
-      "updated": "",
+      "updated": "1 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": "Photos/Washing/task_img_1780311847804.jpg",
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
     },
@@ -2844,6 +2844,33 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1780311849737lww2",
+      "time": "2026-06-01T11:04:09.737Z",
+      "action": "[Aurangzeb] Updated task \"Heaters to be Replaced...\" on Washing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_122888",
+          "machine": "Washing",
+          "category": "Electrical",
+          "desc": "Heaters to be Replaced",
+          "priority": "High",
+          "progress": 0,
+          "status": "Pending Procurement",
+          "responsible": "Saqib",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_122888"
+    },
     {
       "id": "t1780311828402jr2u",
       "time": "2026-06-01T11:03:48.402Z",
