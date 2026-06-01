@@ -1795,10 +1795,10 @@
       "status": "In Progress",
       "responsible": "Arsalan",
       "remarks": "Not fixed Yet",
-      "updated": "",
+      "updated": "1 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": "Photos/Press/task_img_1780311051839.jpg",
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
     },
@@ -2861,6 +2861,33 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1780311054067xt4c",
+      "time": "2026-06-01T10:50:54.067Z",
+      "action": "[Aurangzeb] Updated task \"Welding & fixing gear oil tank...\" on Press",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_773553",
+          "machine": "Press",
+          "category": "Mechanical",
+          "desc": "Welding & fixing gear oil tank brackets and sheet",
+          "priority": "Medium",
+          "progress": 40,
+          "status": "In Progress",
+          "responsible": "Arsalan",
+          "remarks": "Not fixed Yet",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_773553"
+    },
     {
       "id": "t1780311034678842y",
       "time": "2026-06-01T10:50:34.678Z",
