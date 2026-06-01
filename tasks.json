@@ -2838,12 +2838,40 @@
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t1780312710949uqk5",
+      "machine": "Lacquer",
+      "category": "Electrical",
+      "desc": "Close and all electrical panels.",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "Not Started",
+      "remarks": "",
+      "responsible": "",
+      "updated": "1 Jun 2026",
+      "lastEditedBy": "Aurangzeb",
+      "image": "Photos/Lacquer/task_img_1780312708485.jpg",
+      "waitingOn": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1780312710950gqky",
+      "time": "2026-06-01T11:18:30.950Z",
+      "action": "[Aurangzeb] Added task \"Close and all electrical panel...\" to Lacquer",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1780312710949uqk5"
+      },
+      "taskId": "t1780312710949uqk5"
+    },
     {
       "id": "t1780312708641vypv",
       "time": "2026-06-01T11:18:28.641Z",
