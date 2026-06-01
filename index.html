@@ -1761,6 +1761,50 @@
       .machine-card {
         padding: 1.2rem
       }
+
+      /* Mobile Layout Fixes */
+      .task-badges {
+        flex-shrink: 1;
+        max-width: 50%;
+        min-width: 0;
+      }
+
+      .task-desc {
+        word-break: break-word;
+        overflow-wrap: break-word;
+        min-width: 0;
+      }
+
+      .task-badges .badge {
+        white-space: normal;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 120px;
+      }
+
+      .header-actions {
+        flex-wrap: wrap;
+        gap: .3rem;
+        justify-content: flex-end;
+        max-width: calc(100% - 120px);
+      }
+
+      #btn-import,
+      #btn-export,
+      button[onclick="window.print()"] {
+        display: none;
+      }
+
+      .filter-search {
+        min-width: 0;
+        width: 100%;
+        flex-basis: 100%;
+      }
+
+      .filter-select {
+        min-width: 0;
+        flex: 1;
+      }
     }
 
     @media(max-width:480px) {
@@ -1774,7 +1818,9 @@
 
       .kpi {
         max-width: none;
-        min-width: 0
+        min-width: 0;
+        padding: 0.55rem 0.4rem;
+        min-height: 0;
       }
     }
 
@@ -3899,7 +3945,7 @@
         ? `<div class="task-updated">Updated ${t.updated}</div>`
         : '';
       const waitingTag = t.waitingOn
-        ? `<div style="margin-top:.35rem"><span style="display:inline-flex;align-items:center;gap:.3rem;font-size:.67rem;font-weight:600;color:#c2410c;background:#fff7ed;border:1px solid #fed7aa;border-radius:20px;padding:.18rem .55rem;font-family:'DM Mono',monospace;">⏳ ${escapeHTML(t.waitingOn)}</span></div>`
+        ? `<div style="margin-top:.35rem"><span style="display:inline-flex;align-items:center;gap:.3rem;font-size:.67rem;font-weight:600;color:#c2410c;background:#fff7ed;border:1px solid #fed7aa;border-radius:20px;padding:.18rem .55rem;font-family:'DM Mono',monospace;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">⏳ ${escapeHTML(t.waitingOn)}</span></div>`
         : '';
       const datesMeta = [];
       if (t.dateStarted) datesMeta.push('Started: ' + t.dateStarted);
@@ -3911,8 +3957,8 @@
     <div class="task-top">
       ${isLoggedIn() ? `<input type="checkbox" class="task-select-cb" data-id="${t.id}" onclick="event.stopPropagation(); handleCheckboxChange()" style="margin-right: 0.6rem; cursor: pointer; width: 16px; height: 16px; accent-color: var(--accent); flex-shrink: 0; align-self: center;">` : ''}<div class="task-desc">${escapeHTML(t.desc)}</div>
       <div class="task-badges">
-        ${showMachineName ? `<span class="badge" style="background:var(--g-bg);color:var(--g-t);border:1px solid var(--g-b)">🏭 ${escapeHTML(t.machine)}</span>` : ''}
-        ${t.responsible ? `<span class="badge" style="background:var(--g-bg);color:var(--g-t);border:1px solid var(--g-b)">👤 Responsible: ${escapeHTML(t.responsible)}</span>` : ''}
+        ${showMachineName ? `<span class="badge" style="background:var(--g-bg);color:var(--g-t);border:1px solid var(--g-b);max-width:110px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">🏭 ${escapeHTML(t.machine)}</span>` : ''}
+        ${t.responsible ? `<span class="badge" style="background:var(--g-bg);color:var(--g-t);border:1px solid var(--g-b)" title="Responsible: ${escapeHTML(t.responsible)}">👤 ${escapeHTML(t.responsible)}</span>` : ''}
         ${t.lastEditedBy ? `<span class="badge" style="background:var(--s-ip-bg);color:var(--s-ip-t);border:1px solid var(--s-ip-b)">✏️ ${escapeHTML(t.lastEditedBy)}</span>` : ''}
         ${t.priority && t.priority !== '–' ? `<span class="badge p-${t.priority}">${t.priority}</span>` : ''}
         ${t.image ? `<span class="badge" style="background:var(--g-bg);color:var(--g-t);border:1px solid var(--g-b)" title="Has photo">📷</span>` : ''}

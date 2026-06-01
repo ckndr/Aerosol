@@ -9,31 +9,41 @@ echo.
 
 :: If there are uncommitted local changes, stash them first
 :: so the pull never gets blocked
-git stash
+git diff-index --quiet HEAD --
+if errorlevel 1 (
+    set HAS_CHANGES=1
+    echo Stashing local changes...
+    git stash
+) else (
+    set HAS_CHANGES=0
+)
 
 git pull origin main
 if errorlevel 1 (
     echo.
     echo ERROR: Pull failed. Check internet or repo access.
     :: Restore stashed changes if pull failed
-    git stash pop
+    if "%HAS_CHANGES%"=="1" git stash pop
     pause
     exit /b 1
 )
 
 :: Restore any stashed local changes on top of the pull
-git stash pop
-if errorlevel 1 (
-    echo.
-    echo =======================================================
-    echo   CONFLICTS DETECTED when restoring local changes!
-    echo =======================================================
-    git grep -n "^<<<<<<< "
-    echo.
-    echo   Please resolve these conflicts before committing or pushing.
-    echo.
-    pause
-    exit /b 1
+if "%HAS_CHANGES%"=="1" (
+    echo Restoring local changes...
+    git stash pop
+    if errorlevel 1 (
+        echo.
+        echo =======================================================
+        echo   CONFLICTS DETECTED when restoring local changes!
+        echo =======================================================
+        git grep -n "^<<<<<<< "
+        echo.
+        echo   Please resolve these conflicts before committing or pushing.
+        echo.
+        pause
+        exit /b 1
+    )
 )
 
 echo.
