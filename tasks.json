@@ -2560,10 +2560,10 @@
       "status": "Not Started",
       "responsible": "Arsalan",
       "remarks": "",
-      "updated": "",
+      "updated": "1 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": "Photos/Washing/task_img_1780311974674.jpg",
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
     },
@@ -2844,6 +2844,33 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1780311976870ig11",
+      "time": "2026-06-01T11:06:16.870Z",
+      "action": "[Aurangzeb] Updated task \"pressure gauge to install on r...\" on Washing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_196498",
+          "machine": "Washing",
+          "category": "Mechanical",
+          "desc": "pressure gauge to install on rinse recycle loop pipes",
+          "priority": "High",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Arsalan",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_196498"
+    },
     {
       "id": "t1780311960177fblf",
       "time": "2026-06-01T11:06:00.177Z",
