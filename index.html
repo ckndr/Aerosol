@@ -3917,6 +3917,7 @@
         ${t.responsible ? `<span class="badge" style="background:var(--g-bg);color:var(--g-t);border:1px solid var(--g-b)">👤 Responsible: ${escapeHTML(t.responsible)}</span>` : ''}
         ${t.lastEditedBy ? `<span class="badge" style="background:var(--s-ip-bg);color:var(--s-ip-t);border:1px solid var(--s-ip-b)">✏️ ${escapeHTML(t.lastEditedBy)}</span>` : ''}
         ${t.priority && t.priority !== '–' ? `<span class="badge p-${t.priority}">${t.priority}</span>` : ''}
+        ${t.image ? `<span class="badge" style="background:var(--g-bg);color:var(--g-t);border:1px solid var(--g-b)" title="Has photo">📷</span>` : ''}
         <span class="badge s-${sc}">${t.status}</span>
         ${isLoggedIn() ? `<button class="task-menu-btn" style="color: #f87171" onclick="event.stopPropagation(); confirmDelete('${t.id}')" title="Delete Task">🗑</button>` : ''}
         <button class="task-menu-btn" onclick="openCtx(event,'${t.id}')">⋯</button>
