@@ -979,10 +979,10 @@
       "status": "In Progress",
       "responsible": "Arsalan",
       "remarks": "",
-      "updated": "",
+      "updated": "1 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": "Photos/Lacquer Oven/task_img_1780312993783.jpg",
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
     },
@@ -2845,6 +2845,33 @@
   },
   "activityLog": [
     {
+      "id": "t1780312995990sj0k",
+      "time": "2026-06-01T11:23:15.990Z",
+      "action": "[Aurangzeb] Updated task \"Oven Chain & bearing greasing...\" on Lacquer Oven",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_378618",
+          "machine": "Lacquer Oven",
+          "category": "Mechanical",
+          "desc": "Oven Chain & bearing greasing",
+          "priority": "Medium",
+          "progress": 50,
+          "status": "In Progress",
+          "responsible": "Arsalan",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_378618"
+    },
+    {
       "id": "t1780312985040qmqa",
       "time": "2026-06-01T11:23:05.040Z",
       "action": "[Aurangzeb] Updated task \"closure of electrical panels...\" on Lacquer Oven",
@@ -4131,33 +4158,6 @@
         }
       },
       "taskId": "t_106305"
-    },
-    {
-      "id": "t17803106788997go8",
-      "time": "2026-06-01T10:44:38.899Z",
-      "action": "[Aurangzeb] Updated task \"Spray Guns — cleaned with thin...\" on Lacquer",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_269714",
-          "machine": "Lacquer",
-          "category": "Mechanical",
-          "desc": "Spray Guns — cleaned with thinner",
-          "priority": "High",
-          "progress": 100,
-          "status": "Completed",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_269714"
     }
   ],
   "machineMeta": {
