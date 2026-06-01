@@ -2475,10 +2475,10 @@
       "status": "In Progress",
       "responsible": "Arsalan",
       "remarks": "To be checked with Lindsay — blower available for installation",
-      "updated": "",
+      "updated": "1 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": "Photos/Washing/task_img_1780311879107.jpg",
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
     },
@@ -2844,6 +2844,33 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1780311881327gkh0",
+      "time": "2026-06-01T11:04:41.327Z",
+      "action": "[Aurangzeb] Updated task \"Washing machine piping and blo...\" on Washing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_990649",
+          "machine": "Washing",
+          "category": "Mechanical",
+          "desc": "Washing machine piping and blower installation",
+          "priority": "High",
+          "progress": 20,
+          "status": "In Progress",
+          "responsible": "Arsalan",
+          "remarks": "To be checked with Lindsay — blower available for installation",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_990649"
+    },
     {
       "id": "t1780311849737lww2",
       "time": "2026-06-01T11:04:09.737Z",
