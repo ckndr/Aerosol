@@ -2764,10 +2764,10 @@
       "status": "Not Started",
       "responsible": "Arsalan",
       "remarks": "After chain arrival",
-      "updated": "",
+      "updated": "1 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": "Photos/Washing/task_img_1780312620376.jpg",
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
     },
@@ -2844,6 +2844,33 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1780312622622r5hf",
+      "time": "2026-06-01T11:17:02.622Z",
+      "action": "[Aurangzeb] Updated task \"Inspect all rubber pipes — rep...\" on Washing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_788779",
+          "machine": "Washing",
+          "category": "Mechanical",
+          "desc": "Inspect all rubber pipes — replace if damaged",
+          "priority": "High",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Arsalan",
+          "remarks": "After chain arrival",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_788779"
+    },
     {
       "id": "t1780312515511r1f0",
       "time": "2026-06-01T11:15:15.511Z",
