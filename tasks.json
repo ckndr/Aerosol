@@ -2492,10 +2492,10 @@
       "status": "Not Started",
       "responsible": "Arsalan",
       "remarks": "to be installed after tank installation",
-      "updated": "",
+      "updated": "1 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": "Photos/Washing/task_img_1780311943122.jpg",
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
     },
@@ -2844,6 +2844,33 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1780311945225zuz3",
+      "time": "2026-06-01T11:05:45.225Z",
+      "action": "[Aurangzeb] Updated task \"Washing unit drain flexible pi...\" on Washing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_297468",
+          "machine": "Washing",
+          "category": "Mechanical",
+          "desc": "Washing unit drain flexible pipes after tank installation",
+          "priority": "High",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Arsalan",
+          "remarks": "to be installed after tank installation",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_297468"
+    },
     {
       "id": "t1780311881327gkh0",
       "time": "2026-06-01T11:04:41.327Z",
