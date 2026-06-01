@@ -2855,12 +2855,40 @@
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t1780312803051a077",
+      "machine": "Lacquer",
+      "category": "Mechanical",
+      "desc": "Cans Holders — dismantled, clean with thinner",
+      "priority": "Medium",
+      "progress": 50,
+      "status": "In Progress",
+      "remarks": "",
+      "responsible": "Saqib",
+      "updated": "1 Jun 2026",
+      "lastEditedBy": "Aurangzeb",
+      "image": "Photos/Lacquer/task_img_1780312788586.jpg",
+      "waitingOn": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1780312803052fhib",
+      "time": "2026-06-01T11:20:03.052Z",
+      "action": "[Aurangzeb] Added task \"Cans Holders — dismantled, cle...\" to Lacquer",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1780312803051a077"
+      },
+      "taskId": "t1780312803051a077"
+    },
     {
       "id": "t1780312801064fk0b",
       "time": "2026-06-01T11:20:01.064Z",
@@ -4149,17 +4177,6 @@
           "dateFinished": ""
         }
       }
-    },
-    {
-      "id": "t1780286553630gmtd",
-      "time": "2026-06-01T04:02:33.630Z",
-      "action": "[Saqib] Added task \"cutter sharpness...\" to Trimming",
-      "user": "Saqib",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1780286553630cung"
-      },
-      "taskId": "t1780286553630cung"
     }
   ],
   "machineMeta": {
