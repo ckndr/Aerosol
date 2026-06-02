@@ -1931,10 +1931,10 @@
       "status": "In Progress",
       "responsible": "Saqib",
       "remarks": "",
-      "updated": "",
+      "updated": "2 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": "Photos/Printing/task_img_1780374742725.jpg",
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
     },
@@ -2844,6 +2844,33 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17803747459822ycm",
+      "time": "2026-06-02T04:32:25.982Z",
+      "action": "[Aurangzeb] Updated task \"Ink Fountain — cleaning...\" [Photo added] on Printing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_223177",
+          "machine": "Printing",
+          "category": "Mechanical",
+          "desc": "Ink Fountain — cleaning",
+          "priority": "High",
+          "progress": 50,
+          "status": "In Progress",
+          "responsible": "Saqib",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_223177"
+    },
     {
       "id": "t178037464495899h0",
       "time": "2026-06-02T04:30:44.958Z",
