@@ -435,10 +435,10 @@
       "status": "Not Started",
       "responsible": "Arsalan",
       "remarks": "",
-      "updated": "",
+      "updated": "2 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": "Photos/FG Conveyor/task_img_1780377454915.jpg",
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
     },
@@ -2878,6 +2878,33 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1780377459115qa8e",
+      "time": "2026-06-02T05:17:39.115Z",
+      "action": "[Aurangzeb] Updated task \"connection/wiring to be done...\" [Photo added] on FG Conveyor",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_951895",
+          "machine": "FG Conveyor",
+          "category": "Electrical",
+          "desc": "connection/wiring to be done",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Arsalan",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_951895"
+    },
     {
       "id": "t17803773965464is1",
       "time": "2026-06-02T05:16:36.546Z",
