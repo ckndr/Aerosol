@@ -2838,12 +2838,40 @@
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t1780376845779iund",
+      "machine": "Printing",
+      "category": "Mechanical",
+      "desc": "Pneumatic piping to be done",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "Not Started",
+      "remarks": "",
+      "responsible": "Arsalan",
+      "updated": "2 Jun 2026",
+      "lastEditedBy": "Aurangzeb",
+      "image": "Photos/Printing/task_img_1780376842685.jpg",
+      "waitingOn": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1780376845779kywq",
+      "time": "2026-06-02T05:07:25.779Z",
+      "action": "[Aurangzeb] Added task \"Pneumatic piping to be done...\" to Printing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1780376845779iund"
+      },
+      "taskId": "t1780376845779iund"
+    },
     {
       "id": "t1780376773183wyyk",
       "time": "2026-06-02T05:06:13.183Z",
