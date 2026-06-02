@@ -2838,12 +2838,40 @@
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t17803747764618vxa",
+      "machine": "Printing",
+      "category": "Mechanical",
+      "desc": "Roller Train Frame — cleaning",
+      "priority": "High",
+      "progress": 50,
+      "status": "In Progress",
+      "remarks": "",
+      "responsible": "Saqib",
+      "updated": "2 Jun 2026",
+      "lastEditedBy": "Aurangzeb",
+      "image": "Photos/Printing/task_img_1780374772634.jpg",
+      "waitingOn": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1780374776461713r",
+      "time": "2026-06-02T04:32:56.461Z",
+      "action": "[Aurangzeb] Added task \"Roller Train Frame — cleaning...\" to Printing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "add",
+        "taskId": "t17803747764618vxa"
+      },
+      "taskId": "t17803747764618vxa"
+    },
     {
       "id": "t1780374772991pgvr",
       "time": "2026-06-02T04:32:52.991Z",
