@@ -256,23 +256,6 @@
       "dateFinished": ""
     },
     {
-      "id": "t_878682",
-      "machine": "Compressor",
-      "category": "Mechanical",
-      "desc": "Compressor piping — dryer and auto drain system",
-      "priority": "High",
-      "progress": 95,
-      "status": "In Progress",
-      "responsible": "Arsalan",
-      "remarks": "",
-      "updated": "",
-      "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
-      "dateStarted": "",
-      "dateFinished": ""
-    },
-    {
       "id": "t_790598",
       "machine": "Compressor",
       "category": "Mechanical",
@@ -2879,6 +2862,32 @@
   },
   "activityLog": [
     {
+      "id": "t1780378003011o4f0",
+      "time": "2026-06-02T05:26:43.011Z",
+      "action": "[Aurangzeb] Deleted task \"Compressor piping — dryer and ...\" from Compressor",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "delete",
+        "prevTask": {
+          "id": "t_878682",
+          "machine": "Compressor",
+          "category": "Mechanical",
+          "desc": "Compressor piping — dryer and auto drain system",
+          "priority": "High",
+          "progress": 95,
+          "status": "In Progress",
+          "responsible": "Arsalan",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      }
+    },
+    {
       "id": "t1780377969763cf6v",
       "time": "2026-06-02T05:26:09.763Z",
       "action": "[Aurangzeb] Updated task \"Compressor  dryer and auto dra...\" [Photo added] on Compressor",
@@ -5398,33 +5407,6 @@
         }
       },
       "taskId": "t_877884"
-    },
-    {
-      "id": "t17803108677838nl8",
-      "time": "2026-06-01T10:47:47.783Z",
-      "action": "[Aurangzeb] Updated task \"Close all electrical panels an...\" on Press",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_928413",
-          "machine": "Press",
-          "category": "Electrical",
-          "desc": "Close all electrical panels and cable trays",
-          "priority": "High",
-          "progress": 10,
-          "status": "In Progress",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "1 Jun 2026",
-          "waitingOn": "",
-          "image": null,
-          "lastEditedBy": "Aurangzeb",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_928413"
     }
   ],
   "machineMeta": {
