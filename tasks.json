@@ -2407,10 +2407,10 @@
       "status": "In Progress",
       "responsible": "Arsalan",
       "remarks": "",
-      "updated": "",
+      "updated": "2 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": "Photos/Tumbler/task_img_1780378129642.jpg",
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
     },
@@ -2861,6 +2861,33 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17803781316997ath",
+      "time": "2026-06-02T05:28:51.699Z",
+      "action": "[Aurangzeb] Updated task \"Tumbler/Mixer installation on ...\" [Photo added] on Tumbler",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_581544",
+          "machine": "Tumbler",
+          "category": "Mechanical",
+          "desc": "Tumbler/Mixer installation on platform",
+          "priority": "High",
+          "progress": 50,
+          "status": "In Progress",
+          "responsible": "Arsalan",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_581544"
+    },
     {
       "id": "t17803780999716xvg",
       "time": "2026-06-02T05:28:19.971Z",
@@ -5380,33 +5407,6 @@
         }
       },
       "taskId": "t_775918"
-    },
-    {
-      "id": "t17803109211036oih",
-      "time": "2026-06-01T10:48:41.103Z",
-      "action": "[Aurangzeb] Updated task \"Damping rubber pads over slug ...\" on Press",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_471552",
-          "machine": "Press",
-          "category": "Mechanical",
-          "desc": "Damping rubber pads over slug feeding tray",
-          "priority": "Low",
-          "progress": 0,
-          "status": "Pending Procurement",
-          "responsible": "Saqib",
-          "remarks": "Procurement in process (23-05-2026)",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_471552"
     }
   ],
   "machineMeta": {
