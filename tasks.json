@@ -1302,10 +1302,10 @@
       "status": "Not Started",
       "responsible": "Arsalan",
       "remarks": "",
-      "updated": "",
+      "updated": "2 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": "Photos/Over Varnish/task_img_1780376199070.jpg",
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
     },
@@ -2827,6 +2827,33 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17803762014042e6l",
+      "time": "2026-06-02T04:56:41.404Z",
+      "action": "[Aurangzeb] Updated task \"closure of all cable trays/ pa...\" [Photo added] on Over Varnish",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_967900",
+          "machine": "Over Varnish",
+          "category": "Electrical",
+          "desc": "closure of all cable trays/ panels",
+          "priority": "High",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Arsalan",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_967900"
+    },
     {
       "id": "t1780376170587lpqy",
       "time": "2026-06-02T04:56:10.589Z",
