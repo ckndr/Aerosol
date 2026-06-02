@@ -233,7 +233,7 @@
       "remarks": "",
       "updated": "2 Jun 2026",
       "waitingOn": "",
-      "image": "Photos/Base Coat/task_img_1780374004077.jpg",
+      "image": "Photos/Base Coat/task_img_1780374035741.jpg",
       "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
@@ -2844,6 +2844,33 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1780374038205atsg",
+      "time": "2026-06-02T04:20:38.206Z",
+      "action": "[Aurangzeb] Updated task \"Rawal bolts anchoring to be do...\" [Photo added] on Base Coat",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_511680",
+          "machine": "Base Coat",
+          "category": "Mechanical",
+          "desc": "Rawal bolts anchoring to be done on the foundation",
+          "priority": "High",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Arsalan",
+          "remarks": "",
+          "updated": "2 Jun 2026",
+          "waitingOn": "",
+          "image": null,
+          "lastEditedBy": "Aurangzeb",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_511680"
+    },
     {
       "id": "t1780374007211n91h",
       "time": "2026-06-02T04:20:07.211Z",
