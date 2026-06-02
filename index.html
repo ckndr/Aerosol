@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=auto">
   <meta name="theme-color" content="#0d1117">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -139,20 +139,32 @@
 
     html {
       font-size: 15px;
-      scroll-behavior: smooth
+      scroll-behavior: smooth;
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden
     }
 
     body {
       background: var(--bg);
       color: var(--text);
       font-family: 'DM Sans', sans-serif;
-      min-height: 100dvh;
+      min-height: 100vh;
       -webkit-font-smoothing: antialiased;
       overscroll-behavior: none;
       padding-top: 0;
       padding-bottom: 0;
       padding-left: 0;
-      padding-right: 0
+      padding-right: 0;
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden
+    }
+
+    @supports (height: 100svh) {
+      body {
+        min-height: 100svh
+      }
     }
 
     ::-webkit-scrollbar {
@@ -172,7 +184,13 @@
     /* ── VIEWS ── */
     .view {
       display: none;
-      min-height: calc(100dvh - 120px)
+      min-height: calc(100vh - 120px)
+    }
+
+    @supports (height: 100svh) {
+      .view {
+        min-height: calc(100svh - 120px)
+      }
     }
 
     .view.active {
@@ -218,7 +236,8 @@
       flex-direction: column;
       align-items: flex-start;
       text-decoration: none;
-      flex-shrink: 0
+      flex-shrink: 1;
+      min-width: 0
     }
 
     .header-title {
@@ -1146,6 +1165,9 @@
       align-items: flex-end;
       justify-content: center;
       padding: 0;
+      width: 100%;
+      max-width: 100vw;
+      overflow-x: hidden;
       animation: overlay-in .2s ease
     }
 
@@ -1170,10 +1192,11 @@
       border-radius: var(--radius-lg) var(--radius-lg) 0 0;
       padding: 1.5rem;
       padding-bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
-      width: 100%;
-      max-width: 540px;
-      max-height: calc(92dvh - env(safe-area-inset-bottom, 0px));
+      width: min(100%, 540px);
+      max-width: calc(100vw - 2rem);
+      max-height: calc(92vh - env(safe-area-inset-bottom, 0px));
       overflow-y: auto;
+      overflow-x: hidden;
       animation: modal-up .25s ease
     }
 
@@ -1240,13 +1263,15 @@
     .form-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: .75rem
+      gap: .75rem;
+      min-width: 0
     }
 
     .form-group {
       display: flex;
       flex-direction: column;
-      gap: .4rem
+      gap: .4rem;
+      min-width: 0
     }
 
     .form-group.full {
@@ -1264,6 +1289,7 @@
     input,
     select,
     textarea {
+      box-sizing: border-box;
       background: var(--surface2);
       border: 1px solid var(--border2);
       border-radius: 8px;
@@ -1728,7 +1754,48 @@
 
     @media(max-width:640px) {
       header {
-        padding: .85rem 1rem
+        padding: .75rem 1rem;
+        top: 0
+      }
+
+      .header-container {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        align-items: start;
+        gap: .65rem
+      }
+
+      .header-brand,
+      .header-brand>div,
+      .header-brand>div>div {
+        min-width: 0;
+        max-width: 100%
+      }
+
+      .header-brand>div {
+        gap: .6rem !important
+      }
+
+      #header-logo {
+        height: 28px !important;
+        flex: 0 0 auto
+      }
+
+      .header-title {
+        font-size: 1.02rem;
+        line-height: 1.15;
+        max-width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        letter-spacing: 0
+      }
+
+      .header-sub {
+        max-width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis
       }
 
       .kpi-bar {
@@ -1832,10 +1899,40 @@
       }
 
       .header-actions {
-        flex-wrap: wrap;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        flex-wrap: nowrap;
         gap: .3rem;
-        justify-content: flex-end;
-        max-width: calc(100% - 120px);
+        justify-content: flex-start;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .header-actions::-webkit-scrollbar {
+        display: none
+      }
+
+      .header-actions .icon-btn {
+        flex: 0 0 44px
+      }
+
+      .header-actions .icon-btn[style*="width:auto"] {
+        width: 44px !important;
+        padding: 0 !important
+      }
+
+      .header-actions .btn-label,
+      #my-tasks-label {
+        display: none
+      }
+
+      #auth-name {
+        max-width: 92px;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
 
       #btn-import,
@@ -1853,6 +1950,29 @@
       .filter-select {
         min-width: 0;
         flex: 1;
+      }
+
+      .modal-overlay.center {
+        padding: .5rem;
+        align-items: flex-start;
+        padding-top: .5rem
+      }
+
+      .modal {
+        width: calc(100vw - 1rem);
+        max-width: calc(100vw - 1rem);
+        max-height: calc(100vh - 1rem);
+        padding: 1rem;
+        padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+        border-radius: var(--radius-lg)
+      }
+
+      .modal-footer {
+        flex-wrap: wrap
+      }
+
+      .modal-footer button {
+        flex: 1 1 120px
       }
     }
 
@@ -2114,7 +2234,7 @@
       padding: 1.5rem;
       max-width: 480px;
       width: 100%;
-      max-height: 85dvh;
+      max-height: 85vh;
       overflow-y: auto;
     }
     .pie-modal-header {
