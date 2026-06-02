@@ -250,7 +250,7 @@
       "remarks": "",
       "updated": "2 Jun 2026",
       "waitingOn": "",
-      "image": null,
+      "image": "Photos/Compressor/task_img_1780377967439.jpg",
       "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
@@ -2879,6 +2879,33 @@
   },
   "activityLog": [
     {
+      "id": "t1780377969763cf6v",
+      "time": "2026-06-02T05:26:09.763Z",
+      "action": "[Aurangzeb] Updated task \"Compressor  dryer and auto dra...\" [Photo added] on Compressor",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_145174",
+          "machine": "Compressor",
+          "category": "Electrical",
+          "desc": "Compressor  dryer and auto drain electrical connection",
+          "priority": "High",
+          "progress": 50,
+          "status": "In Progress",
+          "responsible": "Arsalan",
+          "remarks": "",
+          "updated": "2 Jun 2026",
+          "waitingOn": "",
+          "image": null,
+          "lastEditedBy": "Aurangzeb",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_145174"
+    },
+    {
       "id": "t1780377948067kmku",
       "time": "2026-06-02T05:25:48.067Z",
       "action": "[Aurangzeb] Updated task \"dryer wiring and connection to...\" [Photo added] on Compressor",
@@ -5398,33 +5425,6 @@
         }
       },
       "taskId": "t_928413"
-    },
-    {
-      "id": "t1780310771649ema3",
-      "time": "2026-06-01T10:46:11.649Z",
-      "action": "[Aurangzeb] Updated task \"Frame Body — cleaned...\" on Lacquer",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_641856",
-          "machine": "Lacquer",
-          "category": "Mechanical",
-          "desc": "Frame Body — cleaned",
-          "priority": "Medium",
-          "progress": 100,
-          "status": "Completed",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_641856"
     }
   ],
   "machineMeta": {
