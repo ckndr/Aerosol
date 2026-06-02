@@ -1973,23 +1973,6 @@
       "dateFinished": ""
     },
     {
-      "id": "t_319786",
-      "machine": "Printing",
-      "category": "Mechanical",
-      "desc": "All printing rollers — dismantle, clean, buff, chrome plate",
-      "priority": "High",
-      "progress": 60,
-      "status": "In Progress",
-      "responsible": "Saqib",
-      "remarks": "",
-      "updated": "",
-      "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
-      "dateStarted": "",
-      "dateFinished": ""
-    },
-    {
       "id": "t_587038",
       "machine": "Printing",
       "category": "Electrical",
@@ -2861,6 +2844,32 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1780374874740a12d",
+      "time": "2026-06-02T04:34:34.740Z",
+      "action": "[Aurangzeb] Deleted task \"All printing rollers — dismant...\" from Printing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "delete",
+        "prevTask": {
+          "id": "t_319786",
+          "machine": "Printing",
+          "category": "Mechanical",
+          "desc": "All printing rollers — dismantle, clean, buff, chrome plate",
+          "priority": "High",
+          "progress": 60,
+          "status": "In Progress",
+          "responsible": "Saqib",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      }
+    },
     {
       "id": "t1780374827748c1ai",
       "time": "2026-06-02T04:33:47.748Z",
