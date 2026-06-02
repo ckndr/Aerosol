@@ -1880,10 +1880,10 @@
       "status": "In Progress",
       "responsible": "Arsalan",
       "remarks": "",
-      "updated": "",
+      "updated": "2 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": "Photos/Printing/task_img_1780374093519.jpg",
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
     },
@@ -2844,6 +2844,33 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17803740964920ula",
+      "time": "2026-06-02T04:21:36.493Z",
+      "action": "[Aurangzeb] Updated task \"PLC installation & termination...\" [Photo added] on Printing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_735418",
+          "machine": "Printing",
+          "category": "Electrical",
+          "desc": "PLC installation & termination",
+          "priority": "High",
+          "progress": 20,
+          "status": "In Progress",
+          "responsible": "Arsalan",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_735418"
+    },
     {
       "id": "t1780374038205atsg",
       "time": "2026-06-02T04:20:38.206Z",
