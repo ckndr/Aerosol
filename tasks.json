@@ -2024,23 +2024,6 @@
       "dateFinished": ""
     },
     {
-      "id": "t_589414",
-      "machine": "Printing",
-      "category": "Electrical",
-      "desc": "Servo motor troubleshooting",
-      "priority": "High",
-      "progress": 0,
-      "status": "Not Started",
-      "responsible": "Arsalan",
-      "remarks": "",
-      "updated": "",
-      "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
-      "dateStarted": "",
-      "dateFinished": ""
-    },
-    {
       "id": "t_308933",
       "machine": "Printing",
       "category": "Mechanical",
@@ -2844,6 +2827,32 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1780374279215dyfw",
+      "time": "2026-06-02T04:24:39.215Z",
+      "action": "[Aurangzeb] Deleted task \"Servo motor troubleshooting...\" from Printing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "delete",
+        "prevTask": {
+          "id": "t_589414",
+          "machine": "Printing",
+          "category": "Electrical",
+          "desc": "Servo motor troubleshooting",
+          "priority": "High",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Arsalan",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      }
+    },
     {
       "id": "t17803740964920ula",
       "time": "2026-06-02T04:21:36.493Z",
