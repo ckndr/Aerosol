@@ -2872,12 +2872,40 @@
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t1780377869043jmxf",
+      "machine": "Compressor",
+      "category": "Electrical",
+      "desc": "Compressor  dryer and auto drain electrical connection",
+      "priority": "High",
+      "progress": 50,
+      "status": "In Progress",
+      "remarks": "",
+      "responsible": "Arsalan",
+      "updated": "2 Jun 2026",
+      "lastEditedBy": "Aurangzeb",
+      "image": "Photos/Compressor/task_img_1780377857329.jpg",
+      "waitingOn": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1780377869043xs6a",
+      "time": "2026-06-02T05:24:29.043Z",
+      "action": "[Aurangzeb] Added task \"Compressor  dryer and auto dra...\" to Compressor",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1780377869043jmxf"
+      },
+      "taskId": "t1780377869043jmxf"
+    },
     {
       "id": "t1780377866951x56m",
       "time": "2026-06-02T05:24:26.951Z",
