@@ -2050,10 +2050,10 @@
       "status": "Not Started",
       "responsible": "Arsalan",
       "remarks": "",
-      "updated": "",
+      "updated": "2 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": "Photos/Printing/task_img_1780374938452.jpg",
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
     },
@@ -2827,6 +2827,33 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1780374940772kp1r",
+      "time": "2026-06-02T04:35:40.772Z",
+      "action": "[Aurangzeb] Updated task \"Rawlbolts anchoring to be done...\" [Photo added] on Printing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_801432",
+          "machine": "Printing",
+          "category": "Mechanical",
+          "desc": "Rawlbolts anchoring to be done on the foundation",
+          "priority": "High",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Arsalan",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_801432"
+    },
     {
       "id": "t178037491797847fo",
       "time": "2026-06-02T04:35:17.978Z",
