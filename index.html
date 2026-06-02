@@ -2504,6 +2504,20 @@
           </div>
         </div>
       </div>
+
+      <div class="settings-section" id="sikander-admin-section" style="display:none">
+        <h3>🔐 Developer Admin Panel (Sikander Only)</h3>
+        <div class="settings-row" style="flex-direction:column;align-items:stretch">
+          <div style="font-size:.78rem;font-weight:600;margin-bottom:.5rem">Currently Logged In:</div>
+          <div id="logged-in-users-list" style="margin-bottom:1rem;font-family:'DM Mono',monospace;font-size:.78rem"></div>
+          
+          <div style="font-size:.78rem;font-weight:600;margin-bottom:.5rem">Login Statistics:</div>
+          <div id="login-stats-grid" style="display:flex;gap:0.5rem;margin-bottom:1rem;flex-wrap:wrap"></div>
+
+          <div style="font-size:.78rem;font-weight:600;margin-bottom:.5rem">Login History:</div>
+          <div id="login-history-list" class="activity-log-box" style="max-height:250px;overflow-y:auto;background:var(--surface2)"></div>
+        </div>
+      </div>
     </div>
 
     <!-- Procurement Board -->
@@ -2685,13 +2699,15 @@
         this.failedPayloads = [];
         this.uiLocked = false;
       }
-      enqueue(tasksData, settingsData, activityLogData, machineMetaData, timelineDataVal) {
+      enqueue(tasksData, settingsData, activityLogData, machineMetaData, timelineDataVal, loginHistoryVal, activeSessionsVal) {
         const payload = JSON.stringify({
           tasks: tasksData,
           settings: { autoSync: settingsData.autoSync },
           activityLog: activityLogData.slice(0, 100),
           machineMeta: machineMetaData || {},
-          timelineData: timelineDataVal || {}
+          timelineData: timelineDataVal || {},
+          loginHistory: loginHistoryVal || [],
+          activeSessions: activeSessionsVal || {}
         }, null, 2);
         if (this.queue.length > 0) {
           this.queue[this.queue.length - 1] = { payload, timestamp: Date.now() };
@@ -3245,6 +3261,9 @@
     let activityLog = [];
     const MAX_LOG = 100;
 
+    let loginHistory = [];
+    let activeSessions = {};
+
     let timelineData = { startDate: '2026-03-01', targetDate: '' };
     let hasInitialPullCompleted = false;
 
@@ -3441,6 +3460,8 @@
           const d = JSON.parse(raw);
           tasks = d.tasks || [];
           settings = d.settings || { syncKey: '' };
+          loginHistory = d.loginHistory || [];
+          activeSessions = d.activeSessions || {};
           if (!tasks.length) seedTasks();
         } else { seedTasks(); }
       } catch (e) { seedTasks(); }
@@ -3486,7 +3507,10 @@
     }
 
     function saveState() {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify({ tasks, settings }));
+      if (isLoggedIn() && currentUser && currentUser.name) {
+        activeSessions[currentUser.name] = new Date().toISOString();
+      }
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({ tasks, settings, loginHistory, activeSessions }));
     }
 
     function loadMeta() {
@@ -3698,6 +3722,7 @@
       if (view === 'detail' && machine) { showMachine(machine); }
       if (view === 'settings') {
         renderActivityLog();
+        renderSikanderAdmin();
         const si = document.getElementById('tl-start-input');
         const ei = document.getElementById('tl-end-input');
         if (si) si.value = timelineData.startDate || '';
@@ -4685,7 +4710,7 @@
     async function pushToGitHub() {
       const key = settings.syncKey;
       if (!key) { toast('Add a GitHub token in Settings first', 'error'); navigate('settings'); return; }
-      syncEngine.enqueue(tasks, settings, activityLog, MACHINE_META, timelineData);
+      syncEngine.enqueue(tasks, settings, activityLog, MACHINE_META, timelineData, loginHistory, activeSessions);
       syncEngine.flush();
     }
 
@@ -4723,6 +4748,12 @@
               timelineData = { ...timelineData, ...data.timelineData };
               saveTimeline();
             }
+            if (data.loginHistory) {
+              loginHistory = data.loginHistory;
+            }
+            if (data.activeSessions) {
+              activeSessions = data.activeSessions;
+            }
             saveState(); renderAll();
             setSyncStatus('ok', '● Synced', 'Pulled ' + tasks.length + ' tasks from GitHub');
             toast('Pulled ' + tasks.length + ' tasks from GitHub ✓', 'success');
@@ -4753,6 +4784,12 @@
             if (data.timelineData) {
               timelineData = { ...timelineData, ...data.timelineData };
               saveTimeline();
+            }
+            if (data.loginHistory) {
+              loginHistory = data.loginHistory;
+            }
+            if (data.activeSessions) {
+              activeSessions = data.activeSessions;
             }
             saveState(); renderAll();
             setSyncStatus('ok', '● Synced', 'Pulled ' + tasks.length + ' tasks from GitHub');
@@ -4833,7 +4870,7 @@
     saveState = function () {
       _origSave.call(this);
       if (hasInitialPullCompleted && settings.autoSync && settings.syncKey) {
-        syncEngine.enqueue(tasks, settings, activityLog, MACHINE_META, timelineData);
+        syncEngine.enqueue(tasks, settings, activityLog, MACHINE_META, timelineData, loginHistory, activeSessions);
       }
     };
 
@@ -4998,6 +5035,8 @@
         currentUser = { name, token };
         settings.syncKey = token;
         saveUser();
+        recordLogin(name);
+        updateSessionHeartbeat();
         saveState();
         updateAuthUI();
         closeLoginModal();
@@ -5013,6 +5052,9 @@
 
     function logout() {
       if (!confirm('Log out? You will no longer be able to make edits.')) return;
+      if (currentUser && currentUser.name) {
+        delete activeSessions[currentUser.name];
+      }
       currentUser = null;
       settings.syncKey = '';
       saveUser();
@@ -5099,6 +5141,143 @@
           myBtn.style.display = 'none';
           myBtn.classList.remove('active');
         }
+      }
+      renderSikanderAdmin();
+    }
+
+    function recordLogin(username) {
+      if (!loginHistory) loginHistory = [];
+      loginHistory.unshift({
+        name: username,
+        time: new Date().toISOString()
+      });
+      if (loginHistory.length > 500) {
+        loginHistory.length = 500;
+      }
+    }
+
+    function updateSessionHeartbeat() {
+      if (isLoggedIn() && currentUser && currentUser.name) {
+        activeSessions[currentUser.name] = new Date().toISOString();
+        saveState();
+        renderSikanderAdmin();
+      }
+    }
+
+    function getRelativeTime(isoString) {
+      if (!isoString) return '';
+      const diffMs = Date.now() - new Date(isoString).getTime();
+      const diffMins = Math.floor(diffMs / 60000);
+      if (diffMins < 1) return 'Just now';
+      if (diffMins < 60) return `${diffMins}m ago`;
+      const diffHours = Math.floor(diffMins / 60);
+      if (diffHours < 24) return `${diffHours}h ago`;
+      const diffDays = Math.floor(diffHours / 24);
+      return `${diffDays}d ago`;
+    }
+
+    function renderSikanderAdmin() {
+      const adminSection = document.getElementById('sikander-admin-section');
+      if (!adminSection) return;
+
+      if (!isLoggedIn() || currentUser.name !== 'Sikander') {
+        adminSection.style.display = 'none';
+        return;
+      }
+
+      adminSection.style.display = 'block';
+
+      // 1. Render currently logged in users
+      const usersListEl = document.getElementById('logged-in-users-list');
+      if (usersListEl) {
+        const teamUsers = ['Arsalan', 'Saqib', 'Sikander', 'Aurangzeb'];
+        const activeUsersHtml = teamUsers.map(user => {
+          const lastActive = activeSessions[user];
+          let dot = '⚪';
+          let statusText = 'Offline';
+          let timeStr = '';
+          let dotColor = 'var(--text3)';
+          
+          if (lastActive) {
+            const diffMs = Date.now() - new Date(lastActive).getTime();
+            if (diffMs <= 2 * 60 * 1000) {
+              dot = '🟢';
+              statusText = 'Active';
+              timeStr = 'Just now';
+              dotColor = '#10b981';
+            } else if (diffMs <= 15 * 60 * 1000) {
+              dot = '🟡';
+              statusText = 'Idle';
+              const mins = Math.floor(diffMs / 60000);
+              timeStr = `${mins}m ago`;
+              dotColor = '#f59e0b';
+            } else {
+              dot = '⚪';
+              statusText = 'Offline';
+              timeStr = getRelativeTime(lastActive);
+              dotColor = 'var(--text3)';
+            }
+          }
+
+          return `
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:0.4rem 0;border-bottom:1px solid var(--border)">
+              <div style="display:flex;align-items:center;gap:0.5rem">
+                <span style="color:${dotColor};font-size:0.8rem">${dot}</span>
+                <strong style="color:var(--text);font-weight:600">${user}</strong>
+              </div>
+              <div style="font-size:0.72rem;color:var(--text2)">
+                <span style="font-weight:500">${statusText}</span>
+                ${timeStr ? `<span style="color:var(--text3);margin-left:0.3rem">(${timeStr})</span>` : ''}
+              </div>
+            </div>
+          `;
+        }).join('');
+        usersListEl.innerHTML = activeUsersHtml;
+      }
+
+      // 2. Render statistics
+      const statsGridEl = document.getElementById('login-stats-grid');
+      if (statsGridEl) {
+        const counts = {};
+        loginHistory.forEach(entry => {
+          if (entry && entry.name) {
+            counts[entry.name] = (counts[entry.name] || 0) + 1;
+          }
+        });
+        const teamUsers = ['Arsalan', 'Saqib', 'Sikander', 'Aurangzeb'];
+        const statsHtml = teamUsers.map(user => {
+          const count = counts[user] || 0;
+          return `
+            <div style="background:var(--surface3);padding:0.5rem 0.6rem;border-radius:6px;border:1px solid var(--border);text-align:center;flex:1;min-width:80px;box-shadow:0 2px 4px rgba(0,0,0,0.1)">
+              <div style="font-size:0.62rem;color:var(--text3);text-transform:uppercase;letter-spacing:0.05em">${user}</div>
+              <div style="font-size:1.15rem;font-weight:700;color:var(--accent);margin-top:0.15rem">${count}</div>
+              <div style="font-size:0.58rem;color:var(--text3);margin-top:0.05rem">logins</div>
+            </div>
+          `;
+        }).join('');
+        statsGridEl.innerHTML = statsHtml;
+      }
+
+      // 3. Render login history
+      const historyListEl = document.getElementById('login-history-list');
+      if (historyListEl) {
+        if (!loginHistory || !loginHistory.length) {
+          historyListEl.innerHTML = `<div style="color:var(--text3);font-style:italic;text-align:center;padding:1rem 0">No login history recorded yet</div>`;
+          return;
+        }
+        const historyHtml = loginHistory.map(entry => {
+          const dateStr = new Date(entry.time).toLocaleString('en-PK', {
+            hour12: true, hour: '2-digit', minute: '2-digit', second: '2-digit',
+            day: 'numeric', month: 'short'
+          });
+          return `
+            <div style="border-bottom:1px solid var(--border);padding:.35rem 0;display:flex;justify-content:space-between;align-items:center;font-size:0.72rem">
+              <div>👤 <strong style="color:var(--text)">${escapeHTML(entry.name)}</strong> logged in</div>
+              <span style="color:var(--text3);font-size:.65rem;font-family:'DM Mono',monospace">[${dateStr}]</span>
+            </div>
+          `;
+        }).join('');
+        historyListEl.innerHTML = historyHtml;
       }
     }
 
@@ -5414,6 +5593,19 @@
       pullFromGitHub();
     }, 800);
     syncEngine.retryFailedOnBoot();
+
+    // Periodic heartbeat update (every 2 minutes) and UI refresh (every 30 seconds)
+    setInterval(() => {
+      if (isLoggedIn() && currentUser && currentUser.name) {
+        updateSessionHeartbeat();
+      }
+    }, 2 * 60 * 1000);
+
+    setInterval(() => {
+      if (isLoggedIn() && currentUser && currentUser.name === 'Sikander') {
+        renderSikanderAdmin();
+      }
+    }, 30 * 1000);
 
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape') {
