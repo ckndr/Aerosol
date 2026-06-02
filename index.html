@@ -1643,6 +1643,48 @@
       transform: scale(1.05);
     }
 
+    .gallery-controls-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      z-index: 5;
+    }
+
+    .gallery-img-wrap:hover .gallery-controls-overlay {
+      opacity: 1;
+    }
+
+    .gallery-control-btn {
+      padding: 0.35rem 0.6rem;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      font-weight: 500;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      background: rgba(0, 0, 0, 0.75);
+      color: #fff;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      transition: background 0.15s, border-color 0.15s;
+    }
+
+    .gallery-control-btn:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+    
+    .gallery-control-btn.btn-delete:hover {
+      background: #dc2626;
+      border-color: #dc2626;
+    }
+
     .lightbox-modal {
       position: fixed;
       inset: 0;
@@ -2299,7 +2341,7 @@
         </div>
         <div class="detail-actions">
           <button class="toggle-btn" id="photos-toggle-btn" onclick="togglePhotos()" style="display:none">
-            <div class="toggle-dot"></div>📷 View Photos
+            <div class="toggle-dot"></div>📷 View Reference Photos
           </button>
           <button class="toggle-btn" id="toggle-btn" onclick="toggleDone()">
             <div class="toggle-dot"></div>Show Completed
@@ -2797,32 +2839,88 @@
     };
     const MACHINE_META = {};
     // Loaded from localStorage on init
-    const MACHINE_IMAGES = {
+    const MACHINE_REFERENCE_IMAGES = {
       Press: [
         'Photos/Press/Extrusion Press/IMG_20220518_132614.jpg',
         'Photos/Press/Extrusion Press/IMG_20220518_140759.jpg',
         'Photos/Press/Extrusion Press/IMG_20220518_140805.jpg',
         'Photos/Press/Extrusion Press/IMG_20220518_140817.jpg',
-        'Photos/Press/Extrusion Press/IMG_20220518_140828.jpg'
+        'Photos/Press/Extrusion Press/IMG_20220518_140828.jpg',
+        'Photos/Press/Extrusion Press/WhatsApp Image 2026-06-01 at 4.09.32 PM (1).jpg',
+        'Photos/Press/Extrusion Press/WhatsApp Image 2026-06-01 at 4.09.33 PM (1).jpg',
+        'Photos/Press/Extrusion Press/WhatsApp Image 2026-06-01 at 4.09.33 PM.jpg',
+        'Photos/Press/Extrusion Press/WhatsApp Image 2026-06-01 at 4.09.34 PM (2).jpg',
+        'Photos/Press/Extrusion Press/WhatsApp Image 2026-06-01 at 4.09.34 PM.jpg'
       ],
       Trimming: [
         'Photos/Trimming/Trimming & Brushing Machine/IMG_20220518_140702.jpg',
         'Photos/Trimming/Trimming & Brushing Machine/IMG_20220518_140709.jpg',
         'Photos/Trimming/Trimming & Brushing Machine/IMG_20220518_140716.jpg',
-        'Photos/Trimming/Trimming & Brushing Machine/IMG_20220518_140731.jpg'
+        'Photos/Trimming/Trimming & Brushing Machine/IMG_20220518_140731.jpg',
+        'Photos/Trimming/Trimming & Brushing Machine/WhatsApp Image 2026-06-01 at 4.09.56 PM.jpg',
+        'Photos/Trimming/Trimming & Brushing Machine/WhatsApp Image 2026-06-01 at 4.09.57 PM.jpg',
+        'Photos/Trimming/Trimming & Brushing Machine/WhatsApp Image 2026-06-01 at 4.09.58 PM (1).jpg',
+        'Photos/Trimming/Trimming & Brushing Machine/WhatsApp Image 2026-06-01 at 4.09.58 PM.jpg'
       ],
       Washing: [
         'Photos/Washing/Washing Machine/IMG_20220518_140555.jpg',
         'Photos/Washing/Washing Machine/IMG_20220518_140618.jpg',
         'Photos/Washing/Washing Machine/IMG_20220518_140642.jpg',
         'Photos/Washing/Washing Machine/IMG_20220518_140649.jpg',
-        'Photos/Washing/Washing Machine/IMG_20220518_140655.jpg'
+        'Photos/Washing/Washing Machine/IMG_20220518_140655.jpg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.10.47 PM.jpg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.10.48 PM.jpg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.10.49 PM.jpg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.10.51 PM.jpg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.10.53 PM.jpg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.10.54 PM.jpeg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.10.55 PM (1).jpeg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.10.55 PM.jpeg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.10.57 PM.jpeg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.10.58 PM.jpeg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.00 PM.jpeg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.03 PM.jpeg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.05 PM (1).jpeg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.05 PM.jpeg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.07 PM.jpeg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.10 PM.jpeg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.11 PM (1).jpeg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.11 PM.jpeg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.13 PM.jpeg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.15 PM.jpeg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.16 PM.jpeg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.17 PM.jpeg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.18 PM (1).jpeg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.18 PM.jpeg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.21 PM.jpeg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.22 PM (1).jpeg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.23 PM (1).jpeg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.23 PM.jpeg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.24 PM (1).jpeg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.24 PM.jpeg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.25 PM.jpeg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.26 PM.jpeg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.29 PM.jpeg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.30 PM (1).jpeg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.31 PM (1).jpeg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.31 PM.jpeg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.32 PM (1).jpeg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.32 PM.jpeg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.33 PM (1).jpeg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.34 PM.jpeg',
+        'Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.37 PM (1).jpeg'
       ],
       Lacquer: [
         'Photos/Lacquer/Internal Lacquering Machine/IMG_20220518_140428.jpg',
         'Photos/Lacquer/Internal Lacquering Machine/IMG_20220518_140446.jpg',
         'Photos/Lacquer/Internal Lacquering Machine/IMG_20220518_140452.jpg',
-        'Photos/Lacquer/Internal Lacquering Machine/IMG_20220518_140519.jpg'
+        'Photos/Lacquer/Internal Lacquering Machine/IMG_20220518_140519.jpg',
+        'Photos/Lacquer/Internal Lacquering Machine/WhatsApp Image 2026-06-01 at 4.09.27 PM (1).jpeg',
+        'Photos/Lacquer/Internal Lacquering Machine/WhatsApp Image 2026-06-01 at 4.09.27 PM.jpeg',
+        'Photos/Lacquer/Internal Lacquering Machine/WhatsApp Image 2026-06-01 at 4.12.12 PM.jpg',
+        'Photos/Lacquer/Internal Lacquering Machine/WhatsApp Image 2026-06-01 at 4.12.14 PM (1).jpg',
+        'Photos/Lacquer/Internal Lacquering Machine/WhatsApp Image 2026-06-01 at 4.12.14 PM.jpg',
+        'Photos/Lacquer/Internal Lacquering Machine/WhatsApp Image 2026-06-01 at 4.14.38 PM (1).jpeg'
       ],
       'Lacquer Oven': [
         'Photos/Internal Lacquer Baking Oven/Internal Lacquer Baking Oven/IMG_20220518_140300.jpg',
@@ -2830,14 +2928,28 @@
         'Photos/Internal Lacquer Baking Oven/Internal Lacquer Baking Oven/IMG_20220518_140330.jpg',
         'Photos/Internal Lacquer Baking Oven/Internal Lacquer Baking Oven/IMG_20220518_140347.jpg',
         'Photos/Internal Lacquer Baking Oven/Internal Lacquer Baking Oven/IMG_20220518_140402.jpg',
-        'Photos/Internal Lacquer Baking Oven/Internal Lacquer Baking Oven/IMG_20220518_140408.jpg'
+        'Photos/Internal Lacquer Baking Oven/Internal Lacquer Baking Oven/IMG_20220518_140408.jpg',
+        'Photos/Internal Lacquer Baking Oven/Internal Lacquer Baking Oven/WhatsApp Image 2026-06-01 at 4.09.27 PM (1).jpeg',
+        'Photos/Internal Lacquer Baking Oven/Internal Lacquer Baking Oven/WhatsApp Image 2026-06-01 at 4.09.27 PM.jpeg',
+        'Photos/Internal Lacquer Baking Oven/Internal Lacquer Baking Oven/WhatsApp Image 2026-06-01 at 4.12.12 PM.jpg',
+        'Photos/Internal Lacquer Baking Oven/Internal Lacquer Baking Oven/WhatsApp Image 2026-06-01 at 4.12.14 PM (1).jpg',
+        'Photos/Internal Lacquer Baking Oven/Internal Lacquer Baking Oven/WhatsApp Image 2026-06-01 at 4.12.14 PM.jpg',
+        'Photos/Internal Lacquer Baking Oven/Internal Lacquer Baking Oven/WhatsApp Image 2026-06-01 at 4.14.38 PM (1).jpeg'
       ],
       'Base Coat': [
         'Photos/Base Coat/Base Lacquering Machine/IMG_20220518_135811.jpg',
         'Photos/Base Coat/Base Lacquering Machine/IMG_20220518_135822.jpg',
         'Photos/Base Coat/Base Lacquering Machine/IMG_20220518_135848.jpg',
         'Photos/Base Coat/Base Lacquering Machine/IMG_20220518_135855.jpg',
-        'Photos/Base Coat/Base Lacquering Machine/IMG_20220518_135905.jpg'
+        'Photos/Base Coat/Base Lacquering Machine/IMG_20220518_135905.jpg',
+        'Photos/Base Coat/Base Lacquering Machine/WhatsApp Image 2026-06-01 at 4.13.32 PM.jpg',
+        'Photos/Base Coat/Base Lacquering Machine/WhatsApp Image 2026-06-01 at 4.13.33 PM.jpg',
+        'Photos/Base Coat/Base Lacquering Machine/WhatsApp Image 2026-06-01 at 4.13.38 PM.jpg',
+        'Photos/Base Coat/Base Lacquering Machine/WhatsApp Image 2026-06-01 at 4.13.51 PM.jpg',
+        'Photos/Base Coat/Base Lacquering Machine/WhatsApp Image 2026-06-01 at 4.13.53 PM.jpg',
+        'Photos/Base Coat/Base Lacquering Machine/WhatsApp Image 2026-06-01 at 4.13.54 PM.jpg',
+        'Photos/Base Coat/Base Lacquering Machine/WhatsApp Image 2026-06-01 at 4.13.55 PM.jpg',
+        'Photos/Base Coat/Base Lacquering Machine/WhatsApp Image 2026-06-01 at 4.13.56 PM.jpg'
       ],
       Printing: [
         'Photos/Printing/IMG_20220518_135916.jpg',
@@ -2845,7 +2957,13 @@
         'Photos/Printing/IMG_20220518_135934.jpg',
         'Photos/Printing/IMG_20220518_135946.jpg',
         'Photos/Printing/IMG_20220518_135951.jpg',
-        'Photos/Printing/IMG_20220518_140003.jpg'
+        'Photos/Printing/IMG_20220518_140003.jpg',
+        'Photos/Printing/WhatsApp Image 2026-06-01 at 4.13.39 PM.jpg',
+        'Photos/Printing/WhatsApp Image 2026-06-01 at 4.13.40 PM.jpg',
+        'Photos/Printing/WhatsApp Image 2026-06-01 at 4.13.41 PM.jpg',
+        'Photos/Printing/WhatsApp Image 2026-06-01 at 4.13.42 PM (1).jpg',
+        'Photos/Printing/WhatsApp Image 2026-06-01 at 4.13.42 PM.jpg',
+        'Photos/Printing/WhatsApp Image 2026-06-01 at 4.13.47 PM.jpg'
       ],
       'Decoration Oven': [
         'Photos/Decoration Oven/1652880599922.jpg',
@@ -2853,14 +2971,28 @@
         'Photos/Decoration Oven/IMG_20220518_135644.jpg',
         'Photos/Decoration Oven/IMG_20220518_135709.jpg',
         'Photos/Decoration Oven/IMG_20220518_135725.jpg',
-        'Photos/Decoration Oven/IMG_20220518_135748.jpg'
+        'Photos/Decoration Oven/IMG_20220518_135748.jpg',
+        'Photos/Decoration Oven/WhatsApp Image 2026-06-01 at 4.09.19 PM.jpeg',
+        'Photos/Decoration Oven/WhatsApp Image 2026-06-01 at 4.09.20 PM.jpeg',
+        'Photos/Decoration Oven/WhatsApp Image 2026-06-01 at 4.14.00 PM.jpg',
+        'Photos/Decoration Oven/WhatsApp Image 2026-06-01 at 4.14.05 PM (1).jpg',
+        'Photos/Decoration Oven/WhatsApp Image 2026-06-01 at 4.14.05 PM.jpg',
+        'Photos/Decoration Oven/WhatsApp Image 2026-06-01 at 4.14.10 PM.jpg'
       ],
       'Over Varnish': [
         'Photos/Over Varnish/Overvarnishing Machine/IMG_20220518_140017.jpg',
         'Photos/Over Varnish/Overvarnishing Machine/IMG_20220518_140031.jpg',
         'Photos/Over Varnish/Overvarnishing Machine/IMG_20220518_140036.jpg',
         'Photos/Over Varnish/Overvarnishing Machine/IMG_20220518_140046.jpg',
-        'Photos/Over Varnish/Overvarnishing Machine/IMG_20220518_140058.jpg'
+        'Photos/Over Varnish/Overvarnishing Machine/IMG_20220518_140058.jpg',
+        'Photos/Over Varnish/Overvarnishing Machine/WhatsApp Image 2026-06-01 at 4.13.32 PM.jpg',
+        'Photos/Over Varnish/Overvarnishing Machine/WhatsApp Image 2026-06-01 at 4.13.33 PM.jpg',
+        'Photos/Over Varnish/Overvarnishing Machine/WhatsApp Image 2026-06-01 at 4.13.38 PM.jpg',
+        'Photos/Over Varnish/Overvarnishing Machine/WhatsApp Image 2026-06-01 at 4.13.51 PM.jpg',
+        'Photos/Over Varnish/Overvarnishing Machine/WhatsApp Image 2026-06-01 at 4.13.53 PM.jpg',
+        'Photos/Over Varnish/Overvarnishing Machine/WhatsApp Image 2026-06-01 at 4.13.54 PM.jpg',
+        'Photos/Over Varnish/Overvarnishing Machine/WhatsApp Image 2026-06-01 at 4.13.55 PM.jpg',
+        'Photos/Over Varnish/Overvarnishing Machine/WhatsApp Image 2026-06-01 at 4.13.56 PM.jpg'
       ],
       Necking: [
         'Photos/Necking/IMG_20220518_135455.jpg',
@@ -2870,34 +3002,59 @@
         'Photos/Necking/IMG_20220518_135533.jpg',
         'Photos/Necking/IMG_20220518_135543.jpg',
         'Photos/Necking/IMG_20220518_135556.jpg',
-        'Photos/Necking/IMG_20220518_135835.jpg'
+        'Photos/Necking/IMG_20220518_135835.jpg',
+        'Photos/Necking/WhatsApp Image 2026-06-01 at 4.13.37 PM.jpg',
+        'Photos/Necking/WhatsApp Image 2026-06-01 at 4.14.50 PM (1).jpg',
+        'Photos/Necking/WhatsApp Image 2026-06-01 at 4.14.50 PM.jpg',
+        'Photos/Necking/WhatsApp Image 2026-06-01 at 4.14.51 PM.jpg',
+        'Photos/Necking/WhatsApp Image 2026-06-01 at 4.14.53 PM.jpg',
+        'Photos/Necking/WhatsApp Image 2026-06-01 at 4.14.54 PM.jpg',
+        'Photos/Necking/WhatsApp Image 2026-06-01 at 4.14.57 PM.jpg',
+        'Photos/Necking/WhatsApp Image 2026-06-01 at 4.14.58 PM (1).jpeg',
+        'Photos/Necking/WhatsApp Image 2026-06-01 at 4.14.59 PM (1).jpeg',
+        'Photos/Necking/WhatsApp Image 2026-06-01 at 4.14.59 PM (2).jpeg',
+        'Photos/Necking/WhatsApp Image 2026-06-01 at 4.14.59 PM.jpeg',
+        'Photos/Necking/WhatsApp Image 2026-06-01 at 4.15.00 PM (1).jpeg',
+        'Photos/Necking/WhatsApp Image 2026-06-01 at 4.15.01 PM.jpeg',
+        'Photos/Necking/WhatsApp Image 2026-06-01 at 4.15.02 PM (1).jpeg',
+        'Photos/Necking/WhatsApp Image 2026-06-01 at 4.15.02 PM.jpeg',
+        'Photos/Necking/WhatsApp Image 2026-06-01 at 4.15.03 PM.jpeg',
+        'Photos/Necking/WhatsApp Image 2026-06-01 at 4.15.04 PM (2).jpeg',
+        'Photos/Necking/WhatsApp Image 2026-06-01 at 4.15.04 PM.jpeg'
       ],
       Accumulator: [
         'Photos/Accumulator/Accumulator/IMG_20220518_140139.jpg',
-        'Photos/Accumulator/Accumulator/IMG_20220518_140151.jpg',
         'Photos/Accumulator/Accumulator/IMG_20220518_140206.jpg',
-        'Photos/Accumulator/Accumulator/IMG_20220518_140224.jpg',
-        'Photos/Accumulator/Accumulator/IMG_20220518_140237.jpg'
+        'Photos/Accumulator/Accumulator/WhatsApp Image 2026-06-01 at 4.12.57 PM (1).jpg',
+        'Photos/Accumulator/Accumulator/WhatsApp Image 2026-06-01 at 4.12.58 PM (1).jpg'
       ],
       Tumbler: [],
       Compressor: [],
-      'FG Conveyor': [],
+      'FG Conveyor': [
+        'Photos/FG Conveyor/WhatsApp Image 2026-06-01 at 4.15.05 PM.jpg',
+        'Photos/FG Conveyor/WhatsApp Image 2026-06-01 at 4.15.06 PM (1).jpg',
+        'Photos/FG Conveyor/WhatsApp Image 2026-06-01 at 4.15.06 PM (2).jpg',
+        'Photos/FG Conveyor/WhatsApp Image 2026-06-01 at 4.15.07 PM.jpg'
+      ],
       'Auto Strapping Machine': [
         'Photos/Strapping/IMG_20220518_135309.jpg',
         'Photos/Strapping/IMG_20220518_135331.jpg',
         'Photos/Strapping/IMG_20220518_135343.jpg',
         'Photos/Strapping/IMG_20220518_135424.jpg',
         'Photos/Strapping/IMG_20220518_135431.jpg',
-        'Photos/Strapping/IMG_20220518_135443.jpg'
+        'Photos/Strapping/IMG_20220518_135443.jpg',
+        'Photos/Strapping/WhatsApp Image 2026-06-01 at 4.15.05 PM.jpg',
+        'Photos/Strapping/WhatsApp Image 2026-06-01 at 4.15.06 PM.jpg'
       ],
-      // ⚠️ FLAG: Manual Strapping Machine uses same photos as Auto Strapping Machine. Confirm if correct or replace with dedicated photos.
       'Manual Strapping Machine': [
         'Photos/Strapping/IMG_20220518_135309.jpg',
         'Photos/Strapping/IMG_20220518_135331.jpg',
         'Photos/Strapping/IMG_20220518_135343.jpg',
         'Photos/Strapping/IMG_20220518_135424.jpg',
         'Photos/Strapping/IMG_20220518_135431.jpg',
-        'Photos/Strapping/IMG_20220518_135443.jpg'
+        'Photos/Strapping/IMG_20220518_135443.jpg',
+        'Photos/Strapping/WhatsApp Image 2026-06-01 at 4.15.05 PM.jpg',
+        'Photos/Strapping/WhatsApp Image 2026-06-01 at 4.15.06 PM.jpg'
       ],
       'Overall Machine Operation': [],
       General: []
@@ -3854,13 +4011,13 @@
 
       // Gallery — HIDE by default, show button if photos exist
       const gal = document.getElementById('detail-gallery');
-      const allImgs = getAllMachinePhotos(m);
+      const allImgs = getReferencePhotos(m);
 
       const photosBtn = document.getElementById('photos-toggle-btn');
       if (allImgs.length) {
         photosBtn.style.display = 'inline-flex';
         photosBtn.classList.remove('on');
-        photosBtn.innerHTML = '<div class="toggle-dot"></div>📷 View Photos (' + allImgs.length + ')';
+        photosBtn.innerHTML = '<div class="toggle-dot"></div>📷 View Reference Photos (' + allImgs.length + ')';
       } else {
         photosBtn.style.display = 'none';
       }
@@ -3879,18 +4036,131 @@
       if (gal.style.display === 'flex') {
         gal.style.display = 'none';
         btn.classList.remove('on');
-        btn.innerHTML = '<div class="toggle-dot"></div>📷 View Photos (' + getAllMachinePhotos(m).length + ')';
+        btn.innerHTML = '<div class="toggle-dot"></div>📷 View Reference Photos (' + getReferencePhotos(m).length + ')';
       } else {
-        const allImgs = getAllMachinePhotos(m);
-        gal.style.display = 'flex';
-        gal.innerHTML = allImgs.map(img => `<div class="gallery-img-wrap" onclick="openLightbox(this.dataset.src)" data-src="${escapeHTML(img)}"><img src="${escapeHTML(img)}" alt="${escapeHTML(m)}" onerror="this.parentElement.style.display='none';"></div>`).join('');
+        renderGalleryForMachine(m);
         btn.classList.add('on');
-        btn.innerHTML = '<div class="toggle-dot"></div>📷 Hide Photos';
+        btn.innerHTML = '<div class="toggle-dot"></div>📷 Hide Reference Photos';
       }
     }
 
-    function getAllMachinePhotos(m) {
-      return MACHINE_IMAGES[m] || [];
+    function renderGalleryForMachine(m) {
+      const gal = document.getElementById('detail-gallery');
+      const allImgs = getReferencePhotos(m);
+      gal.style.display = 'flex';
+      gal.innerHTML = allImgs.map(img => `
+        <div class="gallery-img-wrap" onclick="openLightbox(this.dataset.src)" data-src="${escapeHTML(img)}">
+          <img src="${escapeHTML(img)}" alt="${escapeHTML(m)}" onerror="this.parentElement.style.display='none';">
+          <div class="gallery-controls-overlay" onclick="event.stopPropagation()">
+            <button class="gallery-control-btn" onclick="moveReferencePhoto('${escapeJS(m)}', '${escapeJS(img)}')">📂 Move</button>
+            <button class="gallery-control-btn btn-delete" onclick="deleteReferencePhoto('${escapeJS(m)}', '${escapeJS(img)}')">🗑️ Delete</button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function escapeJS(str) {
+      if (!str) return '';
+      return str.replace(/'/g, "\\'").replace(/"/g, '\\"');
+    }
+
+    function deleteReferencePhoto(machine, imgPath) {
+      if (!isLoggedIn()) { openLoginModal(); return; }
+      if (!confirm('Are you sure you want to delete this reference photo?')) return;
+      
+      if (!MACHINE_META[machine]) MACHINE_META[machine] = {};
+      let imgs = MACHINE_META[machine].referenceImages || MACHINE_REFERENCE_IMAGES[machine] || [];
+      imgs = imgs.filter(img => img !== imgPath);
+      MACHINE_META[machine].referenceImages = imgs;
+      
+      saveMeta();
+      saveState();
+      
+      // Update UI
+      showMachine(machine);
+      togglePhotos();
+      toast('Reference photo deleted', 'success');
+    }
+
+    function moveReferencePhoto(sourceMachine, imgPath) {
+      if (!isLoggedIn()) { openLoginModal(); return; }
+      const modalId = 'move-photo-modal';
+      let modalEl = document.getElementById(modalId);
+      if (!modalEl) {
+        modalEl = document.createElement('div');
+        modalEl.id = modalId;
+        modalEl.className = 'modal-overlay center';
+        modalEl.style.zIndex = '110';
+        document.body.appendChild(modalEl);
+      }
+      
+      const options = MACHINE_ORDER
+        .filter(m => m !== sourceMachine)
+        .map(m => `<option value="${escapeHTML(m)}">${escapeHTML(m)}</option>`)
+        .join('');
+        
+      modalEl.innerHTML = `
+        <div class="modal" style="max-width:400px">
+          <div class="modal-header">
+            <div class="modal-title">Move Reference Photo</div>
+            <button class="modal-close" onclick="document.getElementById('${modalId}').style.display='none'">✕</button>
+          </div>
+          <div class="form-grid" style="grid-template-columns:1fr; padding:1.25rem">
+            <div class="form-group full">
+              <label>Select Target Machine</label>
+              <select id="move-photo-target" style="width:100%">${options}</select>
+            </div>
+          </div>
+          <div class="modal-footer" style="padding:1rem 1.25rem">
+            <button class="btn-cancel" onclick="document.getElementById('${modalId}').style.display='none'">Cancel</button>
+            <button class="btn-save" onclick="executeMoveReferencePhoto('${escapeJS(sourceMachine)}', '${escapeJS(imgPath)}')">Move Photo</button>
+          </div>
+        </div>
+      `;
+      modalEl.style.display = 'flex';
+    }
+
+    function executeMoveReferencePhoto(sourceMachine, imgPath) {
+      const targetMachine = document.getElementById('move-photo-target').value;
+      if (!targetMachine || targetMachine === sourceMachine) return;
+      
+      if (!MACHINE_META[sourceMachine]) MACHINE_META[sourceMachine] = {};
+      if (!MACHINE_META[targetMachine]) MACHINE_META[targetMachine] = {};
+      
+      let sourceImgs = MACHINE_META[sourceMachine].referenceImages || MACHINE_REFERENCE_IMAGES[sourceMachine] || [];
+      let targetImgs = MACHINE_META[targetMachine].referenceImages || MACHINE_REFERENCE_IMAGES[targetMachine] || [];
+      
+      sourceImgs = sourceImgs.filter(img => img !== imgPath);
+      if (!targetImgs.includes(imgPath)) {
+        targetImgs = [...targetImgs, imgPath];
+      }
+      
+      MACHINE_META[sourceMachine].referenceImages = sourceImgs;
+      MACHINE_META[targetMachine].referenceImages = targetImgs;
+      
+      saveMeta();
+      saveState();
+      
+      document.getElementById('move-photo-modal').style.display = 'none';
+      
+      showMachine(sourceMachine);
+      togglePhotos();
+      
+      toast(`Moved photo to ${targetMachine}`, 'success');
+    }
+
+    function getReferencePhotos(m) {
+      let imgs = [];
+      if (MACHINE_META[m] && MACHINE_META[m].referenceImages) {
+        imgs = MACHINE_META[m].referenceImages;
+      } else {
+        imgs = MACHINE_REFERENCE_IMAGES[m] || [];
+      }
+      return imgs.filter(img => {
+        const parts = img.split('/');
+        const filename = parts[parts.length - 1];
+        return !filename.startsWith('task_img_');
+      });
     }
 
     function renderDetail() {
