@@ -1897,10 +1897,10 @@
       "status": "In Progress",
       "responsible": "Saqib",
       "remarks": "",
-      "updated": "",
+      "updated": "2 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": "Photos/Printing/task_img_1780374535636.jpg",
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
     },
@@ -2844,6 +2844,33 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1780374538775tlzm",
+      "time": "2026-06-02T04:28:58.775Z",
+      "action": "[Aurangzeb] Updated task \"Printing machine rollers — dee...\" [Photo added] on Printing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_220583",
+          "machine": "Printing",
+          "category": "Mechanical",
+          "desc": "Printing machine rollers — deep clean, rubber & chrome inspection",
+          "priority": "High",
+          "progress": 40,
+          "status": "In Progress",
+          "responsible": "Saqib",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_220583"
+    },
     {
       "id": "t1780374422594r67o",
       "time": "2026-06-02T04:27:02.594Z",
