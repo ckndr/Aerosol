@@ -27,10 +27,10 @@
       "status": "In Progress",
       "responsible": "Arsalan",
       "remarks": "",
-      "updated": "",
+      "updated": "2 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": "Photos/Accumulator/task_img_1780376167521.jpg",
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
     },
@@ -2827,6 +2827,33 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1780376170587lpqy",
+      "time": "2026-06-02T04:56:10.589Z",
+      "action": "[Aurangzeb] Updated task \"chain & bearing greasing...\" [Photo added] on Accumulator",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_823995",
+          "machine": "Accumulator",
+          "category": "Mechanical",
+          "desc": "chain & bearing greasing",
+          "priority": "Medium",
+          "progress": 50,
+          "status": "In Progress",
+          "responsible": "Arsalan",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_823995"
+    },
     {
       "id": "t1780375383289d903",
       "time": "2026-06-02T04:43:03.289Z",
