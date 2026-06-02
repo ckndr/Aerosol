@@ -2373,10 +2373,10 @@
       "status": "Not Started",
       "responsible": "Arsalan",
       "remarks": "",
-      "updated": "",
+      "updated": "2 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": "Photos/Tumbler/task_img_1780378096919.jpg",
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
     },
@@ -2861,6 +2861,33 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17803780999716xvg",
+      "time": "2026-06-02T05:28:19.971Z",
+      "action": "[Aurangzeb] Updated task \"Tumbler/Mixer wiring and conne...\" [Photo added] on Tumbler",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_163143",
+          "machine": "Tumbler",
+          "category": "Mechanical",
+          "desc": "Tumbler/Mixer wiring and connections to be done",
+          "priority": "High",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Arsalan",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_163143"
+    },
     {
       "id": "t1780378003011o4f0",
       "time": "2026-06-02T05:26:43.011Z",
@@ -5380,33 +5407,6 @@
         }
       },
       "taskId": "t_471552"
-    },
-    {
-      "id": "t1780310901040kfn1",
-      "time": "2026-06-01T10:48:21.040Z",
-      "action": "[Aurangzeb] Updated task \"Dust Collection blower install...\" on Press",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_877884",
-          "machine": "Press",
-          "category": "Electrical",
-          "desc": "Dust Collection blower installation",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Pending Procurement",
-          "responsible": "Saqib",
-          "remarks": "Require New Blower",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_877884"
     }
   ],
   "machineMeta": {
