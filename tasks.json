@@ -367,10 +367,10 @@
       "status": "Not Started",
       "responsible": "Arsalan",
       "remarks": "",
-      "updated": "",
+      "updated": "2 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": "Photos/Decoration Oven/task_img_1780375031540.jpg",
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
     },
@@ -2827,6 +2827,33 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1780375041607o3ry",
+      "time": "2026-06-02T04:37:21.607Z",
+      "action": "[Aurangzeb] Updated task \"temperature gauges to be check...\" [Photo added] on Decoration Oven",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_593209",
+          "machine": "Decoration Oven",
+          "category": "Electrical",
+          "desc": "temperature gauges to be checked & installed",
+          "priority": "High",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Arsalan",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_593209"
+    },
     {
       "id": "t1780374940772kp1r",
       "time": "2026-06-02T04:35:40.772Z",
