@@ -250,7 +250,7 @@
       "remarks": "",
       "updated": "2 Jun 2026",
       "waitingOn": "",
-      "image": "Photos/Compressor/task_img_1780377847965.jpg",
+      "image": null,
       "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
@@ -316,10 +316,10 @@
       "status": "Not Started",
       "responsible": "Arsalan",
       "remarks": "",
-      "updated": "",
+      "updated": "2 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": "Photos/Compressor/task_img_1780377942805.jpg",
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
     },
@@ -2879,6 +2879,33 @@
   },
   "activityLog": [
     {
+      "id": "t1780377948067kmku",
+      "time": "2026-06-02T05:25:48.067Z",
+      "action": "[Aurangzeb] Updated task \"dryer wiring and connection to...\" [Photo added] on Compressor",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_489187",
+          "machine": "Compressor",
+          "category": "Electrical",
+          "desc": "dryer wiring and connection to be done.",
+          "priority": "High",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Arsalan",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_489187"
+    },
+    {
       "id": "t1780377887486k015",
       "time": "2026-06-02T05:24:47.486Z",
       "action": "[Aurangzeb] Deleted task \"Compressor  dryer and auto dra...\" from Compressor",
@@ -5398,33 +5425,6 @@
         }
       },
       "taskId": "t_641856"
-    },
-    {
-      "id": "t1780310754590ccp9",
-      "time": "2026-06-01T10:45:54.590Z",
-      "action": "[Aurangzeb] Updated task \"Exhaust Sieve — cleaned...\" on Lacquer",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_753071",
-          "machine": "Lacquer",
-          "category": "Mechanical",
-          "desc": "Exhaust Sieve — cleaned",
-          "priority": "Medium",
-          "progress": 100,
-          "status": "Completed",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_753071"
     }
   ],
   "machineMeta": {
