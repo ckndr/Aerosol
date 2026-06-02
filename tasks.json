@@ -1081,10 +1081,10 @@
       "status": "Not Started",
       "responsible": "Arsalan",
       "remarks": "",
-      "updated": "",
+      "updated": "2 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": "Photos/Necking/task_img_1780377062739.jpg",
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
     },
@@ -2878,6 +2878,33 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1780377065552ycul",
+      "time": "2026-06-02T05:11:05.552Z",
+      "action": "[Aurangzeb] Updated task \"PVC ejection pipe installation...\" [Photo added] on Necking",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_294274",
+          "machine": "Necking",
+          "category": "Mechanical",
+          "desc": "PVC ejection pipe installation from necking for cans discharge",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Arsalan",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_294274"
+    },
     {
       "id": "t1780377019765tior",
       "time": "2026-06-02T05:10:19.765Z",
