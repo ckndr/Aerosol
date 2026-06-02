@@ -2016,10 +2016,10 @@
       "status": "Not Started",
       "responsible": "Arsalan",
       "remarks": "",
-      "updated": "",
+      "updated": "2 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": "Photos/Printing/task_img_1780374897130.jpg",
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
     },
@@ -2844,6 +2844,33 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1780374900330ytux",
+      "time": "2026-06-02T04:35:00.330Z",
+      "action": "[Aurangzeb] Updated task \"Aluminum oil tank — fabricate ...\" [Photo added] on Printing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_308933",
+          "machine": "Printing",
+          "category": "Mechanical",
+          "desc": "Aluminum oil tank — fabricate & install",
+          "priority": "High",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Arsalan",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_308933"
+    },
     {
       "id": "t1780374874740a12d",
       "time": "2026-06-02T04:34:34.740Z",
