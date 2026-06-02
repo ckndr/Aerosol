@@ -112,10 +112,10 @@
       "status": "In Progress",
       "responsible": "Saqib",
       "remarks": "",
-      "updated": "",
+      "updated": "2 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": "Photos/Base Coat/task_img_1780373693547.jpg",
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
     },
@@ -2844,6 +2844,33 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17803736961923uf0",
+      "time": "2026-06-02T04:14:56.192Z",
+      "action": "[Aurangzeb] Updated task \"Rollers Housing — cleaned and ...\" [Photo added] on Base Coat",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_229908",
+          "machine": "Base Coat",
+          "category": "Mechanical",
+          "desc": "Rollers Housing — cleaned and greased",
+          "priority": "Medium",
+          "progress": 60,
+          "status": "In Progress",
+          "responsible": "Saqib",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_229908"
+    },
     {
       "id": "t17803736577666ubd",
       "time": "2026-06-02T04:14:17.766Z",
