@@ -1098,10 +1098,10 @@
       "status": "Not Started",
       "responsible": "Arsalan",
       "remarks": "",
-      "updated": "",
+      "updated": "2 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": "Photos/Necking/task_img_1780377130953.jpg",
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": ""
     },
@@ -2878,6 +2878,33 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1780377133534tlea",
+      "time": "2026-06-02T05:12:13.534Z",
+      "action": "[Aurangzeb] Updated task \"scrap collection tank to insta...\" [Photo added] on Necking",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_457725",
+          "machine": "Necking",
+          "category": "Mechanical",
+          "desc": "scrap collection tank to install from necking",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Arsalan",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_457725"
+    },
     {
       "id": "t1780377096959vqh1",
       "time": "2026-06-02T05:11:36.959Z",
