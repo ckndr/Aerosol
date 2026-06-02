@@ -2872,29 +2872,38 @@
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": ""
-    },
-    {
-      "id": "t1780377869043jmxf",
-      "machine": "Compressor",
-      "category": "Electrical",
-      "desc": "Compressor  dryer and auto drain electrical connection",
-      "priority": "High",
-      "progress": 50,
-      "status": "In Progress",
-      "remarks": "",
-      "responsible": "Arsalan",
-      "updated": "2 Jun 2026",
-      "lastEditedBy": "Aurangzeb",
-      "image": "Photos/Compressor/task_img_1780377857329.jpg",
-      "waitingOn": "",
-      "dateStarted": "",
-      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1780377887486k015",
+      "time": "2026-06-02T05:24:47.486Z",
+      "action": "[Aurangzeb] Deleted task \"Compressor  dryer and auto dra...\" from Compressor",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "delete",
+        "prevTask": {
+          "id": "t1780377869043jmxf",
+          "machine": "Compressor",
+          "category": "Electrical",
+          "desc": "Compressor  dryer and auto drain electrical connection",
+          "priority": "High",
+          "progress": 50,
+          "status": "In Progress",
+          "remarks": "",
+          "responsible": "Arsalan",
+          "updated": "2 Jun 2026",
+          "lastEditedBy": "Aurangzeb",
+          "image": "Photos/Compressor/task_img_1780377857329.jpg",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      }
+    },
     {
       "id": "t1780377869043xs6a",
       "time": "2026-06-02T05:24:29.043Z",
@@ -5416,33 +5425,6 @@
         }
       },
       "taskId": "t_753071"
-    },
-    {
-      "id": "t1780310735656ovps",
-      "time": "2026-06-01T10:45:35.656Z",
-      "action": "[Aurangzeb] Updated task \"Mandrel Plate — scraped & clea...\" on Lacquer",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_166395",
-          "machine": "Lacquer",
-          "category": "Mechanical",
-          "desc": "Mandrel Plate — scraped & cleaned",
-          "priority": "Medium",
-          "progress": 100,
-          "status": "Completed",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_166395"
     }
   ],
   "machineMeta": {
