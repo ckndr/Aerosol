@@ -1,4 +1,5 @@
 @echo off
+cd /d "%~dp0"
 title Push to GitHub — Go Live
 color 0A
 
