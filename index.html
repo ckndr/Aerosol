@@ -1747,6 +1747,104 @@
       background: rgba(255, 255, 255, 0.3);
     }
 
+    /* Long-press feedback on gallery image */
+    .gallery-img-wrap.pressing {
+      opacity: 0.75;
+      transform: scale(0.97);
+      transition: opacity 0.15s ease, transform 0.15s ease;
+    }
+
+    /* Bottom action sheet overlay */
+    .gallery-action-sheet {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background: rgba(0, 0, 0, 0.55);
+      animation: sheet-fade-in 0.18s ease;
+    }
+
+    @keyframes sheet-fade-in {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    .gallery-action-sheet-body {
+      background: var(--surface);
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+      padding: 1rem 1rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .gallery-action-sheet-title {
+      font-size: 0.72rem;
+      color: var(--text3);
+      font-family: 'DM Mono', monospace;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.25rem 0 0.5rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 0.25rem;
+    }
+
+    .gallery-sheet-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.85rem 1rem;
+      border-radius: 10px;
+      border: 1px solid var(--border2);
+      background: var(--surface2);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.15s;
+      text-align: left;
+    }
+
+    .gallery-sheet-btn:hover,
+    .gallery-sheet-btn:active {
+      background: var(--surface3);
+    }
+
+    .gallery-sheet-btn.danger {
+      color: #ef4444;
+      border-color: rgba(239, 68, 68, 0.25);
+    }
+
+    .gallery-sheet-btn.danger:hover,
+    .gallery-sheet-btn.danger:active {
+      background: rgba(239, 68, 68, 0.1);
+    }
+
+    .gallery-sheet-cancel {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.85rem;
+      border-radius: 10px;
+      border: 1px solid var(--border2);
+      background: var(--surface2);
+      color: var(--text2);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 0.25rem;
+      transition: background 0.15s;
+    }
+
+    .gallery-sheet-cancel:active {
+      background: var(--surface3);
+    }
+
     @media(max-width:640px) {
       header {
         padding: .75rem 1rem;
@@ -4189,7 +4287,12 @@
       const allImgs = getReferencePhotos(m);
       gal.style.display = 'flex';
       gal.innerHTML = allImgs.map(img => `
-        <div class="gallery-img-wrap" onclick="openLightbox(this.dataset.src)" data-src="${escapeHTML(img)}">
+        <div class="gallery-img-wrap"
+          data-src="${escapeHTML(img)}"
+          data-machine="${escapeHTML(m)}"
+          onclick="openLightbox(this.dataset.src)"
+          oncontextmenu="event.preventDefault(); openGalleryActionSheet(this.dataset.machine, this.dataset.src)"
+        >
           <img src="${escapeHTML(img)}" alt="${escapeHTML(m)}" onerror="this.parentElement.style.display='none';">
           <div class="gallery-controls-overlay" onclick="event.stopPropagation()">
             <button class="gallery-control-btn" onclick="moveReferencePhoto('${escapeJS(m)}', '${escapeJS(img)}')">📂 Move</button>
@@ -4197,6 +4300,80 @@
           </div>
         </div>
       `).join('');
+
+      // Attach long-press handlers after render
+      gal.querySelectorAll('.gallery-img-wrap').forEach(wrap => {
+        let pressTimer = null;
+        let didLongPress = false;
+
+        wrap.addEventListener('touchstart', e => {
+          didLongPress = false;
+          wrap.classList.add('pressing');
+          pressTimer = setTimeout(() => {
+            didLongPress = true;
+            wrap.classList.remove('pressing');
+            const machine = wrap.dataset.machine;
+            const src = wrap.dataset.src;
+            openGalleryActionSheet(machine, src);
+          }, 500);
+        }, { passive: true });
+
+        wrap.addEventListener('touchend', e => {
+          clearTimeout(pressTimer);
+          wrap.classList.remove('pressing');
+          if (didLongPress) {
+            e.preventDefault();
+          }
+        });
+
+        wrap.addEventListener('touchmove', () => {
+          clearTimeout(pressTimer);
+          wrap.classList.remove('pressing');
+        }, { passive: true });
+      });
+    }
+
+    function openGalleryActionSheet(machine, imgSrc) {
+      if (!isLoggedIn()) {
+        toast('Login required to manage photos', 'error');
+        return;
+      }
+
+      // Remove any existing sheet
+      const existing = document.getElementById('gallery-action-sheet');
+      if (existing) existing.remove();
+
+      const sheet = document.createElement('div');
+      sheet.id = 'gallery-action-sheet';
+      sheet.className = 'gallery-action-sheet';
+
+      sheet.innerHTML = `
+        <div class="gallery-action-sheet-body">
+          <div class="gallery-action-sheet-title">Reference Photo</div>
+          <button class="gallery-sheet-btn" onclick="
+            document.getElementById('gallery-action-sheet').remove();
+            openLightbox('${escapeJS(imgSrc)}')
+          ">🔍 View Full Size</button>
+          <button class="gallery-sheet-btn" onclick="
+            document.getElementById('gallery-action-sheet').remove();
+            moveReferencePhoto('${escapeJS(machine)}', '${escapeJS(imgSrc)}')
+          ">📂 Move to Another Machine</button>
+          <button class="gallery-sheet-btn danger" onclick="
+            document.getElementById('gallery-action-sheet').remove();
+            deleteReferencePhoto('${escapeJS(machine)}', '${escapeJS(imgSrc)}')
+          ">🗑️ Delete Photo</button>
+          <button class="gallery-sheet-cancel" onclick="
+            document.getElementById('gallery-action-sheet').remove()
+          ">Cancel</button>
+        </div>
+      `;
+
+      // Tap backdrop to dismiss
+      sheet.addEventListener('click', e => {
+        if (e.target === sheet) sheet.remove();
+      });
+
+      document.body.appendChild(sheet);
     }
 
     function escapeJS(str) {
