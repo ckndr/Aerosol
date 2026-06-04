@@ -5425,7 +5425,54 @@
       "dryRun": "Complete"
     },
     "Washing": {
-      "dryRun": "Pending"
+      "dryRun": "Pending",
+      "referenceImages": [
+        "Photos/Washing/Washing Machine/IMG_20220518_140618.jpg",
+        "Photos/Washing/Washing Machine/IMG_20220518_140642.jpg",
+        "Photos/Washing/Washing Machine/IMG_20220518_140649.jpg",
+        "Photos/Washing/Washing Machine/IMG_20220518_140655.jpg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.10.47 PM.jpg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.10.48 PM.jpg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.10.49 PM.jpg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.10.51 PM.jpg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.10.53 PM.jpg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.10.54 PM.jpeg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.10.55 PM (1).jpeg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.10.55 PM.jpeg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.10.57 PM.jpeg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.10.58 PM.jpeg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.00 PM.jpeg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.03 PM.jpeg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.05 PM (1).jpeg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.05 PM.jpeg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.07 PM.jpeg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.10 PM.jpeg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.11 PM (1).jpeg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.11 PM.jpeg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.13 PM.jpeg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.15 PM.jpeg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.16 PM.jpeg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.17 PM.jpeg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.18 PM (1).jpeg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.18 PM.jpeg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.21 PM.jpeg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.22 PM (1).jpeg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.23 PM (1).jpeg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.23 PM.jpeg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.24 PM (1).jpeg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.24 PM.jpeg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.25 PM.jpeg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.26 PM.jpeg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.29 PM.jpeg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.30 PM (1).jpeg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.31 PM (1).jpeg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.31 PM.jpeg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.32 PM (1).jpeg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.32 PM.jpeg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.33 PM (1).jpeg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.34 PM.jpeg",
+        "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.37 PM (1).jpeg"
+      ]
     },
     "Lacquer": {
       "dryRun": "Pending"
@@ -5480,6 +5527,6 @@
   "loginHistory": [],
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
-    "Aurangzeb": "2026-06-04T06:32:41.778Z"
+    "Aurangzeb": "2026-06-04T06:34:11.483Z"
   }
 }
