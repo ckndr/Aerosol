@@ -5580,7 +5580,6 @@
     "Manual Strapping Machine": {
       "dryRun": "None",
       "referenceImages": [
-        "Photos/Strapping/IMG_20220518_135309.jpg",
         "Photos/Strapping/WhatsApp Image 2026-06-01 at 4.15.06 PM.jpg"
       ]
     },
@@ -5598,6 +5597,6 @@
   "loginHistory": [],
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
-    "Aurangzeb": "2026-06-04T06:59:24.519Z"
+    "Aurangzeb": "2026-06-04T06:59:26.793Z"
   }
 }
