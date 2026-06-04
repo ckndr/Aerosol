@@ -5504,7 +5504,21 @@
       ]
     },
     "Over Varnish": {
-      "dryRun": "Pending"
+      "dryRun": "Pending",
+      "referenceImages": [
+        "Photos/Over Varnish/Overvarnishing Machine/IMG_20220518_140017.jpg",
+        "Photos/Over Varnish/Overvarnishing Machine/IMG_20220518_140031.jpg",
+        "Photos/Over Varnish/Overvarnishing Machine/IMG_20220518_140036.jpg",
+        "Photos/Over Varnish/Overvarnishing Machine/IMG_20220518_140046.jpg",
+        "Photos/Over Varnish/Overvarnishing Machine/IMG_20220518_140058.jpg",
+        "Photos/Over Varnish/Overvarnishing Machine/WhatsApp Image 2026-06-01 at 4.13.32 PM.jpg",
+        "Photos/Over Varnish/Overvarnishing Machine/WhatsApp Image 2026-06-01 at 4.13.33 PM.jpg",
+        "Photos/Over Varnish/Overvarnishing Machine/WhatsApp Image 2026-06-01 at 4.13.38 PM.jpg",
+        "Photos/Over Varnish/Overvarnishing Machine/WhatsApp Image 2026-06-01 at 4.13.51 PM.jpg",
+        "Photos/Over Varnish/Overvarnishing Machine/WhatsApp Image 2026-06-01 at 4.13.53 PM.jpg",
+        "Photos/Over Varnish/Overvarnishing Machine/WhatsApp Image 2026-06-01 at 4.13.54 PM.jpg",
+        "Photos/Over Varnish/Overvarnishing Machine/WhatsApp Image 2026-06-01 at 4.13.55 PM.jpg"
+      ]
     },
     "Necking": {
       "dryRun": "Pending"
@@ -5541,6 +5555,6 @@
   "loginHistory": [],
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
-    "Aurangzeb": "2026-06-04T06:53:42.694Z"
+    "Aurangzeb": "2026-06-04T06:54:08.789Z"
   }
 }
