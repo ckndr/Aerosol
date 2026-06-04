@@ -5521,7 +5521,34 @@
       ]
     },
     "Necking": {
-      "dryRun": "Pending"
+      "dryRun": "Pending",
+      "referenceImages": [
+        "Photos/Necking/IMG_20220518_135455.jpg",
+        "Photos/Necking/IMG_20220518_135509.jpg",
+        "Photos/Necking/IMG_20220518_135515.jpg",
+        "Photos/Necking/IMG_20220518_135517.jpg",
+        "Photos/Necking/IMG_20220518_135533.jpg",
+        "Photos/Necking/IMG_20220518_135543.jpg",
+        "Photos/Necking/IMG_20220518_135556.jpg",
+        "Photos/Necking/IMG_20220518_135835.jpg",
+        "Photos/Necking/WhatsApp Image 2026-06-01 at 4.13.37 PM.jpg",
+        "Photos/Necking/WhatsApp Image 2026-06-01 at 4.14.50 PM (1).jpg",
+        "Photos/Necking/WhatsApp Image 2026-06-01 at 4.14.51 PM.jpg",
+        "Photos/Necking/WhatsApp Image 2026-06-01 at 4.14.53 PM.jpg",
+        "Photos/Necking/WhatsApp Image 2026-06-01 at 4.14.54 PM.jpg",
+        "Photos/Necking/WhatsApp Image 2026-06-01 at 4.14.57 PM.jpg",
+        "Photos/Necking/WhatsApp Image 2026-06-01 at 4.14.58 PM (1).jpeg",
+        "Photos/Necking/WhatsApp Image 2026-06-01 at 4.14.59 PM (1).jpeg",
+        "Photos/Necking/WhatsApp Image 2026-06-01 at 4.14.59 PM (2).jpeg",
+        "Photos/Necking/WhatsApp Image 2026-06-01 at 4.14.59 PM.jpeg",
+        "Photos/Necking/WhatsApp Image 2026-06-01 at 4.15.00 PM (1).jpeg",
+        "Photos/Necking/WhatsApp Image 2026-06-01 at 4.15.01 PM.jpeg",
+        "Photos/Necking/WhatsApp Image 2026-06-01 at 4.15.02 PM (1).jpeg",
+        "Photos/Necking/WhatsApp Image 2026-06-01 at 4.15.02 PM.jpeg",
+        "Photos/Necking/WhatsApp Image 2026-06-01 at 4.15.03 PM.jpeg",
+        "Photos/Necking/WhatsApp Image 2026-06-01 at 4.15.04 PM (2).jpeg",
+        "Photos/Necking/WhatsApp Image 2026-06-01 at 4.15.04 PM.jpeg"
+      ]
     },
     "Accumulator": {
       "dryRun": "Pending"
@@ -5555,6 +5582,6 @@
   "loginHistory": [],
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
-    "Aurangzeb": "2026-06-04T06:54:25.484Z"
+    "Aurangzeb": "2026-06-04T06:54:42.053Z"
   }
 }
