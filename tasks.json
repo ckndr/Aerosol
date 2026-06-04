@@ -5479,7 +5479,20 @@
       "dryRun": "None"
     },
     "Printing": {
-      "dryRun": "Pending"
+      "dryRun": "Pending",
+      "referenceImages": [
+        "Photos/Printing/IMG_20220518_135922.jpg",
+        "Photos/Printing/IMG_20220518_135934.jpg",
+        "Photos/Printing/IMG_20220518_135946.jpg",
+        "Photos/Printing/IMG_20220518_135951.jpg",
+        "Photos/Printing/IMG_20220518_140003.jpg",
+        "Photos/Printing/WhatsApp Image 2026-06-01 at 4.13.39 PM.jpg",
+        "Photos/Printing/WhatsApp Image 2026-06-01 at 4.13.40 PM.jpg",
+        "Photos/Printing/WhatsApp Image 2026-06-01 at 4.13.41 PM.jpg",
+        "Photos/Printing/WhatsApp Image 2026-06-01 at 4.13.42 PM (1).jpg",
+        "Photos/Printing/WhatsApp Image 2026-06-01 at 4.13.42 PM.jpg",
+        "Photos/Printing/WhatsApp Image 2026-06-01 at 4.13.47 PM.jpg"
+      ]
     },
     "Decoration Oven": {
       "dryRun": "Complete"
@@ -5522,6 +5535,6 @@
   "loginHistory": [],
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
-    "Aurangzeb": "2026-06-04T06:48:41.776Z"
+    "Aurangzeb": "2026-06-04T06:49:13.454Z"
   }
 }
