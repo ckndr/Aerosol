@@ -5551,7 +5551,12 @@
       ]
     },
     "Accumulator": {
-      "dryRun": "Pending"
+      "dryRun": "Pending",
+      "referenceImages": [
+        "Photos/Accumulator/Accumulator/IMG_20220518_140139.jpg",
+        "Photos/Accumulator/Accumulator/WhatsApp Image 2026-06-01 at 4.12.57 PM (1).jpg",
+        "Photos/Accumulator/Accumulator/WhatsApp Image 2026-06-01 at 4.12.58 PM (1).jpg"
+      ]
     },
     "Tumbler": {
       "dryRun": "Complete"
@@ -5582,6 +5587,6 @@
   "loginHistory": [],
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
-    "Aurangzeb": "2026-06-04T06:54:42.053Z"
+    "Aurangzeb": "2026-06-04T06:55:37.571Z"
   }
 }
