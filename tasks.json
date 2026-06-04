@@ -5411,7 +5411,18 @@
   ],
   "machineMeta": {
     "Press": {
-      "dryRun": "Complete"
+      "dryRun": "Complete",
+      "referenceImages": [
+        "Photos/Press/Extrusion Press/IMG_20220518_132614.jpg",
+        "Photos/Press/Extrusion Press/IMG_20220518_140759.jpg",
+        "Photos/Press/Extrusion Press/IMG_20220518_140805.jpg",
+        "Photos/Press/Extrusion Press/IMG_20220518_140817.jpg",
+        "Photos/Press/Extrusion Press/IMG_20220518_140828.jpg",
+        "Photos/Press/Extrusion Press/WhatsApp Image 2026-06-01 at 4.09.32 PM (1).jpg",
+        "Photos/Press/Extrusion Press/WhatsApp Image 2026-06-01 at 4.09.33 PM.jpg",
+        "Photos/Press/Extrusion Press/WhatsApp Image 2026-06-01 at 4.09.34 PM (2).jpg",
+        "Photos/Press/Extrusion Press/WhatsApp Image 2026-06-01 at 4.09.34 PM.jpg"
+      ]
     },
     "Trimming": {
       "dryRun": "Complete"
@@ -5471,6 +5482,7 @@
   },
   "loginHistory": [],
   "activeSessions": {
-    "Sikander": "2026-06-03T09:16:16.303Z"
+    "Sikander": "2026-06-03T09:16:16.303Z",
+    "Aurangzeb": "2026-06-04T06:31:22.498Z"
   }
 }
