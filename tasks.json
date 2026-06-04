@@ -5421,7 +5421,16 @@
       ]
     },
     "Trimming": {
-      "dryRun": "Complete"
+      "dryRun": "Complete",
+      "referenceImages": [
+        "Photos/Trimming/Trimming & Brushing Machine/IMG_20220518_140702.jpg",
+        "Photos/Trimming/Trimming & Brushing Machine/IMG_20220518_140709.jpg",
+        "Photos/Trimming/Trimming & Brushing Machine/IMG_20220518_140716.jpg",
+        "Photos/Trimming/Trimming & Brushing Machine/IMG_20220518_140731.jpg",
+        "Photos/Trimming/Trimming & Brushing Machine/WhatsApp Image 2026-06-01 at 4.09.57 PM.jpg",
+        "Photos/Trimming/Trimming & Brushing Machine/WhatsApp Image 2026-06-01 at 4.09.58 PM (1).jpg",
+        "Photos/Trimming/Trimming & Brushing Machine/WhatsApp Image 2026-06-01 at 4.09.58 PM.jpg"
+      ]
     },
     "Washing": {
       "dryRun": "Pending",
@@ -5594,6 +5603,6 @@
   "loginHistory": [],
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
-    "Aurangzeb": "2026-06-04T07:00:25.484Z"
+    "Aurangzeb": "2026-06-04T07:00:31.647Z"
   }
 }
