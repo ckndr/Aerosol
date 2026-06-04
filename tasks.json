@@ -5578,7 +5578,16 @@
       ]
     },
     "Manual Strapping Machine": {
-      "dryRun": "None"
+      "dryRun": "None",
+      "referenceImages": [
+        "Photos/Strapping/IMG_20220518_135309.jpg",
+        "Photos/Strapping/IMG_20220518_135331.jpg",
+        "Photos/Strapping/IMG_20220518_135424.jpg",
+        "Photos/Strapping/IMG_20220518_135431.jpg",
+        "Photos/Strapping/IMG_20220518_135443.jpg",
+        "Photos/Strapping/WhatsApp Image 2026-06-01 at 4.15.05 PM.jpg",
+        "Photos/Strapping/WhatsApp Image 2026-06-01 at 4.15.06 PM.jpg"
+      ]
     },
     "Overall Machine Operation": {
       "dryRun": "None"
@@ -5594,6 +5603,6 @@
   "loginHistory": [],
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
-    "Aurangzeb": "2026-06-04T06:58:45.463Z"
+    "Aurangzeb": "2026-06-04T06:59:04.780Z"
   }
 }
