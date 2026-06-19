@@ -2857,9 +2857,7 @@
       "dateFinished": ""
     }
   ],
-  "settings": {
-    "autoSync": true
-  },
+  "settings": {},
   "activityLog": [
     {
       "id": "t17803781316997ath",
@@ -5608,9 +5606,14 @@
     "startDate": "2025-10-15",
     "targetDate": "2026-06-30"
   },
-  "loginHistory": [],
+  "loginHistory": [
+    {
+      "name": "Aurangzeb",
+      "time": "2026-06-19T07:13:01.373Z"
+    }
+  ],
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
-    "Aurangzeb": "2026-06-04T07:04:25.485Z"
+    "Aurangzeb": "2026-06-19T07:13:01.374Z"
   }
 }
