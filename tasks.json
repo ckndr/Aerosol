@@ -528,14 +528,14 @@
       "category": "General",
       "desc": "Ensure proper cleaning of entire machine",
       "priority": "Medium",
-      "progress": 0,
-      "status": "Not Started",
+      "progress": 40,
+      "status": "In Progress",
       "responsible": "Saqib",
       "remarks": "",
-      "updated": "",
+      "updated": "20 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": null,
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": "",
       "deadline": ""
@@ -3029,6 +3029,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1781937564362i294",
+      "time": "2026-06-20T06:39:24.362Z",
+      "action": "[Aurangzeb] Updated task \"Ensure proper cleaning of enti...\" [Status: Not Started → In Progress, Progress: 0% → 40%] on General",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_791541",
+          "machine": "General",
+          "category": "General",
+          "desc": "Ensure proper cleaning of entire machine",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Saqib",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "deadline": ""
+        }
+      },
+      "taskId": "t_791541"
+    },
     {
       "id": "t1781937208691vxdx",
       "time": "2026-06-20T06:33:28.691Z",
@@ -5551,33 +5579,6 @@
         }
       },
       "taskId": "t_130617"
-    },
-    {
-      "id": "t1780311054067xt4c",
-      "time": "2026-06-01T10:50:54.067Z",
-      "action": "[Aurangzeb] Updated task \"Welding & fixing gear oil tank...\" on Press",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_773553",
-          "machine": "Press",
-          "category": "Mechanical",
-          "desc": "Welding & fixing gear oil tank brackets and sheet",
-          "priority": "Medium",
-          "progress": 40,
-          "status": "In Progress",
-          "responsible": "Arsalan",
-          "remarks": "Not fixed Yet",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_773553"
     }
   ],
   "machineMeta": {
@@ -5787,6 +5788,6 @@
   ],
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
-    "Aurangzeb": "2026-06-20T06:39:07.410Z"
+    "Aurangzeb": "2026-06-20T06:39:24.363Z"
   }
 }
