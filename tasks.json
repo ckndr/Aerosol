@@ -565,13 +565,13 @@
       "desc": "Baling machine procurement",
       "priority": "Medium",
       "progress": 0,
-      "status": "Not Started",
+      "status": "Pending Procurement",
       "responsible": "Saqib",
       "remarks": "",
-      "updated": "",
+      "updated": "20 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": null,
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": "",
       "deadline": ""
@@ -3029,6 +3029,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1781937605474v4p5",
+      "time": "2026-06-20T06:40:05.474Z",
+      "action": "[Aurangzeb] Updated task \"Baling machine procurement...\" [Status: Not Started → Pending Procurement] on General",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_127701",
+          "machine": "General",
+          "category": "Mechanical",
+          "desc": "Baling machine procurement",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Saqib",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "deadline": ""
+        }
+      },
+      "taskId": "t_127701"
+    },
     {
       "id": "t1781937584698821v",
       "time": "2026-06-20T06:39:44.698Z",
@@ -5553,33 +5581,6 @@
         }
       },
       "taskId": "t_339310"
-    },
-    {
-      "id": "t1780311150385vxs9",
-      "time": "2026-06-01T10:52:30.385Z",
-      "action": "[Aurangzeb] Updated task \"Place and install the Oil coll...\" on Press",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_604104",
-          "machine": "Press",
-          "category": "Mechanical",
-          "desc": "Place and install the Oil collection tank directly under the tray",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "Not Installed Yet",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_604104"
     }
   ],
   "machineMeta": {
@@ -5789,6 +5790,6 @@
   ],
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
-    "Aurangzeb": "2026-06-20T06:39:44.698Z"
+    "Aurangzeb": "2026-06-20T06:40:05.474Z"
   }
 }
