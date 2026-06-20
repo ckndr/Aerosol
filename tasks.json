@@ -672,14 +672,14 @@
       "category": "General",
       "desc": "Dust bins for office areas",
       "priority": "Medium",
-      "progress": 0,
-      "status": "Not Started",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Saqib",
       "remarks": "",
-      "updated": "",
+      "updated": "20 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": null,
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": "",
       "deadline": ""
@@ -3029,6 +3029,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1781937617234tjhn",
+      "time": "2026-06-20T06:40:17.234Z",
+      "action": "[Aurangzeb] Updated task \"Dust bins for office areas...\" [Status: Not Started → Completed, Progress: 0% → 100%] on General",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_329620",
+          "machine": "General",
+          "category": "General",
+          "desc": "Dust bins for office areas",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Saqib",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "deadline": ""
+        }
+      },
+      "taskId": "t_329620"
+    },
     {
       "id": "t1781937605474v4p5",
       "time": "2026-06-20T06:40:05.474Z",
@@ -5554,33 +5582,6 @@
         }
       },
       "taskId": "t_513566"
-    },
-    {
-      "id": "t1780311234869uo1l",
-      "time": "2026-06-01T10:53:54.869Z",
-      "action": "[Aurangzeb] Updated task \"Installation of Level sensor a...\" on Press",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_339310",
-          "machine": "Press",
-          "category": "Mechanical",
-          "desc": "Installation of Level sensor and Filter on the oil tank",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "Not Installed Yet",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_339310"
     }
   ],
   "machineMeta": {
@@ -5790,6 +5791,6 @@
   ],
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
-    "Aurangzeb": "2026-06-20T06:40:05.474Z"
+    "Aurangzeb": "2026-06-20T06:40:17.234Z"
   }
 }
