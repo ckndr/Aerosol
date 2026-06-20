@@ -3025,9 +3025,7 @@
       "deadline": ""
     }
   ],
-  "settings": {
-    "autoSync": true
-  },
+  "settings": {},
   "activityLog": [
     {
       "id": "t1781937208691vxdx",
@@ -5781,12 +5779,16 @@
   },
   "loginHistory": [
     {
+      "name": "Sikander",
+      "time": "2026-06-20T06:35:52.744Z"
+    },
+    {
       "name": "Aurangzeb",
       "time": "2026-06-19T07:13:01.373Z"
     }
   ],
   "activeSessions": {
-    "Sikander": "2026-06-03T09:16:16.303Z",
+    "Sikander": "2026-06-20T06:35:52.747Z",
     "Aurangzeb": "2026-06-20T06:35:07.417Z"
   }
 }
