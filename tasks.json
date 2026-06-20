@@ -547,13 +547,13 @@
       "desc": "Scoop required for slug handling",
       "priority": "Medium",
       "progress": 0,
-      "status": "Not Started",
+      "status": "In Progress",
       "responsible": "Saqib",
       "remarks": "",
-      "updated": "",
+      "updated": "20 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": null,
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": "",
       "deadline": ""
@@ -3029,6 +3029,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1781937584698821v",
+      "time": "2026-06-20T06:39:44.698Z",
+      "action": "[Aurangzeb] Updated task \"Scoop required for slug handli...\" [Status: Not Started → In Progress] on General",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_533804",
+          "machine": "General",
+          "category": "Mechanical",
+          "desc": "Scoop required for slug handling",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Saqib",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "deadline": ""
+        }
+      },
+      "taskId": "t_533804"
+    },
     {
       "id": "t1781937564362i294",
       "time": "2026-06-20T06:39:24.362Z",
@@ -5552,33 +5580,6 @@
         }
       },
       "taskId": "t_604104"
-    },
-    {
-      "id": "t1780311080038y13i",
-      "time": "2026-06-01T10:51:20.038Z",
-      "action": "[Aurangzeb] Updated task \"Fixing the lubrication tray pr...\" on Press",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_130617",
-          "machine": "Press",
-          "category": "Mechanical",
-          "desc": "Fixing the lubrication tray properly with a slope for drainage",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "Not fixed Yet",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_130617"
     }
   ],
   "machineMeta": {
@@ -5788,6 +5789,6 @@
   ],
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
-    "Aurangzeb": "2026-06-20T06:39:24.363Z"
+    "Aurangzeb": "2026-06-20T06:39:44.698Z"
   }
 }
