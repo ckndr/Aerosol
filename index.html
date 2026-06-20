@@ -5197,6 +5197,15 @@
           row.commit();
         }
 
+        // Prevent Excel table corruption by removing the native table bounds
+        // and replacing it with a standard AutoFilter range
+        const tables = ws.getTables();
+        const tableKeys = Object.keys(tables);
+        if (tableKeys.length > 0) {
+          ws.removeTable(tableKeys[0]);
+        }
+        ws.autoFilter = 'A2:J' + Math.max(3, lastPopulatedRow);
+
         const buffer = await workbook.xlsx.writeBuffer();
         const blob = new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
         const url = URL.createObjectURL(blob);
