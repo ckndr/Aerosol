@@ -690,14 +690,14 @@
       "category": "General",
       "desc": "Big cartons for temporary storage of cans",
       "priority": "Medium",
-      "progress": 0,
-      "status": "Not Started",
+      "progress": 50,
+      "status": "In Progress",
       "responsible": "Saqib",
       "remarks": "",
-      "updated": "",
+      "updated": "20 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": null,
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": "",
       "deadline": ""
@@ -3011,6 +3011,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1781937795778wqfl",
+      "time": "2026-06-20T06:43:15.778Z",
+      "action": "[Aurangzeb] Updated task \"Big cartons for temporary stor...\" [Status: Not Started → In Progress, Progress: 0% → 50%] on General",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_297932",
+          "machine": "General",
+          "category": "General",
+          "desc": "Big cartons for temporary storage of cans",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Saqib",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "deadline": ""
+        }
+      },
+      "taskId": "t_297932"
+    },
     {
       "id": "t1781937776090kmw0",
       "time": "2026-06-20T06:42:56.090Z",
@@ -5537,33 +5565,6 @@
         }
       },
       "taskId": "t_141486"
-    },
-    {
-      "id": "t1780311380484rw3d",
-      "time": "2026-06-01T10:56:20.484Z",
-      "action": "[Aurangzeb] Updated task \"closure of all cable trays/ pa...\" on Trimming",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_461252",
-          "machine": "Trimming",
-          "category": "Electrical",
-          "desc": "closure of all cable trays/ panels",
-          "priority": "High",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_461252"
     }
   ],
   "machineMeta": {
@@ -5773,6 +5774,6 @@
   ],
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
-    "Aurangzeb": "2026-06-20T06:43:07.405Z"
+    "Aurangzeb": "2026-06-20T06:43:15.778Z"
   }
 }
