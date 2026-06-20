@@ -382,16 +382,16 @@
       "id": "t_325587",
       "machine": "Decoration Oven",
       "category": "General",
-      "desc": "Lacquer Oven Dry run",
+      "desc": "Oven Dry run",
       "priority": "High",
-      "progress": 100,
-      "status": "Completed",
+      "progress": 0,
+      "status": "Not Started",
       "responsible": "Arsalan",
       "remarks": "Cleaning in progress & Heater testing in progress",
-      "updated": "",
+      "updated": "20 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": null,
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": "",
       "deadline": ""
@@ -3030,6 +3030,34 @@
   },
   "activityLog": [
     {
+      "id": "t1781937208691vxdx",
+      "time": "2026-06-20T06:33:28.691Z",
+      "action": "[Aurangzeb] Updated task \"Oven Dry run...\" [Status: Completed → Not Started, Progress: 100% → 0%] on Decoration Oven",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_325587",
+          "machine": "Decoration Oven",
+          "category": "General",
+          "desc": "Lacquer Oven Dry run",
+          "priority": "High",
+          "progress": 100,
+          "status": "Completed",
+          "responsible": "Arsalan",
+          "remarks": "Cleaning in progress & Heater testing in progress",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "deadline": ""
+        }
+      },
+      "taskId": "t_325587"
+    },
+    {
       "id": "t1781936546211tvkb",
       "time": "2026-06-20T06:22:26.211Z",
       "action": "[Aurangzeb] Updated task \"dryer wiring and connection to...\" [Status: Not Started → Completed, Progress: 0% → 100%] on Compressor",
@@ -5550,33 +5578,6 @@
         }
       },
       "taskId": "t_773553"
-    },
-    {
-      "id": "t1780311034678842y",
-      "time": "2026-06-01T10:50:34.678Z",
-      "action": "[Aurangzeb] Updated task \"Dust Collection blower piping...\" on Press",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_464018",
-          "machine": "Press",
-          "category": "Mechanical",
-          "desc": "Dust Collection blower piping",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Pending Procurement",
-          "responsible": "Saqib",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_464018"
     }
   ],
   "machineMeta": {
@@ -5786,6 +5787,6 @@
   ],
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
-    "Aurangzeb": "2026-06-20T06:33:07.415Z"
+    "Aurangzeb": "2026-06-20T06:33:28.691Z"
   }
 }
