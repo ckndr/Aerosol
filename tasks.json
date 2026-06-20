@@ -703,24 +703,6 @@
       "deadline": ""
     },
     {
-      "id": "t_307331",
-      "machine": "General",
-      "category": "General",
-      "desc": "Boxes / Bins for cans packing (Alpha Container)",
-      "priority": "Medium",
-      "progress": 0,
-      "status": "Not Started",
-      "responsible": "Saqib",
-      "remarks": "",
-      "updated": "",
-      "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
-      "dateStarted": "",
-      "dateFinished": "",
-      "deadline": ""
-    },
-    {
       "id": "t_978287",
       "machine": "General",
       "category": "Electrical",
@@ -3029,6 +3011,33 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1781937776090kmw0",
+      "time": "2026-06-20T06:42:56.090Z",
+      "action": "[Aurangzeb] Deleted task \"Boxes / Bins for cans packing ...\" from General",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "delete",
+        "prevTask": {
+          "id": "t_307331",
+          "machine": "General",
+          "category": "General",
+          "desc": "Boxes / Bins for cans packing (Alpha Container)",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Saqib",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "deadline": ""
+        }
+      }
+    },
     {
       "id": "t1781937617234tjhn",
       "time": "2026-06-20T06:40:17.234Z",
@@ -5555,33 +5564,6 @@
         }
       },
       "taskId": "t_461252"
-    },
-    {
-      "id": "t1780311365816704o",
-      "time": "2026-06-01T10:56:05.817Z",
-      "action": "[Aurangzeb] Updated task \"Trimming Scrap collector wirin...\" on Trimming",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_513566",
-          "machine": "Trimming",
-          "category": "Electrical",
-          "desc": "Trimming Scrap collector wiring and troubleshooting",
-          "priority": "High",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_513566"
     }
   ],
   "machineMeta": {
@@ -5791,6 +5773,6 @@
   ],
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
-    "Aurangzeb": "2026-06-20T06:41:07.512Z"
+    "Aurangzeb": "2026-06-20T06:42:56.090Z"
   }
 }
