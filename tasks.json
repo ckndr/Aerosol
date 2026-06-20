@@ -5677,7 +5677,7 @@
       ]
     },
     "Decoration Oven": {
-      "dryRun": "Complete",
+      "dryRun": "Pending",
       "referenceImages": [
         "Photos/Decoration Oven/1652880599922.jpg",
         "Photos/Decoration Oven/IMG_20220518_135630.jpg",
@@ -5786,6 +5786,6 @@
   ],
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
-    "Aurangzeb": "2026-06-20T06:23:22.539Z"
+    "Aurangzeb": "2026-06-20T06:26:33.013Z"
   }
 }
