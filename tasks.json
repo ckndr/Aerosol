@@ -745,13 +745,13 @@
       "desc": "Operator's Platform",
       "priority": "Medium",
       "progress": 0,
-      "status": "Not Started",
+      "status": "In Progress",
       "responsible": "Saqib",
       "remarks": "new to be ordered",
-      "updated": "",
+      "updated": "20 Jun 2026",
       "waitingOn": "",
-      "image": "",
-      "lastEditedBy": "",
+      "image": null,
+      "lastEditedBy": "Aurangzeb",
       "dateStarted": "",
       "dateFinished": "",
       "deadline": ""
@@ -3011,6 +3011,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17819378262189uv8",
+      "time": "2026-06-20T06:43:46.218Z",
+      "action": "[Aurangzeb] Updated task \"Operator's Platform...\" [Status: Not Started → In Progress] on General",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_928391",
+          "machine": "General",
+          "category": "Mechanical",
+          "desc": "Operator's Platform",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Saqib",
+          "remarks": "new to be ordered",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "deadline": ""
+        }
+      },
+      "taskId": "t_928391"
+    },
     {
       "id": "t1781937795778wqfl",
       "time": "2026-06-20T06:43:15.778Z",
@@ -5538,33 +5566,6 @@
         }
       },
       "taskId": "t_809507"
-    },
-    {
-      "id": "t1780311397584r1q4",
-      "time": "2026-06-01T10:56:37.584Z",
-      "action": "[Aurangzeb] Updated task \"Installation of piping of Trim...\" on Trimming",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_141486",
-          "machine": "Trimming",
-          "category": "Mechanical",
-          "desc": "Installation of piping of Trimming Of blower",
-          "priority": "High",
-          "progress": 0,
-          "status": "Pending Procurement",
-          "responsible": "Arsalan",
-          "remarks": "Procurement in process(23-05-2026)",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_141486"
     }
   ],
   "machineMeta": {
@@ -5774,6 +5775,6 @@
   ],
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
-    "Aurangzeb": "2026-06-20T06:43:15.778Z"
+    "Aurangzeb": "2026-06-20T06:43:46.218Z"
   }
 }
