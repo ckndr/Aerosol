@@ -571,14 +571,14 @@
 
     .ring-wrap {
       position: relative;
-      width: 40px;
-      height: 40px;
+      width: 52px;
+      height: 52px;
       flex-shrink: 0
     }
 
     .ring-svg {
-      width: 40px;
-      height: 40px;
+      width: 52px;
+      height: 52px;
       transform: rotate(-90deg)
     }
 
@@ -597,23 +597,24 @@
     }
 
     .ring-num {
-      display: none;
+      display: flex;
       position: absolute;
       inset: 0;
       align-items: center;
       justify-content: center;
       font-family: 'DM Mono', monospace;
-      font-size: .5rem;
-      font-weight: 500;
-      color: var(--text2)
+      font-size: .65rem;
+      font-weight: 700;
+      color: var(--text)
     }
 
     .ring-wrap:hover .ring-num {
-      display: flex
+      display: flex;
+      color: var(--accent)
     }
 
     .ring-wrap:hover .ring-svg {
-      opacity: .35
+      opacity: .5
     }
 
     .card-name {
@@ -763,8 +764,10 @@
 
     .detail-pct {
       font-family: 'DM Mono', monospace;
-      font-size: .72rem;
-      color: var(--text2)
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -.02em
     }
 
     .detail-actions {
@@ -2807,6 +2810,10 @@
           <input id="f-waitingon" placeholder="e.g. Chain delivery from supplier, Lindsay confirmation…">
         </div>
         <div class="form-group">
+          <label>Deadline</label>
+          <input type="date" id="f-deadline">
+        </div>
+        <div class="form-group">
           <label>Date Started</label>
           <input type="date" id="f-datestarted">
         </div>
@@ -3637,11 +3644,12 @@
           s.toLowerCase() === rawStatus.toLowerCase()
         ) || 'Not Started',
         responsible: String(r[7] || '').trim() || '',
-        remarks: String(r[8] || '').trim() || '',
-        updated: String(r[9] || '').trim() || '',
-        waitingOn: String(r[10] || '').trim() || '',
-        dateStarted: normalizeDate(r[11]),
-        dateFinished: normalizeDate(r[12]),
+        deadline: normalizeDate(r[8]),
+        remarks: String(r[9] || '').trim() || '',
+        updated: '',
+        waitingOn: '',
+        dateStarted: '',
+        dateFinished: '',
         lastEditedBy: '',
         image: ''
       };
@@ -3693,6 +3701,7 @@
         if (!t.waitingOn) t.waitingOn = '';
         if (!t.dateStarted) t.dateStarted = '';
         if (!t.dateFinished) t.dateFinished = '';
+        if (!t.deadline) t.deadline = '';
       });
       loadMeta();
 
@@ -3718,7 +3727,8 @@
         id: uid(), machine: s[0], category: s[1], desc: s[2],
         priority: s[3], progress: s[4], status: s[5], responsible: s[6] || '', remarks: s[7] || '', updated: '', waitingOn: '',
         dateStarted: '',
-        dateFinished: ''
+        dateFinished: '',
+        deadline: ''
       }));
       sanitizeTasks();
       saveState();
@@ -4547,10 +4557,25 @@
         ? `<div style="margin-top:.35rem"><span style="display:inline-flex;align-items:center;gap:.3rem;font-size:.67rem;font-weight:600;color:#c2410c;background:#fff7ed;border:1px solid #fed7aa;border-radius:20px;padding:.18rem .55rem;font-family:'DM Mono',monospace;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">⏳ ${escapeHTML(t.waitingOn)}</span></div>`
         : '';
       const datesMeta = [];
+      if (t.deadline) {
+        const dlDate = new Date(t.deadline + 'T00:00:00');
+        const now = new Date();
+        now.setHours(0, 0, 0, 0);
+        const isOverdue = dlDate < now && t.status !== 'Completed';
+        const isSoon = !isOverdue && dlDate <= new Date(now.getTime() + 3 * 86400000) && t.status !== 'Completed';
+        const dlLabel = dlDate.toLocaleDateString('en-PK', { day: 'numeric', month: 'short', year: 'numeric' });
+        if (isOverdue) {
+          datesMeta.push('<span style="color:#f87171;font-weight:600">\u26A0\uFE0F Overdue: ' + dlLabel + '</span>');
+        } else if (isSoon) {
+          datesMeta.push('<span style="color:#fbbf24;font-weight:600">\u23F3 Due soon: ' + dlLabel + '</span>');
+        } else {
+          datesMeta.push('\uD83D\uDCC5 Deadline: ' + dlLabel);
+        }
+      }
       if (t.dateStarted) datesMeta.push('Started: ' + t.dateStarted);
       if (t.dateFinished) datesMeta.push('Finished: ' + t.dateFinished);
       const datesLine = datesMeta.length
-        ? `<div class="task-dates">${datesMeta.join('  ·  ')}</div>`
+        ? '<div class="task-dates">' + datesMeta.join('  \u00B7  ') + '</div>'
         : '';
       div.innerHTML = `
     <div class="task-top">
@@ -4692,6 +4717,8 @@
       document.getElementById('f-responsible').value = '';
       document.getElementById('f-camera').value = '';
       document.getElementById('f-image').value = '';
+      const dlEl = document.getElementById('f-deadline');
+      if (dlEl) dlEl.value = '';
       const dsEl = document.getElementById('f-datestarted');
       const dfEl = document.getElementById('f-datefinished');
       if (dsEl) dsEl.value = '';
@@ -4722,6 +4749,8 @@
       document.getElementById('f-responsible').value = t.responsible || '';
       document.getElementById('f-camera').value = '';
       document.getElementById('f-image').value = '';
+      const dlEl = document.getElementById('f-deadline');
+      if (dlEl) dlEl.value = t.deadline || '';
       const dsEl = document.getElementById('f-datestarted');
       const dfEl = document.getElementById('f-datefinished');
       if (dsEl) dsEl.value = t.dateStarted || '';
@@ -4834,6 +4863,7 @@
           Object.assign(t, {
             machine, category, desc, priority, status, progress, remarks, responsible, updated, lastEditedBy, image: imagePath,
             waitingOn: document.getElementById('f-waitingon').value.trim(),
+            deadline: document.getElementById('f-deadline')?.value || '',
             dateStarted: document.getElementById('f-datestarted')?.value || '',
             dateFinished: document.getElementById('f-datefinished')?.value || ''
           });
@@ -4846,6 +4876,7 @@
           if ((prevTask.priority || '') !== priority) changes.push(`Priority: ${prevTask.priority} → ${priority}`);
           if ((prevTask.waitingOn || '') !== document.getElementById('f-waitingon').value.trim()) changes.push('Waiting On updated');
           if ((prevTask.image || null) !== imagePath) changes.push(imagePath ? 'Photo added' : 'Photo removed');
+          if ((prevTask.deadline || '') !== (document.getElementById('f-deadline')?.value || '')) changes.push('Deadline updated');
           if ((prevTask.dateStarted || '') !== (document.getElementById('f-datestarted')?.value || '')) changes.push('Date Started updated');
           if ((prevTask.dateFinished || '') !== (document.getElementById('f-datefinished')?.value || '')) changes.push('Date Finished updated');
           const changeDetail = changes.length > 0 ? ' [' + changes.join(', ') + ']' : '';
@@ -4857,6 +4888,7 @@
         tasks.push({
           id: newId, machine, category, desc, priority, progress, status, remarks, responsible, updated, lastEditedBy, image: imagePath,
           waitingOn: document.getElementById('f-waitingon').value.trim(),
+          deadline: document.getElementById('f-deadline')?.value || '',
           dateStarted: document.getElementById('f-datestarted')?.value || '',
           dateFinished: document.getElementById('f-datefinished')?.value || ''
         });
@@ -4910,54 +4942,256 @@
         const ws = wb.Sheets['TRACKER'];
         if (!ws) { toast('TRACKER sheet not found in file', 'error'); return; }
         const rows = XLSX.utils.sheet_to_json(ws, { header: 1, defval: '' });
-        const unmappedMachines = [];
-        const imported = rows.slice(2).filter(r => r[1] && String(r[1]).trim()).map(r => {
-          const task = validateImportedRow(r);
-          const rawMachine = String(r[1]).trim();
+
+        // ── VALIDATION PHASE ──
+        const errors = [];
+        const VALID_STATUSES = ['Not Started', 'In Progress', 'Completed', 'Pending Procurement'];
+        const VALID_PRIORITIES = ['High', 'Medium', 'Low'];
+        const VALID_CATEGORIES = ['Electrical', 'Mechanical', 'General'];
+
+        // Validate header row (row index 1 = Excel Row 2)
+        const headerRow = rows[1];
+        if (!headerRow) {
+          errors.push('Row 2: Missing header row. Expected: #, Machine, Category, Task Description, Priority, Progress, Status, Responsible, Deadline, Remarks');
+        } else {
+          var expectedHeaders = ['#', 'Machine', 'Category', 'Task Description', 'Priority', 'Progress', 'Status', 'Responsible', 'Deadline', 'Remarks'];
+          expectedHeaders.forEach(function(h, i) {
+            var actual = String(headerRow[i] || '').trim();
+            if (actual.toLowerCase() !== h.toLowerCase()) {
+              errors.push('Row 2, Column ' + String.fromCharCode(65 + i) + ' ("' + actual + '"): Expected header "' + h + '"');
+            }
+          });
+        }
+
+        // Get data rows (skip title row 0 and header row 1)
+        var dataRows = rows.slice(2).filter(function(r) { return r[1] && String(r[1]).trim(); });
+        if (!dataRows.length && !errors.length) {
+          toast('No tasks found in file', 'error');
+          return;
+        }
+
+        // Validate each data row
+        dataRows.forEach(function(r, idx) {
+          var excelRow = idx + 3; // data starts at Excel row 3
+
+          // Col C (2): Category
+          var rawCat = String(r[2] || '').trim();
+          if (rawCat && !VALID_CATEGORIES.find(function(c) { return c.toLowerCase() === rawCat.toLowerCase(); })) {
+            errors.push('Row ' + excelRow + ', Column C ("' + rawCat + '"): Invalid category. Must be one of: ' + VALID_CATEGORIES.join(', '));
+          }
+
+          // Col D (3): Task Description — must not be empty
+          var rawDesc = String(r[3] || '').trim();
+          if (!rawDesc) {
+            errors.push('Row ' + excelRow + ', Column D: Task description is empty');
+          }
+
+          // Col E (4): Priority
+          var rawPri = String(r[4] || '').trim();
+          if (rawPri && !VALID_PRIORITIES.find(function(p) { return p.toLowerCase() === rawPri.toLowerCase(); })) {
+            errors.push('Row ' + excelRow + ', Column E ("' + rawPri + '"): Invalid priority. Must be one of: ' + VALID_PRIORITIES.join(', '));
+          }
+
+          // Col F (5): Progress — must be a number 0-1 or 0-100
+          var rawProg = r[5];
+          if (rawProg !== '' && rawProg !== null && rawProg !== undefined) {
+            var num = parseFloat(rawProg);
+            if (isNaN(num)) {
+              errors.push('Row ' + excelRow + ', Column F ("' + rawProg + '"): Progress must be a number (0 to 1, or 0 to 100)');
+            } else if (num < 0 || num > 100) {
+              errors.push('Row ' + excelRow + ', Column F ("' + rawProg + '"): Progress out of range (must be 0 to 1, or 0 to 100)');
+            }
+          }
+
+          // Col G (6): Status
+          var rawStatus = String(r[6] || '').trim();
+          if (rawStatus && !VALID_STATUSES.find(function(s) { return s.toLowerCase() === rawStatus.toLowerCase(); })) {
+            errors.push('Row ' + excelRow + ', Column G ("' + rawStatus + '"): Invalid status. Must be one of: ' + VALID_STATUSES.join(', '));
+          }
+
+          // Col I (8): Deadline — must be a valid date if present
+          var rawDeadline = r[8];
+          if (rawDeadline !== '' && rawDeadline !== null && rawDeadline !== undefined) {
+            var normalized = normalizeDate(rawDeadline);
+            if (!normalized && String(rawDeadline).trim() !== '') {
+              errors.push('Row ' + excelRow + ', Column I ("' + rawDeadline + '"): Invalid deadline date format. Use a date like 15/06/2026 or 2026-06-15');
+            }
+          }
+        });
+
+        // If validation errors found, show detailed error modal and STOP
+        if (errors.length > 0) {
+          showImportErrors(errors);
+          input.value = '';
+          return;
+        }
+
+        // ── BUILD LOOKUP for existing tasks (for photo + web-only field preservation) ──
+        // We use fuzzy matching: case-insensitive, punctuation-stripped, with Levenshtein fallback
+        var existingByMachine = {};
+        tasks.forEach(function(t) {
+          var mKey = t.machine.toLowerCase().trim();
+          if (!existingByMachine[mKey]) existingByMachine[mKey] = [];
+          existingByMachine[mKey].push(t);
+        });
+
+        // Helper: normalize a description for matching (lowercase, strip punctuation/extra spaces)
+        function normalizeDesc(s) {
+          return String(s || '').toLowerCase().replace(/[^a-z0-9\s]/g, '').replace(/\s+/g, ' ').trim();
+        }
+
+        // Helper: find best matching existing task for a given machine + description
+        function findMatchingTask(machine, desc) {
+          var mKey = machine.toLowerCase().trim();
+          var candidates = existingByMachine[mKey] || [];
+          if (!candidates.length) return null;
+
+          var normNew = normalizeDesc(desc);
+          if (!normNew) return null;
+
+          // Pass 1: Exact normalized match
+          for (var i = 0; i < candidates.length; i++) {
+            if (normalizeDesc(candidates[i].desc) === normNew) return candidates[i];
+          }
+
+          // Pass 2: Fuzzy match using Levenshtein distance
+          // Allow up to 20% of the string length as edit distance, minimum 3 edits
+          var bestMatch = null;
+          var bestDist = Infinity;
+          var maxAllowed = Math.max(3, Math.floor(normNew.length * 0.2));
+
+          for (var j = 0; j < candidates.length; j++) {
+            var normExisting = normalizeDesc(candidates[j].desc);
+            // Quick length check — if lengths differ by more than maxAllowed, skip
+            if (Math.abs(normNew.length - normExisting.length) > maxAllowed) continue;
+            var dist = levenshtein(normNew, normExisting);
+            if (dist < bestDist) {
+              bestDist = dist;
+              bestMatch = candidates[j];
+            }
+          }
+
+          if (bestDist <= maxAllowed && bestMatch) {
+            console.log('[Import] Fuzzy matched: "' + desc + '" → "' + bestMatch.desc + '" (distance: ' + bestDist + ')');
+            return bestMatch;
+          }
+
+          // Pass 3: Substring containment — if one description contains the other
+          for (var k = 0; k < candidates.length; k++) {
+            var normCand = normalizeDesc(candidates[k].desc);
+            if (normNew.length >= 5 && normCand.length >= 5) {
+              if (normNew.includes(normCand) || normCand.includes(normNew)) {
+                console.log('[Import] Substring matched: "' + desc + '" → "' + candidates[k].desc + '"');
+                return candidates[k];
+              }
+            }
+          }
+
+          return null;
+        }
+
+        // Track which existing tasks have been matched (to avoid double-matching)
+        var matchedIds = {};
+
+        // ── IMPORT PHASE ──
+        var unmappedMachines = [];
+        var imported = dataRows.map(function(r) {
+          var task = validateImportedRow(r);
+          var rawMachine = String(r[1]).trim();
           if (task.machine === 'General' && rawMachine.toLowerCase() !== 'general') {
             unmappedMachines.push(rawMachine);
           }
+
+          // Preserve existing data from matching task
+          var existing = findMatchingTask(task.machine, task.desc);
+          if (existing && !matchedIds[existing.id]) {
+            matchedIds[existing.id] = true;
+            task.id = existing.id;
+            task.image = existing.image || '';
+            task.waitingOn = existing.waitingOn || '';
+            task.dateStarted = existing.dateStarted || '';
+            task.dateFinished = existing.dateFinished || '';
+            task.updated = existing.updated || '';
+            task.lastEditedBy = existing.lastEditedBy || '';
+          }
+
           return task;
         });
-        if (!imported.length) { toast('No tasks found in file', 'error'); return; }
+
         if (unmappedMachines.length > 0) {
-          toast(`${unmappedMachines.length} tasks had unrecognized machines → assigned to General`, 'info');
+          toast(unmappedMachines.length + ' tasks had unrecognized machines \u2192 assigned to General', 'info');
           console.warn('[Import] Unmapped machines:', unmappedMachines);
         }
+
+        var preservedPhotos = imported.filter(function(t) { return t.image; }).length;
         tasks = imported;
         saveState(); renderAll();
-        toast(`${imported.length} tasks imported ✓`, 'success');
+        toast(imported.length + ' tasks imported \u2713' + (preservedPhotos ? ' (' + preservedPhotos + ' photos preserved)' : ''), 'success');
       };
       reader.readAsArrayBuffer(file);
       input.value = '';
     }
 
+    function showImportErrors(errors) {
+      var overlay = document.createElement('div');
+      overlay.className = 'modal-overlay center';
+      overlay.style.display = 'flex';
+      overlay.style.zIndex = '10000';
+      overlay.onclick = function(e) { if (e.target === overlay) overlay.remove(); };
+      overlay.innerHTML = '<div class="modal" style="max-width:600px;max-height:80vh;overflow-y:auto">' +
+        '<div class="modal-header">' +
+        '<div class="modal-title" style="color:#f87171">\u26A0\uFE0F Excel Import Errors (' + errors.length + ')</div>' +
+        '<button class="modal-close" onclick="this.closest(\'.modal-overlay\').remove()">\u2715</button>' +
+        '</div>' +
+        '<div style="padding:1rem;font-size:.85rem;font-family:\'DM Mono\',monospace">' +
+        '<p style="margin-bottom:1rem;color:var(--text2)">Fix these errors in your Excel file and try importing again:</p>' +
+        '<ul style="list-style:none;padding:0;margin:0">' +
+        errors.map(function(err) {
+          return '<li style="padding:.4rem .6rem;margin-bottom:.3rem;background:var(--card);border-left:3px solid #f87171;border-radius:4px;color:var(--text1)">' + escapeHTML(err) + '</li>';
+        }).join('') +
+        '</ul>' +
+        '</div>' +
+        '<div class="modal-footer">' +
+        '<button class="btn-cancel" onclick="this.closest(\'.modal-overlay\').remove()">Close</button>' +
+        '</div>' +
+        '</div>';
+      document.body.appendChild(overlay);
+    }
+
     function exportExcel() {
-      const rows = [
-        ['AEROSOL PLANT  ·  INSTALLATION TRACKER', '', '', '', '', '', '', '', '', '', '← Dashboard'],
-        ['#', 'Machine', 'Category', 'Task Description', 'Priority', 'Progress', 'Status', 'Responsible', 'Remarks', 'Updated', 'Waiting On', 'Date Started', 'Date Finished']
+      var rows = [
+        ['AEROSOL PLANT  \u00B7  INSTALLATION TRACKER', '', '', '', '', '', '', '', '', '\u2190 Dashboard'],
+        ['#', 'Machine', 'Category', 'Task Description', 'Priority', 'Progress', 'Status', 'Responsible', 'Deadline', 'Remarks']
       ];
-      tasks.forEach((t, i) => rows.push([
-        i + 1,
-        t.machine,
-        t.category,
-        t.desc,
-        t.priority,
-        t.progress / 100,
-        t.status,
-        t.responsible || '',
-        t.remarks || '',
-        t.updated || '',
-        t.waitingOn || '',
-        t.dateStarted || '',
-        t.dateFinished || ''
-      ]));
-      const ws = XLSX.utils.aoa_to_sheet(rows);
-      ws['!cols'] = [{ wch: 4 }, { wch: 18 }, { wch: 13 }, { wch: 54 }, { wch: 10 }, { wch: 11 }, { wch: 20 }, { wch: 15 }, { wch: 38 }, { wch: 14 }, { wch: 25 }, { wch: 14 }, { wch: 14 }];
-      const wb = XLSX.utils.book_new();
+      tasks.forEach(function(t, i) {
+        rows.push([
+          i + 1,
+          t.machine,
+          t.category,
+          t.desc,
+          t.priority,
+          t.progress / 100,
+          t.status,
+          t.responsible || '',
+          t.deadline ? new Date(t.deadline + 'T00:00:00') : '',
+          t.remarks || ''
+        ]);
+      });
+      var ws = XLSX.utils.aoa_to_sheet(rows);
+      ws['!cols'] = [{ wch: 4 }, { wch: 22 }, { wch: 13 }, { wch: 54 }, { wch: 10 }, { wch: 11 }, { wch: 20 }, { wch: 15 }, { wch: 14 }, { wch: 38 }];
+      // Format deadline column (I = column index 8) as dates
+      var range = XLSX.utils.decode_range(ws['!ref']);
+      for (var R = 2; R <= range.e.r; R++) {
+        var cellRef = XLSX.utils.encode_cell({ r: R, c: 8 });
+        if (ws[cellRef] && ws[cellRef].v instanceof Date) {
+          ws[cellRef].t = 'd';
+          ws[cellRef].z = 'DD-MMM-YYYY';
+        }
+      }
+      var wb = XLSX.utils.book_new();
       XLSX.utils.book_append_sheet(wb, ws, 'TRACKER');
-      XLSX.writeFile(wb, `Aerosol_Tracker_${new Date().toISOString().slice(0, 10)}.xlsx`);
-      toast('Excel exported ✓', 'success');
+      XLSX.writeFile(wb, 'Aerosol_Tracker_' + new Date().toISOString().slice(0, 10) + '.xlsx');
+      toast('Excel exported \u2713', 'success');
     }
 
     // ═══════════════════════════════════════════════════════
@@ -5032,6 +5266,7 @@
               if (!t.waitingOn) t.waitingOn = '';
               if (!t.dateStarted) t.dateStarted = '';
               if (!t.dateFinished) t.dateFinished = '';
+              if (!t.deadline) t.deadline = '';
             });
             if (Array.isArray(data.activityLog)) {
               activityLog = data.activityLog;
@@ -5086,6 +5321,7 @@
               if (!t.waitingOn) t.waitingOn = '';
               if (!t.dateStarted) t.dateStarted = '';
               if (!t.dateFinished) t.dateFinished = '';
+              if (!t.deadline) t.deadline = '';
             });
             if (Array.isArray(data.activityLog)) {
               activityLog = data.activityLog;

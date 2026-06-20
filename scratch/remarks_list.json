@@ -1,0 +1,1010 @@
+[
+  {
+    "row": 2,
+    "machine": "Accumulator",
+    "desc": "Dry run",
+    "remarks": "on machine testing"
+  },
+  {
+    "row": 3,
+    "machine": "Accumulator",
+    "desc": "chain & bearing greasing",
+    "remarks": ""
+  },
+  {
+    "row": 4,
+    "machine": "Auto strapping machine",
+    "desc": "to place and install at designated location",
+    "remarks": ""
+  },
+  {
+    "row": 5,
+    "machine": "Auto strapping machine",
+    "desc": "Dry run",
+    "remarks": ""
+  },
+  {
+    "row": 6,
+    "machine": "Auto strapping machine",
+    "desc": "wiring and connections to be done",
+    "remarks": ""
+  },
+  {
+    "row": 7,
+    "machine": "Lacquer",
+    "desc": "All heaters \u2014 check, fix or replace faulty",
+    "remarks": "2026-05-15 00:00:00"
+  },
+  {
+    "row": 8,
+    "machine": "Press",
+    "desc": "Press & Trimming compressor temporary line fixed",
+    "remarks": "2026-05-16 00:00:00"
+  },
+  {
+    "row": 9,
+    "machine": "Lacquer",
+    "desc": "Blower main motor connection and testing",
+    "remarks": "2026-06-10 00:00:00"
+  },
+  {
+    "row": 10,
+    "machine": "Lacquer",
+    "desc": "Spray Guns \u2014 cleaned with thinner",
+    "remarks": "2026-06-10 00:00:00"
+  },
+  {
+    "row": 11,
+    "machine": "Lacquer",
+    "desc": "Spray Mount Drum \u2014 scraped & cleaned",
+    "remarks": "2026-06-10 00:00:00"
+  },
+  {
+    "row": 12,
+    "machine": "Lacquer",
+    "desc": "Mandrel Plate \u2014 scraped & cleaned",
+    "remarks": "2026-06-10 00:00:00"
+  },
+  {
+    "row": 13,
+    "machine": "Lacquer",
+    "desc": "Exhaust Sieve \u2014 cleaned",
+    "remarks": "2026-06-10 00:00:00"
+  },
+  {
+    "row": 14,
+    "machine": "Lacquer",
+    "desc": "Frame Body \u2014 cleaned",
+    "remarks": "2026-06-10 00:00:00"
+  },
+  {
+    "row": 15,
+    "machine": "Lacquer",
+    "desc": "Oven Chain cleaning",
+    "remarks": "2026-06-10 00:00:00"
+  },
+  {
+    "row": 16,
+    "machine": "Washing",
+    "desc": "chain installation",
+    "remarks": "2026-06-11 00:00:00"
+  },
+  {
+    "row": 17,
+    "machine": "Compressor",
+    "desc": "Compressor  dryer and auto drain electrical connection",
+    "remarks": ""
+  },
+  {
+    "row": 18,
+    "machine": "Compressor",
+    "desc": "Compressor piping \u2014 dryer and auto drain system",
+    "remarks": ""
+  },
+  {
+    "row": 19,
+    "machine": "Compressor",
+    "desc": "main pipe to be elevated downward for smooth drainage",
+    "remarks": ""
+  },
+  {
+    "row": 20,
+    "machine": "Compressor",
+    "desc": "individual section pipes/ branches to be supported/fixed/welded",
+    "remarks": ""
+  },
+  {
+    "row": 21,
+    "machine": "Compressor",
+    "desc": "dryer wiring and connection to be done.",
+    "remarks": ""
+  },
+  {
+    "row": 22,
+    "machine": "decoration  Oven",
+    "desc": "Heaters to be checked and replaced if required",
+    "remarks": "sample needed for ordering"
+  },
+  {
+    "row": 23,
+    "machine": "decoration  Oven",
+    "desc": "Blower motor connection and testing",
+    "remarks": ""
+  },
+  {
+    "row": 24,
+    "machine": "decoration  Oven",
+    "desc": "temperature gauges to be checked & installed",
+    "remarks": ""
+  },
+  {
+    "row": 25,
+    "machine": "decoration  Oven",
+    "desc": "Lacquer Oven Dry run",
+    "remarks": "Cleaning in progress & Heater testing in progress"
+  },
+  {
+    "row": 26,
+    "machine": "decoration  Oven",
+    "desc": "Motors alignment w.r.t marking",
+    "remarks": "Khalid Shb observations"
+  },
+  {
+    "row": 27,
+    "machine": "FG Conveyor",
+    "desc": "Realignment of conveyor to be done as per Lindsay recommendation",
+    "remarks": ""
+  },
+  {
+    "row": 28,
+    "machine": "FG Conveyor",
+    "desc": "connection/wiring to be done",
+    "remarks": ""
+  },
+  {
+    "row": 29,
+    "machine": "General",
+    "desc": "Machine Operating Manuals",
+    "remarks": ""
+  },
+  {
+    "row": 30,
+    "machine": "General",
+    "desc": "Overall machine paint",
+    "remarks": ""
+  },
+  {
+    "row": 31,
+    "machine": "General",
+    "desc": "Modify exhaust duct pipes \u2014 prevent rainwater entry bends installation",
+    "remarks": ""
+  },
+  {
+    "row": 32,
+    "machine": "General",
+    "desc": "Test each machine individually without load",
+    "remarks": ""
+  },
+  {
+    "row": 33,
+    "machine": "General",
+    "desc": "Ensure proper cleaning of entire machine",
+    "remarks": ""
+  },
+  {
+    "row": 34,
+    "machine": "General",
+    "desc": "Scoop required for slug handling",
+    "remarks": ""
+  },
+  {
+    "row": 35,
+    "machine": "General",
+    "desc": "Baling machine procurement",
+    "remarks": ""
+  },
+  {
+    "row": 36,
+    "machine": "General",
+    "desc": "scrap collector container to be made/procured for trimming",
+    "remarks": ""
+  },
+  {
+    "row": 37,
+    "machine": "General",
+    "desc": "White LED lighting for printing and oven area",
+    "remarks": ""
+  },
+  {
+    "row": 38,
+    "machine": "General",
+    "desc": "Make stands for all spare rolls",
+    "remarks": ""
+  },
+  {
+    "row": 39,
+    "machine": "General",
+    "desc": "Full operator toolset & tool trolley system",
+    "remarks": ""
+  },
+  {
+    "row": 40,
+    "machine": "General",
+    "desc": "Lab equipment to be sourced",
+    "remarks": ""
+  },
+  {
+    "row": 41,
+    "machine": "General",
+    "desc": "Dust bins for office areas",
+    "remarks": ""
+  },
+  {
+    "row": 42,
+    "machine": "General",
+    "desc": "Big cartons for temporary storage of cans",
+    "remarks": ""
+  },
+  {
+    "row": 43,
+    "machine": "General",
+    "desc": "Boxes / Bins for cans packing (Alpha Container)",
+    "remarks": ""
+  },
+  {
+    "row": 44,
+    "machine": "General",
+    "desc": "Transformer load increase to 625 kW \u2014 utility application",
+    "remarks": "Application in process"
+  },
+  {
+    "row": 45,
+    "machine": "General",
+    "desc": "Ensure all exhaust fans on floor are operational",
+    "remarks": "partially operational"
+  },
+  {
+    "row": 46,
+    "machine": "General",
+    "desc": "Operator's Platform",
+    "remarks": "new to be ordered"
+  },
+  {
+    "row": 47,
+    "machine": "Lacquer",
+    "desc": "Internal Lacquering Dry run",
+    "remarks": "2026-06-15 00:00:00"
+  },
+  {
+    "row": 48,
+    "machine": "Lacquer",
+    "desc": "lacquer Storage vessel installation with pneumatic fittings",
+    "remarks": "2026-06-15 00:00:00"
+  },
+  {
+    "row": 49,
+    "machine": "Lacquer",
+    "desc": "fixing  can holders after cleaning",
+    "remarks": "2026-06-15 00:00:00"
+  },
+  {
+    "row": 50,
+    "machine": "Lacquer",
+    "desc": "Cans Holders \u2014 dismantled, clean with thinner",
+    "remarks": "2026-06-15 00:00:00"
+  },
+  {
+    "row": 51,
+    "machine": "Lacquer",
+    "desc": "Small dedicated air tank / receiver for lacquer",
+    "remarks": "2026-06-15 00:00:00"
+  },
+  {
+    "row": 52,
+    "machine": "Lacquer oven",
+    "desc": "Oven Chain & bearing greasing",
+    "remarks": "2026-06-15 00:00:00"
+  },
+  {
+    "row": 53,
+    "machine": "Lacquer oven",
+    "desc": "closure of electrical panels",
+    "remarks": "2026-06-15 00:00:00"
+  },
+  {
+    "row": 54,
+    "machine": "Lacquer oven",
+    "desc": "Oven back metallic cover sheet to place",
+    "remarks": "2026-06-15 00:00:00"
+  },
+  {
+    "row": 55,
+    "machine": "Over Varnish",
+    "desc": "Rollers \u2014 dismantled, to be chrome plated",
+    "remarks": "2026-06-15 00:00:00"
+  },
+  {
+    "row": 56,
+    "machine": "Printing",
+    "desc": "Rollers \u2014 dismantled, to be chrome plated",
+    "remarks": "2026-06-15 00:00:00"
+  },
+  {
+    "row": 57,
+    "machine": "Printing",
+    "desc": "Printing machine rollers \u2014 deep clean, rubber & chrome inspection",
+    "remarks": "2026-06-15 00:00:00"
+  },
+  {
+    "row": 58,
+    "machine": "Printing",
+    "desc": "All printing rollers \u2014 dismantle, clean, buff, chrome plate",
+    "remarks": "2026-06-15 00:00:00"
+  },
+  {
+    "row": 59,
+    "machine": "Printing",
+    "desc": "CTC cleaning of machine panels interface",
+    "remarks": "2026-06-15 00:00:00"
+  },
+  {
+    "row": 60,
+    "machine": "Washing",
+    "desc": "Heat exchanger for washing system \u2014 procure & install",
+    "remarks": "2026-06-15 00:00:00"
+  },
+  {
+    "row": 61,
+    "machine": "Washing",
+    "desc": "Inspect all rubber pipes \u2014 replace if damaged",
+    "remarks": "2026-06-15 00:00:00"
+  },
+  {
+    "row": 62,
+    "machine": "Manual Strapping Machine",
+    "desc": "to place and install at designated location",
+    "remarks": ""
+  },
+  {
+    "row": 63,
+    "machine": "Manual Strapping Machine",
+    "desc": "wiring and connections to be done",
+    "remarks": ""
+  },
+  {
+    "row": 64,
+    "machine": "Necking",
+    "desc": "Infeed tray installation from feeding unit to necking machine",
+    "remarks": ""
+  },
+  {
+    "row": 65,
+    "machine": "Necking",
+    "desc": "PVC ejection pipe installation from necking for cans discharge",
+    "remarks": ""
+  },
+  {
+    "row": 66,
+    "machine": "Necking",
+    "desc": "scrap collection tank to install from necking",
+    "remarks": ""
+  },
+  {
+    "row": 67,
+    "machine": "Necking",
+    "desc": "Conveyor installation after ejection pipe",
+    "remarks": ""
+  },
+  {
+    "row": 68,
+    "machine": "Necking",
+    "desc": "Necking machine Dry run",
+    "remarks": ""
+  },
+  {
+    "row": 69,
+    "machine": "Necking",
+    "desc": "Electrical troubleshooting and testing",
+    "remarks": ""
+  },
+  {
+    "row": 70,
+    "machine": "Necking",
+    "desc": "Cans Grippers / Holders \u2014 cleaning",
+    "remarks": ""
+  },
+  {
+    "row": 71,
+    "machine": "Necking",
+    "desc": "Buffing and polishing on necking machine tools",
+    "remarks": ""
+  },
+  {
+    "row": 72,
+    "machine": "Necking",
+    "desc": "Two sets of press dies, springs & nut bolts required",
+    "remarks": ""
+  },
+  {
+    "row": 73,
+    "machine": "Necking",
+    "desc": "Kluber oil & grease for necking machine",
+    "remarks": ""
+  },
+  {
+    "row": 74,
+    "machine": "Necking",
+    "desc": "Necking machine \u2014 electrical supply troubleshooting for dry run",
+    "remarks": "Interlocking will be redesigned and checked"
+  },
+  {
+    "row": 75,
+    "machine": "Washing",
+    "desc": "Washing unit tanks \u2014 sizes and quantities for quotation",
+    "remarks": "2026-06-15 00:00:00"
+  },
+  {
+    "row": 76,
+    "machine": "Press",
+    "desc": "Close all electrical panels and cable trays",
+    "remarks": "2026-06-16 00:00:00"
+  },
+  {
+    "row": 77,
+    "machine": "Press",
+    "desc": "Damping rubber pads over slug feeding tray",
+    "remarks": "2026-06-16 00:00:00"
+  },
+  {
+    "row": 78,
+    "machine": "Press",
+    "desc": "Gear Oil Lubrication pumping system setup",
+    "remarks": "2026-06-16 00:00:00"
+  },
+  {
+    "row": 79,
+    "machine": "Press",
+    "desc": "Slug Feeding Hopper sheet to be fixed",
+    "remarks": "2026-06-16 00:00:00"
+  },
+  {
+    "row": 80,
+    "machine": "Press",
+    "desc": "Tools for press machine",
+    "remarks": "2026-06-16 00:00:00"
+  },
+  {
+    "row": 81,
+    "machine": "Press",
+    "desc": "Dust Collection blower installation",
+    "remarks": "2026-06-16 00:00:00"
+  },
+  {
+    "row": 82,
+    "machine": "Press",
+    "desc": "SOV pneumatic press clutch service",
+    "remarks": "2026-06-16 00:00:00"
+  },
+  {
+    "row": 83,
+    "machine": "Press",
+    "desc": "Hopper motor installation and testing",
+    "remarks": "2026-06-16 00:00:00"
+  },
+  {
+    "row": 84,
+    "machine": "Press",
+    "desc": "Cable trays installation",
+    "remarks": "2026-06-16 00:00:00"
+  },
+  {
+    "row": 85,
+    "machine": "Press",
+    "desc": "Press Clutch NRV repaired",
+    "remarks": "2026-06-16 00:00:00"
+  },
+  {
+    "row": 86,
+    "machine": "Overall Machine operation",
+    "desc": "Main Power Cable Termination & Execution Plan",
+    "remarks": "2026-06-13 00:00:00"
+  },
+  {
+    "row": 87,
+    "machine": "Overall Machine operation",
+    "desc": "Main Power Cable procurement",
+    "remarks": "Quotation awaiting for execution"
+  },
+  {
+    "row": 88,
+    "machine": "Overall Machine operation",
+    "desc": "Electrical panels for power distribution",
+    "remarks": "Quotation awaiting for execution"
+  },
+  {
+    "row": 89,
+    "machine": "Overall Machine operation",
+    "desc": "Verify electrical panels, wiring & interlocks \u2014 Press to Washing",
+    "remarks": "Till Washing Machine electrical Work is completed"
+  },
+  {
+    "row": 90,
+    "machine": "Overall Machine operation",
+    "desc": "Testing of Control Logics & Circuits",
+    "remarks": ""
+  },
+  {
+    "row": 91,
+    "machine": "Overall Machine operation",
+    "desc": "Verify electrical panels, wiring & interlocks \u2014 Washing to Necking",
+    "remarks": ""
+  },
+  {
+    "row": 92,
+    "machine": "Press",
+    "desc": "Press timing and alignment with testing",
+    "remarks": "2026-06-16 00:00:00"
+  },
+  {
+    "row": 93,
+    "machine": "Press",
+    "desc": "Die & punch stroke setting",
+    "remarks": "2026-06-16 00:00:00"
+  },
+  {
+    "row": 94,
+    "machine": "Press",
+    "desc": "Slug tray on/of switch to be installed",
+    "remarks": "2026-06-16 00:00:00"
+  },
+  {
+    "row": 95,
+    "machine": "Press",
+    "desc": "Dust Collection blower piping",
+    "remarks": "2026-06-16 00:00:00"
+  },
+  {
+    "row": 96,
+    "machine": "Press",
+    "desc": "Welding & fixing gear oil tank brackets and sheet",
+    "remarks": "2026-06-16 00:00:00"
+  },
+  {
+    "row": 97,
+    "machine": "Press",
+    "desc": "Fixing the lubrication tray properly with a slope for drainage",
+    "remarks": "2026-06-16 00:00:00"
+  },
+  {
+    "row": 98,
+    "machine": "Press",
+    "desc": "Place and install the Oil collection tank directly under the tray",
+    "remarks": "2026-06-16 00:00:00"
+  },
+  {
+    "row": 99,
+    "machine": "Press",
+    "desc": "Installation of Level sensor and Filter on the oil tank",
+    "remarks": "2026-06-16 00:00:00"
+  },
+  {
+    "row": 100,
+    "machine": "Trimming",
+    "desc": "Installation of piping of Trimming Of blower",
+    "remarks": "2026-06-19 00:00:00"
+  },
+  {
+    "row": 101,
+    "machine": "Trimming",
+    "desc": "Conveyor alignment \u2014 Trimming to Washing",
+    "remarks": "2026-06-19 00:00:00"
+  },
+  {
+    "row": 102,
+    "machine": "Trimming",
+    "desc": "Trimming Scrap collector wiring and troubleshooting",
+    "remarks": "2026-06-19 00:00:00"
+  },
+  {
+    "row": 103,
+    "machine": "Trimming",
+    "desc": "Electrical Panel checked / Tested",
+    "remarks": "2026-06-19 00:00:00"
+  },
+  {
+    "row": 104,
+    "machine": "Trimming",
+    "desc": "Startup main motor",
+    "remarks": "2026-06-19 00:00:00"
+  },
+  {
+    "row": 105,
+    "machine": "Trimming",
+    "desc": "Pneumatic and Electrical operation check",
+    "remarks": "2026-06-19 00:00:00"
+  },
+  {
+    "row": 106,
+    "machine": "Trimming",
+    "desc": "Trimming startup",
+    "remarks": "2026-06-19 00:00:00"
+  },
+  {
+    "row": 107,
+    "machine": "Trimming",
+    "desc": "Conveyor \u2014 Press to Trimming input",
+    "remarks": "2026-06-19 00:00:00"
+  },
+  {
+    "row": 108,
+    "machine": "Trimming",
+    "desc": "Trimming machine dry run",
+    "remarks": "2026-06-19 00:00:00"
+  },
+  {
+    "row": 109,
+    "machine": "Trimming",
+    "desc": "Install safety guard for suction at scrap generation point",
+    "remarks": "2026-06-19 00:00:00"
+  },
+  {
+    "row": 110,
+    "machine": "Trimming",
+    "desc": "closure of chain/gears/pneumatic assembly with box",
+    "remarks": "2026-06-19 00:00:00"
+  },
+  {
+    "row": 111,
+    "machine": "Trimming",
+    "desc": "closure of all cable trays/ panels",
+    "remarks": "2026-06-19 00:00:00"
+  },
+  {
+    "row": 112,
+    "machine": "Trimming",
+    "desc": "pneumatic pressure valve for ejector pressure to install",
+    "remarks": "2026-06-19 00:00:00"
+  },
+  {
+    "row": 113,
+    "machine": "Trimming",
+    "desc": "Installation of trimming blower",
+    "remarks": "2026-06-19 00:00:00"
+  },
+  {
+    "row": 114,
+    "machine": "Trimming",
+    "desc": "Fixing of Manual Oil Lubrication System",
+    "remarks": "2026-06-19 00:00:00"
+  },
+  {
+    "row": 115,
+    "machine": "Trimming",
+    "desc": "Addition of closed cabinet for trim collection on machine side",
+    "remarks": "2026-06-19 00:00:00"
+  },
+  {
+    "row": 116,
+    "machine": "Trimming",
+    "desc": "Oiling / greasing / parts replacement / testing",
+    "remarks": "2026-06-19 00:00:00"
+  },
+  {
+    "row": 117,
+    "machine": "Washing",
+    "desc": "Heaters to be checked and replaced if required",
+    "remarks": "2026-06-19 00:00:00"
+  },
+  {
+    "row": 118,
+    "machine": "Base Coat",
+    "desc": "Fumes collector piping to install",
+    "remarks": "2026-06-20 00:00:00"
+  },
+  {
+    "row": 119,
+    "machine": "Over Varnish",
+    "desc": "Fumes collector piping to install",
+    "remarks": "2026-06-20 00:00:00"
+  },
+  {
+    "row": 120,
+    "machine": "Base Coat",
+    "desc": "Rollers Housing \u2014 cleaned and greased",
+    "remarks": "2026-06-25 00:00:00"
+  },
+  {
+    "row": 121,
+    "machine": "Base Coat",
+    "desc": "Mandrels \u2014 cleaned",
+    "remarks": "2026-06-25 00:00:00"
+  },
+  {
+    "row": 122,
+    "machine": "Base Coat",
+    "desc": "Frame Body \u2014 cleaned",
+    "remarks": "2026-06-25 00:00:00"
+  },
+  {
+    "row": 123,
+    "machine": "Base Coat",
+    "desc": "Spare Rubberize rollers",
+    "remarks": "2026-06-25 00:00:00"
+  },
+  {
+    "row": 124,
+    "machine": "Base Coat",
+    "desc": "Spare Rubberize rollers",
+    "remarks": "2026-06-25 00:00:00"
+  },
+  {
+    "row": 125,
+    "machine": "Base Coat",
+    "desc": "Air regulator pneumatic fitting to check and rectify and fixation",
+    "remarks": "2026-06-25 00:00:00"
+  },
+  {
+    "row": 126,
+    "machine": "Base Coat",
+    "desc": "driving gear chain box enclosure at back",
+    "remarks": "2026-06-25 00:00:00"
+  },
+  {
+    "row": 127,
+    "machine": "Base Coat",
+    "desc": "closure of all cable trays/ panels",
+    "remarks": "2026-06-25 00:00:00"
+  },
+  {
+    "row": 128,
+    "machine": "Base Coat",
+    "desc": "Rawal bolts anchoring to be done on the foundation",
+    "remarks": "2026-06-25 00:00:00"
+  },
+  {
+    "row": 129,
+    "machine": "Over Varnish",
+    "desc": "Spare Rubberize rollers",
+    "remarks": "2026-06-25 00:00:00"
+  },
+  {
+    "row": 130,
+    "machine": "Over Varnish",
+    "desc": "closure of all cable trays/ panels",
+    "remarks": "2026-06-25 00:00:00"
+  },
+  {
+    "row": 131,
+    "machine": "Over Varnish",
+    "desc": "Rawal bolts anchoring to be done on the foundation",
+    "remarks": "2026-06-25 00:00:00"
+  },
+  {
+    "row": 132,
+    "machine": "Over Varnish",
+    "desc": "varnish pump placement and installation with piping",
+    "remarks": "2026-06-25 00:00:00"
+  },
+  {
+    "row": 133,
+    "machine": "Over Varnish",
+    "desc": "Printing Oven Dry run",
+    "remarks": "2026-06-25 00:00:00"
+  },
+  {
+    "row": 134,
+    "machine": "Over Varnish",
+    "desc": "Motors checking and troubleshooting",
+    "remarks": "2026-06-25 00:00:00"
+  },
+  {
+    "row": 135,
+    "machine": "Over Varnish",
+    "desc": "Mandrels \u2014 cleaned",
+    "remarks": "2026-06-25 00:00:00"
+  },
+  {
+    "row": 136,
+    "machine": "Over Varnish",
+    "desc": "Rollers Housing \u2014 cleaned and greased",
+    "remarks": "2026-06-25 00:00:00"
+  },
+  {
+    "row": 137,
+    "machine": "Over Varnish",
+    "desc": "Frame Body \u2014 cleaned",
+    "remarks": "2026-06-25 00:00:00"
+  },
+  {
+    "row": 138,
+    "machine": "Base Coat",
+    "desc": "PLC installation & termination",
+    "remarks": "2026-06-25 00:00:00"
+  },
+  {
+    "row": 139,
+    "machine": "Over Varnish",
+    "desc": "PLC installation & termination",
+    "remarks": "2026-06-25 00:00:00"
+  },
+  {
+    "row": 140,
+    "machine": "Printing",
+    "desc": "PLC installation & termination",
+    "remarks": "2026-06-25 00:00:00"
+  },
+  {
+    "row": 141,
+    "machine": "Printing",
+    "desc": "Bearings \u2014 cleaning & greasing",
+    "remarks": "2026-06-25 00:00:00"
+  },
+  {
+    "row": 142,
+    "machine": "Printing",
+    "desc": "Ink Fountain \u2014 cleaning",
+    "remarks": "2026-06-25 00:00:00"
+  },
+  {
+    "row": 143,
+    "machine": "Printing",
+    "desc": "Roller Train Frame \u2014 cleaning",
+    "remarks": "2026-06-25 00:00:00"
+  },
+  {
+    "row": 144,
+    "machine": "Printing",
+    "desc": "Dismantle all rollers for inspection & Cleaning",
+    "remarks": "2026-06-25 00:00:00"
+  },
+  {
+    "row": 145,
+    "machine": "Tumbler",
+    "desc": "Mixer installation and automation \u2014 auto feeding flow design",
+    "remarks": "quotation awaiting for conveyor from Arsalan & Lindsay"
+  },
+  {
+    "row": 146,
+    "machine": "Tumbler",
+    "desc": "Slug Mixing Unit Dry run",
+    "remarks": "Working on its auto feeding system"
+  },
+  {
+    "row": 147,
+    "machine": "Tumbler",
+    "desc": "Tumbler/Mixer wiring and connections to be done",
+    "remarks": ""
+  },
+  {
+    "row": 148,
+    "machine": "Tumbler",
+    "desc": "Main motor testing",
+    "remarks": ""
+  },
+  {
+    "row": 149,
+    "machine": "Tumbler",
+    "desc": "Tumbler/Mixer installation on platform",
+    "remarks": ""
+  },
+  {
+    "row": 150,
+    "machine": "Printing",
+    "desc": "Servo motor troubleshooting",
+    "remarks": "2026-06-25 00:00:00"
+  },
+  {
+    "row": 151,
+    "machine": "Printing",
+    "desc": "Aluminum oil tank \u2014 fabricate & install",
+    "remarks": "2026-06-25 00:00:00"
+  },
+  {
+    "row": 152,
+    "machine": "Printing",
+    "desc": "closure of all cable trays/ panels",
+    "remarks": "2026-06-25 00:00:00"
+  },
+  {
+    "row": 153,
+    "machine": "Printing",
+    "desc": "Rawlbolts anchoring to be done on the foundation",
+    "remarks": "2026-06-25 00:00:00"
+  },
+  {
+    "row": 154,
+    "machine": "Printing",
+    "desc": "Printing Machine Dry run",
+    "remarks": "2026-06-25 00:00:00"
+  },
+  {
+    "row": 155,
+    "machine": "Washing",
+    "desc": "Washing machine piping and blower installation",
+    "remarks": "2026-06-30 00:00:00"
+  },
+  {
+    "row": 156,
+    "machine": "Washing",
+    "desc": "Washing unit drain flexible pipes after tank installation",
+    "remarks": "2026-06-30 00:00:00"
+  },
+  {
+    "row": 157,
+    "machine": "Washing",
+    "desc": "Washing Machine Dry run",
+    "remarks": "2026-06-30 00:00:00"
+  },
+  {
+    "row": 158,
+    "machine": "Washing",
+    "desc": "Electrical Operating control panel to be relocated from trimming to washing",
+    "remarks": "2026-06-30 00:00:00"
+  },
+  {
+    "row": 159,
+    "machine": "Washing",
+    "desc": "pressure gauge to install on rinse recycle loop pipes",
+    "remarks": "2026-06-30 00:00:00"
+  },
+  {
+    "row": 160,
+    "machine": "Washing",
+    "desc": "contamination/ fumes collector to be checked and installed on top",
+    "remarks": "2026-06-30 00:00:00"
+  },
+  {
+    "row": 161,
+    "machine": "Washing",
+    "desc": "to install Pvc & wire brush on washing chain at top",
+    "remarks": "2026-06-30 00:00:00"
+  },
+  {
+    "row": 162,
+    "machine": "Washing",
+    "desc": "Spray and Drying section's windows to be installed",
+    "remarks": "2026-06-30 00:00:00"
+  },
+  {
+    "row": 163,
+    "machine": "Washing",
+    "desc": "Rinsing Recycling Tank \u2014 recoating & cleaning",
+    "remarks": "2026-06-30 00:00:00"
+  },
+  {
+    "row": 164,
+    "machine": "Washing",
+    "desc": "Spraying Jets Section \u2014 cleaning / scraping",
+    "remarks": "2026-06-30 00:00:00"
+  },
+  {
+    "row": 165,
+    "machine": "Washing",
+    "desc": "Heaters to be Replaced",
+    "remarks": "2026-06-30 00:00:00"
+  },
+  {
+    "row": 166,
+    "machine": "Washing",
+    "desc": "All gears greasing",
+    "remarks": "2026-06-30 00:00:00"
+  },
+  {
+    "row": 167,
+    "machine": "Washing",
+    "desc": "Gears alignment",
+    "remarks": "2026-06-30 00:00:00"
+  },
+  {
+    "row": 168,
+    "machine": "Washing",
+    "desc": "Separate storage tanks installation(detergent / cold / hot water)",
+    "remarks": "2026-06-30 00:00:00"
+  },
+  {
+    "row": 170,
+    "machine": "`",
+    "desc": "nan",
+    "remarks": ""
+  }
+]

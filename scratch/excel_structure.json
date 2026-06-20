@@ -1,0 +1,201 @@
+{
+  "sheets": [
+    "DASHBOARD",
+    "TRACKER",
+    "HOW TO UPDATE"
+  ],
+  "sheets_data": {
+    "DASHBOARD": {
+      "columns": [
+        "Unnamed: 0",
+        "AEROSOL PLANT  ?  Installation & Commissioning Tracker",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7"
+      ],
+      "head": [
+        {
+          "Unnamed: 0": "nan",
+          "AEROSOL PLANT  ?  Installation & Commissioning Tracker": "Last Updated",
+          "Unnamed: 2": "2026-06-12 00:00:00",
+          "Unnamed: 3": "nan",
+          "Unnamed: 4": "nan",
+          "Unnamed: 5": "nan",
+          "Unnamed: 6": "nan",
+          "Unnamed: 7": "nan"
+        },
+        {
+          "Unnamed: 0": "nan",
+          "AEROSOL PLANT  ?  Installation & Commissioning Tracker": "nan",
+          "Unnamed: 2": "nan",
+          "Unnamed: 3": "nan",
+          "Unnamed: 4": "nan",
+          "Unnamed: 5": "nan",
+          "Unnamed: 6": "nan",
+          "Unnamed: 7": "nan"
+        },
+        {
+          "Unnamed: 0": "nan",
+          "AEROSOL PLANT  ?  Installation & Commissioning Tracker": "Overall %",
+          "Unnamed: 2": "Total Tasks",
+          "Unnamed: 3": "Completed",
+          "Unnamed: 4": "In Progress",
+          "Unnamed: 5": "Not Started",
+          "Unnamed: 6": "Hold",
+          "Unnamed: 7": "Pending Procurement"
+        },
+        {
+          "Unnamed: 0": "nan",
+          "AEROSOL PLANT  ?  Installation & Commissioning Tracker": "0.3222891566265059",
+          "Unnamed: 2": "167",
+          "Unnamed: 3": "35",
+          "Unnamed: 4": "44",
+          "Unnamed: 5": "81",
+          "Unnamed: 6": "0",
+          "Unnamed: 7": "6"
+        },
+        {
+          "Unnamed: 0": "nan",
+          "AEROSOL PLANT  ?  Installation & Commissioning Tracker": "nan",
+          "Unnamed: 2": "nan",
+          "Unnamed: 3": "nan",
+          "Unnamed: 4": "nan",
+          "Unnamed: 5": "nan",
+          "Unnamed: 6": "nan",
+          "Unnamed: 7": "nan"
+        }
+      ]
+    },
+    "TRACKER": {
+      "columns": [
+        "AEROSOL PLANT  ?  INSTALLATION TRACKER",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7",
+        "Unnamed: 8",
+        "? Dashboard"
+      ],
+      "head": [
+        {
+          "AEROSOL PLANT  ?  INSTALLATION TRACKER": "#",
+          "Unnamed: 1": "Machine",
+          "Unnamed: 2": "Category",
+          "Unnamed: 3": "Task Description",
+          "Unnamed: 4": "Priority",
+          "Unnamed: 5": "Progress",
+          "Unnamed: 6": "Status",
+          "Unnamed: 7": "Responsible",
+          "Unnamed: 8": "Remarks",
+          "? Dashboard": "Updated"
+        },
+        {
+          "AEROSOL PLANT  ?  INSTALLATION TRACKER": "1",
+          "Unnamed: 1": "Accumulator",
+          "Unnamed: 2": "Electrical",
+          "Unnamed: 3": "Dry run",
+          "Unnamed: 4": "High",
+          "Unnamed: 5": "0",
+          "Unnamed: 6": "Not Started",
+          "Unnamed: 7": "Arsalan",
+          "Unnamed: 8": "on machine testing",
+          "? Dashboard": "nan"
+        },
+        {
+          "AEROSOL PLANT  ?  INSTALLATION TRACKER": "2",
+          "Unnamed: 1": "Accumulator",
+          "Unnamed: 2": "Mechanical",
+          "Unnamed: 3": "chain & bearing greasing",
+          "Unnamed: 4": "Medium",
+          "Unnamed: 5": "0.5",
+          "Unnamed: 6": "In Progress",
+          "Unnamed: 7": "Arsalan",
+          "Unnamed: 8": "nan",
+          "? Dashboard": "nan"
+        },
+        {
+          "AEROSOL PLANT  ?  INSTALLATION TRACKER": "3",
+          "Unnamed: 1": "Auto strapping machine",
+          "Unnamed: 2": "Mechanical",
+          "Unnamed: 3": "to place and install at designated location",
+          "Unnamed: 4": "Medium",
+          "Unnamed: 5": "0",
+          "Unnamed: 6": "Not Started",
+          "Unnamed: 7": "Arsalan",
+          "Unnamed: 8": "nan",
+          "? Dashboard": "nan"
+        },
+        {
+          "AEROSOL PLANT  ?  INSTALLATION TRACKER": "4",
+          "Unnamed: 1": "Auto strapping machine",
+          "Unnamed: 2": "Mechanical",
+          "Unnamed: 3": "Dry run",
+          "Unnamed: 4": "Low",
+          "Unnamed: 5": "0",
+          "Unnamed: 6": "Not Started",
+          "Unnamed: 7": "Arsalan",
+          "Unnamed: 8": "nan",
+          "? Dashboard": "nan"
+        }
+      ]
+    },
+    "HOW TO UPDATE": {
+      "columns": [
+        "Unnamed: 0",
+        "HOW TO UPDATE ? QUICK GUIDE",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5"
+      ],
+      "head": [
+        {
+          "Unnamed: 0": "nan",
+          "HOW TO UPDATE ? QUICK GUIDE": "COLUMN / STEP",
+          "Unnamed: 2": "INSTRUCTION",
+          "Unnamed: 3": "nan",
+          "Unnamed: 4": "nan",
+          "Unnamed: 5": "nan"
+        },
+        {
+          "Unnamed: 0": "nan",
+          "HOW TO UPDATE ? QUICK GUIDE": "COLUMN",
+          "Unnamed: 2": "WHAT TO DO",
+          "Unnamed: 3": "nan",
+          "Unnamed: 4": "nan",
+          "Unnamed: 5": "Arsalan"
+        },
+        {
+          "Unnamed: 0": "nan",
+          "HOW TO UPDATE ? QUICK GUIDE": "Machine",
+          "Unnamed: 2": "Click the cell ? a dropdown appears. Pick the machine name.",
+          "Unnamed: 3": "nan",
+          "Unnamed: 4": "nan",
+          "Unnamed: 5": "Saqib"
+        },
+        {
+          "Unnamed: 0": "nan",
+          "HOW TO UPDATE ? QUICK GUIDE": "Category",
+          "Unnamed: 2": "Pick Electrical or Mechanical from the dropdown.",
+          "Unnamed: 3": "nan",
+          "Unnamed: 4": "nan",
+          "Unnamed: 5": "nan"
+        },
+        {
+          "Unnamed: 0": "nan",
+          "HOW TO UPDATE ? QUICK GUIDE": "Task Description",
+          "Unnamed: 2": "Type the task clearly and briefly.",
+          "Unnamed: 3": "nan",
+          "Unnamed: 4": "nan",
+          "Unnamed: 5": "nan"
+        }
+      ]
+    }
+  }
+}
