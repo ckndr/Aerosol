@@ -1680,16 +1680,16 @@
       "category": "Electrical",
       "desc": "Verify electrical panels, wiring & interlocks — Press to Washing",
       "priority": "High",
-      "progress": 50,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "Till Washing Machine electrical Work is completed",
-      "updated": "",
+      "updated": "13 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "",
+      "lastEditedBy": "Saqib",
       "image": ""
     },
     {
@@ -3137,6 +3137,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17839419516851yu2",
+      "time": "2026-07-13T11:25:51.685Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_414385",
+            "machine": "Overall Machine Operation",
+            "category": "Electrical",
+            "desc": "Verify electrical panels, wiring & interlocks — Press to Washing",
+            "priority": "High",
+            "progress": 50,
+            "status": "In Progress",
+            "responsible": "Arsalan",
+            "deadline": "",
+            "remarks": "Till Washing Machine electrical Work is completed",
+            "updated": "",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "",
+            "image": ""
+          }
+        ]
+      }
+    },
     {
       "id": "t178394194819635ie",
       "time": "2026-07-13T11:25:48.196Z",
@@ -5689,33 +5718,6 @@
         }
       },
       "taskId": "t1780310527373qu7y"
-    },
-    {
-      "id": "t1780312622622r5hf",
-      "time": "2026-06-01T11:17:02.622Z",
-      "action": "[Aurangzeb] Updated task \"Inspect all rubber pipes — rep...\" on Washing",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_788779",
-          "machine": "Washing",
-          "category": "Mechanical",
-          "desc": "Inspect all rubber pipes — replace if damaged",
-          "priority": "High",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "After chain arrival",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_788779"
     }
   ],
   "machineMeta": {
@@ -5926,6 +5928,6 @@
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
     "Aurangzeb": "2026-06-23T12:03:18.797Z",
-    "Saqib": "2026-07-13T11:25:48.196Z"
+    "Saqib": "2026-07-13T11:25:51.685Z"
   }
 }
