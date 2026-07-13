@@ -3084,8 +3084,8 @@
       "category": "Mechanical",
       "desc": "fumes motor winding to be done",
       "priority": "High",
-      "progress": 0,
-      "status": "Not Started",
+      "progress": 100,
+      "status": "Completed",
       "remarks": "",
       "responsible": "",
       "updated": "13 Jul 2026",
@@ -3101,6 +3101,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17839417727975i97",
+      "time": "2026-07-13T11:22:52.797Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t1783941769525zrnr",
+            "machine": "Lacquer",
+            "category": "Mechanical",
+            "desc": "fumes motor winding to be done",
+            "priority": "High",
+            "progress": 0,
+            "status": "Not Started",
+            "remarks": "",
+            "responsible": "",
+            "updated": "13 Jul 2026",
+            "lastEditedBy": "Saqib",
+            "image": null,
+            "waitingOn": "",
+            "deadline": "2026-07-08",
+            "dateStarted": "2026-07-08",
+            "dateFinished": "2026-07-09"
+          }
+        ]
+      }
+    },
     {
       "id": "t1783941769525t5b7",
       "time": "2026-07-13T11:22:49.525Z",
@@ -5674,33 +5703,6 @@
         }
       },
       "taskId": "t_196498"
-    },
-    {
-      "id": "t1780311960177fblf",
-      "time": "2026-06-01T11:06:00.177Z",
-      "action": "[Aurangzeb] Updated task \"chain installation...\" on Washing",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_195315",
-          "machine": "Washing",
-          "category": "Mechanical",
-          "desc": "chain installation",
-          "priority": "High",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_195315"
     }
   ],
   "machineMeta": {
@@ -5911,6 +5913,6 @@
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
     "Aurangzeb": "2026-06-23T12:03:18.797Z",
-    "Saqib": "2026-07-13T11:22:49.525Z"
+    "Saqib": "2026-07-13T11:22:52.797Z"
   }
 }
