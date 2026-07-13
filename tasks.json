@@ -97,15 +97,15 @@
       "desc": "Fumes collector piping to install",
       "priority": "Medium",
       "progress": 0,
-      "status": "Not Started",
+      "status": "In Progress",
       "responsible": "Saqib",
       "deadline": "2026-06-20",
       "remarks": "",
-      "updated": "2 Jun 2026",
+      "updated": "13 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Aurangzeb",
+      "lastEditedBy": "Saqib",
       "image": "Photos/Base Coat/task_img_1780373654935.jpg"
     },
     {
@@ -3138,6 +3138,35 @@
   },
   "activityLog": [
     {
+      "id": "t1783942098333denr",
+      "time": "2026-07-13T11:28:18.333Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_186924",
+            "machine": "Base Coat",
+            "category": "Mechanical",
+            "desc": "Fumes collector piping to install",
+            "priority": "Medium",
+            "progress": 0,
+            "status": "Not Started",
+            "responsible": "Saqib",
+            "deadline": "2026-06-20",
+            "remarks": "",
+            "updated": "2 Jun 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Aurangzeb",
+            "image": "Photos/Base Coat/task_img_1780373654935.jpg"
+          }
+        ]
+      }
+    },
+    {
       "id": "t1783942054572wxp8",
       "time": "2026-07-13T11:27:34.572Z",
       "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
@@ -5745,33 +5774,6 @@
         }
       },
       "taskId": "t_922079"
-    },
-    {
-      "id": "t1780312995990sj0k",
-      "time": "2026-06-01T11:23:15.990Z",
-      "action": "[Aurangzeb] Updated task \"Oven Chain & bearing greasing...\" on Lacquer Oven",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_378618",
-          "machine": "Lacquer Oven",
-          "category": "Mechanical",
-          "desc": "Oven Chain & bearing greasing",
-          "priority": "Medium",
-          "progress": 50,
-          "status": "In Progress",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_378618"
     }
   ],
   "machineMeta": {
@@ -5982,6 +5984,6 @@
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
     "Aurangzeb": "2026-06-23T12:03:18.797Z",
-    "Saqib": "2026-07-13T11:27:34.573Z"
+    "Saqib": "2026-07-13T11:28:18.333Z"
   }
 }
