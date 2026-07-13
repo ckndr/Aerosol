@@ -1647,14 +1647,14 @@
       "progress": 0,
       "status": "Pending Procurement",
       "responsible": "Saqib",
-      "deadline": "",
+      "deadline": "2026-07-10",
       "remarks": "Quotation awaiting for execution",
-      "updated": "",
+      "updated": "13 Jul 2026",
       "waitingOn": "",
-      "dateStarted": "",
-      "dateFinished": "",
-      "lastEditedBy": "",
-      "image": ""
+      "dateStarted": "2026-07-11",
+      "dateFinished": "2026-07-10",
+      "lastEditedBy": "Saqib",
+      "image": null
     },
     {
       "id": "t_756784",
@@ -3137,6 +3137,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17839419453099f9q",
+      "time": "2026-07-13T11:25:45.309Z",
+      "action": "[Saqib] Updated task \"Main Power Cable procurement...\" [Deadline updated, Date Started updated, Date Finished updated] on Overall Machine Operation",
+      "user": "Saqib",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_460094",
+          "machine": "Overall Machine Operation",
+          "category": "Electrical",
+          "desc": "Main Power Cable procurement",
+          "priority": "High",
+          "progress": 0,
+          "status": "Pending Procurement",
+          "responsible": "Saqib",
+          "deadline": "",
+          "remarks": "Quotation awaiting for execution",
+          "updated": "",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "",
+          "image": ""
+        }
+      },
+      "taskId": "t_460094"
+    },
     {
       "id": "t1783941871885t5l1",
       "time": "2026-07-13T11:24:31.885Z",
@@ -5686,33 +5714,6 @@
         }
       },
       "taskId": "t_612787"
-    },
-    {
-      "id": "t1780312500053ld18",
-      "time": "2026-06-01T11:15:00.053Z",
-      "action": "[Aurangzeb] Updated task \"Spraying Jets Section — cleani...\" on Washing",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_148426",
-          "machine": "Washing",
-          "category": "Mechanical",
-          "desc": "Spraying Jets Section — cleaning / scraping",
-          "priority": "High",
-          "progress": 50,
-          "status": "In Progress",
-          "responsible": "Saqib",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_148426"
     }
   ],
   "machineMeta": {
@@ -5923,6 +5924,6 @@
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
     "Aurangzeb": "2026-06-23T12:03:18.797Z",
-    "Saqib": "2026-07-13T11:25:09.888Z"
+    "Saqib": "2026-07-13T11:25:45.309Z"
   }
 }
