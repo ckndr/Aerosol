@@ -2941,15 +2941,15 @@
       "desc": "Spray and Drying section's windows to be installed",
       "priority": "High",
       "progress": 0,
-      "status": "Not Started",
+      "status": "In Progress",
       "responsible": "Arsalan",
       "deadline": "2026-06-30",
       "remarks": "",
-      "updated": "1 Jun 2026",
+      "updated": "13 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Aurangzeb",
+      "lastEditedBy": "Saqib",
       "image": "Photos/Washing/task_img_1780312355529.jpg"
     },
     {
@@ -3137,6 +3137,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1783942193791f4hr",
+      "time": "2026-07-13T11:29:53.791Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_717625",
+            "machine": "Washing",
+            "category": "Mechanical",
+            "desc": "Spray and Drying section's windows to be installed",
+            "priority": "High",
+            "progress": 0,
+            "status": "Not Started",
+            "responsible": "Arsalan",
+            "deadline": "2026-06-30",
+            "remarks": "",
+            "updated": "1 Jun 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Aurangzeb",
+            "image": "Photos/Washing/task_img_1780312355529.jpg"
+          }
+        ]
+      }
+    },
     {
       "id": "t178394211303894rm",
       "time": "2026-07-13T11:28:33.038Z",
@@ -5753,33 +5782,6 @@
         }
       },
       "taskId": "t_555287"
-    },
-    {
-      "id": "t17803736961923uf0",
-      "time": "2026-06-02T04:14:56.192Z",
-      "action": "[Aurangzeb] Updated task \"Rollers Housing — cleaned and ...\" [Photo added] on Base Coat",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_229908",
-          "machine": "Base Coat",
-          "category": "Mechanical",
-          "desc": "Rollers Housing — cleaned and greased",
-          "priority": "Medium",
-          "progress": 60,
-          "status": "In Progress",
-          "responsible": "Saqib",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_229908"
     }
   ],
   "machineMeta": {
@@ -5990,6 +5992,6 @@
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
     "Aurangzeb": "2026-06-23T12:03:18.797Z",
-    "Saqib": "2026-07-13T11:29:09.870Z"
+    "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
