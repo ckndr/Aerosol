@@ -690,16 +690,16 @@
       "category": "General",
       "desc": "Lab equipment to be sourced",
       "priority": "Medium",
-      "progress": 0,
-      "status": "Pending Procurement",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Saqib",
       "deadline": "",
       "remarks": "",
-      "updated": "",
+      "updated": "13 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "",
+      "lastEditedBy": "Saqib",
       "image": ""
     },
     {
@@ -3137,6 +3137,64 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1783942054572wxp8",
+      "time": "2026-07-13T11:27:34.572Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_963673",
+            "machine": "General",
+            "category": "General",
+            "desc": "Overall machine paint",
+            "priority": "Medium",
+            "progress": 0,
+            "status": "In Progress",
+            "responsible": "Saqib",
+            "deadline": "",
+            "remarks": "",
+            "updated": "13 Jul 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Saqib",
+            "image": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "t17839420528285hbm",
+      "time": "2026-07-13T11:27:32.828Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_542466",
+            "machine": "General",
+            "category": "General",
+            "desc": "Lab equipment to be sourced",
+            "priority": "Medium",
+            "progress": 0,
+            "status": "Pending Procurement",
+            "responsible": "Saqib",
+            "deadline": "",
+            "remarks": "",
+            "updated": "",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "",
+            "image": ""
+          }
+        ]
+      }
+    },
     {
       "id": "t17839420509723k32",
       "time": "2026-07-13T11:27:30.972Z",
@@ -5714,59 +5772,6 @@
         }
       },
       "taskId": "t_378618"
-    },
-    {
-      "id": "t1780312985040qmqa",
-      "time": "2026-06-01T11:23:05.040Z",
-      "action": "[Aurangzeb] Updated task \"closure of electrical panels...\" on Lacquer Oven",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_757434",
-          "machine": "Lacquer Oven",
-          "category": "Electrical",
-          "desc": "closure of electrical panels",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_757434"
-    },
-    {
-      "id": "t17803129399622spy",
-      "time": "2026-06-01T11:22:19.962Z",
-      "action": "[Aurangzeb] Deleted task \"Close and all electrical panel...\" from Lacquer",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "delete",
-        "prevTask": {
-          "id": "t1780312710949uqk5",
-          "machine": "Lacquer",
-          "category": "Electrical",
-          "desc": "Close and all electrical panels.",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Not Started",
-          "remarks": "",
-          "responsible": "",
-          "updated": "1 Jun 2026",
-          "lastEditedBy": "Aurangzeb",
-          "image": "Photos/Lacquer/task_img_1780312708485.jpg",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      }
     }
   ],
   "machineMeta": {
@@ -5977,6 +5982,6 @@
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
     "Aurangzeb": "2026-06-23T12:03:18.797Z",
-    "Saqib": "2026-07-13T11:27:30.972Z"
+    "Saqib": "2026-07-13T11:27:34.573Z"
   }
 }
