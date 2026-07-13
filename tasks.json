@@ -1770,16 +1770,16 @@
       "category": "Mechanical",
       "desc": "Damping rubber pads over slug feeding tray",
       "priority": "Low",
-      "progress": 70,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Saqib",
       "deadline": "2026-06-16",
       "remarks": "",
-      "updated": "1 Jun 2026",
+      "updated": "13 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Aurangzeb",
+      "lastEditedBy": "Saqib",
       "image": "Photos/Press/task_img_1780310919112.jpg"
     },
     {
@@ -1789,15 +1789,15 @@
       "desc": "Gear Oil Lubrication pumping system setup",
       "priority": "High",
       "progress": 100,
-      "status": "In Progress",
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "2026-06-16",
       "remarks": "",
-      "updated": "1 Jun 2026",
+      "updated": "13 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Aurangzeb",
+      "lastEditedBy": "Saqib",
       "image": "Photos/Press/task_img_1780310940426.jpg"
     },
     {
@@ -1824,16 +1824,16 @@
       "category": "Mechanical",
       "desc": "Tools for press machine",
       "priority": "High",
-      "progress": 90,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Saqib",
       "deadline": "2026-06-16",
       "remarks": "",
-      "updated": "",
+      "updated": "13 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "",
+      "lastEditedBy": "Saqib",
       "image": ""
     },
     {
@@ -1860,16 +1860,16 @@
       "category": "Electrical",
       "desc": "SOV pneumatic press clutch service",
       "priority": "High",
-      "progress": 0,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "2026-06-16",
       "remarks": "",
-      "updated": "",
+      "updated": "13 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "",
+      "lastEditedBy": "Saqib",
       "image": ""
     },
     {
@@ -1968,16 +1968,16 @@
       "category": "Mechanical",
       "desc": "Slug tray on/off switch to be installed",
       "priority": "High",
-      "progress": 0,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "2026-06-16",
       "remarks": "",
-      "updated": "1 Jun 2026",
+      "updated": "13 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Aurangzeb",
+      "lastEditedBy": "Saqib",
       "image": "Photos/Press/task_img_1780311001799.jpg"
     },
     {
@@ -3065,6 +3065,151 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1783941619502przy",
+      "time": "2026-07-13T11:20:19.502Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_365723",
+            "machine": "Press",
+            "category": "Electrical",
+            "desc": "SOV pneumatic press clutch service",
+            "priority": "High",
+            "progress": 0,
+            "status": "In Progress",
+            "responsible": "Arsalan",
+            "deadline": "2026-06-16",
+            "remarks": "",
+            "updated": "",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "",
+            "image": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "t1783941613870y0kt",
+      "time": "2026-07-13T11:20:13.870Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_775918",
+            "machine": "Press",
+            "category": "Mechanical",
+            "desc": "Gear Oil Lubrication pumping system setup",
+            "priority": "High",
+            "progress": 100,
+            "status": "In Progress",
+            "responsible": "Arsalan",
+            "deadline": "2026-06-16",
+            "remarks": "",
+            "updated": "1 Jun 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Aurangzeb",
+            "image": "Photos/Press/task_img_1780310940426.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "t1783941611325jkqd",
+      "time": "2026-07-13T11:20:11.325Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_725515",
+            "machine": "Press",
+            "category": "Mechanical",
+            "desc": "Slug tray on/off switch to be installed",
+            "priority": "High",
+            "progress": 0,
+            "status": "In Progress",
+            "responsible": "Arsalan",
+            "deadline": "2026-06-16",
+            "remarks": "",
+            "updated": "1 Jun 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Aurangzeb",
+            "image": "Photos/Press/task_img_1780311001799.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "t1783941602540h8nj",
+      "time": "2026-07-13T11:20:02.540Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_695590",
+            "machine": "Press",
+            "category": "Mechanical",
+            "desc": "Tools for press machine",
+            "priority": "High",
+            "progress": 90,
+            "status": "In Progress",
+            "responsible": "Saqib",
+            "deadline": "2026-06-16",
+            "remarks": "",
+            "updated": "",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "",
+            "image": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "t1783941599364lrtm",
+      "time": "2026-07-13T11:19:59.364Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_471552",
+            "machine": "Press",
+            "category": "Mechanical",
+            "desc": "Damping rubber pads over slug feeding tray",
+            "priority": "Low",
+            "progress": 70,
+            "status": "In Progress",
+            "responsible": "Saqib",
+            "deadline": "2026-06-16",
+            "remarks": "",
+            "updated": "1 Jun 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Aurangzeb",
+            "image": "Photos/Press/task_img_1780310919112.jpg"
+          }
+        ]
+      }
+    },
     {
       "id": "t17819378262189uv8",
       "time": "2026-06-20T06:43:46.218Z",
@@ -5485,141 +5630,6 @@
         }
       },
       "taskId": "t_982251"
-    },
-    {
-      "id": "t1780311554260l2gp",
-      "time": "2026-06-01T10:59:14.260Z",
-      "action": "[Aurangzeb] Updated task \"Installation of trimming blowe...\" on Trimming",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_492086",
-          "machine": "Trimming",
-          "category": "Mechanical",
-          "desc": "Installation of trimming blower",
-          "priority": "High",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_492086"
-    },
-    {
-      "id": "t1780311533681spe6",
-      "time": "2026-06-01T10:58:53.681Z",
-      "action": "[Aurangzeb] Updated task \"pneumatic pressure valve for e...\" on Trimming",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_934362",
-          "machine": "Trimming",
-          "category": "Mechanical",
-          "desc": "pneumatic pressure valve for ejector pressure to install",
-          "priority": "High",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_934362"
-    },
-    {
-      "id": "t17803115040823pbc",
-      "time": "2026-06-01T10:58:24.082Z",
-      "action": "[Aurangzeb] Updated task \"closure of chain/gears/pneumat...\" on Trimming",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_467409",
-          "machine": "Trimming",
-          "category": "Mechanical",
-          "desc": "closure of chain/gears/pneumatic assembly with box",
-          "priority": "High",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_467409"
-    },
-    {
-      "id": "t1780311429642cbab",
-      "time": "2026-06-01T10:57:09.642Z",
-      "action": "[Aurangzeb] Updated task \"Install safety guard for sucti...\" on Trimming",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_253492",
-          "machine": "Trimming",
-          "category": "Mechanical",
-          "desc": "Install safety guard for suction at scrap generation point",
-          "priority": "High",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_253492"
-    },
-    {
-      "id": "t1780311410177jy57",
-      "time": "2026-06-01T10:56:50.177Z",
-      "action": "[Aurangzeb] Updated task \"Conveyor alignment — Trimming ...\" on Trimming",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_809507",
-          "machine": "Trimming",
-          "category": "Mechanical",
-          "desc": "Conveyor alignment — Trimming to Washing",
-          "priority": "High",
-          "progress": 50,
-          "status": "In Progress",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_809507"
     }
   ],
   "machineMeta": {
@@ -5829,6 +5839,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
-    "Aurangzeb": "2026-06-23T12:03:18.797Z"
+    "Aurangzeb": "2026-06-23T12:03:18.797Z",
+    "Saqib": "2026-07-13T11:20:29.605Z"
   }
 }
