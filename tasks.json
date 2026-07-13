@@ -511,15 +511,15 @@
       "desc": "Overall machine paint",
       "priority": "Medium",
       "progress": 0,
-      "status": "Not Started",
+      "status": "In Progress",
       "responsible": "Saqib",
       "deadline": "",
       "remarks": "",
-      "updated": "",
+      "updated": "13 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "",
+      "lastEditedBy": "Saqib",
       "image": ""
     },
     {
@@ -564,16 +564,16 @@
       "category": "General",
       "desc": "Ensure proper cleaning of entire machine",
       "priority": "Medium",
-      "progress": 70,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Saqib",
       "deadline": "",
       "remarks": "",
-      "updated": "20 Jun 2026",
+      "updated": "13 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Aurangzeb",
+      "lastEditedBy": "Saqib",
       "image": ""
     },
     {
@@ -3137,6 +3137,64 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1783942048454j2x5",
+      "time": "2026-07-13T11:27:28.454Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_791541",
+            "machine": "General",
+            "category": "General",
+            "desc": "Ensure proper cleaning of entire machine",
+            "priority": "Medium",
+            "progress": 70,
+            "status": "In Progress",
+            "responsible": "Saqib",
+            "deadline": "",
+            "remarks": "",
+            "updated": "20 Jun 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Aurangzeb",
+            "image": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "t1783942046341a4ax",
+      "time": "2026-07-13T11:27:26.341Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_963673",
+            "machine": "General",
+            "category": "General",
+            "desc": "Overall machine paint",
+            "priority": "Medium",
+            "progress": 0,
+            "status": "Not Started",
+            "responsible": "Saqib",
+            "deadline": "",
+            "remarks": "",
+            "updated": "",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "",
+            "image": ""
+          }
+        ]
+      }
+    },
     {
       "id": "t17839420424938how",
       "time": "2026-07-13T11:27:22.493Z",
@@ -5706,44 +5764,6 @@
           "dateFinished": ""
         }
       }
-    },
-    {
-      "id": "t1780312919702lkpn",
-      "time": "2026-06-01T11:21:59.702Z",
-      "action": "[Aurangzeb] Updated task \"Small dedicated air tank / rec...\" on Lacquer",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_879262",
-          "machine": "Lacquer",
-          "category": "Mechanical",
-          "desc": "Small dedicated air tank / receiver for lacquer",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Saqib",
-          "remarks": "Khalid sb recommendation",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_879262"
-    },
-    {
-      "id": "t1780312803052fhib",
-      "time": "2026-06-01T11:20:03.052Z",
-      "action": "[Aurangzeb] Added task \"Cans Holders — dismantled, cle...\" to Lacquer",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1780312803051a077"
-      },
-      "taskId": "t1780312803051a077"
     }
   ],
   "machineMeta": {
@@ -5954,6 +5974,6 @@
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
     "Aurangzeb": "2026-06-23T12:03:18.797Z",
-    "Saqib": "2026-07-13T11:27:22.493Z"
+    "Saqib": "2026-07-13T11:27:28.454Z"
   }
 }
