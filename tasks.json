@@ -3077,12 +3077,41 @@
       "deadline": "2026-07-09",
       "dateStarted": "2026-07-12",
       "dateFinished": "2026-07-13"
+    },
+    {
+      "id": "t1783941769525zrnr",
+      "machine": "Lacquer",
+      "category": "Mechanical",
+      "desc": "fumes motor winding to be done",
+      "priority": "High",
+      "progress": 0,
+      "status": "Not Started",
+      "remarks": "",
+      "responsible": "",
+      "updated": "13 Jul 2026",
+      "lastEditedBy": "Saqib",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "2026-07-08",
+      "dateStarted": "2026-07-08",
+      "dateFinished": "2026-07-09"
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1783941769525t5b7",
+      "time": "2026-07-13T11:22:49.525Z",
+      "action": "[Saqib] Added task \"fumes motor winding to be done...\" to Lacquer",
+      "user": "Saqib",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1783941769525zrnr"
+      },
+      "taskId": "t1783941769525zrnr"
+    },
     {
       "id": "t1783941734773ph24",
       "time": "2026-07-13T11:22:14.773Z",
@@ -5672,33 +5701,6 @@
         }
       },
       "taskId": "t_195315"
-    },
-    {
-      "id": "t1780311945225zuz3",
-      "time": "2026-06-01T11:05:45.225Z",
-      "action": "[Aurangzeb] Updated task \"Washing unit drain flexible pi...\" on Washing",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_297468",
-          "machine": "Washing",
-          "category": "Mechanical",
-          "desc": "Washing unit drain flexible pipes after tank installation",
-          "priority": "High",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "to be installed after tank installation",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_297468"
     }
   ],
   "machineMeta": {
@@ -5909,6 +5911,6 @@
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
     "Aurangzeb": "2026-06-23T12:03:18.797Z",
-    "Saqib": "2026-07-13T11:22:14.773Z"
+    "Saqib": "2026-07-13T11:22:49.525Z"
   }
 }
