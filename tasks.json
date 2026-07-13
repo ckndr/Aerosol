@@ -3113,12 +3113,41 @@
       "deadline": "2026-07-08",
       "dateStarted": "2026-07-09",
       "dateFinished": "2026-07-10"
+    },
+    {
+      "id": "t1783941836980pgv0",
+      "machine": "Lacquer Oven",
+      "category": "Mechanical",
+      "desc": "oven heater to be checked",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "Not Started",
+      "remarks": "",
+      "responsible": "",
+      "updated": "13 Jul 2026",
+      "lastEditedBy": "Saqib",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "2026-06-03",
+      "dateStarted": "2026-06-18",
+      "dateFinished": "2026-06-20"
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17839418369809vnw",
+      "time": "2026-07-13T11:23:56.980Z",
+      "action": "[Saqib] Added task \"oven heater to be checked...\" to Lacquer Oven",
+      "user": "Saqib",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1783941836980pgv0"
+      },
+      "taskId": "t1783941836980pgv0"
+    },
     {
       "id": "t1783941807637kc9t",
       "time": "2026-07-13T11:23:27.637Z",
@@ -5680,33 +5709,6 @@
         }
       },
       "taskId": "t_717625"
-    },
-    {
-      "id": "t1780312299445wjpx",
-      "time": "2026-06-01T11:11:39.445Z",
-      "action": "[Aurangzeb] Updated task \"to install Pvc & wire brush on...\" on Washing",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_329291",
-          "machine": "Washing",
-          "category": "Mechanical",
-          "desc": "to install Pvc & wire brush on washing chain at top",
-          "priority": "High",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_329291"
     }
   ],
   "machineMeta": {
@@ -5917,6 +5919,6 @@
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
     "Aurangzeb": "2026-06-23T12:03:18.797Z",
-    "Saqib": "2026-07-13T11:23:27.637Z"
+    "Saqib": "2026-07-13T11:23:56.980Z"
   }
 }
