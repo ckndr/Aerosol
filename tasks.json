@@ -1032,16 +1032,16 @@
       "category": "Mechanical",
       "desc": "Cans In-feed conveyor chain rods to procure and install",
       "priority": "Medium",
-      "progress": 0,
-      "status": "Not Started",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Saqib",
       "deadline": "2026-06-15",
       "remarks": "",
-      "updated": "",
+      "updated": "13 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "",
+      "lastEditedBy": "Saqib",
       "image": ""
     },
     {
@@ -1051,15 +1051,15 @@
       "desc": "Cans Grippers to be procured/fabricated",
       "priority": "Medium",
       "progress": 0,
-      "status": "Not Started",
+      "status": "In Progress",
       "responsible": "Saqib",
       "deadline": "2026-06-15",
       "remarks": "",
-      "updated": "",
+      "updated": "13 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "",
+      "lastEditedBy": "Saqib",
       "image": ""
     },
     {
@@ -1068,16 +1068,16 @@
       "category": "Electrical",
       "desc": "Spray guns spray timings to be set",
       "priority": "Medium",
-      "progress": 0,
-      "status": "Not Started",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "2026-06-15",
       "remarks": "",
-      "updated": "",
+      "updated": "13 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "",
+      "lastEditedBy": "Saqib",
       "image": ""
     },
     {
@@ -3083,6 +3083,82 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1783941731948e8c9",
+      "time": "2026-07-13T11:22:11.948Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t1782114443698z377",
+            "machine": "Lacquer",
+            "category": "Mechanical",
+            "desc": "Cans Grippers to be procured/fabricated",
+            "priority": "Medium",
+            "progress": 0,
+            "status": "Not Started",
+            "responsible": "Saqib",
+            "deadline": "2026-06-15",
+            "remarks": "",
+            "updated": "",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "",
+            "image": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "t1783941730452an26",
+      "time": "2026-07-13T11:22:10.452Z",
+      "action": "[Saqib] Bulk updated 2 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t17821144436985mrb",
+            "machine": "Lacquer",
+            "category": "Electrical",
+            "desc": "Spray guns spray timings to be set",
+            "priority": "Medium",
+            "progress": 0,
+            "status": "Not Started",
+            "responsible": "Arsalan",
+            "deadline": "2026-06-15",
+            "remarks": "",
+            "updated": "",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "",
+            "image": ""
+          },
+          {
+            "id": "t1782114443698qkok",
+            "machine": "Lacquer",
+            "category": "Mechanical",
+            "desc": "Cans In-feed conveyor chain rods to procure and install",
+            "priority": "Medium",
+            "progress": 0,
+            "status": "Not Started",
+            "responsible": "Saqib",
+            "deadline": "2026-06-15",
+            "remarks": "",
+            "updated": "",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "",
+            "image": ""
+          }
+        ]
+      }
+    },
     {
       "id": "t1783941712429bz88",
       "time": "2026-07-13T11:21:52.429Z",
@@ -5621,60 +5697,6 @@
         }
       },
       "taskId": "t_990649"
-    },
-    {
-      "id": "t1780311849737lww2",
-      "time": "2026-06-01T11:04:09.737Z",
-      "action": "[Aurangzeb] Updated task \"Heaters to be Replaced...\" on Washing",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_122888",
-          "machine": "Washing",
-          "category": "Electrical",
-          "desc": "Heaters to be Replaced",
-          "priority": "High",
-          "progress": 0,
-          "status": "Pending Procurement",
-          "responsible": "Saqib",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_122888"
-    },
-    {
-      "id": "t1780311828402jr2u",
-      "time": "2026-06-01T11:03:48.402Z",
-      "action": "[Aurangzeb] Updated task \"Electrical Operating control p...\" on Washing",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_417725",
-          "machine": "Washing",
-          "category": "Electrical",
-          "desc": "Electrical Operating control panel to be relocated from trimming to washing",
-          "priority": "High",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_417725"
     }
   ],
   "machineMeta": {
@@ -5885,6 +5907,6 @@
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
     "Aurangzeb": "2026-06-23T12:03:18.797Z",
-    "Saqib": "2026-07-13T11:21:52.429Z"
+    "Saqib": "2026-07-13T11:22:11.948Z"
   }
 }
