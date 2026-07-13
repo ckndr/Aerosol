@@ -1086,16 +1086,16 @@
       "category": "Mechanical",
       "desc": "Cans In-feed conveyor Inspection & testing",
       "priority": "Medium",
-      "progress": 0,
-      "status": "Not Started",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "2026-06-15",
       "remarks": "",
-      "updated": "",
+      "updated": "13 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "",
+      "lastEditedBy": "Saqib",
       "image": ""
     },
     {
@@ -3083,6 +3083,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1783941734773ph24",
+      "time": "2026-07-13T11:22:14.773Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t1782114443699orz7",
+            "machine": "Lacquer",
+            "category": "Mechanical",
+            "desc": "Cans In-feed conveyor Inspection & testing",
+            "priority": "Medium",
+            "progress": 0,
+            "status": "Not Started",
+            "responsible": "Arsalan",
+            "deadline": "2026-06-15",
+            "remarks": "",
+            "updated": "",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "",
+            "image": ""
+          }
+        ]
+      }
+    },
     {
       "id": "t1783941731948e8c9",
       "time": "2026-07-13T11:22:11.948Z",
@@ -5670,33 +5699,6 @@
         }
       },
       "taskId": "t_297468"
-    },
-    {
-      "id": "t1780311881327gkh0",
-      "time": "2026-06-01T11:04:41.327Z",
-      "action": "[Aurangzeb] Updated task \"Washing machine piping and blo...\" on Washing",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_990649",
-          "machine": "Washing",
-          "category": "Mechanical",
-          "desc": "Washing machine piping and blower installation",
-          "priority": "High",
-          "progress": 20,
-          "status": "In Progress",
-          "responsible": "Arsalan",
-          "remarks": "To be checked with Lindsay — blower available for installation",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_990649"
     }
   ],
   "machineMeta": {
@@ -5907,6 +5909,6 @@
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
     "Aurangzeb": "2026-06-23T12:03:18.797Z",
-    "Saqib": "2026-07-13T11:22:11.948Z"
+    "Saqib": "2026-07-13T11:22:14.773Z"
   }
 }
