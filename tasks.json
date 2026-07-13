@@ -2760,16 +2760,16 @@
       "category": "Mechanical",
       "desc": "Inspect all rubber pipes — replace if damaged",
       "priority": "High",
-      "progress": 0,
-      "status": "Not Started",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "2026-06-30",
       "remarks": "",
-      "updated": "1 Jun 2026",
+      "updated": "13 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Aurangzeb",
+      "lastEditedBy": "Saqib",
       "image": "Photos/Washing/task_img_1780312620376.jpg"
     },
     {
@@ -3083,6 +3083,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1783941712429bz88",
+      "time": "2026-07-13T11:21:52.429Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_788779",
+            "machine": "Washing",
+            "category": "Mechanical",
+            "desc": "Inspect all rubber pipes — replace if damaged",
+            "priority": "High",
+            "progress": 0,
+            "status": "Not Started",
+            "responsible": "Arsalan",
+            "deadline": "2026-06-30",
+            "remarks": "",
+            "updated": "1 Jun 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Aurangzeb",
+            "image": "Photos/Washing/task_img_1780312620376.jpg"
+          }
+        ]
+      }
+    },
     {
       "id": "t1783941707581m7hy",
       "time": "2026-07-13T11:21:47.581Z",
@@ -5646,33 +5675,6 @@
         }
       },
       "taskId": "t_417725"
-    },
-    {
-      "id": "t1780311742469rsfz",
-      "time": "2026-06-01T11:02:22.469Z",
-      "action": "[Aurangzeb] Updated task \"Oiling / greasing / parts repl...\" on Trimming",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_979590",
-          "machine": "Trimming",
-          "category": "Mechanical",
-          "desc": "Oiling / greasing / parts replacement / testing",
-          "priority": "High",
-          "progress": 80,
-          "status": "In Progress",
-          "responsible": "Arsalan",
-          "remarks": "Oil pump maintenance pending",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_979590"
     }
   ],
   "machineMeta": {
@@ -5883,6 +5885,6 @@
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
     "Aurangzeb": "2026-06-23T12:03:18.797Z",
-    "Saqib": "2026-07-13T11:21:47.581Z"
+    "Saqib": "2026-07-13T11:21:52.429Z"
   }
 }
