@@ -2508,16 +2508,16 @@
       "category": "Mechanical",
       "desc": "closure of chain/gears/pneumatic assembly with box",
       "priority": "High",
-      "progress": 0,
-      "status": "Not Started",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "2026-06-19",
       "remarks": "",
-      "updated": "1 Jun 2026",
+      "updated": "13 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Aurangzeb",
+      "lastEditedBy": "Saqib",
       "image": "Photos/Trimming/task_img_1780311501816.jpg"
     },
     {
@@ -2544,16 +2544,16 @@
       "category": "Mechanical",
       "desc": "pneumatic pressure valve for ejector pressure to install",
       "priority": "High",
-      "progress": 0,
-      "status": "Not Started",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "2026-06-19",
       "remarks": "",
-      "updated": "1 Jun 2026",
+      "updated": "13 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Aurangzeb",
+      "lastEditedBy": "Saqib",
       "image": "Photos/Trimming/task_img_1780311531849.jpg"
     },
     {
@@ -2580,16 +2580,16 @@
       "category": "Mechanical",
       "desc": "Fixing of Manual Oil Lubrication System",
       "priority": "High",
-      "progress": 70,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "2026-06-19",
       "remarks": "",
-      "updated": "1 Jun 2026",
+      "updated": "13 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Aurangzeb",
+      "lastEditedBy": "Saqib",
       "image": "Photos/Trimming/task_img_1780311586986.jpg"
     },
     {
@@ -3083,6 +3083,71 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1783941697725msr1",
+      "time": "2026-07-13T11:21:37.725Z",
+      "action": "[Saqib] Bulk updated 3 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_467409",
+            "machine": "Trimming",
+            "category": "Mechanical",
+            "desc": "closure of chain/gears/pneumatic assembly with box",
+            "priority": "High",
+            "progress": 0,
+            "status": "Not Started",
+            "responsible": "Arsalan",
+            "deadline": "2026-06-19",
+            "remarks": "",
+            "updated": "1 Jun 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Aurangzeb",
+            "image": "Photos/Trimming/task_img_1780311501816.jpg"
+          },
+          {
+            "id": "t_934362",
+            "machine": "Trimming",
+            "category": "Mechanical",
+            "desc": "pneumatic pressure valve for ejector pressure to install",
+            "priority": "High",
+            "progress": 0,
+            "status": "Not Started",
+            "responsible": "Arsalan",
+            "deadline": "2026-06-19",
+            "remarks": "",
+            "updated": "1 Jun 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Aurangzeb",
+            "image": "Photos/Trimming/task_img_1780311531849.jpg"
+          },
+          {
+            "id": "t_982251",
+            "machine": "Trimming",
+            "category": "Mechanical",
+            "desc": "Fixing of Manual Oil Lubrication System",
+            "priority": "High",
+            "progress": 70,
+            "status": "In Progress",
+            "responsible": "Arsalan",
+            "deadline": "2026-06-19",
+            "remarks": "",
+            "updated": "1 Jun 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Aurangzeb",
+            "image": "Photos/Trimming/task_img_1780311586986.jpg"
+          }
+        ]
+      }
+    },
     {
       "id": "t17839416834052d1b",
       "time": "2026-07-13T11:21:23.405Z",
@@ -5606,32 +5671,6 @@
         }
       },
       "taskId": "t_253492"
-    },
-    {
-      "id": "t1780311677529k0bd",
-      "time": "2026-06-01T11:01:17.529Z",
-      "action": "[Aurangzeb] Deleted task \"Addition of closed cabinet for...\" from Trimming",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "delete",
-        "prevTask": {
-          "id": "t_583440",
-          "machine": "Trimming",
-          "category": "Mechanical",
-          "desc": "Addition of closed cabinet for trim collection on machine side",
-          "priority": "High",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "Not fixed Yet",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      }
     }
   ],
   "machineMeta": {
@@ -5842,6 +5881,6 @@
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
     "Aurangzeb": "2026-06-23T12:03:18.797Z",
-    "Saqib": "2026-07-13T11:21:23.405Z"
+    "Saqib": "2026-07-13T11:21:37.725Z"
   }
 }
