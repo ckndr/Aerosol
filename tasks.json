@@ -1716,16 +1716,16 @@
       "category": "Electrical",
       "desc": "Verify electrical panels, wiring & interlocks — Washing to Necking",
       "priority": "High",
-      "progress": 50,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "",
-      "updated": "",
+      "updated": "13 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "",
+      "lastEditedBy": "Saqib",
       "image": ""
     },
     {
@@ -3137,6 +3137,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17839419565251tik",
+      "time": "2026-07-13T11:25:56.525Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_357049",
+            "machine": "Overall Machine Operation",
+            "category": "Electrical",
+            "desc": "Verify electrical panels, wiring & interlocks — Washing to Necking",
+            "priority": "High",
+            "progress": 50,
+            "status": "In Progress",
+            "responsible": "Arsalan",
+            "deadline": "",
+            "remarks": "",
+            "updated": "",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "",
+            "image": ""
+          }
+        ]
+      }
+    },
     {
       "id": "t1783941954252t0e9",
       "time": "2026-07-13T11:25:54.252Z",
@@ -5709,17 +5738,6 @@
         }
       },
       "taskId": "t_529872"
-    },
-    {
-      "id": "t1780312710950gqky",
-      "time": "2026-06-01T11:18:30.950Z",
-      "action": "[Aurangzeb] Added task \"Close and all electrical panel...\" to Lacquer",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1780312710949uqk5"
-      },
-      "taskId": "t1780312710949uqk5"
     }
   ],
   "machineMeta": {
@@ -5930,6 +5948,6 @@
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
     "Aurangzeb": "2026-06-23T12:03:18.797Z",
-    "Saqib": "2026-07-13T11:25:54.252Z"
+    "Saqib": "2026-07-13T11:25:56.525Z"
   }
 }
