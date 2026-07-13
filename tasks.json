@@ -654,16 +654,16 @@
       "category": "General",
       "desc": "Make stands for all spare rolls",
       "priority": "Medium",
-      "progress": 0,
-      "status": "Pending Procurement",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Saqib",
       "deadline": "",
       "remarks": "",
-      "updated": "",
+      "updated": "13 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "",
+      "lastEditedBy": "Saqib",
       "image": ""
     },
     {
@@ -3137,6 +3137,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17839420509723k32",
+      "time": "2026-07-13T11:27:30.972Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_366746",
+            "machine": "General",
+            "category": "General",
+            "desc": "Make stands for all spare rolls",
+            "priority": "Medium",
+            "progress": 0,
+            "status": "Pending Procurement",
+            "responsible": "Saqib",
+            "deadline": "",
+            "remarks": "",
+            "updated": "",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "",
+            "image": ""
+          }
+        ]
+      }
+    },
     {
       "id": "t1783942048454j2x5",
       "time": "2026-07-13T11:27:28.454Z",
@@ -5738,32 +5767,6 @@
           "dateFinished": ""
         }
       }
-    },
-    {
-      "id": "t1780312935290xjx5",
-      "time": "2026-06-01T11:22:15.290Z",
-      "action": "[Aurangzeb] Deleted task \"Cans Holders — dismantled, cle...\" from Lacquer",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "delete",
-        "prevTask": {
-          "id": "t1780312803051a077",
-          "machine": "Lacquer",
-          "category": "Mechanical",
-          "desc": "Cans Holders — dismantled, clean with thinner",
-          "priority": "Medium",
-          "progress": 50,
-          "status": "In Progress",
-          "remarks": "",
-          "responsible": "Saqib",
-          "updated": "1 Jun 2026",
-          "lastEditedBy": "Aurangzeb",
-          "image": "Photos/Lacquer/task_img_1780312788586.jpg",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      }
     }
   ],
   "machineMeta": {
@@ -5974,6 +5977,6 @@
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
     "Aurangzeb": "2026-06-23T12:03:18.797Z",
-    "Saqib": "2026-07-13T11:27:28.454Z"
+    "Saqib": "2026-07-13T11:27:30.972Z"
   }
 }
