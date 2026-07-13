@@ -600,16 +600,16 @@
       "category": "Mechanical",
       "desc": "Baling machine procurement",
       "priority": "Medium",
-      "progress": 0,
-      "status": "Pending Procurement",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Saqib",
       "deadline": "",
       "remarks": "",
-      "updated": "20 Jun 2026",
+      "updated": "13 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Aurangzeb",
+      "lastEditedBy": "Saqib",
       "image": ""
     },
     {
@@ -3137,6 +3137,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1783942040485v5jj",
+      "time": "2026-07-13T11:27:20.485Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_127701",
+            "machine": "General",
+            "category": "Mechanical",
+            "desc": "Baling machine procurement",
+            "priority": "Medium",
+            "progress": 0,
+            "status": "Pending Procurement",
+            "responsible": "Saqib",
+            "deadline": "",
+            "remarks": "",
+            "updated": "20 Jun 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Aurangzeb",
+            "image": ""
+          }
+        ]
+      }
+    },
     {
       "id": "t17839420383165h44",
       "time": "2026-07-13T11:27:18.316Z",
@@ -5713,33 +5742,6 @@
         }
       },
       "taskId": "t_841433"
-    },
-    {
-      "id": "t178031277408137z7",
-      "time": "2026-06-01T11:19:34.081Z",
-      "action": "[Aurangzeb] Updated task \"fixing  can holders after clea...\" on Lacquer",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_674413",
-          "machine": "Lacquer",
-          "category": "Mechanical",
-          "desc": "fixing  can holders after cleaning",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_674413"
     }
   ],
   "machineMeta": {
@@ -5950,6 +5952,6 @@
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
     "Aurangzeb": "2026-06-23T12:03:18.797Z",
-    "Saqib": "2026-07-13T11:27:18.316Z"
+    "Saqib": "2026-07-13T11:27:20.486Z"
   }
 }
