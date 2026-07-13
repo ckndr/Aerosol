@@ -1698,16 +1698,16 @@
       "category": "Electrical",
       "desc": "Testing of Control Logics & Circuits",
       "priority": "High",
-      "progress": 10,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "",
-      "updated": "",
+      "updated": "13 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "",
+      "lastEditedBy": "Saqib",
       "image": ""
     },
     {
@@ -3137,6 +3137,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1783941954252t0e9",
+      "time": "2026-07-13T11:25:54.252Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_242396",
+            "machine": "Overall Machine Operation",
+            "category": "Electrical",
+            "desc": "Testing of Control Logics & Circuits",
+            "priority": "High",
+            "progress": 10,
+            "status": "In Progress",
+            "responsible": "Arsalan",
+            "deadline": "",
+            "remarks": "",
+            "updated": "",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "",
+            "image": ""
+          }
+        ]
+      }
+    },
     {
       "id": "t17839419516851yu2",
       "time": "2026-07-13T11:25:51.685Z",
@@ -5691,33 +5720,6 @@
         "taskId": "t1780312710949uqk5"
       },
       "taskId": "t1780312710949uqk5"
-    },
-    {
-      "id": "t1780312708641vypv",
-      "time": "2026-06-01T11:18:28.641Z",
-      "action": "[Aurangzeb] Updated task \"Close and all electrical panel...\" on Lacquer",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t1780310527373qu7y",
-          "machine": "Lacquer",
-          "category": "Electrical",
-          "desc": "Close and all electrical panels.",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Not Started",
-          "remarks": "",
-          "responsible": "",
-          "updated": "1 Jun 2026",
-          "lastEditedBy": "Aurangzeb",
-          "image": null,
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t1780310527373qu7y"
     }
   ],
   "machineMeta": {
@@ -5928,6 +5930,6 @@
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
     "Aurangzeb": "2026-06-23T12:03:18.797Z",
-    "Saqib": "2026-07-13T11:25:51.685Z"
+    "Saqib": "2026-07-13T11:25:54.252Z"
   }
 }
