@@ -780,16 +780,16 @@
       "category": "Mechanical",
       "desc": "Operator's Platform",
       "priority": "Medium",
-      "progress": 0,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Saqib",
       "deadline": "",
       "remarks": "new to be ordered",
-      "updated": "20 Jun 2026",
+      "updated": "13 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Aurangzeb",
+      "lastEditedBy": "Saqib",
       "image": ""
     },
     {
@@ -3137,6 +3137,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17839420424938how",
+      "time": "2026-07-13T11:27:22.493Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_928391",
+            "machine": "General",
+            "category": "Mechanical",
+            "desc": "Operator's Platform",
+            "priority": "Medium",
+            "progress": 0,
+            "status": "In Progress",
+            "responsible": "Saqib",
+            "deadline": "",
+            "remarks": "new to be ordered",
+            "updated": "20 Jun 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Aurangzeb",
+            "image": ""
+          }
+        ]
+      }
+    },
     {
       "id": "t1783942040485v5jj",
       "time": "2026-07-13T11:27:20.485Z",
@@ -5715,33 +5744,6 @@
         "taskId": "t1780312803051a077"
       },
       "taskId": "t1780312803051a077"
-    },
-    {
-      "id": "t1780312801064fk0b",
-      "time": "2026-06-01T11:20:01.064Z",
-      "action": "[Aurangzeb] Updated task \"Cans Holders — dismantled, cle...\" on Lacquer",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_841433",
-          "machine": "Lacquer",
-          "category": "Mechanical",
-          "desc": "Cans Holders — dismantled, clean with thinner",
-          "priority": "Medium",
-          "progress": 50,
-          "status": "In Progress",
-          "responsible": "Saqib",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_841433"
     }
   ],
   "machineMeta": {
@@ -5952,6 +5954,6 @@
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
     "Aurangzeb": "2026-06-23T12:03:18.797Z",
-    "Saqib": "2026-07-13T11:27:20.486Z"
+    "Saqib": "2026-07-13T11:27:22.493Z"
   }
 }
