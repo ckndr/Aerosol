@@ -3095,12 +3095,41 @@
       "deadline": "2026-07-08",
       "dateStarted": "2026-07-08",
       "dateFinished": "2026-07-09"
+    },
+    {
+      "id": "t1783941803932yogk",
+      "machine": "Lacquer",
+      "category": "Mechanical",
+      "desc": "holders pin to be checked and repalced",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "Not Started",
+      "remarks": "",
+      "responsible": "Arsalan",
+      "updated": "13 Jul 2026",
+      "lastEditedBy": "Saqib",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "2026-07-08",
+      "dateStarted": "2026-07-09",
+      "dateFinished": "2026-07-10"
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17839418039329n08",
+      "time": "2026-07-13T11:23:23.932Z",
+      "action": "[Saqib] Added task \"holders pin to be checked and ...\" to Lacquer",
+      "user": "Saqib",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1783941803932yogk"
+      },
+      "taskId": "t1783941803932yogk"
+    },
     {
       "id": "t17839417727975i97",
       "time": "2026-07-13T11:22:52.797Z",
@@ -5676,33 +5705,6 @@
         }
       },
       "taskId": "t_214906"
-    },
-    {
-      "id": "t1780311976870ig11",
-      "time": "2026-06-01T11:06:16.870Z",
-      "action": "[Aurangzeb] Updated task \"pressure gauge to install on r...\" on Washing",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_196498",
-          "machine": "Washing",
-          "category": "Mechanical",
-          "desc": "pressure gauge to install on rinse recycle loop pipes",
-          "priority": "High",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_196498"
     }
   ],
   "machineMeta": {
@@ -5913,6 +5915,6 @@
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
     "Aurangzeb": "2026-06-23T12:03:18.797Z",
-    "Saqib": "2026-07-13T11:23:09.859Z"
+    "Saqib": "2026-07-13T11:23:23.933Z"
   }
 }
