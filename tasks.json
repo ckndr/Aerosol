@@ -3059,12 +3059,41 @@
       "dateFinished": "",
       "lastEditedBy": "Aurangzeb",
       "image": "Photos/Washing/task_img_1780312513275.jpg"
+    },
+    {
+      "id": "t1783941683405i6t5",
+      "machine": "Press",
+      "category": "Mechanical",
+      "desc": "main motor bearing change",
+      "priority": "High",
+      "progress": 0,
+      "status": "Completed",
+      "remarks": "",
+      "responsible": "",
+      "updated": "13 Jul 2026",
+      "lastEditedBy": "Saqib",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "2026-07-09",
+      "dateStarted": "2026-07-12",
+      "dateFinished": "2026-07-13"
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17839416834052d1b",
+      "time": "2026-07-13T11:21:23.405Z",
+      "action": "[Saqib] Added task \"main motor bearing change...\" to Press",
+      "user": "Saqib",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1783941683405i6t5"
+      },
+      "taskId": "t1783941683405i6t5"
+    },
     {
       "id": "t1783941619502przy",
       "time": "2026-07-13T11:20:19.502Z",
@@ -5603,33 +5632,6 @@
           "dateFinished": ""
         }
       }
-    },
-    {
-      "id": "t17803115892796tyg",
-      "time": "2026-06-01T10:59:49.279Z",
-      "action": "[Aurangzeb] Updated task \"Fixing of Manual Oil Lubricati...\" on Trimming",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_982251",
-          "machine": "Trimming",
-          "category": "Mechanical",
-          "desc": "Fixing of Manual Oil Lubrication System",
-          "priority": "High",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "Not fixed Yet",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_982251"
     }
   ],
   "machineMeta": {
@@ -5840,6 +5842,6 @@
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
     "Aurangzeb": "2026-06-23T12:03:18.797Z",
-    "Saqib": "2026-07-13T11:21:09.860Z"
+    "Saqib": "2026-07-13T11:21:23.405Z"
   }
 }
