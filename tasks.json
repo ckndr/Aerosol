@@ -3120,8 +3120,8 @@
       "category": "Mechanical",
       "desc": "oven heater to be checked",
       "priority": "Medium",
-      "progress": 0,
-      "status": "Not Started",
+      "progress": 100,
+      "status": "Completed",
       "remarks": "",
       "responsible": "",
       "updated": "13 Jul 2026",
@@ -3137,6 +3137,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1783941840557yqt0",
+      "time": "2026-07-13T11:24:00.558Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t1783941836980pgv0",
+            "machine": "Lacquer Oven",
+            "category": "Mechanical",
+            "desc": "oven heater to be checked",
+            "priority": "Medium",
+            "progress": 0,
+            "status": "Not Started",
+            "remarks": "",
+            "responsible": "",
+            "updated": "13 Jul 2026",
+            "lastEditedBy": "Saqib",
+            "image": null,
+            "waitingOn": "",
+            "deadline": "2026-06-03",
+            "dateStarted": "2026-06-18",
+            "dateFinished": "2026-06-20"
+          }
+        ]
+      }
+    },
     {
       "id": "t17839418369809vnw",
       "time": "2026-07-13T11:23:56.980Z",
@@ -5682,33 +5711,6 @@
         }
       },
       "taskId": "t_957628"
-    },
-    {
-      "id": "t17803123582231zgm",
-      "time": "2026-06-01T11:12:38.223Z",
-      "action": "[Aurangzeb] Updated task \"Spray and Drying section's win...\" on Washing",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_717625",
-          "machine": "Washing",
-          "category": "Mechanical",
-          "desc": "Spray and Drying section's windows to be installed",
-          "priority": "High",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_717625"
     }
   ],
   "machineMeta": {
@@ -5919,6 +5921,6 @@
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
     "Aurangzeb": "2026-06-23T12:03:18.797Z",
-    "Saqib": "2026-07-13T11:23:56.980Z"
+    "Saqib": "2026-07-13T11:24:00.558Z"
   }
 }
