@@ -3102,8 +3102,8 @@
       "category": "Mechanical",
       "desc": "holders pin to be checked and repalced",
       "priority": "Medium",
-      "progress": 0,
-      "status": "Not Started",
+      "progress": 100,
+      "status": "Completed",
       "remarks": "",
       "responsible": "Arsalan",
       "updated": "13 Jul 2026",
@@ -3119,6 +3119,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1783941807637kc9t",
+      "time": "2026-07-13T11:23:27.637Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t1783941803932yogk",
+            "machine": "Lacquer",
+            "category": "Mechanical",
+            "desc": "holders pin to be checked and repalced",
+            "priority": "Medium",
+            "progress": 0,
+            "status": "Not Started",
+            "remarks": "",
+            "responsible": "Arsalan",
+            "updated": "13 Jul 2026",
+            "lastEditedBy": "Saqib",
+            "image": null,
+            "waitingOn": "",
+            "deadline": "2026-07-08",
+            "dateStarted": "2026-07-09",
+            "dateFinished": "2026-07-10"
+          }
+        ]
+      }
+    },
     {
       "id": "t17839418039329n08",
       "time": "2026-07-13T11:23:23.932Z",
@@ -5678,33 +5707,6 @@
         }
       },
       "taskId": "t_329291"
-    },
-    {
-      "id": "t1780312246769fu4l",
-      "time": "2026-06-01T11:10:46.769Z",
-      "action": "[Aurangzeb] Updated task \"contamination/ fumes collector...\" on Washing",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_214906",
-          "machine": "Washing",
-          "category": "Mechanical",
-          "desc": "contamination/ fumes collector to be checked and installed on top",
-          "priority": "High",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_214906"
     }
   ],
   "machineMeta": {
@@ -5915,6 +5917,6 @@
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
     "Aurangzeb": "2026-06-23T12:03:18.797Z",
-    "Saqib": "2026-07-13T11:23:23.933Z"
+    "Saqib": "2026-07-13T11:23:27.637Z"
   }
 }
