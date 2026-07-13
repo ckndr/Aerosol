@@ -582,16 +582,16 @@
       "category": "Mechanical",
       "desc": "Scoop required for slug handling",
       "priority": "Medium",
-      "progress": 0,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Saqib",
       "deadline": "",
       "remarks": "",
-      "updated": "20 Jun 2026",
+      "updated": "13 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Aurangzeb",
+      "lastEditedBy": "Saqib",
       "image": ""
     },
     {
@@ -3137,6 +3137,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17839420383165h44",
+      "time": "2026-07-13T11:27:18.316Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_533804",
+            "machine": "General",
+            "category": "Mechanical",
+            "desc": "Scoop required for slug handling",
+            "priority": "Medium",
+            "progress": 0,
+            "status": "In Progress",
+            "responsible": "Saqib",
+            "deadline": "",
+            "remarks": "",
+            "updated": "20 Jun 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Aurangzeb",
+            "image": ""
+          }
+        ]
+      }
+    },
     {
       "id": "t17839419565251tik",
       "time": "2026-07-13T11:25:56.525Z",
@@ -5711,33 +5740,6 @@
         }
       },
       "taskId": "t_674413"
-    },
-    {
-      "id": "t1780312752777mmad",
-      "time": "2026-06-01T11:19:12.777Z",
-      "action": "[Aurangzeb] Updated task \"lacquer Storage vessel install...\" on Lacquer",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_529872",
-          "machine": "Lacquer",
-          "category": "Mechanical",
-          "desc": "lacquer Storage vessel installation with pneumatic fittings",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Saqib",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_529872"
     }
   ],
   "machineMeta": {
@@ -5948,6 +5950,6 @@
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
     "Aurangzeb": "2026-06-23T12:03:18.797Z",
-    "Saqib": "2026-07-13T11:27:09.860Z"
+    "Saqib": "2026-07-13T11:27:18.316Z"
   }
 }
