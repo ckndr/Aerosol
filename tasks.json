@@ -2634,16 +2634,16 @@
       "category": "Electrical",
       "desc": "Mixer installation and automation — auto feeding flow design",
       "priority": "Medium",
-      "progress": 0,
-      "status": "Pending Procurement",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "quotation awaiting for conveyor from Arsalan & Lindsay",
-      "updated": "",
+      "updated": "13 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "",
+      "lastEditedBy": "Saqib",
       "image": ""
     },
     {
@@ -3137,6 +3137,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1783941871885t5l1",
+      "time": "2026-07-13T11:24:31.885Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_385603",
+            "machine": "Tumbler",
+            "category": "Electrical",
+            "desc": "Mixer installation and automation — auto feeding flow design",
+            "priority": "Medium",
+            "progress": 0,
+            "status": "Pending Procurement",
+            "responsible": "Arsalan",
+            "deadline": "",
+            "remarks": "quotation awaiting for conveyor from Arsalan & Lindsay",
+            "updated": "",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "",
+            "image": ""
+          }
+        ]
+      }
+    },
     {
       "id": "t1783941840557yqt0",
       "time": "2026-07-13T11:24:00.558Z",
@@ -5684,33 +5713,6 @@
         }
       },
       "taskId": "t_148426"
-    },
-    {
-      "id": "t1780312374812ljej",
-      "time": "2026-06-01T11:12:54.812Z",
-      "action": "[Aurangzeb] Updated task \"Rinsing Recycling Tank — recoa...\" on Washing",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_957628",
-          "machine": "Washing",
-          "category": "Mechanical",
-          "desc": "Rinsing Recycling Tank — recoating & cleaning",
-          "priority": "High",
-          "progress": 50,
-          "status": "In Progress",
-          "responsible": "Saqib",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_957628"
     }
   ],
   "machineMeta": {
@@ -5921,6 +5923,6 @@
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
     "Aurangzeb": "2026-06-23T12:03:18.797Z",
-    "Saqib": "2026-07-13T11:24:00.558Z"
+    "Saqib": "2026-07-13T11:24:31.885Z"
   }
 }
