@@ -1644,8 +1644,8 @@
       "category": "Electrical",
       "desc": "Main Power Cable procurement",
       "priority": "High",
-      "progress": 0,
-      "status": "Pending Procurement",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Saqib",
       "deadline": "2026-07-10",
       "remarks": "Quotation awaiting for execution",
@@ -3137,6 +3137,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t178394194819635ie",
+      "time": "2026-07-13T11:25:48.196Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_460094",
+            "machine": "Overall Machine Operation",
+            "category": "Electrical",
+            "desc": "Main Power Cable procurement",
+            "priority": "High",
+            "progress": 0,
+            "status": "Pending Procurement",
+            "responsible": "Saqib",
+            "deadline": "2026-07-10",
+            "remarks": "Quotation awaiting for execution",
+            "updated": "13 Jul 2026",
+            "waitingOn": "",
+            "dateStarted": "2026-07-11",
+            "dateFinished": "2026-07-10",
+            "lastEditedBy": "Saqib",
+            "image": null
+          }
+        ]
+      }
+    },
     {
       "id": "t17839419453099f9q",
       "time": "2026-07-13T11:25:45.309Z",
@@ -5687,33 +5716,6 @@
         }
       },
       "taskId": "t_788779"
-    },
-    {
-      "id": "t1780312515511r1f0",
-      "time": "2026-06-01T11:15:15.511Z",
-      "action": "[Aurangzeb] Updated task \"Separate storage tanks install...\" on Washing",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_612787",
-          "machine": "Washing",
-          "category": "Mechanical",
-          "desc": "Separate storage tanks installation(detergent / cold / hot water)",
-          "priority": "High",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Saqib",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_612787"
     }
   ],
   "machineMeta": {
@@ -5924,6 +5926,6 @@
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
     "Aurangzeb": "2026-06-23T12:03:18.797Z",
-    "Saqib": "2026-07-13T11:25:45.309Z"
+    "Saqib": "2026-07-13T11:25:48.196Z"
   }
 }
