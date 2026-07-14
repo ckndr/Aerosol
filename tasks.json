@@ -1807,15 +1807,15 @@
       "desc": "Gear Oil Lubrication pumping system setup",
       "priority": "High",
       "progress": 100,
-      "status": "In Progress",
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "2026-06-16",
       "remarks": "",
-      "updated": "13 Jul 2026",
+      "updated": "14 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Saqib",
+      "lastEditedBy": "Aurangzeb",
       "image": "Photos/Press/task_img_1780310940426.jpg"
     },
     {
@@ -3263,6 +3263,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17840226228011tml",
+      "time": "2026-07-14T09:50:22.801Z",
+      "action": "[Aurangzeb] Updated task \"Gear Oil Lubrication pumping s...\" [Status: In Progress → Completed] on Press",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_775918",
+          "machine": "Press",
+          "category": "Mechanical",
+          "desc": "Gear Oil Lubrication pumping system setup",
+          "priority": "High",
+          "progress": 100,
+          "status": "In Progress",
+          "responsible": "Arsalan",
+          "deadline": "2026-06-16",
+          "remarks": "",
+          "updated": "13 Jul 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Saqib",
+          "image": "Photos/Press/task_img_1780310940426.jpg"
+        }
+      },
+      "taskId": "t_775918"
+    },
     {
       "id": "t1783942193791f4hr",
       "time": "2026-07-13T11:29:53.791Z",
@@ -5881,33 +5909,6 @@
         }
       },
       "taskId": "t_933715"
-    },
-    {
-      "id": "t1780373724318w37x",
-      "time": "2026-06-02T04:15:24.318Z",
-      "action": "[Aurangzeb] Updated task \"Mandrels — cleaned...\" [Photo added] on Base Coat",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_555287",
-          "machine": "Base Coat",
-          "category": "Mechanical",
-          "desc": "Mandrels — cleaned",
-          "priority": "Medium",
-          "progress": 60,
-          "status": "In Progress",
-          "responsible": "Saqib",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_555287"
     }
   ],
   "machineMeta": {
@@ -6117,7 +6118,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
-    "Aurangzeb": "2026-07-14T09:48:54.237Z",
+    "Aurangzeb": "2026-07-14T09:50:22.802Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
