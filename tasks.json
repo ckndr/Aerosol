@@ -2094,17 +2094,17 @@
       "category": "Electrical",
       "desc": "SOV coil pneumatic press clutch",
       "priority": "High",
-      "progress": 0,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Saqib",
       "deadline": "2026-06-16",
       "remarks": "",
-      "updated": "",
+      "updated": "14 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "",
-      "image": ""
+      "lastEditedBy": "Aurangzeb",
+      "image": null
     },
     {
       "id": "t1784022464368t9dx",
@@ -3263,6 +3263,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17840227496666el3",
+      "time": "2026-07-14T09:52:29.666Z",
+      "action": "[Aurangzeb] Updated task \"SOV coil pneumatic press clutc...\" [Status: In Progress → Completed, Progress: 0% → 100%] on Press",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t178402246436679mb",
+          "machine": "Press",
+          "category": "Electrical",
+          "desc": "SOV coil pneumatic press clutch",
+          "priority": "High",
+          "progress": 0,
+          "status": "In Progress",
+          "responsible": "Saqib",
+          "deadline": "2026-06-16",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "",
+          "image": ""
+        }
+      },
+      "taskId": "t178402246436679mb"
+    },
     {
       "id": "t17840226228011tml",
       "time": "2026-07-14T09:50:22.801Z",
@@ -5882,33 +5910,6 @@
         }
       },
       "taskId": "t_305707"
-    },
-    {
-      "id": "t1780373750978oprp",
-      "time": "2026-06-02T04:15:50.978Z",
-      "action": "[Aurangzeb] Updated task \"Frame Body — cleaned...\" [Photo added] on Base Coat",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_933715",
-          "machine": "Base Coat",
-          "category": "Mechanical",
-          "desc": "Frame Body — cleaned",
-          "priority": "Medium",
-          "progress": 60,
-          "status": "In Progress",
-          "responsible": "Saqib",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_933715"
     }
   ],
   "machineMeta": {
@@ -6118,7 +6119,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
-    "Aurangzeb": "2026-07-14T09:50:53.801Z",
+    "Aurangzeb": "2026-07-14T09:52:29.666Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
