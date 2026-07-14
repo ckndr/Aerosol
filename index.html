@@ -4113,12 +4113,12 @@
           const allMt = tasks.filter(t => t.machine === m);
           if (allMt.length === 0) return;
 
-          const done = mt.filter(t => t.status === 'Completed').length;
-          const pending = mt.length - done;
-          const pct = mt.length ? Math.round(mt.reduce((sum, t) => sum + (Number(t.progress) || 0), 0) / mt.length) : 0;
-          const ePend = mt.filter(t => t.category === 'Electrical' && t.status !== 'Completed').length;
-          const mPend = mt.filter(t => t.category === 'Mechanical' && t.status !== 'Completed').length;
-          const gPend = mt.filter(t => t.category === 'General' && t.status !== 'Completed').length;
+          const done = allMt.filter(t => t.status === 'Completed').length;
+          const pending = allMt.length - done;
+          const pct = allMt.length ? Math.round(allMt.reduce((sum, t) => sum + (Number(t.progress) || 0), 0) / allMt.length) : 0;
+          const ePend = allMt.filter(t => t.category === 'Electrical' && t.status !== 'Completed').length;
+          const mPend = allMt.filter(t => t.category === 'Mechanical' && t.status !== 'Completed').length;
+          const gPend = allMt.filter(t => t.category === 'General' && t.status !== 'Completed').length;
           const dryRunStatus = MACHINE_META[m]?.dryRun || 'None';
           const dash = `${(pct / 100 * C).toFixed(1)} ${C.toFixed(1)}`;
 
