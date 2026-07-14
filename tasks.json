@@ -528,17 +528,17 @@
       "category": "General",
       "desc": "Overall machine paint",
       "priority": "Medium",
-      "progress": 0,
+      "progress": 10,
       "status": "In Progress",
       "responsible": "Saqib",
       "deadline": "",
       "remarks": "",
-      "updated": "13 Jul 2026",
+      "updated": "14 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Saqib",
-      "image": ""
+      "lastEditedBy": "Aurangzeb",
+      "image": null
     },
     {
       "id": "t_350925",
@@ -3264,6 +3264,34 @@
   },
   "activityLog": [
     {
+      "id": "t1784024951803vbhc",
+      "time": "2026-07-14T10:29:11.803Z",
+      "action": "[Aurangzeb] Updated task \"Overall machine paint...\" [Progress: 0% → 10%] on General",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_963673",
+          "machine": "General",
+          "category": "General",
+          "desc": "Overall machine paint",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "In Progress",
+          "responsible": "Saqib",
+          "deadline": "",
+          "remarks": "",
+          "updated": "13 Jul 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Saqib",
+          "image": ""
+        }
+      },
+      "taskId": "t_963673"
+    },
+    {
       "id": "t1784023728330ork9",
       "time": "2026-07-14T10:08:48.330Z",
       "action": "[Aurangzeb] Updated task \"SOV coil pneumatic press clutc...\" [Status: Completed → In Progress, Progress: 100% → 20%] on Press",
@@ -5884,33 +5912,6 @@
         }
       },
       "taskId": "t_429174"
-    },
-    {
-      "id": "t1780373934967cfmf",
-      "time": "2026-06-02T04:18:54.967Z",
-      "action": "[Aurangzeb] Updated task \"driving gear chain box enclosu...\" [Photo added] on Base Coat",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_429174",
-          "machine": "Base Coat",
-          "category": "Mechanical",
-          "desc": "driving gear chain box enclosure at back",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_429174"
     }
   ],
   "machineMeta": {
@@ -6120,7 +6121,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
-    "Aurangzeb": "2026-07-14T10:28:53.800Z",
+    "Aurangzeb": "2026-07-14T10:29:11.803Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
