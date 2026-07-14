@@ -3609,6 +3609,10 @@
     }
     function normalizeDate(raw) {
       if (!raw) return '';
+      // Handle Date objects directly (e.g. from ExcelJS/XLSX parser)
+      if (raw instanceof Date && !isNaN(raw.getTime())) {
+        return raw.toISOString().slice(0, 10);
+      }
       const str = String(raw).trim();
       if (!str) return '';
       if (/^\d{5}$/.test(str)) {
@@ -5172,9 +5176,33 @@
         const ws = workbook.getWorksheet('TRACKER');
         if (!ws) throw new Error('TRACKER sheet missing in template');
         
+        // Capture formatting from template row 3 (guaranteed formatted)
+        const templateRow = ws.getRow(3);
+        const templateStyles = {};
+        for (let c = 1; c <= 10; c++) {
+          const cell = templateRow.getCell(c);
+          templateStyles[c] = {
+            font: cell.font ? { ...cell.font } : undefined,
+            alignment: cell.alignment ? { ...cell.alignment } : undefined,
+            border: cell.border ? { ...cell.border } : undefined,
+            fill: cell.fill ? { ...cell.fill } : undefined,
+            numFmt: cell.numFmt || undefined
+          };
+        }
+
         tasks.forEach((t, i) => {
           const rowIdx = i + 3; // Data starts at row 3
           const row = ws.getRow(rowIdx);
+          // Apply template formatting to every cell
+          for (let c = 1; c <= 10; c++) {
+            const cell = row.getCell(c);
+            const s = templateStyles[c];
+            if (s.font) cell.font = s.font;
+            if (s.alignment) cell.alignment = s.alignment;
+            if (s.border) cell.border = s.border;
+            if (s.fill) cell.fill = s.fill;
+            if (s.numFmt) cell.numFmt = s.numFmt;
+          }
           row.getCell(1).value = i + 1; // #
           row.getCell(2).value = t.machine; // Machine
           row.getCell(3).value = t.category; // Category
@@ -5183,7 +5211,9 @@
           row.getCell(6).value = t.progress / 100; // Progress
           row.getCell(7).value = t.status; // Status
           row.getCell(8).value = t.responsible || ''; // Responsible
-          row.getCell(9).value = t.deadline ? new Date(t.deadline + 'T00:00:00') : ''; // Deadline
+          const deadlineCell = row.getCell(9);
+          deadlineCell.value = t.deadline ? new Date(t.deadline + 'T00:00:00') : ''; // Deadline
+          deadlineCell.numFmt = 'DD/MM/YYYY'; // Date-only format, no time
           row.getCell(10).value = t.remarks || ''; // Remarks
           row.commit();
         });
