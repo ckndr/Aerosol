@@ -474,12 +474,12 @@
       "category": "Mechanical",
       "desc": "Realignment of conveyor to be done as per Lindsay recommendation",
       "priority": "Medium",
-      "progress": 0,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "",
-      "updated": "2 Jun 2026",
+      "updated": "14 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -3264,6 +3264,34 @@
   },
   "activityLog": [
     {
+      "id": "t1784025092619gdt7",
+      "time": "2026-07-14T10:31:32.619Z",
+      "action": "[Aurangzeb] Updated task \"Realignment of conveyor to be ...\" [Status: In Progress → Completed, Progress: 0% → 100%] on FG Conveyor",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_788726",
+          "machine": "FG Conveyor",
+          "category": "Mechanical",
+          "desc": "Realignment of conveyor to be done as per Lindsay recommendation",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "In Progress",
+          "responsible": "Arsalan",
+          "deadline": "",
+          "remarks": "",
+          "updated": "2 Jun 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": "Photos/FG Conveyor/task_img_1780377476812.jpg"
+        }
+      },
+      "taskId": "t_788726"
+    },
+    {
       "id": "t1784024951803vbhc",
       "time": "2026-07-14T10:29:11.803Z",
       "action": "[Aurangzeb] Updated task \"Overall machine paint...\" [Progress: 0% → 10%] on General",
@@ -5885,33 +5913,6 @@
         }
       },
       "taskId": "t_511680"
-    },
-    {
-      "id": "t1780373962147br2k",
-      "time": "2026-06-02T04:19:22.147Z",
-      "action": "[Aurangzeb] Updated task \"driving gear chain box enclosu...\" [Photo added] on Base Coat",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_429174",
-          "machine": "Base Coat",
-          "category": "Mechanical",
-          "desc": "driving gear chain box enclosure at back",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "2 Jun 2026",
-          "waitingOn": "",
-          "image": null,
-          "lastEditedBy": "Aurangzeb",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_429174"
     }
   ],
   "machineMeta": {
@@ -6121,7 +6122,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
-    "Aurangzeb": "2026-07-14T10:30:53.808Z",
+    "Aurangzeb": "2026-07-14T10:31:32.619Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
