@@ -4115,7 +4115,7 @@
 
           const done = mt.filter(t => t.status === 'Completed').length;
           const pending = mt.length - done;
-          const pct = mt.length ? Math.round(done / mt.length * 100) : 0;
+          const pct = mt.length ? Math.round(mt.reduce((sum, t) => sum + (Number(t.progress) || 0), 0) / mt.length) : 0;
           const ePend = mt.filter(t => t.category === 'Electrical' && t.status !== 'Completed').length;
           const mPend = mt.filter(t => t.category === 'Mechanical' && t.status !== 'Completed').length;
           const gPend = mt.filter(t => t.category === 'General' && t.status !== 'Completed').length;
