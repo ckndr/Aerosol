@@ -5981,7 +5981,7 @@
       ]
     },
     "Lacquer": {
-      "dryRun": "Pending"
+      "dryRun": "Complete"
     },
     "Lacquer Oven": {
       "dryRun": "None",
@@ -6122,7 +6122,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-06-03T09:16:16.303Z",
-    "Aurangzeb": "2026-07-14T10:32:53.810Z",
+    "Aurangzeb": "2026-07-15T08:19:26.815Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
