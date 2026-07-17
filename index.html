@@ -2904,6 +2904,25 @@
     </div>
   </div>
 
+  <!-- Exit Confirmation Modal -->
+  <div class="modal-overlay center" id="exit-modal" role="dialog" aria-modal="true" style="display:none; backdrop-filter: blur(8px); background: rgba(13, 17, 23, 0.7); z-index: 9999;" onclick="if(event.target===this)cancelExit()">
+    <div class="modal" style="max-width: 380px;">
+      <div style="text-align:center; margin: 1rem 0 0.5rem 0;">
+        <span style="font-size: 3rem; color: var(--accent); filter: drop-shadow(0 2px 8px rgba(245,158,11,0.3));">🚪</span>
+      </div>
+      <div class="modal-header" style="justify-content:center; border-bottom:none; padding-bottom:0.25rem;">
+        <div class="modal-title" style="font-size: 1.3rem; font-weight: 700; color: var(--text);">Exit Aerosol Tracker?</div>
+      </div>
+      <p style="font-size:.85rem; color:var(--text2); margin-bottom:1.5rem; text-align:center; padding: 0 1rem; line-height: 1.5;">
+        Are you sure you want to exit the application? Any unsynced changes will continue syncing in the background.
+      </p>
+      <div class="modal-footer" style="padding: 1rem 0 0.5rem 0; display: flex; gap: 10px; justify-content: center; border-top: none;">
+        <button class="btn-cancel" onclick="cancelExit()" style="flex: 1; margin: 0; border-radius: var(--radius-md); padding: 10px 16px; font-weight: 600; cursor: pointer;">Stay</button>
+        <button class="btn-save" onclick="confirmExit()" style="flex: 1; margin: 0; background: linear-gradient(135deg, #ff4444, #cc0000); color: white; border: none; border-radius: var(--radius-md); padding: 10px 16px; font-weight: 600; cursor: pointer; box-shadow: 0 4px 12px rgba(255,68,68,0.25);">Exit App</button>
+      </div>
+    </div>
+  </div>
+
   <script>
     // ═══════════════════════════════════════════════════════
     //  CONFIG
@@ -3940,7 +3959,6 @@
         rSel.innerHTML = html;
         rSel.value = rVal;
       }
-    }
 
     // ═══════════════════════════════════════════════════════
     //  NAVIGATION
@@ -3951,7 +3969,8 @@
       currentRecentFilter = false;
       clearSelection();
       document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
-      document.getElementById('view-' + view).classList.add('active');
+      const vEl = document.getElementById('view-' + view);
+      if (vEl) vEl.classList.add('active');
       if (view === 'detail' && machine) { showMachine(machine); }
       if (view === 'settings') {
         renderActivityLog();
@@ -3963,7 +3982,8 @@
       }
       else if (view === 'procurement') {
         document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
-        document.getElementById('view-procurement').classList.add('active');
+        const vpEl = document.getElementById('view-procurement');
+        if (vpEl) vpEl.classList.add('active');
         renderProcurement();
       }
       if (view !== 'detail') { currentMachine = null; }
@@ -3975,9 +3995,10 @@
       }
 
       window.scrollTo({ top: 0, behavior: 'smooth' });
+      saveHistoryState();
     }
 
-    // ═══════════════════════════════════════════════════════
+
     //  RENDER KPIs
     // ═══════════════════════════════════════════════════════
     function renderKPIs() {
@@ -4440,7 +4461,7 @@
         <div class="modal" style="max-width:400px">
           <div class="modal-header">
             <div class="modal-title">Move Reference Photo</div>
-            <button class="modal-close" onclick="document.getElementById('${modalId}').style.display='none'">✕</button>
+            <button class="modal-close" onclick="closeMovePhotoModal()">✕</button>
           </div>
           <div class="form-grid" style="grid-template-columns:1fr; padding:1.25rem">
             <div class="form-group full">
@@ -4449,12 +4470,13 @@
             </div>
           </div>
           <div class="modal-footer" style="padding:1rem 1.25rem">
-            <button class="btn-cancel" onclick="document.getElementById('${modalId}').style.display='none'">Cancel</button>
+            <button class="btn-cancel" onclick="closeMovePhotoModal()">Cancel</button>
             <button class="btn-save" onclick="executeMoveReferencePhoto('${escapeJS(sourceMachine)}', '${escapeJS(imgPath)}')">Move Photo</button>
           </div>
         </div>
       `;
       modalEl.style.display = 'flex';
+      saveHistoryState();
     }
 
     function executeMoveReferencePhoto(sourceMachine, imgPath) {
@@ -4478,7 +4500,7 @@
       saveMeta();
       saveState();
       
-      document.getElementById('move-photo-modal').style.display = 'none';
+      closeMovePhotoModal();
       
       showMachine(sourceMachine);
       togglePhotos();
@@ -4734,6 +4756,7 @@
       document.getElementById('prog-display').textContent = '0%';
       document.getElementById('prog-num').textContent = '0%';
       document.getElementById('task-modal').style.display = 'flex';
+      saveHistoryState();
     }
 
     function openEditModal(id) {
@@ -4778,6 +4801,7 @@
       toggleModalFields(!isWritable);
 
       document.getElementById('task-modal').style.display = 'flex';
+      saveHistoryState();
     }
 
     document.getElementById('f-progress').addEventListener('input', function () {
@@ -4785,8 +4809,12 @@
     });
 
     function closeModal() {
-      document.getElementById('task-modal').style.display = 'none';
-      editingId = null;
+      if (isHandlingPopState) {
+        document.getElementById('task-modal').style.display = 'none';
+        editingId = null;
+      } else {
+        history.back();
+      }
     }
 
     function optimizeImage(file) {
@@ -5718,10 +5746,161 @@
     }
 
     // ═══════════════════════════════════════════════════════
-    //  ADDITIONAL UTILITIES & HELPERS
+    //  HISTORY MANAGEMENT & BACK BUTTON HANDLING
     // ═══════════════════════════════════════════════════════
+    let isHandlingPopState = false;
+    let isExiting = false;
+
+    function initHistory() {
+      // Replace the initial state with isInitial flag
+      history.replaceState({ isInitial: true }, '');
+      
+      // Push the active app state
+      const state = getCurrentAppState();
+      history.pushState(state, '');
+
+      window.addEventListener('popstate', handlePopState);
+    }
+
+    function getCurrentAppState() {
+      let activeView = 'dashboard';
+      const views = ['dashboard', 'detail', 'settings', 'procurement'];
+      for (const v of views) {
+        const el = document.getElementById('view-' + v);
+        if (el && el.classList.contains('active')) {
+          activeView = v;
+          break;
+        }
+      }
+
+      const openModals = [];
+      const allModals = ['task-modal', 'lightbox', 'login-modal', 'pie-modal-overlay', 'move-photo-modal'];
+      allModals.forEach(mId => {
+        const el = document.getElementById(mId);
+        if (el && el.style.display !== 'none' && el.style.display !== '') {
+          openModals.push(mId);
+        }
+      });
+
+      return {
+        view: activeView,
+        machine: currentMachine,
+        openModals: openModals
+      };
+    }
+
+    function applyAppState(state) {
+      if (!state) return;
+
+      // 1. Restore view
+      if (state.view) {
+        const recentBtn = document.getElementById('recent-btn');
+        if (recentBtn) recentBtn.classList.remove('active');
+        currentRecentFilter = false;
+        clearSelection();
+        
+        document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+        const vEl = document.getElementById('view-' + state.view);
+        if (vEl) vEl.classList.add('active');
+
+        if (state.view === 'detail' && state.machine) {
+          showMachine(state.machine);
+        }
+        if (state.view === 'settings') {
+          renderActivityLog();
+          renderSikanderAdmin();
+          const si = document.getElementById('tl-start-input');
+          const ei = document.getElementById('tl-end-input');
+          if (si) si.value = timelineData.startDate || '';
+          if (ei) ei.value = timelineData.targetDate || '';
+        } else if (state.view === 'procurement') {
+          renderProcurement();
+        }
+        if (state.view !== 'detail') {
+          currentMachine = null;
+        }
+
+        const strip = document.getElementById('timeline-strip');
+        if (strip) strip.style.display = state.view === 'dashboard' ? 'block' : 'none';
+        if (state.view === 'dashboard') {
+          renderTimeline();
+        }
+      }
+
+      // 2. Restore modals
+      const allModals = ['task-modal', 'lightbox', 'login-modal', 'pie-modal-overlay', 'move-photo-modal'];
+      allModals.forEach(mId => {
+        const el = document.getElementById(mId);
+        if (!el) return;
+        const shouldBeOpen = state.openModals && state.openModals.includes(mId);
+        if (shouldBeOpen) {
+          if (el.style.display !== 'flex') {
+            el.style.display = 'flex';
+          }
+        } else {
+          if (el.style.display !== 'none') {
+            el.style.display = 'none';
+            if (mId === 'task-modal') {
+              editingId = null;
+            }
+          }
+        }
+      });
+    }
+
+    function saveHistoryState() {
+      if (isHandlingPopState) return;
+      const state = getCurrentAppState();
+      history.pushState(state, '');
+    }
+
+    function handlePopState(e) {
+      if (isExiting) return;
+
+      if (e.state && e.state.isInitial) {
+        // Show exit confirmation modal
+        document.getElementById('exit-modal').style.display = 'flex';
+        return;
+      }
+
+      // If we popped and the exit modal was visible, hide it
+      const exitM = document.getElementById('exit-modal');
+      if (exitM && exitM.style.display !== 'none') {
+        exitM.style.display = 'none';
+      }
+
+      isHandlingPopState = true;
+      applyAppState(e.state);
+      isHandlingPopState = false;
+    }
+
+    function cancelExit() {
+      document.getElementById('exit-modal').style.display = 'none';
+      // Restore history state
+      saveHistoryState();
+    }
+
+    function confirmExit() {
+      isExiting = true;
+      document.getElementById('exit-modal').style.display = 'none';
+      history.back(); // Triggers native browser history back to exit PWA
+    }
+
     function closeLoginModal() {
-      document.getElementById('login-modal').style.display = 'none';
+      if (isHandlingPopState) {
+        document.getElementById('login-modal').style.display = 'none';
+      } else {
+        history.back();
+      }
+    }
+
+    function closeMovePhotoModal() {
+      if (isHandlingPopState) {
+        const el = document.getElementById('move-photo-modal');
+        if (el) el.style.display = 'none';
+      } else {
+        history.back();
+      }
     }
 
     function updateAuthUI() {
@@ -6179,11 +6358,16 @@
       const img = document.getElementById('lightbox-img');
       img.src = src;
       lb.style.display = 'flex';
+      saveHistoryState();
     }
 
     function closeLightbox() {
-      const lb = document.getElementById('lightbox');
-      lb.style.display = 'none';
+      if (isHandlingPopState) {
+        const lb = document.getElementById('lightbox');
+        if (lb) lb.style.display = 'none';
+      } else {
+        history.back();
+      }
     }
 
     function applyTheme(t) {
@@ -6222,6 +6406,7 @@
     loadActivityLog();
     setRespFilter('');
     updateSyncUI();
+    initHistory();
 
     // On boot, pull from GitHub
     setTimeout(() => {
@@ -6335,7 +6520,7 @@
         return { name: m, done, total: mt.length, pct };
       }).filter(Boolean);
 
-      if (!rows.length) { container.innerHTML = '<div class="empty">No data</div>'; overlay.style.display = 'flex'; return; }
+      if (!rows.length) { container.innerHTML = '<div class="empty">No data</div>'; overlay.style.display = 'flex'; saveHistoryState(); return; }
 
       rows.sort((a, b) => b.pct - a.pct);
 
@@ -6358,6 +6543,7 @@
       container.innerHTML = html;
 
       overlay.style.display = 'flex';
+      saveHistoryState();
       setTimeout(() => {
         container.querySelectorAll('[style*="width:"]').forEach(el => {
           const w = el.style.width;
@@ -6368,8 +6554,12 @@
     }
 
     function closePieModal() {
-      const overlay = document.getElementById('pie-modal-overlay');
-      if (overlay) overlay.style.display = 'none';
+      if (isHandlingPopState) {
+        const overlay = document.getElementById('pie-modal-overlay');
+        if (overlay) overlay.style.display = 'none';
+      } else {
+        history.back();
+      }
     }
   </script>
 
