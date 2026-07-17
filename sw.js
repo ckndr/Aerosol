@@ -1,5 +1,5 @@
 // sw.js — Production-ready Service Worker for Aerosol Plant Tracker
-const CACHE_NAME = 'aerosol-tracker-v11';
+const CACHE_NAME = 'aerosol-tracker-v12';
 const PRECACHE_URLS = [
   './',
   './index.html',

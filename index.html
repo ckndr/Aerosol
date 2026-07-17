@@ -4382,7 +4382,7 @@
 
       const mt = tasks.filter(t => t.machine === m);
       const done = mt.filter(t => t.status === 'Completed').length;
-      const pct = mt.length ? Math.round(done / mt.length * 100) : 0;
+      const pct = mt.length ? Math.round(mt.reduce((sum, t) => sum + (Number(t.progress) || 0), 0) / mt.length) : 0;
       const fill = document.getElementById('d-fill');
       fill.style.width = '0%';
       document.getElementById('d-pct').textContent = `${pct}% · ${done}/${mt.length}`;
@@ -6645,7 +6645,7 @@
         const mt = tasks.filter(t => t.machine === m);
         if (!mt.length) return null;
         const done = mt.filter(t => t.status === 'Completed').length;
-        const pct = Math.round(done / mt.length * 100);
+        const pct = mt.length ? Math.round(mt.reduce((sum, t) => sum + (Number(t.progress) || 0), 0) / mt.length) : 0;
         return { name: m, done, total: mt.length, pct };
       }).filter(Boolean);
 
