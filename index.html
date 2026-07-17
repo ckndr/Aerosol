@@ -2399,6 +2399,10 @@
           style="width:auto;padding:0 .65rem;font-size:.75rem;font-weight:500;gap:.3rem">
           🕐 <span class="btn-label">Recent</span>
         </button>
+        <button class="icon-btn" id="recent-changes-btn" title="Recent changes log" aria-label="Recent changes log" onclick="toggleRecentChanges()"
+          style="width:auto;padding:0 .65rem;font-size:.75rem;font-weight:500;gap:.3rem">
+          📝 <span class="btn-label">Recent Changes</span>
+        </button>
         <button class="icon-btn" id="filter-toggle-btn" title="Toggle Search & Filters" aria-label="Search and filters" onclick="toggleFilterBar()"
           style="position:relative">🔍<span class="badge" id="filter-active-badge"
             style="display:none;position:absolute;top:-4px;right:-4px;background:var(--accent);color:#fff;font-size:9px;width:14px;height:14px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold;">0</span></button>
@@ -2582,22 +2586,7 @@
         <button class="back-btn" onclick="navigate('dashboard')" style="font-size:.75rem">← Dashboard</button>
       </div>
 
-      <div class="settings-section">
-        <h3>About</h3>
-        <div class="settings-row">
-          <div class="settings-info">
-            <div class="settings-label">Version</div>
-            <div class="settings-desc">Aerosol Plant Tracker v4.0 · Alpha Containers (Pvt.) Ltd.</div>
-          </div>
-        </div>
 
-        <div class="settings-row">
-          <div class="settings-info">
-            <div class="settings-label">Install as App</div>
-            <div class="settings-desc">Open in Chrome/Safari → Share → Add to Home Screen for full PWA experience</div>
-          </div>
-        </div>
-      </div>
 
       <div class="settings-section">
         <h3>Activity Log</h3>
@@ -2727,6 +2716,15 @@
         </div>
       </div>
 
+      <div class="settings-section">
+        <h3>Install as App</h3>
+        <div class="settings-row">
+          <div class="settings-info">
+            <div class="settings-desc">Open in Chrome/Safari → Share → Add to Home Screen for full PWA experience</div>
+          </div>
+        </div>
+      </div>
+
       <div class="settings-section" id="sikander-admin-section" style="display:none">
         <h3>🔐 Developer Admin Panel (Sikander Only)</h3>
         <div class="settings-row" style="flex-direction:column;align-items:stretch">
@@ -2824,9 +2822,8 @@
         </div>
         <div class="form-group full">
           <label>Responsible (Assigned To)</label>
-          <input id="f-responsible" list="responsible-list" placeholder="e.g. Arsalan, Saqib…">
+          <input id="f-responsible" list="responsible-list" placeholder="e.g. Saqib, Sikander…">
           <datalist id="responsible-list">
-            <option value="Arsalan">
             <option value="Saqib">
             <option value="Sikander">
             <option value="Aurangzeb">
@@ -3322,37 +3319,37 @@
     };
     const STATUS_CLASS = { 'In Progress': 'ip', 'Not Started': 'ns', 'Completed': 'cp', 'Pending Procurement': 'pp' };
     const SEED = [
-      ["Accumulator", "Electrical", "Dry run", "High", 0, "Not Started", "Arsalan", "on machine testing"],
-      ["Accumulator", "Mechanical", "chain & bearing greasing", "Medium", 50, "In Progress", "Arsalan", ""],
-      ["Auto Strapping Machine", "Mechanical", "to place and install at designated location", "Medium", 0, "Not Started", "Arsalan", ""],
-      ["Auto Strapping Machine", "Mechanical", "Dry run", "Low", 0, "Not Started", "Arsalan", ""],
-      ["Auto Strapping Machine", "Electrical", "wiring and connections to be done", "Medium", 0, "Not Started", "Arsalan", ""],
-      ["Base Coat", "Mechanical", "Fumes collector piping to install", "Medium", 0, "Not Started", "Arsalan", "piping layout is needed, either to be connected from the existing ducting or through a new pipe via a blower."],
+      ["Accumulator", "Electrical", "Dry run", "High", 0, "Not Started", "", "on machine testing"],
+      ["Accumulator", "Mechanical", "chain & bearing greasing", "Medium", 50, "In Progress", "", ""],
+      ["Auto Strapping Machine", "Mechanical", "to place and install at designated location", "Medium", 0, "Not Started", "", ""],
+      ["Auto Strapping Machine", "Mechanical", "Dry run", "Low", 0, "Not Started", "", ""],
+      ["Auto Strapping Machine", "Electrical", "wiring and connections to be done", "Medium", 0, "Not Started", "", ""],
+      ["Base Coat", "Mechanical", "Fumes collector piping to install", "Medium", 0, "Not Started", "", "piping layout is needed, either to be connected from the existing ducting or through a new pipe via a blower."],
       ["Base Coat", "Mechanical", "Rollers Housing — cleaned and greased", "Medium", 60, "In Progress", "Saqib", ""],
       ["Base Coat", "Mechanical", "Mandrels — cleaned", "Medium", 60, "In Progress", "Saqib", ""],
       ["Base Coat", "Mechanical", "Frame Body — cleaned", "Medium", 60, "In Progress", "Saqib", ""],
       ["Base Coat", "Mechanical", "Spare Rubberize rollers", "High", 50, "In Progress", "Saqib", "ordering done (05-06-2026)"],
-      ["Base Coat", "Mechanical", "Air regulator pneumatic fitting to check and rectify and fixation", "Medium", 0, "Not Started", "Arsalan", ""],
-      ["Base Coat", "Mechanical", "driving gear chain box enclosure at back", "Medium", 0, "Not Started", "Arsalan", ""],
-      ["Base Coat", "Electrical", "closure of all cable trays/ panels", "Medium", 0, "Not Started", "Arsalan", ""],
-      ["Base Coat", "Mechanical", "Rawal bolts anchoring to be done on the foundation", "High", 0, "Not Started", "Arsalan", ""],
-      ["Compressor", "Electrical", "Compressor  dryer and auto drain electrical connection", "High", 50, "In Progress", "Arsalan", ""],
-      ["Compressor", "Mechanical", "Compressor piping — dryer and auto drain system", "High", 95, "In Progress", "Arsalan", ""],
-      ["Compressor", "Mechanical", "main pipe to be elevated downward for smooth drainage", "Medium", 0, "Not Started", "Arsalan", ""],
-      ["Compressor", "Mechanical", "individual section pipes/ branches to be supported/fixed/welded", "Medium", 0, "Not Started", "Arsalan", ""],
-      ["Compressor", "Electrical", "dryer wiring and connection to be done.", "High", 0, "Not Started", "Arsalan", ""],
-      ["Decoration Oven", "Electrical", "Heaters to be checked and replaced if required", "High", 0, "Not Started", "Arsalan", "sample needed for ordering"],
-      ["Decoration Oven", "Electrical", "Cable trays installation", "High", 100, "Completed", "Arsalan", ""],
-      ["Decoration Oven", "Electrical", "Blower motor connection and testing", "High", 100, "Completed", "Arsalan", ""],
-      ["Decoration Oven", "Electrical", "temperature gauges to be checked & installed", "High", 0, "Not Started", "Arsalan", ""],
-      ["Decoration Oven", "General", "Lacquer Oven Dry run", "High", 100, "Completed", "Arsalan", "Cleaning in progress & Heater testing in progress"],
-      ["Decoration Oven", "Mechanical", "Motors alignment w.r.t marking", "High", 100, "Completed", "Arsalan", "Khalid Shb observations"],
-      ["FG Conveyor", "Mechanical", "Realignment of conveyor to be done as per Lindsay recommendation", "Medium", 0, "Not Started", "Arsalan", ""],
-      ["FG Conveyor", "Electrical", "connection/wiring to be done", "Medium", 0, "Not Started", "Arsalan", ""],
+      ["Base Coat", "Mechanical", "Air regulator pneumatic fitting to check and rectify and fixation", "Medium", 0, "Not Started", "", ""],
+      ["Base Coat", "Mechanical", "driving gear chain box enclosure at back", "Medium", 0, "Not Started", "", ""],
+      ["Base Coat", "Electrical", "closure of all cable trays/ panels", "Medium", 0, "Not Started", "", ""],
+      ["Base Coat", "Mechanical", "Rawal bolts anchoring to be done on the foundation", "High", 0, "Not Started", "", ""],
+      ["Compressor", "Electrical", "Compressor  dryer and auto drain electrical connection", "High", 50, "In Progress", "", ""],
+      ["Compressor", "Mechanical", "Compressor piping — dryer and auto drain system", "High", 95, "In Progress", "", ""],
+      ["Compressor", "Mechanical", "main pipe to be elevated downward for smooth drainage", "Medium", 0, "Not Started", "", ""],
+      ["Compressor", "Mechanical", "individual section pipes/ branches to be supported/fixed/welded", "Medium", 0, "Not Started", "", ""],
+      ["Compressor", "Electrical", "dryer wiring and connection to be done.", "High", 0, "Not Started", "", ""],
+      ["Decoration Oven", "Electrical", "Heaters to be checked and replaced if required", "High", 0, "Not Started", "", "sample needed for ordering"],
+      ["Decoration Oven", "Electrical", "Cable trays installation", "High", 100, "Completed", "", ""],
+      ["Decoration Oven", "Electrical", "Blower motor connection and testing", "High", 100, "Completed", "", ""],
+      ["Decoration Oven", "Electrical", "temperature gauges to be checked & installed", "High", 0, "Not Started", "", ""],
+      ["Decoration Oven", "General", "Lacquer Oven Dry run", "High", 100, "Completed", "", "Cleaning in progress & Heater testing in progress"],
+      ["Decoration Oven", "Mechanical", "Motors alignment w.r.t marking", "High", 100, "Completed", "", "Khalid Shb observations"],
+      ["FG Conveyor", "Mechanical", "Realignment of conveyor to be done as per Lindsay recommendation", "Medium", 0, "Not Started", "", ""],
+      ["FG Conveyor", "Electrical", "connection/wiring to be done", "Medium", 0, "Not Started", "", ""],
       ["General", "General", "Machine Operating Manuals", "Medium", 10, "In Progress", "Saqib", ""],
       ["General", "General", "Overall machine paint", "Medium", 0, "Not Started", "Saqib", "to be start after compressor piping work"],
       ["General", "Mechanical", "Modify exhaust duct pipes — prevent rainwater entry bends installation", "Medium", 100, "Completed", "Saqib", ""],
-      ["General", "Mechanical", "Test each machine individually without load", "Medium", 50, "In Progress", "Arsalan", ""],
+      ["General", "Mechanical", "Test each machine individually without load", "Medium", 50, "In Progress", "", ""],
       ["General", "General", "Ensure proper cleaning of entire machine", "Medium", 0, "Not Started", "Saqib", ""],
       ["General", "Mechanical", "Scoop required for slug handling", "Medium", 0, "Not Started", "Saqib", ""],
       ["General", "Mechanical", "Baling machine procurement", "Medium", 0, "Not Started", "Saqib", ""],
@@ -3367,126 +3364,165 @@
       ["General", "Electrical", "Transformer load increase to 625 kW — utility application", "High", 0, "Not Started", "Saqib", "Application in process"],
       ["General", "Electrical", "Ensure all exhaust fans on floor are operational", "High", 70, "In Progress", "Saqib", "partially operational"],
       ["General", "Mechanical", "Operator's Platform", "Medium", 0, "Not Started", "Saqib", "new to be ordered"],
-      ["Lacquer", "Electrical", "All heaters — check, fix or replace faulty", "High", 50, "In Progress", "Arsalan", "sample needed for ordering"],
-      ["Lacquer", "General", "Internal Lacquering Dry run", "High", 0, "Not Started", "Arsalan", "wrong connection done"],
+      ["Lacquer", "Electrical", "All heaters — check, fix or replace faulty", "High", 50, "In Progress", "", "sample needed for ordering"],
+      ["Lacquer", "General", "Internal Lacquering Dry run", "High", 0, "Not Started", "", "wrong connection done"],
       ["Lacquer", "Mechanical", "lacquer Storage vessel installation with pneumatic fittings", "Medium", 0, "Not Started", "Saqib", ""],
-      ["Lacquer", "Mechanical", "fixing  can holders after cleaning", "Medium", 0, "Not Started", "Arsalan", ""],
+      ["Lacquer", "Mechanical", "fixing  can holders after cleaning", "Medium", 0, "Not Started", "", ""],
       ["Lacquer", "Mechanical", "Cans Holders — dismantled, clean with thinner", "Medium", 50, "In Progress", "Saqib", ""],
-      ["Lacquer", "Electrical", "Blower main motor connection and testing", "High", 100, "Completed", "Arsalan", ""],
-      ["Lacquer", "Mechanical", "Spray Guns — cleaned with thinner", "High", 100, "Completed", "Arsalan", ""],
-      ["Lacquer", "Mechanical", "Spray Mount Drum — scraped & cleaned", "High", 100, "Completed", "Arsalan", ""],
-      ["Lacquer", "Mechanical", "Mandrel Plate — scraped & cleaned", "Medium", 100, "Completed", "Arsalan", ""],
-      ["Lacquer", "Mechanical", "Exhaust Sieve — cleaned", "Medium", 100, "Completed", "Arsalan", ""],
-      ["Lacquer", "Mechanical", "Frame Body — cleaned", "Medium", 100, "Completed", "Arsalan", ""],
-      ["Lacquer", "Mechanical", "Oven Chain cleaning", "Medium", 100, "Completed", "Arsalan", ""],
+      ["Lacquer", "Electrical", "Blower main motor connection and testing", "High", 100, "Completed", "", ""],
+      ["Lacquer", "Mechanical", "Spray Guns — cleaned with thinner", "High", 100, "Completed", "", ""],
+      ["Lacquer", "Mechanical", "Spray Mount Drum — scraped & cleaned", "High", 100, "Completed", "", ""],
+      ["Lacquer", "Mechanical", "Mandrel Plate — scraped & cleaned", "Medium", 100, "Completed", "", ""],
+      ["Lacquer", "Mechanical", "Exhaust Sieve — cleaned", "Medium", 100, "Completed", "", ""],
+      ["Lacquer", "Mechanical", "Frame Body — cleaned", "Medium", 100, "Completed", "", ""],
+      ["Lacquer", "Mechanical", "Oven Chain cleaning", "Medium", 100, "Completed", "", ""],
       ["Lacquer", "Mechanical", "Small dedicated air tank / receiver for lacquer", "Medium", 0, "Not Started", "Saqib", "Khalid sb recommendation"],
-      ["Lacquer Oven", "Mechanical", "Oven Chain & bearing greasing", "Medium", 50, "In Progress", "Arsalan", ""],
-      ["Lacquer Oven", "Electrical", "closure of electrical panels", "Medium", 0, "Not Started", "Arsalan", ""],
-      ["Lacquer Oven", "Mechanical", "Oven back metallic cover sheet to place", "Medium", 0, "Not Started", "Arsalan", ""],
-      ["Manual Strapping Machine", "Mechanical", "to place and install at designated location", "Low", 0, "Not Started", "Arsalan", ""],
-      ["Manual Strapping Machine", "Electrical", "wiring and connections to be done", "Low", 0, "Not Started", "Arsalan", ""],
-      ["Necking", "Mechanical", "Infeed tray installation from feeding unit to necking machine", "Medium", 0, "Not Started", "Arsalan", ""],
-      ["Necking", "Mechanical", "PVC ejection pipe installation from necking for cans discharge", "Medium", 0, "Not Started", "Arsalan", ""],
-      ["Necking", "Mechanical", "scrap collection tank to install from necking", "Medium", 0, "Not Started", "Arsalan", ""],
-      ["Necking", "Mechanical", "Conveyor installation after ejection pipe", "Medium", 0, "Not Started", "Arsalan", ""],
-      ["Necking", "General", "Necking machine Dry run", "High", 50, "In Progress", "Arsalan", ""],
-      ["Necking", "Electrical", "Electrical troubleshooting and testing", "High", 100, "Completed", "Arsalan", ""],
+      ["Lacquer Oven", "Mechanical", "Oven Chain & bearing greasing", "Medium", 50, "In Progress", "", ""],
+      ["Lacquer Oven", "Electrical", "closure of electrical panels", "Medium", 0, "Not Started", "", ""],
+      ["Lacquer Oven", "Mechanical", "Oven back metallic cover sheet to place", "Medium", 0, "Not Started", "", ""],
+      ["Manual Strapping Machine", "Mechanical", "to place and install at designated location", "Low", 0, "Not Started", "", ""],
+      ["Manual Strapping Machine", "Electrical", "wiring and connections to be done", "Low", 0, "Not Started", "", ""],
+      ["Necking", "Mechanical", "Infeed tray installation from feeding unit to necking machine", "Medium", 0, "Not Started", "", ""],
+      ["Necking", "Mechanical", "PVC ejection pipe installation from necking for cans discharge", "Medium", 0, "Not Started", "", ""],
+      ["Necking", "Mechanical", "scrap collection tank to install from necking", "Medium", 0, "Not Started", "", ""],
+      ["Necking", "Mechanical", "Conveyor installation after ejection pipe", "Medium", 0, "Not Started", "", ""],
+      ["Necking", "General", "Necking machine Dry run", "High", 50, "In Progress", "", ""],
+      ["Necking", "Electrical", "Electrical troubleshooting and testing", "High", 100, "Completed", "", ""],
       ["Necking", "Mechanical", "Cans Grippers / Holders — cleaning", "Medium", 100, "Completed", "Saqib", ""],
       ["Necking", "Mechanical", "Buffing and polishing on necking machine tools", "Medium", 100, "Completed", "Saqib", ""],
       ["Necking", "Mechanical", "Two sets of press dies, springs & nut bolts required", "High", 0, "Not Started", "Saqib", ""],
       ["Necking", "Mechanical", "Kluber oil & grease for necking machine", "Medium", 0, "Not Started", "Saqib", ""],
-      ["Necking", "Electrical", "Necking machine — electrical supply troubleshooting for dry run", "High", 20, "In Progress", "Arsalan", "Interlocking will be redesigned and checked"],
-      ["Over Varnish", "Mechanical", "Fumes collector piping to install", "High", 0, "Not Started", "Arsalan", "piping layout is needed, either to be connected from the existing ducting or through a new pipe via a blower."],
+      ["Necking", "Electrical", "Necking machine — electrical supply troubleshooting for dry run", "High", 20, "In Progress", "", "Interlocking will be redesigned and checked"],
+      ["Over Varnish", "Mechanical", "Fumes collector piping to install", "High", 0, "Not Started", "", "piping layout is needed, either to be connected from the existing ducting or through a new pipe via a blower."],
       ["Over Varnish", "Mechanical", "Spare Rubberize rollers", "High", 50, "In Progress", "Saqib", "ordering done (05-06-2026)"],
       ["Over Varnish", "Mechanical", "Rollers — dismantled, to be chrome plated", "High", 50, "In Progress", "Saqib", "Sent for chrome plating"],
-      ["Over Varnish", "Electrical", "closure of all cable trays/ panels", "High", 0, "Not Started", "Arsalan", ""],
-      ["Over Varnish", "Mechanical", "Rawal bolts anchoring to be done on the foundation", "High", 0, "Not Started", "Arsalan", ""],
-      ["Over Varnish", "Mechanical", "varnish pump placement and installation with piping", "High", 0, "Not Started", "Arsalan", ""],
-      ["Over Varnish", "General", "Printing Oven Dry run", "High", 0, "Not Started", "Arsalan", ""],
-      ["Over Varnish", "Electrical", "Motors checking and troubleshooting", "High", 100, "Completed", "Arsalan", ""],
-      ["Over Varnish", "Mechanical", "Mandrels — cleaned", "High", 100, "Completed", "Arsalan", ""],
-      ["Over Varnish", "Mechanical", "Rollers Housing — cleaned and greased", "High", 100, "Completed", "Arsalan", ""],
-      ["Over Varnish", "Mechanical", "Frame Body — cleaned", "High", 100, "Completed", "Arsalan", ""],
-      ["Overall Machine Operation", "Electrical", "Main Power Cable Termination & Execution Plan", "High", 0, "Not Started", "Arsalan", "Quotation awaiting for execution"],
+      ["Over Varnish", "Electrical", "closure of all cable trays/ panels", "High", 0, "Not Started", "", ""],
+      ["Over Varnish", "Mechanical", "Rawal bolts anchoring to be done on the foundation", "High", 0, "Not Started", "", ""],
+      ["Over Varnish", "Mechanical", "varnish pump placement and installation with piping", "High", 0, "Not Started", "", ""],
+      ["Over Varnish", "General", "Printing Oven Dry run", "High", 0, "Not Started", "", ""],
+      ["Over Varnish", "Electrical", "Motors checking and troubleshooting", "High", 100, "Completed", "", ""],
+      ["Over Varnish", "Mechanical", "Mandrels — cleaned", "High", 100, "Completed", "", ""],
+      ["Over Varnish", "Mechanical", "Rollers Housing — cleaned and greased", "High", 100, "Completed", "", ""],
+      ["Over Varnish", "Mechanical", "Frame Body — cleaned", "High", 100, "Completed", "", ""],
+      ["Overall Machine Operation", "Electrical", "Main Power Cable Termination & Execution Plan", "High", 0, "Not Started", "", "Quotation awaiting for execution"],
       ["Overall Machine Operation", "Electrical", "Main Power Cable procurement", "High", 0, "Pending Procurement", "Saqib", "Quotation awaiting for execution"],
-      ["Overall Machine Operation", "Electrical", "Electrical panels for power distribution", "High", 0, "Pending Procurement", "Arsalan", "Quotation awaiting for execution"],
-      ["Overall Machine Operation", "Electrical", "Verify electrical panels, wiring & interlocks — Press to Washing", "High", 50, "In Progress", "Arsalan", "Till Washing Machine electrical Work is completed"],
-      ["Overall Machine Operation", "Electrical", "Testing of Control Logics & Circuits", "High", 0, "Not Started", "Arsalan", ""],
-      ["Overall Machine Operation", "Electrical", "Verify electrical panels, wiring & interlocks — Washing to Necking", "High", 50, "In Progress", "Arsalan", ""],
-      ["Press", "Electrical", "Close all electrical panels and cable trays", "High", 10, "In Progress", "Arsalan", ""],
+      ["Overall Machine Operation", "Electrical", "Electrical panels for power distribution", "High", 0, "Pending Procurement", "", "Quotation awaiting for execution"],
+      ["Overall Machine Operation", "Electrical", "Verify electrical panels, wiring & interlocks — Press to Washing", "High", 50, "In Progress", "", "Till Washing Machine electrical Work is completed"],
+      ["Overall Machine Operation", "Electrical", "Testing of Control Logics & Circuits", "High", 0, "Not Started", "", ""],
+      ["Overall Machine Operation", "Electrical", "Verify electrical panels, wiring & interlocks — Washing to Necking", "High", 50, "In Progress", "", ""],
+      ["Press", "Electrical", "Close all electrical panels and cable trays", "High", 10, "In Progress", "", ""],
       ["Press", "Mechanical", "Damping rubber pads over slug feeding tray", "Low", 0, "Pending Procurement", "Saqib", "Procurement in process (23-05-2026)"],
-      ["Press", "Mechanical", "Gear Oil Lubrication pumping system setup", "High", 0, "Not Started", "Arsalan", ""],
+      ["Press", "Mechanical", "Gear Oil Lubrication pumping system setup", "High", 0, "Not Started", "", ""],
       ["Press", "Mechanical", "Slug Feeding Hopper sheet to be fixed", "High", 100, "Completed", "Saqib", ""],
       ["Press", "Mechanical", "Tools for press machine", "High", 80, "In Progress", "Saqib", ""],
       ["Press", "Electrical", "Dust Collection blower installation", "Medium", 0, "Pending Procurement", "Saqib", "Require New Blower"],
-      ["Press", "Electrical", "SOV pneumatic press clutch service", "High", 100, "Completed", "Arsalan", ""],
-      ["Press", "Electrical", "Hopper motor installation and testing", "High", 100, "Completed", "Arsalan", ""],
-      ["Press", "Electrical", "Cable trays installation", "High", 100, "Completed", "Arsalan", ""],
-      ["Press", "Mechanical", "Press & Trimming compressor temporary line fixed", "High", 100, "Completed", "Arsalan", ""],
-      ["Press", "Mechanical", "Press Clutch NRV repaired", "High", 100, "Completed", "Arsalan", ""],
-      ["Press", "Mechanical", "Press timing and alignment with testing", "High", 100, "Completed", "Arsalan", ""],
-      ["Press", "Mechanical", "Die & punch stroke setting", "High", 100, "Completed", "Arsalan", ""],
-      ["Press", "Mechanical", "Slug tray on/of switch to be installed", "High", 0, "Not Started", "Arsalan", ""],
+      ["Press", "Electrical", "SOV pneumatic press clutch service", "High", 100, "Completed", "", ""],
+      ["Press", "Electrical", "Hopper motor installation and testing", "High", 100, "Completed", "", ""],
+      ["Press", "Electrical", "Cable trays installation", "High", 100, "Completed", "", ""],
+      ["Press", "Mechanical", "Press & Trimming compressor temporary line fixed", "High", 100, "Completed", "", ""],
+      ["Press", "Mechanical", "Press Clutch NRV repaired", "High", 100, "Completed", "", ""],
+      ["Press", "Mechanical", "Press timing and alignment with testing", "High", 100, "Completed", "", ""],
+      ["Press", "Mechanical", "Die & punch stroke setting", "High", 100, "Completed", "", ""],
+      ["Press", "Mechanical", "Slug tray on/of switch to be installed", "High", 0, "Not Started", "", ""],
       ["Press", "Mechanical", "Dust Collection blower piping", "Medium", 0, "Pending Procurement", "Saqib", ""],
-      ["Press", "Mechanical", "Welding & fixing gear oil tank brackets and sheet", "Medium", 40, "In Progress", "Arsalan", "Not fixed Yet"],
-      ["Press", "Mechanical", "Fixing the lubrication tray properly with a slope for drainage", "Medium", 0, "Not Started", "Arsalan", "Not fixed Yet"],
-      ["Press", "Mechanical", "Place and install the Oil collection tank directly under the tray", "Medium", 0, "Not Started", "Arsalan", "Not Installed Yet"],
-      ["Press", "Mechanical", "Installation of Level sensor and Filter on the oil tank", "Medium", 0, "Not Started", "Arsalan", "Not Installed Yet"],
+      ["Press", "Mechanical", "Welding & fixing gear oil tank brackets and sheet", "Medium", 40, "In Progress", "", "Not fixed Yet"],
+      ["Press", "Mechanical", "Fixing the lubrication tray properly with a slope for drainage", "Medium", 0, "Not Started", "", "Not fixed Yet"],
+      ["Press", "Mechanical", "Place and install the Oil collection tank directly under the tray", "Medium", 0, "Not Started", "", "Not Installed Yet"],
+      ["Press", "Mechanical", "Installation of Level sensor and Filter on the oil tank", "Medium", 0, "Not Started", "", "Not Installed Yet"],
       ["Printing", "Mechanical", "Rollers — dismantled, to be chrome plated", "High", 50, "In Progress", "Saqib", "Sent for chrome plating"],
-      ["Printing", "Electrical", "PLC installation & termination", "High", 20, "In Progress", "Arsalan", ""],
+      ["Printing", "Electrical", "PLC installation & termination", "High", 20, "In Progress", "", ""],
       ["Printing", "Mechanical", "Printing machine rollers — deep clean, rubber & chrome inspection", "High", 40, "In Progress", "Saqib", ""],
       ["Printing", "Mechanical", "Bearings — cleaning & greasing", "High", 50, "In Progress", "Saqib", ""],
       ["Printing", "Mechanical", "Ink Fountain — cleaning", "High", 50, "In Progress", "Saqib", ""],
       ["Printing", "Mechanical", "Roller Train Frame — cleaning", "High", 50, "In Progress", "Saqib", ""],
       ["Printing", "Mechanical", "Dismantle all rollers for inspection & Cleaning", "High", 50, "In Progress", "Saqib", ""],
       ["Printing", "Mechanical", "All printing rollers — dismantle, clean, buff, chrome plate", "High", 60, "In Progress", "Saqib", ""],
-      ["Printing", "Electrical", "CTC cleaning of machine panels interface", "High", 100, "Completed", "Arsalan", ""],
-      ["Printing", "Electrical", "PLC installation", "High", 100, "Completed", "Arsalan", ""],
-      ["Printing", "Electrical", "Servo motor troubleshooting", "High", 0, "Not Started", "Arsalan", ""],
-      ["Printing", "Mechanical", "Aluminum oil tank — fabricate & install", "High", 0, "Not Started", "Arsalan", ""],
-      ["Printing", "Electrical", "closure of all cable trays/ panels", "High", 0, "Not Started", "Arsalan", ""],
-      ["Printing", "Mechanical", "Rawlbolts anchoring to be done on the foundation", "High", 0, "Not Started", "Arsalan", ""],
-      ["Printing", "General", "Printing Machine Dry run", "High", 0, "Not Started", "Arsalan", ""],
-      ["Trimming", "Mechanical", "Installation of piping of Trimming Of blower", "High", 0, "Pending Procurement", "Arsalan", "Procurement in process(23-05-2026)"],
-      ["Trimming", "Mechanical", "Conveyor alignment — Trimming to Washing", "High", 50, "In Progress", "Arsalan", ""],
-      ["Trimming", "Electrical", "Trimming Scrap collector wiring and troubleshooting", "High", 0, "Not Started", "Arsalan", ""],
-      ["Trimming", "Electrical", "Electrical Panel checked / Tested", "High", 100, "Completed", "Arsalan", ""],
-      ["Trimming", "Electrical", "Startup main motor", "High", 100, "Completed", "Arsalan", ""],
-      ["Trimming", "Electrical", "Pneumatic and Electrical operation check", "High", 100, "Completed", "Arsalan", ""],
-      ["Trimming", "Mechanical", "Trimming startup", "High", 100, "Completed", "Arsalan", ""],
-      ["Trimming", "Mechanical", "Conveyor — Press to Trimming input", "High", 100, "Completed", "Arsalan", ""],
-      ["Trimming", "Mechanical", "Trimming machine dry run", "High", 100, "Completed", "Arsalan", ""],
-      ["Trimming", "Mechanical", "Install safety guard for suction at scrap generation point", "High", 0, "Not Started", "Arsalan", ""],
-      ["Trimming", "Mechanical", "closure of chain/gears/pneumatic assembly with box", "High", 0, "Not Started", "Arsalan", ""],
-      ["Trimming", "Electrical", "closure of all cable trays/ panels", "High", 0, "Not Started", "Arsalan", ""],
-      ["Trimming", "Mechanical", "pneumatic pressure valve for ejector pressure to install", "High", 0, "Not Started", "Arsalan", ""],
-      ["Trimming", "Mechanical", "Installation of trimming blower", "High", 0, "Not Started", "Arsalan", ""],
-      ["Trimming", "Mechanical", "Fixing of Manual Oil Lubrication System", "High", 0, "Not Started", "Arsalan", "Not fixed Yet"],
-      ["Trimming", "Mechanical", "Addition of closed cabinet for trim collection on machine side", "High", 0, "Not Started", "Arsalan", "Not fixed Yet"],
-      ["Trimming", "Mechanical", "Oiling / greasing / parts replacement / testing", "High", 80, "In Progress", "Arsalan", "Oil pump maintenance pending"],
-      ["Tumbler", "Electrical", "Mixer installation and automation — auto feeding flow design", "Medium", 0, "Pending Procurement", "Arsalan", "quotation awaiting for conveyor from Arsalan & Lindsay"],
-      ["Tumbler", "General", "Slug Mixing Unit Dry run", "Medium", 100, "Completed", "Arsalan", "Working on its auto feeding system"],
-      ["Tumbler", "Mechanical", "Tumbler/Mixer wiring and connections to be done", "High", 0, "Not Started", "Arsalan", ""],
-      ["Tumbler", "Electrical", "Main motor testing", "High", 100, "Completed", "Arsalan", ""],
-      ["Tumbler", "Mechanical", "Tumbler/Mixer installation on platform", "High", 50, "In Progress", "Arsalan", ""],
-      ["Washing", "Mechanical", "Washing machine piping and blower installation", "High", 20, "In Progress", "Arsalan", "To be checked with Lindsay — blower available for installation"],
-      ["Washing", "Mechanical", "Washing unit drain flexible pipes after tank installation", "High", 0, "Not Started", "Arsalan", "to be installed after tank installation"],
-      ["Washing", "Mechanical", "Washing Machine Dry run", "High", 0, "Not Started", "Arsalan", "Waiting For chain"],
-      ["Washing", "Mechanical", "chain installation", "High", 0, "Not Started", "Arsalan", ""],
-      ["Washing", "Electrical", "Electrical Operating control panel to be relocated from trimming to washing", "High", 0, "Not Started", "Arsalan", ""],
-      ["Washing", "Mechanical", "pressure gauge to install on rinse recycle loop pipes", "High", 0, "Not Started", "Arsalan", ""],
-      ["Washing", "Mechanical", "contamination/ fumes collector to be checked and installed on top", "High", 0, "Not Started", "Arsalan", ""],
-      ["Washing", "Mechanical", "to install Pvc & wire brush on washing chain at top", "High", 0, "Not Started", "Arsalan", ""],
-      ["Washing", "Mechanical", "Spray and Drying section's windows to be installed", "High", 0, "Not Started", "Arsalan", ""],
-      ["Washing", "Electrical", "Heaters to be checked and replaced if required", "High", 100, "Completed", "Arsalan", ""],
+      ["Printing", "Electrical", "CTC cleaning of machine panels interface", "High", 100, "Completed", "", ""],
+      ["Printing", "Electrical", "PLC installation", "High", 100, "Completed", "", ""],
+      ["Printing", "Electrical", "Servo motor troubleshooting", "High", 0, "Not Started", "", ""],
+      ["Printing", "Mechanical", "Aluminum oil tank — fabricate & install", "High", 0, "Not Started", "", ""],
+      ["Printing", "Electrical", "closure of all cable trays/ panels", "High", 0, "Not Started", "", ""],
+      ["Printing", "Mechanical", "Rawlbolts anchoring to be done on the foundation", "High", 0, "Not Started", "", ""],
+      ["Printing", "General", "Printing Machine Dry run", "High", 0, "Not Started", "", ""],
+      ["Trimming", "Mechanical", "Installation of piping of Trimming Of blower", "High", 0, "Pending Procurement", "", "Procurement in process(23-05-2026)"],
+      ["Trimming", "Mechanical", "Conveyor alignment — Trimming to Washing", "High", 50, "In Progress", "", ""],
+      ["Trimming", "Electrical", "Trimming Scrap collector wiring and troubleshooting", "High", 0, "Not Started", "", ""],
+      ["Trimming", "Electrical", "Electrical Panel checked / Tested", "High", 100, "Completed", "", ""],
+      ["Trimming", "Electrical", "Startup main motor", "High", 100, "Completed", "", ""],
+      ["Trimming", "Electrical", "Pneumatic and Electrical operation check", "High", 100, "Completed", "", ""],
+      ["Trimming", "Mechanical", "Trimming startup", "High", 100, "Completed", "", ""],
+      ["Trimming", "Mechanical", "Conveyor — Press to Trimming input", "High", 100, "Completed", "", ""],
+      ["Trimming", "Mechanical", "Trimming machine dry run", "High", 100, "Completed", "", ""],
+      ["Trimming", "Mechanical", "Install safety guard for suction at scrap generation point", "High", 0, "Not Started", "", ""],
+      ["Trimming", "Mechanical", "closure of chain/gears/pneumatic assembly with box", "High", 0, "Not Started", "", ""],
+      ["Trimming", "Electrical", "closure of all cable trays/ panels", "High", 0, "Not Started", "", ""],
+      ["Trimming", "Mechanical", "pneumatic pressure valve for ejector pressure to install", "High", 0, "Not Started", "", ""],
+      ["Trimming", "Mechanical", "Installation of trimming blower", "High", 0, "Not Started", "", ""],
+      ["Trimming", "Mechanical", "Fixing of Manual Oil Lubrication System", "High", 0, "Not Started", "", "Not fixed Yet"],
+      ["Trimming", "Mechanical", "Addition of closed cabinet for trim collection on machine side", "High", 0, "Not Started", "", "Not fixed Yet"],
+      ["Trimming", "Mechanical", "Oiling / greasing / parts replacement / testing", "High", 80, "In Progress", "", "Oil pump maintenance pending"],
+      ["Tumbler", "Electrical", "Mixer installation and automation — auto feeding flow design", "Medium", 0, "Pending Procurement", "", "quotation awaiting for conveyor from Saqib & Lindsay"],
+      ["Tumbler", "General", "Slug Mixing Unit Dry run", "Medium", 100, "Completed", "", "Working on its auto feeding system"],
+      ["Tumbler", "Mechanical", "Tumbler/Mixer wiring and connections to be done", "High", 0, "Not Started", "", ""],
+      ["Tumbler", "Electrical", "Main motor testing", "High", 100, "Completed", "", ""],
+      ["Tumbler", "Mechanical", "Tumbler/Mixer installation on platform", "High", 50, "In Progress", "", ""],
+      ["Washing", "Mechanical", "Washing machine piping and blower installation", "High", 20, "In Progress", "", "To be checked with Lindsay — blower available for installation"],
+      ["Washing", "Mechanical", "Washing unit drain flexible pipes after tank installation", "High", 0, "Not Started", "", "to be installed after tank installation"],
+      ["Washing", "Mechanical", "Washing Machine Dry run", "High", 0, "Not Started", "", "Waiting For chain"],
+      ["Washing", "Mechanical", "chain installation", "High", 0, "Not Started", "", ""],
+      ["Washing", "Electrical", "Electrical Operating control panel to be relocated from trimming to washing", "High", 0, "Not Started", "", ""],
+      ["Washing", "Mechanical", "pressure gauge to install on rinse recycle loop pipes", "High", 0, "Not Started", "", ""],
+      ["Washing", "Mechanical", "contamination/ fumes collector to be checked and installed on top", "High", 0, "Not Started", "", ""],
+      ["Washing", "Mechanical", "to install Pvc & wire brush on washing chain at top", "High", 0, "Not Started", "", ""],
+      ["Washing", "Mechanical", "Spray and Drying section's windows to be installed", "High", 0, "Not Started", "", ""],
+      ["Washing", "Electrical", "Heaters to be checked and replaced if required", "High", 100, "Completed", "", ""],
+      ["Printing", "Electrical", "CTC cleaning of machine panels interface", "High", 100, "Completed", "Saqib", ""],
+      ["Printing", "Electrical", "PLC installation", "High", 100, "Completed", "Saqib", ""],
+      ["Printing", "Electrical", "Servo motor troubleshooting", "High", 0, "Not Started", "Saqib", ""],
+      ["Printing", "Mechanical", "Aluminum oil tank — fabricate & install", "High", 0, "Not Started", "Saqib", ""],
+      ["Printing", "Electrical", "closure of all cable trays/ panels", "High", 0, "Not Started", "Saqib", ""],
+      ["Printing", "Mechanical", "Rawlbolts anchoring to be done on the foundation", "High", 0, "Not Started", "Saqib", ""],
+      ["Printing", "General", "Printing Machine Dry run", "High", 0, "Not Started", "Saqib", ""],
+      ["Trimming", "Mechanical", "Installation of piping of Trimming Of blower", "High", 0, "Pending Procurement", "Saqib", "Procurement in process(23-05-2026)"],
+      ["Trimming", "Mechanical", "Conveyor alignment — Trimming to Washing", "High", 50, "In Progress", "Saqib", ""],
+      ["Trimming", "Electrical", "Trimming Scrap collector wiring and troubleshooting", "High", 0, "Not Started", "Saqib", ""],
+      ["Trimming", "Electrical", "Electrical Panel checked / Tested", "High", 100, "Completed", "Saqib", ""],
+      ["Trimming", "Electrical", "Startup main motor", "High", 100, "Completed", "Saqib", ""],
+      ["Trimming", "Electrical", "Pneumatic and Electrical operation check", "High", 100, "Completed", "Saqib", ""],
+      ["Trimming", "Mechanical", "Trimming startup", "High", 100, "Completed", "Saqib", ""],
+      ["Trimming", "Mechanical", "Conveyor — Press to Trimming input", "High", 100, "Completed", "Saqib", ""],
+      ["Trimming", "Mechanical", "Trimming machine dry run", "High", 100, "Completed", "Saqib", ""],
+      ["Trimming", "Mechanical", "Install safety guard for suction at scrap generation point", "High", 0, "Not Started", "Saqib", ""],
+      ["Trimming", "Mechanical", "closure of chain/gears/pneumatic assembly with box", "High", 0, "Not Started", "Saqib", ""],
+      ["Trimming", "Electrical", "closure of all cable trays/ panels", "High", 0, "Not Started", "Saqib", ""],
+      ["Trimming", "Mechanical", "pneumatic pressure valve for ejector pressure to install", "High", 0, "Not Started", "Saqib", ""],
+      ["Trimming", "Mechanical", "Installation of trimming blower", "High", 0, "Not Started", "Saqib", ""],
+      ["Trimming", "Mechanical", "Fixing of Manual Oil Lubrication System", "High", 0, "Not Started", "Saqib", "Not fixed Yet"],
+      ["Trimming", "Mechanical", "Addition of closed cabinet for trim collection on machine side", "High", 0, "Not Started", "Saqib", "Not fixed Yet"],
+      ["Trimming", "Mechanical", "Oiling / greasing / parts replacement / testing", "High", 80, "In Progress", "Saqib", "Oil pump maintenance pending"],
+      ["Tumbler", "Electrical", "Mixer installation and automation — auto feeding flow design", "Medium", 0, "Pending Procurement", "Saqib", "quotation awaiting for conveyor from Saqib & Lindsay"],
+      ["Tumbler", "General", "Slug Mixing Unit Dry run", "Medium", 100, "Completed", "Saqib", "Working on its auto feeding system"],
+      ["Tumbler", "Mechanical", "Tumbler/Mixer wiring and connections to be done", "High", 0, "Not Started", "Saqib", ""],
+      ["Tumbler", "Electrical", "Main motor testing", "High", 100, "Completed", "Saqib", ""],
+      ["Tumbler", "Mechanical", "Tumbler/Mixer installation on platform", "High", 50, "In Progress", "Saqib", ""],
+      ["Washing", "Mechanical", "Washing machine piping and blower installation", "High", 20, "In Progress", "Saqib", "To be checked with Lindsay — blower available for installation"],
+      ["Washing", "Mechanical", "Washing unit drain flexible pipes after tank installation", "High", 0, "Not Started", "Saqib", "to be installed after tank installation"],
+      ["Washing", "Mechanical", "Washing Machine Dry run", "High", 0, "Not Started", "Saqib", "Waiting For chain"],
+      ["Washing", "Mechanical", "chain installation", "High", 0, "Not Started", "Saqib", ""],
+      ["Washing", "Electrical", "Electrical Operating control panel to be relocated from trimming to washing", "High", 0, "Not Started", "Saqib", ""],
+      ["Washing", "Mechanical", "pressure gauge to install on rinse recycle loop pipes", "High", 0, "Not Started", "Saqib", ""],
+      ["Washing", "Mechanical", "contamination/ fumes collector to be checked and installed on top", "High", 0, "Not Started", "Saqib", ""],
+      ["Washing", "Mechanical", "to install Pvc & wire brush on washing chain at top", "High", 0, "Not Started", "Saqib", ""],
+      ["Washing", "Mechanical", "Spray and Drying section's windows to be installed", "High", 0, "Not Started", "Saqib", ""],
+      ["Washing", "Electrical", "Heaters to be checked and replaced if required", "High", 100, "Completed", "Saqib", ""],
       ["Washing", "Mechanical", "Rinsing Recycling Tank — recoating & cleaning", "High", 50, "In Progress", "Saqib", ""],
       ["Washing", "Mechanical", "Spraying Jets Section — cleaning / scraping", "High", 50, "In Progress", "Saqib", ""],
       ["Washing", "Electrical", "Heaters to be Replaced", "High", 0, "Pending Procurement", "Saqib", ""],
-      ["Washing", "Mechanical", "All gears greasing", "High", 100, "Completed", "Arsalan", ""],
-      ["Washing", "Mechanical", "Gears alignment", "High", 100, "Completed", "Arsalan", ""],
+      ["Washing", "Mechanical", "All gears greasing", "High", 100, "Completed", "Saqib", ""],
+      ["Washing", "Mechanical", "Gears alignment", "High", 100, "Completed", "Saqib", ""],
       ["Washing", "Mechanical", "Separate storage tanks installation(detergent / cold / hot water)", "High", 0, "Not Started", "Saqib", ""],
       ["Washing", "Mechanical", "Heat exchanger for washing system — procure & install", "High", 0, "Not Started", "Saqib", ""],
-      ["Washing", "Mechanical", "Inspect all rubber pipes — replace if damaged", "High", 0, "Not Started", "Arsalan", "After chain arrival"],
+      ["Washing", "Mechanical", "Inspect all rubber pipes — replace if damaged", "High", 0, "Not Started", "Saqib", "After chain arrival"],
       ["Washing", "Mechanical", "Washing unit tanks — sizes and quantities for quotation", "Medium", 0, "Not Started", "Saqib", "awaiting confirmation from Lindsay"]
     ];
 
@@ -3682,7 +3718,7 @@
 
     function sanitizeTasks() {
       let changed = false;
-      const pList = ['Arsalan', 'Saqib', 'Sikander', 'Aurangzeb', 'Anonymous', 'Unknown'];
+      const pList = ['Saqib', 'Sikander', 'Aurangzeb', 'Anonymous', 'Unknown'];
       tasks.forEach(t => {
         // Swap remarks and responsible if they are in the wrong columns
         const isRespName = pList.includes((t.remarks || '').trim());
@@ -3967,6 +4003,9 @@
       const recentBtn = document.getElementById('recent-btn');
       if (recentBtn) recentBtn.classList.remove('active');
       currentRecentFilter = false;
+      const recentChangesBtn = document.getElementById('recent-changes-btn');
+      if (recentChangesBtn) recentChangesBtn.classList.remove('active');
+      currentRecentChangesFilter = false;
       clearSelection();
       document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
       const vEl = document.getElementById('view-' + view);
@@ -4105,6 +4144,15 @@
       const labelText = document.getElementById('dashboard-label-text');
       const C = 2 * Math.PI * 15.9;
 
+      if (currentRecentFilter) {
+        showRecentTasks();
+        return;
+      }
+      if (currentRecentChangesFilter) {
+        showRecentChanges();
+        return;
+      }
+
       const filtered = filterTasks(tasks);
 
       if (activeFilterCount() > 0) {
@@ -4201,9 +4249,13 @@
     function toggleRecentTasks() {
       const btn = document.getElementById('recent-btn');
       const isOn = btn.classList.contains('active');
+      
+      const changesBtn = document.getElementById('recent-changes-btn');
+      if (changesBtn) changesBtn.classList.remove('active');
+      currentRecentChangesFilter = false;
+
       if (isOn) {
         btn.classList.remove('active');
-        // Clear recent filter — restore normal view
         currentRecentFilter = false;
         renderDashboard();
       } else {
@@ -4211,6 +4263,105 @@
         currentRecentFilter = true;
         showRecentTasks();
       }
+    }
+
+    function toggleRecentChanges() {
+      const btn = document.getElementById('recent-changes-btn');
+      if (!btn) return;
+      const isOn = btn.classList.contains('active');
+
+      const recentBtn = document.getElementById('recent-btn');
+      if (recentBtn) recentBtn.classList.remove('active');
+      currentRecentFilter = false;
+
+      if (isOn) {
+        btn.classList.remove('active');
+        currentRecentChangesFilter = false;
+        renderDashboard();
+      } else {
+        btn.classList.add('active');
+        currentRecentChangesFilter = true;
+        navigate('dashboard');
+        btn.classList.add('active');
+        currentRecentChangesFilter = true;
+        showRecentChanges();
+      }
+    }
+
+    function showRecentChanges() {
+      const grid = document.getElementById('machines-grid');
+      if (grid) grid.style.display = 'none';
+
+      const listEl = document.getElementById('dashboard-task-list');
+      if (!listEl) return;
+      listEl.style.display = 'block';
+      listEl.innerHTML = '';
+
+      const header = document.createElement('div');
+      header.className = 'section-label';
+      header.innerHTML = '<span>Recent Changes (last 50+ changes)</span>';
+      listEl.appendChild(header);
+
+      if (!activityLog || !activityLog.length) {
+        listEl.innerHTML += '<div class="empty">No recent changes logged yet.</div>';
+        return;
+      }
+
+      const changesToShow = activityLog.slice(0, 75);
+
+      const logContainer = document.createElement('div');
+      logContainer.style.background = 'var(--surface)';
+      logContainer.style.border = '1px solid var(--border)';
+      logContainer.style.borderRadius = 'var(--radius)';
+      logContainer.style.padding = '1rem';
+      logContainer.style.display = 'flex';
+      logContainer.style.flexDirection = 'column';
+      logContainer.style.gap = '0.5rem';
+
+      logContainer.innerHTML = changesToShow.map(entry => {
+        const date = new Date(entry.time).toLocaleString('en-PK', {
+          hour12: true, hour: '2-digit', minute: '2-digit', second: '2-digit',
+          day: 'numeric', month: 'short'
+        });
+        
+        let user = entry.user;
+        let displayAction = entry.action || '';
+        if (!user) {
+          const match = displayAction.match(/^\[(.*?)\]/);
+          if (match) {
+            user = match[1];
+            displayAction = displayAction.substring(match[0].length).trim();
+          } else {
+            user = '—';
+          }
+        } else {
+          const prefix = `[${user}]`;
+          if (displayAction.startsWith(prefix)) {
+            displayAction = displayAction.substring(prefix.length).trim();
+          }
+        }
+
+        const task = entry.taskId ? tasks.find(t => t.id === entry.taskId) : null;
+        const actionHtml = task
+          ? `<span style="cursor:pointer;color:var(--accent);text-decoration:underline;text-underline-offset:2px" onclick="openEditModal('${entry.taskId}')">${escapeHTML(displayAction)}</span>`
+          : `<span style="color:var(--text2)">${escapeHTML(displayAction || '')}</span>`;
+
+        const showUndo = isLoggedIn() && currentUser.name === 'Sikander' && entry.undoData && !entry.undone;
+        const undoBtnHtml = showUndo
+          ? `<button onclick="event.stopPropagation(); undoActivity('${entry.id}')" style="background:none;border:1px solid var(--border3);color:var(--accent);padding:0 .4rem;border-radius:4px;font-size:.7rem;cursor:pointer;font-family:'DM Sans',sans-serif;height:20px;display:flex;align-items:center;transition:all 0.2s;" onmouseover="this.style.background='var(--accent)';this.style.color='white'" onmouseout="this.style.background='none';this.style.color='var(--accent)'">Undo</button>`
+          : entry.undone ? `<span style="color:var(--text3);font-size:.7rem;font-style:italic">Undone</span>` : '';
+
+        return `
+          <div style="display:flex;align-items:center;gap:.75rem;padding:.35rem 0;border-bottom:1px solid var(--border);font-family:'DM Mono',monospace;font-size:.75rem">
+            <span style="color:var(--text3);flex-shrink:0">[${date}]</span>
+            <span style="color:var(--accent);flex-shrink:0;font-weight:600">${user}</span>
+            <div style="flex:1">${actionHtml}</div>
+            ${undoBtnHtml}
+          </div>
+        `;
+      }).join('');
+
+      listEl.appendChild(logContainer);
     }
 
     function showRecentTasks() {
@@ -5460,6 +5611,15 @@
         hasInitialPullCompleted = true;
         syncEngine.setUILock(false);
         updateSyncUI();
+        if (isLoggedIn() && !sessionStorage.getItem('login_session_recorded')) {
+          recordLogin(currentUser.name);
+          sessionStorage.setItem('login_session_recorded', 'true');
+          saveState();
+          if (settings.syncKey) {
+            syncEngine.enqueue(tasks, settings, activityLog, MACHINE_META, timelineData, loginHistory, activeSessions);
+            syncEngine.flush();
+          }
+        }
       }
     }
 
@@ -5657,7 +5817,6 @@
       const TOKEN_MAP = {
         '2hnye2': 'Sikander',
         '2zpn5z': 'Saqib',
-        '789012': 'Arsalan',
         '10pqgo': 'Aurangzeb'
       };
 
@@ -5698,6 +5857,7 @@
 
         // Record the login, update heartbeat, save locally, and force push the new state immediately
         recordLogin(name);
+        sessionStorage.setItem('login_session_recorded', 'true');
         updateSessionHeartbeat();
         saveState();
         if (settings.syncKey) {
@@ -5996,6 +6156,12 @@
 
       if (!isLoggedIn() || currentUser.name !== 'Sikander') {
         adminSection.style.display = 'none';
+        const usersListEl = document.getElementById('logged-in-users-list');
+        const statsGridEl = document.getElementById('login-stats-grid');
+        const historyListEl = document.getElementById('login-history-list');
+        if (usersListEl) usersListEl.innerHTML = '';
+        if (statsGridEl) statsGridEl.innerHTML = '';
+        if (historyListEl) historyListEl.innerHTML = '';
         return;
       }
 
@@ -6004,7 +6170,7 @@
       // 1. Render currently logged in users
       const usersListEl = document.getElementById('logged-in-users-list');
       if (usersListEl) {
-        const teamUsers = ['Arsalan', 'Saqib', 'Sikander', 'Aurangzeb'];
+        const teamUsers = ['Saqib', 'Sikander', 'Aurangzeb'];
         const activeUsersHtml = teamUsers.map(user => {
           const lastActive = activeSessions[user];
           let dot = '⚪';
@@ -6058,7 +6224,7 @@
             counts[entry.name] = (counts[entry.name] || 0) + 1;
           }
         });
-        const teamUsers = ['Arsalan', 'Saqib', 'Sikander', 'Aurangzeb'];
+        const teamUsers = ['Saqib', 'Sikander', 'Aurangzeb'];
         const statsHtml = teamUsers.map(user => {
           const count = counts[user] || 0;
           return `
