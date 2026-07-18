@@ -2418,12 +2418,12 @@
       "category": "Mechanical",
       "desc": "Rawlbolts anchoring to be done on the foundation",
       "priority": "High",
-      "progress": 0,
-      "status": "Not Started",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "2026-06-25",
       "remarks": "",
-      "updated": "2 Jun 2026",
+      "updated": "18 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -3299,6 +3299,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784358425998iyv5",
+      "time": "2026-07-18T07:07:05.998Z",
+      "action": "[Aurangzeb] Updated task \"Rawlbolts anchoring to be done...\" [Status: Not Started → Completed, Progress: 0% → 100%] on Printing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_801432",
+          "machine": "Printing",
+          "category": "Mechanical",
+          "desc": "Rawlbolts anchoring to be done on the foundation",
+          "priority": "High",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Arsalan",
+          "deadline": "2026-06-25",
+          "remarks": "",
+          "updated": "2 Jun 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": "Photos/Printing/task_img_1780374938452.jpg"
+        }
+      },
+      "taskId": "t_801432"
+    },
     {
       "id": "t17843582626658r11",
       "time": "2026-07-18T07:04:22.665Z",
@@ -5931,17 +5959,6 @@
         }
       },
       "taskId": "t_154909"
-    },
-    {
-      "id": "t1780374776461713r",
-      "time": "2026-06-02T04:32:56.461Z",
-      "action": "[Aurangzeb] Added task \"Roller Train Frame — cleaning...\" to Printing",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "add",
-        "taskId": "t17803747764618vxa"
-      },
-      "taskId": "t17803747764618vxa"
     }
   ],
   "machineMeta": {
@@ -6163,7 +6180,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-17T11:26:43.651Z",
-    "Aurangzeb": "2026-07-18T07:06:43.699Z",
+    "Aurangzeb": "2026-07-18T07:07:05.998Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
