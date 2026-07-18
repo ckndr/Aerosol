@@ -3263,9 +3263,9 @@
       "machine": "Printing",
       "category": "General",
       "desc": "Rubber rollers to be procured/made",
-      "priority": "Medium",
+      "priority": "High",
       "progress": 60,
-      "status": "Not Started",
+      "status": "Pending Procurement",
       "remarks": "Rollers made not according to req. spec. need to be remade.",
       "responsible": "Saqib",
       "updated": "18 Jul 2026",
@@ -3281,6 +3281,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784357514921bjmk",
+      "time": "2026-07-18T06:51:54.921Z",
+      "action": "[Aurangzeb] Updated task \"Rubber rollers to be procured/...\" [Status: Not Started → Pending Procurement, Priority: Medium → High] on Printing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1784357319657zw11",
+          "machine": "Printing",
+          "category": "General",
+          "desc": "Rubber rollers to be procured/made",
+          "priority": "Medium",
+          "progress": 60,
+          "status": "Not Started",
+          "remarks": "Rollers made not according to req. spec. need to be remade.",
+          "responsible": "Saqib",
+          "updated": "18 Jul 2026",
+          "lastEditedBy": "Aurangzeb",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t1784357319657zw11"
+    },
     {
       "id": "t17843574903678g7m",
       "time": "2026-07-18T06:51:30.367Z",
@@ -5908,17 +5936,6 @@
         }
       },
       "taskId": "t_522663"
-    },
-    {
-      "id": "t17803743611039tr3",
-      "time": "2026-06-02T04:26:01.104Z",
-      "action": "[Aurangzeb] Added task \"Servo motor troubleshooting...\" to Printing",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1780374361103zrqy"
-      },
-      "taskId": "t1780374361103zrqy"
     }
   ],
   "machineMeta": {
@@ -6140,7 +6157,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-17T11:26:43.651Z",
-    "Aurangzeb": "2026-07-18T06:51:30.367Z",
+    "Aurangzeb": "2026-07-18T06:51:54.921Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
