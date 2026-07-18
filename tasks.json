@@ -1518,12 +1518,12 @@
       "category": "Mechanical",
       "desc": "varnish pump placement and installation with piping",
       "priority": "High",
-      "progress": 0,
-      "status": "Not Started",
+      "progress": 10,
+      "status": "In Progress",
       "responsible": "Arsalan",
       "deadline": "2026-06-25",
       "remarks": "",
-      "updated": "2 Jun 2026",
+      "updated": "18 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -3299,6 +3299,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17843584874974tih",
+      "time": "2026-07-18T07:08:07.497Z",
+      "action": "[Aurangzeb] Updated task \"varnish pump placement and ins...\" [Status: Not Started → In Progress, Progress: 0% → 10%] on Over Varnish",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_993093",
+          "machine": "Over Varnish",
+          "category": "Mechanical",
+          "desc": "varnish pump placement and installation with piping",
+          "priority": "High",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Arsalan",
+          "deadline": "2026-06-25",
+          "remarks": "",
+          "updated": "2 Jun 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": "Photos/Over Varnish/task_img_1780376684449.jpg"
+        }
+      },
+      "taskId": "t_993093"
+    },
     {
       "id": "t17843584698883lr0",
       "time": "2026-07-18T07:07:49.888Z",
@@ -5935,33 +5963,6 @@
           "dateFinished": ""
         }
       }
-    },
-    {
-      "id": "t1780374900330ytux",
-      "time": "2026-06-02T04:35:00.330Z",
-      "action": "[Aurangzeb] Updated task \"Aluminum oil tank — fabricate ...\" [Photo added] on Printing",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_308933",
-          "machine": "Printing",
-          "category": "Mechanical",
-          "desc": "Aluminum oil tank — fabricate & install",
-          "priority": "High",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_308933"
     }
   ],
   "machineMeta": {
@@ -6183,7 +6184,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-17T11:26:43.651Z",
-    "Aurangzeb": "2026-07-18T07:07:49.888Z",
+    "Aurangzeb": "2026-07-18T07:08:07.497Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
