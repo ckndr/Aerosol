@@ -1464,17 +1464,17 @@
       "category": "Mechanical",
       "desc": "Spare Rubberize rollers",
       "priority": "High",
-      "progress": 50,
+      "progress": 60,
       "status": "In Progress",
       "responsible": "Saqib",
       "deadline": "2026-06-25",
-      "remarks": "",
-      "updated": "",
+      "remarks": "Rollers made not according to req. spec. need to be remade.",
+      "updated": "18 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "",
-      "image": ""
+      "lastEditedBy": "Aurangzeb",
+      "image": null
     },
     {
       "id": "t_967900",
@@ -3281,6 +3281,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17843573512579ltn",
+      "time": "2026-07-18T06:49:11.257Z",
+      "action": "[Aurangzeb] Updated task \"Spare Rubberize rollers...\" [Progress: 50% → 60%, Remarks updated] on Over Varnish",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_895006",
+          "machine": "Over Varnish",
+          "category": "Mechanical",
+          "desc": "Spare Rubberize rollers",
+          "priority": "High",
+          "progress": 50,
+          "status": "In Progress",
+          "responsible": "Saqib",
+          "deadline": "2026-06-25",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "",
+          "image": ""
+        }
+      },
+      "taskId": "t_895006"
+    },
     {
       "id": "t1784357319657ulm3",
       "time": "2026-07-18T06:48:39.657Z",
@@ -5889,33 +5917,6 @@
           "dateFinished": ""
         }
       }
-    },
-    {
-      "id": "t17803740964920ula",
-      "time": "2026-06-02T04:21:36.493Z",
-      "action": "[Aurangzeb] Updated task \"PLC installation & termination...\" [Photo added] on Printing",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_735418",
-          "machine": "Printing",
-          "category": "Electrical",
-          "desc": "PLC installation & termination",
-          "priority": "High",
-          "progress": 20,
-          "status": "In Progress",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_735418"
     }
   ],
   "machineMeta": {
@@ -6137,7 +6138,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-17T11:26:43.651Z",
-    "Aurangzeb": "2026-07-18T06:48:43.698Z",
+    "Aurangzeb": "2026-07-18T06:49:11.257Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
