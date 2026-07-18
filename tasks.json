@@ -2075,8 +2075,8 @@
       "machine": "Press",
       "category": "Electrical",
       "desc": "SOV coil pneumatic press clutch",
-      "priority": "High",
-      "progress": 20,
+      "priority": "Low",
+      "progress": 0,
       "status": "Pending Procurement",
       "responsible": "Saqib",
       "deadline": "2026-06-16",
@@ -3281,6 +3281,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784362086190kpgf",
+      "time": "2026-07-18T08:08:06.190Z",
+      "action": "[Aurangzeb] Updated task \"SOV coil pneumatic press clutc...\" [Progress: 20% → 0%, Priority: High → Low] on Press",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t178402246436679mb",
+          "machine": "Press",
+          "category": "Electrical",
+          "desc": "SOV coil pneumatic press clutch",
+          "priority": "High",
+          "progress": 20,
+          "status": "Pending Procurement",
+          "responsible": "Saqib",
+          "deadline": "2026-06-16",
+          "remarks": "",
+          "updated": "18 Jul 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": null
+        }
+      },
+      "taskId": "t178402246436679mb"
+    },
     {
       "id": "t1784362051783fzqu",
       "time": "2026-07-18T08:07:31.783Z",
@@ -5941,33 +5969,6 @@
         }
       },
       "taskId": "t_967900"
-    },
-    {
-      "id": "t1780376170587lpqy",
-      "time": "2026-06-02T04:56:10.589Z",
-      "action": "[Aurangzeb] Updated task \"chain & bearing greasing...\" [Photo added] on Accumulator",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_823995",
-          "machine": "Accumulator",
-          "category": "Mechanical",
-          "desc": "chain & bearing greasing",
-          "priority": "Medium",
-          "progress": 50,
-          "status": "In Progress",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_823995"
     }
   ],
   "machineMeta": {
@@ -6189,7 +6190,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-17T11:26:43.651Z",
-    "Aurangzeb": "2026-07-18T08:07:31.783Z",
+    "Aurangzeb": "2026-07-18T08:08:06.190Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
