@@ -1500,12 +1500,12 @@
       "category": "Mechanical",
       "desc": "Rawal bolts anchoring to be done on the foundation",
       "priority": "High",
-      "progress": 0,
-      "status": "Not Started",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "2026-06-25",
       "remarks": "",
-      "updated": "2 Jun 2026",
+      "updated": "18 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -3299,6 +3299,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17843584698883lr0",
+      "time": "2026-07-18T07:07:49.888Z",
+      "action": "[Aurangzeb] Updated task \"Rawal bolts anchoring to be do...\" [Status: Not Started → Completed, Progress: 0% → 100%] on Over Varnish",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_404937",
+          "machine": "Over Varnish",
+          "category": "Mechanical",
+          "desc": "Rawal bolts anchoring to be done on the foundation",
+          "priority": "High",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Arsalan",
+          "deadline": "2026-06-25",
+          "remarks": "",
+          "updated": "2 Jun 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": "Photos/Over Varnish/task_img_1780376254186.jpg"
+        }
+      },
+      "taskId": "t_404937"
+    },
     {
       "id": "t1784358452089hdf6",
       "time": "2026-07-18T07:07:32.089Z",
@@ -5934,32 +5962,6 @@
         }
       },
       "taskId": "t_308933"
-    },
-    {
-      "id": "t1780374874740a12d",
-      "time": "2026-06-02T04:34:34.740Z",
-      "action": "[Aurangzeb] Deleted task \"All printing rollers — dismant...\" from Printing",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "delete",
-        "prevTask": {
-          "id": "t_319786",
-          "machine": "Printing",
-          "category": "Mechanical",
-          "desc": "All printing rollers — dismantle, clean, buff, chrome plate",
-          "priority": "High",
-          "progress": 60,
-          "status": "In Progress",
-          "responsible": "Saqib",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      }
     }
   ],
   "machineMeta": {
@@ -6181,7 +6183,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-17T11:26:43.651Z",
-    "Aurangzeb": "2026-07-18T07:07:32.089Z",
+    "Aurangzeb": "2026-07-18T07:07:49.888Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
