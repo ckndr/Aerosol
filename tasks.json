@@ -2490,12 +2490,12 @@
       "category": "Mechanical",
       "desc": "Conveyor alignment — Trimming to Washing",
       "priority": "High",
-      "progress": 50,
+      "progress": 80,
       "status": "In Progress",
       "responsible": "Arsalan",
       "deadline": "2026-06-19",
       "remarks": "",
-      "updated": "1 Jun 2026",
+      "updated": "18 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -3281,6 +3281,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784357753257t12m",
+      "time": "2026-07-18T06:55:53.257Z",
+      "action": "[Aurangzeb] Updated task \"Conveyor alignment — Trimming ...\" [Progress: 50% → 80%] on Trimming",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_809507",
+          "machine": "Trimming",
+          "category": "Mechanical",
+          "desc": "Conveyor alignment — Trimming to Washing",
+          "priority": "High",
+          "progress": 50,
+          "status": "In Progress",
+          "responsible": "Arsalan",
+          "deadline": "2026-06-19",
+          "remarks": "",
+          "updated": "1 Jun 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": "Photos/Trimming/task_img_1780311408335.jpg"
+        }
+      },
+      "taskId": "t_809507"
+    },
     {
       "id": "t1784357708737rtvf",
       "time": "2026-07-18T06:55:08.737Z",
@@ -5911,33 +5939,6 @@
         }
       },
       "taskId": "t_223177"
-    },
-    {
-      "id": "t178037464495899h0",
-      "time": "2026-06-02T04:30:44.958Z",
-      "action": "[Aurangzeb] Updated task \"Bearings — cleaning & greasing...\" [Photo added] on Printing",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_472460",
-          "machine": "Printing",
-          "category": "Mechanical",
-          "desc": "Bearings — cleaning & greasing",
-          "priority": "High",
-          "progress": 50,
-          "status": "In Progress",
-          "responsible": "Saqib",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_472460"
     }
   ],
   "machineMeta": {
@@ -6159,7 +6160,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-17T11:26:43.651Z",
-    "Aurangzeb": "2026-07-18T06:55:08.737Z",
+    "Aurangzeb": "2026-07-18T06:55:53.257Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
