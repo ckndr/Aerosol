@@ -258,16 +258,16 @@
       "category": "Mechanical",
       "desc": "Rawal bolts anchoring to be done on the foundation",
       "priority": "High",
-      "progress": 0,
-      "status": "Not Started",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "2026-06-25",
       "remarks": "",
-      "updated": "13 Jul 2026",
+      "updated": "18 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Saqib",
+      "lastEditedBy": "Aurangzeb",
       "image": "Photos/Base Coat/task_img_1780374035741.jpg"
     },
     {
@@ -3300,6 +3300,34 @@
   },
   "activityLog": [
     {
+      "id": "t1784358452089hdf6",
+      "time": "2026-07-18T07:07:32.089Z",
+      "action": "[Aurangzeb] Updated task \"Rawal bolts anchoring to be do...\" [Status: Not Started → Completed, Progress: 0% → 100%] on Base Coat",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_511680",
+          "machine": "Base Coat",
+          "category": "Mechanical",
+          "desc": "Rawal bolts anchoring to be done on the foundation",
+          "priority": "High",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Arsalan",
+          "deadline": "2026-06-25",
+          "remarks": "",
+          "updated": "13 Jul 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Saqib",
+          "image": "Photos/Base Coat/task_img_1780374035741.jpg"
+        }
+      },
+      "taskId": "t_511680"
+    },
+    {
       "id": "t1784358425998iyv5",
       "time": "2026-07-18T07:07:05.998Z",
       "action": "[Aurangzeb] Updated task \"Rawlbolts anchoring to be done...\" [Status: Not Started → Completed, Progress: 0% → 100%] on Printing",
@@ -5932,33 +5960,6 @@
           "dateFinished": ""
         }
       }
-    },
-    {
-      "id": "t1780374827748c1ai",
-      "time": "2026-06-02T04:33:47.748Z",
-      "action": "[Aurangzeb] Updated task \"Dismantle all rollers for insp...\" [Photo added] on Printing",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_154909",
-          "machine": "Printing",
-          "category": "Mechanical",
-          "desc": "Dismantle all rollers for inspection & Cleaning",
-          "priority": "High",
-          "progress": 50,
-          "status": "In Progress",
-          "responsible": "Saqib",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_154909"
     }
   ],
   "machineMeta": {
@@ -6180,7 +6181,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-17T11:26:43.651Z",
-    "Aurangzeb": "2026-07-18T07:07:05.998Z",
+    "Aurangzeb": "2026-07-18T07:07:32.089Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
