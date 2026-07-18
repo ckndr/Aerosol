@@ -709,7 +709,7 @@
       "desc": "Lab equipment to be sourced",
       "priority": "Medium",
       "progress": 70,
-      "status": "Pending Procurement",
+      "status": "In Progress",
       "responsible": "Saqib",
       "deadline": "",
       "remarks": "",
@@ -3281,6 +3281,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784362051783fzqu",
+      "time": "2026-07-18T08:07:31.783Z",
+      "action": "[Aurangzeb] Updated task \"Lab equipment to be sourced...\" [Status: Pending Procurement → In Progress] on General",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_542466",
+          "machine": "General",
+          "category": "General",
+          "desc": "Lab equipment to be sourced",
+          "priority": "Medium",
+          "progress": 70,
+          "status": "Pending Procurement",
+          "responsible": "Saqib",
+          "deadline": "",
+          "remarks": "",
+          "updated": "18 Jul 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": null
+        }
+      },
+      "taskId": "t_542466"
+    },
     {
       "id": "t1784362031271by1g",
       "time": "2026-07-18T08:07:11.271Z",
@@ -5940,33 +5968,6 @@
         }
       },
       "taskId": "t_823995"
-    },
-    {
-      "id": "t1780375383289d903",
-      "time": "2026-06-02T04:43:03.289Z",
-      "action": "[Aurangzeb] Updated task \"Heaters to be checked and repl...\" [Photo added] on Decoration Oven",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_224710",
-          "machine": "Decoration Oven",
-          "category": "Electrical",
-          "desc": "Heaters to be checked and replaced if required",
-          "priority": "High",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "sample needed for ordering",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_224710"
     }
   ],
   "machineMeta": {
@@ -6188,7 +6189,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-17T11:26:43.651Z",
-    "Aurangzeb": "2026-07-18T08:07:11.271Z",
+    "Aurangzeb": "2026-07-18T08:07:31.783Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
