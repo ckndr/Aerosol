@@ -186,17 +186,17 @@
       "category": "Mechanical",
       "desc": "Spare Rubberize rollers",
       "priority": "High",
-      "progress": 50,
+      "progress": 60,
       "status": "In Progress",
       "responsible": "Saqib",
       "deadline": "2026-06-25",
-      "remarks": "",
-      "updated": "",
+      "remarks": "Rollers made not according to req. spec. need to be remade.",
+      "updated": "18 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "",
-      "image": ""
+      "lastEditedBy": "Aurangzeb",
+      "image": null
     },
     {
       "id": "t_305707",
@@ -3264,6 +3264,34 @@
   },
   "activityLog": [
     {
+      "id": "t178435720000239xc",
+      "time": "2026-07-18T06:46:40.002Z",
+      "action": "[Aurangzeb] Updated task \"Spare Rubberize rollers...\" [Progress: 50% → 60%, Remarks updated] on Base Coat",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_871623",
+          "machine": "Base Coat",
+          "category": "Mechanical",
+          "desc": "Spare Rubberize rollers",
+          "priority": "High",
+          "progress": 50,
+          "status": "In Progress",
+          "responsible": "Saqib",
+          "deadline": "2026-06-25",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "",
+          "image": ""
+        }
+      },
+      "taskId": "t_871623"
+    },
+    {
       "id": "t1784025092619gdt7",
       "time": "2026-07-14T10:31:32.619Z",
       "action": "[Aurangzeb] Updated task \"Realignment of conveyor to be ...\" [Status: In Progress → Completed, Progress: 0% → 100%] on FG Conveyor",
@@ -5886,33 +5914,6 @@
         }
       },
       "taskId": "t_511680"
-    },
-    {
-      "id": "t1780374007211n91h",
-      "time": "2026-06-02T04:20:07.211Z",
-      "action": "[Aurangzeb] Updated task \"Rawal bolts anchoring to be do...\" [Photo added] on Base Coat",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_511680",
-          "machine": "Base Coat",
-          "category": "Mechanical",
-          "desc": "Rawal bolts anchoring to be done on the foundation",
-          "priority": "High",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_511680"
     }
   ],
   "machineMeta": {
@@ -6134,7 +6135,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-17T11:26:43.651Z",
-    "Aurangzeb": "2026-07-18T06:44:43.699Z",
+    "Aurangzeb": "2026-07-18T06:46:40.002Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
