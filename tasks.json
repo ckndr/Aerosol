@@ -708,17 +708,17 @@
       "category": "General",
       "desc": "Lab equipment to be sourced",
       "priority": "Medium",
-      "progress": 0,
+      "progress": 70,
       "status": "Pending Procurement",
       "responsible": "Saqib",
       "deadline": "",
       "remarks": "",
-      "updated": "13 Jul 2026",
+      "updated": "18 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Saqib",
-      "image": ""
+      "lastEditedBy": "Aurangzeb",
+      "image": null
     },
     {
       "id": "t_329620",
@@ -3281,6 +3281,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784362031271by1g",
+      "time": "2026-07-18T08:07:11.271Z",
+      "action": "[Aurangzeb] Updated task \"Lab equipment to be sourced...\" [Progress: 0% → 70%] on General",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_542466",
+          "machine": "General",
+          "category": "General",
+          "desc": "Lab equipment to be sourced",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Pending Procurement",
+          "responsible": "Saqib",
+          "deadline": "",
+          "remarks": "",
+          "updated": "13 Jul 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Saqib",
+          "image": ""
+        }
+      },
+      "taskId": "t_542466"
+    },
     {
       "id": "t17843617339597q0g",
       "time": "2026-07-18T08:02:13.959Z",
@@ -5939,32 +5967,6 @@
         }
       },
       "taskId": "t_224710"
-    },
-    {
-      "id": "t1780375049267wn60",
-      "time": "2026-06-02T04:37:29.267Z",
-      "action": "[Aurangzeb] Deleted task \"temperature gauges to be check...\" from Decoration Oven",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "delete",
-        "prevTask": {
-          "id": "t1780375044523g3x1",
-          "machine": "Decoration Oven",
-          "category": "Electrical",
-          "desc": "temperature gauges to be checked & installed",
-          "priority": "High",
-          "progress": 0,
-          "status": "Not Started",
-          "remarks": "",
-          "responsible": "Arsalan",
-          "updated": "2 Jun 2026",
-          "lastEditedBy": "Aurangzeb",
-          "image": "Photos/Decoration Oven/task_img_1780375038935.jpg",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      }
     }
   ],
   "machineMeta": {
@@ -6186,7 +6188,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-17T11:26:43.651Z",
-    "Aurangzeb": "2026-07-18T08:06:43.710Z",
+    "Aurangzeb": "2026-07-18T08:07:11.271Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
