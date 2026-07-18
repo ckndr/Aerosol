@@ -1465,7 +1465,7 @@
       "desc": "Spare Rubberize rollers",
       "priority": "High",
       "progress": 60,
-      "status": "In Progress",
+      "status": "Pending Procurement",
       "responsible": "Saqib",
       "deadline": "2026-06-25",
       "remarks": "Rollers made not according to req. spec. need to be remade.",
@@ -3281,6 +3281,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17843574903678g7m",
+      "time": "2026-07-18T06:51:30.367Z",
+      "action": "[Aurangzeb] Updated task \"Spare Rubberize rollers...\" [Status: In Progress → Pending Procurement] on Over Varnish",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_895006",
+          "machine": "Over Varnish",
+          "category": "Mechanical",
+          "desc": "Spare Rubberize rollers",
+          "priority": "High",
+          "progress": 60,
+          "status": "In Progress",
+          "responsible": "Saqib",
+          "deadline": "2026-06-25",
+          "remarks": "Rollers made not according to req. spec. need to be remade.",
+          "updated": "18 Jul 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": null
+        }
+      },
+      "taskId": "t_895006"
+    },
     {
       "id": "t17843573512579ltn",
       "time": "2026-07-18T06:49:11.257Z",
@@ -5891,32 +5919,6 @@
         "taskId": "t1780374361103zrqy"
       },
       "taskId": "t1780374361103zrqy"
-    },
-    {
-      "id": "t1780374279215dyfw",
-      "time": "2026-06-02T04:24:39.215Z",
-      "action": "[Aurangzeb] Deleted task \"Servo motor troubleshooting...\" from Printing",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "delete",
-        "prevTask": {
-          "id": "t_589414",
-          "machine": "Printing",
-          "category": "Electrical",
-          "desc": "Servo motor troubleshooting",
-          "priority": "High",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      }
     }
   ],
   "machineMeta": {
@@ -6138,7 +6140,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-17T11:26:43.651Z",
-    "Aurangzeb": "2026-07-18T06:50:43.701Z",
+    "Aurangzeb": "2026-07-18T06:51:30.367Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
