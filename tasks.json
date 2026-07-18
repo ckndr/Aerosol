@@ -1644,17 +1644,17 @@
       "category": "Electrical",
       "desc": "Main Power Cable procurement",
       "priority": "High",
-      "progress": 60,
+      "progress": 80,
       "status": "In Progress",
       "responsible": "Saqib",
       "deadline": "",
       "remarks": "",
-      "updated": "13 Jul 2026",
+      "updated": "18 Jul 2026",
       "waitingOn": "",
       "dateStarted": "2026-07-11",
       "dateFinished": "2026-07-10",
-      "lastEditedBy": "Saqib",
-      "image": ""
+      "lastEditedBy": "Aurangzeb",
+      "image": null
     },
     {
       "id": "t_756784",
@@ -3281,6 +3281,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17843617339597q0g",
+      "time": "2026-07-18T08:02:13.959Z",
+      "action": "[Aurangzeb] Updated task \"Main Power Cable procurement...\" [Progress: 60% → 80%] on Overall Machine Operation",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_460094",
+          "machine": "Overall Machine Operation",
+          "category": "Electrical",
+          "desc": "Main Power Cable procurement",
+          "priority": "High",
+          "progress": 60,
+          "status": "In Progress",
+          "responsible": "Saqib",
+          "deadline": "",
+          "remarks": "",
+          "updated": "13 Jul 2026",
+          "waitingOn": "",
+          "dateStarted": "2026-07-11",
+          "dateFinished": "2026-07-10",
+          "lastEditedBy": "Saqib",
+          "image": ""
+        }
+      },
+      "taskId": "t_460094"
+    },
     {
       "id": "t1784358561048tzgy",
       "time": "2026-07-18T07:09:21.048Z",
@@ -5937,17 +5965,6 @@
           "dateFinished": ""
         }
       }
-    },
-    {
-      "id": "t1780375044523nua0",
-      "time": "2026-06-02T04:37:24.523Z",
-      "action": "[Aurangzeb] Added task \"temperature gauges to be check...\" to Decoration Oven",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1780375044523g3x1"
-      },
-      "taskId": "t1780375044523g3x1"
     }
   ],
   "machineMeta": {
@@ -6169,7 +6186,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-17T11:26:43.651Z",
-    "Aurangzeb": "2026-07-18T08:00:43.701Z",
+    "Aurangzeb": "2026-07-18T08:02:13.959Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
