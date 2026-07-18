@@ -2095,11 +2095,11 @@
       "desc": "SOV coil pneumatic press clutch",
       "priority": "High",
       "progress": 20,
-      "status": "In Progress",
+      "status": "Pending Procurement",
       "responsible": "Saqib",
       "deadline": "2026-06-16",
       "remarks": "",
-      "updated": "14 Jul 2026",
+      "updated": "18 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -3281,6 +3281,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784357708737rtvf",
+      "time": "2026-07-18T06:55:08.737Z",
+      "action": "[Aurangzeb] Updated task \"SOV coil pneumatic press clutc...\" [Status: In Progress → Pending Procurement] on Press",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t178402246436679mb",
+          "machine": "Press",
+          "category": "Electrical",
+          "desc": "SOV coil pneumatic press clutch",
+          "priority": "High",
+          "progress": 20,
+          "status": "In Progress",
+          "responsible": "Saqib",
+          "deadline": "2026-06-16",
+          "remarks": "",
+          "updated": "14 Jul 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": null
+        }
+      },
+      "taskId": "t178402246436679mb"
+    },
     {
       "id": "t17843575628827ucw",
       "time": "2026-07-18T06:52:42.882Z",
@@ -5910,33 +5938,6 @@
         }
       },
       "taskId": "t_472460"
-    },
-    {
-      "id": "t1780374538775tlzm",
-      "time": "2026-06-02T04:28:58.775Z",
-      "action": "[Aurangzeb] Updated task \"Printing machine rollers — dee...\" [Photo added] on Printing",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_220583",
-          "machine": "Printing",
-          "category": "Mechanical",
-          "desc": "Printing machine rollers — deep clean, rubber & chrome inspection",
-          "priority": "High",
-          "progress": 40,
-          "status": "In Progress",
-          "responsible": "Saqib",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_220583"
     }
   ],
   "machineMeta": {
@@ -6158,7 +6159,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-17T11:26:43.651Z",
-    "Aurangzeb": "2026-07-18T06:54:43.706Z",
+    "Aurangzeb": "2026-07-18T06:55:08.737Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
