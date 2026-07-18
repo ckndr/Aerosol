@@ -1369,24 +1369,6 @@
       "image": ""
     },
     {
-      "id": "t_707076",
-      "machine": "Necking",
-      "category": "Mechanical",
-      "desc": "Two sets of press dies, springs & nut bolts required",
-      "priority": "High",
-      "progress": 0,
-      "status": "Not Started",
-      "responsible": "Saqib",
-      "deadline": "",
-      "remarks": "",
-      "updated": "",
-      "waitingOn": "",
-      "dateStarted": "",
-      "dateFinished": "",
-      "lastEditedBy": "",
-      "image": ""
-    },
-    {
       "id": "t_862890",
       "machine": "Necking",
       "category": "Mechanical",
@@ -3299,6 +3281,33 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784358561048tzgy",
+      "time": "2026-07-18T07:09:21.048Z",
+      "action": "[Aurangzeb] Deleted task \"Two sets of press dies, spring...\" from Necking",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "delete",
+        "prevTask": {
+          "id": "t_707076",
+          "machine": "Necking",
+          "category": "Mechanical",
+          "desc": "Two sets of press dies, springs & nut bolts required",
+          "priority": "High",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Saqib",
+          "deadline": "",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "",
+          "image": ""
+        }
+      }
+    },
     {
       "id": "t1784358550544vz2j",
       "time": "2026-07-18T07:09:10.544Z",
@@ -5939,33 +5948,6 @@
         "taskId": "t1780375044523g3x1"
       },
       "taskId": "t1780375044523g3x1"
-    },
-    {
-      "id": "t1780375041607o3ry",
-      "time": "2026-06-02T04:37:21.607Z",
-      "action": "[Aurangzeb] Updated task \"temperature gauges to be check...\" [Photo added] on Decoration Oven",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_593209",
-          "machine": "Decoration Oven",
-          "category": "Electrical",
-          "desc": "temperature gauges to be checked & installed",
-          "priority": "High",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_593209"
     }
   ],
   "machineMeta": {
@@ -6187,7 +6169,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-17T11:26:43.651Z",
-    "Aurangzeb": "2026-07-18T07:09:10.544Z",
+    "Aurangzeb": "2026-07-18T07:09:21.048Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
