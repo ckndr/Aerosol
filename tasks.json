@@ -3102,16 +3102,16 @@
       "category": "Electrical",
       "desc": "Heaters to be Replaced",
       "priority": "High",
-      "progress": 80,
+      "progress": 85,
       "status": "In Progress",
       "responsible": "Arsalan",
       "deadline": "2026-06-30",
       "remarks": "",
-      "updated": "13 Jul 2026",
+      "updated": "18 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Saqib",
+      "lastEditedBy": "Aurangzeb",
       "image": "Photos/Washing/task_img_1780311847804.jpg"
     },
     {
@@ -3281,6 +3281,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784363110334hnk7",
+      "time": "2026-07-18T08:25:10.334Z",
+      "action": "[Aurangzeb] Updated task \"Heaters to be Replaced...\" [Progress: 80% → 85%] on Washing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_122888",
+          "machine": "Washing",
+          "category": "Electrical",
+          "desc": "Heaters to be Replaced",
+          "priority": "High",
+          "progress": 80,
+          "status": "In Progress",
+          "responsible": "Arsalan",
+          "deadline": "2026-06-30",
+          "remarks": "",
+          "updated": "13 Jul 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Saqib",
+          "image": "Photos/Washing/task_img_1780311847804.jpg"
+        }
+      },
+      "taskId": "t_122888"
+    },
     {
       "id": "t17843626900069977",
       "time": "2026-07-18T08:18:10.006Z",
@@ -5962,17 +5990,6 @@
         "taskId": "t1780376845779iund"
       },
       "taskId": "t1780376845779iund"
-    },
-    {
-      "id": "t1780376773183wyyk",
-      "time": "2026-06-02T05:06:13.183Z",
-      "action": "[Aurangzeb] Added task \"Pneumatic piping to be done...\" to Over Varnish",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1780376773183ptvj"
-      },
-      "taskId": "t1780376773183ptvj"
     }
   ],
   "machineMeta": {
@@ -6194,7 +6211,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-17T11:26:43.651Z",
-    "Aurangzeb": "2026-07-18T08:24:43.701Z",
+    "Aurangzeb": "2026-07-18T08:25:10.334Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
