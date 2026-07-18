@@ -2854,13 +2854,13 @@
       "status": "Not Started",
       "responsible": "Saqib",
       "deadline": "2026-06-30",
-      "remarks": "",
-      "updated": "",
+      "remarks": "under discussion",
+      "updated": "18 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "",
-      "image": ""
+      "lastEditedBy": "Aurangzeb",
+      "image": null
     },
     {
       "id": "t_788779",
@@ -3281,6 +3281,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17843625586624it9",
+      "time": "2026-07-18T08:15:58.662Z",
+      "action": "[Aurangzeb] Updated task \"Heat exchanger for washing sys...\" [Remarks updated] on Washing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_764635",
+          "machine": "Washing",
+          "category": "Mechanical",
+          "desc": "Heat exchanger for washing system — procure & install",
+          "priority": "High",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Saqib",
+          "deadline": "2026-06-30",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "",
+          "image": ""
+        }
+      },
+      "taskId": "t_764635"
+    },
     {
       "id": "t1784362086190kpgf",
       "time": "2026-07-18T08:08:06.190Z",
@@ -5942,33 +5970,6 @@
         }
       },
       "taskId": "t_424547"
-    },
-    {
-      "id": "t17803762014042e6l",
-      "time": "2026-06-02T04:56:41.404Z",
-      "action": "[Aurangzeb] Updated task \"closure of all cable trays/ pa...\" [Photo added] on Over Varnish",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_967900",
-          "machine": "Over Varnish",
-          "category": "Electrical",
-          "desc": "closure of all cable trays/ panels",
-          "priority": "High",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_967900"
     }
   ],
   "machineMeta": {
@@ -6190,7 +6191,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-17T11:26:43.651Z",
-    "Aurangzeb": "2026-07-18T08:14:43.697Z",
+    "Aurangzeb": "2026-07-18T08:15:58.662Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
