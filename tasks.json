@@ -187,7 +187,7 @@
       "desc": "Spare Rubberize rollers",
       "priority": "High",
       "progress": 60,
-      "status": "In Progress",
+      "status": "Pending Procurement",
       "responsible": "Saqib",
       "deadline": "2026-06-25",
       "remarks": "Rollers made not according to req. spec. need to be remade.",
@@ -3282,6 +3282,34 @@
   },
   "activityLog": [
     {
+      "id": "t17843575628827ucw",
+      "time": "2026-07-18T06:52:42.882Z",
+      "action": "[Aurangzeb] Updated task \"Spare Rubberize rollers...\" [Status: In Progress → Pending Procurement] on Base Coat",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_871623",
+          "machine": "Base Coat",
+          "category": "Mechanical",
+          "desc": "Spare Rubberize rollers",
+          "priority": "High",
+          "progress": 60,
+          "status": "In Progress",
+          "responsible": "Saqib",
+          "deadline": "2026-06-25",
+          "remarks": "Rollers made not according to req. spec. need to be remade.",
+          "updated": "18 Jul 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": null
+        }
+      },
+      "taskId": "t_871623"
+    },
+    {
       "id": "t1784357514921bjmk",
       "time": "2026-07-18T06:51:54.921Z",
       "action": "[Aurangzeb] Updated task \"Rubber rollers to be procured/...\" [Status: Not Started → Pending Procurement, Priority: Medium → High] on Printing",
@@ -5909,33 +5937,6 @@
         }
       },
       "taskId": "t_220583"
-    },
-    {
-      "id": "t1780374422594r67o",
-      "time": "2026-06-02T04:27:02.594Z",
-      "action": "[Aurangzeb] Updated task \"closure of all cable trays/ pa...\" [Photo added] on Printing",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_522663",
-          "machine": "Printing",
-          "category": "Electrical",
-          "desc": "closure of all cable trays/ panels",
-          "priority": "High",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_522663"
     }
   ],
   "machineMeta": {
@@ -6157,7 +6158,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-17T11:26:43.651Z",
-    "Aurangzeb": "2026-07-18T06:51:54.921Z",
+    "Aurangzeb": "2026-07-18T06:52:43.698Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
