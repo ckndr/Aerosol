@@ -3275,12 +3275,41 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t17843582626653eoh",
+      "machine": "Overall Machine Operation",
+      "category": "Mechanical",
+      "desc": "Accumulator+ Main Oven chain & sporckets alignment/testing/fixing/ dry run",
+      "priority": "High",
+      "progress": 95,
+      "status": "In Progress",
+      "remarks": "",
+      "responsible": "Arsalan",
+      "updated": "18 Jul 2026",
+      "lastEditedBy": "Aurangzeb",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17843582626658r11",
+      "time": "2026-07-18T07:04:22.665Z",
+      "action": "[Aurangzeb] Added task \"Accumulator+ Main Oven chain &...\" to Overall Machine Operation",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "add",
+        "taskId": "t17843582626653eoh"
+      },
+      "taskId": "t17843582626653eoh"
+    },
     {
       "id": "t17843578861058t8g",
       "time": "2026-07-18T06:58:06.105Z",
@@ -5913,33 +5942,6 @@
         "taskId": "t17803747764618vxa"
       },
       "taskId": "t17803747764618vxa"
-    },
-    {
-      "id": "t1780374772991pgvr",
-      "time": "2026-06-02T04:32:52.991Z",
-      "action": "[Aurangzeb] Updated task \"Roller Train Frame — cleaning...\" [Photo added] on Printing",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_309734",
-          "machine": "Printing",
-          "category": "Mechanical",
-          "desc": "Roller Train Frame — cleaning",
-          "priority": "High",
-          "progress": 50,
-          "status": "In Progress",
-          "responsible": "Saqib",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_309734"
     }
   ],
   "machineMeta": {
@@ -6161,7 +6163,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-17T11:26:43.651Z",
-    "Aurangzeb": "2026-07-18T07:02:43.707Z",
+    "Aurangzeb": "2026-07-18T07:04:22.665Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
