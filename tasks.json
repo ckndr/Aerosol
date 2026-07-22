@@ -1613,12 +1613,12 @@
       "responsible": "Arsalan",
       "deadline": "2026-06-25",
       "remarks": "",
-      "updated": "",
+      "updated": "22 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
-      "dateFinished": "",
-      "lastEditedBy": "",
-      "image": ""
+      "dateFinished": "2026-07-21",
+      "lastEditedBy": "Aurangzeb",
+      "image": null
     },
     {
       "id": "t_378091",
@@ -3407,6 +3407,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784710132449iaqs",
+      "time": "2026-07-22T08:48:52.449Z",
+      "action": "[Aurangzeb] Updated task \"PLC installation & termination...\" [Date Finished updated] on Over Varnish",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1782114443700v8q5",
+          "machine": "Over Varnish",
+          "category": "Electrical",
+          "desc": "PLC installation & termination",
+          "priority": "High",
+          "progress": 100,
+          "status": "Completed",
+          "responsible": "Arsalan",
+          "deadline": "2026-06-25",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "",
+          "image": ""
+        }
+      },
+      "taskId": "t1782114443700v8q5"
+    },
     {
       "id": "t1784710033696ahrf",
       "time": "2026-07-22T08:47:13.696Z",
@@ -6012,33 +6040,6 @@
         }
       },
       "taskId": "t_788726"
-    },
-    {
-      "id": "t1780377459115qa8e",
-      "time": "2026-06-02T05:17:39.115Z",
-      "action": "[Aurangzeb] Updated task \"connection/wiring to be done...\" [Photo added] on FG Conveyor",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_951895",
-          "machine": "FG Conveyor",
-          "category": "Electrical",
-          "desc": "connection/wiring to be done",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_951895"
     }
   ],
   "machineMeta": {
@@ -6280,7 +6281,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
-    "Aurangzeb": "2026-07-22T08:48:46.222Z",
+    "Aurangzeb": "2026-07-22T08:48:52.449Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
