@@ -6232,6 +6232,10 @@
   "loginHistory": [
     {
       "name": "Aurangzeb",
+      "time": "2026-07-22T08:31:06.453Z"
+    },
+    {
+      "name": "Aurangzeb",
       "time": "2026-07-22T08:22:52.203Z"
     },
     {
@@ -6265,7 +6269,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
-    "Aurangzeb": "2026-07-22T08:24:37.014Z",
+    "Aurangzeb": "2026-07-22T08:31:06.454Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
