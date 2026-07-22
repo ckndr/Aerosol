@@ -528,12 +528,12 @@
       "category": "General",
       "desc": "Overall machine paint",
       "priority": "Medium",
-      "progress": 10,
+      "progress": 20,
       "status": "In Progress",
       "responsible": "Saqib",
       "deadline": "",
       "remarks": "",
-      "updated": "14 Jul 2026",
+      "updated": "22 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -3408,6 +3408,34 @@
   },
   "activityLog": [
     {
+      "id": "t178471021245677z2",
+      "time": "2026-07-22T08:50:12.456Z",
+      "action": "[Aurangzeb] Updated task \"Overall machine paint...\" [Progress: 10% → 20%] on General",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_963673",
+          "machine": "General",
+          "category": "General",
+          "desc": "Overall machine paint",
+          "priority": "Medium",
+          "progress": 10,
+          "status": "In Progress",
+          "responsible": "Saqib",
+          "deadline": "",
+          "remarks": "",
+          "updated": "14 Jul 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": null
+        }
+      },
+      "taskId": "t_963673"
+    },
+    {
       "id": "t17847101773705tir",
       "time": "2026-07-22T08:49:37.370Z",
       "action": "[Aurangzeb] Updated task \"White LED lighting for printin...\" [Status: Not Started → Completed, Progress: 0% → 100%, Date Finished updated] on General",
@@ -6014,33 +6042,6 @@
         }
       },
       "taskId": "t_660179"
-    },
-    {
-      "id": "t1780377516252tvk8",
-      "time": "2026-06-02T05:18:36.252Z",
-      "action": "[Aurangzeb] Updated task \"wiring and connections to be d...\" [Photo added] on Auto Strapping Machine",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_412945",
-          "machine": "Auto Strapping Machine",
-          "category": "Electrical",
-          "desc": "wiring and connections to be done",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_412945"
     }
   ],
   "machineMeta": {
@@ -6282,7 +6283,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
-    "Aurangzeb": "2026-07-22T08:49:37.370Z",
+    "Aurangzeb": "2026-07-22T08:50:12.456Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
