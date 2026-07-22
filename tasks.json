@@ -3347,12 +3347,41 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": "2026-07-20"
+    },
+    {
+      "id": "t1784709625280l2yx",
+      "machine": "Base Coat",
+      "category": "Mechanical",
+      "desc": "Basecoat Dry run",
+      "priority": "High",
+      "progress": 80,
+      "status": "In Progress",
+      "remarks": "",
+      "responsible": "",
+      "updated": "22 Jul 2026",
+      "lastEditedBy": "Aurangzeb",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "2026-07-19",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784709625280lze3",
+      "time": "2026-07-22T08:40:25.280Z",
+      "action": "[Aurangzeb] Added task \"Basecoat Dry run...\" to Base Coat",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1784709625280l2yx"
+      },
+      "taskId": "t1784709625280l2yx"
+    },
     {
       "id": "t1784709342555vwqs",
       "time": "2026-07-22T08:35:42.555Z",
@@ -6005,33 +6034,6 @@
         }
       },
       "taskId": "t_457725"
-    },
-    {
-      "id": "t1780377096959vqh1",
-      "time": "2026-06-02T05:11:36.959Z",
-      "action": "[Aurangzeb] Updated task \"Conveyor installation after ej...\" [Photo added] on Necking",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_569875",
-          "machine": "Necking",
-          "category": "Mechanical",
-          "desc": "Conveyor installation after ejection pipe",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_569875"
     }
   ],
   "machineMeta": {
@@ -6273,7 +6275,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
-    "Aurangzeb": "2026-07-22T08:39:07.795Z",
+    "Aurangzeb": "2026-07-22T08:40:25.280Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
