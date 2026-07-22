@@ -60,17 +60,17 @@
       "category": "Mechanical",
       "desc": "to place and install at designated location",
       "priority": "Medium",
-      "progress": 0,
-      "status": "Not Started",
+      "progress": 70,
+      "status": "In Progress",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "",
-      "updated": "",
+      "updated": "22 Jul 2026",
       "waitingOn": "",
-      "dateStarted": "",
+      "dateStarted": "2026-07-22",
       "dateFinished": "",
-      "lastEditedBy": "",
-      "image": ""
+      "lastEditedBy": "Aurangzeb",
+      "image": null
     },
     {
       "id": "t_330182",
@@ -3282,6 +3282,34 @@
   },
   "activityLog": [
     {
+      "id": "t17847075645673ffb",
+      "time": "2026-07-22T08:06:04.567Z",
+      "action": "[Aurangzeb] Updated task \"to place and install at design...\" [Status: Not Started → In Progress, Progress: 0% → 70%, Date Started updated] on Auto Strapping Machine",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_437972",
+          "machine": "Auto Strapping Machine",
+          "category": "Mechanical",
+          "desc": "to place and install at designated location",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Arsalan",
+          "deadline": "",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "",
+          "image": ""
+        }
+      },
+      "taskId": "t_437972"
+    },
+    {
       "id": "t1784363110334hnk7",
       "time": "2026-07-18T08:25:10.334Z",
       "action": "[Aurangzeb] Updated task \"Heaters to be Replaced...\" [Progress: 80% → 85%] on Washing",
@@ -5979,17 +6007,6 @@
         "taskId": "t1780376886138ucxf"
       },
       "taskId": "t1780376886138ucxf"
-    },
-    {
-      "id": "t1780376845779kywq",
-      "time": "2026-06-02T05:07:25.779Z",
-      "action": "[Aurangzeb] Added task \"Pneumatic piping to be done...\" to Printing",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1780376845779iund"
-      },
-      "taskId": "t1780376845779iund"
     }
   ],
   "machineMeta": {
@@ -6223,7 +6240,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
-    "Aurangzeb": "2026-07-22T08:05:27.315Z",
+    "Aurangzeb": "2026-07-22T08:06:04.567Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
