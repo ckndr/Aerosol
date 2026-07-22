@@ -3388,7 +3388,7 @@
       "id": "t1784709997569l6gd",
       "machine": "Base Coat",
       "category": "Mechanical",
-      "desc": "Basecoat refill mechansim ( pump,sensor, plate) to check and fix",
+      "desc": "Basecoat liquid refill mechansim ( pump,sensor, plate) to check and fix",
       "priority": "High",
       "progress": 10,
       "status": "In Progress",
@@ -3407,6 +3407,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784710033696ahrf",
+      "time": "2026-07-22T08:47:13.696Z",
+      "action": "[Aurangzeb] Updated task \"Basecoat liquid refill mechans...\" on Base Coat",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1784709997569l6gd",
+          "machine": "Base Coat",
+          "category": "Mechanical",
+          "desc": "Basecoat refill mechansim ( pump,sensor, plate) to check and fix",
+          "priority": "High",
+          "progress": 10,
+          "status": "In Progress",
+          "remarks": "",
+          "responsible": "",
+          "updated": "22 Jul 2026",
+          "lastEditedBy": "Aurangzeb",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "2026-07-20",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t1784709997569l6gd"
+    },
     {
       "id": "t1784709997569x8gs",
       "time": "2026-07-22T08:46:37.569Z",
@@ -6011,33 +6039,6 @@
         }
       },
       "taskId": "t_951895"
-    },
-    {
-      "id": "t17803773965464is1",
-      "time": "2026-06-02T05:16:36.546Z",
-      "action": "[Aurangzeb] Updated task \"individual section pipes/ bran...\" [Photo added] on Compressor",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_601008",
-          "machine": "Compressor",
-          "category": "Mechanical",
-          "desc": "individual section pipes/ branches to be supported/fixed/welded",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_601008"
     }
   ],
   "machineMeta": {
@@ -6279,7 +6280,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
-    "Aurangzeb": "2026-07-22T08:46:46.222Z",
+    "Aurangzeb": "2026-07-22T08:47:13.696Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
