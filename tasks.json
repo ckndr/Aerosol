@@ -3292,7 +3292,7 @@
       "waitingOn": "",
       "deadline": "",
       "dateStarted": "",
-      "dateFinished": "2026-07-20"
+      "dateFinished": "2026-07-19"
     },
     {
       "id": "t17847078547104py0",
@@ -3317,6 +3317,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784707901864uejc",
+      "time": "2026-07-22T08:11:41.864Z",
+      "action": "[Aurangzeb] Updated task \"Blower testing/Overhauling, co...\" [Date Finished updated] on Base Coat",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1784707757934pk29",
+          "machine": "Base Coat",
+          "category": "Mechanical",
+          "desc": "Blower testing/Overhauling, connections and fixation",
+          "priority": "High",
+          "progress": 100,
+          "status": "Completed",
+          "remarks": "",
+          "responsible": "",
+          "updated": "22 Jul 2026",
+          "lastEditedBy": "Aurangzeb",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": "2026-07-20"
+        }
+      },
+      "taskId": "t1784707757934pk29"
+    },
     {
       "id": "t1784707854710lu8z",
       "time": "2026-07-22T08:10:54.710Z",
@@ -6000,33 +6028,6 @@
         }
       },
       "taskId": "t_944329"
-    },
-    {
-      "id": "t1780376995269iw2d",
-      "time": "2026-06-02T05:09:55.269Z",
-      "action": "[Aurangzeb] Updated task \"Infeed tray installation from ...\" [Photo added] on Necking",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_944329",
-          "machine": "Necking",
-          "category": "Mechanical",
-          "desc": "Infeed tray installation from feeding unit to necking machine",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_944329"
     }
   ],
   "machineMeta": {
@@ -6260,7 +6261,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
-    "Aurangzeb": "2026-07-22T08:11:27.317Z",
+    "Aurangzeb": "2026-07-22T08:11:41.864Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
