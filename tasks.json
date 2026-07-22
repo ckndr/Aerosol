@@ -3293,12 +3293,41 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": "2026-07-20"
+    },
+    {
+      "id": "t17847078547104py0",
+      "machine": "Base Coat",
+      "category": "Mechanical",
+      "desc": "can transfer star overhauling and fixation",
+      "priority": "High",
+      "progress": 100,
+      "status": "Completed",
+      "remarks": "",
+      "responsible": "",
+      "updated": "22 Jul 2026",
+      "lastEditedBy": "Aurangzeb",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": "2026-07-20"
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784707854710lu8z",
+      "time": "2026-07-22T08:10:54.710Z",
+      "action": "[Aurangzeb] Added task \"can transfer star overhauling ...\" to Base Coat",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "add",
+        "taskId": "t17847078547104py0"
+      },
+      "taskId": "t17847078547104py0"
+    },
     {
       "id": "t1784707757934f1m2",
       "time": "2026-07-22T08:09:17.934Z",
@@ -5998,33 +6027,6 @@
         }
       },
       "taskId": "t_944329"
-    },
-    {
-      "id": "t1780376969293m6jn",
-      "time": "2026-06-02T05:09:29.293Z",
-      "action": "[Aurangzeb] Updated task \"Necking machine — electrical s...\" [Photo added] on Necking",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_974583",
-          "machine": "Necking",
-          "category": "Electrical",
-          "desc": "Necking machine — electrical supply troubleshooting for dry run",
-          "priority": "High",
-          "progress": 20,
-          "status": "In Progress",
-          "responsible": "Arsalan",
-          "remarks": "Interlocking will be redesigned and checked",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_974583"
     }
   ],
   "machineMeta": {
@@ -6258,7 +6260,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
-    "Aurangzeb": "2026-07-22T08:09:27.317Z",
+    "Aurangzeb": "2026-07-22T08:10:54.710Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
