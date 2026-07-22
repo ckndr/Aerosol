@@ -654,17 +654,17 @@
       "category": "Electrical",
       "desc": "White LED lighting for printing and oven area",
       "priority": "Medium",
-      "progress": 0,
-      "status": "Not Started",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Saqib",
       "deadline": "",
       "remarks": "",
-      "updated": "",
+      "updated": "22 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
-      "dateFinished": "",
-      "lastEditedBy": "",
-      "image": ""
+      "dateFinished": "2026-07-21",
+      "lastEditedBy": "Aurangzeb",
+      "image": null
     },
     {
       "id": "t_366746",
@@ -3408,6 +3408,34 @@
   },
   "activityLog": [
     {
+      "id": "t17847101773705tir",
+      "time": "2026-07-22T08:49:37.370Z",
+      "action": "[Aurangzeb] Updated task \"White LED lighting for printin...\" [Status: Not Started → Completed, Progress: 0% → 100%, Date Finished updated] on General",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_357094",
+          "machine": "General",
+          "category": "Electrical",
+          "desc": "White LED lighting for printing and oven area",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Saqib",
+          "deadline": "",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "",
+          "image": ""
+        }
+      },
+      "taskId": "t_357094"
+    },
+    {
       "id": "t1784710132449iaqs",
       "time": "2026-07-22T08:48:52.449Z",
       "action": "[Aurangzeb] Updated task \"PLC installation & termination...\" [Date Finished updated] on Over Varnish",
@@ -6013,33 +6041,6 @@
         }
       },
       "taskId": "t_412945"
-    },
-    {
-      "id": "t17803774795531kau",
-      "time": "2026-06-02T05:17:59.553Z",
-      "action": "[Aurangzeb] Updated task \"Realignment of conveyor to be ...\" [Photo added] on FG Conveyor",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_788726",
-          "machine": "FG Conveyor",
-          "category": "Mechanical",
-          "desc": "Realignment of conveyor to be done as per Lindsay recommendation",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_788726"
     }
   ],
   "machineMeta": {
@@ -6281,7 +6282,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
-    "Aurangzeb": "2026-07-22T08:48:52.449Z",
+    "Aurangzeb": "2026-07-22T08:49:37.370Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
