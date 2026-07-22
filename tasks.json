@@ -3365,12 +3365,41 @@
       "deadline": "",
       "dateStarted": "2026-07-19",
       "dateFinished": ""
+    },
+    {
+      "id": "t1784709783912wgvo",
+      "machine": "Base Coat",
+      "category": "Mechanical",
+      "desc": "Teflon suction grippers to chain mount timing to be set",
+      "priority": "High",
+      "progress": 30,
+      "status": "In Progress",
+      "remarks": "",
+      "responsible": "",
+      "updated": "22 Jul 2026",
+      "lastEditedBy": "Aurangzeb",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "2026-07-19",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784709783912bp8x",
+      "time": "2026-07-22T08:43:03.912Z",
+      "action": "[Aurangzeb] Added task \"Teflon suction grippers to cha...\" to Base Coat",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1784709783912wgvo"
+      },
+      "taskId": "t1784709783912wgvo"
+    },
     {
       "id": "t1784709625280lze3",
       "time": "2026-07-22T08:40:25.280Z",
@@ -6007,33 +6036,6 @@
         }
       },
       "taskId": "t_790598"
-    },
-    {
-      "id": "t1780377133534tlea",
-      "time": "2026-06-02T05:12:13.534Z",
-      "action": "[Aurangzeb] Updated task \"scrap collection tank to insta...\" [Photo added] on Necking",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_457725",
-          "machine": "Necking",
-          "category": "Mechanical",
-          "desc": "scrap collection tank to install from necking",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_457725"
     }
   ],
   "machineMeta": {
@@ -6275,7 +6277,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
-    "Aurangzeb": "2026-07-22T08:42:46.221Z",
+    "Aurangzeb": "2026-07-22T08:43:03.912Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
