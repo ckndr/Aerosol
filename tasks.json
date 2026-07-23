@@ -3491,12 +3491,41 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": "2026-07-22"
+    },
+    {
+      "id": "t1784795136630aqby",
+      "machine": "Over Varnish",
+      "category": "Mechanical",
+      "desc": "Chemical liquid supply pump overall cleaning",
+      "priority": "Medium",
+      "progress": 100,
+      "status": "Completed",
+      "remarks": "",
+      "responsible": "",
+      "updated": "23 Jul 2026",
+      "lastEditedBy": "Aurangzeb",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "2026-07-22",
+      "dateFinished": "2026-07-22"
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784795136630f89j",
+      "time": "2026-07-23T08:25:36.630Z",
+      "action": "[Aurangzeb] Added task \"Chemical liquid supply pump ov...\" to Over Varnish",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1784795136630aqby"
+      },
+      "taskId": "t1784795136630aqby"
+    },
     {
       "id": "t1784795105320docm",
       "time": "2026-07-23T08:25:05.320Z",
@@ -6045,33 +6074,6 @@
         }
       },
       "taskId": "t_581544"
-    },
-    {
-      "id": "t17803780999716xvg",
-      "time": "2026-06-02T05:28:19.971Z",
-      "action": "[Aurangzeb] Updated task \"Tumbler/Mixer wiring and conne...\" [Photo added] on Tumbler",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_163143",
-          "machine": "Tumbler",
-          "category": "Mechanical",
-          "desc": "Tumbler/Mixer wiring and connections to be done",
-          "priority": "High",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_163143"
     }
   ],
   "machineMeta": {
@@ -6313,7 +6315,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
-    "Aurangzeb": "2026-07-23T08:25:05.320Z",
+    "Aurangzeb": "2026-07-23T08:25:36.630Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
