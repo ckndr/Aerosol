@@ -3401,12 +3401,41 @@
       "deadline": "",
       "dateStarted": "2026-07-20",
       "dateFinished": ""
+    },
+    {
+      "id": "t17847945613991jjj",
+      "machine": "FG Conveyor",
+      "category": "Electrical",
+      "desc": "COnveyor motor installation to be done",
+      "priority": "Medium",
+      "progress": 100,
+      "status": "Completed",
+      "remarks": "",
+      "responsible": "",
+      "updated": "23 Jul 2026",
+      "lastEditedBy": "Aurangzeb",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": "2026-07-22"
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784794561399os0w",
+      "time": "2026-07-23T08:16:01.399Z",
+      "action": "[Aurangzeb] Added task \"COnveyor motor installation to...\" to FG Conveyor",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "add",
+        "taskId": "t17847945613991jjj"
+      },
+      "taskId": "t17847945613991jjj"
+    },
     {
       "id": "t1784710236969uyva",
       "time": "2026-07-22T08:50:36.969Z",
@@ -6016,33 +6045,6 @@
         "taskId": "t1780377869043jmxf"
       },
       "taskId": "t1780377869043jmxf"
-    },
-    {
-      "id": "t1780377866951x56m",
-      "time": "2026-06-02T05:24:26.951Z",
-      "action": "[Aurangzeb] Updated task \"Compressor  dryer and auto dra...\" [Photo added] on Compressor",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_145174",
-          "machine": "Compressor",
-          "category": "Electrical",
-          "desc": "Compressor  dryer and auto drain electrical connection",
-          "priority": "High",
-          "progress": 50,
-          "status": "In Progress",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_145174"
     }
   ],
   "machineMeta": {
@@ -6284,7 +6286,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
-    "Aurangzeb": "2026-07-23T08:15:43.146Z",
+    "Aurangzeb": "2026-07-23T08:16:01.399Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
