@@ -3437,12 +3437,41 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t17847947349199cu3",
+      "machine": "Over Varnish",
+      "category": "Mechanical",
+      "desc": "OV cam sensor checking and replacement",
+      "priority": "High",
+      "progress": 100,
+      "status": "Completed",
+      "remarks": "",
+      "responsible": "",
+      "updated": "23 Jul 2026",
+      "lastEditedBy": "Aurangzeb",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": "2026-07-21"
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784794734919nf87",
+      "time": "2026-07-23T08:18:54.919Z",
+      "action": "[Aurangzeb] Added task \"OV cam sensor checking and rep...\" to Over Varnish",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "add",
+        "taskId": "t17847947349199cu3"
+      },
+      "taskId": "t17847947349199cu3"
+    },
     {
       "id": "t1784794602871xnb6",
       "time": "2026-07-23T08:16:42.871Z",
@@ -6037,32 +6066,6 @@
         }
       },
       "taskId": "t_489187"
-    },
-    {
-      "id": "t1780377887486k015",
-      "time": "2026-06-02T05:24:47.486Z",
-      "action": "[Aurangzeb] Deleted task \"Compressor  dryer and auto dra...\" from Compressor",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "delete",
-        "prevTask": {
-          "id": "t1780377869043jmxf",
-          "machine": "Compressor",
-          "category": "Electrical",
-          "desc": "Compressor  dryer and auto drain electrical connection",
-          "priority": "High",
-          "progress": 50,
-          "status": "In Progress",
-          "remarks": "",
-          "responsible": "Arsalan",
-          "updated": "2 Jun 2026",
-          "lastEditedBy": "Aurangzeb",
-          "image": "Photos/Compressor/task_img_1780377857329.jpg",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      }
     }
   ],
   "machineMeta": {
@@ -6304,7 +6307,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
-    "Aurangzeb": "2026-07-23T08:17:43.139Z",
+    "Aurangzeb": "2026-07-23T08:18:54.919Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
