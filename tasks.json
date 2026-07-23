@@ -3419,12 +3419,41 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": "2026-07-22"
+    },
+    {
+      "id": "t17847946028700v6e",
+      "machine": "FG Conveyor",
+      "category": "Electrical",
+      "desc": "Conveyor motor connections pending",
+      "priority": "High",
+      "progress": 0,
+      "status": "In Progress",
+      "remarks": "",
+      "responsible": "",
+      "updated": "23 Jul 2026",
+      "lastEditedBy": "Aurangzeb",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784794602871xnb6",
+      "time": "2026-07-23T08:16:42.871Z",
+      "action": "[Aurangzeb] Added task \"Conveyor motor connections pen...\" to FG Conveyor",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "add",
+        "taskId": "t17847946028700v6e"
+      },
+      "taskId": "t17847946028700v6e"
+    },
     {
       "id": "t1784794561399os0w",
       "time": "2026-07-23T08:16:01.399Z",
@@ -6034,17 +6063,6 @@
           "dateFinished": ""
         }
       }
-    },
-    {
-      "id": "t1780377869043xs6a",
-      "time": "2026-06-02T05:24:29.043Z",
-      "action": "[Aurangzeb] Added task \"Compressor  dryer and auto dra...\" to Compressor",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1780377869043jmxf"
-      },
-      "taskId": "t1780377869043jmxf"
     }
   ],
   "machineMeta": {
@@ -6286,7 +6304,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
-    "Aurangzeb": "2026-07-23T08:16:01.399Z",
+    "Aurangzeb": "2026-07-23T08:16:42.871Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
