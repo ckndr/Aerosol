@@ -3473,12 +3473,41 @@
       "deadline": "",
       "dateStarted": "2026-07-22",
       "dateFinished": ""
+    },
+    {
+      "id": "t1784795105320xl7a",
+      "machine": "Base Coat",
+      "category": "Mechanical",
+      "desc": "Chemical liquid supply pump overall cleaning",
+      "priority": "Medium",
+      "progress": 100,
+      "status": "Completed",
+      "remarks": "",
+      "responsible": "",
+      "updated": "23 Jul 2026",
+      "lastEditedBy": "Aurangzeb",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": "2026-07-22"
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784795105320docm",
+      "time": "2026-07-23T08:25:05.320Z",
+      "action": "[Aurangzeb] Added task \"Chemical liquid supply pump ov...\" to Base Coat",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1784795105320xl7a"
+      },
+      "taskId": "t1784795105320xl7a"
+    },
     {
       "id": "t1784794886030qbyz",
       "time": "2026-07-23T08:21:26.030Z",
@@ -6043,32 +6072,6 @@
         }
       },
       "taskId": "t_163143"
-    },
-    {
-      "id": "t1780378003011o4f0",
-      "time": "2026-06-02T05:26:43.011Z",
-      "action": "[Aurangzeb] Deleted task \"Compressor piping — dryer and ...\" from Compressor",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "delete",
-        "prevTask": {
-          "id": "t_878682",
-          "machine": "Compressor",
-          "category": "Mechanical",
-          "desc": "Compressor piping — dryer and auto drain system",
-          "priority": "High",
-          "progress": 95,
-          "status": "In Progress",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      }
     }
   ],
   "machineMeta": {
@@ -6310,7 +6313,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
-    "Aurangzeb": "2026-07-23T08:23:43.145Z",
+    "Aurangzeb": "2026-07-23T08:25:05.320Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
