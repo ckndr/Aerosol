@@ -3441,7 +3441,7 @@
     {
       "id": "t17847947349199cu3",
       "machine": "Over Varnish",
-      "category": "Mechanical",
+      "category": "Electrical",
       "desc": "OV cam sensor checking and replacement",
       "priority": "High",
       "progress": 100,
@@ -3461,6 +3461,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784794759350m9es",
+      "time": "2026-07-23T08:19:19.350Z",
+      "action": "[Aurangzeb] Updated task \"OV cam sensor checking and rep...\" on Over Varnish",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t17847947349199cu3",
+          "machine": "Over Varnish",
+          "category": "Mechanical",
+          "desc": "OV cam sensor checking and replacement",
+          "priority": "High",
+          "progress": 100,
+          "status": "Completed",
+          "remarks": "",
+          "responsible": "",
+          "updated": "23 Jul 2026",
+          "lastEditedBy": "Aurangzeb",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": "2026-07-21"
+        }
+      },
+      "taskId": "t17847947349199cu3"
+    },
     {
       "id": "t1784794734919nf87",
       "time": "2026-07-23T08:18:54.919Z",
@@ -6039,33 +6067,6 @@
         }
       },
       "taskId": "t_145174"
-    },
-    {
-      "id": "t1780377948067kmku",
-      "time": "2026-06-02T05:25:48.067Z",
-      "action": "[Aurangzeb] Updated task \"dryer wiring and connection to...\" [Photo added] on Compressor",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_489187",
-          "machine": "Compressor",
-          "category": "Electrical",
-          "desc": "dryer wiring and connection to be done.",
-          "priority": "High",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_489187"
     }
   ],
   "machineMeta": {
@@ -6307,7 +6308,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
-    "Aurangzeb": "2026-07-23T08:18:54.919Z",
+    "Aurangzeb": "2026-07-23T08:19:19.351Z",
     "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
