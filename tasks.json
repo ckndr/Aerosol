@@ -6,16 +6,16 @@
       "category": "Electrical",
       "desc": "Dry run",
       "priority": "High",
-      "progress": 100,
-      "status": "Completed",
+      "progress": 80,
+      "status": "In Progress",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "on machine testing",
-      "updated": "24 Jul 2026",
+      "updated": "",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Saqib",
+      "lastEditedBy": "",
       "image": ""
     },
     {
@@ -115,11 +115,11 @@
       "desc": "Fumes collector piping to install",
       "priority": "Medium",
       "progress": 0,
-      "status": "In Progress",
+      "status": "Not Started",
       "responsible": "Saqib",
       "deadline": "2026-06-20",
       "remarks": "",
-      "updated": "24 Jul 2026",
+      "updated": "13 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -533,11 +533,11 @@
       "responsible": "Saqib",
       "deadline": "",
       "remarks": "",
-      "updated": "24 Jul 2026",
+      "updated": "22 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Saqib",
+      "lastEditedBy": "Aurangzeb",
       "image": null
     },
     {
@@ -672,16 +672,16 @@
       "category": "General",
       "desc": "Make stand for all spare rolls",
       "priority": "Medium",
-      "progress": 100,
-      "status": "Completed",
+      "progress": 90,
+      "status": "In Progress",
       "responsible": "Saqib",
       "deadline": "",
       "remarks": "",
-      "updated": "24 Jul 2026",
+      "updated": "22 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Saqib",
+      "lastEditedBy": "Aurangzeb",
       "image": null
     },
     {
@@ -1176,16 +1176,16 @@
       "category": "Mechanical",
       "desc": "to place and install at designated location",
       "priority": "Low",
-      "progress": 100,
-      "status": "Completed",
+      "progress": 0,
+      "status": "Not Started",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "",
-      "updated": "24 Jul 2026",
+      "updated": "",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Saqib",
+      "lastEditedBy": "",
       "image": ""
     },
     {
@@ -1516,19 +1516,19 @@
       "id": "t_476856",
       "machine": "Over Varnish",
       "category": "Mechanical",
-      "desc": "Varnish Dry run",
+      "desc": "Printing Oven Dry run",
       "priority": "High",
       "progress": 0,
       "status": "Not Started",
       "responsible": "Arsalan",
       "deadline": "2026-06-24",
       "remarks": "",
-      "updated": "24 Jul 2026",
+      "updated": "",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Saqib",
-      "image": null
+      "lastEditedBy": "",
+      "image": ""
     },
     {
       "id": "t_309542",
@@ -1770,12 +1770,12 @@
       "category": "Mechanical",
       "desc": "Damping rubber pads over slug feeding tray",
       "priority": "Low",
-      "progress": 100,
-      "status": "Completed",
+      "progress": 80,
+      "status": "In Progress",
       "responsible": "Saqib",
       "deadline": "2026-06-16",
       "remarks": "",
-      "updated": "24 Jul 2026",
+      "updated": "13 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -1824,12 +1824,12 @@
       "category": "Mechanical",
       "desc": "Tools for press machine",
       "priority": "High",
-      "progress": 100,
-      "status": "Completed",
+      "progress": 90,
+      "status": "In Progress",
       "responsible": "Saqib",
       "deadline": "2026-06-16",
       "remarks": "",
-      "updated": "24 Jul 2026",
+      "updated": "13 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -2094,16 +2094,16 @@
       "category": "Mechanical",
       "desc": "Lubrication oil leakages to be rectified",
       "priority": "Medium",
-      "progress": 100,
-      "status": "Completed",
+      "progress": 80,
+      "status": "In Progress",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "",
-      "updated": "24 Jul 2026",
+      "updated": "",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Saqib",
+      "lastEditedBy": "",
       "image": ""
     },
     {
@@ -2112,16 +2112,16 @@
       "category": "Mechanical",
       "desc": "Tripping issue to be rectified",
       "priority": "High",
-      "progress": 100,
-      "status": "Completed",
+      "progress": 10,
+      "status": "In Progress",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "",
-      "updated": "24 Jul 2026",
+      "updated": "",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Saqib",
+      "lastEditedBy": "",
       "image": ""
     },
     {
@@ -2130,16 +2130,16 @@
       "category": "Mechanical",
       "desc": "compartment over feeder to fabricate",
       "priority": "Medium",
-      "progress": 100,
-      "status": "Completed",
+      "progress": 10,
+      "status": "In Progress",
       "responsible": "saqib",
       "deadline": "",
       "remarks": "",
-      "updated": "24 Jul 2026",
+      "updated": "",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Saqib",
+      "lastEditedBy": "",
       "image": ""
     },
     {
@@ -2148,16 +2148,16 @@
       "category": "Mechanical",
       "desc": "Blower installation complete with piping and connections",
       "priority": "Medium",
-      "progress": 100,
-      "status": "Completed",
+      "progress": 90,
+      "status": "In Progress",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "",
-      "updated": "24 Jul 2026",
+      "updated": "",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Saqib",
+      "lastEditedBy": "",
       "image": ""
     },
     {
@@ -2958,16 +2958,16 @@
       "category": "Mechanical",
       "desc": "Washing Machine Dry run",
       "priority": "High",
-      "progress": 100,
-      "status": "Completed",
+      "progress": 0,
+      "status": "In Progress",
       "responsible": "Arsalan",
       "deadline": "2026-06-30",
       "remarks": "",
-      "updated": "24 Jul 2026",
+      "updated": "",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Saqib",
+      "lastEditedBy": "",
       "image": ""
     },
     {
@@ -3102,16 +3102,16 @@
       "category": "Electrical",
       "desc": "Heaters to be Replaced",
       "priority": "High",
-      "progress": 100,
-      "status": "Completed",
+      "progress": 85,
+      "status": "In Progress",
       "responsible": "Arsalan",
       "deadline": "2026-06-30",
       "remarks": "",
-      "updated": "24 Jul 2026",
+      "updated": "18 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Saqib",
+      "lastEditedBy": "Aurangzeb",
       "image": "Photos/Washing/task_img_1780311847804.jpg"
     },
     {
@@ -3509,562 +3509,12 @@
       "deadline": "",
       "dateStarted": "2026-07-22",
       "dateFinished": "2026-07-22"
-    },
-    {
-      "id": "t1784874186411zegf",
-      "machine": "Lacquer Oven",
-      "category": "Mechanical",
-      "desc": "Dry Run with Lacquer",
-      "priority": "High",
-      "progress": 0,
-      "status": "Not Started",
-      "remarks": "",
-      "responsible": "",
-      "updated": "24 Jul 2026",
-      "lastEditedBy": "Saqib",
-      "image": null,
-      "waitingOn": "",
-      "deadline": "",
-      "dateStarted": "",
-      "dateFinished": ""
-    },
-    {
-      "id": "t1784874545898m5ni",
-      "machine": "Decoration Oven",
-      "category": "Mechanical",
-      "desc": "Fumes collector main header and blower installation",
-      "priority": "High",
-      "progress": 100,
-      "status": "Completed",
-      "remarks": "",
-      "responsible": "",
-      "updated": "24 Jul 2026",
-      "lastEditedBy": "Saqib",
-      "image": null,
-      "waitingOn": "",
-      "deadline": "",
-      "dateStarted": "",
-      "dateFinished": ""
-    },
-    {
-      "id": "t1784874703714lyhz",
-      "machine": "Compressor",
-      "category": "Mechanical",
-      "desc": "exhaust piping for compressor",
-      "priority": "High",
-      "progress": 0,
-      "status": "In Progress",
-      "remarks": "",
-      "responsible": "",
-      "updated": "24 Jul 2026",
-      "lastEditedBy": "Saqib",
-      "image": null,
-      "waitingOn": "",
-      "deadline": "",
-      "dateStarted": "",
-      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
-    {
-      "id": "t1784874758146zf1i",
-      "time": "2026-07-24T06:32:38.146Z",
-      "action": "[Saqib] Updated task \"Varnish Dry run...\" on Over Varnish",
-      "user": "Saqib",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_476856",
-          "machine": "Over Varnish",
-          "category": "Mechanical",
-          "desc": "Printing Oven Dry run",
-          "priority": "High",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "deadline": "2026-06-24",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "",
-          "image": ""
-        }
-      },
-      "taskId": "t_476856"
-    },
-    {
-      "id": "t1784874714177avfz",
-      "time": "2026-07-24T06:31:54.177Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t1784874703714lyhz",
-            "machine": "Compressor",
-            "category": "Mechanical",
-            "desc": "exhaust piping for compressor",
-            "priority": "High",
-            "progress": 0,
-            "status": "Not Started",
-            "remarks": "",
-            "responsible": "",
-            "updated": "24 Jul 2026",
-            "lastEditedBy": "Saqib",
-            "image": null,
-            "waitingOn": "",
-            "deadline": "",
-            "dateStarted": "",
-            "dateFinished": ""
-          }
-        ]
-      }
-    },
-    {
-      "id": "t178487470371440rf",
-      "time": "2026-07-24T06:31:43.714Z",
-      "action": "[Saqib] Added task \"exhaust piping for compressor...\" to Compressor",
-      "user": "Saqib",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1784874703714lyhz"
-      },
-      "taskId": "t1784874703714lyhz"
-    },
-    {
-      "id": "t17848745499786s8y",
-      "time": "2026-07-24T06:29:09.978Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t1784874545898m5ni",
-            "machine": "Decoration Oven",
-            "category": "Mechanical",
-            "desc": "Fumes collector main header and blower installation",
-            "priority": "High",
-            "progress": 0,
-            "status": "Not Started",
-            "remarks": "",
-            "responsible": "",
-            "updated": "24 Jul 2026",
-            "lastEditedBy": "Saqib",
-            "image": null,
-            "waitingOn": "",
-            "deadline": "",
-            "dateStarted": "",
-            "dateFinished": ""
-          }
-        ]
-      }
-    },
-    {
-      "id": "t17848745458985brf",
-      "time": "2026-07-24T06:29:05.898Z",
-      "action": "[Saqib] Added task \"Fumes collector main header an...\" to Decoration Oven",
-      "user": "Saqib",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1784874545898m5ni"
-      },
-      "taskId": "t1784874545898m5ni"
-    },
-    {
-      "id": "t1784874485667mr68",
-      "time": "2026-07-24T06:28:05.667Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_278726",
-            "machine": "Accumulator",
-            "category": "Electrical",
-            "desc": "Dry run",
-            "priority": "High",
-            "progress": 80,
-            "status": "In Progress",
-            "responsible": "Arsalan",
-            "deadline": "",
-            "remarks": "on machine testing",
-            "updated": "",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "",
-            "image": ""
-          }
-        ]
-      }
-    },
-    {
-      "id": "t17848743707223pwb",
-      "time": "2026-07-24T06:26:10.722Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_563602",
-            "machine": "Manual Strapping Machine",
-            "category": "Mechanical",
-            "desc": "to place and install at designated location",
-            "priority": "Low",
-            "progress": 0,
-            "status": "Not Started",
-            "responsible": "Arsalan",
-            "deadline": "",
-            "remarks": "",
-            "updated": "",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "",
-            "image": ""
-          }
-        ]
-      }
-    },
-    {
-      "id": "t1784874353001qzi2",
-      "time": "2026-07-24T06:25:53.001Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_186924",
-            "machine": "Base Coat",
-            "category": "Mechanical",
-            "desc": "Fumes collector piping to install",
-            "priority": "Medium",
-            "progress": 0,
-            "status": "Not Started",
-            "responsible": "Saqib",
-            "deadline": "2026-06-20",
-            "remarks": "",
-            "updated": "13 Jul 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Saqib",
-            "image": "Photos/Base Coat/task_img_1780373654935.jpg"
-          }
-        ]
-      }
-    },
-    {
-      "id": "t1784874327290ac95",
-      "time": "2026-07-24T06:25:27.290Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_366746",
-            "machine": "General",
-            "category": "General",
-            "desc": "Make stand for all spare rolls",
-            "priority": "Medium",
-            "progress": 90,
-            "status": "In Progress",
-            "responsible": "Saqib",
-            "deadline": "",
-            "remarks": "",
-            "updated": "22 Jul 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Aurangzeb",
-            "image": null
-          }
-        ]
-      }
-    },
-    {
-      "id": "t1784874322507udwv",
-      "time": "2026-07-24T06:25:22.507Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_963673",
-            "machine": "General",
-            "category": "General",
-            "desc": "Overall machine paint",
-            "priority": "Medium",
-            "progress": 20,
-            "status": "In Progress",
-            "responsible": "Saqib",
-            "deadline": "",
-            "remarks": "",
-            "updated": "22 Jul 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Aurangzeb",
-            "image": null
-          }
-        ]
-      }
-    },
-    {
-      "id": "t17848741864115kyf",
-      "time": "2026-07-24T06:23:06.411Z",
-      "action": "[Saqib] Added task \"Dry Run with Lacquer...\" to Lacquer Oven",
-      "user": "Saqib",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1784874186411zegf"
-      },
-      "taskId": "t1784874186411zegf"
-    },
-    {
-      "id": "t1784874137393bts9",
-      "time": "2026-07-24T06:22:17.393Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_757596",
-            "machine": "Washing",
-            "category": "Mechanical",
-            "desc": "Washing Machine Dry run",
-            "priority": "High",
-            "progress": 0,
-            "status": "In Progress",
-            "responsible": "Arsalan",
-            "deadline": "2026-06-30",
-            "remarks": "",
-            "updated": "",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "",
-            "image": ""
-          }
-        ]
-      }
-    },
-    {
-      "id": "t1784874129321x61y",
-      "time": "2026-07-24T06:22:09.321Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_122888",
-            "machine": "Washing",
-            "category": "Electrical",
-            "desc": "Heaters to be Replaced",
-            "priority": "High",
-            "progress": 85,
-            "status": "In Progress",
-            "responsible": "Arsalan",
-            "deadline": "2026-06-30",
-            "remarks": "",
-            "updated": "18 Jul 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Aurangzeb",
-            "image": "Photos/Washing/task_img_1780311847804.jpg"
-          }
-        ]
-      }
-    },
-    {
-      "id": "t17848741138893blr",
-      "time": "2026-07-24T06:21:53.889Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_471552",
-            "machine": "Press",
-            "category": "Mechanical",
-            "desc": "Damping rubber pads over slug feeding tray",
-            "priority": "Low",
-            "progress": 80,
-            "status": "In Progress",
-            "responsible": "Saqib",
-            "deadline": "2026-06-16",
-            "remarks": "",
-            "updated": "13 Jul 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Saqib",
-            "image": "Photos/Press/task_img_1780310919112.jpg"
-          }
-        ]
-      }
-    },
-    {
-      "id": "t1784874112155h67p",
-      "time": "2026-07-24T06:21:52.155Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t17840224643697qpv",
-            "machine": "Press",
-            "category": "Mechanical",
-            "desc": "Blower installation complete with piping and connections",
-            "priority": "Medium",
-            "progress": 90,
-            "status": "In Progress",
-            "responsible": "Arsalan",
-            "deadline": "",
-            "remarks": "",
-            "updated": "",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "",
-            "image": ""
-          }
-        ]
-      }
-    },
-    {
-      "id": "t1784874092986mz9l",
-      "time": "2026-07-24T06:21:32.986Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_695590",
-            "machine": "Press",
-            "category": "Mechanical",
-            "desc": "Tools for press machine",
-            "priority": "High",
-            "progress": 90,
-            "status": "In Progress",
-            "responsible": "Saqib",
-            "deadline": "2026-06-16",
-            "remarks": "",
-            "updated": "13 Jul 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Saqib",
-            "image": ""
-          }
-        ]
-      }
-    },
-    {
-      "id": "t1784874087203udmt",
-      "time": "2026-07-24T06:21:27.203Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t1784022464368t9dx",
-            "machine": "Press",
-            "category": "Mechanical",
-            "desc": "Lubrication oil leakages to be rectified",
-            "priority": "Medium",
-            "progress": 80,
-            "status": "In Progress",
-            "responsible": "Arsalan",
-            "deadline": "",
-            "remarks": "",
-            "updated": "",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "",
-            "image": ""
-          }
-        ]
-      }
-    },
-    {
-      "id": "t1784874084921uhis",
-      "time": "2026-07-24T06:21:24.921Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t17840224643691nl7",
-            "machine": "Press",
-            "category": "Mechanical",
-            "desc": "Tripping issue to be rectified",
-            "priority": "High",
-            "progress": 10,
-            "status": "In Progress",
-            "responsible": "Arsalan",
-            "deadline": "",
-            "remarks": "",
-            "updated": "",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "",
-            "image": ""
-          }
-        ]
-      }
-    },
-    {
-      "id": "t1784874082252f731",
-      "time": "2026-07-24T06:21:22.252Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t1784022464369cdpd",
-            "machine": "Press",
-            "category": "Mechanical",
-            "desc": "compartment over feeder to fabricate",
-            "priority": "Medium",
-            "progress": 10,
-            "status": "In Progress",
-            "responsible": "saqib",
-            "deadline": "",
-            "remarks": "",
-            "updated": "",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "",
-            "image": ""
-          }
-        ]
-      }
-    },
     {
       "id": "t1784795136630f89j",
       "time": "2026-07-23T08:25:36.630Z",
@@ -6068,6 +5518,562 @@
           }
         ]
       }
+    },
+    {
+      "id": "t1783941707581m7hy",
+      "time": "2026-07-13T11:21:47.581Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_122888",
+            "machine": "Washing",
+            "category": "Electrical",
+            "desc": "Heaters to be Replaced",
+            "priority": "High",
+            "progress": 0,
+            "status": "In Progress",
+            "responsible": "Arsalan",
+            "deadline": "2026-06-30",
+            "remarks": "",
+            "updated": "1 Jun 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Aurangzeb",
+            "image": "Photos/Washing/task_img_1780311847804.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "t1783941697725msr1",
+      "time": "2026-07-13T11:21:37.725Z",
+      "action": "[Saqib] Bulk updated 3 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_467409",
+            "machine": "Trimming",
+            "category": "Mechanical",
+            "desc": "closure of chain/gears/pneumatic assembly with box",
+            "priority": "High",
+            "progress": 0,
+            "status": "Not Started",
+            "responsible": "Arsalan",
+            "deadline": "2026-06-19",
+            "remarks": "",
+            "updated": "1 Jun 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Aurangzeb",
+            "image": "Photos/Trimming/task_img_1780311501816.jpg"
+          },
+          {
+            "id": "t_934362",
+            "machine": "Trimming",
+            "category": "Mechanical",
+            "desc": "pneumatic pressure valve for ejector pressure to install",
+            "priority": "High",
+            "progress": 0,
+            "status": "Not Started",
+            "responsible": "Arsalan",
+            "deadline": "2026-06-19",
+            "remarks": "",
+            "updated": "1 Jun 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Aurangzeb",
+            "image": "Photos/Trimming/task_img_1780311531849.jpg"
+          },
+          {
+            "id": "t_982251",
+            "machine": "Trimming",
+            "category": "Mechanical",
+            "desc": "Fixing of Manual Oil Lubrication System",
+            "priority": "High",
+            "progress": 70,
+            "status": "In Progress",
+            "responsible": "Arsalan",
+            "deadline": "2026-06-19",
+            "remarks": "",
+            "updated": "1 Jun 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Aurangzeb",
+            "image": "Photos/Trimming/task_img_1780311586986.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "t17839416834052d1b",
+      "time": "2026-07-13T11:21:23.405Z",
+      "action": "[Saqib] Added task \"main motor bearing change...\" to Press",
+      "user": "Saqib",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1783941683405i6t5"
+      },
+      "taskId": "t1783941683405i6t5"
+    },
+    {
+      "id": "t1783941619502przy",
+      "time": "2026-07-13T11:20:19.502Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_365723",
+            "machine": "Press",
+            "category": "Electrical",
+            "desc": "SOV pneumatic press clutch service",
+            "priority": "High",
+            "progress": 0,
+            "status": "In Progress",
+            "responsible": "Arsalan",
+            "deadline": "2026-06-16",
+            "remarks": "",
+            "updated": "",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "",
+            "image": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "t1783941613870y0kt",
+      "time": "2026-07-13T11:20:13.870Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_775918",
+            "machine": "Press",
+            "category": "Mechanical",
+            "desc": "Gear Oil Lubrication pumping system setup",
+            "priority": "High",
+            "progress": 100,
+            "status": "In Progress",
+            "responsible": "Arsalan",
+            "deadline": "2026-06-16",
+            "remarks": "",
+            "updated": "1 Jun 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Aurangzeb",
+            "image": "Photos/Press/task_img_1780310940426.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "t1783941611325jkqd",
+      "time": "2026-07-13T11:20:11.325Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_725515",
+            "machine": "Press",
+            "category": "Mechanical",
+            "desc": "Slug tray on/off switch to be installed",
+            "priority": "High",
+            "progress": 0,
+            "status": "In Progress",
+            "responsible": "Arsalan",
+            "deadline": "2026-06-16",
+            "remarks": "",
+            "updated": "1 Jun 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Aurangzeb",
+            "image": "Photos/Press/task_img_1780311001799.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "t1783941602540h8nj",
+      "time": "2026-07-13T11:20:02.540Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_695590",
+            "machine": "Press",
+            "category": "Mechanical",
+            "desc": "Tools for press machine",
+            "priority": "High",
+            "progress": 90,
+            "status": "In Progress",
+            "responsible": "Saqib",
+            "deadline": "2026-06-16",
+            "remarks": "",
+            "updated": "",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "",
+            "image": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "t1783941599364lrtm",
+      "time": "2026-07-13T11:19:59.364Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_471552",
+            "machine": "Press",
+            "category": "Mechanical",
+            "desc": "Damping rubber pads over slug feeding tray",
+            "priority": "Low",
+            "progress": 70,
+            "status": "In Progress",
+            "responsible": "Saqib",
+            "deadline": "2026-06-16",
+            "remarks": "",
+            "updated": "1 Jun 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Aurangzeb",
+            "image": "Photos/Press/task_img_1780310919112.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "t17819378262189uv8",
+      "time": "2026-06-20T06:43:46.218Z",
+      "action": "[Aurangzeb] Updated task \"Operator's Platform...\" [Status: Not Started → In Progress] on General",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_928391",
+          "machine": "General",
+          "category": "Mechanical",
+          "desc": "Operator's Platform",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Saqib",
+          "remarks": "new to be ordered",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "deadline": ""
+        }
+      },
+      "taskId": "t_928391"
+    },
+    {
+      "id": "t1781937795778wqfl",
+      "time": "2026-06-20T06:43:15.778Z",
+      "action": "[Aurangzeb] Updated task \"Big cartons for temporary stor...\" [Status: Not Started → In Progress, Progress: 0% → 50%] on General",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_297932",
+          "machine": "General",
+          "category": "General",
+          "desc": "Big cartons for temporary storage of cans",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Saqib",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "deadline": ""
+        }
+      },
+      "taskId": "t_297932"
+    },
+    {
+      "id": "t1781937776090kmw0",
+      "time": "2026-06-20T06:42:56.090Z",
+      "action": "[Aurangzeb] Deleted task \"Boxes / Bins for cans packing ...\" from General",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "delete",
+        "prevTask": {
+          "id": "t_307331",
+          "machine": "General",
+          "category": "General",
+          "desc": "Boxes / Bins for cans packing (Alpha Container)",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Saqib",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "deadline": ""
+        }
+      }
+    },
+    {
+      "id": "t1781937617234tjhn",
+      "time": "2026-06-20T06:40:17.234Z",
+      "action": "[Aurangzeb] Updated task \"Dust bins for office areas...\" [Status: Not Started → Completed, Progress: 0% → 100%] on General",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_329620",
+          "machine": "General",
+          "category": "General",
+          "desc": "Dust bins for office areas",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Saqib",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "deadline": ""
+        }
+      },
+      "taskId": "t_329620"
+    },
+    {
+      "id": "t1781937605474v4p5",
+      "time": "2026-06-20T06:40:05.474Z",
+      "action": "[Aurangzeb] Updated task \"Baling machine procurement...\" [Status: Not Started → Pending Procurement] on General",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_127701",
+          "machine": "General",
+          "category": "Mechanical",
+          "desc": "Baling machine procurement",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Saqib",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "deadline": ""
+        }
+      },
+      "taskId": "t_127701"
+    },
+    {
+      "id": "t1781937584698821v",
+      "time": "2026-06-20T06:39:44.698Z",
+      "action": "[Aurangzeb] Updated task \"Scoop required for slug handli...\" [Status: Not Started → In Progress] on General",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_533804",
+          "machine": "General",
+          "category": "Mechanical",
+          "desc": "Scoop required for slug handling",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Saqib",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "deadline": ""
+        }
+      },
+      "taskId": "t_533804"
+    },
+    {
+      "id": "t1781937564362i294",
+      "time": "2026-06-20T06:39:24.362Z",
+      "action": "[Aurangzeb] Updated task \"Ensure proper cleaning of enti...\" [Status: Not Started → In Progress, Progress: 0% → 40%] on General",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_791541",
+          "machine": "General",
+          "category": "General",
+          "desc": "Ensure proper cleaning of entire machine",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Saqib",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "deadline": ""
+        }
+      },
+      "taskId": "t_791541"
+    },
+    {
+      "id": "t1781937208691vxdx",
+      "time": "2026-06-20T06:33:28.691Z",
+      "action": "[Aurangzeb] Updated task \"Oven Dry run...\" [Status: Completed → Not Started, Progress: 100% → 0%] on Decoration Oven",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_325587",
+          "machine": "Decoration Oven",
+          "category": "General",
+          "desc": "Lacquer Oven Dry run",
+          "priority": "High",
+          "progress": 100,
+          "status": "Completed",
+          "responsible": "Arsalan",
+          "remarks": "Cleaning in progress & Heater testing in progress",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "deadline": ""
+        }
+      },
+      "taskId": "t_325587"
+    },
+    {
+      "id": "t1781936546211tvkb",
+      "time": "2026-06-20T06:22:26.211Z",
+      "action": "[Aurangzeb] Updated task \"dryer wiring and connection to...\" [Status: Not Started → Completed, Progress: 0% → 100%] on Compressor",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_489187",
+          "machine": "Compressor",
+          "category": "Electrical",
+          "desc": "dryer wiring and connection to be done.",
+          "priority": "High",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Arsalan",
+          "remarks": "",
+          "updated": "2 Jun 2026",
+          "waitingOn": "",
+          "image": "Photos/Compressor/task_img_1780377942805.jpg",
+          "lastEditedBy": "Aurangzeb",
+          "dateStarted": "",
+          "dateFinished": "",
+          "deadline": ""
+        }
+      },
+      "taskId": "t_489187"
+    },
+    {
+      "id": "t1781936531699wes5",
+      "time": "2026-06-20T06:22:11.699Z",
+      "action": "[Aurangzeb] Updated task \"Compressor  dryer and auto dra...\" [Status: In Progress → Completed, Progress: 50% → 100%] on Compressor",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_145174",
+          "machine": "Compressor",
+          "category": "Electrical",
+          "desc": "Compressor  dryer and auto drain electrical connection",
+          "priority": "High",
+          "progress": 50,
+          "status": "In Progress",
+          "responsible": "Arsalan",
+          "remarks": "",
+          "updated": "2 Jun 2026",
+          "waitingOn": "",
+          "image": "Photos/Compressor/task_img_1780377967439.jpg",
+          "lastEditedBy": "Aurangzeb",
+          "dateStarted": "",
+          "dateFinished": "",
+          "deadline": ""
+        }
+      },
+      "taskId": "t_145174"
+    },
+    {
+      "id": "t17803781316997ath",
+      "time": "2026-06-02T05:28:51.699Z",
+      "action": "[Aurangzeb] Updated task \"Tumbler/Mixer installation on ...\" [Photo added] on Tumbler",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_581544",
+          "machine": "Tumbler",
+          "category": "Mechanical",
+          "desc": "Tumbler/Mixer installation on platform",
+          "priority": "High",
+          "progress": 50,
+          "status": "In Progress",
+          "responsible": "Arsalan",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "image": "",
+          "lastEditedBy": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t_581544"
     }
   ],
   "machineMeta": {
@@ -6271,10 +6277,6 @@
   },
   "loginHistory": [
     {
-      "name": "Saqib",
-      "time": "2026-07-24T06:21:07.576Z"
-    },
-    {
       "name": "Aurangzeb",
       "time": "2026-07-22T08:31:06.453Z"
     },
@@ -6313,7 +6315,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
-    "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-24T07:48:27.120Z"
+    "Aurangzeb": "2026-07-24T07:50:14.628Z",
+    "Saqib": "2026-07-13T11:29:53.791Z"
   }
 }
