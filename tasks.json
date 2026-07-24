@@ -115,11 +115,11 @@
       "desc": "Fumes collector piping to install",
       "priority": "Medium",
       "progress": 0,
-      "status": "Not Started",
+      "status": "In Progress",
       "responsible": "Saqib",
       "deadline": "2026-06-20",
       "remarks": "",
-      "updated": "13 Jul 2026",
+      "updated": "24 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -3534,6 +3534,35 @@
   },
   "activityLog": [
     {
+      "id": "t1784874353001qzi2",
+      "time": "2026-07-24T06:25:53.001Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_186924",
+            "machine": "Base Coat",
+            "category": "Mechanical",
+            "desc": "Fumes collector piping to install",
+            "priority": "Medium",
+            "progress": 0,
+            "status": "Not Started",
+            "responsible": "Saqib",
+            "deadline": "2026-06-20",
+            "remarks": "",
+            "updated": "13 Jul 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Saqib",
+            "image": "Photos/Base Coat/task_img_1780373654935.jpg"
+          }
+        ]
+      }
+    },
+    {
       "id": "t1784874327290ac95",
       "time": "2026-07-24T06:25:27.290Z",
       "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
@@ -6058,35 +6087,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1783941599364lrtm",
-      "time": "2026-07-13T11:19:59.364Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_471552",
-            "machine": "Press",
-            "category": "Mechanical",
-            "desc": "Damping rubber pads over slug feeding tray",
-            "priority": "Low",
-            "progress": 70,
-            "status": "In Progress",
-            "responsible": "Saqib",
-            "deadline": "2026-06-16",
-            "remarks": "",
-            "updated": "1 Jun 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Aurangzeb",
-            "image": "Photos/Press/task_img_1780310919112.jpg"
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6333,6 +6333,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-24T06:25:43.961Z"
+    "Saqib": "2026-07-24T06:25:53.001Z"
   }
 }
