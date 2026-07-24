@@ -2112,16 +2112,16 @@
       "category": "Mechanical",
       "desc": "Tripping issue to be rectified",
       "priority": "High",
-      "progress": 10,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "",
-      "updated": "",
+      "updated": "24 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "",
+      "lastEditedBy": "Saqib",
       "image": ""
     },
     {
@@ -3515,6 +3515,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784874084921uhis",
+      "time": "2026-07-24T06:21:24.921Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t17840224643691nl7",
+            "machine": "Press",
+            "category": "Mechanical",
+            "desc": "Tripping issue to be rectified",
+            "priority": "High",
+            "progress": 10,
+            "status": "In Progress",
+            "responsible": "Arsalan",
+            "deadline": "",
+            "remarks": "",
+            "updated": "",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "",
+            "image": ""
+          }
+        ]
+      }
+    },
     {
       "id": "t1784874082252f731",
       "time": "2026-07-24T06:21:22.252Z",
@@ -6048,34 +6077,6 @@
         }
       },
       "taskId": "t_489187"
-    },
-    {
-      "id": "t1781936531699wes5",
-      "time": "2026-06-20T06:22:11.699Z",
-      "action": "[Aurangzeb] Updated task \"Compressor  dryer and auto dra...\" [Status: In Progress → Completed, Progress: 50% → 100%] on Compressor",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_145174",
-          "machine": "Compressor",
-          "category": "Electrical",
-          "desc": "Compressor  dryer and auto drain electrical connection",
-          "priority": "High",
-          "progress": 50,
-          "status": "In Progress",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "2 Jun 2026",
-          "waitingOn": "",
-          "image": "Photos/Compressor/task_img_1780377967439.jpg",
-          "lastEditedBy": "Aurangzeb",
-          "dateStarted": "",
-          "dateFinished": "",
-          "deadline": ""
-        }
-      },
-      "taskId": "t_145174"
     }
   ],
   "machineMeta": {
@@ -6322,6 +6323,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-24T06:21:22.252Z"
+    "Saqib": "2026-07-24T06:21:24.921Z"
   }
 }
