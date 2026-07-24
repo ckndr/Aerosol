@@ -2130,16 +2130,16 @@
       "category": "Mechanical",
       "desc": "compartment over feeder to fabricate",
       "priority": "Medium",
-      "progress": 10,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "saqib",
       "deadline": "",
       "remarks": "",
-      "updated": "",
+      "updated": "24 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "",
+      "lastEditedBy": "Saqib",
       "image": ""
     },
     {
@@ -3515,6 +3515,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784874082252f731",
+      "time": "2026-07-24T06:21:22.252Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t1784022464369cdpd",
+            "machine": "Press",
+            "category": "Mechanical",
+            "desc": "compartment over feeder to fabricate",
+            "priority": "Medium",
+            "progress": 10,
+            "status": "In Progress",
+            "responsible": "saqib",
+            "deadline": "",
+            "remarks": "",
+            "updated": "",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "",
+            "image": ""
+          }
+        ]
+      }
+    },
     {
       "id": "t1784795136630f89j",
       "time": "2026-07-23T08:25:36.630Z",
@@ -6047,33 +6076,6 @@
         }
       },
       "taskId": "t_145174"
-    },
-    {
-      "id": "t17803781316997ath",
-      "time": "2026-06-02T05:28:51.699Z",
-      "action": "[Aurangzeb] Updated task \"Tumbler/Mixer installation on ...\" [Photo added] on Tumbler",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_581544",
-          "machine": "Tumbler",
-          "category": "Mechanical",
-          "desc": "Tumbler/Mixer installation on platform",
-          "priority": "High",
-          "progress": 50,
-          "status": "In Progress",
-          "responsible": "Arsalan",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t_581544"
     }
   ],
   "machineMeta": {
@@ -6320,6 +6322,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-24T06:21:07.576Z"
+    "Saqib": "2026-07-24T06:21:22.252Z"
   }
 }
