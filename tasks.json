@@ -6,16 +6,16 @@
       "category": "Electrical",
       "desc": "Dry run",
       "priority": "High",
-      "progress": 80,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "on machine testing",
-      "updated": "",
+      "updated": "24 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "",
+      "lastEditedBy": "Saqib",
       "image": ""
     },
     {
@@ -3534,6 +3534,35 @@
   },
   "activityLog": [
     {
+      "id": "t1784874485667mr68",
+      "time": "2026-07-24T06:28:05.667Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_278726",
+            "machine": "Accumulator",
+            "category": "Electrical",
+            "desc": "Dry run",
+            "priority": "High",
+            "progress": 80,
+            "status": "In Progress",
+            "responsible": "Arsalan",
+            "deadline": "",
+            "remarks": "on machine testing",
+            "updated": "",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "",
+            "image": ""
+          }
+        ]
+      }
+    },
+    {
       "id": "t17848743707223pwb",
       "time": "2026-07-24T06:26:10.722Z",
       "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
@@ -6058,35 +6087,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1783941611325jkqd",
-      "time": "2026-07-13T11:20:11.325Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_725515",
-            "machine": "Press",
-            "category": "Mechanical",
-            "desc": "Slug tray on/off switch to be installed",
-            "priority": "High",
-            "progress": 0,
-            "status": "In Progress",
-            "responsible": "Arsalan",
-            "deadline": "2026-06-16",
-            "remarks": "",
-            "updated": "1 Jun 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Aurangzeb",
-            "image": "Photos/Press/task_img_1780311001799.jpg"
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6333,6 +6333,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-24T06:27:43.959Z"
+    "Saqib": "2026-07-24T06:28:05.667Z"
   }
 }
