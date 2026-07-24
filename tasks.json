@@ -3102,16 +3102,16 @@
       "category": "Electrical",
       "desc": "Heaters to be Replaced",
       "priority": "High",
-      "progress": 85,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "2026-06-30",
       "remarks": "",
-      "updated": "18 Jul 2026",
+      "updated": "24 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Aurangzeb",
+      "lastEditedBy": "Saqib",
       "image": "Photos/Washing/task_img_1780311847804.jpg"
     },
     {
@@ -3515,6 +3515,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784874129321x61y",
+      "time": "2026-07-24T06:22:09.321Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_122888",
+            "machine": "Washing",
+            "category": "Electrical",
+            "desc": "Heaters to be Replaced",
+            "priority": "High",
+            "progress": 85,
+            "status": "In Progress",
+            "responsible": "Arsalan",
+            "deadline": "2026-06-30",
+            "remarks": "",
+            "updated": "18 Jul 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Aurangzeb",
+            "image": "Photos/Washing/task_img_1780311847804.jpg"
+          }
+        ]
+      }
+    },
     {
       "id": "t17848741138893blr",
       "time": "2026-07-24T06:21:53.889Z",
@@ -6053,34 +6082,6 @@
         }
       },
       "taskId": "t_329620"
-    },
-    {
-      "id": "t1781937605474v4p5",
-      "time": "2026-06-20T06:40:05.474Z",
-      "action": "[Aurangzeb] Updated task \"Baling machine procurement...\" [Status: Not Started → Pending Procurement] on General",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_127701",
-          "machine": "General",
-          "category": "Mechanical",
-          "desc": "Baling machine procurement",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Saqib",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "deadline": ""
-        }
-      },
-      "taskId": "t_127701"
     }
   ],
   "machineMeta": {
@@ -6327,6 +6328,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-24T06:21:53.889Z"
+    "Saqib": "2026-07-24T06:22:09.321Z"
   }
 }
