@@ -2958,16 +2958,16 @@
       "category": "Mechanical",
       "desc": "Washing Machine Dry run",
       "priority": "High",
-      "progress": 0,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "2026-06-30",
       "remarks": "",
-      "updated": "",
+      "updated": "24 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "",
+      "lastEditedBy": "Saqib",
       "image": ""
     },
     {
@@ -3515,6 +3515,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784874137393bts9",
+      "time": "2026-07-24T06:22:17.393Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_757596",
+            "machine": "Washing",
+            "category": "Mechanical",
+            "desc": "Washing Machine Dry run",
+            "priority": "High",
+            "progress": 0,
+            "status": "In Progress",
+            "responsible": "Arsalan",
+            "deadline": "2026-06-30",
+            "remarks": "",
+            "updated": "",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "",
+            "image": ""
+          }
+        ]
+      }
+    },
     {
       "id": "t1784874129321x61y",
       "time": "2026-07-24T06:22:09.321Z",
@@ -6054,34 +6083,6 @@
           "deadline": ""
         }
       }
-    },
-    {
-      "id": "t1781937617234tjhn",
-      "time": "2026-06-20T06:40:17.234Z",
-      "action": "[Aurangzeb] Updated task \"Dust bins for office areas...\" [Status: Not Started → Completed, Progress: 0% → 100%] on General",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_329620",
-          "machine": "General",
-          "category": "General",
-          "desc": "Dust bins for office areas",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Saqib",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "deadline": ""
-        }
-      },
-      "taskId": "t_329620"
     }
   ],
   "machineMeta": {
@@ -6328,6 +6329,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-24T06:22:09.321Z"
+    "Saqib": "2026-07-24T06:22:17.393Z"
   }
 }
