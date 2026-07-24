@@ -2148,16 +2148,16 @@
       "category": "Mechanical",
       "desc": "Blower installation complete with piping and connections",
       "priority": "Medium",
-      "progress": 90,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "",
-      "updated": "",
+      "updated": "24 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "",
+      "lastEditedBy": "Saqib",
       "image": ""
     },
     {
@@ -3515,6 +3515,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784874112155h67p",
+      "time": "2026-07-24T06:21:52.155Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t17840224643697qpv",
+            "machine": "Press",
+            "category": "Mechanical",
+            "desc": "Blower installation complete with piping and connections",
+            "priority": "Medium",
+            "progress": 90,
+            "status": "In Progress",
+            "responsible": "Arsalan",
+            "deadline": "",
+            "remarks": "",
+            "updated": "",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "",
+            "image": ""
+          }
+        ]
+      }
+    },
     {
       "id": "t1784874092986mz9l",
       "time": "2026-07-24T06:21:32.986Z",
@@ -6051,34 +6080,6 @@
         }
       },
       "taskId": "t_533804"
-    },
-    {
-      "id": "t1781937564362i294",
-      "time": "2026-06-20T06:39:24.362Z",
-      "action": "[Aurangzeb] Updated task \"Ensure proper cleaning of enti...\" [Status: Not Started → In Progress, Progress: 0% → 40%] on General",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_791541",
-          "machine": "General",
-          "category": "General",
-          "desc": "Ensure proper cleaning of entire machine",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Saqib",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "deadline": ""
-        }
-      },
-      "taskId": "t_791541"
     }
   ],
   "machineMeta": {
@@ -6325,6 +6326,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-24T06:21:32.986Z"
+    "Saqib": "2026-07-24T06:21:52.155Z"
   }
 }
