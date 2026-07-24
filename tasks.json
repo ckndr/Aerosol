@@ -1824,12 +1824,12 @@
       "category": "Mechanical",
       "desc": "Tools for press machine",
       "priority": "High",
-      "progress": 90,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Saqib",
       "deadline": "2026-06-16",
       "remarks": "",
-      "updated": "13 Jul 2026",
+      "updated": "24 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -3515,6 +3515,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784874092986mz9l",
+      "time": "2026-07-24T06:21:32.986Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_695590",
+            "machine": "Press",
+            "category": "Mechanical",
+            "desc": "Tools for press machine",
+            "priority": "High",
+            "progress": 90,
+            "status": "In Progress",
+            "responsible": "Saqib",
+            "deadline": "2026-06-16",
+            "remarks": "",
+            "updated": "13 Jul 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Saqib",
+            "image": ""
+          }
+        ]
+      }
+    },
     {
       "id": "t1784874087203udmt",
       "time": "2026-07-24T06:21:27.203Z",
@@ -6050,34 +6079,6 @@
         }
       },
       "taskId": "t_791541"
-    },
-    {
-      "id": "t1781937208691vxdx",
-      "time": "2026-06-20T06:33:28.691Z",
-      "action": "[Aurangzeb] Updated task \"Oven Dry run...\" [Status: Completed → Not Started, Progress: 100% → 0%] on Decoration Oven",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_325587",
-          "machine": "Decoration Oven",
-          "category": "General",
-          "desc": "Lacquer Oven Dry run",
-          "priority": "High",
-          "progress": 100,
-          "status": "Completed",
-          "responsible": "Arsalan",
-          "remarks": "Cleaning in progress & Heater testing in progress",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "deadline": ""
-        }
-      },
-      "taskId": "t_325587"
     }
   ],
   "machineMeta": {
@@ -6324,6 +6325,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-24T06:21:27.203Z"
+    "Saqib": "2026-07-24T06:21:32.986Z"
   }
 }
