@@ -1516,19 +1516,19 @@
       "id": "t_476856",
       "machine": "Over Varnish",
       "category": "Mechanical",
-      "desc": "Printing Oven Dry run",
+      "desc": "Varnish Dry run",
       "priority": "High",
       "progress": 0,
       "status": "Not Started",
       "responsible": "Arsalan",
       "deadline": "2026-06-24",
       "remarks": "",
-      "updated": "",
+      "updated": "24 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "",
-      "image": ""
+      "lastEditedBy": "Saqib",
+      "image": null
     },
     {
       "id": "t_309542",
@@ -3569,6 +3569,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784874758146zf1i",
+      "time": "2026-07-24T06:32:38.146Z",
+      "action": "[Saqib] Updated task \"Varnish Dry run...\" on Over Varnish",
+      "user": "Saqib",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_476856",
+          "machine": "Over Varnish",
+          "category": "Mechanical",
+          "desc": "Printing Oven Dry run",
+          "priority": "High",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Arsalan",
+          "deadline": "2026-06-24",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "",
+          "image": ""
+        }
+      },
+      "taskId": "t_476856"
+    },
     {
       "id": "t1784874714177avfz",
       "time": "2026-07-24T06:31:54.177Z",
@@ -6040,35 +6068,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1783941707581m7hy",
-      "time": "2026-07-13T11:21:47.581Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_122888",
-            "machine": "Washing",
-            "category": "Electrical",
-            "desc": "Heaters to be Replaced",
-            "priority": "High",
-            "progress": 0,
-            "status": "In Progress",
-            "responsible": "Arsalan",
-            "deadline": "2026-06-30",
-            "remarks": "",
-            "updated": "1 Jun 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Aurangzeb",
-            "image": "Photos/Washing/task_img_1780311847804.jpg"
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6315,6 +6314,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-24T06:31:54.177Z"
+    "Saqib": "2026-07-24T06:32:38.146Z"
   }
 }
