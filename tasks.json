@@ -1212,12 +1212,12 @@
       "category": "Mechanical",
       "desc": "Infeed tray installation from feeding unit to necking machine",
       "priority": "Medium",
-      "progress": 0,
-      "status": "Not Started",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "",
-      "updated": "2 Jun 2026",
+      "updated": "24 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -2074,14 +2074,14 @@
       "id": "t178402246436679mb",
       "machine": "Press",
       "category": "Electrical",
-      "desc": "SOV coil pneumatic press clutch",
+      "desc": "SOV Valve pneumatic press clutch",
       "priority": "Low",
       "progress": 0,
       "status": "Pending Procurement",
       "responsible": "Saqib",
       "deadline": "2026-06-16",
       "remarks": "",
-      "updated": "18 Jul 2026",
+      "updated": "24 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -3569,6 +3569,62 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784885417165hyol",
+      "time": "2026-07-24T09:30:17.165Z",
+      "action": "[Aurangzeb] Updated task \"SOV Valve pneumatic press clut...\" on Press",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t178402246436679mb",
+          "machine": "Press",
+          "category": "Electrical",
+          "desc": "SOV coil pneumatic press clutch",
+          "priority": "Low",
+          "progress": 0,
+          "status": "Pending Procurement",
+          "responsible": "Saqib",
+          "deadline": "2026-06-16",
+          "remarks": "",
+          "updated": "18 Jul 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": null
+        }
+      },
+      "taskId": "t178402246436679mb"
+    },
+    {
+      "id": "t1784885256814s3s5",
+      "time": "2026-07-24T09:27:36.814Z",
+      "action": "[Aurangzeb] Updated task \"Infeed tray installation from ...\" [Status: Not Started → Completed, Progress: 0% → 100%] on Necking",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_944329",
+          "machine": "Necking",
+          "category": "Mechanical",
+          "desc": "Infeed tray installation from feeding unit to necking machine",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Arsalan",
+          "deadline": "",
+          "remarks": "",
+          "updated": "2 Jun 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": "Photos/Necking/task_img_1780377017571.jpg"
+        }
+      },
+      "taskId": "t_944329"
+    },
     {
       "id": "t1784874758146zf1i",
       "time": "2026-07-24T06:32:38.146Z",
@@ -5992,82 +6048,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1783941730452an26",
-      "time": "2026-07-13T11:22:10.452Z",
-      "action": "[Saqib] Bulk updated 2 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t17821144436985mrb",
-            "machine": "Lacquer",
-            "category": "Electrical",
-            "desc": "Spray guns spray timings to be set",
-            "priority": "Medium",
-            "progress": 0,
-            "status": "Not Started",
-            "responsible": "Arsalan",
-            "deadline": "2026-06-15",
-            "remarks": "",
-            "updated": "",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "",
-            "image": ""
-          },
-          {
-            "id": "t1782114443698qkok",
-            "machine": "Lacquer",
-            "category": "Mechanical",
-            "desc": "Cans In-feed conveyor chain rods to procure and install",
-            "priority": "Medium",
-            "progress": 0,
-            "status": "Not Started",
-            "responsible": "Saqib",
-            "deadline": "2026-06-15",
-            "remarks": "",
-            "updated": "",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "",
-            "image": ""
-          }
-        ]
-      }
-    },
-    {
-      "id": "t1783941712429bz88",
-      "time": "2026-07-13T11:21:52.429Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_788779",
-            "machine": "Washing",
-            "category": "Mechanical",
-            "desc": "Inspect all rubber pipes — replace if damaged",
-            "priority": "High",
-            "progress": 0,
-            "status": "Not Started",
-            "responsible": "Arsalan",
-            "deadline": "2026-06-30",
-            "remarks": "",
-            "updated": "1 Jun 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Aurangzeb",
-            "image": "Photos/Washing/task_img_1780312620376.jpg"
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6271,6 +6251,10 @@
   },
   "loginHistory": [
     {
+      "name": "Aurangzeb",
+      "time": "2026-07-24T09:26:25.662Z"
+    },
+    {
       "name": "Saqib",
       "time": "2026-07-24T06:21:07.576Z"
     },
@@ -6313,7 +6297,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
-    "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-24T09:28:27.126Z"
+    "Aurangzeb": "2026-07-24T09:30:17.165Z",
+    "Saqib": "2026-07-24T09:24:27.123Z"
   }
 }
