@@ -533,11 +533,11 @@
       "responsible": "Saqib",
       "deadline": "",
       "remarks": "",
-      "updated": "22 Jul 2026",
+      "updated": "24 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Aurangzeb",
+      "lastEditedBy": "Saqib",
       "image": null
     },
     {
@@ -3534,6 +3534,35 @@
   },
   "activityLog": [
     {
+      "id": "t1784874322507udwv",
+      "time": "2026-07-24T06:25:22.507Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_963673",
+            "machine": "General",
+            "category": "General",
+            "desc": "Overall machine paint",
+            "priority": "Medium",
+            "progress": 20,
+            "status": "In Progress",
+            "responsible": "Saqib",
+            "deadline": "",
+            "remarks": "",
+            "updated": "22 Jul 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Aurangzeb",
+            "image": null
+          }
+        ]
+      }
+    },
+    {
       "id": "t17848741864115kyf",
       "time": "2026-07-24T06:23:06.411Z",
       "action": "[Saqib] Added task \"Dry Run with Lacquer...\" to Lacquer Oven",
@@ -6057,34 +6086,6 @@
         }
       },
       "taskId": "t_928391"
-    },
-    {
-      "id": "t1781937795778wqfl",
-      "time": "2026-06-20T06:43:15.778Z",
-      "action": "[Aurangzeb] Updated task \"Big cartons for temporary stor...\" [Status: Not Started → In Progress, Progress: 0% → 50%] on General",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_297932",
-          "machine": "General",
-          "category": "General",
-          "desc": "Big cartons for temporary storage of cans",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Saqib",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "deadline": ""
-        }
-      },
-      "taskId": "t_297932"
     }
   ],
   "machineMeta": {
@@ -6331,6 +6332,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-24T06:23:43.962Z"
+    "Saqib": "2026-07-24T06:25:22.507Z"
   }
 }
