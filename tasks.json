@@ -3527,12 +3527,41 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t1784874545898m5ni",
+      "machine": "Decoration Oven",
+      "category": "Mechanical",
+      "desc": "Fumes collector main header and blower installation",
+      "priority": "High",
+      "progress": 0,
+      "status": "Not Started",
+      "remarks": "",
+      "responsible": "",
+      "updated": "24 Jul 2026",
+      "lastEditedBy": "Saqib",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17848745458985brf",
+      "time": "2026-07-24T06:29:05.898Z",
+      "action": "[Saqib] Added task \"Fumes collector main header an...\" to Decoration Oven",
+      "user": "Saqib",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1784874545898m5ni"
+      },
+      "taskId": "t1784874545898m5ni"
+    },
     {
       "id": "t1784874485667mr68",
       "time": "2026-07-24T06:28:05.667Z",
@@ -6058,35 +6087,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1783941613870y0kt",
-      "time": "2026-07-13T11:20:13.870Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_775918",
-            "machine": "Press",
-            "category": "Mechanical",
-            "desc": "Gear Oil Lubrication pumping system setup",
-            "priority": "High",
-            "progress": 100,
-            "status": "In Progress",
-            "responsible": "Arsalan",
-            "deadline": "2026-06-16",
-            "remarks": "",
-            "updated": "1 Jun 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Aurangzeb",
-            "image": "Photos/Press/task_img_1780310940426.jpg"
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6333,6 +6333,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-24T06:28:05.667Z"
+    "Saqib": "2026-07-24T06:29:05.898Z"
   }
 }
