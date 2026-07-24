@@ -3553,7 +3553,7 @@
       "desc": "exhaust piping for compressor",
       "priority": "High",
       "progress": 0,
-      "status": "Not Started",
+      "status": "In Progress",
       "remarks": "",
       "responsible": "",
       "updated": "24 Jul 2026",
@@ -3569,6 +3569,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784874714177avfz",
+      "time": "2026-07-24T06:31:54.177Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t1784874703714lyhz",
+            "machine": "Compressor",
+            "category": "Mechanical",
+            "desc": "exhaust piping for compressor",
+            "priority": "High",
+            "progress": 0,
+            "status": "Not Started",
+            "remarks": "",
+            "responsible": "",
+            "updated": "24 Jul 2026",
+            "lastEditedBy": "Saqib",
+            "image": null,
+            "waitingOn": "",
+            "deadline": "",
+            "dateStarted": "",
+            "dateFinished": ""
+          }
+        ]
+      }
+    },
     {
       "id": "t178487470371440rf",
       "time": "2026-07-24T06:31:43.714Z",
@@ -6040,71 +6069,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1783941697725msr1",
-      "time": "2026-07-13T11:21:37.725Z",
-      "action": "[Saqib] Bulk updated 3 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_467409",
-            "machine": "Trimming",
-            "category": "Mechanical",
-            "desc": "closure of chain/gears/pneumatic assembly with box",
-            "priority": "High",
-            "progress": 0,
-            "status": "Not Started",
-            "responsible": "Arsalan",
-            "deadline": "2026-06-19",
-            "remarks": "",
-            "updated": "1 Jun 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Aurangzeb",
-            "image": "Photos/Trimming/task_img_1780311501816.jpg"
-          },
-          {
-            "id": "t_934362",
-            "machine": "Trimming",
-            "category": "Mechanical",
-            "desc": "pneumatic pressure valve for ejector pressure to install",
-            "priority": "High",
-            "progress": 0,
-            "status": "Not Started",
-            "responsible": "Arsalan",
-            "deadline": "2026-06-19",
-            "remarks": "",
-            "updated": "1 Jun 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Aurangzeb",
-            "image": "Photos/Trimming/task_img_1780311531849.jpg"
-          },
-          {
-            "id": "t_982251",
-            "machine": "Trimming",
-            "category": "Mechanical",
-            "desc": "Fixing of Manual Oil Lubrication System",
-            "priority": "High",
-            "progress": 70,
-            "status": "In Progress",
-            "responsible": "Arsalan",
-            "deadline": "2026-06-19",
-            "remarks": "",
-            "updated": "1 Jun 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Aurangzeb",
-            "image": "Photos/Trimming/task_img_1780311586986.jpg"
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6351,6 +6315,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-24T06:31:43.959Z"
+    "Saqib": "2026-07-24T06:31:54.177Z"
   }
 }
