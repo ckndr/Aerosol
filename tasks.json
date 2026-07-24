@@ -3509,12 +3509,41 @@
       "deadline": "",
       "dateStarted": "2026-07-22",
       "dateFinished": "2026-07-22"
+    },
+    {
+      "id": "t1784874186411zegf",
+      "machine": "Lacquer Oven",
+      "category": "Mechanical",
+      "desc": "Dry Run with Lacquer",
+      "priority": "High",
+      "progress": 0,
+      "status": "Not Started",
+      "remarks": "",
+      "responsible": "",
+      "updated": "24 Jul 2026",
+      "lastEditedBy": "Saqib",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17848741864115kyf",
+      "time": "2026-07-24T06:23:06.411Z",
+      "action": "[Saqib] Added task \"Dry Run with Lacquer...\" to Lacquer Oven",
+      "user": "Saqib",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1784874186411zegf"
+      },
+      "taskId": "t1784874186411zegf"
+    },
     {
       "id": "t1784874137393bts9",
       "time": "2026-07-24T06:22:17.393Z",
@@ -6056,33 +6085,6 @@
         }
       },
       "taskId": "t_297932"
-    },
-    {
-      "id": "t1781937776090kmw0",
-      "time": "2026-06-20T06:42:56.090Z",
-      "action": "[Aurangzeb] Deleted task \"Boxes / Bins for cans packing ...\" from General",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "delete",
-        "prevTask": {
-          "id": "t_307331",
-          "machine": "General",
-          "category": "General",
-          "desc": "Boxes / Bins for cans packing (Alpha Container)",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Saqib",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "image": "",
-          "lastEditedBy": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "deadline": ""
-        }
-      }
     }
   ],
   "machineMeta": {
@@ -6329,6 +6331,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-24T06:22:17.393Z"
+    "Saqib": "2026-07-24T06:23:06.412Z"
   }
 }
