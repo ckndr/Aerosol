@@ -3977,12 +3977,41 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t1784954178108dcem",
+      "machine": "Compressor",
+      "category": "Mechanical",
+      "desc": "electrical Connection of auto drain system",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "Not Started",
+      "remarks": "",
+      "responsible": "",
+      "updated": "25 Jul 2026",
+      "lastEditedBy": "Saqib",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784954178108azb6",
+      "time": "2026-07-25T04:36:18.108Z",
+      "action": "[Saqib] Added task \"electrical Connection of auto ...\" to Compressor",
+      "user": "Saqib",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1784954178108dcem"
+      },
+      "taskId": "t1784954178108dcem"
+    },
     {
       "id": "t1784954133724b610",
       "time": "2026-07-25T04:35:33.724Z",
@@ -6083,34 +6112,6 @@
         }
       },
       "taskId": "t_871623"
-    },
-    {
-      "id": "t1784357514921bjmk",
-      "time": "2026-07-18T06:51:54.921Z",
-      "action": "[Aurangzeb] Updated task \"Rubber rollers to be procured/...\" [Status: Not Started → Pending Procurement, Priority: Medium → High] on Printing",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t1784357319657zw11",
-          "machine": "Printing",
-          "category": "General",
-          "desc": "Rubber rollers to be procured/made",
-          "priority": "Medium",
-          "progress": 60,
-          "status": "Not Started",
-          "remarks": "Rollers made not according to req. spec. need to be remade.",
-          "responsible": "Saqib",
-          "updated": "18 Jul 2026",
-          "lastEditedBy": "Aurangzeb",
-          "image": null,
-          "waitingOn": "",
-          "deadline": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t1784357319657zw11"
     }
   ],
   "machineMeta": {
@@ -6358,6 +6359,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T04:35:54.053Z"
+    "Saqib": "2026-07-25T04:36:18.109Z"
   }
 }
