@@ -3581,12 +3581,41 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t17849532213243tpd",
+      "machine": "Trimming",
+      "category": "Mechanical",
+      "desc": "rejection box for trim collection",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "Not Started",
+      "remarks": "",
+      "responsible": "",
+      "updated": "25 Jul 2026",
+      "lastEditedBy": "Saqib",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784953221324v7n2",
+      "time": "2026-07-25T04:20:21.324Z",
+      "action": "[Saqib] Added task \"rejection box for trim collect...\" to Trimming",
+      "user": "Saqib",
+      "undoData": {
+        "type": "add",
+        "taskId": "t17849532213243tpd"
+      },
+      "taskId": "t17849532213243tpd"
+    },
     {
       "id": "t1784953179861qtur",
       "time": "2026-07-25T04:19:39.861Z",
@@ -6076,34 +6105,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t17839419453099f9q",
-      "time": "2026-07-13T11:25:45.309Z",
-      "action": "[Saqib] Updated task \"Main Power Cable procurement...\" [Deadline updated, Date Started updated, Date Finished updated] on Overall Machine Operation",
-      "user": "Saqib",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_460094",
-          "machine": "Overall Machine Operation",
-          "category": "Electrical",
-          "desc": "Main Power Cable procurement",
-          "priority": "High",
-          "progress": 0,
-          "status": "Pending Procurement",
-          "responsible": "Saqib",
-          "deadline": "",
-          "remarks": "Quotation awaiting for execution",
-          "updated": "",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "",
-          "image": ""
-        }
-      },
-      "taskId": "t_460094"
     }
   ],
   "machineMeta": {
@@ -6350,6 +6351,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T04:19:52.925Z"
+    "Saqib": "2026-07-25T04:20:21.324Z"
   }
 }
