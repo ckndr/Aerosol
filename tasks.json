@@ -3012,16 +3012,16 @@
       "category": "Mechanical",
       "desc": "to install Pvc & wire brush on washing chain at top",
       "priority": "High",
-      "progress": 50,
-      "status": "Not Started",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "2026-06-30",
       "remarks": "",
-      "updated": "1 Jun 2026",
+      "updated": "25 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Aurangzeb",
+      "lastEditedBy": "Saqib",
       "image": "Photos/Washing/task_img_1780312296382.jpg"
     },
     {
@@ -4181,6 +4181,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784978939750vqek",
+      "time": "2026-07-25T11:28:59.750Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_329291",
+            "machine": "Washing",
+            "category": "Mechanical",
+            "desc": "to install Pvc & wire brush on washing chain at top",
+            "priority": "High",
+            "progress": 50,
+            "status": "Not Started",
+            "responsible": "Arsalan",
+            "deadline": "2026-06-30",
+            "remarks": "",
+            "updated": "1 Jun 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Aurangzeb",
+            "image": "Photos/Washing/task_img_1780312296382.jpg"
+          }
+        ]
+      }
+    },
     {
       "id": "t1784978936679b39e",
       "time": "2026-07-25T11:28:56.679Z",
@@ -6202,34 +6231,6 @@
         }
       },
       "taskId": "t_366746"
-    },
-    {
-      "id": "t178471021245677z2",
-      "time": "2026-07-22T08:50:12.456Z",
-      "action": "[Aurangzeb] Updated task \"Overall machine paint...\" [Progress: 10% → 20%] on General",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_963673",
-          "machine": "General",
-          "category": "General",
-          "desc": "Overall machine paint",
-          "priority": "Medium",
-          "progress": 10,
-          "status": "In Progress",
-          "responsible": "Saqib",
-          "deadline": "",
-          "remarks": "",
-          "updated": "14 Jul 2026",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "Aurangzeb",
-          "image": null
-        }
-      },
-      "taskId": "t_963673"
     }
   ],
   "machineMeta": {
@@ -6477,6 +6478,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T11:28:56.679Z"
+    "Saqib": "2026-07-25T11:28:59.750Z"
   }
 }
