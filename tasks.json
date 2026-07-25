@@ -2740,18 +2740,18 @@
       "id": "t_385603",
       "machine": "Tumbler",
       "category": "Electrical",
-      "desc": "Mixer installation and automation — auto feeding flow design",
+      "desc": "Mixer installation and mounting",
       "priority": "Medium",
       "progress": 0,
-      "status": "Not Started",
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "change of plan",
-      "updated": "18 Jul 2026",
+      "updated": "25 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Aurangzeb",
+      "lastEditedBy": "Saqib",
       "image": null
     },
     {
@@ -4199,6 +4199,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784978780030dssu",
+      "time": "2026-07-25T11:26:20.030Z",
+      "action": "[Saqib] Updated task \"Mixer installation and mountin...\" [Status: Not Started → Completed] on Tumbler",
+      "user": "Saqib",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_385603",
+          "machine": "Tumbler",
+          "category": "Electrical",
+          "desc": "Mixer installation and automation — auto feeding flow design",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Arsalan",
+          "deadline": "",
+          "remarks": "change of plan",
+          "updated": "18 Jul 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": null
+        }
+      },
+      "taskId": "t_385603"
+    },
     {
       "id": "t1784978758502hy11",
       "time": "2026-07-25T11:25:58.502Z",
@@ -6131,34 +6159,6 @@
         "taskId": "t17847092609693vtx"
       },
       "taskId": "t17847092609693vtx"
-    },
-    {
-      "id": "t1784707901864uejc",
-      "time": "2026-07-22T08:11:41.864Z",
-      "action": "[Aurangzeb] Updated task \"Blower testing/Overhauling, co...\" [Date Finished updated] on Base Coat",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t1784707757934pk29",
-          "machine": "Base Coat",
-          "category": "Mechanical",
-          "desc": "Blower testing/Overhauling, connections and fixation",
-          "priority": "High",
-          "progress": 100,
-          "status": "Completed",
-          "remarks": "",
-          "responsible": "",
-          "updated": "22 Jul 2026",
-          "lastEditedBy": "Aurangzeb",
-          "image": null,
-          "waitingOn": "",
-          "deadline": "",
-          "dateStarted": "",
-          "dateFinished": "2026-07-20"
-        }
-      },
-      "taskId": "t1784707757934pk29"
     }
   ],
   "machineMeta": {
@@ -6406,6 +6406,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T11:25:58.502Z"
+    "Saqib": "2026-07-25T11:26:20.030Z"
   }
 }
