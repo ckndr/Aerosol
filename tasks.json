@@ -115,11 +115,11 @@
       "desc": "Fumes collector piping to install",
       "priority": "Medium",
       "progress": 0,
-      "status": "In Progress",
+      "status": "Pending Procurement",
       "responsible": "Saqib",
       "deadline": "2026-06-20",
       "remarks": "",
-      "updated": "24 Jul 2026",
+      "updated": "25 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -4128,6 +4128,34 @@
   },
   "activityLog": [
     {
+      "id": "t1784978632383i9vl",
+      "time": "2026-07-25T11:23:52.383Z",
+      "action": "[Saqib] Updated task \"Fumes collector piping to inst...\" [Status: In Progress → Pending Procurement] on Base Coat",
+      "user": "Saqib",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_186924",
+          "machine": "Base Coat",
+          "category": "Mechanical",
+          "desc": "Fumes collector piping to install",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "In Progress",
+          "responsible": "Saqib",
+          "deadline": "2026-06-20",
+          "remarks": "",
+          "updated": "24 Jul 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Saqib",
+          "image": "Photos/Base Coat/task_img_1780373654935.jpg"
+        }
+      },
+      "taskId": "t_186924"
+    },
+    {
       "id": "t1784978601678ylrj",
       "time": "2026-07-25T11:23:21.678Z",
       "action": "[Saqib] Updated task \"procurement of Can Holders...\" [Status: In Progress → Pending Procurement] on Lacquer",
@@ -6093,34 +6121,6 @@
         }
       },
       "taskId": "t_612787"
-    },
-    {
-      "id": "t178436257461610tx",
-      "time": "2026-07-18T08:16:14.616Z",
-      "action": "[Aurangzeb] Updated task \"Washing unit tanks — sizes and...\" [Status: Pending Procurement → In Progress, Remarks updated] on Washing",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_186021",
-          "machine": "Washing",
-          "category": "Mechanical",
-          "desc": "Washing unit tanks — sizes and quantities for quotation",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Pending Procurement",
-          "responsible": "Saqib",
-          "deadline": "2026-06-15",
-          "remarks": "",
-          "updated": "18 Jul 2026",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "Aurangzeb",
-          "image": null
-        }
-      },
-      "taskId": "t_186021"
     }
   ],
   "machineMeta": {
@@ -6368,6 +6368,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T11:23:21.678Z"
+    "Saqib": "2026-07-25T11:23:52.920Z"
   }
 }
