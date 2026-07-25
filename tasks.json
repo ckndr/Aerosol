@@ -2995,15 +2995,15 @@
       "desc": "contamination/ fumes collector to be checked and installed on top",
       "priority": "High",
       "progress": 0,
-      "status": "Not Started",
+      "status": "In Progress",
       "responsible": "Arsalan",
       "deadline": "2026-06-30",
       "remarks": "",
-      "updated": "1 Jun 2026",
+      "updated": "25 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Aurangzeb",
+      "lastEditedBy": "Saqib",
       "image": "Photos/Washing/task_img_1780312241814.jpg"
     },
     {
@@ -4181,6 +4181,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784978936679b39e",
+      "time": "2026-07-25T11:28:56.679Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_214906",
+            "machine": "Washing",
+            "category": "Mechanical",
+            "desc": "contamination/ fumes collector to be checked and installed on top",
+            "priority": "High",
+            "progress": 0,
+            "status": "Not Started",
+            "responsible": "Arsalan",
+            "deadline": "2026-06-30",
+            "remarks": "",
+            "updated": "1 Jun 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Aurangzeb",
+            "image": "Photos/Washing/task_img_1780312241814.jpg"
+          }
+        ]
+      }
+    },
     {
       "id": "t1784978926414wo8p",
       "time": "2026-07-25T11:28:46.414Z",
@@ -6201,34 +6230,6 @@
         }
       },
       "taskId": "t_963673"
-    },
-    {
-      "id": "t17847101773705tir",
-      "time": "2026-07-22T08:49:37.370Z",
-      "action": "[Aurangzeb] Updated task \"White LED lighting for printin...\" [Status: Not Started → Completed, Progress: 0% → 100%, Date Finished updated] on General",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_357094",
-          "machine": "General",
-          "category": "Electrical",
-          "desc": "White LED lighting for printing and oven area",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Saqib",
-          "deadline": "",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "",
-          "image": ""
-        }
-      },
-      "taskId": "t_357094"
     }
   ],
   "machineMeta": {
@@ -6476,6 +6477,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T11:28:46.414Z"
+    "Saqib": "2026-07-25T11:28:56.679Z"
   }
 }
