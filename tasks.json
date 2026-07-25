@@ -3599,12 +3599,41 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t1784953305116dkly",
+      "machine": "Lacquer",
+      "category": "Mechanical",
+      "desc": "procurement of Can Holders",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "Not Started",
+      "remarks": "",
+      "responsible": "",
+      "updated": "25 Jul 2026",
+      "lastEditedBy": "Saqib",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17849533051164ekd",
+      "time": "2026-07-25T04:21:45.116Z",
+      "action": "[Saqib] Added task \"procurement of Can Holders...\" to Lacquer",
+      "user": "Saqib",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1784953305116dkly"
+      },
+      "taskId": "t1784953305116dkly"
+    },
     {
       "id": "t17849532546604e4k",
       "time": "2026-07-25T04:20:54.660Z",
@@ -6076,35 +6105,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t17839419516851yu2",
-      "time": "2026-07-13T11:25:51.685Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_414385",
-            "machine": "Overall Machine Operation",
-            "category": "Electrical",
-            "desc": "Verify electrical panels, wiring & interlocks — Press to Washing",
-            "priority": "High",
-            "progress": 50,
-            "status": "In Progress",
-            "responsible": "Arsalan",
-            "deadline": "",
-            "remarks": "Till Washing Machine electrical Work is completed",
-            "updated": "",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "",
-            "image": ""
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6352,6 +6352,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T04:20:54.660Z"
+    "Saqib": "2026-07-25T04:21:45.117Z"
   }
 }
