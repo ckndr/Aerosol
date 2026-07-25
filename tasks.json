@@ -2095,16 +2095,16 @@
       "desc": "Lubrication oil leakages to be rectified",
       "priority": "Medium",
       "progress": 100,
-      "status": "Completed",
+      "status": "In Progress",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "",
-      "updated": "24 Jul 2026",
+      "updated": "25 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
       "lastEditedBy": "Saqib",
-      "image": ""
+      "image": null
     },
     {
       "id": "t17840224643691nl7",
@@ -4055,6 +4055,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784973630515gtik",
+      "time": "2026-07-25T10:00:30.515Z",
+      "action": "[Saqib] Updated task \"Lubrication oil leakages to be...\" [Status: Completed → In Progress] on Press",
+      "user": "Saqib",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1784022464368t9dx",
+          "machine": "Press",
+          "category": "Mechanical",
+          "desc": "Lubrication oil leakages to be rectified",
+          "priority": "Medium",
+          "progress": 100,
+          "status": "Completed",
+          "responsible": "Arsalan",
+          "deadline": "",
+          "remarks": "",
+          "updated": "24 Jul 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Saqib",
+          "image": ""
+        }
+      },
+      "taskId": "t1784022464368t9dx"
+    },
     {
       "id": "t1784973607922t81s",
       "time": "2026-07-25T10:00:07.922Z",
@@ -6087,34 +6115,6 @@
         "taskId": "t17843582626653eoh"
       },
       "taskId": "t17843582626653eoh"
-    },
-    {
-      "id": "t17843578861058t8g",
-      "time": "2026-07-18T06:58:06.105Z",
-      "action": "[Aurangzeb] Updated task \"Washing unit tanks — sizes and...\" [Status: In Progress → Pending Procurement] on Washing",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_186021",
-          "machine": "Washing",
-          "category": "Mechanical",
-          "desc": "Washing unit tanks — sizes and quantities for quotation",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "In Progress",
-          "responsible": "Saqib",
-          "deadline": "2026-06-15",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "",
-          "image": ""
-        }
-      },
-      "taskId": "t_186021"
     }
   ],
   "machineMeta": {
@@ -6362,6 +6362,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T10:00:07.922Z"
+    "Saqib": "2026-07-25T10:00:30.516Z"
   }
 }
