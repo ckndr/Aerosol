@@ -4013,12 +4013,41 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t178495422108541x9",
+      "machine": "Compressor",
+      "category": "Mechanical",
+      "desc": "testing of auto drain filters",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "Not Started",
+      "remarks": "",
+      "responsible": "",
+      "updated": "25 Jul 2026",
+      "lastEditedBy": "Saqib",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784954221085v7m9",
+      "time": "2026-07-25T04:37:01.085Z",
+      "action": "[Saqib] Added task \"testing of auto drain filters...\" to Compressor",
+      "user": "Saqib",
+      "undoData": {
+        "type": "add",
+        "taskId": "t178495422108541x9"
+      },
+      "taskId": "t178495422108541x9"
+    },
     {
       "id": "t1784954201453y64o",
       "time": "2026-07-25T04:36:41.453Z",
@@ -6085,34 +6114,6 @@
         }
       },
       "taskId": "t_809507"
-    },
-    {
-      "id": "t1784357708737rtvf",
-      "time": "2026-07-18T06:55:08.737Z",
-      "action": "[Aurangzeb] Updated task \"SOV coil pneumatic press clutc...\" [Status: In Progress → Pending Procurement] on Press",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t178402246436679mb",
-          "machine": "Press",
-          "category": "Electrical",
-          "desc": "SOV coil pneumatic press clutch",
-          "priority": "High",
-          "progress": 20,
-          "status": "In Progress",
-          "responsible": "Saqib",
-          "deadline": "2026-06-16",
-          "remarks": "",
-          "updated": "14 Jul 2026",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "Aurangzeb",
-          "image": null
-        }
-      },
-      "taskId": "t178402246436679mb"
     }
   ],
   "machineMeta": {
@@ -6360,6 +6361,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T04:36:41.453Z"
+    "Saqib": "2026-07-25T04:37:01.085Z"
   }
 }
