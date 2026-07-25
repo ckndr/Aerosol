@@ -3617,12 +3617,41 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t17849533700399wqu",
+      "machine": "General",
+      "category": "Mechanical",
+      "desc": "procurement of talon Bush for pins",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "In Progress",
+      "remarks": "",
+      "responsible": "",
+      "updated": "25 Jul 2026",
+      "lastEditedBy": "Saqib",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784953370039udjh",
+      "time": "2026-07-25T04:22:50.039Z",
+      "action": "[Saqib] Added task \"procurement of talon Bush for ...\" to General",
+      "user": "Saqib",
+      "undoData": {
+        "type": "add",
+        "taskId": "t17849533700399wqu"
+      },
+      "taskId": "t17849533700399wqu"
+    },
     {
       "id": "t17849533094287p33",
       "time": "2026-07-25T04:21:49.428Z",
@@ -6076,35 +6105,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t17839419565251tik",
-      "time": "2026-07-13T11:25:56.525Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_357049",
-            "machine": "Overall Machine Operation",
-            "category": "Electrical",
-            "desc": "Verify electrical panels, wiring & interlocks — Washing to Necking",
-            "priority": "High",
-            "progress": 50,
-            "status": "In Progress",
-            "responsible": "Arsalan",
-            "deadline": "",
-            "remarks": "",
-            "updated": "",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "",
-            "image": ""
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6352,6 +6352,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T04:21:52.919Z"
+    "Saqib": "2026-07-25T04:22:50.039Z"
   }
 }
