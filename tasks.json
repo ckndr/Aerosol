@@ -2923,15 +2923,15 @@
       "desc": "Washing unit drain flexible pipes after tank installation",
       "priority": "High",
       "progress": 0,
-      "status": "Not Started",
+      "status": "In Progress",
       "responsible": "Arsalan",
       "deadline": "2026-06-30",
       "remarks": "",
-      "updated": "1 Jun 2026",
+      "updated": "25 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Aurangzeb",
+      "lastEditedBy": "Saqib",
       "image": "Photos/Washing/task_img_1780311943122.jpg"
     },
     {
@@ -4181,6 +4181,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784978926414wo8p",
+      "time": "2026-07-25T11:28:46.414Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_297468",
+            "machine": "Washing",
+            "category": "Mechanical",
+            "desc": "Washing unit drain flexible pipes after tank installation",
+            "priority": "High",
+            "progress": 0,
+            "status": "Not Started",
+            "responsible": "Arsalan",
+            "deadline": "2026-06-30",
+            "remarks": "",
+            "updated": "1 Jun 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Aurangzeb",
+            "image": "Photos/Washing/task_img_1780311943122.jpg"
+          }
+        ]
+      }
+    },
     {
       "id": "t17849788975506ucs",
       "time": "2026-07-25T11:28:17.550Z",
@@ -6200,34 +6229,6 @@
         }
       },
       "taskId": "t_357094"
-    },
-    {
-      "id": "t1784710132449iaqs",
-      "time": "2026-07-22T08:48:52.449Z",
-      "action": "[Aurangzeb] Updated task \"PLC installation & termination...\" [Date Finished updated] on Over Varnish",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t1782114443700v8q5",
-          "machine": "Over Varnish",
-          "category": "Electrical",
-          "desc": "PLC installation & termination",
-          "priority": "High",
-          "progress": 100,
-          "status": "Completed",
-          "responsible": "Arsalan",
-          "deadline": "2026-06-25",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "",
-          "image": ""
-        }
-      },
-      "taskId": "t1782114443700v8q5"
     }
   ],
   "machineMeta": {
@@ -6475,6 +6476,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T11:28:17.550Z"
+    "Saqib": "2026-07-25T11:28:46.414Z"
   }
 }
