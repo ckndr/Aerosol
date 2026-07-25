@@ -6286,7 +6286,7 @@
       "dryRun": "None"
     },
     "FG Conveyor": {
-      "dryRun": "None"
+      "dryRun": "Pending"
     },
     "Auto Strapping Machine": {
       "dryRun": "Pending",
@@ -6358,6 +6358,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T04:35:33.724Z"
+    "Saqib": "2026-07-25T04:35:48.734Z"
   }
 }
