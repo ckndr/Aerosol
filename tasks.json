@@ -619,11 +619,11 @@
       "desc": "Baling machine procurement",
       "priority": "Medium",
       "progress": 0,
-      "status": "Pending Procurement",
+      "status": "In Progress",
       "responsible": "Saqib",
       "deadline": "",
       "remarks": "",
-      "updated": "13 Jul 2026",
+      "updated": "25 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -3642,6 +3642,35 @@
   },
   "activityLog": [
     {
+      "id": "t1784953375773rw7p",
+      "time": "2026-07-25T04:22:55.773Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_127701",
+            "machine": "General",
+            "category": "Mechanical",
+            "desc": "Baling machine procurement",
+            "priority": "Medium",
+            "progress": 0,
+            "status": "Pending Procurement",
+            "responsible": "Saqib",
+            "deadline": "",
+            "remarks": "",
+            "updated": "13 Jul 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Saqib",
+            "image": ""
+          }
+        ]
+      }
+    },
+    {
       "id": "t1784953370039udjh",
       "time": "2026-07-25T04:22:50.039Z",
       "action": "[Saqib] Added task \"procurement of talon Bush for ...\" to General",
@@ -6076,35 +6105,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t17839420383165h44",
-      "time": "2026-07-13T11:27:18.316Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_533804",
-            "machine": "General",
-            "category": "Mechanical",
-            "desc": "Scoop required for slug handling",
-            "priority": "Medium",
-            "progress": 0,
-            "status": "In Progress",
-            "responsible": "Saqib",
-            "deadline": "",
-            "remarks": "",
-            "updated": "20 Jun 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Aurangzeb",
-            "image": ""
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6352,6 +6352,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T04:22:50.039Z"
+    "Saqib": "2026-07-25T04:22:55.773Z"
   }
 }
