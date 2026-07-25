@@ -6298,7 +6298,7 @@
       ]
     },
     "Manual Strapping Machine": {
-      "dryRun": "None",
+      "dryRun": "Pending",
       "referenceImages": []
     },
     "Overall Machine Operation": {
@@ -6357,6 +6357,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T04:34:26.031Z"
+    "Saqib": "2026-07-25T04:35:14.062Z"
   }
 }
