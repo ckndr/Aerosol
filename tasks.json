@@ -3635,12 +3635,41 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t1784953394315el8b",
+      "machine": "General",
+      "category": "Mechanical",
+      "desc": "Backets for cans",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "In Progress",
+      "remarks": "",
+      "responsible": "",
+      "updated": "25 Jul 2026",
+      "lastEditedBy": "Saqib",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784953394315u253",
+      "time": "2026-07-25T04:23:14.315Z",
+      "action": "[Saqib] Added task \"Backets for cans...\" to General",
+      "user": "Saqib",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1784953394315el8b"
+      },
+      "taskId": "t1784953394315el8b"
+    },
     {
       "id": "t1784953375773rw7p",
       "time": "2026-07-25T04:22:55.773Z",
@@ -6076,35 +6105,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1783942040485v5jj",
-      "time": "2026-07-13T11:27:20.485Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_127701",
-            "machine": "General",
-            "category": "Mechanical",
-            "desc": "Baling machine procurement",
-            "priority": "Medium",
-            "progress": 0,
-            "status": "Pending Procurement",
-            "responsible": "Saqib",
-            "deadline": "",
-            "remarks": "",
-            "updated": "20 Jun 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Aurangzeb",
-            "image": ""
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6352,6 +6352,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T04:22:55.773Z"
+    "Saqib": "2026-07-25T04:23:14.316Z"
   }
 }
