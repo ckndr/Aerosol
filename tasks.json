@@ -1379,11 +1379,11 @@
       "responsible": "Saqib",
       "deadline": "",
       "remarks": "",
-      "updated": "",
+      "updated": "25 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "",
+      "lastEditedBy": "Saqib",
       "image": ""
     },
     {
@@ -3569,6 +3569,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784953010364fmtb",
+      "time": "2026-07-25T04:16:50.364Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_862890",
+            "machine": "Necking",
+            "category": "Mechanical",
+            "desc": "Kluber oil & grease for necking machine",
+            "priority": "Medium",
+            "progress": 0,
+            "status": "In Progress",
+            "responsible": "Saqib",
+            "deadline": "",
+            "remarks": "",
+            "updated": "",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "",
+            "image": ""
+          }
+        ]
+      }
+    },
     {
       "id": "t1784952997420na9l",
       "time": "2026-07-25T04:16:37.420Z",
@@ -6039,17 +6068,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1783941769525t5b7",
-      "time": "2026-07-13T11:22:49.525Z",
-      "action": "[Saqib] Added task \"fumes motor winding to be done...\" to Lacquer",
-      "user": "Saqib",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1783941769525zrnr"
-      },
-      "taskId": "t1783941769525zrnr"
     }
   ],
   "machineMeta": {
@@ -6296,6 +6314,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T04:16:37.420Z"
+    "Saqib": "2026-07-25T04:16:50.364Z"
   }
 }
