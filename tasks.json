@@ -4157,12 +4157,41 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t1784978723078niei",
+      "machine": "Over Varnish",
+      "category": "Electrical",
+      "desc": "PLC Automation and termination",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "In Progress",
+      "remarks": "",
+      "responsible": "",
+      "updated": "25 Jul 2026",
+      "lastEditedBy": "Saqib",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t178497872307834yf",
+      "time": "2026-07-25T11:25:23.078Z",
+      "action": "[Saqib] Added task \"PLC Automation and termination...\" to Over Varnish",
+      "user": "Saqib",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1784978723078niei"
+      },
+      "taskId": "t1784978723078niei"
+    },
     {
       "id": "t1784978706974andy",
       "time": "2026-07-25T11:25:06.974Z",
@@ -6112,17 +6141,6 @@
         "taskId": "t17847078547104py0"
       },
       "taskId": "t17847078547104py0"
-    },
-    {
-      "id": "t1784707757934f1m2",
-      "time": "2026-07-22T08:09:17.934Z",
-      "action": "[Aurangzeb] Added task \"Blower testing/Overhauling, co...\" to Base Coat",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1784707757934pk29"
-      },
-      "taskId": "t1784707757934pk29"
     }
   ],
   "machineMeta": {
@@ -6370,6 +6388,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T11:25:06.974Z"
+    "Saqib": "2026-07-25T11:25:23.078Z"
   }
 }
