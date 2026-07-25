@@ -6199,7 +6199,7 @@
       "dryRun": "Complete"
     },
     "Printing": {
-      "dryRun": "Pending",
+      "dryRun": "Complete",
       "referenceImages": [
         "Photos/Printing/IMG_20220518_135922.jpg",
         "Photos/Printing/IMG_20220518_135934.jpg",
@@ -6357,6 +6357,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T04:33:58.670Z"
+    "Saqib": "2026-07-25T04:34:08.726Z"
   }
 }
