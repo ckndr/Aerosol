@@ -582,12 +582,12 @@
       "category": "General",
       "desc": "Ensure proper cleaning of entire machine",
       "priority": "Medium",
-      "progress": 80,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Saqib",
       "deadline": "",
       "remarks": "",
-      "updated": "13 Jul 2026",
+      "updated": "25 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -3570,6 +3570,35 @@
   },
   "activityLog": [
     {
+      "id": "t1784952990484pau2",
+      "time": "2026-07-25T04:16:30.484Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_791541",
+            "machine": "General",
+            "category": "General",
+            "desc": "Ensure proper cleaning of entire machine",
+            "priority": "Medium",
+            "progress": 80,
+            "status": "In Progress",
+            "responsible": "Saqib",
+            "deadline": "",
+            "remarks": "",
+            "updated": "13 Jul 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Saqib",
+            "image": ""
+          }
+        ]
+      }
+    },
+    {
       "id": "t1784952970029ojxk",
       "time": "2026-07-25T04:16:10.029Z",
       "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
@@ -6021,35 +6050,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1783941731948e8c9",
-      "time": "2026-07-13T11:22:11.948Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t1782114443698z377",
-            "machine": "Lacquer",
-            "category": "Mechanical",
-            "desc": "Cans Grippers to be procured/fabricated",
-            "priority": "Medium",
-            "progress": 0,
-            "status": "Not Started",
-            "responsible": "Saqib",
-            "deadline": "2026-06-15",
-            "remarks": "",
-            "updated": "",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "",
-            "image": ""
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6296,6 +6296,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T04:16:10.029Z"
+    "Saqib": "2026-07-25T04:16:30.484Z"
   }
 }
