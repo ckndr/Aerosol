@@ -6274,7 +6274,7 @@
       "targetDate": "2026-01-07"
     },
     "Washing": {
-      "dryRun": "Pending",
+      "dryRun": "Complete",
       "referenceImages": [
         "Photos/Washing/Washing Machine/IMG_20220518_140618.jpg",
         "Photos/Washing/Washing Machine/IMG_20220518_140642.jpg",
@@ -6497,6 +6497,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T11:29:20.799Z"
+    "Saqib": "2026-07-25T11:29:30.426Z"
   }
 }
