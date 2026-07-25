@@ -6224,7 +6224,7 @@
       ]
     },
     "Over Varnish": {
-      "dryRun": "Pending",
+      "dryRun": "Complete",
       "referenceImages": [
         "Photos/Over Varnish/Overvarnishing Machine/IMG_20220518_140017.jpg",
         "Photos/Over Varnish/Overvarnishing Machine/IMG_20220518_140031.jpg",
@@ -6357,6 +6357,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T04:34:08.726Z"
+    "Saqib": "2026-07-25T04:34:16.814Z"
   }
 }
