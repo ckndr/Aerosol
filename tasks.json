@@ -4128,6 +4128,34 @@
   },
   "activityLog": [
     {
+      "id": "t17849786595581xml",
+      "time": "2026-07-25T11:24:19.558Z",
+      "action": "[Saqib] Updated task \"Fumes collection box to be ins...\" on Base Coat",
+      "user": "Saqib",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1784953994589uiex",
+          "machine": "Base Coat",
+          "category": "Mechanical",
+          "desc": "Fumes collection box to be installed",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "In Progress",
+          "remarks": "",
+          "responsible": "",
+          "updated": "25 Jul 2026",
+          "lastEditedBy": "Saqib",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t1784953994589uiex"
+    },
+    {
       "id": "t1784978636854l8wi",
       "time": "2026-07-25T11:23:56.854Z",
       "action": "[Saqib] Updated task \"Spare Rubberize rollers...\" on Base Coat",
@@ -6093,34 +6121,6 @@
         }
       },
       "taskId": "t_122888"
-    },
-    {
-      "id": "t17843626900069977",
-      "time": "2026-07-18T08:18:10.006Z",
-      "action": "[Aurangzeb] Updated task \"Mixer installation and automat...\" [Status: Pending Procurement → Not Started, Remarks updated] on Tumbler",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_385603",
-          "machine": "Tumbler",
-          "category": "Electrical",
-          "desc": "Mixer installation and automation — auto feeding flow design",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Pending Procurement",
-          "responsible": "Arsalan",
-          "deadline": "",
-          "remarks": "quotation awaiting for conveyor from Arsalan & Lindsay",
-          "updated": "13 Jul 2026",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "Saqib",
-          "image": ""
-        }
-      },
-      "taskId": "t_385603"
     }
   ],
   "machineMeta": {
@@ -6368,6 +6368,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T11:23:56.854Z"
+    "Saqib": "2026-07-25T11:24:19.558Z"
   }
 }
