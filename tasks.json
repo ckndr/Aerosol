@@ -42,16 +42,16 @@
       "category": "Mechanical",
       "desc": "Tension Cylinders to check and replace",
       "priority": "Medium",
-      "progress": 10,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "",
-      "updated": "",
+      "updated": "25 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "",
+      "lastEditedBy": "Saqib",
       "image": ""
     },
     {
@@ -3570,6 +3570,35 @@
   },
   "activityLog": [
     {
+      "id": "t17849529660055lhi",
+      "time": "2026-07-25T04:16:06.005Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t1784022464364r6wp",
+            "machine": "Accumulator",
+            "category": "Mechanical",
+            "desc": "Tension Cylinders to check and replace",
+            "priority": "Medium",
+            "progress": 10,
+            "status": "In Progress",
+            "responsible": "Arsalan",
+            "deadline": "",
+            "remarks": "",
+            "updated": "",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "",
+            "image": ""
+          }
+        ]
+      }
+    },
+    {
       "id": "t1784874758146zf1i",
       "time": "2026-07-24T06:32:38.146Z",
       "action": "[Saqib] Updated task \"Varnish Dry run...\" on Over Varnish",
@@ -6039,35 +6068,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1783941712429bz88",
-      "time": "2026-07-13T11:21:52.429Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_788779",
-            "machine": "Washing",
-            "category": "Mechanical",
-            "desc": "Inspect all rubber pipes — replace if damaged",
-            "priority": "High",
-            "progress": 0,
-            "status": "Not Started",
-            "responsible": "Arsalan",
-            "deadline": "2026-06-30",
-            "remarks": "",
-            "updated": "1 Jun 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Aurangzeb",
-            "image": "Photos/Washing/task_img_1780312620376.jpg"
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6314,6 +6314,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T04:15:48.885Z"
+    "Saqib": "2026-07-25T04:16:06.005Z"
   }
 }
