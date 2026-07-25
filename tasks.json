@@ -3707,12 +3707,41 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t1784953510716o289",
+      "machine": "General",
+      "category": "General",
+      "desc": "money Plant for Factory",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "Not Started",
+      "remarks": "",
+      "responsible": "",
+      "updated": "25 Jul 2026",
+      "lastEditedBy": "Saqib",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t178495351071675q1",
+      "time": "2026-07-25T04:25:10.716Z",
+      "action": "[Saqib] Added task \"money Plant for Factory...\" to General",
+      "user": "Saqib",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1784953510716o289"
+      },
+      "taskId": "t1784953510716o289"
+    },
     {
       "id": "t1784953493004fo58",
       "time": "2026-07-25T04:24:53.004Z",
@@ -6076,35 +6105,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t17839420509723k32",
-      "time": "2026-07-13T11:27:30.972Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_366746",
-            "machine": "General",
-            "category": "General",
-            "desc": "Make stands for all spare rolls",
-            "priority": "Medium",
-            "progress": 0,
-            "status": "Pending Procurement",
-            "responsible": "Saqib",
-            "deadline": "",
-            "remarks": "",
-            "updated": "",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "",
-            "image": ""
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6352,6 +6352,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T04:24:53.004Z"
+    "Saqib": "2026-07-25T04:25:10.716Z"
   }
 }
