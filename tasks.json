@@ -6302,7 +6302,7 @@
       "referenceImages": []
     },
     "Overall Machine Operation": {
-      "dryRun": "None"
+      "dryRun": "Pending"
     },
     "General": {
       "dryRun": "None"
@@ -6357,6 +6357,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T04:35:14.062Z"
+    "Saqib": "2026-07-25T04:35:18.237Z"
   }
 }
