@@ -4103,12 +4103,41 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t1784978547702bgj0",
+      "machine": "Overall Machine Operation",
+      "category": "Mechanical",
+      "desc": "Ball End Guide Rod  for Chain Conveyor",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "Not Started",
+      "remarks": "",
+      "responsible": "",
+      "updated": "25 Jul 2026",
+      "lastEditedBy": "Saqib",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784978547702gk17",
+      "time": "2026-07-25T11:22:27.702Z",
+      "action": "[Saqib] Added task \"Ball End Guide Rod  for Chain ...\" to Overall Machine Operation",
+      "user": "Saqib",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1784978547702bgj0"
+      },
+      "taskId": "t1784978547702bgj0"
+    },
     {
       "id": "t1784978499558djn9",
       "time": "2026-07-25T11:21:39.558Z",
@@ -6092,34 +6121,6 @@
         }
       },
       "taskId": "t_542466"
-    },
-    {
-      "id": "t1784362031271by1g",
-      "time": "2026-07-18T08:07:11.271Z",
-      "action": "[Aurangzeb] Updated task \"Lab equipment to be sourced...\" [Progress: 0% → 70%] on General",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_542466",
-          "machine": "General",
-          "category": "General",
-          "desc": "Lab equipment to be sourced",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Pending Procurement",
-          "responsible": "Saqib",
-          "deadline": "",
-          "remarks": "",
-          "updated": "13 Jul 2026",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "Saqib",
-          "image": ""
-        }
-      },
-      "taskId": "t_542466"
     }
   ],
   "machineMeta": {
@@ -6367,6 +6368,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T11:21:53.877Z"
+    "Saqib": "2026-07-25T11:22:27.702Z"
   }
 }
