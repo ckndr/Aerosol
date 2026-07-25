@@ -60,16 +60,16 @@
       "category": "Mechanical",
       "desc": "to place and install at designated location",
       "priority": "Medium",
-      "progress": 70,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "",
-      "updated": "22 Jul 2026",
+      "updated": "25 Jul 2026",
       "waitingOn": "",
       "dateStarted": "2026-07-22",
       "dateFinished": "",
-      "lastEditedBy": "Aurangzeb",
+      "lastEditedBy": "Saqib",
       "image": null
     },
     {
@@ -3570,6 +3570,35 @@
   },
   "activityLog": [
     {
+      "id": "t1784952970029ojxk",
+      "time": "2026-07-25T04:16:10.029Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_437972",
+            "machine": "Auto Strapping Machine",
+            "category": "Mechanical",
+            "desc": "to place and install at designated location",
+            "priority": "Medium",
+            "progress": 70,
+            "status": "In Progress",
+            "responsible": "Arsalan",
+            "deadline": "",
+            "remarks": "",
+            "updated": "22 Jul 2026",
+            "waitingOn": "",
+            "dateStarted": "2026-07-22",
+            "dateFinished": "",
+            "lastEditedBy": "Aurangzeb",
+            "image": null
+          }
+        ]
+      }
+    },
+    {
       "id": "t17849529660055lhi",
       "time": "2026-07-25T04:16:06.005Z",
       "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
@@ -6021,53 +6050,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1783941730452an26",
-      "time": "2026-07-13T11:22:10.452Z",
-      "action": "[Saqib] Bulk updated 2 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t17821144436985mrb",
-            "machine": "Lacquer",
-            "category": "Electrical",
-            "desc": "Spray guns spray timings to be set",
-            "priority": "Medium",
-            "progress": 0,
-            "status": "Not Started",
-            "responsible": "Arsalan",
-            "deadline": "2026-06-15",
-            "remarks": "",
-            "updated": "",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "",
-            "image": ""
-          },
-          {
-            "id": "t1782114443698qkok",
-            "machine": "Lacquer",
-            "category": "Mechanical",
-            "desc": "Cans In-feed conveyor chain rods to procure and install",
-            "priority": "Medium",
-            "progress": 0,
-            "status": "Not Started",
-            "responsible": "Saqib",
-            "deadline": "2026-06-15",
-            "remarks": "",
-            "updated": "",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "",
-            "image": ""
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6314,6 +6296,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T04:16:06.005Z"
+    "Saqib": "2026-07-25T04:16:10.029Z"
   }
 }
