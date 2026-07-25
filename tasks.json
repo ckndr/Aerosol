@@ -1248,16 +1248,16 @@
       "category": "Mechanical",
       "desc": "Conveyor installation after ejection pipe",
       "priority": "Medium",
-      "progress": 70,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "",
-      "updated": "18 Jul 2026",
+      "updated": "25 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Aurangzeb",
+      "lastEditedBy": "Saqib",
       "image": "Photos/Necking/task_img_1780377094432.jpg"
     },
     {
@@ -4200,6 +4200,35 @@
   },
   "activityLog": [
     {
+      "id": "t1784979278351ui4u",
+      "time": "2026-07-25T11:34:38.351Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_569875",
+            "machine": "Necking",
+            "category": "Mechanical",
+            "desc": "Conveyor installation after ejection pipe",
+            "priority": "Medium",
+            "progress": 70,
+            "status": "In Progress",
+            "responsible": "Arsalan",
+            "deadline": "",
+            "remarks": "",
+            "updated": "18 Jul 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Aurangzeb",
+            "image": "Photos/Necking/task_img_1780377094432.jpg"
+          }
+        ]
+      }
+    },
+    {
       "id": "t1784979269222i3m9",
       "time": "2026-07-25T11:34:29.223Z",
       "action": "[Saqib] Updated task \"Baling machine procurement...\" [Status: In Progress → Pending Procurement] on General",
@@ -6289,35 +6318,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1784874084921uhis",
-      "time": "2026-07-24T06:21:24.921Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t17840224643691nl7",
-            "machine": "Press",
-            "category": "Mechanical",
-            "desc": "Tripping issue to be rectified",
-            "priority": "High",
-            "progress": 10,
-            "status": "In Progress",
-            "responsible": "Arsalan",
-            "deadline": "",
-            "remarks": "",
-            "updated": "",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "",
-            "image": ""
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6565,6 +6565,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T11:34:29.223Z"
+    "Saqib": "2026-07-25T11:34:38.351Z"
   }
 }
