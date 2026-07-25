@@ -3607,7 +3607,7 @@
       "desc": "procurement of Can Holders",
       "priority": "Medium",
       "progress": 0,
-      "status": "In Progress",
+      "status": "Pending Procurement",
       "remarks": "",
       "responsible": "",
       "updated": "25 Jul 2026",
@@ -4127,6 +4127,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784978601678ylrj",
+      "time": "2026-07-25T11:23:21.678Z",
+      "action": "[Saqib] Updated task \"procurement of Can Holders...\" [Status: In Progress → Pending Procurement] on Lacquer",
+      "user": "Saqib",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1784953305116dkly",
+          "machine": "Lacquer",
+          "category": "Mechanical",
+          "desc": "procurement of Can Holders",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "In Progress",
+          "remarks": "",
+          "responsible": "",
+          "updated": "25 Jul 2026",
+          "lastEditedBy": "Saqib",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t1784953305116dkly"
+    },
     {
       "id": "t1784978584398315k",
       "time": "2026-07-25T11:23:04.398Z",
@@ -6093,34 +6121,6 @@
         }
       },
       "taskId": "t_186021"
-    },
-    {
-      "id": "t17843625586624it9",
-      "time": "2026-07-18T08:15:58.662Z",
-      "action": "[Aurangzeb] Updated task \"Heat exchanger for washing sys...\" [Remarks updated] on Washing",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_764635",
-          "machine": "Washing",
-          "category": "Mechanical",
-          "desc": "Heat exchanger for washing system — procure & install",
-          "priority": "High",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Saqib",
-          "deadline": "2026-06-30",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "",
-          "image": ""
-        }
-      },
-      "taskId": "t_764635"
     }
   ],
   "machineMeta": {
@@ -6368,6 +6368,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T11:23:04.398Z"
+    "Saqib": "2026-07-25T11:23:21.678Z"
   }
 }
