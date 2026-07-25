@@ -4193,30 +4193,39 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
-    },
-    {
-      "id": "t1784979073055ns7x",
-      "machine": "FG Conveyor",
-      "category": "Mechanical",
-      "desc": "to be re structured as per new layout",
-      "priority": "Medium",
-      "progress": 0,
-      "status": "Completed",
-      "remarks": "",
-      "responsible": "",
-      "updated": "25 Jul 2026",
-      "lastEditedBy": "Saqib",
-      "image": null,
-      "waitingOn": "",
-      "deadline": "",
-      "dateStarted": "",
-      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784979082886r0ct",
+      "time": "2026-07-25T11:31:22.886Z",
+      "action": "[Saqib] Deleted task \"to be re structured as per new...\" from FG Conveyor",
+      "user": "Saqib",
+      "undoData": {
+        "type": "delete",
+        "prevTask": {
+          "id": "t1784979073055ns7x",
+          "machine": "FG Conveyor",
+          "category": "Mechanical",
+          "desc": "to be re structured as per new layout",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Completed",
+          "remarks": "",
+          "responsible": "",
+          "updated": "25 Jul 2026",
+          "lastEditedBy": "Saqib",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      }
+    },
     {
       "id": "t1784979073055teo6",
       "time": "2026-07-25T11:31:13.055Z",
@@ -6276,17 +6285,6 @@
         "taskId": "t1784795105320xl7a"
       },
       "taskId": "t1784795105320xl7a"
-    },
-    {
-      "id": "t1784794886030qbyz",
-      "time": "2026-07-23T08:21:26.030Z",
-      "action": "[Aurangzeb] Added task \"blower installation and connec...\" to Over Varnish",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1784794886030v2b1"
-      },
-      "taskId": "t1784794886030v2b1"
     }
   ],
   "machineMeta": {
@@ -6534,6 +6532,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T11:31:13.055Z"
+    "Saqib": "2026-07-25T11:31:22.887Z"
   }
 }
