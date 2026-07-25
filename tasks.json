@@ -4175,12 +4175,41 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t1784978758502k69e",
+      "machine": "Accumulator",
+      "category": "Mechanical",
+      "desc": "Accumulator dry run with printing unit",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "In Progress",
+      "remarks": "",
+      "responsible": "",
+      "updated": "25 Jul 2026",
+      "lastEditedBy": "Saqib",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784978758502hy11",
+      "time": "2026-07-25T11:25:58.502Z",
+      "action": "[Saqib] Added task \"Accumulator dry run with print...\" to Accumulator",
+      "user": "Saqib",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1784978758502k69e"
+      },
+      "taskId": "t1784978758502k69e"
+    },
     {
       "id": "t178497872307834yf",
       "time": "2026-07-25T11:25:23.078Z",
@@ -6130,17 +6159,6 @@
         }
       },
       "taskId": "t1784707757934pk29"
-    },
-    {
-      "id": "t1784707854710lu8z",
-      "time": "2026-07-22T08:10:54.710Z",
-      "action": "[Aurangzeb] Added task \"can transfer star overhauling ...\" to Base Coat",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "add",
-        "taskId": "t17847078547104py0"
-      },
-      "taskId": "t17847078547104py0"
     }
   ],
   "machineMeta": {
@@ -6388,6 +6406,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T11:25:52.923Z"
+    "Saqib": "2026-07-25T11:25:58.502Z"
   }
 }
