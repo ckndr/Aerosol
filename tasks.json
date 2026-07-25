@@ -3869,12 +3869,41 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t1784953688572m1qq",
+      "machine": "General",
+      "category": "Electrical",
+      "desc": "Electrical Basic Tools to be ordered",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "Not Started",
+      "remarks": "",
+      "responsible": "",
+      "updated": "25 Jul 2026",
+      "lastEditedBy": "Saqib",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784953688572piqs",
+      "time": "2026-07-25T04:28:08.572Z",
+      "action": "[Saqib] Added task \"Electrical Basic Tools to be o...\" to General",
+      "user": "Saqib",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1784953688572m1qq"
+      },
+      "taskId": "t1784953688572m1qq"
+    },
     {
       "id": "t17849536741411zfr",
       "time": "2026-07-25T04:27:54.141Z",
@@ -6078,34 +6107,6 @@
         }
       },
       "taskId": "t178402246436679mb"
-    },
-    {
-      "id": "t17840227496666el3",
-      "time": "2026-07-14T09:52:29.666Z",
-      "action": "[Aurangzeb] Updated task \"SOV coil pneumatic press clutc...\" [Status: In Progress → Completed, Progress: 0% → 100%] on Press",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t178402246436679mb",
-          "machine": "Press",
-          "category": "Electrical",
-          "desc": "SOV coil pneumatic press clutch",
-          "priority": "High",
-          "progress": 0,
-          "status": "In Progress",
-          "responsible": "Saqib",
-          "deadline": "2026-06-16",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "",
-          "image": ""
-        }
-      },
-      "taskId": "t178402246436679mb"
     }
   ],
   "machineMeta": {
@@ -6353,6 +6354,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T04:27:54.141Z"
+    "Saqib": "2026-07-25T04:28:08.572Z"
   }
 }
