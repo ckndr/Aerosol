@@ -2077,7 +2077,7 @@
       "desc": "Lubrication oil leakages to be rectified",
       "priority": "Medium",
       "progress": 100,
-      "status": "In Progress",
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "",
@@ -4182,6 +4182,35 @@
   },
   "activityLog": [
     {
+      "id": "t1784978960799rmak",
+      "time": "2026-07-25T11:29:20.799Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t1784022464368t9dx",
+            "machine": "Press",
+            "category": "Mechanical",
+            "desc": "Lubrication oil leakages to be rectified",
+            "priority": "Medium",
+            "progress": 100,
+            "status": "In Progress",
+            "responsible": "Arsalan",
+            "deadline": "",
+            "remarks": "",
+            "updated": "25 Jul 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Saqib",
+            "image": null
+          }
+        ]
+      }
+    },
+    {
       "id": "t1784978944063wv38",
       "time": "2026-07-25T11:29:04.063Z",
       "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
@@ -6221,17 +6250,6 @@
         "taskId": "t17847946028700v6e"
       },
       "taskId": "t17847946028700v6e"
-    },
-    {
-      "id": "t1784794561399os0w",
-      "time": "2026-07-23T08:16:01.399Z",
-      "action": "[Aurangzeb] Added task \"COnveyor motor installation to...\" to FG Conveyor",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "add",
-        "taskId": "t17847945613991jjj"
-      },
-      "taskId": "t17847945613991jjj"
     }
   ],
   "machineMeta": {
@@ -6479,6 +6497,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T11:29:04.063Z"
+    "Saqib": "2026-07-25T11:29:20.799Z"
   }
 }
