@@ -1194,16 +1194,16 @@
       "category": "Mechanical",
       "desc": "Infeed tray installation from feeding unit to necking machine",
       "priority": "Medium",
-      "progress": 0,
-      "status": "Not Started",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "",
-      "updated": "2 Jun 2026",
+      "updated": "25 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Aurangzeb",
+      "lastEditedBy": "Saqib",
       "image": "Photos/Necking/task_img_1780377017571.jpg"
     },
     {
@@ -4182,6 +4182,35 @@
   },
   "activityLog": [
     {
+      "id": "t178497899287812rw",
+      "time": "2026-07-25T11:29:52.878Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_944329",
+            "machine": "Necking",
+            "category": "Mechanical",
+            "desc": "Infeed tray installation from feeding unit to necking machine",
+            "priority": "Medium",
+            "progress": 0,
+            "status": "Not Started",
+            "responsible": "Arsalan",
+            "deadline": "",
+            "remarks": "",
+            "updated": "2 Jun 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Aurangzeb",
+            "image": "Photos/Necking/task_img_1780377017571.jpg"
+          }
+        ]
+      }
+    },
+    {
       "id": "t1784978960799rmak",
       "time": "2026-07-25T11:29:20.799Z",
       "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
@@ -6239,17 +6268,6 @@
         "taskId": "t17847947349199cu3"
       },
       "taskId": "t17847947349199cu3"
-    },
-    {
-      "id": "t1784794602871xnb6",
-      "time": "2026-07-23T08:16:42.871Z",
-      "action": "[Aurangzeb] Added task \"Conveyor motor connections pen...\" to FG Conveyor",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "add",
-        "taskId": "t17847946028700v6e"
-      },
-      "taskId": "t17847946028700v6e"
     }
   ],
   "machineMeta": {
@@ -6497,6 +6515,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T11:29:30.426Z"
+    "Saqib": "2026-07-25T11:29:52.917Z"
   }
 }
