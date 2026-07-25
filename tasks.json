@@ -619,7 +619,7 @@
       "desc": "Baling machine procurement",
       "priority": "Medium",
       "progress": 0,
-      "status": "In Progress",
+      "status": "Pending Procurement",
       "responsible": "Saqib",
       "deadline": "",
       "remarks": "",
@@ -628,7 +628,7 @@
       "dateStarted": "",
       "dateFinished": "",
       "lastEditedBy": "Saqib",
-      "image": ""
+      "image": null
     },
     {
       "id": "t_357094",
@@ -4200,6 +4200,34 @@
   },
   "activityLog": [
     {
+      "id": "t1784979269222i3m9",
+      "time": "2026-07-25T11:34:29.223Z",
+      "action": "[Saqib] Updated task \"Baling machine procurement...\" [Status: In Progress → Pending Procurement] on General",
+      "user": "Saqib",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_127701",
+          "machine": "General",
+          "category": "Mechanical",
+          "desc": "Baling machine procurement",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "In Progress",
+          "responsible": "Saqib",
+          "deadline": "",
+          "remarks": "",
+          "updated": "25 Jul 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Saqib",
+          "image": ""
+        }
+      },
+      "taskId": "t_127701"
+    },
+    {
       "id": "t17849791619991rv5",
       "time": "2026-07-25T11:32:41.999Z",
       "action": "[Saqib] Updated task \"Overall machine paint...\" [Status: In Progress → Pending Procurement] on General",
@@ -6290,35 +6318,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1784874082252f731",
-      "time": "2026-07-24T06:21:22.252Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t1784022464369cdpd",
-            "machine": "Press",
-            "category": "Mechanical",
-            "desc": "compartment over feeder to fabricate",
-            "priority": "Medium",
-            "progress": 10,
-            "status": "In Progress",
-            "responsible": "saqib",
-            "deadline": "",
-            "remarks": "",
-            "updated": "",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "",
-            "image": ""
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6566,6 +6565,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T11:33:52.918Z"
+    "Saqib": "2026-07-25T11:34:29.223Z"
   }
 }
