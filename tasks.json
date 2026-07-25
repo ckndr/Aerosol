@@ -3725,12 +3725,41 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t17849535326684bqw",
+      "machine": "General",
+      "category": "Mechanical",
+      "desc": "Tape and fresh water line for washing unit",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "Not Started",
+      "remarks": "",
+      "responsible": "",
+      "updated": "25 Jul 2026",
+      "lastEditedBy": "Saqib",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784953532668gzus",
+      "time": "2026-07-25T04:25:32.668Z",
+      "action": "[Saqib] Added task \"Tape and fresh water line for ...\" to General",
+      "user": "Saqib",
+      "undoData": {
+        "type": "add",
+        "taskId": "t17849535326684bqw"
+      },
+      "taskId": "t17849535326684bqw"
+    },
     {
       "id": "t178495351071675q1",
       "time": "2026-07-25T04:25:10.716Z",
@@ -6076,35 +6105,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t17839420528285hbm",
-      "time": "2026-07-13T11:27:32.828Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_542466",
-            "machine": "General",
-            "category": "General",
-            "desc": "Lab equipment to be sourced",
-            "priority": "Medium",
-            "progress": 0,
-            "status": "Pending Procurement",
-            "responsible": "Saqib",
-            "deadline": "",
-            "remarks": "",
-            "updated": "",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "",
-            "image": ""
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6352,6 +6352,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T04:25:10.716Z"
+    "Saqib": "2026-07-25T04:25:32.668Z"
   }
 }
