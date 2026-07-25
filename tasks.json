@@ -4139,12 +4139,41 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t17849787069748q2p",
+      "machine": "Base Coat",
+      "category": "Electrical",
+      "desc": "PLC Automation and termination",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "In Progress",
+      "remarks": "",
+      "responsible": "",
+      "updated": "25 Jul 2026",
+      "lastEditedBy": "Saqib",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784978706974andy",
+      "time": "2026-07-25T11:25:06.974Z",
+      "action": "[Saqib] Added task \"PLC Automation and termination...\" to Base Coat",
+      "user": "Saqib",
+      "undoData": {
+        "type": "add",
+        "taskId": "t17849787069748q2p"
+      },
+      "taskId": "t17849787069748q2p"
+    },
     {
       "id": "t17849786948549uvw",
       "time": "2026-07-25T11:24:54.854Z",
@@ -6094,34 +6123,6 @@
         "taskId": "t1784707757934pk29"
       },
       "taskId": "t1784707757934pk29"
-    },
-    {
-      "id": "t17847075645673ffb",
-      "time": "2026-07-22T08:06:04.567Z",
-      "action": "[Aurangzeb] Updated task \"to place and install at design...\" [Status: Not Started → In Progress, Progress: 0% → 70%, Date Started updated] on Auto Strapping Machine",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_437972",
-          "machine": "Auto Strapping Machine",
-          "category": "Mechanical",
-          "desc": "to place and install at designated location",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "deadline": "",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "",
-          "image": ""
-        }
-      },
-      "taskId": "t_437972"
     }
   ],
   "machineMeta": {
@@ -6369,6 +6370,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T11:24:54.854Z"
+    "Saqib": "2026-07-25T11:25:06.974Z"
   }
 }
