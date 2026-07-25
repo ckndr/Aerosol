@@ -6125,7 +6125,8 @@
         "Photos/Trimming/Trimming & Brushing Machine/IMG_20220518_140709.jpg",
         "Photos/Trimming/Trimming & Brushing Machine/IMG_20220518_140716.jpg",
         "Photos/Trimming/Trimming & Brushing Machine/IMG_20220518_140731.jpg"
-      ]
+      ],
+      "targetDate": "2026-01-07"
     },
     "Washing": {
       "dryRun": "Pending",
@@ -6351,6 +6352,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T04:20:21.324Z"
+    "Saqib": "2026-07-25T04:20:36.340Z"
   }
 }
