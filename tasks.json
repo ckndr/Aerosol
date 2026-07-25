@@ -3354,12 +3354,12 @@
       "category": "Mechanical",
       "desc": "Basecoat Dry run",
       "priority": "High",
-      "progress": 80,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "remarks": "",
       "responsible": "",
-      "updated": "22 Jul 2026",
-      "lastEditedBy": "Aurangzeb",
+      "updated": "25 Jul 2026",
+      "lastEditedBy": "Saqib",
       "image": null,
       "waitingOn": "",
       "deadline": "",
@@ -3569,6 +3569,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784953053493kzq2",
+      "time": "2026-07-25T04:17:33.493Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t1784709625280l2yx",
+            "machine": "Base Coat",
+            "category": "Mechanical",
+            "desc": "Basecoat Dry run",
+            "priority": "High",
+            "progress": 80,
+            "status": "In Progress",
+            "remarks": "",
+            "responsible": "",
+            "updated": "22 Jul 2026",
+            "lastEditedBy": "Aurangzeb",
+            "image": null,
+            "waitingOn": "",
+            "deadline": "",
+            "dateStarted": "2026-07-19",
+            "dateFinished": ""
+          }
+        ]
+      }
+    },
     {
       "id": "t1784953045317t12c",
       "time": "2026-07-25T04:17:25.317Z",
@@ -6075,17 +6104,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t17839418369809vnw",
-      "time": "2026-07-13T11:23:56.980Z",
-      "action": "[Saqib] Added task \"oven heater to be checked...\" to Lacquer Oven",
-      "user": "Saqib",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1783941836980pgv0"
-      },
-      "taskId": "t1783941836980pgv0"
     }
   ],
   "machineMeta": {
@@ -6332,6 +6350,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T04:17:25.317Z"
+    "Saqib": "2026-07-25T04:17:33.493Z"
   }
 }
