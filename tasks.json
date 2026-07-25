@@ -3959,12 +3959,41 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t1784954133724cz1t",
+      "machine": "Overall Machine Operation",
+      "category": "Mechanical",
+      "desc": "complete production run",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "Not Started",
+      "remarks": "",
+      "responsible": "",
+      "updated": "25 Jul 2026",
+      "lastEditedBy": "Saqib",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784954133724b610",
+      "time": "2026-07-25T04:35:33.724Z",
+      "action": "[Saqib] Added task \"complete production run...\" to Overall Machine Operation",
+      "user": "Saqib",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1784954133724cz1t"
+      },
+      "taskId": "t1784954133724cz1t"
+    },
     {
       "id": "t1784954002548j399",
       "time": "2026-07-25T04:33:22.548Z",
@@ -6082,34 +6111,6 @@
         }
       },
       "taskId": "t1784357319657zw11"
-    },
-    {
-      "id": "t17843574903678g7m",
-      "time": "2026-07-18T06:51:30.367Z",
-      "action": "[Aurangzeb] Updated task \"Spare Rubberize rollers...\" [Status: In Progress → Pending Procurement] on Over Varnish",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_895006",
-          "machine": "Over Varnish",
-          "category": "Mechanical",
-          "desc": "Spare Rubberize rollers",
-          "priority": "High",
-          "progress": 60,
-          "status": "In Progress",
-          "responsible": "Saqib",
-          "deadline": "2026-06-25",
-          "remarks": "Rollers made not according to req. spec. need to be remade.",
-          "updated": "18 Jul 2026",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "Aurangzeb",
-          "image": null
-        }
-      },
-      "taskId": "t_895006"
     }
   ],
   "machineMeta": {
@@ -6357,6 +6358,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T04:35:18.237Z"
+    "Saqib": "2026-07-25T04:35:33.724Z"
   }
 }
