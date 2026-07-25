@@ -4067,12 +4067,41 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t1784978474014axuk",
+      "machine": "Lacquer Oven",
+      "category": "Mechanical",
+      "desc": "dry run with oven",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "Not Started",
+      "remarks": "",
+      "responsible": "",
+      "updated": "25 Jul 2026",
+      "lastEditedBy": "Saqib",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784978474014h4ye",
+      "time": "2026-07-25T11:21:14.014Z",
+      "action": "[Saqib] Added task \"dry run with oven...\" to Lacquer Oven",
+      "user": "Saqib",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1784978474014axuk"
+      },
+      "taskId": "t1784978474014axuk"
+    },
     {
       "id": "t1784978454934b1vz",
       "time": "2026-07-25T11:20:54.934Z",
@@ -6090,33 +6119,6 @@
         }
       },
       "taskId": "t_460094"
-    },
-    {
-      "id": "t1784358561048tzgy",
-      "time": "2026-07-18T07:09:21.048Z",
-      "action": "[Aurangzeb] Deleted task \"Two sets of press dies, spring...\" from Necking",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "delete",
-        "prevTask": {
-          "id": "t_707076",
-          "machine": "Necking",
-          "category": "Mechanical",
-          "desc": "Two sets of press dies, springs & nut bolts required",
-          "priority": "High",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Saqib",
-          "deadline": "",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "",
-          "image": ""
-        }
-      }
     }
   ],
   "machineMeta": {
@@ -6364,6 +6366,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T11:20:54.934Z"
+    "Saqib": "2026-07-25T11:21:14.014Z"
   }
 }
