@@ -4031,12 +4031,41 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t1784973607922bmrf",
+      "machine": "Press",
+      "category": "Mechanical",
+      "desc": "emergency button needs to be fixed",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "Not Started",
+      "remarks": "",
+      "responsible": "",
+      "updated": "25 Jul 2026",
+      "lastEditedBy": "Saqib",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784973607922t81s",
+      "time": "2026-07-25T10:00:07.922Z",
+      "action": "[Saqib] Added task \"emergency button needs to be f...\" to Press",
+      "user": "Saqib",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1784973607922bmrf"
+      },
+      "taskId": "t1784973607922bmrf"
+    },
     {
       "id": "t1784954221085v7m9",
       "time": "2026-07-25T04:37:01.085Z",
@@ -6086,34 +6115,6 @@
         }
       },
       "taskId": "t_186021"
-    },
-    {
-      "id": "t1784357753257t12m",
-      "time": "2026-07-18T06:55:53.257Z",
-      "action": "[Aurangzeb] Updated task \"Conveyor alignment — Trimming ...\" [Progress: 50% → 80%] on Trimming",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_809507",
-          "machine": "Trimming",
-          "category": "Mechanical",
-          "desc": "Conveyor alignment — Trimming to Washing",
-          "priority": "High",
-          "progress": 50,
-          "status": "In Progress",
-          "responsible": "Arsalan",
-          "deadline": "2026-06-19",
-          "remarks": "",
-          "updated": "1 Jun 2026",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "Aurangzeb",
-          "image": "Photos/Trimming/task_img_1780311408335.jpg"
-        }
-      },
-      "taskId": "t_809507"
     }
   ],
   "machineMeta": {
@@ -6361,6 +6362,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T09:59:52.927Z"
+    "Saqib": "2026-07-25T10:00:07.922Z"
   }
 }
