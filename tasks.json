@@ -3625,7 +3625,7 @@
       "desc": "Backets for cans",
       "priority": "Medium",
       "progress": 0,
-      "status": "In Progress",
+      "status": "Pending Procurement",
       "remarks": "",
       "responsible": "",
       "updated": "25 Jul 2026",
@@ -4181,6 +4181,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784978817710bykb",
+      "time": "2026-07-25T11:26:57.710Z",
+      "action": "[Saqib] Updated task \"Backets for cans...\" [Status: In Progress → Pending Procurement] on General",
+      "user": "Saqib",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1784953394315el8b",
+          "machine": "General",
+          "category": "Mechanical",
+          "desc": "Backets for cans",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "In Progress",
+          "remarks": "",
+          "responsible": "",
+          "updated": "25 Jul 2026",
+          "lastEditedBy": "Saqib",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t1784953394315el8b"
+    },
     {
       "id": "t1784978812495rqnw",
       "time": "2026-07-25T11:26:52.495Z",
@@ -6163,17 +6191,6 @@
         "taskId": "t1784709783912wgvo"
       },
       "taskId": "t1784709783912wgvo"
-    },
-    {
-      "id": "t1784709625280lze3",
-      "time": "2026-07-22T08:40:25.280Z",
-      "action": "[Aurangzeb] Added task \"Basecoat Dry run...\" to Base Coat",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1784709625280l2yx"
-      },
-      "taskId": "t1784709625280l2yx"
     }
   ],
   "machineMeta": {
@@ -6421,6 +6438,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T11:26:52.495Z"
+    "Saqib": "2026-07-25T11:26:57.710Z"
   }
 }
