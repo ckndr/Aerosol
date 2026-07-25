@@ -2904,16 +2904,16 @@
       "category": "Mechanical",
       "desc": "Washing machine piping and blower installation",
       "priority": "High",
-      "progress": 90,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "2026-06-30",
       "remarks": "",
-      "updated": "1 Jun 2026",
+      "updated": "25 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Aurangzeb",
+      "lastEditedBy": "Saqib",
       "image": "Photos/Washing/task_img_1780311879107.jpg"
     },
     {
@@ -4181,6 +4181,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17849788975506ucs",
+      "time": "2026-07-25T11:28:17.550Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_990649",
+            "machine": "Washing",
+            "category": "Mechanical",
+            "desc": "Washing machine piping and blower installation",
+            "priority": "High",
+            "progress": 90,
+            "status": "In Progress",
+            "responsible": "Arsalan",
+            "deadline": "2026-06-30",
+            "remarks": "",
+            "updated": "1 Jun 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Aurangzeb",
+            "image": "Photos/Washing/task_img_1780311879107.jpg"
+          }
+        ]
+      }
+    },
     {
       "id": "t1784978891742hr7h",
       "time": "2026-07-25T11:28:11.742Z",
@@ -6199,34 +6228,6 @@
         }
       },
       "taskId": "t1782114443700v8q5"
-    },
-    {
-      "id": "t1784710033696ahrf",
-      "time": "2026-07-22T08:47:13.696Z",
-      "action": "[Aurangzeb] Updated task \"Basecoat liquid refill mechans...\" on Base Coat",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t1784709997569l6gd",
-          "machine": "Base Coat",
-          "category": "Mechanical",
-          "desc": "Basecoat refill mechansim ( pump,sensor, plate) to check and fix",
-          "priority": "High",
-          "progress": 10,
-          "status": "In Progress",
-          "remarks": "",
-          "responsible": "",
-          "updated": "22 Jul 2026",
-          "lastEditedBy": "Aurangzeb",
-          "image": null,
-          "waitingOn": "",
-          "deadline": "",
-          "dateStarted": "2026-07-20",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t1784709997569l6gd"
     }
   ],
   "machineMeta": {
@@ -6474,6 +6475,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T11:28:11.742Z"
+    "Saqib": "2026-07-25T11:28:17.550Z"
   }
 }
