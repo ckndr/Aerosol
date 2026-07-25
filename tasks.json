@@ -3607,7 +3607,7 @@
       "desc": "procurement of Can Holders",
       "priority": "Medium",
       "progress": 0,
-      "status": "Not Started",
+      "status": "In Progress",
       "remarks": "",
       "responsible": "",
       "updated": "25 Jul 2026",
@@ -3623,6 +3623,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17849533094287p33",
+      "time": "2026-07-25T04:21:49.428Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t1784953305116dkly",
+            "machine": "Lacquer",
+            "category": "Mechanical",
+            "desc": "procurement of Can Holders",
+            "priority": "Medium",
+            "progress": 0,
+            "status": "Not Started",
+            "remarks": "",
+            "responsible": "",
+            "updated": "25 Jul 2026",
+            "lastEditedBy": "Saqib",
+            "image": null,
+            "waitingOn": "",
+            "deadline": "",
+            "dateStarted": "",
+            "dateFinished": ""
+          }
+        ]
+      }
+    },
     {
       "id": "t17849533051164ekd",
       "time": "2026-07-25T04:21:45.116Z",
@@ -6076,35 +6105,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1783941954252t0e9",
-      "time": "2026-07-13T11:25:54.252Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_242396",
-            "machine": "Overall Machine Operation",
-            "category": "Electrical",
-            "desc": "Testing of Control Logics & Circuits",
-            "priority": "High",
-            "progress": 10,
-            "status": "In Progress",
-            "responsible": "Arsalan",
-            "deadline": "",
-            "remarks": "",
-            "updated": "",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "",
-            "image": ""
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6352,6 +6352,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T04:21:45.117Z"
+    "Saqib": "2026-07-25T04:21:49.428Z"
   }
 }
