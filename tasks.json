@@ -3905,12 +3905,41 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t1784953926260pale",
+      "machine": "General",
+      "category": "Mechanical",
+      "desc": "Building Repair & Maintenance for leakages",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "Not Started",
+      "remarks": "",
+      "responsible": "",
+      "updated": "25 Jul 2026",
+      "lastEditedBy": "Saqib",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t178495392626002jh",
+      "time": "2026-07-25T04:32:06.260Z",
+      "action": "[Saqib] Added task \"Building Repair & Maintenance ...\" to General",
+      "user": "Saqib",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1784953926260pale"
+      },
+      "taskId": "t1784953926260pale"
+    },
     {
       "id": "t1784953914236eefb",
       "time": "2026-07-25T04:31:54.236Z",
@@ -6062,34 +6091,6 @@
         "taskId": "t1784357319657zw11"
       },
       "taskId": "t1784357319657zw11"
-    },
-    {
-      "id": "t178435720000239xc",
-      "time": "2026-07-18T06:46:40.002Z",
-      "action": "[Aurangzeb] Updated task \"Spare Rubberize rollers...\" [Progress: 50% → 60%, Remarks updated] on Base Coat",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_871623",
-          "machine": "Base Coat",
-          "category": "Mechanical",
-          "desc": "Spare Rubberize rollers",
-          "priority": "High",
-          "progress": 50,
-          "status": "In Progress",
-          "responsible": "Saqib",
-          "deadline": "2026-06-25",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "",
-          "image": ""
-        }
-      },
-      "taskId": "t_871623"
     }
   ],
   "machineMeta": {
@@ -6337,6 +6338,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T04:31:54.236Z"
+    "Saqib": "2026-07-25T04:32:06.260Z"
   }
 }
