@@ -4049,12 +4049,41 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t17849736946493f99",
+      "machine": "Press",
+      "category": "Mechanical",
+      "desc": "dust collection blower need to be start",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "Not Started",
+      "remarks": "",
+      "responsible": "",
+      "updated": "25 Jul 2026",
+      "lastEditedBy": "Saqib",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784973694649n7kj",
+      "time": "2026-07-25T10:01:34.649Z",
+      "action": "[Saqib] Added task \"dust collection blower need to...\" to Press",
+      "user": "Saqib",
+      "undoData": {
+        "type": "add",
+        "taskId": "t17849736946493f99"
+      },
+      "taskId": "t17849736946493f99"
+    },
     {
       "id": "t1784973687138h20z",
       "time": "2026-07-25T10:01:27.138Z",
@@ -6086,34 +6115,6 @@
         }
       },
       "taskId": "t_404937"
-    },
-    {
-      "id": "t1784358452089hdf6",
-      "time": "2026-07-18T07:07:32.089Z",
-      "action": "[Aurangzeb] Updated task \"Rawal bolts anchoring to be do...\" [Status: Not Started → Completed, Progress: 0% → 100%] on Base Coat",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_511680",
-          "machine": "Base Coat",
-          "category": "Mechanical",
-          "desc": "Rawal bolts anchoring to be done on the foundation",
-          "priority": "High",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "deadline": "2026-06-25",
-          "remarks": "",
-          "updated": "13 Jul 2026",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "Saqib",
-          "image": "Photos/Base Coat/task_img_1780374035741.jpg"
-        }
-      },
-      "taskId": "t_511680"
     }
   ],
   "machineMeta": {
@@ -6361,6 +6362,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T10:01:27.138Z"
+    "Saqib": "2026-07-25T10:01:34.649Z"
   }
 }
