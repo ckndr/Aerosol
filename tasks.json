@@ -2418,16 +2418,16 @@
       "category": "Mechanical",
       "desc": "Printing Machine Dry run",
       "priority": "High",
-      "progress": 50,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "2026-06-25",
       "remarks": "",
-      "updated": "",
+      "updated": "25 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "",
+      "lastEditedBy": "Saqib",
       "image": ""
     },
     {
@@ -3569,6 +3569,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784953033997vkzq",
+      "time": "2026-07-25T04:17:13.997Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_999528",
+            "machine": "Printing",
+            "category": "Mechanical",
+            "desc": "Printing Machine Dry run",
+            "priority": "High",
+            "progress": 50,
+            "status": "In Progress",
+            "responsible": "Arsalan",
+            "deadline": "2026-06-25",
+            "remarks": "",
+            "updated": "",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "",
+            "image": ""
+          }
+        ]
+      }
+    },
     {
       "id": "t17849530212534aov",
       "time": "2026-07-25T04:17:01.253Z",
@@ -6057,17 +6086,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t17839418039329n08",
-      "time": "2026-07-13T11:23:23.932Z",
-      "action": "[Saqib] Added task \"holders pin to be checked and ...\" to Lacquer",
-      "user": "Saqib",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1783941803932yogk"
-      },
-      "taskId": "t1783941803932yogk"
     }
   ],
   "machineMeta": {
@@ -6314,6 +6332,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T04:17:01.253Z"
+    "Saqib": "2026-07-25T04:17:13.997Z"
   }
 }
