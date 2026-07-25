@@ -1644,16 +1644,16 @@
       "category": "Electrical",
       "desc": "Main Power Cable procurement",
       "priority": "High",
-      "progress": 80,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Saqib",
       "deadline": "",
       "remarks": "",
-      "updated": "18 Jul 2026",
+      "updated": "25 Jul 2026",
       "waitingOn": "",
       "dateStarted": "2026-07-11",
       "dateFinished": "2026-07-10",
-      "lastEditedBy": "Aurangzeb",
+      "lastEditedBy": "Saqib",
       "image": null
     },
     {
@@ -3569,6 +3569,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17849530212534aov",
+      "time": "2026-07-25T04:17:01.253Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_460094",
+            "machine": "Overall Machine Operation",
+            "category": "Electrical",
+            "desc": "Main Power Cable procurement",
+            "priority": "High",
+            "progress": 80,
+            "status": "In Progress",
+            "responsible": "Saqib",
+            "deadline": "",
+            "remarks": "",
+            "updated": "18 Jul 2026",
+            "waitingOn": "",
+            "dateStarted": "2026-07-11",
+            "dateFinished": "2026-07-10",
+            "lastEditedBy": "Aurangzeb",
+            "image": null
+          }
+        ]
+      }
+    },
     {
       "id": "t1784953010364fmtb",
       "time": "2026-07-25T04:16:50.364Z",
@@ -6039,35 +6068,6 @@
         "taskId": "t1783941803932yogk"
       },
       "taskId": "t1783941803932yogk"
-    },
-    {
-      "id": "t17839417727975i97",
-      "time": "2026-07-13T11:22:52.797Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t1783941769525zrnr",
-            "machine": "Lacquer",
-            "category": "Mechanical",
-            "desc": "fumes motor winding to be done",
-            "priority": "High",
-            "progress": 0,
-            "status": "Not Started",
-            "remarks": "",
-            "responsible": "",
-            "updated": "13 Jul 2026",
-            "lastEditedBy": "Saqib",
-            "image": null,
-            "waitingOn": "",
-            "deadline": "2026-07-08",
-            "dateStarted": "2026-07-08",
-            "dateFinished": "2026-07-09"
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6314,6 +6314,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T04:16:50.364Z"
+    "Saqib": "2026-07-25T04:17:01.253Z"
   }
 }
