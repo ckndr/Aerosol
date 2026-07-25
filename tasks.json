@@ -780,16 +780,16 @@
       "category": "Electrical",
       "desc": "Ensure all exhaust fans on floor are operational",
       "priority": "High",
-      "progress": 90,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Saqib",
       "deadline": "",
       "remarks": "partially operational",
-      "updated": "",
+      "updated": "25 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "",
+      "lastEditedBy": "Saqib",
       "image": ""
     },
     {
@@ -3570,6 +3570,35 @@
   },
   "activityLog": [
     {
+      "id": "t1784952997420na9l",
+      "time": "2026-07-25T04:16:37.420Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_329394",
+            "machine": "General",
+            "category": "Electrical",
+            "desc": "Ensure all exhaust fans on floor are operational",
+            "priority": "High",
+            "progress": 90,
+            "status": "In Progress",
+            "responsible": "Saqib",
+            "deadline": "",
+            "remarks": "partially operational",
+            "updated": "",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "",
+            "image": ""
+          }
+        ]
+      }
+    },
+    {
       "id": "t1784952990484pau2",
       "time": "2026-07-25T04:16:30.484Z",
       "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
@@ -6021,35 +6050,6 @@
         "taskId": "t1783941769525zrnr"
       },
       "taskId": "t1783941769525zrnr"
-    },
-    {
-      "id": "t1783941734773ph24",
-      "time": "2026-07-13T11:22:14.773Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t1782114443699orz7",
-            "machine": "Lacquer",
-            "category": "Mechanical",
-            "desc": "Cans In-feed conveyor Inspection & testing",
-            "priority": "Medium",
-            "progress": 0,
-            "status": "Not Started",
-            "responsible": "Arsalan",
-            "deadline": "2026-06-15",
-            "remarks": "",
-            "updated": "",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "",
-            "image": ""
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6296,6 +6296,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T04:16:30.484Z"
+    "Saqib": "2026-07-25T04:16:37.420Z"
   }
 }
