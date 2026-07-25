@@ -3084,16 +3084,16 @@
       "category": "Mechanical",
       "desc": "Spraying Jets Section — cleaning / scraping",
       "priority": "High",
-      "progress": 50,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Saqib",
       "deadline": "2026-06-30",
       "remarks": "",
-      "updated": "1 Jun 2026",
+      "updated": "25 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Aurangzeb",
+      "lastEditedBy": "Saqib",
       "image": "Photos/Washing/task_img_1780312497172.jpg"
     },
     {
@@ -3569,6 +3569,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784953045317t12c",
+      "time": "2026-07-25T04:17:25.317Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_148426",
+            "machine": "Washing",
+            "category": "Mechanical",
+            "desc": "Spraying Jets Section — cleaning / scraping",
+            "priority": "High",
+            "progress": 50,
+            "status": "In Progress",
+            "responsible": "Saqib",
+            "deadline": "2026-06-30",
+            "remarks": "",
+            "updated": "1 Jun 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Aurangzeb",
+            "image": "Photos/Washing/task_img_1780312497172.jpg"
+          }
+        ]
+      }
+    },
     {
       "id": "t1784953033997vkzq",
       "time": "2026-07-25T04:17:13.997Z",
@@ -6057,35 +6086,6 @@
         "taskId": "t1783941836980pgv0"
       },
       "taskId": "t1783941836980pgv0"
-    },
-    {
-      "id": "t1783941807637kc9t",
-      "time": "2026-07-13T11:23:27.637Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t1783941803932yogk",
-            "machine": "Lacquer",
-            "category": "Mechanical",
-            "desc": "holders pin to be checked and repalced",
-            "priority": "Medium",
-            "progress": 0,
-            "status": "Not Started",
-            "remarks": "",
-            "responsible": "Arsalan",
-            "updated": "13 Jul 2026",
-            "lastEditedBy": "Saqib",
-            "image": null,
-            "waitingOn": "",
-            "deadline": "2026-07-08",
-            "dateStarted": "2026-07-09",
-            "dateFinished": "2026-07-10"
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6332,6 +6332,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T04:17:13.997Z"
+    "Saqib": "2026-07-25T04:17:25.317Z"
   }
 }
