@@ -4074,6 +4074,34 @@
   },
   "activityLog": [
     {
+      "id": "t1784978386065gq7o",
+      "time": "2026-07-25T11:19:46.066Z",
+      "action": "[Saqib] Updated task \"Lubrication oil leakages to be...\" on Press",
+      "user": "Saqib",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1784022464368t9dx",
+          "machine": "Press",
+          "category": "Mechanical",
+          "desc": "Lubrication oil leakages to be rectified",
+          "priority": "Medium",
+          "progress": 100,
+          "status": "In Progress",
+          "responsible": "Arsalan",
+          "deadline": "",
+          "remarks": "",
+          "updated": "25 Jul 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Saqib",
+          "image": null
+        }
+      },
+      "taskId": "t1784022464368t9dx"
+    },
+    {
       "id": "t1784973694649n7kj",
       "time": "2026-07-25T10:01:34.649Z",
       "action": "[Saqib] Added task \"dust collection blower need to...\" to Press",
@@ -6087,34 +6115,6 @@
         }
       },
       "taskId": "t_993093"
-    },
-    {
-      "id": "t17843584698883lr0",
-      "time": "2026-07-18T07:07:49.888Z",
-      "action": "[Aurangzeb] Updated task \"Rawal bolts anchoring to be do...\" [Status: Not Started → Completed, Progress: 0% → 100%] on Over Varnish",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_404937",
-          "machine": "Over Varnish",
-          "category": "Mechanical",
-          "desc": "Rawal bolts anchoring to be done on the foundation",
-          "priority": "High",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "deadline": "2026-06-25",
-          "remarks": "",
-          "updated": "2 Jun 2026",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "Aurangzeb",
-          "image": "Photos/Over Varnish/task_img_1780376254186.jpg"
-        }
-      },
-      "taskId": "t_404937"
     }
   ],
   "machineMeta": {
@@ -6362,6 +6362,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T11:19:05.361Z"
+    "Saqib": "2026-07-25T11:19:46.066Z"
   }
 }
