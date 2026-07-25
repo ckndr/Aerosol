@@ -4193,12 +4193,41 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t1784979073055ns7x",
+      "machine": "FG Conveyor",
+      "category": "Mechanical",
+      "desc": "to be re structured as per new layout",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "Completed",
+      "remarks": "",
+      "responsible": "",
+      "updated": "25 Jul 2026",
+      "lastEditedBy": "Saqib",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784979073055teo6",
+      "time": "2026-07-25T11:31:13.055Z",
+      "action": "[Saqib] Added task \"to be re structured as per new...\" to FG Conveyor",
+      "user": "Saqib",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1784979073055ns7x"
+      },
+      "taskId": "t1784979073055ns7x"
+    },
     {
       "id": "t1784979019822ivki",
       "time": "2026-07-25T11:30:19.822Z",
@@ -6258,34 +6287,6 @@
         "taskId": "t1784794886030v2b1"
       },
       "taskId": "t1784794886030v2b1"
-    },
-    {
-      "id": "t1784794759350m9es",
-      "time": "2026-07-23T08:19:19.350Z",
-      "action": "[Aurangzeb] Updated task \"OV cam sensor checking and rep...\" on Over Varnish",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t17847947349199cu3",
-          "machine": "Over Varnish",
-          "category": "Mechanical",
-          "desc": "OV cam sensor checking and replacement",
-          "priority": "High",
-          "progress": 100,
-          "status": "Completed",
-          "remarks": "",
-          "responsible": "",
-          "updated": "23 Jul 2026",
-          "lastEditedBy": "Aurangzeb",
-          "image": null,
-          "waitingOn": "",
-          "deadline": "",
-          "dateStarted": "",
-          "dateFinished": "2026-07-21"
-        }
-      },
-      "taskId": "t17847947349199cu3"
     }
   ],
   "machineMeta": {
@@ -6533,6 +6534,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T11:30:19.823Z"
+    "Saqib": "2026-07-25T11:31:13.055Z"
   }
 }
