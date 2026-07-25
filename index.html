@@ -2563,6 +2563,15 @@
               <option value="Pending" style="background:var(--surface)">Dry Run Pending</option>
               <option value="Complete" style="background:var(--surface)">Dry Run Complete</option>
             </select>
+            <span style="font-size:.68rem;color:var(--text3);font-family:'DM Mono',monospace;margin-left:0.5rem">🏭 Commercial
+              Run:</span>
+            <select id="d-commercialrun-status"
+              style="background:transparent;border:none;border-bottom:1px dashed var(--border2);font-family:'DM Mono',monospace;font-size:.7rem;color:var(--text2);outline:none;cursor:pointer"
+              onchange="saveCommercialRunStatus(this.dataset.machine, this.value)">
+              <option value="None" style="background:var(--surface)">None</option>
+              <option value="Pending" style="background:var(--surface)">Commercial Run Pending</option>
+              <option value="Complete" style="background:var(--surface)">Commercial Run Complete</option>
+            </select>
           </div>
         </div>
         <div class="detail-actions">
@@ -3727,7 +3736,7 @@
       });
       loadMeta();
 
-      // Initialize dryRun status for machines from their tasks on startup if not set yet
+      // Initialize dryRun and commercialRun status for machines from their tasks on startup if not set yet
       MACHINE_ORDER.forEach(m => {
         if (!MACHINE_META[m]) MACHINE_META[m] = {};
         if (MACHINE_META[m].dryRun === undefined) {
@@ -3737,6 +3746,15 @@
             MACHINE_META[m].dryRun = dryRunTask.status === 'Completed' ? 'Complete' : 'Pending';
           } else {
             MACHINE_META[m].dryRun = 'None';
+          }
+        }
+        if (MACHINE_META[m].commercialRun === undefined) {
+          const mt = tasks.filter(t => t.machine === m);
+          const commercialRunTask = mt.find(t => t.desc.toLowerCase().includes('commercial run'));
+          if (commercialRunTask) {
+            MACHINE_META[m].commercialRun = commercialRunTask.status === 'Completed' ? 'Complete' : 'Pending';
+          } else {
+            MACHINE_META[m].commercialRun = 'None';
           }
         }
       });
@@ -3797,6 +3815,17 @@
       saveState(); // trigger auto-sync
       renderDashboard();
       toast('Dry run status saved', 'success');
+    }
+
+    function saveCommercialRunStatus(machine, status) {
+      if (!machine) return;
+      if (!isLoggedIn()) { openLoginModal(); return; }
+      if (!MACHINE_META[machine]) MACHINE_META[machine] = {};
+      MACHINE_META[machine].commercialRun = status;
+      saveMeta();
+      saveState(); // trigger auto-sync
+      renderDashboard();
+      toast('Commercial run status saved', 'success');
     }
 
     // ═══════════════════════════════════════════════════════
@@ -4152,6 +4181,7 @@
           const mPend = allMt.filter(t => t.category === 'Mechanical' && t.status !== 'Completed').length;
           const gPend = allMt.filter(t => t.category === 'General' && t.status !== 'Completed').length;
           const dryRunStatus = MACHINE_META[m]?.dryRun || 'None';
+          const commercialRunStatus = MACHINE_META[m]?.commercialRun || 'None';
           const dash = `${(pct / 100 * C).toFixed(1)} ${C.toFixed(1)}`;
 
           const card = document.createElement('div');
@@ -4188,6 +4218,14 @@
                 return `<span style="font-size:.62rem;font-weight:600;color:var(--s-cp-t);background:var(--s-cp-bg);border:1px solid var(--s-cp-b);border-radius:20px;padding:.15rem .5rem;font-family:'DM Mono',monospace;">✓ Dry Run Complete</span>`;
               } else if (dryRunStatus === 'Pending') {
                 return `<span style="font-size:.62rem;font-weight:600;color:var(--s-ns-t);background:var(--s-ns-bg);border:1px solid var(--s-ns-b);border-radius:20px;padding:.15rem .5rem;font-family:'DM Mono',monospace;">✗ Dry Run Pending</span>`;
+              }
+              return '';
+            })()}
+          ${(() => {
+              if (commercialRunStatus === 'Complete') {
+                return `<span style="font-size:.62rem;font-weight:600;color:var(--s-cp-t);background:var(--s-cp-bg);border:1px solid var(--s-cp-b);border-radius:20px;padding:.15rem .5rem;font-family:'DM Mono',monospace;">✓ Commercial Run Complete</span>`;
+              } else if (commercialRunStatus === 'Pending') {
+                return `<span style="font-size:.62rem;font-weight:600;color:var(--s-ns-t);background:var(--s-ns-bg);border:1px solid var(--s-ns-b);border-radius:20px;padding:.15rem .5rem;font-family:'DM Mono',monospace;">✗ Commercial Run Pending</span>`;
               }
               return '';
             })()}
@@ -4400,6 +4438,12 @@
         drEl.value = meta.dryRun || 'None';
         drEl.dataset.machine = m;
         drEl.disabled = !isLoggedIn();
+      }
+      const crEl = document.getElementById('d-commercialrun-status');
+      if (crEl) {
+        crEl.value = meta.commercialRun || 'None';
+        crEl.dataset.machine = m;
+        crEl.disabled = !isLoggedIn();
       }
 
       // Gallery — HIDE by default, show button if photos exist
