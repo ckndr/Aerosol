@@ -3589,7 +3589,7 @@
       "desc": "rejection box for trim collection",
       "priority": "Medium",
       "progress": 0,
-      "status": "Not Started",
+      "status": "Pending Procurement",
       "remarks": "",
       "responsible": "",
       "updated": "25 Jul 2026",
@@ -4127,6 +4127,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784978584398315k",
+      "time": "2026-07-25T11:23:04.398Z",
+      "action": "[Saqib] Updated task \"rejection box for trim collect...\" [Status: Not Started → Pending Procurement] on Trimming",
+      "user": "Saqib",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t17849532213243tpd",
+          "machine": "Trimming",
+          "category": "Mechanical",
+          "desc": "rejection box for trim collection",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "remarks": "",
+          "responsible": "",
+          "updated": "25 Jul 2026",
+          "lastEditedBy": "Saqib",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t17849532213243tpd"
+    },
     {
       "id": "t178497857534390eg",
       "time": "2026-07-25T11:22:55.343Z",
@@ -6093,34 +6121,6 @@
         }
       },
       "taskId": "t_764635"
-    },
-    {
-      "id": "t1784362086190kpgf",
-      "time": "2026-07-18T08:08:06.190Z",
-      "action": "[Aurangzeb] Updated task \"SOV coil pneumatic press clutc...\" [Progress: 20% → 0%, Priority: High → Low] on Press",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t178402246436679mb",
-          "machine": "Press",
-          "category": "Electrical",
-          "desc": "SOV coil pneumatic press clutch",
-          "priority": "High",
-          "progress": 20,
-          "status": "Pending Procurement",
-          "responsible": "Saqib",
-          "deadline": "2026-06-16",
-          "remarks": "",
-          "updated": "18 Jul 2026",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "Aurangzeb",
-          "image": null
-        }
-      },
-      "taskId": "t178402246436679mb"
     }
   ],
   "machineMeta": {
@@ -6368,6 +6368,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T11:22:55.343Z"
+    "Saqib": "2026-07-25T11:23:04.398Z"
   }
 }
