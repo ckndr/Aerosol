@@ -4049,12 +4049,41 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t17849736693050llk",
+      "machine": "Lacquer",
+      "category": "Mechanical",
+      "desc": "dust collection blower need to be start",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "Not Started",
+      "remarks": "",
+      "responsible": "",
+      "updated": "25 Jul 2026",
+      "lastEditedBy": "Saqib",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17849736693052c5j",
+      "time": "2026-07-25T10:01:09.305Z",
+      "action": "[Saqib] Added task \"dust collection blower need to...\" to Lacquer",
+      "user": "Saqib",
+      "undoData": {
+        "type": "add",
+        "taskId": "t17849736693050llk"
+      },
+      "taskId": "t17849736693050llk"
+    },
     {
       "id": "t1784973630515gtik",
       "time": "2026-07-25T10:00:30.515Z",
@@ -6104,17 +6133,6 @@
         }
       },
       "taskId": "t_801432"
-    },
-    {
-      "id": "t17843582626658r11",
-      "time": "2026-07-18T07:04:22.665Z",
-      "action": "[Aurangzeb] Added task \"Accumulator+ Main Oven chain &...\" to Overall Machine Operation",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "add",
-        "taskId": "t17843582626653eoh"
-      },
-      "taskId": "t17843582626653eoh"
     }
   ],
   "machineMeta": {
@@ -6362,6 +6380,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T10:00:30.516Z"
+    "Saqib": "2026-07-25T10:01:09.305Z"
   }
 }
