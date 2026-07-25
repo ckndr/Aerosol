@@ -3671,12 +3671,41 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t1784953478812lvjc",
+      "machine": "General",
+      "category": "Electrical",
+      "desc": "Installation of Solar panels",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "Not Started",
+      "remarks": "",
+      "responsible": "",
+      "updated": "25 Jul 2026",
+      "lastEditedBy": "Saqib",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17849534788120su6",
+      "time": "2026-07-25T04:24:38.812Z",
+      "action": "[Saqib] Added task \"Installation of Solar panels...\" to General",
+      "user": "Saqib",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1784953478812lvjc"
+      },
+      "taskId": "t1784953478812lvjc"
+    },
     {
       "id": "t1784953443260x8yn",
       "time": "2026-07-25T04:24:03.260Z",
@@ -6076,35 +6105,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1783942046341a4ax",
-      "time": "2026-07-13T11:27:26.341Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_963673",
-            "machine": "General",
-            "category": "General",
-            "desc": "Overall machine paint",
-            "priority": "Medium",
-            "progress": 0,
-            "status": "Not Started",
-            "responsible": "Saqib",
-            "deadline": "",
-            "remarks": "",
-            "updated": "",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "",
-            "image": ""
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6352,6 +6352,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T04:24:03.260Z"
+    "Saqib": "2026-07-25T04:24:38.812Z"
   }
 }
