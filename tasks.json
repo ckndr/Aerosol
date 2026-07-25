@@ -191,11 +191,11 @@
       "responsible": "Saqib",
       "deadline": "2026-06-25",
       "remarks": "Rollers made not according to req. spec. need to be remade.",
-      "updated": "18 Jul 2026",
+      "updated": "25 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Aurangzeb",
+      "lastEditedBy": "Saqib",
       "image": null
     },
     {
@@ -4128,6 +4128,34 @@
   },
   "activityLog": [
     {
+      "id": "t1784978636854l8wi",
+      "time": "2026-07-25T11:23:56.854Z",
+      "action": "[Saqib] Updated task \"Spare Rubberize rollers...\" on Base Coat",
+      "user": "Saqib",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_871623",
+          "machine": "Base Coat",
+          "category": "Mechanical",
+          "desc": "Spare Rubberize rollers",
+          "priority": "High",
+          "progress": 60,
+          "status": "Pending Procurement",
+          "responsible": "Saqib",
+          "deadline": "2026-06-25",
+          "remarks": "Rollers made not according to req. spec. need to be remade.",
+          "updated": "18 Jul 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": null
+        }
+      },
+      "taskId": "t_871623"
+    },
+    {
       "id": "t1784978632383i9vl",
       "time": "2026-07-25T11:23:52.383Z",
       "action": "[Saqib] Updated task \"Fumes collector piping to inst...\" [Status: In Progress → Pending Procurement] on Base Coat",
@@ -6093,34 +6121,6 @@
         }
       },
       "taskId": "t_385603"
-    },
-    {
-      "id": "t1784362593374tayf",
-      "time": "2026-07-18T08:16:33.374Z",
-      "action": "[Aurangzeb] Updated task \"Separate storage tanks install...\" [Status: Not Started → In Progress, Remarks updated] on Washing",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_612787",
-          "machine": "Washing",
-          "category": "Mechanical",
-          "desc": "Separate storage tanks installation(detergent / cold / hot water)",
-          "priority": "High",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Saqib",
-          "deadline": "2026-06-30",
-          "remarks": "",
-          "updated": "1 Jun 2026",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "Aurangzeb",
-          "image": "Photos/Washing/task_img_1780312513275.jpg"
-        }
-      },
-      "taskId": "t_612787"
     }
   ],
   "machineMeta": {
@@ -6368,6 +6368,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T11:23:52.920Z"
+    "Saqib": "2026-07-25T11:23:56.854Z"
   }
 }
