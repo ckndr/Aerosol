@@ -3607,7 +3607,7 @@
       "desc": "procurement of talon Bush for pins",
       "priority": "Medium",
       "progress": 0,
-      "status": "In Progress",
+      "status": "Pending Procurement",
       "remarks": "",
       "responsible": "",
       "updated": "25 Jul 2026",
@@ -4181,6 +4181,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784978812495rqnw",
+      "time": "2026-07-25T11:26:52.495Z",
+      "action": "[Saqib] Updated task \"procurement of talon Bush for ...\" [Status: In Progress → Pending Procurement] on General",
+      "user": "Saqib",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t17849533700399wqu",
+          "machine": "General",
+          "category": "Mechanical",
+          "desc": "procurement of talon Bush for pins",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "In Progress",
+          "remarks": "",
+          "responsible": "",
+          "updated": "25 Jul 2026",
+          "lastEditedBy": "Saqib",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t17849533700399wqu"
+    },
     {
       "id": "t1784978805870x2vs",
       "time": "2026-07-25T11:26:45.870Z",
@@ -6146,17 +6174,6 @@
         "taskId": "t1784709625280l2yx"
       },
       "taskId": "t1784709625280l2yx"
-    },
-    {
-      "id": "t1784709342555vwqs",
-      "time": "2026-07-22T08:35:42.555Z",
-      "action": "[Aurangzeb] Added task \"Rollers Assembly adjustment an...\" to Base Coat",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "add",
-        "taskId": "t17847093425554ayw"
-      },
-      "taskId": "t17847093425554ayw"
     }
   ],
   "machineMeta": {
@@ -6404,6 +6421,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T11:26:45.870Z"
+    "Saqib": "2026-07-25T11:26:52.495Z"
   }
 }
