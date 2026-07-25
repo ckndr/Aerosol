@@ -3833,12 +3833,41 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t1784953657670knqz",
+      "machine": "General",
+      "category": "Mechanical",
+      "desc": "Mechanical Spare parts to be ordered",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "In Progress",
+      "remarks": "",
+      "responsible": "",
+      "updated": "25 Jul 2026",
+      "lastEditedBy": "Saqib",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784953657670ke82",
+      "time": "2026-07-25T04:27:37.670Z",
+      "action": "[Saqib] Added task \"Mechanical Spare parts to be o...\" to General",
+      "user": "Saqib",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1784953657670knqz"
+      },
+      "taskId": "t1784953657670knqz"
+    },
     {
       "id": "t1784953630788dh48",
       "time": "2026-07-25T04:27:10.788Z",
@@ -6076,35 +6105,6 @@
         }
       },
       "taskId": "t_775918"
-    },
-    {
-      "id": "t1783942193791f4hr",
-      "time": "2026-07-13T11:29:53.791Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_717625",
-            "machine": "Washing",
-            "category": "Mechanical",
-            "desc": "Spray and Drying section's windows to be installed",
-            "priority": "High",
-            "progress": 0,
-            "status": "Not Started",
-            "responsible": "Arsalan",
-            "deadline": "2026-06-30",
-            "remarks": "",
-            "updated": "1 Jun 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Aurangzeb",
-            "image": "Photos/Washing/task_img_1780312355529.jpg"
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6352,6 +6352,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T04:27:10.788Z"
+    "Saqib": "2026-07-25T04:27:37.670Z"
   }
 }
