@@ -2851,11 +2851,11 @@
       "desc": "Inspect all rubber pipes — replace if damaged",
       "priority": "High",
       "progress": 0,
-      "status": "Not Started",
+      "status": "In Progress",
       "responsible": "Arsalan",
       "deadline": "2026-06-30",
       "remarks": "",
-      "updated": "13 Jul 2026",
+      "updated": "25 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -4181,6 +4181,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784978891742hr7h",
+      "time": "2026-07-25T11:28:11.742Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_788779",
+            "machine": "Washing",
+            "category": "Mechanical",
+            "desc": "Inspect all rubber pipes — replace if damaged",
+            "priority": "High",
+            "progress": 0,
+            "status": "Not Started",
+            "responsible": "Arsalan",
+            "deadline": "2026-06-30",
+            "remarks": "",
+            "updated": "13 Jul 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Saqib",
+            "image": "Photos/Washing/task_img_1780312620376.jpg"
+          }
+        ]
+      }
+    },
     {
       "id": "t1784978862774xhfz",
       "time": "2026-07-25T11:27:42.774Z",
@@ -6198,17 +6227,6 @@
         }
       },
       "taskId": "t1784709997569l6gd"
-    },
-    {
-      "id": "t1784709997569x8gs",
-      "time": "2026-07-22T08:46:37.569Z",
-      "action": "[Aurangzeb] Added task \"Basecoat refill mechansim ( pu...\" to Base Coat",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1784709997569l6gd"
-      },
-      "taskId": "t1784709997569l6gd"
     }
   ],
   "machineMeta": {
@@ -6456,6 +6474,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T11:27:52.922Z"
+    "Saqib": "2026-07-25T11:28:11.742Z"
   }
 }
