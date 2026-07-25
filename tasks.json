@@ -3031,11 +3031,11 @@
       "desc": "Spray and Drying section's windows to be installed",
       "priority": "High",
       "progress": 80,
-      "status": "Not Started",
+      "status": "In Progress",
       "responsible": "Arsalan",
       "deadline": "2026-06-30",
       "remarks": "",
-      "updated": "13 Jul 2026",
+      "updated": "25 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -4181,6 +4181,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784978944063wv38",
+      "time": "2026-07-25T11:29:04.063Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_717625",
+            "machine": "Washing",
+            "category": "Mechanical",
+            "desc": "Spray and Drying section's windows to be installed",
+            "priority": "High",
+            "progress": 80,
+            "status": "Not Started",
+            "responsible": "Arsalan",
+            "deadline": "2026-06-30",
+            "remarks": "",
+            "updated": "13 Jul 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Saqib",
+            "image": "Photos/Washing/task_img_1780312355529.jpg"
+          }
+        ]
+      }
+    },
     {
       "id": "t1784978939750vqek",
       "time": "2026-07-25T11:28:59.750Z",
@@ -6203,34 +6232,6 @@
         "taskId": "t17847945613991jjj"
       },
       "taskId": "t17847945613991jjj"
-    },
-    {
-      "id": "t1784710236969uyva",
-      "time": "2026-07-22T08:50:36.969Z",
-      "action": "[Aurangzeb] Updated task \"Make stand for all spare rolls...\" [Progress: 10% → 90%] on General",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_366746",
-          "machine": "General",
-          "category": "General",
-          "desc": "Make stands for all spare rolls",
-          "priority": "Medium",
-          "progress": 10,
-          "status": "In Progress",
-          "responsible": "Saqib",
-          "deadline": "",
-          "remarks": "",
-          "updated": "13 Jul 2026",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "Saqib",
-          "image": ""
-        }
-      },
-      "taskId": "t_366746"
     }
   ],
   "machineMeta": {
@@ -6478,6 +6479,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T11:28:59.750Z"
+    "Saqib": "2026-07-25T11:29:04.063Z"
   }
 }
