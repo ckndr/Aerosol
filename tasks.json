@@ -3941,12 +3941,41 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t1784954002548tn7i",
+      "machine": "Over Varnish",
+      "category": "Mechanical",
+      "desc": "Fumes collection box to be installed",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "In Progress",
+      "remarks": "",
+      "responsible": "",
+      "updated": "25 Jul 2026",
+      "lastEditedBy": "Saqib",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784954002548j399",
+      "time": "2026-07-25T04:33:22.548Z",
+      "action": "[Saqib] Added task \"Fumes collection box to be ins...\" to Over Varnish",
+      "user": "Saqib",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1784954002548tn7i"
+      },
+      "taskId": "t1784954002548tn7i"
+    },
     {
       "id": "t1784953994589ivcl",
       "time": "2026-07-25T04:33:14.589Z",
@@ -6081,34 +6110,6 @@
         }
       },
       "taskId": "t_895006"
-    },
-    {
-      "id": "t17843573512579ltn",
-      "time": "2026-07-18T06:49:11.257Z",
-      "action": "[Aurangzeb] Updated task \"Spare Rubberize rollers...\" [Progress: 50% → 60%, Remarks updated] on Over Varnish",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_895006",
-          "machine": "Over Varnish",
-          "category": "Mechanical",
-          "desc": "Spare Rubberize rollers",
-          "priority": "High",
-          "progress": 50,
-          "status": "In Progress",
-          "responsible": "Saqib",
-          "deadline": "2026-06-25",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "",
-          "image": ""
-        }
-      },
-      "taskId": "t_895006"
     }
   ],
   "machineMeta": {
@@ -6356,6 +6357,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T04:33:14.589Z"
+    "Saqib": "2026-07-25T04:33:22.548Z"
   }
 }
