@@ -511,16 +511,16 @@
       "desc": "Machine Operating Manuals",
       "priority": "Medium",
       "progress": 10,
-      "status": "In Progress",
+      "status": "Pending Procurement",
       "responsible": "Saqib",
       "deadline": "",
       "remarks": "",
-      "updated": "",
+      "updated": "25 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "",
-      "image": ""
+      "lastEditedBy": "Saqib",
+      "image": null
     },
     {
       "id": "t_963673",
@@ -4200,6 +4200,34 @@
   },
   "activityLog": [
     {
+      "id": "t1784979151575epv6",
+      "time": "2026-07-25T11:32:31.575Z",
+      "action": "[Saqib] Updated task \"Machine Operating Manuals...\" [Status: In Progress → Pending Procurement] on General",
+      "user": "Saqib",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_938713",
+          "machine": "General",
+          "category": "General",
+          "desc": "Machine Operating Manuals",
+          "priority": "Medium",
+          "progress": 10,
+          "status": "In Progress",
+          "responsible": "Saqib",
+          "deadline": "",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "",
+          "image": ""
+        }
+      },
+      "taskId": "t_938713"
+    },
+    {
       "id": "t1784979082886r0ct",
       "time": "2026-07-25T11:31:22.886Z",
       "action": "[Saqib] Deleted task \"to be re structured as per new...\" from FG Conveyor",
@@ -6274,17 +6302,6 @@
         "taskId": "t1784795136630aqby"
       },
       "taskId": "t1784795136630aqby"
-    },
-    {
-      "id": "t1784795105320docm",
-      "time": "2026-07-23T08:25:05.320Z",
-      "action": "[Aurangzeb] Added task \"Chemical liquid supply pump ov...\" to Base Coat",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1784795105320xl7a"
-      },
-      "taskId": "t1784795105320xl7a"
     }
   ],
   "machineMeta": {
@@ -6532,6 +6549,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T11:31:52.927Z"
+    "Saqib": "2026-07-25T11:32:31.576Z"
   }
 }
