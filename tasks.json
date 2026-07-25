@@ -3571,7 +3571,7 @@
       "desc": "Installation of a VFD with Speed Adjustment",
       "priority": "Medium",
       "progress": 0,
-      "status": "In Progress",
+      "status": "Pending Procurement",
       "remarks": "",
       "responsible": "",
       "updated": "25 Jul 2026",
@@ -4127,6 +4127,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t178497857534390eg",
+      "time": "2026-07-25T11:22:55.343Z",
+      "action": "[Saqib] Updated task \"Installation of a VFD with Spe...\" [Status: In Progress → Pending Procurement] on Trimming",
+      "user": "Saqib",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1784953175631hd5z",
+          "machine": "Trimming",
+          "category": "Mechanical",
+          "desc": "Installation of a VFD with Speed Adjustment",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "In Progress",
+          "remarks": "",
+          "responsible": "",
+          "updated": "25 Jul 2026",
+          "lastEditedBy": "Saqib",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t1784953175631hd5z"
+    },
     {
       "id": "t1784978547702gk17",
       "time": "2026-07-25T11:22:27.702Z",
@@ -6093,34 +6121,6 @@
         }
       },
       "taskId": "t178402246436679mb"
-    },
-    {
-      "id": "t1784362051783fzqu",
-      "time": "2026-07-18T08:07:31.783Z",
-      "action": "[Aurangzeb] Updated task \"Lab equipment to be sourced...\" [Status: Pending Procurement → In Progress] on General",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_542466",
-          "machine": "General",
-          "category": "General",
-          "desc": "Lab equipment to be sourced",
-          "priority": "Medium",
-          "progress": 70,
-          "status": "Pending Procurement",
-          "responsible": "Saqib",
-          "deadline": "",
-          "remarks": "",
-          "updated": "18 Jul 2026",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "Aurangzeb",
-          "image": null
-        }
-      },
-      "taskId": "t_542466"
     }
   ],
   "machineMeta": {
@@ -6368,6 +6368,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T11:22:27.702Z"
+    "Saqib": "2026-07-25T11:22:55.343Z"
   }
 }
