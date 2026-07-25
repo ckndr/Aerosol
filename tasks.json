@@ -529,11 +529,11 @@
       "desc": "Overall machine paint",
       "priority": "Medium",
       "progress": 20,
-      "status": "In Progress",
+      "status": "Pending Procurement",
       "responsible": "Saqib",
       "deadline": "",
       "remarks": "",
-      "updated": "24 Jul 2026",
+      "updated": "25 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -4200,6 +4200,34 @@
   },
   "activityLog": [
     {
+      "id": "t17849791619991rv5",
+      "time": "2026-07-25T11:32:41.999Z",
+      "action": "[Saqib] Updated task \"Overall machine paint...\" [Status: In Progress → Pending Procurement] on General",
+      "user": "Saqib",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_963673",
+          "machine": "General",
+          "category": "General",
+          "desc": "Overall machine paint",
+          "priority": "Medium",
+          "progress": 20,
+          "status": "In Progress",
+          "responsible": "Saqib",
+          "deadline": "",
+          "remarks": "",
+          "updated": "24 Jul 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Saqib",
+          "image": null
+        }
+      },
+      "taskId": "t_963673"
+    },
+    {
       "id": "t1784979151575epv6",
       "time": "2026-07-25T11:32:31.575Z",
       "action": "[Saqib] Updated task \"Machine Operating Manuals...\" [Status: In Progress → Pending Procurement] on General",
@@ -6291,17 +6319,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1784795136630f89j",
-      "time": "2026-07-23T08:25:36.630Z",
-      "action": "[Aurangzeb] Added task \"Chemical liquid supply pump ov...\" to Over Varnish",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1784795136630aqby"
-      },
-      "taskId": "t1784795136630aqby"
     }
   ],
   "machineMeta": {
@@ -6549,6 +6566,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T11:32:31.576Z"
+    "Saqib": "2026-07-25T11:32:41.999Z"
   }
 }
