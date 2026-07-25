@@ -631,24 +631,6 @@
       "image": ""
     },
     {
-      "id": "t_895031",
-      "machine": "General",
-      "category": "Mechanical",
-      "desc": "scrap collector container to be made/procured for trimming",
-      "priority": "Medium",
-      "progress": 0,
-      "status": "Not Started",
-      "responsible": "Saqib",
-      "deadline": "",
-      "remarks": "",
-      "updated": "",
-      "waitingOn": "",
-      "dateStarted": "",
-      "dateFinished": "",
-      "lastEditedBy": "",
-      "image": ""
-    },
-    {
       "id": "t_357094",
       "machine": "General",
       "category": "Electrical",
@@ -4200,6 +4182,33 @@
   },
   "activityLog": [
     {
+      "id": "t1784978805870x2vs",
+      "time": "2026-07-25T11:26:45.870Z",
+      "action": "[Saqib] Deleted task \"scrap collector container to b...\" from General",
+      "user": "Saqib",
+      "undoData": {
+        "type": "delete",
+        "prevTask": {
+          "id": "t_895031",
+          "machine": "General",
+          "category": "Mechanical",
+          "desc": "scrap collector container to be made/procured for trimming",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Saqib",
+          "deadline": "",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "",
+          "image": ""
+        }
+      }
+    },
+    {
       "id": "t1784978780030dssu",
       "time": "2026-07-25T11:26:20.030Z",
       "action": "[Saqib] Updated task \"Mixer installation and mountin...\" [Status: Not Started → Completed] on Tumbler",
@@ -6148,17 +6157,6 @@
         "taskId": "t17847093425554ayw"
       },
       "taskId": "t17847093425554ayw"
-    },
-    {
-      "id": "t1784709260969cpvv",
-      "time": "2026-07-22T08:34:20.969Z",
-      "action": "[Aurangzeb] Added task \"can push rods from star to man...\" to Base Coat",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "add",
-        "taskId": "t17847092609693vtx"
-      },
-      "taskId": "t17847092609693vtx"
     }
   ],
   "machineMeta": {
@@ -6406,6 +6404,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T11:26:20.030Z"
+    "Saqib": "2026-07-25T11:26:45.870Z"
   }
 }
