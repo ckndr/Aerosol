@@ -2076,16 +2076,16 @@
       "category": "Electrical",
       "desc": "SOV coil pneumatic press clutch",
       "priority": "Low",
-      "progress": 0,
-      "status": "Pending Procurement",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Saqib",
       "deadline": "2026-06-16",
       "remarks": "",
-      "updated": "18 Jul 2026",
+      "updated": "25 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Aurangzeb",
+      "lastEditedBy": "Saqib",
       "image": null
     },
     {
@@ -3605,6 +3605,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17849532546604e4k",
+      "time": "2026-07-25T04:20:54.660Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t178402246436679mb",
+            "machine": "Press",
+            "category": "Electrical",
+            "desc": "SOV coil pneumatic press clutch",
+            "priority": "Low",
+            "progress": 0,
+            "status": "Pending Procurement",
+            "responsible": "Saqib",
+            "deadline": "2026-06-16",
+            "remarks": "",
+            "updated": "18 Jul 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Aurangzeb",
+            "image": null
+          }
+        ]
+      }
+    },
     {
       "id": "t1784953221324v7n2",
       "time": "2026-07-25T04:20:21.324Z",
@@ -6076,35 +6105,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t178394194819635ie",
-      "time": "2026-07-13T11:25:48.196Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_460094",
-            "machine": "Overall Machine Operation",
-            "category": "Electrical",
-            "desc": "Main Power Cable procurement",
-            "priority": "High",
-            "progress": 0,
-            "status": "Pending Procurement",
-            "responsible": "Saqib",
-            "deadline": "2026-07-10",
-            "remarks": "Quotation awaiting for execution",
-            "updated": "13 Jul 2026",
-            "waitingOn": "",
-            "dateStarted": "2026-07-11",
-            "dateFinished": "2026-07-10",
-            "lastEditedBy": "Saqib",
-            "image": null
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6352,6 +6352,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T04:20:36.340Z"
+    "Saqib": "2026-07-25T04:20:54.660Z"
   }
 }
