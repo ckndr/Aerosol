@@ -4175,12 +4175,41 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t17849790198225bj9",
+      "machine": "Necking",
+      "category": "Mechanical",
+      "desc": "PVC ejection pipe to be installed",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "Pending Procurement",
+      "remarks": "",
+      "responsible": "",
+      "updated": "25 Jul 2026",
+      "lastEditedBy": "Saqib",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784979019822ivki",
+      "time": "2026-07-25T11:30:19.822Z",
+      "action": "[Saqib] Added task \"PVC ejection pipe to be instal...\" to Necking",
+      "user": "Saqib",
+      "undoData": {
+        "type": "add",
+        "taskId": "t17849790198225bj9"
+      },
+      "taskId": "t17849790198225bj9"
+    },
     {
       "id": "t178497899287812rw",
       "time": "2026-07-25T11:29:52.878Z",
@@ -6257,17 +6286,6 @@
         }
       },
       "taskId": "t17847947349199cu3"
-    },
-    {
-      "id": "t1784794734919nf87",
-      "time": "2026-07-23T08:18:54.919Z",
-      "action": "[Aurangzeb] Added task \"OV cam sensor checking and rep...\" to Over Varnish",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "add",
-        "taskId": "t17847947349199cu3"
-      },
-      "taskId": "t17847947349199cu3"
     }
   ],
   "machineMeta": {
@@ -6515,6 +6533,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T11:29:52.917Z"
+    "Saqib": "2026-07-25T11:30:19.823Z"
   }
 }
