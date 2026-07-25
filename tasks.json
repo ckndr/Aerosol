@@ -2635,11 +2635,11 @@
       "desc": "pneumatic pressure valve for ejector pressure to install",
       "priority": "High",
       "progress": 0,
-      "status": "Not Started",
+      "status": "In Progress",
       "responsible": "Arsalan",
       "deadline": "2026-06-19",
       "remarks": "",
-      "updated": "13 Jul 2026",
+      "updated": "25 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -4181,6 +4181,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1784978862774xhfz",
+      "time": "2026-07-25T11:27:42.774Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_934362",
+            "machine": "Trimming",
+            "category": "Mechanical",
+            "desc": "pneumatic pressure valve for ejector pressure to install",
+            "priority": "High",
+            "progress": 0,
+            "status": "Not Started",
+            "responsible": "Arsalan",
+            "deadline": "2026-06-19",
+            "remarks": "",
+            "updated": "13 Jul 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Saqib",
+            "image": "Photos/Trimming/task_img_1780311531849.jpg"
+          }
+        ]
+      }
+    },
     {
       "id": "t1784978817710bykb",
       "time": "2026-07-25T11:26:57.710Z",
@@ -6180,17 +6209,6 @@
         "taskId": "t1784709997569l6gd"
       },
       "taskId": "t1784709997569l6gd"
-    },
-    {
-      "id": "t1784709783912bp8x",
-      "time": "2026-07-22T08:43:03.912Z",
-      "action": "[Aurangzeb] Added task \"Teflon suction grippers to cha...\" to Base Coat",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1784709783912wgvo"
-      },
-      "taskId": "t1784709783912wgvo"
     }
   ],
   "machineMeta": {
@@ -6438,6 +6456,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T11:26:57.710Z"
+    "Saqib": "2026-07-25T11:27:42.775Z"
   }
 }
