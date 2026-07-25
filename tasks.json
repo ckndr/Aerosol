@@ -3851,12 +3851,41 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t1784953674141abt5",
+      "machine": "General",
+      "category": "Mechanical",
+      "desc": "Mechanical Basic Tools to be ordered",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "Not Started",
+      "remarks": "",
+      "responsible": "",
+      "updated": "25 Jul 2026",
+      "lastEditedBy": "Saqib",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17849536741411zfr",
+      "time": "2026-07-25T04:27:54.141Z",
+      "action": "[Saqib] Added task \"Mechanical Basic Tools to be o...\" to General",
+      "user": "Saqib",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1784953674141abt5"
+      },
+      "taskId": "t1784953674141abt5"
+    },
     {
       "id": "t1784953657670ke82",
       "time": "2026-07-25T04:27:37.670Z",
@@ -6077,34 +6106,6 @@
         }
       },
       "taskId": "t178402246436679mb"
-    },
-    {
-      "id": "t17840226228011tml",
-      "time": "2026-07-14T09:50:22.801Z",
-      "action": "[Aurangzeb] Updated task \"Gear Oil Lubrication pumping s...\" [Status: In Progress → Completed] on Press",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_775918",
-          "machine": "Press",
-          "category": "Mechanical",
-          "desc": "Gear Oil Lubrication pumping system setup",
-          "priority": "High",
-          "progress": 100,
-          "status": "In Progress",
-          "responsible": "Arsalan",
-          "deadline": "2026-06-16",
-          "remarks": "",
-          "updated": "13 Jul 2026",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "Saqib",
-          "image": "Photos/Press/task_img_1780310940426.jpg"
-        }
-      },
-      "taskId": "t_775918"
     }
   ],
   "machineMeta": {
@@ -6352,6 +6353,6 @@
   "activeSessions": {
     "Sikander": "2026-07-21T14:12:43.502Z",
     "Aurangzeb": "2026-07-23T11:34:16.938Z",
-    "Saqib": "2026-07-25T04:27:37.670Z"
+    "Saqib": "2026-07-25T04:27:54.141Z"
   }
 }
