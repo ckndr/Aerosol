@@ -1356,17 +1356,17 @@
       "category": "Mechanical",
       "desc": "Kluber oil & grease for necking machine",
       "priority": "Medium",
-      "progress": 0,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Saqib",
       "deadline": "",
       "remarks": "",
-      "updated": "25 Jul 2026",
+      "updated": "30 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Saqib",
-      "image": ""
+      "lastEditedBy": "Aurangzeb",
+      "image": null
     },
     {
       "id": "t_974583",
@@ -4236,6 +4236,34 @@
   },
   "activityLog": [
     {
+      "id": "t1785411652785u7js",
+      "time": "2026-07-30T11:40:52.785Z",
+      "action": "[Aurangzeb] Updated task \"Kluber oil & grease for neckin...\" [Status: In Progress → Completed, Progress: 0% → 100%] on Necking",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_862890",
+          "machine": "Necking",
+          "category": "Mechanical",
+          "desc": "Kluber oil & grease for necking machine",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "In Progress",
+          "responsible": "Saqib",
+          "deadline": "",
+          "remarks": "",
+          "updated": "25 Jul 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Saqib",
+          "image": ""
+        }
+      },
+      "taskId": "t_862890"
+    },
+    {
       "id": "t1785217414369jigl",
       "time": "2026-07-28T05:43:34.369Z",
       "action": "[Saqib] Added task \"Straighten and align all chain...\" to Accumulator",
@@ -6289,35 +6317,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1784874112155h67p",
-      "time": "2026-07-24T06:21:52.155Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t17840224643697qpv",
-            "machine": "Press",
-            "category": "Mechanical",
-            "desc": "Blower installation complete with piping and connections",
-            "priority": "Medium",
-            "progress": 90,
-            "status": "In Progress",
-            "responsible": "Arsalan",
-            "deadline": "",
-            "remarks": "",
-            "updated": "",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "",
-            "image": ""
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6616,7 +6615,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-30T08:11:47.944Z",
-    "Aurangzeb": "2026-07-30T11:40:23.866Z",
+    "Aurangzeb": "2026-07-30T11:40:52.785Z",
     "Saqib": "2026-07-28T09:52:00.987Z"
   }
 }
