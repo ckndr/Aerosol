@@ -1364,7 +1364,7 @@
       "updated": "30 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
-      "dateFinished": "",
+      "dateFinished": "2026-07-30",
       "lastEditedBy": "Aurangzeb",
       "image": null
     },
@@ -4236,6 +4236,34 @@
   },
   "activityLog": [
     {
+      "id": "t1785411684649pjbz",
+      "time": "2026-07-30T11:41:24.649Z",
+      "action": "[Aurangzeb] Updated task \"Kluber oil & grease for neckin...\" [Date Finished updated] on Necking",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_862890",
+          "machine": "Necking",
+          "category": "Mechanical",
+          "desc": "Kluber oil & grease for necking machine",
+          "priority": "Medium",
+          "progress": 100,
+          "status": "Completed",
+          "responsible": "Saqib",
+          "deadline": "",
+          "remarks": "",
+          "updated": "30 Jul 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": null
+        }
+      },
+      "taskId": "t_862890"
+    },
+    {
       "id": "t1785411652785u7js",
       "time": "2026-07-30T11:40:52.785Z",
       "action": "[Aurangzeb] Updated task \"Kluber oil & grease for neckin...\" [Status: In Progress → Completed, Progress: 0% → 100%] on Necking",
@@ -6288,35 +6316,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t17848741138893blr",
-      "time": "2026-07-24T06:21:53.889Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_471552",
-            "machine": "Press",
-            "category": "Mechanical",
-            "desc": "Damping rubber pads over slug feeding tray",
-            "priority": "Low",
-            "progress": 80,
-            "status": "In Progress",
-            "responsible": "Saqib",
-            "deadline": "2026-06-16",
-            "remarks": "",
-            "updated": "13 Jul 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Saqib",
-            "image": "Photos/Press/task_img_1780310919112.jpg"
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6615,7 +6614,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-30T08:11:47.944Z",
-    "Aurangzeb": "2026-07-30T11:40:52.785Z",
+    "Aurangzeb": "2026-07-30T11:41:24.650Z",
     "Saqib": "2026-07-28T09:52:00.987Z"
   }
 }
