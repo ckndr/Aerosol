@@ -4229,12 +4229,41 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t178556659983520bk",
+      "machine": "Press",
+      "category": "Mechanical",
+      "desc": "Clutch pressure pipe to be weld",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "Not Started",
+      "remarks": "",
+      "responsible": "",
+      "updated": "1 Aug 2026",
+      "lastEditedBy": "Aurangzeb",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1785566599835nshg",
+      "time": "2026-08-01T06:43:19.835Z",
+      "action": "[Aurangzeb] Added task \"Clutch pressure pipe to be wel...\" to Press",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "add",
+        "taskId": "t178556659983520bk"
+      },
+      "taskId": "t178556659983520bk"
+    },
     {
       "id": "t1785411684649pjbz",
       "time": "2026-07-30T11:41:24.649Z",
@@ -6287,35 +6316,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1784874129321x61y",
-      "time": "2026-07-24T06:22:09.321Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_122888",
-            "machine": "Washing",
-            "category": "Electrical",
-            "desc": "Heaters to be Replaced",
-            "priority": "High",
-            "progress": 85,
-            "status": "In Progress",
-            "responsible": "Arsalan",
-            "deadline": "2026-06-30",
-            "remarks": "",
-            "updated": "18 Jul 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Aurangzeb",
-            "image": "Photos/Washing/task_img_1780311847804.jpg"
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6622,7 +6622,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-31T02:17:43.662Z",
-    "Aurangzeb": "2026-08-01T06:42:03.592Z",
+    "Aurangzeb": "2026-08-01T06:43:19.835Z",
     "Saqib": "2026-07-28T09:52:00.987Z"
   }
 }
