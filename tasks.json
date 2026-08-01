@@ -4247,12 +4247,41 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t1785566960971gi4r",
+      "machine": "Lacquer",
+      "category": "Electrical",
+      "desc": "plc issue emergency not reseting",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "Not Started",
+      "remarks": "",
+      "responsible": "",
+      "updated": "1 Aug 2026",
+      "lastEditedBy": "Aurangzeb",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "2026-07-31",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1785566960971mci4",
+      "time": "2026-08-01T06:49:20.971Z",
+      "action": "[Aurangzeb] Added task \"plc issue emergency not reseti...\" to Lacquer",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1785566960971gi4r"
+      },
+      "taskId": "t1785566960971gi4r"
+    },
     {
       "id": "t1785566599835nshg",
       "time": "2026-08-01T06:43:19.835Z",
@@ -6287,35 +6316,6 @@
         "taskId": "t1784874186411zegf"
       },
       "taskId": "t1784874186411zegf"
-    },
-    {
-      "id": "t1784874137393bts9",
-      "time": "2026-07-24T06:22:17.393Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_757596",
-            "machine": "Washing",
-            "category": "Mechanical",
-            "desc": "Washing Machine Dry run",
-            "priority": "High",
-            "progress": 0,
-            "status": "In Progress",
-            "responsible": "Arsalan",
-            "deadline": "2026-06-30",
-            "remarks": "",
-            "updated": "",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "",
-            "image": ""
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6622,7 +6622,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-31T02:17:43.662Z",
-    "Aurangzeb": "2026-08-01T06:48:03.595Z",
+    "Aurangzeb": "2026-08-01T06:49:20.971Z",
     "Saqib": "2026-07-28T09:52:00.987Z"
   }
 }
