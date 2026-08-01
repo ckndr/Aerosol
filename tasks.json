@@ -3408,11 +3408,11 @@
       "category": "Electrical",
       "desc": "Conveyor motor connections pending",
       "priority": "High",
-      "progress": 0,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "remarks": "",
       "responsible": "",
-      "updated": "23 Jul 2026",
+      "updated": "1 Aug 2026",
       "lastEditedBy": "Aurangzeb",
       "image": null,
       "waitingOn": "",
@@ -4271,6 +4271,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1785567742243ttgv",
+      "time": "2026-08-01T07:02:22.243Z",
+      "action": "[Aurangzeb] Updated task \"Conveyor motor connections pen...\" [Status: In Progress → Completed, Progress: 0% → 100%] on FG Conveyor",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t17847946028700v6e",
+          "machine": "FG Conveyor",
+          "category": "Electrical",
+          "desc": "Conveyor motor connections pending",
+          "priority": "High",
+          "progress": 0,
+          "status": "In Progress",
+          "remarks": "",
+          "responsible": "",
+          "updated": "23 Jul 2026",
+          "lastEditedBy": "Aurangzeb",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t17847946028700v6e"
+    },
     {
       "id": "t17855677186801eeb",
       "time": "2026-08-01T07:01:58.680Z",
@@ -6304,35 +6332,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1784874322507udwv",
-      "time": "2026-07-24T06:25:22.507Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_963673",
-            "machine": "General",
-            "category": "General",
-            "desc": "Overall machine paint",
-            "priority": "Medium",
-            "progress": 20,
-            "status": "In Progress",
-            "responsible": "Saqib",
-            "deadline": "",
-            "remarks": "",
-            "updated": "22 Jul 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Aurangzeb",
-            "image": null
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6639,7 +6638,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-31T02:17:43.662Z",
-    "Aurangzeb": "2026-08-01T07:02:03.595Z",
+    "Aurangzeb": "2026-08-01T07:02:22.243Z",
     "Saqib": "2026-07-28T09:52:00.987Z"
   }
 }
