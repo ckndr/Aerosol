@@ -97,11 +97,11 @@
       "desc": "wiring and connections to be done",
       "priority": "Medium",
       "progress": 0,
-      "status": "Not Started",
+      "status": "In Progress",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "",
-      "updated": "2 Jun 2026",
+      "updated": "3 Aug 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -4308,6 +4308,34 @@
   },
   "activityLog": [
     {
+      "id": "t1785755054797fd06",
+      "time": "2026-08-03T11:04:14.797Z",
+      "action": "[Aurangzeb] Updated task \"wiring and connections to be d...\" [Status: Not Started → In Progress] on Auto Strapping Machine",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_412945",
+          "machine": "Auto Strapping Machine",
+          "category": "Electrical",
+          "desc": "wiring and connections to be done",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Arsalan",
+          "deadline": "",
+          "remarks": "",
+          "updated": "2 Jun 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": "Photos/Auto Strapping Machine/task_img_1780377510425.jpg"
+        }
+      },
+      "taskId": "t_412945"
+    },
+    {
       "id": "t1785755013704kfv3",
       "time": "2026-08-03T11:03:33.704Z",
       "action": "[Aurangzeb] Added task \"Dry run with cans to be carrie...\" to FG Conveyor",
@@ -6332,35 +6360,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1784952970029ojxk",
-      "time": "2026-07-25T04:16:10.029Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_437972",
-            "machine": "Auto Strapping Machine",
-            "category": "Mechanical",
-            "desc": "to place and install at designated location",
-            "priority": "Medium",
-            "progress": 70,
-            "status": "In Progress",
-            "responsible": "Arsalan",
-            "deadline": "",
-            "remarks": "",
-            "updated": "22 Jul 2026",
-            "waitingOn": "",
-            "dateStarted": "2026-07-22",
-            "dateFinished": "",
-            "lastEditedBy": "Aurangzeb",
-            "image": null
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6675,7 +6674,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-08-02T11:38:44.816Z",
-    "Aurangzeb": "2026-08-03T11:03:45.378Z",
+    "Aurangzeb": "2026-08-03T11:04:14.797Z",
     "Saqib": "2026-07-28T09:52:00.987Z"
   }
 }
