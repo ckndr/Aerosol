@@ -3352,13 +3352,13 @@
       "id": "t1784709783912wgvo",
       "machine": "Base Coat",
       "category": "Mechanical",
-      "desc": "Teflon suction grippers to chain mount timing to be set",
+      "desc": "Teflon suction grippers to chain mount timing/synchronization to be set",
       "priority": "High",
       "progress": 30,
       "status": "In Progress",
       "remarks": "",
       "responsible": "",
-      "updated": "22 Jul 2026",
+      "updated": "3 Aug 2026",
       "lastEditedBy": "Aurangzeb",
       "image": null,
       "waitingOn": "",
@@ -4271,6 +4271,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1785754011448namc",
+      "time": "2026-08-03T10:46:51.448Z",
+      "action": "[Aurangzeb] Updated task \"Teflon suction grippers to cha...\" on Base Coat",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1784709783912wgvo",
+          "machine": "Base Coat",
+          "category": "Mechanical",
+          "desc": "Teflon suction grippers to chain mount timing to be set",
+          "priority": "High",
+          "progress": 30,
+          "status": "In Progress",
+          "remarks": "",
+          "responsible": "",
+          "updated": "22 Jul 2026",
+          "lastEditedBy": "Aurangzeb",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "2026-07-19",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t1784709783912wgvo"
+    },
     {
       "id": "t178575396572571ao",
       "time": "2026-08-03T10:46:05.725Z",
@@ -6301,35 +6329,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t17848743707223pwb",
-      "time": "2026-07-24T06:26:10.722Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_563602",
-            "machine": "Manual Strapping Machine",
-            "category": "Mechanical",
-            "desc": "to place and install at designated location",
-            "priority": "Low",
-            "progress": 0,
-            "status": "Not Started",
-            "responsible": "Arsalan",
-            "deadline": "",
-            "remarks": "",
-            "updated": "",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "",
-            "image": ""
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6644,7 +6643,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-08-02T11:38:44.816Z",
-    "Aurangzeb": "2026-08-03T10:46:05.725Z",
+    "Aurangzeb": "2026-08-03T10:46:51.448Z",
     "Saqib": "2026-07-28T09:52:00.987Z"
   }
 }
