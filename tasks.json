@@ -4128,12 +4128,12 @@
       "category": "Electrical",
       "desc": "PLC Automation and termination",
       "priority": "Medium",
-      "progress": 0,
+      "progress": 70,
       "status": "In Progress",
       "remarks": "",
       "responsible": "",
-      "updated": "25 Jul 2026",
-      "lastEditedBy": "Saqib",
+      "updated": "3 Aug 2026",
+      "lastEditedBy": "Aurangzeb",
       "image": null,
       "waitingOn": "",
       "deadline": "",
@@ -4271,6 +4271,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t178575396572571ao",
+      "time": "2026-08-03T10:46:05.725Z",
+      "action": "[Aurangzeb] Updated task \"PLC Automation and termination...\" [Progress: 0% → 70%] on Base Coat",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t17849787069748q2p",
+          "machine": "Base Coat",
+          "category": "Electrical",
+          "desc": "PLC Automation and termination",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "In Progress",
+          "remarks": "",
+          "responsible": "",
+          "updated": "25 Jul 2026",
+          "lastEditedBy": "Saqib",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t17849787069748q2p"
+    },
     {
       "id": "t1785753875187vgqj",
       "time": "2026-08-03T10:44:35.187Z",
@@ -6302,35 +6330,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1784874353001qzi2",
-      "time": "2026-07-24T06:25:53.001Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_186924",
-            "machine": "Base Coat",
-            "category": "Mechanical",
-            "desc": "Fumes collector piping to install",
-            "priority": "Medium",
-            "progress": 0,
-            "status": "Not Started",
-            "responsible": "Saqib",
-            "deadline": "2026-06-20",
-            "remarks": "",
-            "updated": "13 Jul 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Saqib",
-            "image": "Photos/Base Coat/task_img_1780373654935.jpg"
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6645,7 +6644,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-08-02T11:38:44.816Z",
-    "Aurangzeb": "2026-08-03T10:45:45.378Z",
+    "Aurangzeb": "2026-08-03T10:46:05.725Z",
     "Saqib": "2026-07-28T09:52:00.987Z"
   }
 }
