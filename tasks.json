@@ -492,12 +492,12 @@
       "category": "Electrical",
       "desc": "connection/wiring to be done",
       "priority": "Medium",
-      "progress": 50,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "",
-      "updated": "1 Aug 2026",
+      "updated": "3 Aug 2026",
       "waitingOn": "",
       "dateStarted": "2026-07-27",
       "dateFinished": "",
@@ -4272,6 +4272,34 @@
   },
   "activityLog": [
     {
+      "id": "t1785754757373vbe7",
+      "time": "2026-08-03T10:59:17.373Z",
+      "action": "[Aurangzeb] Updated task \"connection/wiring to be done...\" [Status: In Progress → Completed, Progress: 50% → 100%] on FG Conveyor",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_951895",
+          "machine": "FG Conveyor",
+          "category": "Electrical",
+          "desc": "connection/wiring to be done",
+          "priority": "Medium",
+          "progress": 50,
+          "status": "In Progress",
+          "responsible": "Arsalan",
+          "deadline": "",
+          "remarks": "",
+          "updated": "1 Aug 2026",
+          "waitingOn": "",
+          "dateStarted": "2026-07-27",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": "Photos/FG Conveyor/task_img_1780377454915.jpg"
+        }
+      },
+      "taskId": "t_951895"
+    },
+    {
       "id": "t1785754564940fm6l",
       "time": "2026-08-03T10:56:04.940Z",
       "action": "[Aurangzeb] Updated task \"exhaust piping for compressor...\" [Progress: 0% → 80%] on Compressor",
@@ -6332,35 +6360,6 @@
         }
       },
       "taskId": "t_476856"
-    },
-    {
-      "id": "t1784874714177avfz",
-      "time": "2026-07-24T06:31:54.177Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t1784874703714lyhz",
-            "machine": "Compressor",
-            "category": "Mechanical",
-            "desc": "exhaust piping for compressor",
-            "priority": "High",
-            "progress": 0,
-            "status": "Not Started",
-            "remarks": "",
-            "responsible": "",
-            "updated": "24 Jul 2026",
-            "lastEditedBy": "Saqib",
-            "image": null,
-            "waitingOn": "",
-            "deadline": "",
-            "dateStarted": "",
-            "dateFinished": ""
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6675,7 +6674,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-08-02T11:38:44.816Z",
-    "Aurangzeb": "2026-08-03T10:57:45.380Z",
+    "Aurangzeb": "2026-08-03T10:59:17.373Z",
     "Saqib": "2026-07-28T09:52:00.987Z"
   }
 }
