@@ -4265,12 +4265,41 @@
       "deadline": "",
       "dateStarted": "2026-07-31",
       "dateFinished": ""
+    },
+    {
+      "id": "t178575494909045t9",
+      "machine": "FG Conveyor",
+      "category": "Mechanical",
+      "desc": "Make necessary adjustments for Cans smooth transfer from belt to collector conveyor",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "Not Started",
+      "remarks": "",
+      "responsible": "",
+      "updated": "3 Aug 2026",
+      "lastEditedBy": "Aurangzeb",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1785754949091674x",
+      "time": "2026-08-03T11:02:29.091Z",
+      "action": "[Aurangzeb] Added task \"Make necessary adjustments for...\" to FG Conveyor",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "add",
+        "taskId": "t178575494909045t9"
+      },
+      "taskId": "t178575494909045t9"
+    },
     {
       "id": "t1785754757373vbe7",
       "time": "2026-08-03T10:59:17.373Z",
@@ -6332,34 +6361,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1784874758146zf1i",
-      "time": "2026-07-24T06:32:38.146Z",
-      "action": "[Saqib] Updated task \"Varnish Dry run...\" on Over Varnish",
-      "user": "Saqib",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_476856",
-          "machine": "Over Varnish",
-          "category": "Mechanical",
-          "desc": "Printing Oven Dry run",
-          "priority": "High",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "deadline": "2026-06-24",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "",
-          "image": ""
-        }
-      },
-      "taskId": "t_476856"
     }
   ],
   "machineMeta": {
@@ -6674,7 +6675,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-08-02T11:38:44.816Z",
-    "Aurangzeb": "2026-08-03T11:01:45.378Z",
+    "Aurangzeb": "2026-08-03T11:02:29.091Z",
     "Saqib": "2026-07-28T09:52:00.987Z"
   }
 }
