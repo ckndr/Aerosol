@@ -4110,12 +4110,12 @@
       "category": "Electrical",
       "desc": "PLC Automation and termination",
       "priority": "Medium",
-      "progress": 0,
+      "progress": 70,
       "status": "In Progress",
       "remarks": "",
       "responsible": "",
-      "updated": "25 Jul 2026",
-      "lastEditedBy": "Saqib",
+      "updated": "3 Aug 2026",
+      "lastEditedBy": "Aurangzeb",
       "image": null,
       "waitingOn": "",
       "deadline": "",
@@ -4271,6 +4271,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1785754111688yt4u",
+      "time": "2026-08-03T10:48:31.688Z",
+      "action": "[Aurangzeb] Updated task \"PLC Automation and termination...\" [Progress: 0% → 70%] on Printing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1784978694854svhk",
+          "machine": "Printing",
+          "category": "Electrical",
+          "desc": "PLC Automation and termination",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "In Progress",
+          "remarks": "",
+          "responsible": "",
+          "updated": "25 Jul 2026",
+          "lastEditedBy": "Saqib",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t1784978694854svhk"
+    },
     {
       "id": "t1785754011448namc",
       "time": "2026-08-03T10:46:51.448Z",
@@ -6300,35 +6328,6 @@
         "taskId": "t1784874545898m5ni"
       },
       "taskId": "t1784874545898m5ni"
-    },
-    {
-      "id": "t1784874485667mr68",
-      "time": "2026-07-24T06:28:05.667Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_278726",
-            "machine": "Accumulator",
-            "category": "Electrical",
-            "desc": "Dry run",
-            "priority": "High",
-            "progress": 80,
-            "status": "In Progress",
-            "responsible": "Arsalan",
-            "deadline": "",
-            "remarks": "on machine testing",
-            "updated": "",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "",
-            "image": ""
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6643,7 +6642,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-08-02T11:38:44.816Z",
-    "Aurangzeb": "2026-08-03T10:47:45.379Z",
+    "Aurangzeb": "2026-08-03T10:48:31.688Z",
     "Saqib": "2026-07-28T09:52:00.987Z"
   }
 }
