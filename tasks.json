@@ -3534,12 +3534,12 @@
       "category": "Mechanical",
       "desc": "exhaust piping for compressor",
       "priority": "High",
-      "progress": 0,
+      "progress": 80,
       "status": "In Progress",
       "remarks": "",
       "responsible": "",
-      "updated": "24 Jul 2026",
-      "lastEditedBy": "Saqib",
+      "updated": "3 Aug 2026",
+      "lastEditedBy": "Aurangzeb",
       "image": null,
       "waitingOn": "",
       "deadline": "",
@@ -4271,6 +4271,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1785754564940fm6l",
+      "time": "2026-08-03T10:56:04.940Z",
+      "action": "[Aurangzeb] Updated task \"exhaust piping for compressor...\" [Progress: 0% → 80%] on Compressor",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1784874703714lyhz",
+          "machine": "Compressor",
+          "category": "Mechanical",
+          "desc": "exhaust piping for compressor",
+          "priority": "High",
+          "progress": 0,
+          "status": "In Progress",
+          "remarks": "",
+          "responsible": "",
+          "updated": "24 Jul 2026",
+          "lastEditedBy": "Saqib",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t1784874703714lyhz"
+    },
     {
       "id": "t1785754243671viv2",
       "time": "2026-08-03T10:50:43.671Z",
@@ -6333,17 +6361,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t178487470371440rf",
-      "time": "2026-07-24T06:31:43.714Z",
-      "action": "[Saqib] Added task \"exhaust piping for compressor...\" to Compressor",
-      "user": "Saqib",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1784874703714lyhz"
-      },
-      "taskId": "t1784874703714lyhz"
     }
   ],
   "machineMeta": {
@@ -6658,7 +6675,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-08-02T11:38:44.816Z",
-    "Aurangzeb": "2026-08-03T10:55:45.379Z",
+    "Aurangzeb": "2026-08-03T10:56:04.940Z",
     "Saqib": "2026-07-28T09:52:00.987Z"
   }
 }
