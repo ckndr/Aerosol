@@ -97,11 +97,11 @@
       "desc": "wiring and connections to be done",
       "priority": "Medium",
       "progress": 0,
-      "status": "Not Started",
+      "status": "In Progress",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "",
-      "updated": "2 Jun 2026",
+      "updated": "3 Aug 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -492,12 +492,12 @@
       "category": "Electrical",
       "desc": "connection/wiring to be done",
       "priority": "Medium",
-      "progress": 50,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "",
-      "updated": "1 Aug 2026",
+      "updated": "3 Aug 2026",
       "waitingOn": "",
       "dateStarted": "2026-07-27",
       "dateFinished": "",
@@ -3352,13 +3352,13 @@
       "id": "t1784709783912wgvo",
       "machine": "Base Coat",
       "category": "Mechanical",
-      "desc": "Teflon suction grippers to chain mount timing to be set",
+      "desc": "Teflon suction grippers to chain mount timing/synchronization to be set",
       "priority": "High",
       "progress": 30,
       "status": "In Progress",
       "remarks": "",
       "responsible": "",
-      "updated": "22 Jul 2026",
+      "updated": "3 Aug 2026",
       "lastEditedBy": "Aurangzeb",
       "image": null,
       "waitingOn": "",
@@ -3444,11 +3444,11 @@
       "category": "Mechanical",
       "desc": "blower installation and connections",
       "priority": "Medium",
-      "progress": 0,
+      "progress": 70,
       "status": "Not Started",
       "remarks": "motor sent for rewinding",
       "responsible": "",
-      "updated": "23 Jul 2026",
+      "updated": "3 Aug 2026",
       "lastEditedBy": "Aurangzeb",
       "image": null,
       "waitingOn": "",
@@ -3534,12 +3534,12 @@
       "category": "Mechanical",
       "desc": "exhaust piping for compressor",
       "priority": "High",
-      "progress": 0,
+      "progress": 80,
       "status": "In Progress",
       "remarks": "",
       "responsible": "",
-      "updated": "24 Jul 2026",
-      "lastEditedBy": "Saqib",
+      "updated": "3 Aug 2026",
+      "lastEditedBy": "Aurangzeb",
       "image": null,
       "waitingOn": "",
       "deadline": "",
@@ -3588,12 +3588,12 @@
       "category": "Mechanical",
       "desc": "procurement of Can Holders",
       "priority": "Medium",
-      "progress": 0,
+      "progress": 90,
       "status": "Pending Procurement",
       "remarks": "",
       "responsible": "",
-      "updated": "25 Jul 2026",
-      "lastEditedBy": "Saqib",
+      "updated": "3 Aug 2026",
+      "lastEditedBy": "Aurangzeb",
       "image": null,
       "waitingOn": "",
       "deadline": "",
@@ -3874,14 +3874,14 @@
       "id": "t1784953721604843k",
       "machine": "General",
       "category": "Mechanical",
-      "desc": "Tape Water Tanks Cleaning",
+      "desc": "Tap Water Tanks Cleaning",
       "priority": "Medium",
       "progress": 0,
       "status": "Not Started",
       "remarks": "",
       "responsible": "",
-      "updated": "25 Jul 2026",
-      "lastEditedBy": "Saqib",
+      "updated": "3 Aug 2026",
+      "lastEditedBy": "Aurangzeb",
       "image": null,
       "waitingOn": "",
       "deadline": "",
@@ -4110,12 +4110,12 @@
       "category": "Electrical",
       "desc": "PLC Automation and termination",
       "priority": "Medium",
-      "progress": 0,
+      "progress": 70,
       "status": "In Progress",
       "remarks": "",
       "responsible": "",
-      "updated": "25 Jul 2026",
-      "lastEditedBy": "Saqib",
+      "updated": "3 Aug 2026",
+      "lastEditedBy": "Aurangzeb",
       "image": null,
       "waitingOn": "",
       "deadline": "",
@@ -4128,12 +4128,12 @@
       "category": "Electrical",
       "desc": "PLC Automation and termination",
       "priority": "Medium",
-      "progress": 0,
+      "progress": 70,
       "status": "In Progress",
       "remarks": "",
       "responsible": "",
-      "updated": "25 Jul 2026",
-      "lastEditedBy": "Saqib",
+      "updated": "3 Aug 2026",
+      "lastEditedBy": "Aurangzeb",
       "image": null,
       "waitingOn": "",
       "deadline": "",
@@ -4146,12 +4146,12 @@
       "category": "Electrical",
       "desc": "PLC Automation and termination",
       "priority": "Medium",
-      "progress": 0,
+      "progress": 70,
       "status": "In Progress",
       "remarks": "",
       "responsible": "",
-      "updated": "25 Jul 2026",
-      "lastEditedBy": "Saqib",
+      "updated": "3 Aug 2026",
+      "lastEditedBy": "Aurangzeb",
       "image": null,
       "waitingOn": "",
       "deadline": "",
@@ -4265,12 +4265,350 @@
       "deadline": "",
       "dateStarted": "2026-07-31",
       "dateFinished": ""
+    },
+    {
+      "id": "t178575494909045t9",
+      "machine": "FG Conveyor",
+      "category": "Mechanical",
+      "desc": "Make necessary adjustments for Cans smooth transfer from belt to collector conveyor",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "Not Started",
+      "remarks": "",
+      "responsible": "",
+      "updated": "3 Aug 2026",
+      "lastEditedBy": "Aurangzeb",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
+    },
+    {
+      "id": "t1785755013704bcfn",
+      "machine": "FG Conveyor",
+      "category": "Mechanical",
+      "desc": "Dry run with cans to be carried out",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "Not Started",
+      "remarks": "",
+      "responsible": "",
+      "updated": "3 Aug 2026",
+      "lastEditedBy": "Aurangzeb",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1785755236013dt0v",
+      "time": "2026-08-03T11:07:16.013Z",
+      "action": "[Aurangzeb] Updated task \"Tap Water Tanks Cleaning...\" on General",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1784953721604843k",
+          "machine": "General",
+          "category": "Mechanical",
+          "desc": "Tape Water Tanks Cleaning",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "remarks": "",
+          "responsible": "",
+          "updated": "25 Jul 2026",
+          "lastEditedBy": "Saqib",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t1784953721604843k"
+    },
+    {
+      "id": "t1785755054797fd06",
+      "time": "2026-08-03T11:04:14.797Z",
+      "action": "[Aurangzeb] Updated task \"wiring and connections to be d...\" [Status: Not Started → In Progress] on Auto Strapping Machine",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_412945",
+          "machine": "Auto Strapping Machine",
+          "category": "Electrical",
+          "desc": "wiring and connections to be done",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Arsalan",
+          "deadline": "",
+          "remarks": "",
+          "updated": "2 Jun 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": "Photos/Auto Strapping Machine/task_img_1780377510425.jpg"
+        }
+      },
+      "taskId": "t_412945"
+    },
+    {
+      "id": "t1785755013704kfv3",
+      "time": "2026-08-03T11:03:33.704Z",
+      "action": "[Aurangzeb] Added task \"Dry run with cans to be carrie...\" to FG Conveyor",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1785755013704bcfn"
+      },
+      "taskId": "t1785755013704bcfn"
+    },
+    {
+      "id": "t1785754949091674x",
+      "time": "2026-08-03T11:02:29.091Z",
+      "action": "[Aurangzeb] Added task \"Make necessary adjustments for...\" to FG Conveyor",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "add",
+        "taskId": "t178575494909045t9"
+      },
+      "taskId": "t178575494909045t9"
+    },
+    {
+      "id": "t1785754757373vbe7",
+      "time": "2026-08-03T10:59:17.373Z",
+      "action": "[Aurangzeb] Updated task \"connection/wiring to be done...\" [Status: In Progress → Completed, Progress: 50% → 100%] on FG Conveyor",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_951895",
+          "machine": "FG Conveyor",
+          "category": "Electrical",
+          "desc": "connection/wiring to be done",
+          "priority": "Medium",
+          "progress": 50,
+          "status": "In Progress",
+          "responsible": "Arsalan",
+          "deadline": "",
+          "remarks": "",
+          "updated": "1 Aug 2026",
+          "waitingOn": "",
+          "dateStarted": "2026-07-27",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": "Photos/FG Conveyor/task_img_1780377454915.jpg"
+        }
+      },
+      "taskId": "t_951895"
+    },
+    {
+      "id": "t1785754564940fm6l",
+      "time": "2026-08-03T10:56:04.940Z",
+      "action": "[Aurangzeb] Updated task \"exhaust piping for compressor...\" [Progress: 0% → 80%] on Compressor",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1784874703714lyhz",
+          "machine": "Compressor",
+          "category": "Mechanical",
+          "desc": "exhaust piping for compressor",
+          "priority": "High",
+          "progress": 0,
+          "status": "In Progress",
+          "remarks": "",
+          "responsible": "",
+          "updated": "24 Jul 2026",
+          "lastEditedBy": "Saqib",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t1784874703714lyhz"
+    },
+    {
+      "id": "t1785754243671viv2",
+      "time": "2026-08-03T10:50:43.671Z",
+      "action": "[Aurangzeb] Updated task \"blower installation and connec...\" [Progress: 0% → 70%] on Over Varnish",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1784794886030v2b1",
+          "machine": "Over Varnish",
+          "category": "Mechanical",
+          "desc": "blower installation and connections",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "remarks": "motor sent for rewinding",
+          "responsible": "",
+          "updated": "23 Jul 2026",
+          "lastEditedBy": "Aurangzeb",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "2026-07-22",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t1784794886030v2b1"
+    },
+    {
+      "id": "t1785754207685atcy",
+      "time": "2026-08-03T10:50:07.685Z",
+      "action": "[Aurangzeb] Updated task \"PLC Automation and termination...\" [Progress: 0% → 70%] on Over Varnish",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1784978723078niei",
+          "machine": "Over Varnish",
+          "category": "Electrical",
+          "desc": "PLC Automation and termination",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "In Progress",
+          "remarks": "",
+          "responsible": "",
+          "updated": "25 Jul 2026",
+          "lastEditedBy": "Saqib",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t1784978723078niei"
+    },
+    {
+      "id": "t1785754111688yt4u",
+      "time": "2026-08-03T10:48:31.688Z",
+      "action": "[Aurangzeb] Updated task \"PLC Automation and termination...\" [Progress: 0% → 70%] on Printing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1784978694854svhk",
+          "machine": "Printing",
+          "category": "Electrical",
+          "desc": "PLC Automation and termination",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "In Progress",
+          "remarks": "",
+          "responsible": "",
+          "updated": "25 Jul 2026",
+          "lastEditedBy": "Saqib",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t1784978694854svhk"
+    },
+    {
+      "id": "t1785754011448namc",
+      "time": "2026-08-03T10:46:51.448Z",
+      "action": "[Aurangzeb] Updated task \"Teflon suction grippers to cha...\" on Base Coat",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1784709783912wgvo",
+          "machine": "Base Coat",
+          "category": "Mechanical",
+          "desc": "Teflon suction grippers to chain mount timing to be set",
+          "priority": "High",
+          "progress": 30,
+          "status": "In Progress",
+          "remarks": "",
+          "responsible": "",
+          "updated": "22 Jul 2026",
+          "lastEditedBy": "Aurangzeb",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "2026-07-19",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t1784709783912wgvo"
+    },
+    {
+      "id": "t178575396572571ao",
+      "time": "2026-08-03T10:46:05.725Z",
+      "action": "[Aurangzeb] Updated task \"PLC Automation and termination...\" [Progress: 0% → 70%] on Base Coat",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t17849787069748q2p",
+          "machine": "Base Coat",
+          "category": "Electrical",
+          "desc": "PLC Automation and termination",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "In Progress",
+          "remarks": "",
+          "responsible": "",
+          "updated": "25 Jul 2026",
+          "lastEditedBy": "Saqib",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t17849787069748q2p"
+    },
+    {
+      "id": "t1785753875187vgqj",
+      "time": "2026-08-03T10:44:35.187Z",
+      "action": "[Aurangzeb] Updated task \"procurement of Can Holders...\" [Progress: 0% → 90%] on Lacquer",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1784953305116dkly",
+          "machine": "Lacquer",
+          "category": "Mechanical",
+          "desc": "procurement of Can Holders",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Pending Procurement",
+          "remarks": "",
+          "responsible": "",
+          "updated": "25 Jul 2026",
+          "lastEditedBy": "Saqib",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t1784953305116dkly"
+    },
     {
       "id": "t1785567742243ttgv",
       "time": "2026-08-01T07:02:22.243Z",
@@ -6021,317 +6359,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1784952990484pau2",
-      "time": "2026-07-25T04:16:30.484Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_791541",
-            "machine": "General",
-            "category": "General",
-            "desc": "Ensure proper cleaning of entire machine",
-            "priority": "Medium",
-            "progress": 80,
-            "status": "In Progress",
-            "responsible": "Saqib",
-            "deadline": "",
-            "remarks": "",
-            "updated": "13 Jul 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Saqib",
-            "image": ""
-          }
-        ]
-      }
-    },
-    {
-      "id": "t1784952970029ojxk",
-      "time": "2026-07-25T04:16:10.029Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_437972",
-            "machine": "Auto Strapping Machine",
-            "category": "Mechanical",
-            "desc": "to place and install at designated location",
-            "priority": "Medium",
-            "progress": 70,
-            "status": "In Progress",
-            "responsible": "Arsalan",
-            "deadline": "",
-            "remarks": "",
-            "updated": "22 Jul 2026",
-            "waitingOn": "",
-            "dateStarted": "2026-07-22",
-            "dateFinished": "",
-            "lastEditedBy": "Aurangzeb",
-            "image": null
-          }
-        ]
-      }
-    },
-    {
-      "id": "t17849529660055lhi",
-      "time": "2026-07-25T04:16:06.005Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t1784022464364r6wp",
-            "machine": "Accumulator",
-            "category": "Mechanical",
-            "desc": "Tension Cylinders to check and replace",
-            "priority": "Medium",
-            "progress": 10,
-            "status": "In Progress",
-            "responsible": "Arsalan",
-            "deadline": "",
-            "remarks": "",
-            "updated": "",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "",
-            "image": ""
-          }
-        ]
-      }
-    },
-    {
-      "id": "t1784874758146zf1i",
-      "time": "2026-07-24T06:32:38.146Z",
-      "action": "[Saqib] Updated task \"Varnish Dry run...\" on Over Varnish",
-      "user": "Saqib",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_476856",
-          "machine": "Over Varnish",
-          "category": "Mechanical",
-          "desc": "Printing Oven Dry run",
-          "priority": "High",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "deadline": "2026-06-24",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "",
-          "image": ""
-        }
-      },
-      "taskId": "t_476856"
-    },
-    {
-      "id": "t1784874714177avfz",
-      "time": "2026-07-24T06:31:54.177Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t1784874703714lyhz",
-            "machine": "Compressor",
-            "category": "Mechanical",
-            "desc": "exhaust piping for compressor",
-            "priority": "High",
-            "progress": 0,
-            "status": "Not Started",
-            "remarks": "",
-            "responsible": "",
-            "updated": "24 Jul 2026",
-            "lastEditedBy": "Saqib",
-            "image": null,
-            "waitingOn": "",
-            "deadline": "",
-            "dateStarted": "",
-            "dateFinished": ""
-          }
-        ]
-      }
-    },
-    {
-      "id": "t178487470371440rf",
-      "time": "2026-07-24T06:31:43.714Z",
-      "action": "[Saqib] Added task \"exhaust piping for compressor...\" to Compressor",
-      "user": "Saqib",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1784874703714lyhz"
-      },
-      "taskId": "t1784874703714lyhz"
-    },
-    {
-      "id": "t17848745499786s8y",
-      "time": "2026-07-24T06:29:09.978Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t1784874545898m5ni",
-            "machine": "Decoration Oven",
-            "category": "Mechanical",
-            "desc": "Fumes collector main header and blower installation",
-            "priority": "High",
-            "progress": 0,
-            "status": "Not Started",
-            "remarks": "",
-            "responsible": "",
-            "updated": "24 Jul 2026",
-            "lastEditedBy": "Saqib",
-            "image": null,
-            "waitingOn": "",
-            "deadline": "",
-            "dateStarted": "",
-            "dateFinished": ""
-          }
-        ]
-      }
-    },
-    {
-      "id": "t17848745458985brf",
-      "time": "2026-07-24T06:29:05.898Z",
-      "action": "[Saqib] Added task \"Fumes collector main header an...\" to Decoration Oven",
-      "user": "Saqib",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1784874545898m5ni"
-      },
-      "taskId": "t1784874545898m5ni"
-    },
-    {
-      "id": "t1784874485667mr68",
-      "time": "2026-07-24T06:28:05.667Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_278726",
-            "machine": "Accumulator",
-            "category": "Electrical",
-            "desc": "Dry run",
-            "priority": "High",
-            "progress": 80,
-            "status": "In Progress",
-            "responsible": "Arsalan",
-            "deadline": "",
-            "remarks": "on machine testing",
-            "updated": "",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "",
-            "image": ""
-          }
-        ]
-      }
-    },
-    {
-      "id": "t17848743707223pwb",
-      "time": "2026-07-24T06:26:10.722Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_563602",
-            "machine": "Manual Strapping Machine",
-            "category": "Mechanical",
-            "desc": "to place and install at designated location",
-            "priority": "Low",
-            "progress": 0,
-            "status": "Not Started",
-            "responsible": "Arsalan",
-            "deadline": "",
-            "remarks": "",
-            "updated": "",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "",
-            "image": ""
-          }
-        ]
-      }
-    },
-    {
-      "id": "t1784874353001qzi2",
-      "time": "2026-07-24T06:25:53.001Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_186924",
-            "machine": "Base Coat",
-            "category": "Mechanical",
-            "desc": "Fumes collector piping to install",
-            "priority": "Medium",
-            "progress": 0,
-            "status": "Not Started",
-            "responsible": "Saqib",
-            "deadline": "2026-06-20",
-            "remarks": "",
-            "updated": "13 Jul 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Saqib",
-            "image": "Photos/Base Coat/task_img_1780373654935.jpg"
-          }
-        ]
-      }
-    },
-    {
-      "id": "t1784874327290ac95",
-      "time": "2026-07-24T06:25:27.290Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_366746",
-            "machine": "General",
-            "category": "General",
-            "desc": "Make stand for all spare rolls",
-            "priority": "Medium",
-            "progress": 90,
-            "status": "In Progress",
-            "responsible": "Saqib",
-            "deadline": "",
-            "remarks": "",
-            "updated": "22 Jul 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Aurangzeb",
-            "image": null
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6537,6 +6564,14 @@
   "loginHistory": [
     {
       "name": "Aurangzeb",
+      "time": "2026-08-03T10:39:54.607Z"
+    },
+    {
+      "name": "Sikander",
+      "time": "2026-08-02T11:38:44.816Z"
+    },
+    {
+      "name": "Aurangzeb",
       "time": "2026-08-01T06:32:06.077Z"
     },
     {
@@ -6637,8 +6672,8 @@
     }
   ],
   "activeSessions": {
-    "Sikander": "2026-07-31T02:17:43.662Z",
-    "Aurangzeb": "2026-08-03T11:06:44.792Z",
+    "Sikander": "2026-08-02T11:38:44.816Z",
+    "Aurangzeb": "2026-08-03T11:07:16.013Z",
     "Saqib": "2026-07-28T09:52:00.987Z"
   }
 }
