@@ -4146,12 +4146,12 @@
       "category": "Electrical",
       "desc": "PLC Automation and termination",
       "priority": "Medium",
-      "progress": 0,
+      "progress": 70,
       "status": "In Progress",
       "remarks": "",
       "responsible": "",
-      "updated": "25 Jul 2026",
-      "lastEditedBy": "Saqib",
+      "updated": "3 Aug 2026",
+      "lastEditedBy": "Aurangzeb",
       "image": null,
       "waitingOn": "",
       "deadline": "",
@@ -4271,6 +4271,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1785754207685atcy",
+      "time": "2026-08-03T10:50:07.685Z",
+      "action": "[Aurangzeb] Updated task \"PLC Automation and termination...\" [Progress: 0% → 70%] on Over Varnish",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1784978723078niei",
+          "machine": "Over Varnish",
+          "category": "Electrical",
+          "desc": "PLC Automation and termination",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "In Progress",
+          "remarks": "",
+          "responsible": "",
+          "updated": "25 Jul 2026",
+          "lastEditedBy": "Saqib",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t1784978723078niei"
+    },
     {
       "id": "t1785754111688yt4u",
       "time": "2026-08-03T10:48:31.688Z",
@@ -6317,17 +6345,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t17848745458985brf",
-      "time": "2026-07-24T06:29:05.898Z",
-      "action": "[Saqib] Added task \"Fumes collector main header an...\" to Decoration Oven",
-      "user": "Saqib",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1784874545898m5ni"
-      },
-      "taskId": "t1784874545898m5ni"
     }
   ],
   "machineMeta": {
@@ -6642,7 +6659,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-08-02T11:38:44.816Z",
-    "Aurangzeb": "2026-08-03T10:49:45.378Z",
+    "Aurangzeb": "2026-08-03T10:50:07.685Z",
     "Saqib": "2026-07-28T09:52:00.987Z"
   }
 }
