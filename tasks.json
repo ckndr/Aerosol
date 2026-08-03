@@ -4283,12 +4283,41 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t1785755013704bcfn",
+      "machine": "FG Conveyor",
+      "category": "Mechanical",
+      "desc": "Dry run with cans to be carried out",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "Not Started",
+      "remarks": "",
+      "responsible": "",
+      "updated": "3 Aug 2026",
+      "lastEditedBy": "Aurangzeb",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1785755013704kfv3",
+      "time": "2026-08-03T11:03:33.704Z",
+      "action": "[Aurangzeb] Added task \"Dry run with cans to be carrie...\" to FG Conveyor",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1785755013704bcfn"
+      },
+      "taskId": "t1785755013704bcfn"
+    },
     {
       "id": "t1785754949091674x",
       "time": "2026-08-03T11:02:29.091Z",
@@ -6332,35 +6361,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t17849529660055lhi",
-      "time": "2026-07-25T04:16:06.005Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t1784022464364r6wp",
-            "machine": "Accumulator",
-            "category": "Mechanical",
-            "desc": "Tension Cylinders to check and replace",
-            "priority": "Medium",
-            "progress": 10,
-            "status": "In Progress",
-            "responsible": "Arsalan",
-            "deadline": "",
-            "remarks": "",
-            "updated": "",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "",
-            "image": ""
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6675,7 +6675,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-08-02T11:38:44.816Z",
-    "Aurangzeb": "2026-08-03T11:02:29.091Z",
+    "Aurangzeb": "2026-08-03T11:03:33.704Z",
     "Saqib": "2026-07-28T09:52:00.987Z"
   }
 }
