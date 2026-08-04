@@ -4265,12 +4265,41 @@
       "deadline": "",
       "dateStarted": "2026-07-31",
       "dateFinished": ""
+    },
+    {
+      "id": "t178582866194765qo",
+      "machine": "Trimming",
+      "category": "Electrical",
+      "desc": "Scrap collector production run,",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "In Progress",
+      "remarks": "motor is not running",
+      "responsible": "",
+      "updated": "4 Aug 2026",
+      "lastEditedBy": "Aurangzeb",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "2026-08-04",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1785828661947e08k",
+      "time": "2026-08-04T07:31:01.947Z",
+      "action": "[Aurangzeb] Added task \"Scrap collector production run...\" to Trimming",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "add",
+        "taskId": "t178582866194765qo"
+      },
+      "taskId": "t178582866194765qo"
+    },
     {
       "id": "t1785567742243ttgv",
       "time": "2026-08-01T07:02:22.243Z",
@@ -6303,35 +6332,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1784874327290ac95",
-      "time": "2026-07-24T06:25:27.290Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_366746",
-            "machine": "General",
-            "category": "General",
-            "desc": "Make stand for all spare rolls",
-            "priority": "Medium",
-            "progress": 90,
-            "status": "In Progress",
-            "responsible": "Saqib",
-            "deadline": "",
-            "remarks": "",
-            "updated": "22 Jul 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Aurangzeb",
-            "image": null
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6642,7 +6642,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-07-31T02:17:43.662Z",
-    "Aurangzeb": "2026-08-04T07:30:01.577Z",
+    "Aurangzeb": "2026-08-04T07:31:01.947Z",
     "Saqib": "2026-07-28T09:52:00.987Z"
   }
 }
