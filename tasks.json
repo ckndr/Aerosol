@@ -4236,12 +4236,12 @@
       "category": "Mechanical",
       "desc": "Clutch pressure pipe to be weld",
       "priority": "Medium",
-      "progress": 0,
-      "status": "Not Started",
+      "progress": 100,
+      "status": "Completed",
       "remarks": "",
       "responsible": "",
-      "updated": "1 Aug 2026",
-      "lastEditedBy": "Aurangzeb",
+      "updated": "5 Aug 2026",
+      "lastEditedBy": "Saqib",
       "image": null,
       "waitingOn": "",
       "deadline": "",
@@ -4304,9 +4304,38 @@
     }
   ],
   "settings": {
-    "autoSync": false
+    "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1785904315716cw3y",
+      "time": "2026-08-05T04:31:55.716Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t178556659983520bk",
+            "machine": "Press",
+            "category": "Mechanical",
+            "desc": "Clutch pressure pipe to be weld",
+            "priority": "Medium",
+            "progress": 0,
+            "status": "Not Started",
+            "remarks": "",
+            "responsible": "",
+            "updated": "1 Aug 2026",
+            "lastEditedBy": "Aurangzeb",
+            "image": null,
+            "waitingOn": "",
+            "deadline": "",
+            "dateStarted": "",
+            "dateFinished": ""
+          }
+        ]
+      }
+    },
     {
       "id": "t1785904268676y65x",
       "time": "2026-08-05T04:31:08.676Z",
@@ -6373,35 +6402,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1784953033997vkzq",
-      "time": "2026-07-25T04:17:13.997Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_999528",
-            "machine": "Printing",
-            "category": "Mechanical",
-            "desc": "Printing Machine Dry run",
-            "priority": "High",
-            "progress": 50,
-            "status": "In Progress",
-            "responsible": "Arsalan",
-            "deadline": "2026-06-25",
-            "remarks": "",
-            "updated": "",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "",
-            "image": ""
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6606,10 +6606,6 @@
   },
   "loginHistory": [
     {
-      "name": "Sikander",
-      "time": "2026-08-05T04:31:29.615Z"
-    },
-    {
       "name": "Saqib",
       "time": "2026-08-05T04:26:47.861Z"
     },
@@ -6650,10 +6646,6 @@
       "time": "2026-07-29T08:30:42.865Z"
     },
     {
-      "name": "Sikander",
-      "time": "2026-07-28T06:15:27.110Z"
-    },
-    {
       "name": "Saqib",
       "time": "2026-07-28T05:41:49.227Z"
     },
@@ -6668,14 +6660,6 @@
     {
       "name": "Sikander",
       "time": "2026-07-26T18:34:51.900Z"
-    },
-    {
-      "name": "Sikander",
-      "time": "2026-07-25T06:12:55.266Z"
-    },
-    {
-      "name": "Sikander",
-      "time": "2026-07-25T04:43:32.671Z"
     },
     {
       "name": "Sikander",
@@ -6735,8 +6719,8 @@
     }
   ],
   "activeSessions": {
-    "Sikander": "2026-08-05T04:31:29.615Z",
+    "Sikander": "2026-07-31T02:17:43.662Z",
     "Aurangzeb": "2026-08-04T07:46:06.143Z",
-    "Saqib": "2026-08-05T04:31:08.676Z"
+    "Saqib": "2026-08-05T04:31:55.716Z"
   }
 }
