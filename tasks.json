@@ -4270,14 +4270,14 @@
       "id": "t178582866194765qo",
       "machine": "Trimming",
       "category": "Electrical",
-      "desc": "Scrap collector production run,",
+      "desc": "Scrap collector dry run",
       "priority": "Medium",
       "progress": 0,
       "status": "In Progress",
       "remarks": "motor is not running",
       "responsible": "",
-      "updated": "4 Aug 2026",
-      "lastEditedBy": "Aurangzeb",
+      "updated": "5 Aug 2026",
+      "lastEditedBy": "Saqib",
       "image": null,
       "waitingOn": "",
       "deadline": "",
@@ -4289,6 +4289,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1785904208838axh3",
+      "time": "2026-08-05T04:30:08.838Z",
+      "action": "[Saqib] Updated task \"Scrap collector dry run...\" on Trimming",
+      "user": "Saqib",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t178582866194765qo",
+          "machine": "Trimming",
+          "category": "Electrical",
+          "desc": "Scrap collector production run,",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "In Progress",
+          "remarks": "motor is not running",
+          "responsible": "",
+          "updated": "4 Aug 2026",
+          "lastEditedBy": "Aurangzeb",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "2026-08-04",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t178582866194765qo"
+    },
     {
       "id": "t1785904188780nir9",
       "time": "2026-08-05T04:29:48.780Z",
@@ -6374,35 +6402,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1784952997420na9l",
-      "time": "2026-07-25T04:16:37.420Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_329394",
-            "machine": "General",
-            "category": "Electrical",
-            "desc": "Ensure all exhaust fans on floor are operational",
-            "priority": "High",
-            "progress": 90,
-            "status": "In Progress",
-            "responsible": "Saqib",
-            "deadline": "",
-            "remarks": "partially operational",
-            "updated": "",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "",
-            "image": ""
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6722,6 +6721,6 @@
   "activeSessions": {
     "Sikander": "2026-07-31T02:17:43.662Z",
     "Aurangzeb": "2026-08-04T07:46:06.143Z",
-    "Saqib": "2026-08-05T04:29:48.780Z"
+    "Saqib": "2026-08-05T04:30:08.838Z"
   }
 }
