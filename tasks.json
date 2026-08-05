@@ -385,15 +385,15 @@
       "desc": "Heaters to be checked and replaced if required",
       "priority": "High",
       "progress": 80,
-      "status": "In Progress",
+      "status": "Pending Procurement",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "sample needed for ordering",
-      "updated": "2 Jun 2026",
+      "updated": "5 Aug 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Aurangzeb",
+      "lastEditedBy": "Saqib",
       "image": "Photos/Decoration Oven/task_img_1780375380135.jpg"
     },
     {
@@ -4290,6 +4290,34 @@
   },
   "activityLog": [
     {
+      "id": "t1785904102527rff7",
+      "time": "2026-08-05T04:28:22.527Z",
+      "action": "[Saqib] Updated task \"Heaters to be checked and repl...\" [Status: In Progress → Pending Procurement] on Decoration Oven",
+      "user": "Saqib",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_224710",
+          "machine": "Decoration Oven",
+          "category": "Electrical",
+          "desc": "Heaters to be checked and replaced if required",
+          "priority": "High",
+          "progress": 80,
+          "status": "In Progress",
+          "responsible": "Arsalan",
+          "deadline": "",
+          "remarks": "sample needed for ordering",
+          "updated": "2 Jun 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": "Photos/Decoration Oven/task_img_1780375380135.jpg"
+        }
+      },
+      "taskId": "t_224710"
+    },
+    {
       "id": "t1785904039548dwyt",
       "time": "2026-08-05T04:27:19.548Z",
       "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
@@ -6303,35 +6331,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t17848743707223pwb",
-      "time": "2026-07-24T06:26:10.722Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_563602",
-            "machine": "Manual Strapping Machine",
-            "category": "Mechanical",
-            "desc": "to place and install at designated location",
-            "priority": "Low",
-            "progress": 0,
-            "status": "Not Started",
-            "responsible": "Arsalan",
-            "deadline": "",
-            "remarks": "",
-            "updated": "",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "",
-            "image": ""
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6651,6 +6650,6 @@
   "activeSessions": {
     "Sikander": "2026-07-31T02:17:43.662Z",
     "Aurangzeb": "2026-08-04T07:46:06.143Z",
-    "Saqib": "2026-08-05T04:28:14.429Z"
+    "Saqib": "2026-08-05T04:28:22.527Z"
   }
 }
