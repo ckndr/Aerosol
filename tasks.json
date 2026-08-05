@@ -1267,16 +1267,16 @@
       "desc": "Necking machine Dry run",
       "priority": "High",
       "progress": 50,
-      "status": "In Progress",
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "",
-      "updated": "",
+      "updated": "5 Aug 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "",
-      "image": ""
+      "lastEditedBy": "Saqib",
+      "image": null
     },
     {
       "id": "t_475606",
@@ -4290,6 +4290,34 @@
   },
   "activityLog": [
     {
+      "id": "t1785904121596if5h",
+      "time": "2026-08-05T04:28:41.596Z",
+      "action": "[Saqib] Updated task \"Necking machine Dry run...\" [Status: In Progress → Completed] on Necking",
+      "user": "Saqib",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_503221",
+          "machine": "Necking",
+          "category": "Mechanical",
+          "desc": "Necking machine Dry run",
+          "priority": "High",
+          "progress": 50,
+          "status": "In Progress",
+          "responsible": "Arsalan",
+          "deadline": "",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "",
+          "image": ""
+        }
+      },
+      "taskId": "t_503221"
+    },
+    {
       "id": "t1785904108309wm56",
       "time": "2026-08-05T04:28:28.309Z",
       "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
@@ -6320,17 +6348,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t17848745458985brf",
-      "time": "2026-07-24T06:29:05.898Z",
-      "action": "[Saqib] Added task \"Fumes collector main header an...\" to Decoration Oven",
-      "user": "Saqib",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1784874545898m5ni"
-      },
-      "taskId": "t1784874545898m5ni"
     }
   ],
   "machineMeta": {
@@ -6650,6 +6667,6 @@
   "activeSessions": {
     "Sikander": "2026-07-31T02:17:43.662Z",
     "Aurangzeb": "2026-08-04T07:46:06.143Z",
-    "Saqib": "2026-08-05T04:28:28.309Z"
+    "Saqib": "2026-08-05T04:28:41.596Z"
   }
 }
