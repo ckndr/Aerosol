@@ -2328,16 +2328,16 @@
       "category": "Electrical",
       "desc": "Servo motor troubleshooting",
       "priority": "High",
-      "progress": 50,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "2026-06-25",
       "remarks": "",
-      "updated": "2 Jun 2026",
+      "updated": "5 Aug 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Aurangzeb",
+      "lastEditedBy": "Saqib",
       "image": "Photos/Printing/task_img_1780374358128.jpg"
     },
     {
@@ -4289,6 +4289,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1785904130917hvkr",
+      "time": "2026-08-05T04:28:50.917Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t1780374361103zrqy",
+            "machine": "Printing",
+            "category": "Electrical",
+            "desc": "Servo motor troubleshooting",
+            "priority": "High",
+            "progress": 50,
+            "status": "In Progress",
+            "responsible": "Arsalan",
+            "deadline": "2026-06-25",
+            "remarks": "",
+            "updated": "2 Jun 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Aurangzeb",
+            "image": "Photos/Printing/task_img_1780374358128.jpg"
+          }
+        ]
+      }
+    },
     {
       "id": "t1785904121596if5h",
       "time": "2026-08-05T04:28:41.596Z",
@@ -6319,35 +6348,6 @@
         "taskId": "t1784874703714lyhz"
       },
       "taskId": "t1784874703714lyhz"
-    },
-    {
-      "id": "t17848745499786s8y",
-      "time": "2026-07-24T06:29:09.978Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t1784874545898m5ni",
-            "machine": "Decoration Oven",
-            "category": "Mechanical",
-            "desc": "Fumes collector main header and blower installation",
-            "priority": "High",
-            "progress": 0,
-            "status": "Not Started",
-            "remarks": "",
-            "responsible": "",
-            "updated": "24 Jul 2026",
-            "lastEditedBy": "Saqib",
-            "image": null,
-            "waitingOn": "",
-            "deadline": "",
-            "dateStarted": "",
-            "dateFinished": ""
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6667,6 +6667,6 @@
   "activeSessions": {
     "Sikander": "2026-07-31T02:17:43.662Z",
     "Aurangzeb": "2026-08-04T07:46:06.143Z",
-    "Saqib": "2026-08-05T04:28:41.596Z"
+    "Saqib": "2026-08-05T04:28:50.917Z"
   }
 }
