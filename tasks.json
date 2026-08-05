@@ -4290,6 +4290,35 @@
   },
   "activityLog": [
     {
+      "id": "t1785904188780nir9",
+      "time": "2026-08-05T04:29:48.780Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t1785217396485296r",
+            "machine": "Washing",
+            "category": "Mechanical",
+            "desc": "Straighten and align all washing chain pins",
+            "priority": "Medium",
+            "progress": 0,
+            "status": "In Progress",
+            "remarks": "",
+            "responsible": "",
+            "updated": "5 Aug 2026",
+            "lastEditedBy": "Saqib",
+            "image": null,
+            "waitingOn": "",
+            "deadline": "",
+            "dateStarted": "",
+            "dateFinished": ""
+          }
+        ]
+      }
+    },
+    {
       "id": "t1785904181741e0g3",
       "time": "2026-08-05T04:29:41.741Z",
       "action": "[Saqib] Bulk updated 3 tasks to status \"In Progress\"",
@@ -6374,35 +6403,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1784952990484pau2",
-      "time": "2026-07-25T04:16:30.484Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_791541",
-            "machine": "General",
-            "category": "General",
-            "desc": "Ensure proper cleaning of entire machine",
-            "priority": "Medium",
-            "progress": 80,
-            "status": "In Progress",
-            "responsible": "Saqib",
-            "deadline": "",
-            "remarks": "",
-            "updated": "13 Jul 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Saqib",
-            "image": ""
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6722,6 +6722,6 @@
   "activeSessions": {
     "Sikander": "2026-07-31T02:17:43.662Z",
     "Aurangzeb": "2026-08-04T07:46:06.143Z",
-    "Saqib": "2026-08-05T04:29:41.741Z"
+    "Saqib": "2026-08-05T04:29:48.780Z"
   }
 }
