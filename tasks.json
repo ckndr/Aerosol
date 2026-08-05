@@ -492,16 +492,16 @@
       "category": "Electrical",
       "desc": "connection/wiring to be done",
       "priority": "Medium",
-      "progress": 50,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "",
-      "updated": "1 Aug 2026",
+      "updated": "5 Aug 2026",
       "waitingOn": "",
       "dateStarted": "2026-07-27",
       "dateFinished": "",
-      "lastEditedBy": "Aurangzeb",
+      "lastEditedBy": "Saqib",
       "image": "Photos/FG Conveyor/task_img_1780377454915.jpg"
     },
     {
@@ -4290,6 +4290,35 @@
   },
   "activityLog": [
     {
+      "id": "t1785904108309wm56",
+      "time": "2026-08-05T04:28:28.309Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_951895",
+            "machine": "FG Conveyor",
+            "category": "Electrical",
+            "desc": "connection/wiring to be done",
+            "priority": "Medium",
+            "progress": 50,
+            "status": "In Progress",
+            "responsible": "Arsalan",
+            "deadline": "",
+            "remarks": "",
+            "updated": "1 Aug 2026",
+            "waitingOn": "",
+            "dateStarted": "2026-07-27",
+            "dateFinished": "",
+            "lastEditedBy": "Aurangzeb",
+            "image": "Photos/FG Conveyor/task_img_1780377454915.jpg"
+          }
+        ]
+      }
+    },
+    {
       "id": "t1785904102527rff7",
       "time": "2026-08-05T04:28:22.527Z",
       "action": "[Saqib] Updated task \"Heaters to be checked and repl...\" [Status: In Progress → Pending Procurement] on Decoration Oven",
@@ -6302,35 +6331,6 @@
         "taskId": "t1784874545898m5ni"
       },
       "taskId": "t1784874545898m5ni"
-    },
-    {
-      "id": "t1784874485667mr68",
-      "time": "2026-07-24T06:28:05.667Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_278726",
-            "machine": "Accumulator",
-            "category": "Electrical",
-            "desc": "Dry run",
-            "priority": "High",
-            "progress": 80,
-            "status": "In Progress",
-            "responsible": "Arsalan",
-            "deadline": "",
-            "remarks": "on machine testing",
-            "updated": "",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "",
-            "image": ""
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6650,6 +6650,6 @@
   "activeSessions": {
     "Sikander": "2026-07-31T02:17:43.662Z",
     "Aurangzeb": "2026-08-04T07:46:06.143Z",
-    "Saqib": "2026-08-05T04:28:22.527Z"
+    "Saqib": "2026-08-05T04:28:28.309Z"
   }
 }
