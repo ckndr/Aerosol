@@ -3138,16 +3138,16 @@
       "category": "Mechanical",
       "desc": "Separate storage tanks installation(detergent / cold / hot water)",
       "priority": "High",
-      "progress": 0,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Saqib",
       "deadline": "2026-06-30",
       "remarks": "under discussion",
-      "updated": "18 Jul 2026",
+      "updated": "5 Aug 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Aurangzeb",
+      "lastEditedBy": "Saqib",
       "image": "Photos/Washing/task_img_1780312513275.jpg"
     },
     {
@@ -4289,6 +4289,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1785904153044u8od",
+      "time": "2026-08-05T04:29:13.044Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_612787",
+            "machine": "Washing",
+            "category": "Mechanical",
+            "desc": "Separate storage tanks installation(detergent / cold / hot water)",
+            "priority": "High",
+            "progress": 0,
+            "status": "In Progress",
+            "responsible": "Saqib",
+            "deadline": "2026-06-30",
+            "remarks": "under discussion",
+            "updated": "18 Jul 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Aurangzeb",
+            "image": "Photos/Washing/task_img_1780312513275.jpg"
+          }
+        ]
+      }
+    },
     {
       "id": "t1785904140236fvql",
       "time": "2026-08-05T04:29:00.236Z",
@@ -6338,34 +6367,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1784874758146zf1i",
-      "time": "2026-07-24T06:32:38.146Z",
-      "action": "[Saqib] Updated task \"Varnish Dry run...\" on Over Varnish",
-      "user": "Saqib",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_476856",
-          "machine": "Over Varnish",
-          "category": "Mechanical",
-          "desc": "Printing Oven Dry run",
-          "priority": "High",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "deadline": "2026-06-24",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "",
-          "image": ""
-        }
-      },
-      "taskId": "t_476856"
     }
   ],
   "machineMeta": {
@@ -6685,6 +6686,6 @@
   "activeSessions": {
     "Sikander": "2026-07-31T02:17:43.662Z",
     "Aurangzeb": "2026-08-04T07:46:06.143Z",
-    "Saqib": "2026-08-05T04:29:00.236Z"
+    "Saqib": "2026-08-05T04:29:13.044Z"
   }
 }
