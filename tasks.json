@@ -4283,12 +4283,41 @@
       "deadline": "",
       "dateStarted": "2026-08-04",
       "dateFinished": ""
+    },
+    {
+      "id": "t1785904268676jxkp",
+      "machine": "FG Conveyor",
+      "category": "Mechanical",
+      "desc": "The equidistance belt needs to be replaced.",
+      "priority": "High",
+      "progress": 0,
+      "status": "Pending Procurement",
+      "remarks": "",
+      "responsible": "",
+      "updated": "5 Aug 2026",
+      "lastEditedBy": "Saqib",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1785904268676y65x",
+      "time": "2026-08-05T04:31:08.676Z",
+      "action": "[Saqib] Added task \"The equidistance belt needs to...\" to FG Conveyor",
+      "user": "Saqib",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1785904268676jxkp"
+      },
+      "taskId": "t1785904268676jxkp"
+    },
     {
       "id": "t1785904210564kahc",
       "time": "2026-08-05T04:30:10.564Z",
@@ -6373,35 +6402,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t17849530212534aov",
-      "time": "2026-07-25T04:17:01.253Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_460094",
-            "machine": "Overall Machine Operation",
-            "category": "Electrical",
-            "desc": "Main Power Cable procurement",
-            "priority": "High",
-            "progress": 80,
-            "status": "In Progress",
-            "responsible": "Saqib",
-            "deadline": "",
-            "remarks": "",
-            "updated": "18 Jul 2026",
-            "waitingOn": "",
-            "dateStarted": "2026-07-11",
-            "dateFinished": "2026-07-10",
-            "lastEditedBy": "Aurangzeb",
-            "image": null
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6721,6 +6721,6 @@
   "activeSessions": {
     "Sikander": "2026-07-31T02:17:43.662Z",
     "Aurangzeb": "2026-08-04T07:46:06.143Z",
-    "Saqib": "2026-08-05T04:30:14.420Z"
+    "Saqib": "2026-08-05T04:31:08.676Z"
   }
 }
