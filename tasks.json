@@ -4304,7 +4304,7 @@
     }
   ],
   "settings": {
-    "autoSync": true
+    "autoSync": false
   },
   "activityLog": [
     {
@@ -6606,8 +6606,16 @@
   },
   "loginHistory": [
     {
+      "name": "Sikander",
+      "time": "2026-08-05T10:25:39.293Z"
+    },
+    {
       "name": "Aurangzeb",
       "time": "2026-08-05T09:36:17.969Z"
+    },
+    {
+      "name": "Sikander",
+      "time": "2026-08-05T04:31:29.615Z"
     },
     {
       "name": "Saqib",
@@ -6658,6 +6666,10 @@
       "time": "2026-07-29T08:30:42.865Z"
     },
     {
+      "name": "Sikander",
+      "time": "2026-07-28T06:15:27.110Z"
+    },
+    {
       "name": "Saqib",
       "time": "2026-07-28T05:41:49.227Z"
     },
@@ -6672,6 +6684,14 @@
     {
       "name": "Sikander",
       "time": "2026-07-26T18:34:51.900Z"
+    },
+    {
+      "name": "Sikander",
+      "time": "2026-07-25T06:12:55.266Z"
+    },
+    {
+      "name": "Sikander",
+      "time": "2026-07-25T04:43:32.671Z"
     },
     {
       "name": "Sikander",
@@ -6731,7 +6751,7 @@
     }
   ],
   "activeSessions": {
-    "Sikander": "2026-08-02T11:38:44.816Z",
+    "Sikander": "2026-08-05T10:25:39.293Z",
     "Aurangzeb": "2026-08-05T09:36:17.969Z",
     "Saqib": "2026-08-05T07:04:19.837Z"
   }
