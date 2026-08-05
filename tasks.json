@@ -2472,16 +2472,16 @@
       "category": "Electrical",
       "desc": "Trimming Scrap collector wiring and troubleshooting",
       "priority": "High",
-      "progress": 50,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "2026-06-19",
       "remarks": "",
-      "updated": "1 Jun 2026",
+      "updated": "5 Aug 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Aurangzeb",
+      "lastEditedBy": "Saqib",
       "image": "Photos/Trimming/task_img_1780311363688.jpg"
     },
     {
@@ -2639,7 +2639,7 @@
       "responsible": "Arsalan",
       "deadline": "2026-06-19",
       "remarks": "",
-      "updated": "25 Jul 2026",
+      "updated": "5 Aug 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -4289,6 +4289,64 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1785904140236fvql",
+      "time": "2026-08-05T04:29:00.236Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_934362",
+            "machine": "Trimming",
+            "category": "Mechanical",
+            "desc": "pneumatic pressure valve for ejector pressure to install",
+            "priority": "High",
+            "progress": 0,
+            "status": "In Progress",
+            "responsible": "Arsalan",
+            "deadline": "2026-06-19",
+            "remarks": "",
+            "updated": "25 Jul 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Saqib",
+            "image": "Photos/Trimming/task_img_1780311531849.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "t1785904134308gbl3",
+      "time": "2026-08-05T04:28:54.308Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_513566",
+            "machine": "Trimming",
+            "category": "Electrical",
+            "desc": "Trimming Scrap collector wiring and troubleshooting",
+            "priority": "High",
+            "progress": 50,
+            "status": "In Progress",
+            "responsible": "Arsalan",
+            "deadline": "2026-06-19",
+            "remarks": "",
+            "updated": "1 Jun 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Aurangzeb",
+            "image": "Photos/Trimming/task_img_1780311363688.jpg"
+          }
+        ]
+      }
+    },
     {
       "id": "t1785904130917hvkr",
       "time": "2026-08-05T04:28:50.917Z",
@@ -6308,46 +6366,6 @@
         }
       },
       "taskId": "t_476856"
-    },
-    {
-      "id": "t1784874714177avfz",
-      "time": "2026-07-24T06:31:54.177Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t1784874703714lyhz",
-            "machine": "Compressor",
-            "category": "Mechanical",
-            "desc": "exhaust piping for compressor",
-            "priority": "High",
-            "progress": 0,
-            "status": "Not Started",
-            "remarks": "",
-            "responsible": "",
-            "updated": "24 Jul 2026",
-            "lastEditedBy": "Saqib",
-            "image": null,
-            "waitingOn": "",
-            "deadline": "",
-            "dateStarted": "",
-            "dateFinished": ""
-          }
-        ]
-      }
-    },
-    {
-      "id": "t178487470371440rf",
-      "time": "2026-07-24T06:31:43.714Z",
-      "action": "[Saqib] Added task \"exhaust piping for compressor...\" to Compressor",
-      "user": "Saqib",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1784874703714lyhz"
-      },
-      "taskId": "t1784874703714lyhz"
     }
   ],
   "machineMeta": {
@@ -6667,6 +6685,6 @@
   "activeSessions": {
     "Sikander": "2026-07-31T02:17:43.662Z",
     "Aurangzeb": "2026-08-04T07:46:06.143Z",
-    "Saqib": "2026-08-05T04:28:50.917Z"
+    "Saqib": "2026-08-05T04:29:00.236Z"
   }
 }
