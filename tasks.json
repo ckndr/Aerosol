@@ -6606,6 +6606,10 @@
   },
   "loginHistory": [
     {
+      "name": "Aurangzeb",
+      "time": "2026-08-05T09:36:17.969Z"
+    },
+    {
       "name": "Saqib",
       "time": "2026-08-05T04:26:47.861Z"
     },
@@ -6616,6 +6620,14 @@
     {
       "name": "Aurangzeb",
       "time": "2026-08-04T07:26:03.793Z"
+    },
+    {
+      "name": "Aurangzeb",
+      "time": "2026-08-03T10:39:54.607Z"
+    },
+    {
+      "name": "Sikander",
+      "time": "2026-08-02T11:38:44.816Z"
     },
     {
       "name": "Aurangzeb",
@@ -6719,8 +6731,8 @@
     }
   ],
   "activeSessions": {
-    "Sikander": "2026-07-31T02:17:43.662Z",
-    "Aurangzeb": "2026-08-04T07:46:06.143Z",
+    "Sikander": "2026-08-02T11:38:44.816Z",
+    "Aurangzeb": "2026-08-05T09:36:17.969Z",
     "Saqib": "2026-08-05T07:04:19.837Z"
   }
 }
