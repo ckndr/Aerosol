@@ -4204,7 +4204,7 @@
       "status": "In Progress",
       "remarks": "",
       "responsible": "",
-      "updated": "28 Jul 2026",
+      "updated": "5 Aug 2026",
       "lastEditedBy": "Saqib",
       "image": null,
       "waitingOn": "",
@@ -4289,6 +4289,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1785904039548dwyt",
+      "time": "2026-08-05T04:27:19.548Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t1785217396485296r",
+            "machine": "Washing",
+            "category": "Mechanical",
+            "desc": "Straighten and align all washing chain pins",
+            "priority": "Medium",
+            "progress": 0,
+            "status": "In Progress",
+            "remarks": "",
+            "responsible": "",
+            "updated": "28 Jul 2026",
+            "lastEditedBy": "Saqib",
+            "image": null,
+            "waitingOn": "",
+            "deadline": "",
+            "dateStarted": "",
+            "dateFinished": ""
+          }
+        ]
+      }
+    },
     {
       "id": "t1785828661947e08k",
       "time": "2026-08-04T07:31:01.947Z",
@@ -6303,35 +6332,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1784874353001qzi2",
-      "time": "2026-07-24T06:25:53.001Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_186924",
-            "machine": "Base Coat",
-            "category": "Mechanical",
-            "desc": "Fumes collector piping to install",
-            "priority": "Medium",
-            "progress": 0,
-            "status": "Not Started",
-            "responsible": "Saqib",
-            "deadline": "2026-06-20",
-            "remarks": "",
-            "updated": "13 Jul 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Saqib",
-            "image": "Photos/Base Coat/task_img_1780373654935.jpg"
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6651,6 +6651,6 @@
   "activeSessions": {
     "Sikander": "2026-07-31T02:17:43.662Z",
     "Aurangzeb": "2026-08-04T07:46:06.143Z",
-    "Saqib": "2026-08-05T04:26:52.180Z"
+    "Saqib": "2026-08-05T04:27:19.548Z"
   }
 }
