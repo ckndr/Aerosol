@@ -3246,12 +3246,12 @@
       "category": "Mechanical",
       "desc": "Accumulator+ Main Oven chain & sporckets alignment/testing/fixing/ dry run",
       "priority": "High",
-      "progress": 95,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "remarks": "",
       "responsible": "Arsalan",
-      "updated": "18 Jul 2026",
-      "lastEditedBy": "Aurangzeb",
+      "updated": "5 Aug 2026",
+      "lastEditedBy": "Saqib",
       "image": null,
       "waitingOn": "",
       "deadline": "",
@@ -4289,6 +4289,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1785904155517mbhl",
+      "time": "2026-08-05T04:29:15.517Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t17843582626653eoh",
+            "machine": "Overall Machine Operation",
+            "category": "Mechanical",
+            "desc": "Accumulator+ Main Oven chain & sporckets alignment/testing/fixing/ dry run",
+            "priority": "High",
+            "progress": 95,
+            "status": "In Progress",
+            "remarks": "",
+            "responsible": "Arsalan",
+            "updated": "18 Jul 2026",
+            "lastEditedBy": "Aurangzeb",
+            "image": null,
+            "waitingOn": "",
+            "deadline": "",
+            "dateStarted": "",
+            "dateFinished": ""
+          }
+        ]
+      }
+    },
     {
       "id": "t1785904153044u8od",
       "time": "2026-08-05T04:29:13.044Z",
@@ -6338,35 +6367,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t17849529660055lhi",
-      "time": "2026-07-25T04:16:06.005Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t1784022464364r6wp",
-            "machine": "Accumulator",
-            "category": "Mechanical",
-            "desc": "Tension Cylinders to check and replace",
-            "priority": "Medium",
-            "progress": 10,
-            "status": "In Progress",
-            "responsible": "Arsalan",
-            "deadline": "",
-            "remarks": "",
-            "updated": "",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "",
-            "image": ""
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6686,6 +6686,6 @@
   "activeSessions": {
     "Sikander": "2026-07-31T02:17:43.662Z",
     "Aurangzeb": "2026-08-04T07:46:06.143Z",
-    "Saqib": "2026-08-05T04:29:13.044Z"
+    "Saqib": "2026-08-05T04:29:15.517Z"
   }
 }
