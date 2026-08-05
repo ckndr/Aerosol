@@ -4272,8 +4272,8 @@
       "category": "Electrical",
       "desc": "Scrap collector dry run",
       "priority": "Medium",
-      "progress": 0,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "remarks": "motor is not running",
       "responsible": "",
       "updated": "5 Aug 2026",
@@ -4289,6 +4289,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1785904210564kahc",
+      "time": "2026-08-05T04:30:10.564Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t178582866194765qo",
+            "machine": "Trimming",
+            "category": "Electrical",
+            "desc": "Scrap collector dry run",
+            "priority": "Medium",
+            "progress": 0,
+            "status": "In Progress",
+            "remarks": "motor is not running",
+            "responsible": "",
+            "updated": "5 Aug 2026",
+            "lastEditedBy": "Saqib",
+            "image": null,
+            "waitingOn": "",
+            "deadline": "",
+            "dateStarted": "2026-08-04",
+            "dateFinished": ""
+          }
+        ]
+      }
+    },
     {
       "id": "t1785904208838axh3",
       "time": "2026-08-05T04:30:08.838Z",
@@ -6373,35 +6402,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1784953010364fmtb",
-      "time": "2026-07-25T04:16:50.364Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_862890",
-            "machine": "Necking",
-            "category": "Mechanical",
-            "desc": "Kluber oil & grease for necking machine",
-            "priority": "Medium",
-            "progress": 0,
-            "status": "In Progress",
-            "responsible": "Saqib",
-            "deadline": "",
-            "remarks": "",
-            "updated": "",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "",
-            "image": ""
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6721,6 +6721,6 @@
   "activeSessions": {
     "Sikander": "2026-07-31T02:17:43.662Z",
     "Aurangzeb": "2026-08-04T07:46:06.143Z",
-    "Saqib": "2026-08-05T04:30:08.838Z"
+    "Saqib": "2026-08-05T04:30:10.564Z"
   }
 }
