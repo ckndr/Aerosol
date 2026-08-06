@@ -2395,10 +2395,6 @@
           👤 <span id="my-tasks-label">My Tasks</span>
         </button>
         <button class="icon-btn" id="auth-btn" title="Login to edit" aria-label="Login" onclick="handleAuthClick()">🔓</button>
-        <button class="icon-btn" id="recent-btn" title="Recently updated tasks" aria-label="Recently updated tasks" onclick="toggleRecentTasks()"
-          style="width:auto;padding:0 .65rem;font-size:.75rem;font-weight:500;gap:.3rem">
-          🕐 <span class="btn-label">Recent</span>
-        </button>
         <button class="icon-btn" id="recent-changes-btn" title="Recent changes log" aria-label="Recent changes log" onclick="toggleRecentChanges()"
           style="width:auto;padding:0 .65rem;font-size:.75rem;font-weight:500;gap:.3rem">
           📝 <span class="btn-label">Recent Changes</span>
@@ -2406,8 +2402,14 @@
         <button class="icon-btn" id="filter-toggle-btn" title="Toggle Search & Filters" aria-label="Search and filters" onclick="toggleFilterBar()"
           style="position:relative">🔍<span class="badge" id="filter-active-badge"
             style="display:none;position:absolute;top:-4px;right:-4px;background:var(--accent);color:#fff;font-size:9px;width:14px;height:14px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold;">0</span></button>
-        <button class="icon-btn" id="btn-import" title="Import Excel" aria-label="Import Excel" onclick="triggerImport()">📥</button>
-        <button class="icon-btn" id="btn-export" title="Export Excel" aria-label="Export Excel" onclick="exportExcel()">📤</button>
+        <button class="icon-btn" id="btn-import" title="Import Excel" aria-label="Import Excel" onclick="triggerImport()"
+          style="width:auto;padding:0 .65rem;font-size:.75rem;font-weight:500;gap:.3rem">
+          📥 <span class="btn-label">Upload in Excel</span>
+        </button>
+        <button class="icon-btn" id="btn-export" title="Export Excel" aria-label="Export Excel" onclick="exportExcel()"
+          style="width:auto;padding:0 .65rem;font-size:.75rem;font-weight:500;gap:.3rem">
+          📤 <span class="btn-label">Download in Excel</span>
+        </button>
         <button class="icon-btn" title="Print / Export PDF" aria-label="Print or export PDF" onclick="window.print()"
           style="gap:.3rem;width:auto;padding:0 .6rem;font-size:.72rem;">🖨️ <span class="btn-label"
             style="font-family:'DM Sans',sans-serif;font-weight:500;">Print</span></button>
