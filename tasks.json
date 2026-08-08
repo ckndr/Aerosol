@@ -4303,9 +4303,7 @@
       "dateFinished": ""
     }
   ],
-  "settings": {
-    "autoSync": true
-  },
+  "settings": {},
   "activityLog": [
     {
       "id": "t1786087018052jfs6",
@@ -6605,6 +6603,10 @@
   },
   "loginHistory": [
     {
+      "name": "Saqib",
+      "time": "2026-08-08T09:52:40.542Z"
+    },
+    {
       "name": "Aurangzeb",
       "time": "2026-08-07T07:13:44.057Z"
     },
@@ -6741,6 +6743,10 @@
       "time": "2026-07-21T11:11:06.517Z"
     },
     {
+      "name": "Saqib",
+      "time": "2026-07-18T17:18:18.218Z"
+    },
+    {
       "name": "Aurangzeb",
       "time": "2026-07-18T06:42:53.025Z"
     },
@@ -6760,6 +6766,6 @@
   "activeSessions": {
     "Sikander": "2026-08-06T04:15:04.356Z",
     "Aurangzeb": "2026-08-07T07:19:58.242Z",
-    "Saqib": "2026-08-05T07:04:19.837Z"
+    "Saqib": "2026-08-08T09:52:40.542Z"
   }
 }
