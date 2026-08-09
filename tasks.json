@@ -1608,17 +1608,17 @@
       "category": "Electrical",
       "desc": "Main Power Cable Termination & Execution Plan",
       "priority": "High",
-      "progress": 0,
-      "status": "Not Started",
+      "progress": 20,
+      "status": "In Progress",
       "responsible": "Arsalan",
       "deadline": "2026-06-13",
       "remarks": "",
-      "updated": "",
+      "updated": "9 Aug 2026",
       "waitingOn": "",
-      "dateStarted": "",
+      "dateStarted": "2026-08-07",
       "dateFinished": "",
-      "lastEditedBy": "",
-      "image": ""
+      "lastEditedBy": "Aurangzeb",
+      "image": null
     },
     {
       "id": "t_460094",
@@ -4308,6 +4308,34 @@
   },
   "activityLog": [
     {
+      "id": "t1786272472546d5ri",
+      "time": "2026-08-09T10:47:52.546Z",
+      "action": "[Aurangzeb] Updated task \"Main Power Cable Termination &...\" [Status: Not Started → In Progress, Progress: 0% → 20%, Date Started updated] on Overall Machine Operation",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_378091",
+          "machine": "Overall Machine Operation",
+          "category": "Electrical",
+          "desc": "Main Power Cable Termination & Execution Plan",
+          "priority": "High",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Arsalan",
+          "deadline": "2026-06-13",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "",
+          "image": ""
+        }
+      },
+      "taskId": "t_378091"
+    },
+    {
       "id": "t1786087018052jfs6",
       "time": "2026-08-07T07:16:58.052Z",
       "action": "[Aurangzeb] Updated task \"individual section pipes/ bran...\" [Status: Not Started → Completed, Progress: 0% → 100%, Responsible: Arsalan → Saqib] on Compressor",
@@ -6372,35 +6400,6 @@
         "taskId": "t1784953175631hd5z"
       },
       "taskId": "t1784953175631hd5z"
-    },
-    {
-      "id": "t1784953053493kzq2",
-      "time": "2026-07-25T04:17:33.493Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t1784709625280l2yx",
-            "machine": "Base Coat",
-            "category": "Mechanical",
-            "desc": "Basecoat Dry run",
-            "priority": "High",
-            "progress": 80,
-            "status": "In Progress",
-            "remarks": "",
-            "responsible": "",
-            "updated": "22 Jul 2026",
-            "lastEditedBy": "Aurangzeb",
-            "image": null,
-            "waitingOn": "",
-            "deadline": "",
-            "dateStarted": "2026-07-19",
-            "dateFinished": ""
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6771,7 +6770,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-08-06T04:15:04.356Z",
-    "Aurangzeb": "2026-08-09T10:47:18.703Z",
+    "Aurangzeb": "2026-08-09T10:47:52.547Z",
     "Saqib": "2026-08-08T09:52:40.542Z"
   }
 }
