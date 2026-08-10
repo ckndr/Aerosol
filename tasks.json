@@ -3534,11 +3534,11 @@
       "category": "Mechanical",
       "desc": "exhaust piping for compressor",
       "priority": "High",
-      "progress": 0,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "remarks": "",
       "responsible": "",
-      "updated": "24 Jul 2026",
+      "updated": "10 Aug 2026",
       "lastEditedBy": "Saqib",
       "image": null,
       "waitingOn": "",
@@ -4307,6 +4307,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17863483675212jdk",
+      "time": "2026-08-10T07:52:47.521Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t1784874703714lyhz",
+            "machine": "Compressor",
+            "category": "Mechanical",
+            "desc": "exhaust piping for compressor",
+            "priority": "High",
+            "progress": 0,
+            "status": "In Progress",
+            "remarks": "",
+            "responsible": "",
+            "updated": "24 Jul 2026",
+            "lastEditedBy": "Saqib",
+            "image": null,
+            "waitingOn": "",
+            "deadline": "",
+            "dateStarted": "",
+            "dateFinished": ""
+          }
+        ]
+      }
+    },
     {
       "id": "t1786272472546d5ri",
       "time": "2026-08-09T10:47:52.546Z",
@@ -6389,17 +6418,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1784953175631csx0",
-      "time": "2026-07-25T04:19:35.631Z",
-      "action": "[Saqib] Added task \"Installation of a VFD with Spe...\" to Trimming",
-      "user": "Saqib",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1784953175631hd5z"
-      },
-      "taskId": "t1784953175631hd5z"
     }
   ],
   "machineMeta": {
@@ -6775,6 +6793,6 @@
   "activeSessions": {
     "Sikander": "2026-08-06T04:15:04.356Z",
     "Aurangzeb": "2026-08-09T11:01:15.257Z",
-    "Saqib": "2026-08-10T07:52:12.092Z"
+    "Saqib": "2026-08-10T07:52:47.521Z"
   }
 }
