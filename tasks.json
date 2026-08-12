@@ -2922,16 +2922,16 @@
       "category": "Mechanical",
       "desc": "Washing unit drain flexible pipes after tank installation",
       "priority": "High",
-      "progress": 0,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "2026-06-30",
       "remarks": "",
-      "updated": "25 Jul 2026",
+      "updated": "12 Aug 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Saqib",
+      "lastEditedBy": "Aurangzeb",
       "image": "Photos/Washing/task_img_1780311943122.jpg"
     },
     {
@@ -4307,6 +4307,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t178652704781612kd",
+      "time": "2026-08-12T09:30:47.816Z",
+      "action": "[Aurangzeb] Updated task \"Washing unit drain flexible pi...\" [Status: In Progress → Completed, Progress: 0% → 100%] on Washing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_297468",
+          "machine": "Washing",
+          "category": "Mechanical",
+          "desc": "Washing unit drain flexible pipes after tank installation",
+          "priority": "High",
+          "progress": 0,
+          "status": "In Progress",
+          "responsible": "Arsalan",
+          "deadline": "2026-06-30",
+          "remarks": "",
+          "updated": "25 Jul 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Saqib",
+          "image": "Photos/Washing/task_img_1780311943122.jpg"
+        }
+      },
+      "taskId": "t_297468"
+    },
     {
       "id": "t1786520570994qru1",
       "time": "2026-08-12T07:42:50.994Z",
@@ -6406,17 +6434,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1784953221324v7n2",
-      "time": "2026-07-25T04:20:21.324Z",
-      "action": "[Saqib] Added task \"rejection box for trim collect...\" to Trimming",
-      "user": "Saqib",
-      "undoData": {
-        "type": "add",
-        "taskId": "t17849532213243tpd"
-      },
-      "taskId": "t17849532213243tpd"
     }
   ],
   "machineMeta": {
@@ -6799,7 +6816,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-08-06T04:15:04.356Z",
-    "Aurangzeb": "2026-08-12T09:30:20.380Z",
+    "Aurangzeb": "2026-08-12T09:30:47.817Z",
     "Saqib": "2026-08-10T08:06:52.693Z"
   }
 }
