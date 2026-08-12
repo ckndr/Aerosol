@@ -4038,17 +4038,17 @@
       "category": "Mechanical",
       "desc": "dust collection blower need to be start",
       "priority": "Medium",
-      "progress": 0,
-      "status": "Not Started",
+      "progress": 100,
+      "status": "Completed",
       "remarks": "",
       "responsible": "",
-      "updated": "25 Jul 2026",
-      "lastEditedBy": "Saqib",
+      "updated": "12 Aug 2026",
+      "lastEditedBy": "Aurangzeb",
       "image": null,
       "waitingOn": "",
       "deadline": "",
       "dateStarted": "",
-      "dateFinished": ""
+      "dateFinished": "2026-08-12"
     },
     {
       "id": "t1784978474014axuk",
@@ -4307,6 +4307,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1786520570994qru1",
+      "time": "2026-08-12T07:42:50.994Z",
+      "action": "[Aurangzeb] Updated task \"dust collection blower need to...\" [Status: Not Started → Completed, Progress: 0% → 100%, Date Finished updated] on Press",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t17849736946493f99",
+          "machine": "Press",
+          "category": "Mechanical",
+          "desc": "dust collection blower need to be start",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "remarks": "",
+          "responsible": "",
+          "updated": "25 Jul 2026",
+          "lastEditedBy": "Saqib",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t17849736946493f99"
+    },
     {
       "id": "t17863483675212jdk",
       "time": "2026-08-10T07:52:47.521Z",
@@ -6389,35 +6417,6 @@
         "taskId": "t17849532213243tpd"
       },
       "taskId": "t17849532213243tpd"
-    },
-    {
-      "id": "t1784953179861qtur",
-      "time": "2026-07-25T04:19:39.861Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t1784953175631hd5z",
-            "machine": "Trimming",
-            "category": "Mechanical",
-            "desc": "Installation of a VFD with Speed Adjustment",
-            "priority": "Medium",
-            "progress": 0,
-            "status": "Not Started",
-            "remarks": "",
-            "responsible": "",
-            "updated": "25 Jul 2026",
-            "lastEditedBy": "Saqib",
-            "image": null,
-            "waitingOn": "",
-            "deadline": "",
-            "dateStarted": "",
-            "dateFinished": ""
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6796,7 +6795,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-08-06T04:15:04.356Z",
-    "Aurangzeb": "2026-08-12T07:42:21.220Z",
+    "Aurangzeb": "2026-08-12T07:42:50.994Z",
     "Saqib": "2026-08-10T08:06:52.693Z"
   }
 }
