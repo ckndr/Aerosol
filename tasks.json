@@ -4200,12 +4200,12 @@
       "category": "Mechanical",
       "desc": "Straighten and align all washing chain pins",
       "priority": "Medium",
-      "progress": 0,
+      "progress": 80,
       "status": "In Progress",
       "remarks": "",
       "responsible": "",
-      "updated": "5 Aug 2026",
-      "lastEditedBy": "Saqib",
+      "updated": "12 Aug 2026",
+      "lastEditedBy": "Aurangzeb",
       "image": null,
       "waitingOn": "",
       "deadline": "",
@@ -4307,6 +4307,34 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1786527095149abso",
+      "time": "2026-08-12T09:31:35.149Z",
+      "action": "[Aurangzeb] Updated task \"Straighten and align all washi...\" [Progress: 0% → 80%] on Washing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1785217396485296r",
+          "machine": "Washing",
+          "category": "Mechanical",
+          "desc": "Straighten and align all washing chain pins",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "In Progress",
+          "remarks": "",
+          "responsible": "",
+          "updated": "5 Aug 2026",
+          "lastEditedBy": "Saqib",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t1785217396485296r"
+    },
     {
       "id": "t178652704781612kd",
       "time": "2026-08-12T09:30:47.816Z",
@@ -6405,35 +6433,6 @@
         "taskId": "t1784953305116dkly"
       },
       "taskId": "t1784953305116dkly"
-    },
-    {
-      "id": "t17849532546604e4k",
-      "time": "2026-07-25T04:20:54.660Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t178402246436679mb",
-            "machine": "Press",
-            "category": "Electrical",
-            "desc": "SOV coil pneumatic press clutch",
-            "priority": "Low",
-            "progress": 0,
-            "status": "Pending Procurement",
-            "responsible": "Saqib",
-            "deadline": "2026-06-16",
-            "remarks": "",
-            "updated": "18 Jul 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Aurangzeb",
-            "image": null
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6816,7 +6815,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-08-06T04:15:04.356Z",
-    "Aurangzeb": "2026-08-12T09:30:47.817Z",
+    "Aurangzeb": "2026-08-12T09:31:35.149Z",
     "Saqib": "2026-08-10T08:06:52.693Z"
   }
 }
