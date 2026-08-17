@@ -1608,12 +1608,12 @@
       "category": "Electrical",
       "desc": "Main Power Cable Termination & Execution Plan",
       "priority": "High",
-      "progress": 20,
+      "progress": 40,
       "status": "In Progress",
       "responsible": "Arsalan",
       "deadline": "2026-06-13",
       "remarks": "",
-      "updated": "9 Aug 2026",
+      "updated": "17 Aug 2026",
       "waitingOn": "",
       "dateStarted": "2026-08-07",
       "dateFinished": "",
@@ -4308,6 +4308,34 @@
   },
   "activityLog": [
     {
+      "id": "t1786965759569bydq",
+      "time": "2026-08-17T11:22:39.569Z",
+      "action": "[Aurangzeb] Updated task \"Main Power Cable Termination &...\" [Progress: 20% → 40%] on Overall Machine Operation",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_378091",
+          "machine": "Overall Machine Operation",
+          "category": "Electrical",
+          "desc": "Main Power Cable Termination & Execution Plan",
+          "priority": "High",
+          "progress": 20,
+          "status": "In Progress",
+          "responsible": "Arsalan",
+          "deadline": "2026-06-13",
+          "remarks": "",
+          "updated": "9 Aug 2026",
+          "waitingOn": "",
+          "dateStarted": "2026-08-07",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": null
+        }
+      },
+      "taskId": "t_378091"
+    },
+    {
       "id": "t1786965650378yy9v",
       "time": "2026-08-17T11:20:50.378Z",
       "action": "[Aurangzeb] Updated task \"The equidistance belt needs to...\" [Date Started updated] on FG Conveyor",
@@ -6421,35 +6449,6 @@
         "taskId": "t17849533700399wqu"
       },
       "taskId": "t17849533700399wqu"
-    },
-    {
-      "id": "t17849533094287p33",
-      "time": "2026-07-25T04:21:49.428Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t1784953305116dkly",
-            "machine": "Lacquer",
-            "category": "Mechanical",
-            "desc": "procurement of Can Holders",
-            "priority": "Medium",
-            "progress": 0,
-            "status": "Not Started",
-            "remarks": "",
-            "responsible": "",
-            "updated": "25 Jul 2026",
-            "lastEditedBy": "Saqib",
-            "image": null,
-            "waitingOn": "",
-            "deadline": "",
-            "dateStarted": "",
-            "dateFinished": ""
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6844,7 +6843,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-08-15T20:51:34.723Z",
-    "Aurangzeb": "2026-08-17T11:21:46.174Z",
+    "Aurangzeb": "2026-08-17T11:22:39.569Z",
     "Saqib": "2026-08-10T08:06:52.693Z"
   }
 }
