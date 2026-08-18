@@ -2838,6 +2838,8 @@
             <option value="Saqib">
             <option value="Sikander">
             <option value="Aurangzeb">
+            <option value="Bilal">
+            <option value="Saif">
           </datalist>
         </div>
         <div class="form-group full">
@@ -3691,7 +3693,7 @@
 
     function sanitizeTasks() {
       let changed = false;
-      const pList = ['Saqib', 'Sikander', 'Aurangzeb', 'Anonymous', 'Unknown'];
+      const pList = ['Saqib', 'Sikander', 'Aurangzeb', 'Bilal', 'Saif', 'Anonymous', 'Unknown'];
       tasks.forEach(t => {
         // Swap remarks and responsible if they are in the wrong columns
         const isRespName = pList.includes((t.remarks || '').trim());
@@ -5826,7 +5828,9 @@
       const TOKEN_MAP = {
         '2hnye2': 'Sikander',
         '2zpn5z': 'Saqib',
-        '10pqgo': 'Aurangzeb'
+        '10pqgo': 'Aurangzeb',
+        '1j4d6m': 'Bilal',
+        '17rogy': 'Saif'
       };
 
       const name = TOKEN_MAP[suffix];
@@ -6179,7 +6183,7 @@
       // 1. Render currently logged in users
       const usersListEl = document.getElementById('logged-in-users-list');
       if (usersListEl) {
-        const teamUsers = ['Saqib', 'Sikander', 'Aurangzeb'];
+        const teamUsers = ['Saqib', 'Sikander', 'Aurangzeb', 'Bilal', 'Saif'];
         const activeUsersHtml = teamUsers.map(user => {
           const lastActive = activeSessions[user];
           let dot = '⚪';
@@ -6233,7 +6237,7 @@
             counts[entry.name] = (counts[entry.name] || 0) + 1;
           }
         });
-        const teamUsers = ['Saqib', 'Sikander', 'Aurangzeb'];
+        const teamUsers = ['Saqib', 'Sikander', 'Aurangzeb', 'Bilal', 'Saif'];
         const statsHtml = teamUsers.map(user => {
           const count = counts[user] || 0;
           return `
