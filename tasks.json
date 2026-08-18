@@ -4303,7 +4303,9 @@
       "dateFinished": ""
     }
   ],
-  "settings": {},
+  "settings": {
+    "autoSync": true
+  },
   "activityLog": [
     {
       "id": "t1786965759569bydq",
@@ -6879,6 +6881,6 @@
     "Sikander": "2026-08-18T06:04:43.918Z",
     "Saqib": "2026-08-10T08:06:52.693Z",
     "Aurangzeb": "2026-08-18T06:16:43.477Z",
-    "Bilal": "2026-08-18T06:23:51.095Z"
+    "Bilal": "2026-08-18T06:24:16.896Z"
   }
 }
