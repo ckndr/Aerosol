@@ -2363,6 +2363,56 @@
       align-items: center;
       justify-content: center;
     }
+    .clickable-user-badge {
+      cursor: pointer;
+      transition: transform 0.15s ease, filter 0.15s ease, opacity 0.15s ease;
+    }
+    .clickable-user-badge:hover {
+      transform: translateY(-1px);
+      filter: brightness(0.92);
+      opacity: 0.9;
+    }
+    .uc-tab {
+      transition: all 0.2s ease;
+    }
+    .uc-tab:hover {
+      color: var(--text) !important;
+    }
+    .uc-tab.active {
+      border-bottom-color: var(--accent) !important;
+      color: var(--text) !important;
+    }
+    .uc-task-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.55rem 0.7rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: var(--surface2);
+      margin-bottom: 0.45rem;
+      cursor: pointer;
+      transition: background 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+      gap: 0.6rem;
+    }
+    .uc-task-item:hover {
+      background: var(--surface3);
+      border-color: var(--accent);
+      transform: translateX(2px);
+    }
+    .team-credit-card {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.85rem;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    .team-credit-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border-color: var(--accent);
+    }
   </style>
 </head>
 
@@ -2398,6 +2448,10 @@
         <button class="icon-btn" id="recent-changes-btn" title="Recent changes log" aria-label="Recent changes log" onclick="toggleRecentChanges()"
           style="width:auto;padding:0 .65rem;font-size:.75rem;font-weight:500;gap:.3rem">
           📝 <span class="btn-label">Recent Changes</span>
+        </button>
+        <button class="icon-btn" id="team-credits-btn" title="Team Contributions & Credits" aria-label="Team Credits" onclick="openTeamCreditsModal()"
+          style="width:auto;padding:0 .65rem;font-size:.75rem;font-weight:500;gap:.3rem">
+          👥 <span class="btn-label">Team Credits</span>
         </button>
         <button class="icon-btn" id="filter-toggle-btn" title="Toggle Search & Filters" aria-label="Search and filters" onclick="toggleFilterBar()"
           style="position:relative">🔍<span class="badge" id="filter-active-badge"
@@ -2769,6 +2823,14 @@
         <button class="modal-close" onclick="closeModal()">✕</button>
       </div>
       <div class="form-grid">
+        <div id="task-attribution-box" style="grid-column: 1 / -1; display:none; align-items:center; justify-content:space-between; padding:0.55rem 0.8rem; background:var(--surface2); border:1px solid var(--border); border-radius:6px; font-size:0.75rem; color:var(--text2); flex-wrap:wrap; gap:0.5rem;">
+          <div id="task-attr-created" style="display:flex;align-items:center;gap:0.35rem">
+            🌱 <strong>Created by:</strong> <span id="task-created-by-val" style="color:var(--accent);font-weight:600;cursor:pointer;text-decoration:underline;text-underline-offset:2px;" title="View contribution history">—</span>
+          </div>
+          <div id="task-attr-edited" style="display:flex;align-items:center;gap:0.35rem">
+            ✏️ <strong>Last Edited by:</strong> <span id="task-edited-by-val" style="color:var(--accent);font-weight:600;cursor:pointer;text-decoration:underline;text-underline-offset:2px;" title="View contribution history">—</span> <span id="task-edited-date-val" style="color:var(--text3);font-size:0.7rem"></span>
+          </div>
+        </div>
         <div class="form-group">
           <label>Machine</label>
           <select id="f-machine"></select>
@@ -2929,6 +2991,82 @@
       <div class="modal-footer" style="padding: 1rem 0 0.5rem 0; display: flex; gap: 10px; justify-content: center; border-top: none;">
         <button class="btn-cancel" onclick="cancelExit()" style="flex: 1; margin: 0; border-radius: var(--radius-md); padding: 10px 16px; font-weight: 600; cursor: pointer;">Stay</button>
         <button class="btn-save" onclick="confirmExit()" style="flex: 1; margin: 0; background: linear-gradient(135deg, #ff4444, #cc0000); color: white; border: none; border-radius: var(--radius-md); padding: 10px 16px; font-weight: 600; cursor: pointer; box-shadow: 0 4px 12px rgba(255,68,68,0.25);">Exit App</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- User Contribution & Activity Modal -->
+  <div class="modal-overlay center" id="user-contribution-modal" role="dialog" aria-modal="true" style="display:none" onclick="if(event.target===this)closeUserContributionModal()">
+    <div class="modal" style="max-width:650px;max-height:85vh;display:flex;flex-direction:column;">
+      <div class="modal-header" style="align-items:flex-start;padding-bottom:0.75rem;">
+        <div style="display:flex;align-items:center;gap:0.75rem;">
+          <div id="uc-avatar" style="width:42px;height:42px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.2rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.15)"></div>
+          <div>
+            <div style="display:flex;align-items:center;gap:0.5rem">
+              <span class="modal-title" id="uc-user-name" style="margin:0">User Profile</span>
+              <span id="uc-status-badge" style="font-size:0.7rem;padding:0.15rem 0.5rem;border-radius:12px;font-weight:600">Active</span>
+            </div>
+            <div id="uc-user-subtitle" style="font-size:0.75rem;color:var(--text3);margin-top:0.15rem">Team Member · Alpha Aerosol Systems</div>
+          </div>
+        </div>
+        <button class="modal-close" onclick="closeUserContributionModal()">✕</button>
+      </div>
+
+      <!-- User Stats Summary Grid -->
+      <div id="uc-stats-grid" style="display:grid;grid-template-columns:repeat(4, 1fr);gap:0.5rem;margin:0.75rem 0 1rem 0;">
+        <div class="uc-stat-card" style="background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:0.6rem 0.5rem;text-align:center;">
+          <div style="font-size:0.65rem;color:var(--text3);text-transform:uppercase;font-weight:600;">Created</div>
+          <div id="uc-stat-created" style="font-size:1.3rem;font-weight:700;color:var(--accent);margin-top:0.2rem">0</div>
+        </div>
+        <div class="uc-stat-card" style="background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:0.6rem 0.5rem;text-align:center;">
+          <div style="font-size:0.65rem;color:var(--text3);text-transform:uppercase;font-weight:600;">Edited</div>
+          <div id="uc-stat-edited" style="font-size:1.3rem;font-weight:700;color:#3b82f6;margin-top:0.2rem">0</div>
+        </div>
+        <div class="uc-stat-card" style="background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:0.6rem 0.5rem;text-align:center;">
+          <div style="font-size:0.65rem;color:var(--text3);text-transform:uppercase;font-weight:600;">Assigned</div>
+          <div id="uc-stat-assigned" style="font-size:1.3rem;font-weight:700;color:#8b5cf6;margin-top:0.2rem">0</div>
+        </div>
+        <div class="uc-stat-card" style="background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:0.6rem 0.5rem;text-align:center;">
+          <div style="font-size:0.65rem;color:var(--text3);text-transform:uppercase;font-weight:600;">Completed</div>
+          <div id="uc-stat-completed" style="font-size:1.3rem;font-weight:700;color:#10b981;margin-top:0.2rem">0</div>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs -->
+      <div style="display:flex;border-bottom:1px solid var(--border);margin-bottom:0.75rem;gap:0.5rem;">
+        <button id="uc-tab-tasks" class="uc-tab active" onclick="switchUserTab('tasks')" style="background:none;border:none;border-bottom:2px solid var(--accent);color:var(--text);font-weight:600;font-size:0.82rem;padding:0.5rem 0.75rem;cursor:pointer;">📋 Tasks (<span id="uc-tab-tasks-count">0</span>)</button>
+        <button id="uc-tab-history" class="uc-tab" onclick="switchUserTab('history')" style="background:none;border:none;border-bottom:2px solid transparent;color:var(--text3);font-weight:500;font-size:0.82rem;padding:0.5rem 0.75rem;cursor:pointer;">🕒 Activity History (<span id="uc-tab-history-count">0</span>)</button>
+      </div>
+
+      <!-- Tab Content Area -->
+      <div style="flex:1;overflow-y:auto;min-height:220px;max-height:360px;padding-right:0.25rem;">
+        <div id="uc-content-tasks"></div>
+        <div id="uc-content-history" style="display:none;"></div>
+      </div>
+
+      <!-- Footer with Quick Filter Button -->
+      <div class="modal-footer" style="justify-content:space-between;margin-top:1rem;padding-top:0.75rem;border-top:1px solid var(--border)">
+        <button class="btn-sm" id="uc-filter-dash-btn" onclick="filterDashboardByUser()" style="display:flex;align-items:center;gap:0.4rem;background:var(--surface3);color:var(--text);border:1px solid var(--border)">
+          🔍 Show in Main Tracker
+        </button>
+        <button class="btn-cancel" onclick="closeUserContributionModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Team Overview / Credits Modal -->
+  <div class="modal-overlay center" id="team-credits-modal" role="dialog" aria-modal="true" style="display:none" onclick="if(event.target===this)closeTeamCreditsModal()">
+    <div class="modal" style="max-width:680px;max-height:85vh;overflow-y:auto">
+      <div class="modal-header">
+        <div class="modal-title">👥 Team Contributions & Credits</div>
+        <button class="modal-close" onclick="closeTeamCreditsModal()">✕</button>
+      </div>
+      <p style="font-size:0.8rem;color:var(--text2);margin-bottom:1rem">
+        Transparent real-time breakdown of tasks created, modified, and completed by each team member. Tap on any person to view their detailed contribution history.
+      </p>
+      <div id="team-credits-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:0.75rem;margin-bottom:1rem"></div>
+      <div class="modal-footer">
+        <button class="btn-cancel" onclick="closeTeamCreditsModal()">Close</button>
       </div>
     </div>
   </div>
@@ -3737,6 +3875,8 @@
         if (!t.dateStarted) t.dateStarted = '';
         if (!t.dateFinished) t.dateFinished = '';
         if (!t.deadline) t.deadline = '';
+        if (!t.createdBy) t.createdBy = '';
+        if (!t.lastEditedBy) t.lastEditedBy = '';
       });
       loadMeta();
 
@@ -4739,8 +4879,12 @@
       div.dataset.id = t.id;
       div.onclick = () => openEditModal(t.id);
       const pfill = pct === 100 ? 'full' : pct === 0 ? '' : '';
-      const editLine = t.updated
-        ? `<div class="task-updated">Updated ${t.updated}</div>`
+      let editMeta = [];
+      if (t.createdBy) editMeta.push(`🌱 Created: <strong style="cursor:pointer;color:var(--accent);text-decoration:underline;text-underline-offset:2px;" onclick="event.stopPropagation(); openUserContributionModal('${escapeHTML(t.createdBy)}')">${escapeHTML(t.createdBy)}</strong>`);
+      if (t.lastEditedBy) editMeta.push(`✏️ Edited: <strong style="cursor:pointer;color:var(--accent);text-decoration:underline;text-underline-offset:2px;" onclick="event.stopPropagation(); openUserContributionModal('${escapeHTML(t.lastEditedBy)}')">${escapeHTML(t.lastEditedBy)}</strong>`);
+      if (t.updated) editMeta.push(`Updated ${t.updated}`);
+      const editLine = editMeta.length
+        ? `<div class="task-updated">${editMeta.join(' · ')}</div>`
         : '';
       const waitingTag = t.waitingOn
         ? `<div style="margin-top:.35rem"><span style="display:inline-flex;align-items:center;gap:.3rem;font-size:.67rem;font-weight:600;color:#c2410c;background:#fff7ed;border:1px solid #fed7aa;border-radius:20px;padding:.18rem .55rem;font-family:'DM Mono',monospace;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">⏳ ${escapeHTML(t.waitingOn)}</span></div>`
@@ -4771,8 +4915,9 @@
       ${isLoggedIn() ? `<input type="checkbox" class="task-select-cb" data-id="${t.id}" onclick="event.stopPropagation(); handleCheckboxChange()" style="margin-right: 0.6rem; cursor: pointer; width: 16px; height: 16px; accent-color: var(--accent); flex-shrink: 0; align-self: center;">` : ''}<div class="task-desc">${escapeHTML(t.desc)}</div>
       <div class="task-badges">
         ${showMachineName ? `<span class="badge" style="background:var(--g-bg);color:var(--g-t);border:1px solid var(--g-b);max-width:110px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">🏭 ${escapeHTML(t.machine)}</span>` : ''}
-        ${t.responsible ? `<span class="badge" style="background:var(--g-bg);color:var(--g-t);border:1px solid var(--g-b)" title="Responsible: ${escapeHTML(t.responsible)}">👤 ${escapeHTML(t.responsible)}</span>` : ''}
-        ${t.lastEditedBy ? `<span class="badge" style="background:var(--s-ip-bg);color:var(--s-ip-t);border:1px solid var(--s-ip-b)">✏️ ${escapeHTML(t.lastEditedBy)}</span>` : ''}
+        ${t.responsible ? `<span class="badge clickable-user-badge" style="background:var(--g-bg);color:var(--g-t);border:1px solid var(--g-b)" title="Responsible: ${escapeHTML(t.responsible)} (Click to view profile)" onclick="event.stopPropagation(); openUserContributionModal('${escapeHTML(t.responsible)}')">👤 ${escapeHTML(t.responsible)}</span>` : ''}
+        ${t.createdBy ? `<span class="badge clickable-user-badge" style="background:var(--surface3);color:var(--text);border:1px solid var(--border)" title="Created by: ${escapeHTML(t.createdBy)} (Click to view profile)" onclick="event.stopPropagation(); openUserContributionModal('${escapeHTML(t.createdBy)}')">🌱 ${escapeHTML(t.createdBy)}</span>` : ''}
+        ${t.lastEditedBy ? `<span class="badge clickable-user-badge" style="background:var(--s-ip-bg);color:var(--s-ip-t);border:1px solid var(--s-ip-b)" title="Last edited by: ${escapeHTML(t.lastEditedBy)} (Click to view profile)" onclick="event.stopPropagation(); openUserContributionModal('${escapeHTML(t.lastEditedBy)}')">✏️ ${escapeHTML(t.lastEditedBy)}</span>` : ''}
         ${t.priority && t.priority !== '–' ? `<span class="badge p-${t.priority}">${t.priority}</span>` : ''}
         ${t.image ? `<span class="badge" style="background:var(--g-bg);color:var(--g-t);border:1px solid var(--g-b)" title="Has photo">📷</span>` : ''}
         <span class="badge s-${sc}">${t.status}</span>
@@ -4917,6 +5062,8 @@
       if (removePhotoBtn) removePhotoBtn.style.display = 'none';
       document.getElementById('prog-display').textContent = '0%';
       document.getElementById('prog-num').textContent = '0%';
+      const attrBox = document.getElementById('task-attribution-box');
+      if (attrBox) attrBox.style.display = 'none';
       document.getElementById('task-modal').style.display = 'flex';
       saveHistoryState();
     }
@@ -4927,6 +5074,27 @@
       editingId = id;
       const isWritable = isLoggedIn();
       document.getElementById('modal-title').textContent = isWritable ? 'Edit Task' : 'View Task (Read-Only)';
+
+      const attrBox = document.getElementById('task-attribution-box');
+      if (attrBox) {
+        attrBox.style.display = 'flex';
+        const cVal = document.getElementById('task-created-by-val');
+        if (cVal) {
+          const cName = t.createdBy || 'Unknown';
+          cVal.textContent = cName;
+          cVal.onclick = () => openUserContributionModal(cName);
+        }
+        const eVal = document.getElementById('task-edited-by-val');
+        if (eVal) {
+          const eName = t.lastEditedBy || 'Unknown';
+          eVal.textContent = eName;
+          eVal.onclick = () => openUserContributionModal(eName);
+        }
+        const dVal = document.getElementById('task-edited-date-val');
+        if (dVal) {
+          dVal.textContent = t.updated ? `(${t.updated})` : '';
+        }
+      }
 
       populateMachineSelect(t.machine);
       document.getElementById('f-category').value = t.category;
@@ -5057,6 +5225,7 @@
           const prevTask = JSON.parse(JSON.stringify(t));
           Object.assign(t, {
             machine, category, desc, priority, status, progress, remarks, responsible, updated, lastEditedBy, image: imagePath,
+            createdBy: t.createdBy || '',
             waitingOn: document.getElementById('f-waitingon').value.trim(),
             deadline: document.getElementById('f-deadline')?.value || '',
             dateStarted: document.getElementById('f-datestarted')?.value || '',
@@ -5080,8 +5249,12 @@
         }
       } else {
         const newId = uid();
+        const createdBy = isLoggedIn() ? currentUser.name : 'Unknown';
         tasks.push({
-          id: newId, machine, category, desc, priority, progress, status, remarks, responsible, updated, lastEditedBy, image: imagePath,
+          id: newId, machine, category, desc, priority, progress, status, remarks, responsible, updated,
+          createdBy,
+          lastEditedBy,
+          image: imagePath,
           waitingOn: document.getElementById('f-waitingon').value.trim(),
           deadline: document.getElementById('f-deadline')?.value || '',
           dateStarted: document.getElementById('f-datestarted')?.value || '',
@@ -5307,6 +5480,7 @@
             task.dateStarted = existing.dateStarted || '';
             task.dateFinished = existing.dateFinished || '';
             task.updated = existing.updated || '';
+            task.createdBy = existing.createdBy || '';
             task.lastEditedBy = existing.lastEditedBy || '';
           }
 
@@ -5516,6 +5690,8 @@
               if (!t.dateStarted) t.dateStarted = '';
               if (!t.dateFinished) t.dateFinished = '';
               if (!t.deadline) t.deadline = '';
+              if (!t.createdBy) t.createdBy = '';
+              if (!t.lastEditedBy) t.lastEditedBy = '';
             });
             if (Array.isArray(data.activityLog)) {
               activityLog = data.activityLog;
@@ -5571,6 +5747,8 @@
               if (!t.dateStarted) t.dateStarted = '';
               if (!t.dateFinished) t.dateFinished = '';
               if (!t.deadline) t.deadline = '';
+              if (!t.createdBy) t.createdBy = '';
+              if (!t.lastEditedBy) t.lastEditedBy = '';
             });
             if (Array.isArray(data.activityLog)) {
               activityLog = data.activityLog;
@@ -5947,7 +6125,7 @@
       }
 
       const openModals = [];
-      const allModals = ['task-modal', 'lightbox', 'login-modal', 'pie-modal-overlay', 'move-photo-modal'];
+      const allModals = ['task-modal', 'lightbox', 'login-modal', 'pie-modal-overlay', 'move-photo-modal', 'user-contribution-modal', 'team-credits-modal'];
       allModals.forEach(mId => {
         const el = document.getElementById(mId);
         if (el && el.style.display !== 'none' && el.style.display !== '') {
@@ -6001,7 +6179,7 @@
       }
 
       // 2. Restore modals
-      const allModals = ['task-modal', 'lightbox', 'login-modal', 'pie-modal-overlay', 'move-photo-modal'];
+      const allModals = ['task-modal', 'lightbox', 'login-modal', 'pie-modal-overlay', 'move-photo-modal', 'user-contribution-modal', 'team-credits-modal'];
       allModals.forEach(mId => {
         const el = document.getElementById(mId);
         if (!el) return;
@@ -6612,6 +6790,8 @@
         closeCtx();
         closeLightbox();
         closeLoginModal();
+        closeUserContributionModal();
+        closeTeamCreditsModal();
         clearSelection();
       }
       if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'f') {
@@ -6736,6 +6916,305 @@
       if (isHandlingPopState) {
         const overlay = document.getElementById('pie-modal-overlay');
         if (overlay) overlay.style.display = 'none';
+      } else {
+        history.back();
+      }
+    }
+
+    // ═══════════════════════════════════════════════════════
+    //  USER CONTRIBUTIONS & CREDITS
+    // ═══════════════════════════════════════════════════════
+    let selectedUserForModal = null;
+    let currentUserTab = 'tasks';
+
+    function openUserContributionModal(userName) {
+      if (!userName || userName === '—' || userName === 'None') return;
+      selectedUserForModal = userName;
+      currentUserTab = 'tasks';
+
+      const modal = document.getElementById('user-contribution-modal');
+      if (!modal) return;
+
+      // Avatar & Title
+      const avatarEl = document.getElementById('uc-avatar');
+      if (avatarEl) {
+        avatarEl.textContent = userName.charAt(0).toUpperCase();
+      }
+      const titleEl = document.getElementById('uc-user-name');
+      if (titleEl) titleEl.textContent = userName;
+
+      // Status indicator
+      const statusBadge = document.getElementById('uc-status-badge');
+      if (statusBadge) {
+        const lastActive = activeSessions ? activeSessions[userName] : null;
+        if (lastActive) {
+          const diffMs = Date.now() - new Date(lastActive).getTime();
+          if (diffMs <= 2 * 60 * 1000) {
+            statusBadge.textContent = '● Active';
+            statusBadge.style.background = '#d1fae5';
+            statusBadge.style.color = '#065f46';
+          } else if (diffMs <= 15 * 60 * 1000) {
+            statusBadge.textContent = '● Idle';
+            statusBadge.style.background = '#fef3c7';
+            statusBadge.style.color = '#92400e';
+          } else {
+            statusBadge.textContent = '○ Offline';
+            statusBadge.style.background = 'var(--surface3)';
+            statusBadge.style.color = 'var(--text3)';
+          }
+        } else {
+          statusBadge.textContent = '○ Offline';
+          statusBadge.style.background = 'var(--surface3)';
+          statusBadge.style.color = 'var(--text3)';
+        }
+      }
+
+      // Calculate Stats
+      const uLower = userName.toLowerCase();
+      const createdTasks = tasks.filter(t => (t.createdBy || '').trim().toLowerCase() === uLower);
+      const editedTasks = tasks.filter(t => (t.lastEditedBy || '').trim().toLowerCase() === uLower);
+      const assignedTasks = tasks.filter(t => (t.responsible || '').trim().toLowerCase() === uLower);
+      const completedTasks = tasks.filter(t => t.status === 'Completed' && (
+        (t.responsible || '').trim().toLowerCase() === uLower ||
+        (t.createdBy || '').trim().toLowerCase() === uLower ||
+        (t.lastEditedBy || '').trim().toLowerCase() === uLower
+      ));
+
+      const scCreated = document.getElementById('uc-stat-created');
+      const scEdited = document.getElementById('uc-stat-edited');
+      const scAssigned = document.getElementById('uc-stat-assigned');
+      const scCompleted = document.getElementById('uc-stat-completed');
+      if (scCreated) scCreated.textContent = createdTasks.length;
+      if (scEdited) scEdited.textContent = editedTasks.length;
+      if (scAssigned) scAssigned.textContent = assignedTasks.length;
+      if (scCompleted) scCompleted.textContent = completedTasks.length;
+
+      // Combined unique tasks associated with this user
+      const userTasksMap = new Map();
+      createdTasks.forEach(t => userTasksMap.set(t.id, { task: t, role: 'Creator' }));
+      editedTasks.forEach(t => {
+        if (!userTasksMap.has(t.id)) {
+          userTasksMap.set(t.id, { task: t, role: 'Editor' });
+        } else {
+          userTasksMap.get(t.id).role = 'Creator & Editor';
+        }
+      });
+      assignedTasks.forEach(t => {
+        if (!userTasksMap.has(t.id)) {
+          userTasksMap.set(t.id, { task: t, role: 'Assigned' });
+        } else {
+          userTasksMap.get(t.id).role += ' · Assigned';
+        }
+      });
+
+      const userTaskList = Array.from(userTasksMap.values());
+      const tabTasksCount = document.getElementById('uc-tab-tasks-count');
+      if (tabTasksCount) tabTasksCount.textContent = userTaskList.length;
+
+      // Render tasks tab
+      const tasksContainer = document.getElementById('uc-content-tasks');
+      if (tasksContainer) {
+        if (!userTaskList.length) {
+          tasksContainer.innerHTML = `<div style="color:var(--text3);font-style:italic;padding:1.5rem;text-align:center;">No tasks associated with ${escapeHTML(userName)} yet.</div>`;
+        } else {
+          tasksContainer.innerHTML = userTaskList.map(item => {
+            const t = item.task;
+            const sc = STATUS_CLASS[t.status] || 'ns';
+            const pct = Math.round(t.progress || 0);
+            return `
+              <div class="uc-task-item" onclick="closeUserContributionModal(); openEditModal('${t.id}')">
+                <div style="flex:1;min-width:0">
+                  <div style="display:flex;align-items:center;gap:0.4rem;margin-bottom:0.2rem;flex-wrap:wrap">
+                    <span class="badge" style="font-size:0.62rem;padding:0.1rem 0.4rem;background:var(--surface3);color:var(--text2);border:1px solid var(--border)">${escapeHTML(t.machine)}</span>
+                    <span class="badge" style="font-size:0.62rem;padding:0.1rem 0.4rem;background:var(--s-ip-bg);color:var(--s-ip-t);border:1px solid var(--s-ip-b);">${escapeHTML(item.role)}</span>
+                    <span class="badge s-${sc}" style="font-size:0.62rem;padding:0.1rem 0.4rem;">${escapeHTML(t.status)}</span>
+                  </div>
+                  <div style="font-size:0.8rem;font-weight:600;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${escapeHTML(t.desc)}</div>
+                  ${t.remarks ? `<div style="font-size:0.72rem;color:var(--text3);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-top:0.1rem">${escapeHTML(t.remarks)}</div>` : ''}
+                </div>
+                <div style="text-align:right;flex-shrink:0;min-width:60px">
+                  <div style="font-size:0.78rem;font-weight:700;font-family:'DM Mono',monospace;color:var(--text)">${pct}%</div>
+                  <div style="font-size:0.65rem;color:var(--text3);">${t.updated || '—'}</div>
+                </div>
+              </div>
+            `;
+          }).join('');
+        }
+      }
+
+      // Filter activity log
+      const userLogs = (activityLog || []).filter(e => {
+        if (!e) return false;
+        if (e.user && e.user.toLowerCase() === uLower) return true;
+        if (e.action && e.action.toLowerCase().includes('[' + uLower + ']')) return true;
+        return false;
+      });
+      const tabHistoryCount = document.getElementById('uc-tab-history-count');
+      if (tabHistoryCount) tabHistoryCount.textContent = userLogs.length;
+
+      const historyContainer = document.getElementById('uc-content-history');
+      if (historyContainer) {
+        if (!userLogs.length) {
+          historyContainer.innerHTML = `<div style="color:var(--text3);font-style:italic;padding:1.5rem;text-align:center;">No recent logged activity for ${escapeHTML(userName)}.</div>`;
+        } else {
+          historyContainer.innerHTML = userLogs.map(e => {
+            let tStr = e.time || '';
+            if (tStr) {
+              try {
+                tStr = new Date(e.time).toLocaleString('en-PK', {
+                  hour12: true, hour: '2-digit', minute: '2-digit', second: '2-digit',
+                  day: 'numeric', month: 'short'
+                });
+              } catch (err) { }
+            }
+            let displayAction = e.action || '';
+            const match = displayAction.match(/^\[(.*?)\]\s*/);
+            if (match) displayAction = displayAction.substring(match[0].length);
+
+            const task = e.taskId ? tasks.find(t => t.id === e.taskId) : null;
+            const actionHtml = task
+              ? `<span style="cursor:pointer;color:var(--accent);text-decoration:underline;text-underline-offset:2px" onclick="closeUserContributionModal(); openEditModal('${e.taskId}')">${escapeHTML(displayAction)}</span>`
+              : `<span>${escapeHTML(displayAction)}</span>`;
+
+            return `
+              <div style="display:flex;align-items:flex-start;gap:0.6rem;padding:0.4rem 0;border-bottom:1px solid var(--border);font-size:0.76rem;">
+                <span style="color:var(--text3);flex-shrink:0;font-family:'DM Mono',monospace;font-size:0.7rem">${tStr}</span>
+                <div style="flex:1;color:var(--text)">${actionHtml}</div>
+              </div>
+            `;
+          }).join('');
+        }
+      }
+
+      switchUserTab('tasks');
+      modal.style.display = 'flex';
+      saveHistoryState();
+    }
+
+    function closeUserContributionModal() {
+      if (isHandlingPopState) {
+        const m = document.getElementById('user-contribution-modal');
+        if (m) m.style.display = 'none';
+        selectedUserForModal = null;
+      } else {
+        history.back();
+      }
+    }
+
+    function switchUserTab(tab) {
+      currentUserTab = tab;
+      const tasksTab = document.getElementById('uc-tab-tasks');
+      const historyTab = document.getElementById('uc-tab-history');
+      const tasksContent = document.getElementById('uc-content-tasks');
+      const historyContent = document.getElementById('uc-content-history');
+
+      if (tab === 'tasks') {
+        if (tasksTab) {
+          tasksTab.classList.add('active');
+          tasksTab.style.borderBottomColor = 'var(--accent)';
+          tasksTab.style.color = 'var(--text)';
+        }
+        if (historyTab) {
+          historyTab.classList.remove('active');
+          historyTab.style.borderBottomColor = 'transparent';
+          historyTab.style.color = 'var(--text3)';
+        }
+        if (tasksContent) tasksContent.style.display = 'block';
+        if (historyContent) historyContent.style.display = 'none';
+      } else {
+        if (historyTab) {
+          historyTab.classList.add('active');
+          historyTab.style.borderBottomColor = 'var(--accent)';
+          historyTab.style.color = 'var(--text)';
+        }
+        if (tasksTab) {
+          tasksTab.classList.remove('active');
+          tasksTab.style.borderBottomColor = 'transparent';
+          tasksTab.style.color = 'var(--text3)';
+        }
+        if (historyContent) historyContent.style.display = 'block';
+        if (tasksContent) tasksContent.style.display = 'none';
+      }
+    }
+
+    function filterDashboardByUser() {
+      if (!selectedUserForModal) return;
+      const user = selectedUserForModal;
+      closeUserContributionModal();
+      setRespFilter(user);
+      navigate('dashboard');
+      toast(`Filtered tracker for ${user}`, 'info');
+    }
+
+    function openTeamCreditsModal() {
+      const modal = document.getElementById('team-credits-modal');
+      if (!modal) return;
+      const grid = document.getElementById('team-credits-grid');
+      if (!grid) return;
+
+      const teamList = ['Saqib', 'Sikander', 'Aurangzeb', 'Bilal', 'Saif'];
+      grid.innerHTML = teamList.map(user => {
+        const uLower = user.toLowerCase();
+        const createdCount = tasks.filter(t => (t.createdBy || '').trim().toLowerCase() === uLower).length;
+        const editedCount = tasks.filter(t => (t.lastEditedBy || '').trim().toLowerCase() === uLower).length;
+        const assignedCount = tasks.filter(t => (t.responsible || '').trim().toLowerCase() === uLower).length;
+        const completedCount = tasks.filter(t => t.status === 'Completed' && (
+          (t.responsible || '').trim().toLowerCase() === uLower ||
+          (t.createdBy || '').trim().toLowerCase() === uLower ||
+          (t.lastEditedBy || '').trim().toLowerCase() === uLower
+        )).length;
+
+        const lastActive = activeSessions ? activeSessions[user] : null;
+        let dot = '⚪';
+        let statusText = 'Offline';
+        if (lastActive) {
+          const diffMs = Date.now() - new Date(lastActive).getTime();
+          if (diffMs <= 2 * 60 * 1000) { dot = '🟢'; statusText = 'Active'; }
+          else if (diffMs <= 15 * 60 * 1000) { dot = '🟡'; statusText = 'Idle'; }
+        }
+
+        return `
+          <div class="team-credit-card" onclick="closeTeamCreditsModal(); openUserContributionModal('${user}')">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.6rem">
+              <div style="display:flex;align-items:center;gap:0.4rem">
+                <span style="font-size:0.75rem">${dot}</span>
+                <strong style="font-size:0.95rem;color:var(--text)">${user}</strong>
+              </div>
+              <span style="font-size:0.68rem;color:var(--text3);font-family:'DM Mono',monospace">${statusText}</span>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.4rem;font-size:0.72rem;background:var(--surface3);padding:0.5rem;border-radius:6px;border:1px solid var(--border)">
+              <div>
+                <span style="color:var(--text3)">Created:</span>
+                <strong style="color:var(--accent);margin-left:0.2rem">${createdCount}</strong>
+              </div>
+              <div>
+                <span style="color:var(--text3)">Edited:</span>
+                <strong style="color:#3b82f6;margin-left:0.2rem">${editedCount}</strong>
+              </div>
+              <div>
+                <span style="color:var(--text3)">Assigned:</span>
+                <strong style="color:#8b5cf6;margin-left:0.2rem">${assignedCount}</strong>
+              </div>
+              <div>
+                <span style="color:var(--text3)">Done:</span>
+                <strong style="color:#10b981;margin-left:0.2rem">${completedCount}</strong>
+              </div>
+            </div>
+            <div style="text-align:right;margin-top:0.5rem;font-size:0.7rem;color:var(--accent);font-weight:600">
+              View Activity & Tasks →
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      modal.style.display = 'flex';
+      saveHistoryState();
+    }
+
+    function closeTeamCreditsModal() {
+      if (isHandlingPopState) {
+        const m = document.getElementById('team-credits-modal');
+        if (m) m.style.display = 'none';
       } else {
         history.back();
       }
