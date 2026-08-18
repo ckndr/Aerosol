@@ -2449,8 +2449,8 @@
           style="width:auto;padding:0 .65rem;font-size:.75rem;font-weight:500;gap:.3rem">
           📝 <span class="btn-label">Recent Changes</span>
         </button>
-        <button class="icon-btn" id="team-credits-btn" title="Team Contributions & Credits" aria-label="Team Credits" onclick="openTeamCreditsModal()"
-          style="width:auto;padding:0 .65rem;font-size:.75rem;font-weight:500;gap:.3rem">
+        <button class="icon-btn" id="team-credits-btn" title="Team Contributions & Credits (Sikander Only)" aria-label="Team Credits" onclick="openTeamCreditsModal()"
+          style="display:none;width:auto;padding:0 .65rem;font-size:.75rem;font-weight:500;gap:.3rem">
           👥 <span class="btn-label">Team Credits</span>
         </button>
         <button class="icon-btn" id="filter-toggle-btn" title="Toggle Search & Filters" aria-label="Search and filters" onclick="toggleFilterBar()"
@@ -2796,8 +2796,13 @@
           <div style="font-size:.78rem;font-weight:600;margin-bottom:.5rem">Currently Logged In:</div>
           <div id="logged-in-users-list" style="margin-bottom:1rem;font-family:'DM Mono',monospace;font-size:.78rem"></div>
           
-          <div style="font-size:.78rem;font-weight:600;margin-bottom:.5rem">Login Statistics:</div>
-          <div id="login-stats-grid" style="display:flex;gap:0.5rem;margin-bottom:1rem;flex-wrap:wrap"></div>
+          <div style="margin-bottom:1rem;display:flex;align-items:center;justify-content:space-between;gap:0.5rem;background:var(--surface3);padding:0.6rem 0.8rem;border-radius:6px;border:1px solid var(--border);flex-wrap:wrap">
+            <div>
+              <div style="font-size:.78rem;font-weight:600;color:var(--text)">👥 Team Credits & Work Breakdown:</div>
+              <div style="font-size:.68rem;color:var(--text3)">Inspect who created, edited, and completed tasks across the plant</div>
+            </div>
+            <button class="btn-sm" onclick="openTeamCreditsModal()" style="background:var(--accent);color:#fff;border:none;white-space:nowrap;font-weight:600;cursor:pointer">Open Breakdown</button>
+          </div>
 
           <div style="font-size:.78rem;font-weight:600;margin-bottom:.5rem">Login History:</div>
           <div id="login-history-list" class="activity-log-box" style="max-height:250px;overflow-y:auto;background:var(--surface2)"></div>
@@ -6307,6 +6312,13 @@
           myBtn.classList.remove('active');
         }
       }
+
+      // Team Credits button — visible ONLY to Sikander
+      const teamCreditsBtn = document.getElementById('team-credits-btn');
+      if (teamCreditsBtn) {
+        teamCreditsBtn.style.display = (isLoggedIn() && currentUser && currentUser.name === 'Sikander') ? 'inline-flex' : 'none';
+      }
+
       renderSikanderAdmin();
     }
 
@@ -7147,6 +7159,10 @@
     }
 
     function openTeamCreditsModal() {
+      if (!isLoggedIn() || currentUser.name !== 'Sikander') {
+        toast('Only Sikander can view team credits overview', 'error');
+        return;
+      }
       const modal = document.getElementById('team-credits-modal');
       if (!modal) return;
       const grid = document.getElementById('team-credits-grid');
