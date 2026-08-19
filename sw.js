@@ -1,5 +1,5 @@
 // sw.js — Production-ready Service Worker for Aerosol Plant Tracker
-const CACHE_NAME = 'aerosol-tracker-v16';
+const CACHE_NAME = 'aerosol-tracker-v17';
 const PRECACHE_URLS = [
   './',
   './index.html',
@@ -10,7 +10,8 @@ const PRECACHE_URLS = [
   './icon-512.png',
   './apple-touch-icon.png',
   'https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&family=Fraunces:ital,wght@0,300;0,600;1,300&display=swap',
-  'https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js'
+  'https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js',
+  'https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.3.0/exceljs.min.js'
 ];
 // Install — precache critical assets
 self.addEventListener('install', event => {

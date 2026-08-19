@@ -3083,6 +3083,53 @@
     const STORAGE_KEY = 'aerosol_tracker_v1';
 
     // ═══════════════════════════════════════════════════════
+    //  TASK MERGE UTILITIES (3-Way Conflict Resolution)
+    // ═══════════════════════════════════════════════════════
+    function mergeTaskArrays(localList, remoteList) {
+      if (!Array.isArray(localList)) return Array.isArray(remoteList) ? remoteList : [];
+      if (!Array.isArray(remoteList)) return localList;
+
+      const taskMap = new Map();
+      const order = [];
+
+      // 1. Index all remote tasks
+      for (const rt of remoteList) {
+        if (rt && rt.id) {
+          taskMap.set(rt.id, { ...rt });
+          order.push(rt.id);
+        }
+      }
+
+      // 2. Merge local tasks
+      for (const lt of localList) {
+        if (!lt || !lt.id) continue;
+        if (!taskMap.has(lt.id)) {
+          // Local task created locally, not yet in remote
+          taskMap.set(lt.id, { ...lt });
+          order.push(lt.id);
+        } else {
+          const rt = taskMap.get(lt.id);
+          const ltTime = lt.updated ? new Date(lt.updated).getTime() : 0;
+          const rtTime = rt.updated ? new Date(rt.updated).getTime() : 0;
+
+          if (ltTime >= rtTime) {
+            // Local is newer or same: keep local values, preserve remote image if local is empty
+            const merged = { ...rt, ...lt };
+            if (!merged.image && rt.image) merged.image = rt.image;
+            taskMap.set(lt.id, merged);
+          } else {
+            // Remote is newer: keep remote values, preserve local image if remote is empty
+            const merged = { ...lt, ...rt };
+            if (!merged.image && lt.image) merged.image = lt.image;
+            taskMap.set(lt.id, merged);
+          }
+        }
+      }
+
+      return order.map(id => taskMap.get(id)).filter(Boolean);
+    }
+
+    // ═══════════════════════════════════════════════════════
     //  SYNC ENGINE — Async Request Queue
     // ═══════════════════════════════════════════════════════
     class SyncEngine {
@@ -3134,6 +3181,28 @@
         this.setUILock(false);
         this.updateUnsavedBanner();
       }
+      async fetchRemoteData() {
+        try {
+          const r = await fetch(this.apiUrl + '?t=' + Date.now(), {
+            headers: {
+              'Authorization': 'token ' + settings.syncKey,
+              'Accept': 'application/vnd.github.v3+json'
+            }
+          });
+          if (r.ok) {
+            const meta = await r.json();
+            this.lastKnownSha = meta.sha;
+            if (meta.content) {
+              const cleaned = meta.content.replace(/\s/g, '');
+              const jsonStr = decodeURIComponent(escape(atob(cleaned)));
+              return JSON.parse(jsonStr);
+            }
+          }
+        } catch (e) {
+          console.warn('[SyncEngine] fetchRemoteData failed:', e);
+        }
+        return null;
+      }
       async pushWithRetry(payload) {
         for (let attempt = 0; attempt <= this.maxRetries; attempt++) {
           try {
@@ -3163,7 +3232,25 @@
             }
             if (r.status === 409) {
               this.lastKnownSha = null;
-              toast('Sync conflict — retrying...', 'info');
+              toast('Sync conflict — merging latest remote changes...', 'info');
+              const remoteData = await this.fetchRemoteData();
+              if (remoteData && Array.isArray(remoteData.tasks)) {
+                tasks = mergeTaskArrays(tasks, remoteData.tasks);
+                if (remoteData.machineMeta) Object.assign(MACHINE_META, remoteData.machineMeta);
+                if (remoteData.timelineData) Object.assign(timelineData, remoteData.timelineData);
+                if (remoteData.activeSessions) Object.assign(activeSessions, remoteData.activeSessions);
+                saveState();
+                renderAll();
+                payload = JSON.stringify({
+                  tasks: tasks,
+                  settings: { autoSync: settings.autoSync },
+                  activityLog: activityLog.slice(0, 100),
+                  machineMeta: MACHINE_META || {},
+                  timelineData: timelineData || {},
+                  loginHistory: loginHistory || [],
+                  activeSessions: activeSessions || {}
+                }, null, 2);
+              }
               continue;
             }
             const err = await r.json().catch(() => ({}));
@@ -3184,7 +3271,7 @@
       async fetchCurrentSha() {
         if (this.lastKnownSha) return this.lastKnownSha;
         try {
-          const r = await fetch(this.apiUrl, {
+          const r = await fetch(this.apiUrl + '?t=' + Date.now(), {
             headers: {
               'Authorization': 'token ' + settings.syncKey,
               'Accept': 'application/vnd.github.v3+json'
@@ -3783,18 +3870,51 @@
     function normalizeDate(raw) {
       if (!raw) return '';
       // Handle Date objects directly (e.g. from ExcelJS/XLSX parser)
-      if (raw instanceof Date && !isNaN(raw.getTime())) {
+      if (raw && (raw instanceof Date || Object.prototype.toString.call(raw) === '[object Date]' || typeof raw.toISOString === 'function') && typeof raw.getTime === 'function' && !isNaN(raw.getTime())) {
         return raw.toISOString().slice(0, 10);
       }
       const str = String(raw).trim();
       if (!str) return '';
-      if (/^\d{5}$/.test(str)) {
-        const epoch = new Date((parseInt(str) - 25569) * 86400 * 1000);
-        return epoch.toISOString().slice(0, 10);
+
+      // Numeric Excel date serial (e.g. 45458 or "45458")
+      const num = Number(str);
+      if (!isNaN(num) && num > 20000 && num < 90000) {
+        const epoch = new Date((num - 25569) * 86400 * 1000);
+        if (!isNaN(epoch.getTime())) {
+          return epoch.toISOString().slice(0, 10);
+        }
       }
+
+      // ISO YYYY-MM-DD
       if (/^\d{4}-\d{2}-\d{2}/.test(str)) return str.slice(0, 10);
-      const dmy = str.match(/^(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{4})$/);
-      if (dmy) return `${dmy[3]}-${dmy[2].padStart(2, '0')}-${dmy[1].padStart(2, '0')}`;
+
+      // DD/MM/YYYY or MM/DD/YYYY or DD-MM-YYYY
+      const parts = str.match(/^(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{2,4})$/);
+      if (parts) {
+        let p1 = parseInt(parts[1], 10);
+        let p2 = parseInt(parts[2], 10);
+        let year = parseInt(parts[3], 10);
+        if (year < 100) year += 2000;
+
+        let day, month;
+        if (p1 > 12) {
+          // p1 is day, p2 is month (DD/MM/YYYY)
+          day = p1;
+          month = p2;
+        } else if (p2 > 12) {
+          // p2 is day, p1 is month (MM/DD/YYYY)
+          month = p1;
+          day = p2;
+        } else {
+          // Default to DD/MM/YYYY convention
+          day = p1;
+          month = p2;
+        }
+
+        if (month >= 1 && month <= 12 && day >= 1 && day <= 31) {
+          return `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+        }
+      }
       return '';
     }
     function validateImportedRow(r) {
@@ -5144,10 +5264,10 @@
     });
 
     function closeModal() {
-      if (isHandlingPopState) {
-        document.getElementById('task-modal').style.display = 'none';
-        editingId = null;
-      } else {
+      const modal = document.getElementById('task-modal');
+      if (modal) modal.style.display = 'none';
+      editingId = null;
+      if (!isHandlingPopState) {
         history.back();
       }
     }
@@ -5497,10 +5617,58 @@
           console.warn('[Import] Unmapped machines:', unmappedMachines);
         }
 
-        var preservedPhotos = imported.filter(function(t) { return t.image; }).length;
-        tasks = imported;
+        // ── MERGE / UPSERT INTO EXISTING TASKS ──
+        // Preserve all existing web-created tasks rather than destructively overwriting
+        var finalTaskMap = new Map();
+        var taskOrder = [];
+
+        tasks.forEach(function(t) {
+          if (t && t.id) {
+            finalTaskMap.set(t.id, { ...t });
+            taskOrder.push(t.id);
+          }
+        });
+
+        var updatedCount = 0;
+        var newCount = 0;
+
+        imported.forEach(function(impTask) {
+          if (finalTaskMap.has(impTask.id)) {
+            var prev = finalTaskMap.get(impTask.id);
+            var merged = {
+              ...prev,
+              ...impTask,
+              image: impTask.image || prev.image || '',
+              waitingOn: impTask.waitingOn || prev.waitingOn || '',
+              dateStarted: impTask.dateStarted || prev.dateStarted || '',
+              dateFinished: impTask.dateFinished || prev.dateFinished || '',
+              createdBy: prev.createdBy || impTask.createdBy || '',
+              lastEditedBy: (typeof currentUser !== 'undefined' && currentUser && currentUser.name) ? currentUser.name : (prev.lastEditedBy || 'Excel Import'),
+              updated: new Date().toISOString()
+            };
+            finalTaskMap.set(impTask.id, merged);
+            updatedCount++;
+          } else {
+            finalTaskMap.set(impTask.id, impTask);
+            taskOrder.push(impTask.id);
+            newCount++;
+          }
+        });
+
+        var mergedTasks = taskOrder.map(function(id) { return finalTaskMap.get(id); }).filter(Boolean);
+        var preservedWebTasks = mergedTasks.length - imported.length;
+        if (preservedWebTasks < 0) preservedWebTasks = 0;
+
+        tasks = mergedTasks;
         saveState(); renderAll();
-        toast(imported.length + ' tasks imported \u2713' + (preservedPhotos ? ' (' + preservedPhotos + ' photos preserved)' : ''), 'success');
+
+        var preservedPhotos = tasks.filter(function(t) { return t.image; }).length;
+        toast(
+          'Excel synced: ' + updatedCount + ' updated, ' + newCount + ' added' +
+          (preservedWebTasks > 0 ? ', ' + preservedWebTasks + ' web tasks preserved' : '') +
+          (preservedPhotos ? ' (' + preservedPhotos + ' photos attached)' : ''),
+          'success'
+        );
       };
       reader.readAsArrayBuffer(file);
       input.value = '';
@@ -6243,18 +6411,17 @@
     }
 
     function closeLoginModal() {
-      if (isHandlingPopState) {
-        document.getElementById('login-modal').style.display = 'none';
-      } else {
+      const el = document.getElementById('login-modal');
+      if (el) el.style.display = 'none';
+      if (!isHandlingPopState) {
         history.back();
       }
     }
 
     function closeMovePhotoModal() {
-      if (isHandlingPopState) {
-        const el = document.getElementById('move-photo-modal');
-        if (el) el.style.display = 'none';
-      } else {
+      const el = document.getElementById('move-photo-modal');
+      if (el) el.style.display = 'none';
+      if (!isHandlingPopState) {
         history.back();
       }
     }
@@ -6336,7 +6503,9 @@
     function updateSessionHeartbeat() {
       if (isLoggedIn() && currentUser && currentUser.name) {
         activeSessions[currentUser.name] = new Date().toISOString();
-        saveState();
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify({ tasks, settings, loginHistory, activeSessions }));
+        } catch (e) { }
         renderSikanderAdmin();
       }
     }
@@ -6821,6 +6990,21 @@
         e.preventDefault();
         e.returnValue = 'Changes are still syncing to GitHub. Leave anyway?';
       }
+    });
+
+    window.addEventListener('online', () => {
+      setSyncStatus('ok', '● Online', 'Connection restored');
+      toast('Back online — syncing changes...', 'info');
+      if (typeof syncEngine !== 'undefined' && syncEngine) {
+        syncEngine.retryFailedOnBoot();
+        if (settings && settings.syncKey && settings.autoSync) {
+          syncEngine.flush();
+        }
+      }
+    });
+
+    window.addEventListener('offline', () => {
+      setSyncStatus('err', '● Offline', 'Working offline — edits saved locally');
     });
 
     // File input change preview handler
