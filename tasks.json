@@ -1697,16 +1697,16 @@
       "category": "Electrical",
       "desc": "Main Power Cable Termination & Execution Plan",
       "priority": "High",
-      "progress": 100,
-      "status": "Completed",
+      "progress": 40,
+      "status": "In Progress",
       "responsible": "Arsalan",
       "deadline": "2026-06-13",
       "remarks": "",
-      "updated": "21 Aug 2026",
+      "updated": "17 Aug 2026",
       "waitingOn": "",
       "dateStarted": "2026-08-07",
       "dateFinished": "",
-      "lastEditedBy": "Bilal",
+      "lastEditedBy": "Aurangzeb",
       "image": null,
       "createdBy": ""
     },
@@ -7197,7 +7197,7 @@
     "Sikander": "2026-08-21T07:03:40.234Z",
     "Saqib": "2026-08-21T05:22:32.736Z",
     "Aurangzeb": "2026-08-21T07:23:27.873Z",
-    "Bilal": "2026-08-21T07:27:31.808Z",
-    "Saif": "2026-08-21T07:27:42.762Z"
+    "Bilal": "2026-08-18T07:26:08.072Z",
+    "Saif": "2026-08-21T07:27:35.387Z"
   }
 }
