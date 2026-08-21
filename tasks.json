@@ -2766,11 +2766,11 @@
       "responsible": "Arsalan",
       "deadline": "2026-06-19",
       "remarks": "",
-      "updated": "1 Jun 2026",
+      "updated": "21 Aug 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Aurangzeb",
+      "lastEditedBy": "Saif",
       "image": "Photos/Trimming/task_img_1780311378372.jpg",
       "createdBy": ""
     },
@@ -4546,6 +4546,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1787312940930g86m",
+      "time": "2026-08-21T11:49:00.930Z",
+      "action": "[Saif] Updated task \"closure of all cable trays/ pa...\" on Trimming",
+      "user": "Saif",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_461252",
+          "machine": "Trimming",
+          "category": "Electrical",
+          "desc": "closure of all cable trays/ panels",
+          "priority": "High",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Arsalan",
+          "deadline": "2026-06-19",
+          "remarks": "",
+          "updated": "1 Jun 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": "Photos/Trimming/task_img_1780311378372.jpg",
+          "createdBy": ""
+        }
+      },
+      "taskId": "t_461252"
+    },
     {
       "id": "t1787034545494w0lf",
       "time": "2026-08-18T06:29:05.494Z",
@@ -6677,35 +6706,6 @@
         "taskId": "t1784953394315el8b"
       },
       "taskId": "t1784953394315el8b"
-    },
-    {
-      "id": "t1784953375773rw7p",
-      "time": "2026-07-25T04:22:55.773Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_127701",
-            "machine": "General",
-            "category": "Mechanical",
-            "desc": "Baling machine procurement",
-            "priority": "Medium",
-            "progress": 0,
-            "status": "Pending Procurement",
-            "responsible": "Saqib",
-            "deadline": "",
-            "remarks": "",
-            "updated": "13 Jul 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Saqib",
-            "image": ""
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -7226,6 +7226,6 @@
     "Saqib": "2026-08-21T05:22:32.736Z",
     "Aurangzeb": "2026-08-21T07:23:27.873Z",
     "Bilal": "2026-08-21T07:27:31.808Z",
-    "Saif": "2026-08-21T11:39:30.477Z"
+    "Saif": "2026-08-21T11:49:00.934Z"
   }
 }
