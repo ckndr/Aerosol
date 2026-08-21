@@ -3317,7 +3317,7 @@
         this.updateUnsavedBanner();
       }
     }
-    const MACHINE_ORDER = ['Press', 'Trimming', 'Washing', 'Lacquer', 'Lacquer Oven', 'Base Coat', 'Printing', 'Decoration Oven', 'Over Varnish', 'Necking', 'Accumulator', 'Tumbler', 'Compressor', 'FG Conveyor', 'Auto Strapping Machine', 'Manual Strapping Machine', 'Overall Machine Operation', 'General'];
+    const MACHINE_ORDER = ['Press', 'Trimming', 'Washing', 'Lacquer', 'Lacquer Oven', 'Base Coat', 'Printing', 'Decoration Oven', 'Over Varnish', 'Necking', 'Accumulator', 'Tumbler', 'Compressor', 'FG Conveyor', 'Auto Strapping Machine', 'Manual Strapping Machine', 'Overall Machine Operation', 'Main Power Distribution', 'General'];
     const ICONS = {
       Press: '⚙️',
       Trimming: '✂️',
@@ -3336,6 +3336,7 @@
       'Auto Strapping Machine': '🎗️',
       'Manual Strapping Machine': '🏷️',
       'Overall Machine Operation': '🏭',
+      'Main Power Distribution': '⚡',
       General: '📋'
     };
     const MACHINE_META = {};
@@ -3558,6 +3559,7 @@
         'Photos/Strapping/WhatsApp Image 2026-06-01 at 4.15.06 PM.jpg'
       ],
       'Overall Machine Operation': [],
+      'Main Power Distribution': [],
       General: []
     };
     const STATUS_CLASS = { 'In Progress': 'ip', 'Not Started': 'ns', 'Completed': 'cp', 'Pending Procurement': 'pp' };
@@ -3647,9 +3649,9 @@
       ["Over Varnish", "Mechanical", "Mandrels — cleaned", "High", 100, "Completed", "Arsalan", ""],
       ["Over Varnish", "Mechanical", "Rollers Housing — cleaned and greased", "High", 100, "Completed", "Arsalan", ""],
       ["Over Varnish", "Mechanical", "Frame Body — cleaned", "High", 100, "Completed", "Arsalan", ""],
-      ["Overall Machine Operation", "Electrical", "Main Power Cable Termination & Execution Plan", "High", 0, "Not Started", "Arsalan", "Quotation awaiting for execution"],
-      ["Overall Machine Operation", "Electrical", "Main Power Cable procurement", "High", 0, "Pending Procurement", "Saqib", "Quotation awaiting for execution"],
-      ["Overall Machine Operation", "Electrical", "Electrical panels for power distribution", "High", 0, "Pending Procurement", "Arsalan", "Quotation awaiting for execution"],
+      ["Main Power Distribution", "Electrical", "Main Power Cable Termination & Execution Plan", "High", 40, "In Progress", "Arsalan", "Quotation awaiting for execution"],
+      ["Main Power Distribution", "Electrical", "Main Power Cable procurement", "High", 100, "Completed", "Saqib", "Quotation awaiting for execution"],
+      ["Main Power Distribution", "Electrical", "Electrical panels for power distribution", "High", 20, "In Progress", "Arsalan", "Quotation awaiting for execution"],
       ["Overall Machine Operation", "Electrical", "Verify electrical panels, wiring & interlocks — Press to Washing", "High", 50, "In Progress", "Arsalan", "Till Washing Machine electrical Work is completed"],
       ["Overall Machine Operation", "Electrical", "Testing of Control Logics & Circuits", "High", 0, "Not Started", "Arsalan", ""],
       ["Overall Machine Operation", "Electrical", "Verify electrical panels, wiring & interlocks — Washing to Necking", "High", 50, "In Progress", "Arsalan", ""],
@@ -4441,7 +4443,7 @@
           const mt = filtered.filter(t => t.machine === m);
           if (mt.length === 0 && activeFilterCount() > 0) return;
           const allMt = tasks.filter(t => t.machine === m);
-          if (allMt.length === 0) return;
+          if (allMt.length === 0 && activeFilterCount() > 0) return;
 
           const done = allMt.filter(t => t.status === 'Completed').length;
           const pending = allMt.length - done;
@@ -4455,7 +4457,7 @@
 
           const card = document.createElement('div');
           card.className = 'machine-card';
-          if (pct === 100) card.classList.add('machine-complete');
+          if (pct === 100 && allMt.length > 0) card.classList.add('machine-complete');
           card.style.setProperty('--i', i);
           card.onclick = () => navigate('detail', m);
           card.innerHTML = `
@@ -4477,11 +4479,11 @@
           ${ePend ? `<span class="ctag e">⚡ ${ePend}</span>` : ''}
           ${mPend ? `<span class="ctag m">⚙ ${mPend}</span>` : ''}
           ${gPend ? `<span class="ctag g">📋 ${gPend}</span>` : ''}
-          ${!pending ? `<span class="ctag done">✓ Complete</span>` : ''}
+          ${allMt.length > 0 && !pending ? `<span class="ctag done">✓ Complete</span>` : ''}
         </div>
         <div class="card-bar"><div class="card-bar-fill" style="width:0%" data-pct="${pct}%"></div></div>
         <div class="card-foot">
-          <span class="card-pend">${pending ? pending + ' remaining' : done + ' done'}</span>
+          <span class="card-pend">${allMt.length === 0 ? '0 tasks' : (pending ? pending + ' remaining' : done + ' done')}</span>
           ${(() => {
               if (dryRunStatus === 'Complete') {
                 return `<span style="font-size:.62rem;font-weight:600;color:var(--s-cp-t);background:var(--s-cp-bg);border:1px solid var(--s-cp-b);border-radius:20px;padding:.15rem .5rem;font-family:'DM Mono',monospace;">✓ Dry Run Complete</span>`;

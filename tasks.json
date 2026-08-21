@@ -1693,7 +1693,7 @@
     },
     {
       "id": "t_378091",
-      "machine": "Overall Machine Operation",
+      "machine": "Main Power Distribution",
       "category": "Electrical",
       "desc": "Main Power Cable Termination & Execution Plan",
       "priority": "High",
@@ -1712,7 +1712,7 @@
     },
     {
       "id": "t_460094",
-      "machine": "Overall Machine Operation",
+      "machine": "Main Power Distribution",
       "category": "Electrical",
       "desc": "Main Power Cable procurement",
       "priority": "High",
@@ -1731,7 +1731,7 @@
     },
     {
       "id": "t_756784",
-      "machine": "Overall Machine Operation",
+      "machine": "Main Power Distribution",
       "category": "Electrical",
       "desc": "Electrical panels for power distribution",
       "priority": "High",
@@ -6899,6 +6899,11 @@
     },
     "Overall Machine Operation": {
       "dryRun": "Pending"
+    },
+    "Main Power Distribution": {
+      "dryRun": "None",
+      "commercialRun": "None",
+      "referenceImages": []
     },
     "General": {
       "dryRun": "None"
