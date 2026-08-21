@@ -4578,12 +4578,42 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t17872977334159tp2",
+      "machine": "Main Power Distribution",
+      "category": "Mechanical",
+      "desc": "wire is distributed from the main panel to the press machine panel",
+      "priority": "Medium",
+      "progress": 86,
+      "status": "In Progress",
+      "remarks": "",
+      "responsible": "",
+      "updated": "21 Aug 2026",
+      "createdBy": "Bilal",
+      "lastEditedBy": "Bilal",
+      "image": "Photos/Main Power Distribution/task_img_1787297730996.jpg",
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1787297733415gg4y",
+      "time": "2026-08-21T07:35:33.415Z",
+      "action": "[Bilal] Added task \"wire is distributed from the m...\" to Main Power Distribution",
+      "user": "Bilal",
+      "undoData": {
+        "type": "add",
+        "taskId": "t17872977334159tp2"
+      },
+      "taskId": "t17872977334159tp2"
+    },
     {
       "id": "t1787297588327111s",
       "time": "2026-08-21T07:33:08.327Z",
@@ -6734,17 +6764,6 @@
         "taskId": "t1784953493004c7g2"
       },
       "taskId": "t1784953493004c7g2"
-    },
-    {
-      "id": "t17849534788120su6",
-      "time": "2026-07-25T04:24:38.812Z",
-      "action": "[Saqib] Added task \"Installation of Solar panels...\" to General",
-      "user": "Saqib",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1784953478812lvjc"
-      },
-      "taskId": "t1784953478812lvjc"
     }
   ],
   "machineMeta": {
@@ -6953,10 +6972,6 @@
     "targetDate": "2026-06-30"
   },
   "loginHistory": [
-    {
-      "name": "Aurangzeb",
-      "time": "2026-08-21T07:34:00.431Z"
-    },
     {
       "name": "Aurangzeb",
       "time": "2026-08-21T07:23:27.873Z"
@@ -7238,7 +7253,7 @@
     "Sikander": "2026-08-21T07:03:40.234Z",
     "Saqib": "2026-08-21T05:22:32.736Z",
     "Aurangzeb": "2026-08-21T07:34:00.432Z",
-    "Bilal": "2026-08-21T07:33:08.327Z",
+    "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-08-21T07:27:35.387Z"
   }
 }
