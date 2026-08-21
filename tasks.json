@@ -1697,16 +1697,16 @@
       "category": "Electrical",
       "desc": "Main Power Cable Termination & Execution Plan",
       "priority": "High",
-      "progress": 40,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "2026-06-13",
       "remarks": "",
-      "updated": "17 Aug 2026",
+      "updated": "21 Aug 2026",
       "waitingOn": "",
       "dateStarted": "2026-08-07",
       "dateFinished": "",
-      "lastEditedBy": "Aurangzeb",
+      "lastEditedBy": "Bilal",
       "image": null,
       "createdBy": ""
     },
@@ -4540,10 +4540,72 @@
       "dateStarted": "2026-08-17",
       "dateFinished": "",
       "createdBy": ""
+    },
+    {
+      "id": "t178729744923813tc",
+      "machine": "Main Power Distribution",
+      "category": "Electrical",
+      "desc": "installed the wire from the main panel to the painting panel.",
+      "priority": "Medium",
+      "progress": 89,
+      "status": "Not Started",
+      "remarks": "",
+      "responsible": "",
+      "updated": "21 Aug 2026",
+      "createdBy": "Bilal",
+      "lastEditedBy": "Bilal",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
-  "settings": {},
+  "settings": {
+    "autoSync": true
+  },
   "activityLog": [
+    {
+      "id": "t17872974492397ld2",
+      "time": "2026-08-21T07:30:49.239Z",
+      "action": "[Bilal] Added task \"installed the wire from the ma...\" to Main Power Distribution",
+      "user": "Bilal",
+      "undoData": {
+        "type": "add",
+        "taskId": "t178729744923813tc"
+      },
+      "taskId": "t178729744923813tc"
+    },
+    {
+      "id": "t1787297251808br7i",
+      "time": "2026-08-21T07:27:31.808Z",
+      "action": "[Bilal] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Bilal",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_378091",
+            "machine": "Main Power Distribution",
+            "category": "Electrical",
+            "desc": "Main Power Cable Termination & Execution Plan",
+            "priority": "High",
+            "progress": 40,
+            "status": "In Progress",
+            "responsible": "Arsalan",
+            "deadline": "2026-06-13",
+            "remarks": "",
+            "updated": "17 Aug 2026",
+            "waitingOn": "",
+            "dateStarted": "2026-08-07",
+            "dateFinished": "",
+            "lastEditedBy": "Aurangzeb",
+            "image": null,
+            "createdBy": ""
+          }
+        ]
+      }
+    },
     {
       "id": "t1787034545494w0lf",
       "time": "2026-08-18T06:29:05.494Z",
@@ -6664,46 +6726,6 @@
         "taskId": "t1784953443260tmah"
       },
       "taskId": "t1784953443260tmah"
-    },
-    {
-      "id": "t1784953394315u253",
-      "time": "2026-07-25T04:23:14.315Z",
-      "action": "[Saqib] Added task \"Backets for cans...\" to General",
-      "user": "Saqib",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1784953394315el8b"
-      },
-      "taskId": "t1784953394315el8b"
-    },
-    {
-      "id": "t1784953375773rw7p",
-      "time": "2026-07-25T04:22:55.773Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_127701",
-            "machine": "General",
-            "category": "Mechanical",
-            "desc": "Baling machine procurement",
-            "priority": "Medium",
-            "progress": 0,
-            "status": "Pending Procurement",
-            "responsible": "Saqib",
-            "deadline": "",
-            "remarks": "",
-            "updated": "13 Jul 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Saqib",
-            "image": ""
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -6913,14 +6935,6 @@
   },
   "loginHistory": [
     {
-      "name": "Saif",
-      "time": "2026-08-21T07:27:35.386Z"
-    },
-    {
-      "name": "Saif",
-      "time": "2026-08-21T07:27:35.381Z"
-    },
-    {
       "name": "Aurangzeb",
       "time": "2026-08-21T07:23:27.873Z"
     },
@@ -6931,6 +6945,10 @@
     {
       "name": "Sikander",
       "time": "2026-08-21T06:07:54.496Z"
+    },
+    {
+      "name": "Bilal",
+      "time": "2026-08-21T05:31:10.403Z"
     },
     {
       "name": "Saqib",
@@ -7197,7 +7215,7 @@
     "Sikander": "2026-08-21T07:03:40.234Z",
     "Saqib": "2026-08-21T05:22:32.736Z",
     "Aurangzeb": "2026-08-21T07:23:27.873Z",
-    "Bilal": "2026-08-18T07:26:08.072Z",
+    "Bilal": "2026-08-21T07:30:58.144Z",
     "Saif": "2026-08-21T07:27:35.387Z"
   }
 }
