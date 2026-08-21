@@ -4540,132 +4540,10 @@
       "dateStarted": "2026-08-17",
       "dateFinished": "",
       "createdBy": ""
-    },
-    {
-      "id": "t178729744923813tc",
-      "machine": "Main Power Distribution",
-      "category": "Electrical",
-      "desc": "installed the wire from the main panel to the painting panel.",
-      "priority": "Medium",
-      "progress": 89,
-      "status": "Not Started",
-      "remarks": "",
-      "responsible": "",
-      "updated": "21 Aug 2026",
-      "createdBy": "Bilal",
-      "lastEditedBy": "Bilal",
-      "image": null,
-      "waitingOn": "",
-      "deadline": "",
-      "dateStarted": "",
-      "dateFinished": ""
-    },
-    {
-      "id": "t1787297588327iqgi",
-      "machine": "Main Power Distribution",
-      "category": "Electrical",
-      "desc": "wire from the transformer to the main panel.",
-      "priority": "Medium",
-      "progress": 88,
-      "status": "In Progress",
-      "remarks": "",
-      "responsible": "",
-      "updated": "21 Aug 2026",
-      "createdBy": "Bilal",
-      "lastEditedBy": "Bilal",
-      "image": null,
-      "waitingOn": "",
-      "deadline": "",
-      "dateStarted": "",
-      "dateFinished": ""
-    },
-    {
-      "id": "t17872977334159tp2",
-      "machine": "Main Power Distribution",
-      "category": "Mechanical",
-      "desc": "wire is distributed from the main panel to the press machine panel",
-      "priority": "Medium",
-      "progress": 86,
-      "status": "In Progress",
-      "remarks": "",
-      "responsible": "",
-      "updated": "21 Aug 2026",
-      "createdBy": "Bilal",
-      "lastEditedBy": "Bilal",
-      "image": "Photos/Main Power Distribution/task_img_1787297730996.jpg",
-      "waitingOn": "",
-      "deadline": "",
-      "dateStarted": "",
-      "dateFinished": ""
     }
   ],
-  "settings": {
-    "autoSync": true
-  },
+  "settings": {},
   "activityLog": [
-    {
-      "id": "t1787297733415gg4y",
-      "time": "2026-08-21T07:35:33.415Z",
-      "action": "[Bilal] Added task \"wire is distributed from the m...\" to Main Power Distribution",
-      "user": "Bilal",
-      "undoData": {
-        "type": "add",
-        "taskId": "t17872977334159tp2"
-      },
-      "taskId": "t17872977334159tp2"
-    },
-    {
-      "id": "t1787297588327111s",
-      "time": "2026-08-21T07:33:08.327Z",
-      "action": "[Bilal] Added task \"wire from the transformer to t...\" to Main Power Distribution",
-      "user": "Bilal",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1787297588327iqgi"
-      },
-      "taskId": "t1787297588327iqgi"
-    },
-    {
-      "id": "t17872974492397ld2",
-      "time": "2026-08-21T07:30:49.239Z",
-      "action": "[Bilal] Added task \"installed the wire from the ma...\" to Main Power Distribution",
-      "user": "Bilal",
-      "undoData": {
-        "type": "add",
-        "taskId": "t178729744923813tc"
-      },
-      "taskId": "t178729744923813tc"
-    },
-    {
-      "id": "t1787297251808br7i",
-      "time": "2026-08-21T07:27:31.808Z",
-      "action": "[Bilal] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Bilal",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_378091",
-            "machine": "Main Power Distribution",
-            "category": "Electrical",
-            "desc": "Main Power Cable Termination & Execution Plan",
-            "priority": "High",
-            "progress": 40,
-            "status": "In Progress",
-            "responsible": "Arsalan",
-            "deadline": "2026-06-13",
-            "remarks": "",
-            "updated": "17 Aug 2026",
-            "waitingOn": "",
-            "dateStarted": "2026-08-07",
-            "dateFinished": "",
-            "lastEditedBy": "Aurangzeb",
-            "image": null,
-            "createdBy": ""
-          }
-        ]
-      }
-    },
     {
       "id": "t1787034545494w0lf",
       "time": "2026-08-18T06:29:05.494Z",
@@ -6764,6 +6642,68 @@
         "taskId": "t1784953493004c7g2"
       },
       "taskId": "t1784953493004c7g2"
+    },
+    {
+      "id": "t17849534788120su6",
+      "time": "2026-07-25T04:24:38.812Z",
+      "action": "[Saqib] Added task \"Installation of Solar panels...\" to General",
+      "user": "Saqib",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1784953478812lvjc"
+      },
+      "taskId": "t1784953478812lvjc"
+    },
+    {
+      "id": "t1784953443260x8yn",
+      "time": "2026-07-25T04:24:03.260Z",
+      "action": "[Saqib] Added task \"Attendance Time machine...\" to General",
+      "user": "Saqib",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1784953443260tmah"
+      },
+      "taskId": "t1784953443260tmah"
+    },
+    {
+      "id": "t1784953394315u253",
+      "time": "2026-07-25T04:23:14.315Z",
+      "action": "[Saqib] Added task \"Backets for cans...\" to General",
+      "user": "Saqib",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1784953394315el8b"
+      },
+      "taskId": "t1784953394315el8b"
+    },
+    {
+      "id": "t1784953375773rw7p",
+      "time": "2026-07-25T04:22:55.773Z",
+      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
+      "user": "Saqib",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_127701",
+            "machine": "General",
+            "category": "Mechanical",
+            "desc": "Baling machine procurement",
+            "priority": "Medium",
+            "progress": 0,
+            "status": "Pending Procurement",
+            "responsible": "Saqib",
+            "deadline": "",
+            "remarks": "",
+            "updated": "13 Jul 2026",
+            "waitingOn": "",
+            "dateStarted": "",
+            "dateFinished": "",
+            "lastEditedBy": "Saqib",
+            "image": ""
+          }
+        ]
+      }
     }
   ],
   "machineMeta": {
@@ -6775,7 +6715,8 @@
         "Photos/Press/Extrusion Press/IMG_20220518_140805.jpg",
         "Photos/Press/Extrusion Press/IMG_20220518_140817.jpg",
         "Photos/Press/Extrusion Press/IMG_20220518_140828.jpg"
-      ]
+      ],
+      "commercialRun": "None"
     },
     "Trimming": {
       "dryRun": "Complete",
@@ -6785,7 +6726,8 @@
         "Photos/Trimming/Trimming & Brushing Machine/IMG_20220518_140716.jpg",
         "Photos/Trimming/Trimming & Brushing Machine/IMG_20220518_140731.jpg"
       ],
-      "targetDate": "2026-01-07"
+      "targetDate": "2026-01-07",
+      "commercialRun": "None"
     },
     "Washing": {
       "dryRun": "Complete",
@@ -6830,10 +6772,12 @@
         "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.33 PM (1).jpeg",
         "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.34 PM.jpeg",
         "Photos/Washing/Washing Machine/WhatsApp Image 2026-06-01 at 4.11.37 PM (1).jpeg"
-      ]
+      ],
+      "commercialRun": "None"
     },
     "Lacquer": {
-      "dryRun": "Complete"
+      "dryRun": "Complete",
+      "commercialRun": "None"
     },
     "Lacquer Oven": {
       "dryRun": "Pending",
@@ -6847,10 +6791,12 @@
         "Photos/Internal Lacquer Baking Oven/Internal Lacquer Baking Oven/WhatsApp Image 2026-06-01 at 4.09.27 PM.jpeg",
         "Photos/Internal Lacquer Baking Oven/Internal Lacquer Baking Oven/WhatsApp Image 2026-06-01 at 4.12.14 PM.jpg",
         "Photos/Internal Lacquer Baking Oven/Internal Lacquer Baking Oven/WhatsApp Image 2026-06-01 at 4.14.38 PM (1).jpeg"
-      ]
+      ],
+      "commercialRun": "None"
     },
     "Base Coat": {
-      "dryRun": "Complete"
+      "dryRun": "Complete",
+      "commercialRun": "None"
     },
     "Printing": {
       "dryRun": "Complete",
@@ -6862,7 +6808,8 @@
         "Photos/Printing/WhatsApp Image 2026-06-01 at 4.13.39 PM.jpg",
         "Photos/Printing/WhatsApp Image 2026-06-01 at 4.13.41 PM.jpg",
         "Photos/Printing/WhatsApp Image 2026-06-01 at 4.13.42 PM (1).jpg"
-      ]
+      ],
+      "commercialRun": "None"
     },
     "Decoration Oven": {
       "dryRun": "Pending",
@@ -6875,7 +6822,8 @@
         "Photos/Decoration Oven/WhatsApp Image 2026-06-01 at 4.14.00 PM.jpg",
         "Photos/Decoration Oven/WhatsApp Image 2026-06-01 at 4.14.05 PM.jpg",
         "Photos/Decoration Oven/WhatsApp Image 2026-06-01 at 4.14.10 PM.jpg"
-      ]
+      ],
+      "commercialRun": "None"
     },
     "Over Varnish": {
       "dryRun": "Complete",
@@ -6892,7 +6840,8 @@
         "Photos/Over Varnish/Overvarnishing Machine/WhatsApp Image 2026-06-01 at 4.13.53 PM.jpg",
         "Photos/Over Varnish/Overvarnishing Machine/WhatsApp Image 2026-06-01 at 4.13.54 PM.jpg",
         "Photos/Over Varnish/Overvarnishing Machine/WhatsApp Image 2026-06-01 at 4.13.55 PM.jpg"
-      ]
+      ],
+      "commercialRun": "None"
     },
     "Necking": {
       "dryRun": "Complete",
@@ -6922,7 +6871,8 @@
         "Photos/Necking/WhatsApp Image 2026-06-01 at 4.15.03 PM.jpeg",
         "Photos/Necking/WhatsApp Image 2026-06-01 at 4.15.04 PM (2).jpeg",
         "Photos/Necking/WhatsApp Image 2026-06-01 at 4.15.04 PM.jpeg"
-      ]
+      ],
+      "commercialRun": "None"
     },
     "Accumulator": {
       "dryRun": "Complete",
@@ -6930,16 +6880,20 @@
         "Photos/Accumulator/Accumulator/IMG_20220518_140139.jpg",
         "Photos/Accumulator/Accumulator/WhatsApp Image 2026-06-01 at 4.12.57 PM (1).jpg",
         "Photos/Accumulator/Accumulator/WhatsApp Image 2026-06-01 at 4.12.58 PM (1).jpg"
-      ]
+      ],
+      "commercialRun": "None"
     },
     "Tumbler": {
-      "dryRun": "Complete"
+      "dryRun": "Complete",
+      "commercialRun": "None"
     },
     "Compressor": {
-      "dryRun": "Complete"
+      "dryRun": "Complete",
+      "commercialRun": "None"
     },
     "FG Conveyor": {
-      "dryRun": "Complete"
+      "dryRun": "Complete",
+      "commercialRun": "None"
     },
     "Auto Strapping Machine": {
       "dryRun": "Pending",
@@ -6949,17 +6903,21 @@
         "Photos/Strapping/IMG_20220518_135424.jpg",
         "Photos/Strapping/WhatsApp Image 2026-06-01 at 4.15.05 PM.jpg",
         "Photos/Strapping/WhatsApp Image 2026-06-01 at 4.15.06 PM.jpg"
-      ]
+      ],
+      "commercialRun": "None"
     },
     "Manual Strapping Machine": {
       "dryRun": "Pending",
-      "referenceImages": []
+      "referenceImages": [],
+      "commercialRun": "None"
     },
     "Overall Machine Operation": {
-      "dryRun": "Pending"
+      "dryRun": "Pending",
+      "commercialRun": "None"
     },
     "General": {
-      "dryRun": "None"
+      "dryRun": "None",
+      "commercialRun": "None"
     },
     "Main Power Distribution": {
       "dryRun": "None",
@@ -6973,6 +6931,18 @@
   },
   "loginHistory": [
     {
+      "name": "Saif",
+      "time": "2026-08-21T11:33:39.216Z"
+    },
+    {
+      "name": "Saif",
+      "time": "2026-08-21T07:27:35.386Z"
+    },
+    {
+      "name": "Saif",
+      "time": "2026-08-21T07:27:35.381Z"
+    },
+    {
       "name": "Aurangzeb",
       "time": "2026-08-21T07:23:27.873Z"
     },
@@ -6983,10 +6953,6 @@
     {
       "name": "Sikander",
       "time": "2026-08-21T06:07:54.496Z"
-    },
-    {
-      "name": "Bilal",
-      "time": "2026-08-21T05:31:10.403Z"
     },
     {
       "name": "Saqib",
@@ -7252,8 +7218,8 @@
   "activeSessions": {
     "Sikander": "2026-08-21T07:03:40.234Z",
     "Saqib": "2026-08-21T05:22:32.736Z",
-    "Aurangzeb": "2026-08-21T07:34:00.432Z",
-    "Bilal": "2026-08-21T07:35:38.328Z",
-    "Saif": "2026-08-21T07:27:35.387Z"
+    "Aurangzeb": "2026-08-21T07:23:27.873Z",
+    "Bilal": "2026-08-21T07:27:31.808Z",
+    "Saif": "2026-08-21T11:33:39.218Z"
   }
 }
