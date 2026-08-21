@@ -4543,7 +4543,7 @@
     }
   ],
   "settings": {
-    "autoSync": false
+    "autoSync": true
   },
   "activityLog": [
     {
@@ -6900,13 +6900,13 @@
     "Overall Machine Operation": {
       "dryRun": "Pending"
     },
+    "General": {
+      "dryRun": "None"
+    },
     "Main Power Distribution": {
       "dryRun": "None",
       "commercialRun": "None",
       "referenceImages": []
-    },
-    "General": {
-      "dryRun": "None"
     }
   },
   "timelineData": {
@@ -6914,6 +6914,10 @@
     "targetDate": "2026-06-30"
   },
   "loginHistory": [
+    {
+      "name": "Aurangzeb",
+      "time": "2026-08-21T07:23:27.873Z"
+    },
     {
       "name": "Sikander",
       "time": "2026-08-21T07:03:40.234Z"
@@ -7185,8 +7189,8 @@
   ],
   "activeSessions": {
     "Sikander": "2026-08-21T07:03:40.234Z",
-    "Aurangzeb": "2026-08-18T06:16:43.477Z",
     "Saqib": "2026-08-21T05:22:32.736Z",
+    "Aurangzeb": "2026-08-21T07:23:27.873Z",
     "Bilal": "2026-08-18T07:26:08.072Z"
   }
 }
