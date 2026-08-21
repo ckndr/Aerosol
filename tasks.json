@@ -2766,11 +2766,11 @@
       "responsible": "Arsalan",
       "deadline": "2026-06-19",
       "remarks": "",
-      "updated": "21 Aug 2026",
+      "updated": "1 Jun 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Saif",
+      "lastEditedBy": "Aurangzeb",
       "image": "Photos/Trimming/task_img_1780311378372.jpg",
       "createdBy": ""
     },
@@ -4540,6 +4540,44 @@
       "dateStarted": "2026-08-17",
       "dateFinished": "",
       "createdBy": ""
+    },
+    {
+      "id": "t178729744923813tc",
+      "machine": "Main Power Distribution",
+      "category": "Electrical",
+      "desc": "installed the wire from the main panel to the painting panel.",
+      "priority": "Medium",
+      "progress": 89,
+      "status": "Not Started",
+      "remarks": "",
+      "responsible": "",
+      "updated": "21 Aug 2026",
+      "createdBy": "Bilal",
+      "lastEditedBy": "Bilal",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
+    },
+    {
+      "id": "t1787297588327iqgi",
+      "machine": "Main Power Distribution",
+      "category": "Electrical",
+      "desc": "wire from the transformer to the main panel.",
+      "priority": "Medium",
+      "progress": 88,
+      "status": "In Progress",
+      "remarks": "",
+      "responsible": "",
+      "updated": "21 Aug 2026",
+      "createdBy": "Bilal",
+      "lastEditedBy": "Bilal",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
@@ -4547,33 +4585,56 @@
   },
   "activityLog": [
     {
-      "id": "t1787312940930g86m",
-      "time": "2026-08-21T11:49:00.930Z",
-      "action": "[Saif] Updated task \"closure of all cable trays/ pa...\" on Trimming",
-      "user": "Saif",
+      "id": "t1787297588327111s",
+      "time": "2026-08-21T07:33:08.327Z",
+      "action": "[Bilal] Added task \"wire from the transformer to t...\" to Main Power Distribution",
+      "user": "Bilal",
       "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_461252",
-          "machine": "Trimming",
-          "category": "Electrical",
-          "desc": "closure of all cable trays/ panels",
-          "priority": "High",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "deadline": "2026-06-19",
-          "remarks": "",
-          "updated": "1 Jun 2026",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "Aurangzeb",
-          "image": "Photos/Trimming/task_img_1780311378372.jpg",
-          "createdBy": ""
-        }
+        "type": "add",
+        "taskId": "t1787297588327iqgi"
       },
-      "taskId": "t_461252"
+      "taskId": "t1787297588327iqgi"
+    },
+    {
+      "id": "t17872974492397ld2",
+      "time": "2026-08-21T07:30:49.239Z",
+      "action": "[Bilal] Added task \"installed the wire from the ma...\" to Main Power Distribution",
+      "user": "Bilal",
+      "undoData": {
+        "type": "add",
+        "taskId": "t178729744923813tc"
+      },
+      "taskId": "t178729744923813tc"
+    },
+    {
+      "id": "t1787297251808br7i",
+      "time": "2026-08-21T07:27:31.808Z",
+      "action": "[Bilal] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Bilal",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_378091",
+            "machine": "Main Power Distribution",
+            "category": "Electrical",
+            "desc": "Main Power Cable Termination & Execution Plan",
+            "priority": "High",
+            "progress": 40,
+            "status": "In Progress",
+            "responsible": "Arsalan",
+            "deadline": "2026-06-13",
+            "remarks": "",
+            "updated": "17 Aug 2026",
+            "waitingOn": "",
+            "dateStarted": "2026-08-07",
+            "dateFinished": "",
+            "lastEditedBy": "Aurangzeb",
+            "image": null,
+            "createdBy": ""
+          }
+        ]
+      }
     },
     {
       "id": "t1787034545494w0lf",
@@ -6684,28 +6745,6 @@
         "taskId": "t1784953478812lvjc"
       },
       "taskId": "t1784953478812lvjc"
-    },
-    {
-      "id": "t1784953443260x8yn",
-      "time": "2026-07-25T04:24:03.260Z",
-      "action": "[Saqib] Added task \"Attendance Time machine...\" to General",
-      "user": "Saqib",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1784953443260tmah"
-      },
-      "taskId": "t1784953443260tmah"
-    },
-    {
-      "id": "t1784953394315u253",
-      "time": "2026-07-25T04:23:14.315Z",
-      "action": "[Saqib] Added task \"Backets for cans...\" to General",
-      "user": "Saqib",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1784953394315el8b"
-      },
-      "taskId": "t1784953394315el8b"
     }
   ],
   "machineMeta": {
@@ -6933,20 +6972,16 @@
   },
   "loginHistory": [
     {
-      "name": "Saif",
-      "time": "2026-08-21T11:36:52.404Z"
+      "name": "Sikander",
+      "time": "2026-08-21T16:34:44.535Z"
     },
     {
-      "name": "Saif",
-      "time": "2026-08-21T11:33:39.216Z"
+      "name": "Sikander",
+      "time": "2026-08-21T07:35:07.261Z"
     },
     {
-      "name": "Saif",
-      "time": "2026-08-21T07:27:35.386Z"
-    },
-    {
-      "name": "Saif",
-      "time": "2026-08-21T07:27:35.381Z"
+      "name": "Aurangzeb",
+      "time": "2026-08-21T07:34:00.431Z"
     },
     {
       "name": "Aurangzeb",
@@ -6959,6 +6994,10 @@
     {
       "name": "Sikander",
       "time": "2026-08-21T06:07:54.496Z"
+    },
+    {
+      "name": "Bilal",
+      "time": "2026-08-21T05:31:10.403Z"
     },
     {
       "name": "Saqib",
@@ -7222,10 +7261,10 @@
     }
   ],
   "activeSessions": {
-    "Sikander": "2026-08-21T07:03:40.234Z",
+    "Sikander": "2026-08-21T16:34:44.536Z",
+    "Aurangzeb": "2026-08-21T07:34:00.432Z",
     "Saqib": "2026-08-21T05:22:32.736Z",
-    "Aurangzeb": "2026-08-21T07:23:27.873Z",
-    "Bilal": "2026-08-21T07:27:31.808Z",
-    "Saif": "2026-08-21T11:49:00.934Z"
+    "Bilal": "2026-08-21T07:33:08.327Z",
+    "Saif": "2026-08-21T07:27:35.387Z"
   }
 }
