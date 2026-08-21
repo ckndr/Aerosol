@@ -4559,12 +4559,42 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t1787297588327iqgi",
+      "machine": "Main Power Distribution",
+      "category": "Electrical",
+      "desc": "wire from the transformer to the main panel.",
+      "priority": "Medium",
+      "progress": 88,
+      "status": "In Progress",
+      "remarks": "",
+      "responsible": "",
+      "updated": "21 Aug 2026",
+      "createdBy": "Bilal",
+      "lastEditedBy": "Bilal",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1787297588327111s",
+      "time": "2026-08-21T07:33:08.327Z",
+      "action": "[Bilal] Added task \"wire from the transformer to t...\" to Main Power Distribution",
+      "user": "Bilal",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1787297588327iqgi"
+      },
+      "taskId": "t1787297588327iqgi"
+    },
     {
       "id": "t17872974492397ld2",
       "time": "2026-08-21T07:30:49.239Z",
@@ -6715,17 +6745,6 @@
         "taskId": "t1784953478812lvjc"
       },
       "taskId": "t1784953478812lvjc"
-    },
-    {
-      "id": "t1784953443260x8yn",
-      "time": "2026-07-25T04:24:03.260Z",
-      "action": "[Saqib] Added task \"Attendance Time machine...\" to General",
-      "user": "Saqib",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1784953443260tmah"
-      },
-      "taskId": "t1784953443260tmah"
     }
   ],
   "machineMeta": {
@@ -7215,7 +7234,7 @@
     "Sikander": "2026-08-21T07:03:40.234Z",
     "Saqib": "2026-08-21T05:22:32.736Z",
     "Aurangzeb": "2026-08-21T07:23:27.873Z",
-    "Bilal": "2026-08-21T07:30:58.144Z",
+    "Bilal": "2026-08-21T07:33:08.327Z",
     "Saif": "2026-08-21T07:27:35.387Z"
   }
 }
