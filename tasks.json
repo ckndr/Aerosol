@@ -2552,17 +2552,17 @@
       "category": "Mechanical",
       "desc": "Main frame displacement to be fixed",
       "priority": "High",
-      "progress": 0,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "",
-      "updated": "",
+      "updated": "23 Aug 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "",
-      "image": "",
+      "lastEditedBy": "Aurangzeb",
+      "image": null,
       "createdBy": ""
     },
     {
@@ -4584,6 +4584,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1787481753015jwek",
+      "time": "2026-08-23T10:42:33.015Z",
+      "action": "[Aurangzeb] Updated task \"Main frame displacement to be ...\" [Status: In Progress → Completed, Progress: 0% → 100%] on Printing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1784022464370ep3t",
+          "machine": "Printing",
+          "category": "Mechanical",
+          "desc": "Main frame displacement to be fixed",
+          "priority": "High",
+          "progress": 0,
+          "status": "In Progress",
+          "responsible": "Arsalan",
+          "deadline": "",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "",
+          "image": "",
+          "createdBy": ""
+        }
+      },
+      "taskId": "t1784022464370ep3t"
+    },
     {
       "id": "t1787297588327111s",
       "time": "2026-08-21T07:33:08.327Z",
@@ -6734,17 +6763,6 @@
         "taskId": "t1784953493004c7g2"
       },
       "taskId": "t1784953493004c7g2"
-    },
-    {
-      "id": "t17849534788120su6",
-      "time": "2026-07-25T04:24:38.812Z",
-      "action": "[Saqib] Added task \"Installation of Solar panels...\" to General",
-      "user": "Saqib",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1784953478812lvjc"
-      },
-      "taskId": "t1784953478812lvjc"
     }
   ],
   "machineMeta": {
@@ -6971,10 +6989,6 @@
     "targetDate": "2026-06-30"
   },
   "loginHistory": [
-    {
-      "name": "Sikander",
-      "time": "2026-08-23T10:41:14.229Z"
-    },
     {
       "name": "Aurangzeb",
       "time": "2026-08-23T10:35:53.832Z"
@@ -7289,9 +7303,9 @@
     }
   ],
   "activeSessions": {
-    "Sikander": "2026-08-23T10:41:14.229Z",
-    "Aurangzeb": "2026-08-23T10:35:53.832Z",
+    "Sikander": "2026-08-22T08:36:13.745Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
+    "Aurangzeb": "2026-08-23T10:42:33.017Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-08-21T07:27:35.387Z"
   }
