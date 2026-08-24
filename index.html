@@ -5849,12 +5849,14 @@
           row.commit();
         }
 
-        // Update table bounds to match all populated rows
+        // Update table bounds and table autoFilterRef to match all populated rows
         const table = ws.getTable('Table1');
+        const tableRange = 'A2:J' + Math.max(3, lastPopulatedRow);
         if (table) {
-          table.table.tableRef = 'A2:J' + Math.max(3, lastPopulatedRow);
+          table.table.tableRef = tableRange;
+          table.table.autoFilterRef = tableRange;
         }
-        ws.autoFilter = 'A2:J' + Math.max(3, lastPopulatedRow);
+        ws.autoFilter = undefined;
 
         // Set TRACKER as active view tab
         if (ws.views && ws.views.length > 0) {
