@@ -5,6 +5,8 @@ package*.json
 # OS artifacts
 Thumbs.db
 **/Thumbs.db
+desktop.ini
+**/desktop.ini
 .DS_Store
 **/.DS_Store
 

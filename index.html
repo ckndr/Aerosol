@@ -5705,429 +5705,269 @@
     async function exportExcel() {
       toast('Preparing formatted Excel file...', 'info');
       try {
+        const response = await fetch('Aerosol Plant Project Tracker.xlsx?t=' + Date.now());
+        if (!response.ok) throw new Error('Could not fetch template Excel file');
+        const arrayBuffer = await response.arrayBuffer();
+        
+        const workbook = new ExcelJS.Workbook();
+        await workbook.xlsx.load(arrayBuffer);
+        
+        const ws = workbook.getWorksheet('TRACKER');
+        if (!ws) throw new Error('TRACKER sheet missing in template');
+
+        const borderThin = {
+          top: { style: 'thin', color: { argb: 'FFBDBDBD' } },
+          left: { style: 'thin', color: { argb: 'FFBDBDBD' } },
+          bottom: { style: 'thin', color: { argb: 'FFBDBDBD' } },
+          right: { style: 'thin', color: { argb: 'FFBDBDBD' } }
+        };
+
+        const borderCol1 = {
+          top: { style: 'thin', color: { argb: 'FFBDBDBD' } },
+          bottom: { style: 'thin', color: { argb: 'FFBDBDBD' } },
+          right: { style: 'thin', color: { argb: 'FFBDBDBD' } }
+        };
+
+        const fontArial10 = { name: 'Arial', size: 10, bold: false, color: { argb: 'FF212121' } };
+        const fontArial10Gray = { name: 'Arial', size: 10, bold: false, color: { argb: 'FF757575' } };
+        const fontArial10BoldGreen = { name: 'Arial', size: 10, bold: true, color: { argb: 'FF2E7D32' } };
+        const fontArial10BoldOrange = { name: 'Arial', size: 10, bold: true, color: { argb: 'FFF57F17' } };
+
+        const fillLightBlue = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFEBF3FB' } };
+        const fillWhite = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFFFFFF' } };
+        const fillLightGreen = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFE8F5E9' } };
+        const fillLightYellow = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFFF9C4' } };
+        const fillLightRed = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFFCDD2' } };
+
         const taskList = (typeof tasks !== 'undefined' && Array.isArray(tasks)) ? tasks : [];
-        const now = new Date();
-        const yyyy = now.getFullYear();
-        const mm = String(now.getMonth() + 1).padStart(2, '0');
-        const dd = String(now.getDate()).padStart(2, '0');
-        const dateStr = `${yyyy}-${mm}-${dd}`;
 
-        // 1. PRIMARY EXPORT: ExcelJS (Beautiful styling, colors, borders, formulas, autofilters)
-        if (typeof ExcelJS !== 'undefined') {
-          const workbook = new ExcelJS.Workbook();
-          workbook.creator = 'Alpha Containers';
-          workbook.lastModifiedBy = (typeof currentUser !== 'undefined' && currentUser && currentUser.name) ? currentUser.name : 'Aerosol Tracker';
-          workbook.created = now;
-          workbook.modified = now;
+        taskList.forEach((t, i) => {
+          const rowIdx = i + 3; // Data starts at row 3
+          const row = ws.getRow(rowIdx);
+          row.height = 25.5;
 
-          // ── TRACKER SHEET ──
-          const ws = workbook.addWorksheet('TRACKER', {
-            properties: { tabColor: { argb: 'FF1E3A5F' } },
-            views: [{ state: 'frozen', xSplit: 0, ySplit: 2, activeCell: 'A3', showGridLines: true }]
-          });
+          // Col 1: #
+          const c1 = row.getCell(1);
+          c1.value = i + 1;
+          c1.font = fontArial10Gray;
+          c1.fill = fillWhite;
+          c1.border = borderCol1;
+          c1.alignment = { horizontal: 'center', vertical: 'middle' };
+          c1.numFmt = 'General';
 
-          ws.columns = [
-            { key: 'num', width: 6 },
-            { key: 'machine', width: 24 },
-            { key: 'category', width: 15 },
-            { key: 'desc', width: 52 },
-            { key: 'priority', width: 12 },
-            { key: 'progress', width: 12 },
-            { key: 'status', width: 22 },
-            { key: 'responsible', width: 18 },
-            { key: 'deadline', width: 14 },
-            { key: 'remarks', width: 38 }
-          ];
+          // Col 2: Machine
+          const c2 = row.getCell(2);
+          c2.value = t.machine || '';
+          c2.font = fontArial10;
+          c2.fill = fillLightBlue;
+          c2.border = borderThin;
+          c2.alignment = { horizontal: 'left', vertical: 'middle', wrapText: true };
+          c2.numFmt = 'General';
 
-          // Row 1: Title Banner
-          const titleRow = ws.getRow(1);
-          titleRow.height = 30;
-          ws.mergeCells('A1:J1');
-          const titleCell = ws.getCell('A1');
-          titleCell.value = 'AEROSOL PLANT — INSTALLATION TRACKER';
-          titleCell.font = { name: 'Segoe UI', size: 13, bold: true, color: { argb: 'FFFFFFFF' } };
-          titleCell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FF1E3A5F' } };
-          titleCell.alignment = { vertical: 'middle', horizontal: 'center' };
+          // Col 3: Category
+          const c3 = row.getCell(3);
+          c3.value = t.category || '';
+          c3.font = fontArial10;
+          c3.fill = fillLightBlue;
+          c3.border = borderThin;
+          c3.alignment = { horizontal: 'left', vertical: 'middle' };
+          c3.numFmt = 'General';
 
-          // Row 2: Headers
-          const headerRow = ws.getRow(2);
-          headerRow.height = 24;
-          const headers = ['#', 'Machine', 'Category', 'Task Description', 'Priority', 'Progress', 'Status', 'Responsible', 'Deadline', 'Remarks'];
-          headers.forEach((h, idx) => {
-            const colNum = idx + 1;
-            const cell = headerRow.getCell(colNum);
-            cell.value = h;
-            cell.font = { name: 'Segoe UI', size: 10.5, bold: true, color: { argb: 'FFFFFFFF' } };
-            cell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FF2D4F7C' } };
-            cell.alignment = {
-              vertical: 'middle',
-              horizontal: (colNum === 2 || colNum === 4 || colNum === 10) ? 'left' : 'center'
-            };
-            cell.border = {
-              top: { style: 'thin', color: { argb: 'FFCBD5E1' } },
-              bottom: { style: 'medium', color: { argb: 'FF0F172A' } },
-              left: { style: 'thin', color: { argb: 'FFCBD5E1' } },
-              right: { style: 'thin', color: { argb: 'FFCBD5E1' } }
-            };
-          });
+          // Col 4: Task Description
+          const c4 = row.getCell(4);
+          c4.value = t.desc || '';
+          c4.font = fontArial10;
+          c4.fill = fillLightBlue;
+          c4.border = borderThin;
+          c4.alignment = { horizontal: 'left', vertical: 'middle', wrapText: true };
+          c4.numFmt = 'General';
 
-          // Data Rows
-          const borderThin = {
-            top: { style: 'thin', color: { argb: 'FFE2E8F0' } },
-            bottom: { style: 'thin', color: { argb: 'FFE2E8F0' } },
-            left: { style: 'thin', color: { argb: 'FFE2E8F0' } },
-            right: { style: 'thin', color: { argb: 'FFE2E8F0' } }
-          };
+          // Col 5: Priority
+          const c5 = row.getCell(5);
+          c5.value = t.priority || 'Medium';
+          c5.font = fontArial10;
+          c5.fill = fillLightRed;
+          c5.border = borderThin;
+          c5.alignment = { horizontal: 'left', vertical: 'middle' };
+          c5.numFmt = 'General';
 
-          taskList.forEach((t, i) => {
-            const rowIdx = i + 3;
-            const row = ws.getRow(rowIdx);
-            row.height = 20;
+          // Col 6: Progress
+          const c6 = row.getCell(6);
+          const rawProg = (typeof t.progress === 'number') ? t.progress : (parseFloat(t.progress) || 0);
+          c6.value = rawProg / 100;
+          c6.font = fontArial10;
+          c6.fill = fillLightBlue;
+          c6.border = borderThin;
+          c6.alignment = { horizontal: 'center', vertical: 'middle' };
+          c6.numFmt = '0%';
 
-            const isEven = (i % 2 === 1);
-            const rowBgColor = isEven ? 'FFF8FAFC' : 'FFFFFFFF';
-            const baseFill = { type: 'pattern', pattern: 'solid', fgColor: { argb: rowBgColor } };
+          // Col 7: Status
+          const c7 = row.getCell(7);
+          c7.value = t.status || 'Not Started';
+          c7.font = fontArial10BoldGreen;
+          c7.fill = fillLightGreen;
+          c7.border = borderThin;
+          c7.alignment = { horizontal: 'left', vertical: 'middle' };
+          c7.numFmt = 'General';
 
-            // Col 1: #
-            const c1 = row.getCell(1);
-            c1.value = i + 1;
-            c1.alignment = { vertical: 'middle', horizontal: 'center' };
-            c1.font = { name: 'Segoe UI', size: 9.5, color: { argb: 'FF64748B' } };
-            c1.fill = baseFill;
-            c1.border = borderThin;
+          // Col 8: Responsible
+          const c8 = row.getCell(8);
+          c8.value = t.responsible || '';
+          c8.font = fontArial10BoldOrange;
+          c8.fill = fillLightYellow;
+          c8.border = borderThin;
+          c8.alignment = { horizontal: 'left', vertical: 'middle' };
+          c8.numFmt = 'General';
 
-            // Col 2: Machine
-            const c2 = row.getCell(2);
-            c2.value = t.machine || '';
-            c2.alignment = { vertical: 'middle', horizontal: 'left' };
-            c2.font = { name: 'Segoe UI', size: 10, bold: true, color: { argb: 'FF0F172A' } };
-            c2.fill = baseFill;
-            c2.border = borderThin;
+          // Col 9: Deadline
+          const c9 = row.getCell(9);
+          c9.value = t.deadline ? new Date(t.deadline + 'T00:00:00') : '';
+          c9.font = fontArial10;
+          c9.fill = fillLightBlue;
+          c9.border = borderThin;
+          c9.alignment = { horizontal: 'left', vertical: 'middle' };
+          c9.numFmt = 'DD/MM/YYYY';
 
-            // Col 3: Category
-            const c3 = row.getCell(3);
-            c3.value = t.category || '';
-            c3.alignment = { vertical: 'middle', horizontal: 'center' };
-            c3.font = { name: 'Segoe UI', size: 9.5, color: { argb: 'FF334155' } };
-            c3.fill = baseFill;
-            c3.border = borderThin;
+          // Col 10: Remarks
+          const c10 = row.getCell(10);
+          c10.value = t.remarks || '';
+          c10.font = fontArial10;
+          c10.fill = fillLightBlue;
+          c10.border = borderThin;
+          c10.alignment = { horizontal: 'left', vertical: 'middle' };
+          c10.numFmt = 'General';
 
-            // Col 4: Task Description
-            const c4 = row.getCell(4);
-            c4.value = t.desc || '';
-            c4.alignment = { vertical: 'middle', horizontal: 'left', wrapText: true };
-            c4.font = { name: 'Segoe UI', size: 10, color: { argb: 'FF0F172A' } };
-            c4.fill = baseFill;
-            c4.border = borderThin;
+          row.commit();
+        });
 
-            // Col 5: Priority
-            const c5 = row.getCell(5);
-            c5.value = t.priority || 'Medium';
-            c5.alignment = { vertical: 'middle', horizontal: 'center' };
-            let priFontColor = 'FF334155';
-            let priFillColor = rowBgColor;
-            if (t.priority === 'High') { priFontColor = 'FFB91C1C'; priFillColor = 'FFFEE2E2'; }
-            else if (t.priority === 'Medium') { priFontColor = 'FFB45309'; priFillColor = 'FFFEF3C7'; }
-            else if (t.priority === 'Low') { priFontColor = 'FF15803D'; priFillColor = 'FFDCFCE7'; }
-            c5.font = { name: 'Segoe UI', size: 9.5, bold: true, color: { argb: priFontColor } };
-            c5.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: priFillColor } };
-            c5.border = borderThin;
-
-            // Col 6: Progress (0.0 to 1.0)
-            const c6 = row.getCell(6);
-            const rawProg = (typeof t.progress === 'number') ? t.progress : (parseFloat(t.progress) || 0);
-            c6.value = rawProg / 100;
-            c6.numFmt = '0%';
-            c6.alignment = { vertical: 'middle', horizontal: 'center' };
-            c6.font = { name: 'Segoe UI', size: 9.5, bold: true, color: { argb: 'FF0F172A' } };
-            c6.fill = baseFill;
-            c6.border = borderThin;
-
-            // Col 7: Status
-            const c7 = row.getCell(7);
-            c7.value = t.status || 'Not Started';
-            c7.alignment = { vertical: 'middle', horizontal: 'center' };
-            let statFontColor = 'FF475569';
-            let statFillColor = rowBgColor;
-            if (t.status === 'Completed') { statFontColor = 'FF15803D'; statFillColor = 'FFDCFCE7'; }
-            else if (t.status === 'In Progress') { statFontColor = 'FF1D4ED8'; statFillColor = 'FFDBEAFE'; }
-            else if (t.status === 'Pending Procurement') { statFontColor = 'FFB45309'; statFillColor = 'FFFEF3C7'; }
-            else { statFontColor = 'FF64748B'; statFillColor = 'FFF1F5F9'; }
-            c7.font = { name: 'Segoe UI', size: 9.5, bold: true, color: { argb: statFontColor } };
-            c7.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: statFillColor } };
-            c7.border = borderThin;
-
-            // Col 8: Responsible
-            const c8 = row.getCell(8);
-            c8.value = t.responsible || '';
-            c8.alignment = { vertical: 'middle', horizontal: 'center' };
-            c8.font = { name: 'Segoe UI', size: 9.5, color: { argb: 'FF334155' } };
-            c8.fill = baseFill;
-            c8.border = borderThin;
-
-            // Col 9: Deadline
-            const c9 = row.getCell(9);
-            if (t.deadline) {
-              const strDeadline = String(t.deadline).trim();
-              if (strDeadline.includes('-')) {
-                const parts = strDeadline.split('-');
-                if (parts.length === 3) {
-                  c9.value = new Date(parseInt(parts[0], 10), parseInt(parts[1], 10) - 1, parseInt(parts[2], 10));
-                  c9.numFmt = 'DD/MM/YYYY';
-                } else {
-                  c9.value = strDeadline;
-                }
-              } else if (strDeadline.includes('/')) {
-                const parts = strDeadline.split('/');
-                if (parts.length === 3) {
-                  // Assume DD/MM/YYYY or MM/DD/YYYY
-                  c9.value = new Date(parseInt(parts[2], 10), parseInt(parts[1], 10) - 1, parseInt(parts[0], 10));
-                  c9.numFmt = 'DD/MM/YYYY';
-                } else {
-                  c9.value = strDeadline;
-                }
-              } else {
-                c9.value = strDeadline;
-              }
-            } else {
-              c9.value = '';
-            }
-            c9.alignment = { vertical: 'middle', horizontal: 'center' };
-            c9.font = { name: 'Segoe UI', size: 9.5, color: { argb: 'FF334155' } };
-            c9.fill = baseFill;
-            c9.border = borderThin;
-
-            // Col 10: Remarks
-            const c10 = row.getCell(10);
-            c10.value = t.remarks || '';
-            c10.alignment = { vertical: 'middle', horizontal: 'left', wrapText: true };
-            c10.font = { name: 'Segoe UI', size: 9.5, color: { argb: 'FF475569' } };
-            c10.fill = baseFill;
-            c10.border = borderThin;
-          });
-
-          // AutoFilter on headers and data
-          const lastRow = Math.max(3, taskList.length + 2);
-          ws.autoFilter = 'A2:J' + lastRow;
-
-          // ── DASHBOARD SHEET ──
-          const dash = workbook.addWorksheet('DASHBOARD', {
-            properties: { tabColor: { argb: 'FF2563EB' } },
-            views: [{ showGridLines: true }]
-          });
-
-          dash.columns = [
-            { width: 4 },
-            { width: 28 },
-            { width: 14 },
-            { width: 14 },
-            { width: 14 },
-            { width: 16 },
-            { width: 16 },
-            { width: 16 }
-          ];
-
-          dash.mergeCells('B2:H2');
-          const dTitle = dash.getCell('B2');
-          dTitle.value = 'ALPHA CONTAINERS · AEROSOL PLANT PROJECT DASHBOARD';
-          dTitle.font = { name: 'Segoe UI', size: 12, bold: true, color: { argb: 'FFFFFFFF' } };
-          dTitle.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FF1E3A5F' } };
-          dTitle.alignment = { vertical: 'middle', horizontal: 'center' };
-          dash.getRow(2).height = 28;
-
-          const kpiHeaders = ['Overall Progress', 'Total Tasks', 'Completed', 'In Progress', 'Not Started', 'Pending / Blocked', 'Export Date'];
-          const kpiCols = ['B', 'C', 'D', 'E', 'F', 'G', 'H'];
-          dash.getRow(4).height = 20;
-          kpiHeaders.forEach((kh, kIdx) => {
-            const kCell = dash.getCell(kpiCols[kIdx] + '4');
-            kCell.value = kh;
-            kCell.font = { name: 'Segoe UI', size: 9, bold: true, color: { argb: 'FF475569' } };
-            kCell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFF1F5F9' } };
-            kCell.alignment = { vertical: 'middle', horizontal: 'center' };
-            kCell.border = borderThin;
-          });
-
-          dash.getRow(5).height = 26;
-          const kpiProg = dash.getCell('B5');
-          kpiProg.value = { formula: `AVERAGE(TRACKER!$F$3:$F$${lastRow})`, result: 0 };
-          kpiProg.numFmt = '0.0%';
-          kpiProg.font = { name: 'Segoe UI', size: 14, bold: true, color: { argb: 'FF1E3A5F' } };
-          kpiProg.alignment = { vertical: 'middle', horizontal: 'center' };
-          kpiProg.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFEFF6FF' } };
-          kpiProg.border = borderThin;
-
-          const kpiTotal = dash.getCell('C5');
-          kpiTotal.value = { formula: `COUNTA(TRACKER!$B$3:$B$${lastRow})`, result: taskList.length };
-          kpiTotal.font = { name: 'Segoe UI', size: 13, bold: true, color: { argb: 'FF0F172A' } };
-          kpiTotal.alignment = { vertical: 'middle', horizontal: 'center' };
-          kpiTotal.border = borderThin;
-
-          const kpiComp = dash.getCell('D5');
-          kpiComp.value = { formula: `COUNTIF(TRACKER!$G$3:$G$${lastRow}, "Completed")`, result: taskList.filter(t => t.status === 'Completed').length };
-          kpiComp.font = { name: 'Segoe UI', size: 13, bold: true, color: { argb: 'FF16A34A' } };
-          kpiComp.alignment = { vertical: 'middle', horizontal: 'center' };
-          kpiComp.border = borderThin;
-
-          const kpiInProg = dash.getCell('E5');
-          kpiInProg.value = { formula: `COUNTIF(TRACKER!$G$3:$G$${lastRow}, "In Progress")`, result: taskList.filter(t => t.status === 'In Progress').length };
-          kpiInProg.font = { name: 'Segoe UI', size: 13, bold: true, color: { argb: 'FF2563EB' } };
-          kpiInProg.alignment = { vertical: 'middle', horizontal: 'center' };
-          kpiInProg.border = borderThin;
-
-          const kpiNotStart = dash.getCell('F5');
-          kpiNotStart.value = { formula: `COUNTIF(TRACKER!$G$3:$G$${lastRow}, "Not Started")`, result: taskList.filter(t => t.status === 'Not Started').length };
-          kpiNotStart.font = { name: 'Segoe UI', size: 13, bold: true, color: { argb: 'FF64748B' } };
-          kpiNotStart.alignment = { vertical: 'middle', horizontal: 'center' };
-          kpiNotStart.border = borderThin;
-
-          const kpiPending = dash.getCell('G5');
-          kpiPending.value = { formula: `COUNTIF(TRACKER!$G$3:$G$${lastRow}, "Pending Procurement")`, result: taskList.filter(t => t.status === 'Pending Procurement').length };
-          kpiPending.font = { name: 'Segoe UI', size: 13, bold: true, color: { argb: 'FFD97706' } };
-          kpiPending.alignment = { vertical: 'middle', horizontal: 'center' };
-          kpiPending.border = borderThin;
-
-          const kpiDate = dash.getCell('H5');
-          kpiDate.value = dateStr;
-          kpiDate.font = { name: 'Segoe UI', size: 10, color: { argb: 'FF64748B' } };
-          kpiDate.alignment = { vertical: 'middle', horizontal: 'center' };
-          kpiDate.border = borderThin;
-
-          // Machine Breakdown
-          dash.mergeCells('B8:H8');
-          const mHeader = dash.getCell('B8');
-          mHeader.value = 'MACHINE BREAKDOWN & PROGRESS';
-          mHeader.font = { name: 'Segoe UI', size: 10.5, bold: true, color: { argb: 'FFFFFFFF' } };
-          mHeader.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FF2D4F7C' } };
-          mHeader.alignment = { vertical: 'middle', horizontal: 'center' };
-          dash.getRow(8).height = 22;
-
-          const mTableHeaders = ['Machine Name', 'Total Tasks', 'Completed', 'In Progress', 'Pending', 'Not Started', 'Progress %'];
-          dash.getRow(9).height = 20;
-          mTableHeaders.forEach((th, tIdx) => {
-            const c = dash.getCell(kpiCols[tIdx] + '9');
-            c.value = th;
-            c.font = { name: 'Segoe UI', size: 9.5, bold: true, color: { argb: 'FF334155' } };
-            c.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFE2E8F0' } };
-            c.alignment = { vertical: 'middle', horizontal: (tIdx === 0 ? 'left' : 'center') };
-            c.border = borderThin;
-          });
-
-          const machineNames = [];
-          const machineMap = {};
-          taskList.forEach(t => {
-            const m = t.machine || 'General';
-            if (!machineMap[m]) {
-              machineMap[m] = true;
-              machineNames.push(m);
-            }
-          });
-
-          let dRow = 10;
-          machineNames.forEach((mName, mIdx) => {
-            const row = dash.getRow(dRow);
-            row.height = 19;
-            const isMRowEven = (mIdx % 2 === 1);
-            const mRowBg = isMRowEven ? 'FFF8FAFC' : 'FFFFFFFF';
-            const mFill = { type: 'pattern', pattern: 'solid', fgColor: { argb: mRowBg } };
-
-            const cM = row.getCell(2);
-            cM.value = mName;
-            cM.font = { name: 'Segoe UI', size: 9.5, bold: true, color: { argb: 'FF0F172A' } };
-            cM.fill = mFill;
-            cM.border = borderThin;
-
-            const cTotal = row.getCell(3);
-            cTotal.value = { formula: `COUNTIF(TRACKER!$B$3:$B$${lastRow}, "${mName}")` };
-            cTotal.alignment = { vertical: 'middle', horizontal: 'center' };
-            cTotal.font = { name: 'Segoe UI', size: 9.5, color: { argb: 'FF0F172A' } };
-            cTotal.fill = mFill;
-            cTotal.border = borderThin;
-
-            const cComp = row.getCell(4);
-            cComp.value = { formula: `COUNTIFS(TRACKER!$B$3:$B$${lastRow}, "${mName}", TRACKER!$G$3:$G$${lastRow}, "Completed")` };
-            cComp.alignment = { vertical: 'middle', horizontal: 'center' };
-            cComp.font = { name: 'Segoe UI', size: 9.5, color: { argb: 'FF16A34A' } };
-            cComp.fill = mFill;
-            cComp.border = borderThin;
-
-            const cInProg = row.getCell(5);
-            cInProg.value = { formula: `COUNTIFS(TRACKER!$B$3:$B$${lastRow}, "${mName}", TRACKER!$G$3:$G$${lastRow}, "In Progress")` };
-            cInProg.alignment = { vertical: 'middle', horizontal: 'center' };
-            cInProg.font = { name: 'Segoe UI', size: 9.5, color: { argb: 'FF2563EB' } };
-            cInProg.fill = mFill;
-            cInProg.border = borderThin;
-
-            const cPend = row.getCell(6);
-            cPend.value = { formula: `COUNTIFS(TRACKER!$B$3:$B$${lastRow}, "${mName}", TRACKER!$G$3:$G$${lastRow}, "Pending Procurement")` };
-            cPend.alignment = { vertical: 'middle', horizontal: 'center' };
-            cPend.font = { name: 'Segoe UI', size: 9.5, color: { argb: 'FFD97706' } };
-            cPend.fill = mFill;
-            cPend.border = borderThin;
-
-            const cNotStart = row.getCell(7);
-            cNotStart.value = { formula: `COUNTIFS(TRACKER!$B$3:$B$${lastRow}, "${mName}", TRACKER!$G$3:$G$${lastRow}, "Not Started")` };
-            cNotStart.alignment = { vertical: 'middle', horizontal: 'center' };
-            cNotStart.font = { name: 'Segoe UI', size: 9.5, color: { argb: 'FF64748B' } };
-            cNotStart.fill = mFill;
-            cNotStart.border = borderThin;
-
-            const cProg = row.getCell(8);
-            cProg.value = { formula: `IFERROR(AVERAGEIF(TRACKER!$B$3:$B$${lastRow}, "${mName}", TRACKER!$F$3:$F$${lastRow}), 0)` };
-            cProg.numFmt = '0.0%';
-            cProg.alignment = { vertical: 'middle', horizontal: 'center' };
-            cProg.font = { name: 'Segoe UI', size: 9.5, bold: true, color: { argb: 'FF1E3A5F' } };
-            cProg.fill = mFill;
-            cProg.border = borderThin;
-
-            dRow++;
-          });
-
-          const buffer = await workbook.xlsx.writeBuffer();
-          const blob = new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
-          const url = URL.createObjectURL(blob);
-          const a = document.createElement('a');
-          a.href = url;
-          a.download = 'Aerosol_Tracker_' + dateStr + '.xlsx';
-          document.body.appendChild(a);
-          a.click();
-          setTimeout(() => {
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-          }, 300);
-          toast('Excel exported successfully \u2713', 'success');
-          return;
+        // Clear out any lingering rows below the populated data (e.g. if a task was deleted)
+        const totalRows = ws.rowCount;
+        const lastPopulatedRow = taskList.length + 2;
+        for (let r = lastPopulatedRow + 1; r <= totalRows; r++) {
+          const row = ws.getRow(r);
+          row.eachCell((cell) => { cell.value = null; });
+          row.commit();
         }
 
-        // 2. FALLBACK EXPORT: SheetJS (XLSX)
-        if (typeof XLSX !== 'undefined') {
-          const aoa = [
-            ['AEROSOL PLANT \u2014 INSTALLATION TRACKER'],
-            ['#', 'Machine', 'Category', 'Task Description', 'Priority', 'Progress', 'Status', 'Responsible', 'Deadline', 'Remarks']
-          ];
-          taskList.forEach((t, i) => {
-            const rawProg = (typeof t.progress === 'number') ? t.progress : (parseFloat(t.progress) || 0);
-            aoa.push([
-              i + 1,
-              t.machine || '',
-              t.category || '',
-              t.desc || '',
-              t.priority || 'Medium',
-              rawProg / 100,
-              t.status || 'Not Started',
-              t.responsible || '',
-              t.deadline || '',
-              t.remarks || ''
-            ]);
-          });
-          const ws = XLSX.utils.aoa_to_sheet(aoa);
-          const wb = XLSX.utils.book_new();
-          XLSX.utils.book_append_sheet(wb, ws, 'TRACKER');
-          XLSX.writeFile(wb, 'Aerosol_Tracker_' + dateStr + '.xlsx');
-          toast('Excel exported successfully \u2713', 'success');
-          return;
+        // Update table bounds to match all populated rows
+        const table = ws.getTable('Table1');
+        if (table) {
+          table.table.tableRef = 'A2:J' + Math.max(3, lastPopulatedRow);
+        }
+        ws.autoFilter = 'A2:J' + Math.max(3, lastPopulatedRow);
+
+        // Set TRACKER as active view tab
+        if (ws.views && ws.views.length > 0) {
+          ws.views[0].tabSelected = true;
         }
 
-        throw new Error('Excel library not available');
+        const buffer = await workbook.xlsx.writeBuffer();
+        const blob = new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'Aerosol_Tracker_' + new Date().toISOString().slice(0, 10) + '.xlsx';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        toast('Excel exported successfully \u2713', 'success');
+      } catch (err) {
+        console.error('[Export Error]', err);
+        toast('Export failed: ' + err.message, 'error');
+      }
+    }t = 'General';
+
+          // Col 5: Priority
+          const c5 = row.getCell(5);
+          c5.value = t.priority;
+          c5.font = fontArial10;
+          c5.fill = fillLightRed;
+          c5.border = borderThin;
+          c5.alignment = { horizontal: 'left', vertical: 'middle' };
+          c5.numFmt = 'General';
+
+          // Col 6: Progress
+          const c6 = row.getCell(6);
+          c6.value = (t.progress || 0) / 100;
+          c6.font = fontArial10;
+          c6.fill = fillLightBlue;
+          c6.border = borderThin;
+          c6.alignment = { horizontal: 'center', vertical: 'middle' };
+          c6.numFmt = '0%';
+
+          // Col 7: Status
+          const c7 = row.getCell(7);
+          c7.value = t.status;
+          c7.font = fontArial10BoldGreen;
+          c7.fill = fillLightGreen;
+          c7.border = borderThin;
+          c7.alignment = { horizontal: 'left', vertical: 'middle' };
+          c7.numFmt = 'General';
+
+          // Col 8: Responsible
+          const c8 = row.getCell(8);
+          c8.value = t.responsible || '';
+          c8.font = fontArial10BoldOrange;
+          c8.fill = fillLightYellow;
+          c8.border = borderThin;
+          c8.alignment = { horizontal: 'left', vertical: 'middle' };
+          c8.numFmt = 'General';
+
+          // Col 9: Deadline
+          const c9 = row.getCell(9);
+          c9.value = t.deadline ? new Date(t.deadline + 'T00:00:00') : '';
+          c9.font = fontArial10;
+          c9.fill = fillLightBlue;
+          c9.border = borderThin;
+          c9.alignment = { horizontal: 'left', vertical: 'middle' };
+          c9.numFmt = 'DD/MM/YYYY';
+
+          // Col 10: Remarks
+          const c10 = row.getCell(10);
+          c10.value = t.remarks || '';
+          c10.font = fontArial10;
+          c10.fill = fillLightBlue;
+          c10.border = borderThin;
+          c10.alignment = { horizontal: 'left', vertical: 'middle' };
+          c10.numFmt = 'General';
+
+          row.commit();
+        });
+
+        // Clear out any lingering rows below the populated data (e.g. if a task was deleted)
+        const totalRows = ws.rowCount;
+        const lastPopulatedRow = tasks.length + 2;
+        for (let r = lastPopulatedRow + 1; r <= totalRows; r++) {
+          const row = ws.getRow(r);
+          row.eachCell((cell) => { cell.value = null; });
+          row.commit();
+        }
+
+        // Update table bounds to match all populated rows
+        const table = ws.getTable('Table1');
+        if (table) {
+          table.table.tableRef = 'A2:J' + Math.max(3, lastPopulatedRow);
+        }
+        ws.autoFilter = 'A2:J' + Math.max(3, lastPopulatedRow);
+
+        // Set TRACKER as active view tab
+        if (ws.views && ws.views.length > 0) {
+          ws.views[0].tabSelected = true;
+        }
+
+        const buffer = await workbook.xlsx.writeBuffer();
+        const blob = new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'Aerosol_Tracker_' + new Date().toISOString().slice(0, 10) + '.xlsx';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        toast('Excel exported successfully \u2713', 'success');
+>>>>>>> b06938f (Fix Excel export formatting to match reference Aerosol_Tracker_2026-07-15.xlsx)
       } catch (err) {
         console.error('[Export Error]', err);
         toast('Export failed: ' + err.message, 'error');
