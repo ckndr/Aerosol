@@ -5711,6 +5711,11 @@
         
         const workbook = new ExcelJS.Workbook();
         await workbook.xlsx.load(arrayBuffer);
+
+        const howToSheet = workbook.getWorksheet('HOW TO UPDATE');
+        if (howToSheet) {
+          workbook.removeWorksheet(howToSheet.id);
+        }
         
         const ws = workbook.getWorksheet('TRACKER');
         if (!ws) throw new Error('TRACKER sheet missing in template');
@@ -5730,14 +5735,9 @@
 
         const fontArial10 = { name: 'Arial', size: 10, bold: false, color: { argb: 'FF212121' } };
         const fontArial10Gray = { name: 'Arial', size: 10, bold: false, color: { argb: 'FF757575' } };
-        const fontArial10BoldGreen = { name: 'Arial', size: 10, bold: true, color: { argb: 'FF2E7D32' } };
-        const fontArial10BoldOrange = { name: 'Arial', size: 10, bold: true, color: { argb: 'FFF57F17' } };
 
         const fillLightBlue = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFEBF3FB' } };
         const fillWhite = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFFFFFF' } };
-        const fillLightGreen = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFE8F5E9' } };
-        const fillLightYellow = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFFF9C4' } };
-        const fillLightRed = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFFCDD2' } };
 
         const taskList = (typeof tasks !== 'undefined' && Array.isArray(tasks)) ? tasks : [];
 
@@ -5786,7 +5786,7 @@
           const c5 = row.getCell(5);
           c5.value = t.priority || 'Medium';
           c5.font = fontArial10;
-          c5.fill = fillLightRed;
+          c5.fill = fillLightBlue;
           c5.border = borderThin;
           c5.alignment = { horizontal: 'left', vertical: 'middle' };
           c5.numFmt = 'General';
@@ -5804,8 +5804,8 @@
           // Col 7: Status
           const c7 = row.getCell(7);
           c7.value = t.status || 'Not Started';
-          c7.font = fontArial10BoldGreen;
-          c7.fill = fillLightGreen;
+          c7.font = fontArial10;
+          c7.fill = fillLightBlue;
           c7.border = borderThin;
           c7.alignment = { horizontal: 'left', vertical: 'middle' };
           c7.numFmt = 'General';
@@ -5813,8 +5813,8 @@
           // Col 8: Responsible
           const c8 = row.getCell(8);
           c8.value = t.responsible || '';
-          c8.font = fontArial10BoldOrange;
-          c8.fill = fillLightYellow;
+          c8.font = fontArial10;
+          c8.fill = fillLightBlue;
           c8.border = borderThin;
           c8.alignment = { horizontal: 'left', vertical: 'middle' };
           c8.numFmt = 'General';
