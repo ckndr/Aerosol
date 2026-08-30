@@ -4578,12 +4578,42 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t1788077639640v34d",
+      "machine": "Necking",
+      "category": "Electrical",
+      "desc": "Machine to be run on automatic mode.",
+      "priority": "High",
+      "progress": 0,
+      "status": "Not Started",
+      "remarks": "",
+      "responsible": "Arsalan",
+      "updated": "30 Aug 2026",
+      "createdBy": "Aurangzeb",
+      "lastEditedBy": "Aurangzeb",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1788077639640nzmx",
+      "time": "2026-08-30T08:13:59.640Z",
+      "action": "[Aurangzeb] Added task \"Machine to be run on automatic...\" to Necking",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1788077639640v34d"
+      },
+      "taskId": "t1788077639640v34d"
+    },
     {
       "id": "t1787481753015jwek",
       "time": "2026-08-23T10:42:33.015Z",
@@ -6752,17 +6782,6 @@
         "taskId": "t1784953510716o289"
       },
       "taskId": "t1784953510716o289"
-    },
-    {
-      "id": "t1784953493004fo58",
-      "time": "2026-07-25T04:24:53.004Z",
-      "action": "[Saqib] Added task \"Factory cleaning fumigation & ...\" to General",
-      "user": "Saqib",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1784953493004c7g2"
-      },
-      "taskId": "t1784953493004c7g2"
     }
   ],
   "machineMeta": {
@@ -7353,7 +7372,7 @@
   "activeSessions": {
     "Sikander": "2026-08-29T08:13:39.617Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
-    "Aurangzeb": "2026-08-30T07:41:31.101Z",
+    "Aurangzeb": "2026-08-30T08:13:59.641Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-08-21T07:27:35.387Z"
   }
