@@ -4414,12 +4414,12 @@
       "category": "Mechanical",
       "desc": "PVC ejection pipe to be installed",
       "priority": "Medium",
-      "progress": 0,
-      "status": "Pending Procurement",
+      "progress": 100,
+      "status": "Completed",
       "remarks": "",
       "responsible": "",
-      "updated": "25 Jul 2026",
-      "lastEditedBy": "Saqib",
+      "updated": "3 Sept 2026",
+      "lastEditedBy": "Aurangzeb",
       "image": null,
       "waitingOn": "",
       "deadline": "",
@@ -4603,6 +4603,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1788421021897jgxr",
+      "time": "2026-09-03T07:37:01.897Z",
+      "action": "[Aurangzeb] Updated task \"PVC ejection pipe to be instal...\" [Status: Pending Procurement → Completed, Progress: 0% → 100%] on Necking",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t17849790198225bj9",
+          "machine": "Necking",
+          "category": "Mechanical",
+          "desc": "PVC ejection pipe to be installed",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Pending Procurement",
+          "remarks": "",
+          "responsible": "",
+          "updated": "25 Jul 2026",
+          "lastEditedBy": "Saqib",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "createdBy": ""
+        }
+      },
+      "taskId": "t17849790198225bj9"
+    },
     {
       "id": "t1788077639640nzmx",
       "time": "2026-08-30T08:13:59.640Z",
@@ -6771,17 +6800,6 @@
         "taskId": "t17849535326684bqw"
       },
       "taskId": "t17849535326684bqw"
-    },
-    {
-      "id": "t178495351071675q1",
-      "time": "2026-07-25T04:25:10.716Z",
-      "action": "[Saqib] Added task \"money Plant for Factory...\" to General",
-      "user": "Saqib",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1784953510716o289"
-      },
-      "taskId": "t1784953510716o289"
     }
   ],
   "machineMeta": {
@@ -7412,7 +7430,7 @@
   "activeSessions": {
     "Sikander": "2026-09-02T09:43:02.726Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
-    "Aurangzeb": "2026-09-03T07:36:39.756Z",
+    "Aurangzeb": "2026-09-03T07:37:01.897Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
   }
