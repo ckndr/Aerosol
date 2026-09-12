@@ -5,7 +5,7 @@ color 0A
 
 echo =========================================
 echo   Push to GitHub — This Goes LIVE
-echo   https://ckndr.github.io/Aerosol/
+echo   https://ckndr.github.io/aerosol-tracker/
 echo =========================================
 echo.
 
@@ -78,7 +78,7 @@ if errorlevel 1 (
 echo.
 echo =========================================
 echo   LIVE — App updates in ~60 seconds
-echo   https://ckndr.github.io/Aerosol/
+echo   https://ckndr.github.io/aerosol-tracker/
 echo =========================================
 echo.
 pause
