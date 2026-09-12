@@ -2,7 +2,7 @@
 
 Live progress tracker for Alpha Containers (Pvt.) Ltd. Aerosol Plant installation.
 
-🔗 **Live App:** https://ckndr.github.io/Aerosol/index.html
+🔗 **Live App:** https://ckndr.github.io/aerosol-tracker/
 
 ---
 
