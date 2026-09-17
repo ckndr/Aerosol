@@ -7469,7 +7469,7 @@
       "commercialRun": "None"
     },
     "Lacquer Oven": {
-      "dryRun": "Pending",
+      "dryRun": "Complete",
       "referenceImages": [
         "Photos/Internal Lacquer Baking Oven/Internal Lacquer Baking Oven/IMG_20220518_140300.jpg",
         "Photos/Internal Lacquer Baking Oven/Internal Lacquer Baking Oven/IMG_20220518_140312.jpg",
@@ -7946,7 +7946,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-08-22T08:36:13.745Z",
-    "Aurangzeb": "2026-09-17T10:35:42.945Z",
+    "Aurangzeb": "2026-09-17T10:36:02.771Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-08-21T07:27:35.387Z"
