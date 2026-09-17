@@ -1526,12 +1526,12 @@
       "category": "Electrical",
       "desc": "closure of all cable trays/ panels",
       "priority": "High",
-      "progress": 30,
+      "progress": 60,
       "status": "In Progress",
       "responsible": "Arsalan",
       "deadline": "2026-06-25",
       "remarks": "",
-      "updated": "2 Jun 2026",
+      "updated": "17 Sept 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -4699,6 +4699,35 @@
   },
   "activityLog": [
     {
+      "id": "t17896297819265lwd",
+      "time": "2026-09-17T07:23:01.926Z",
+      "action": "[Aurangzeb] Updated task \"closure of all cable trays/ pa...\" [Progress: 30% → 60%] on Over Varnish",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_967900",
+          "machine": "Over Varnish",
+          "category": "Electrical",
+          "desc": "closure of all cable trays/ panels",
+          "priority": "High",
+          "progress": 30,
+          "status": "In Progress",
+          "responsible": "Arsalan",
+          "deadline": "2026-06-25",
+          "remarks": "",
+          "updated": "2 Jun 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": "Photos/Over Varnish/task_img_1780376199070.jpg",
+          "createdBy": ""
+        }
+      },
+      "taskId": "t_967900"
+    },
+    {
       "id": "t1789629773822p404",
       "time": "2026-09-17T07:22:53.822Z",
       "action": "[Aurangzeb] Updated task \"Fumes collection box to be ins...\" [Status: In Progress → Completed, Progress: 0% → 100%] on Over Varnish",
@@ -7238,17 +7267,6 @@
         "taskId": "t1784978723078niei"
       },
       "taskId": "t1784978723078niei"
-    },
-    {
-      "id": "t1784978706974andy",
-      "time": "2026-07-25T11:25:06.974Z",
-      "action": "[Saqib] Added task \"PLC Automation and termination...\" to Base Coat",
-      "user": "Saqib",
-      "undoData": {
-        "type": "add",
-        "taskId": "t17849787069748q2p"
-      },
-      "taskId": "t17849787069748q2p"
     }
   ],
   "machineMeta": {
@@ -7802,7 +7820,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-08-22T08:36:13.745Z",
-    "Aurangzeb": "2026-09-17T07:22:53.822Z",
+    "Aurangzeb": "2026-09-17T07:23:01.926Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-08-21T07:27:35.387Z"
