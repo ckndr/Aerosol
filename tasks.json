@@ -4773,8 +4773,8 @@
       "id": "t17896302659340znx",
       "machine": "Accumulator",
       "category": "Electrical",
-      "desc": "control logic to made with sensors and limit switches for proper automatic fuction.",
-      "priority": "Medium",
+      "desc": "control logic to made with sensors and limit switches and other requisites for proper automatic fuction.",
+      "priority": "High",
       "progress": 0,
       "status": "Not Started",
       "remarks": "",
@@ -4793,6 +4793,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1789630398462gsw2",
+      "time": "2026-09-17T07:33:18.462Z",
+      "action": "[Aurangzeb] Updated task \"control logic to made with sen...\" [Priority: Medium → High] on Accumulator",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t17896302659340znx",
+          "machine": "Accumulator",
+          "category": "Electrical",
+          "desc": "control logic to made with sensors and limit switches for proper automatic fuction.",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "remarks": "",
+          "responsible": "",
+          "updated": "17 Sept 2026",
+          "createdBy": "Aurangzeb",
+          "lastEditedBy": "Aurangzeb",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t17896302659340znx"
+    },
     {
       "id": "t17896302659348z9i",
       "time": "2026-09-17T07:31:05.934Z",
@@ -7284,35 +7313,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1784978926414wo8p",
-      "time": "2026-07-25T11:28:46.414Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_297468",
-            "machine": "Washing",
-            "category": "Mechanical",
-            "desc": "Washing unit drain flexible pipes after tank installation",
-            "priority": "High",
-            "progress": 0,
-            "status": "Not Started",
-            "responsible": "Arsalan",
-            "deadline": "2026-06-30",
-            "remarks": "",
-            "updated": "1 Jun 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Aurangzeb",
-            "image": "Photos/Washing/task_img_1780311943122.jpg"
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -7866,7 +7866,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-08-22T08:36:13.745Z",
-    "Aurangzeb": "2026-09-17T07:31:05.934Z",
+    "Aurangzeb": "2026-09-17T07:33:18.462Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-08-21T07:27:35.387Z"
