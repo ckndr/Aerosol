@@ -1450,12 +1450,12 @@
       "category": "Electrical",
       "desc": "Necking machine — electrical supply troubleshooting for dry run",
       "priority": "High",
-      "progress": 60,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "Interlocking will be redesigned and checked",
-      "updated": "2 Jun 2026",
+      "updated": "17 Sept 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -4699,6 +4699,35 @@
   },
   "activityLog": [
     {
+      "id": "t1789629807830hamx",
+      "time": "2026-09-17T07:23:27.830Z",
+      "action": "[Aurangzeb] Updated task \"Necking machine — electrical s...\" [Status: In Progress → Completed, Progress: 60% → 100%] on Necking",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_974583",
+          "machine": "Necking",
+          "category": "Electrical",
+          "desc": "Necking machine — electrical supply troubleshooting for dry run",
+          "priority": "High",
+          "progress": 60,
+          "status": "In Progress",
+          "responsible": "Arsalan",
+          "deadline": "",
+          "remarks": "Interlocking will be redesigned and checked",
+          "updated": "2 Jun 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": "Photos/Necking/task_img_1780376966258.jpg",
+          "createdBy": ""
+        }
+      },
+      "taskId": "t_974583"
+    },
+    {
       "id": "t17896297819265lwd",
       "time": "2026-09-17T07:23:01.926Z",
       "action": "[Aurangzeb] Updated task \"closure of all cable trays/ pa...\" [Progress: 30% → 60%] on Over Varnish",
@@ -7256,17 +7285,6 @@
         "taskId": "t1784978758502k69e"
       },
       "taskId": "t1784978758502k69e"
-    },
-    {
-      "id": "t178497872307834yf",
-      "time": "2026-07-25T11:25:23.078Z",
-      "action": "[Saqib] Added task \"PLC Automation and termination...\" to Over Varnish",
-      "user": "Saqib",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1784978723078niei"
-      },
-      "taskId": "t1784978723078niei"
     }
   ],
   "machineMeta": {
@@ -7820,7 +7838,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-08-22T08:36:13.745Z",
-    "Aurangzeb": "2026-09-17T07:23:01.926Z",
+    "Aurangzeb": "2026-09-17T07:23:27.830Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-08-21T07:27:35.387Z"
