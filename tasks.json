@@ -3746,15 +3746,15 @@
     {
       "id": "t1784953175631hd5z",
       "machine": "Trimming",
-      "category": "Mechanical",
+      "category": "Electrical",
       "desc": "Installation of a VFD with Speed Adjustment",
       "priority": "Medium",
-      "progress": 0,
-      "status": "Pending Procurement",
+      "progress": 100,
+      "status": "Completed",
       "remarks": "",
       "responsible": "",
-      "updated": "25 Jul 2026",
-      "lastEditedBy": "Saqib",
+      "updated": "17 Sept 2026",
+      "lastEditedBy": "Aurangzeb",
       "image": null,
       "waitingOn": "",
       "deadline": "",
@@ -4584,6 +4584,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17896287876963rmp",
+      "time": "2026-09-17T07:06:27.696Z",
+      "action": "[Aurangzeb] Updated task \"Installation of a VFD with Spe...\" [Status: Pending Procurement → Completed, Progress: 0% → 100%] on Trimming",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1784953175631hd5z",
+          "machine": "Trimming",
+          "category": "Mechanical",
+          "desc": "Installation of a VFD with Speed Adjustment",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Pending Procurement",
+          "remarks": "",
+          "responsible": "",
+          "updated": "25 Jul 2026",
+          "lastEditedBy": "Saqib",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "createdBy": ""
+        }
+      },
+      "taskId": "t1784953175631hd5z"
+    },
     {
       "id": "t1789626677608ao92",
       "time": "2026-09-17T06:31:17.608Z",
@@ -6914,17 +6943,6 @@
         "taskId": "t1784953688572m1qq"
       },
       "taskId": "t1784953688572m1qq"
-    },
-    {
-      "id": "t17849536741411zfr",
-      "time": "2026-07-25T04:27:54.141Z",
-      "action": "[Saqib] Added task \"Mechanical Basic Tools to be o...\" to General",
-      "user": "Saqib",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1784953674141abt5"
-      },
-      "taskId": "t1784953674141abt5"
     }
   ],
   "machineMeta": {
@@ -7478,7 +7496,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-08-22T08:36:13.745Z",
-    "Aurangzeb": "2026-09-17T07:05:14.311Z",
+    "Aurangzeb": "2026-09-17T07:06:27.696Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-08-21T07:27:35.387Z"
