@@ -4034,12 +4034,12 @@
       "category": "Mechanical",
       "desc": "Mechanical Basic Tools to be ordered",
       "priority": "Medium",
-      "progress": 0,
+      "progress": 10,
       "status": "Not Started",
       "remarks": "",
       "responsible": "",
-      "updated": "25 Jul 2026",
-      "lastEditedBy": "Saqib",
+      "updated": "17 Sept 2026",
+      "lastEditedBy": "Aurangzeb",
       "image": null,
       "waitingOn": "",
       "deadline": "",
@@ -4850,6 +4850,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1789641234953ft0c",
+      "time": "2026-09-17T10:33:54.953Z",
+      "action": "[Aurangzeb] Updated task \"Mechanical Basic Tools to be o...\" [Progress: 0% → 10%] on General",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1784953674141abt5",
+          "machine": "General",
+          "category": "Mechanical",
+          "desc": "Mechanical Basic Tools to be ordered",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "remarks": "",
+          "responsible": "",
+          "updated": "25 Jul 2026",
+          "lastEditedBy": "Saqib",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "createdBy": ""
+        }
+      },
+      "taskId": "t1784953674141abt5"
+    },
     {
       "id": "t1789641227498bgqi",
       "time": "2026-09-17T10:33:47.498Z",
@@ -7328,35 +7357,6 @@
         "taskId": "t1785217396485296r"
       },
       "taskId": "t1785217396485296r"
-    },
-    {
-      "id": "t1784979278351ui4u",
-      "time": "2026-07-25T11:34:38.351Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_569875",
-            "machine": "Necking",
-            "category": "Mechanical",
-            "desc": "Conveyor installation after ejection pipe",
-            "priority": "Medium",
-            "progress": 70,
-            "status": "In Progress",
-            "responsible": "Arsalan",
-            "deadline": "",
-            "remarks": "",
-            "updated": "18 Jul 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Aurangzeb",
-            "image": "Photos/Necking/task_img_1780377094432.jpg"
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -7910,7 +7910,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-08-22T08:36:13.745Z",
-    "Aurangzeb": "2026-09-17T10:33:47.498Z",
+    "Aurangzeb": "2026-09-17T10:33:54.953Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-08-21T07:27:35.387Z"
