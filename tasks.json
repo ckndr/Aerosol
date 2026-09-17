@@ -405,16 +405,16 @@
       "category": "Electrical",
       "desc": "Heaters to be checked and replaced if required",
       "priority": "High",
-      "progress": 80,
-      "status": "Pending Procurement",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "sample needed for ordering",
-      "updated": "5 Aug 2026",
+      "updated": "17 Sept 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Saqib",
+      "lastEditedBy": "Aurangzeb",
       "image": "Photos/Decoration Oven/task_img_1780375380135.jpg",
       "createdBy": ""
     },
@@ -4680,6 +4680,35 @@
   },
   "activityLog": [
     {
+      "id": "t1789629523135ahif",
+      "time": "2026-09-17T07:18:43.135Z",
+      "action": "[Aurangzeb] Updated task \"Heaters to be checked and repl...\" [Status: Pending Procurement → Completed, Progress: 80% → 100%] on Decoration Oven",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_224710",
+          "machine": "Decoration Oven",
+          "category": "Electrical",
+          "desc": "Heaters to be checked and replaced if required",
+          "priority": "High",
+          "progress": 80,
+          "status": "Pending Procurement",
+          "responsible": "Arsalan",
+          "deadline": "",
+          "remarks": "sample needed for ordering",
+          "updated": "5 Aug 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Saqib",
+          "image": "Photos/Decoration Oven/task_img_1780375380135.jpg",
+          "createdBy": ""
+        }
+      },
+      "taskId": "t_224710"
+    },
+    {
       "id": "t1789629474118yfk6",
       "time": "2026-09-17T07:17:54.119Z",
       "action": "[Aurangzeb] Added task \"Unit 6 rollers are not operati...\" to Printing",
@@ -7141,34 +7170,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1784978449430mgyh",
-      "time": "2026-07-25T11:20:49.430Z",
-      "action": "[Saqib] Updated task \"Oven back metallic cover sheet...\" on Lacquer Oven",
-      "user": "Saqib",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_922079",
-          "machine": "Lacquer Oven",
-          "category": "Mechanical",
-          "desc": "Oven back metallic cover sheet to place",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "deadline": "2026-06-15",
-          "remarks": "",
-          "updated": "1 Jun 2026",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "Aurangzeb",
-          "image": "Photos/Lacquer Oven/task_img_1780313004800.jpg"
-        }
-      },
-      "taskId": "t_922079"
     }
   ],
   "machineMeta": {
@@ -7722,7 +7723,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-08-22T08:36:13.745Z",
-    "Aurangzeb": "2026-09-17T07:17:54.119Z",
+    "Aurangzeb": "2026-09-17T07:18:43.135Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-08-21T07:27:35.387Z"
