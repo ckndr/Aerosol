@@ -443,12 +443,12 @@
       "category": "Electrical",
       "desc": "temperature gauges to be checked & installed",
       "priority": "High",
-      "progress": 70,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "",
-      "updated": "2 Jun 2026",
+      "updated": "17 Sept 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -4680,6 +4680,35 @@
   },
   "activityLog": [
     {
+      "id": "t1789629534991gzy8",
+      "time": "2026-09-17T07:18:54.991Z",
+      "action": "[Aurangzeb] Updated task \"temperature gauges to be check...\" [Status: In Progress → Completed, Progress: 70% → 100%] on Decoration Oven",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_593209",
+          "machine": "Decoration Oven",
+          "category": "Electrical",
+          "desc": "temperature gauges to be checked & installed",
+          "priority": "High",
+          "progress": 70,
+          "status": "In Progress",
+          "responsible": "Arsalan",
+          "deadline": "",
+          "remarks": "",
+          "updated": "2 Jun 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": "Photos/Decoration Oven/task_img_1780375031540.jpg",
+          "createdBy": ""
+        }
+      },
+      "taskId": "t_593209"
+    },
+    {
       "id": "t1789629523135ahif",
       "time": "2026-09-17T07:18:43.135Z",
       "action": "[Aurangzeb] Updated task \"Heaters to be checked and repl...\" [Status: Pending Procurement → Completed, Progress: 80% → 100%] on Decoration Oven",
@@ -7141,35 +7170,6 @@
         "taskId": "t1784978474014axuk"
       },
       "taskId": "t1784978474014axuk"
-    },
-    {
-      "id": "t1784978454934b1vz",
-      "time": "2026-07-25T11:20:54.934Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t1784874186411zegf",
-            "machine": "Lacquer Oven",
-            "category": "Mechanical",
-            "desc": "Dry Run with Lacquer",
-            "priority": "High",
-            "progress": 0,
-            "status": "Not Started",
-            "remarks": "",
-            "responsible": "",
-            "updated": "24 Jul 2026",
-            "lastEditedBy": "Saqib",
-            "image": null,
-            "waitingOn": "",
-            "deadline": "",
-            "dateStarted": "",
-            "dateFinished": ""
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -7723,7 +7723,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-08-22T08:36:13.745Z",
-    "Aurangzeb": "2026-09-17T07:18:43.135Z",
+    "Aurangzeb": "2026-09-17T07:18:54.991Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-08-21T07:27:35.387Z"
