@@ -4825,12 +4825,42 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t1789641034137njr2",
+      "machine": "Manual Strapping Machine",
+      "category": "Mechanical",
+      "desc": "dry run",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "Not Started",
+      "remarks": "",
+      "responsible": "",
+      "updated": "17 Sept 2026",
+      "createdBy": "Aurangzeb",
+      "lastEditedBy": "Aurangzeb",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1789641034137k7om",
+      "time": "2026-09-17T10:30:34.137Z",
+      "action": "[Aurangzeb] Added task \"dry run...\" to Manual Strapping Machine",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1789641034137njr2"
+      },
+      "taskId": "t1789641034137njr2"
+    },
     {
       "id": "t1789640993322brox",
       "time": "2026-09-17T10:29:53.322Z",
@@ -7286,35 +7316,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1784978960799rmak",
-      "time": "2026-07-25T11:29:20.799Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t1784022464368t9dx",
-            "machine": "Press",
-            "category": "Mechanical",
-            "desc": "Lubrication oil leakages to be rectified",
-            "priority": "Medium",
-            "progress": 100,
-            "status": "In Progress",
-            "responsible": "Arsalan",
-            "deadline": "",
-            "remarks": "",
-            "updated": "25 Jul 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Saqib",
-            "image": null
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -7868,7 +7869,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-08-22T08:36:13.745Z",
-    "Aurangzeb": "2026-09-17T10:29:53.322Z",
+    "Aurangzeb": "2026-09-17T10:30:34.137Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-08-21T07:27:35.387Z"
