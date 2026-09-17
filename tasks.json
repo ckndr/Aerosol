@@ -2743,7 +2743,7 @@
       "desc": "closure of all cable trays/ panels",
       "priority": "High",
       "progress": 80,
-      "status": "Not Started",
+      "status": "In Progress",
       "responsible": "Arsalan",
       "deadline": "2026-06-19",
       "remarks": "main cable to panel connections pending",
@@ -4850,6 +4850,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1789641464730lgsr",
+      "time": "2026-09-17T10:37:44.730Z",
+      "action": "[Aurangzeb] Updated task \"closure of all cable trays/ pa...\" [Status: Not Started → In Progress] on Trimming",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_461252",
+          "machine": "Trimming",
+          "category": "Electrical",
+          "desc": "closure of all cable trays/ panels",
+          "priority": "High",
+          "progress": 80,
+          "status": "Not Started",
+          "responsible": "Arsalan",
+          "deadline": "2026-06-19",
+          "remarks": "main cable to panel connections pending",
+          "updated": "17 Sept 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": "Photos/Trimming/task_img_1780311378372.jpg",
+          "createdBy": ""
+        }
+      },
+      "taskId": "t_461252"
+    },
     {
       "id": "t1789641449065yhvd",
       "time": "2026-09-17T10:37:29.065Z",
@@ -7402,17 +7431,6 @@
         }
       },
       "taskId": "t_951895"
-    },
-    {
-      "id": "t1785566960971mci4",
-      "time": "2026-08-01T06:49:20.971Z",
-      "action": "[Aurangzeb] Added task \"plc issue emergency not reseti...\" to Lacquer",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1785566960971gi4r"
-      },
-      "taskId": "t1785566960971gi4r"
     }
   ],
   "machineMeta": {
@@ -7966,7 +7984,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-08-22T08:36:13.745Z",
-    "Aurangzeb": "2026-09-17T10:37:29.065Z",
+    "Aurangzeb": "2026-09-17T10:37:44.730Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-08-21T07:27:35.387Z"
