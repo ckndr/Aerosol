@@ -4768,12 +4768,42 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t17896302659340znx",
+      "machine": "Accumulator",
+      "category": "Electrical",
+      "desc": "control logic to made with sensors and limit switches for proper automatic fuction.",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "Not Started",
+      "remarks": "",
+      "responsible": "",
+      "updated": "17 Sept 2026",
+      "createdBy": "Aurangzeb",
+      "lastEditedBy": "Aurangzeb",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17896302659348z9i",
+      "time": "2026-09-17T07:31:05.934Z",
+      "action": "[Aurangzeb] Added task \"control logic to made with sen...\" to Accumulator",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "add",
+        "taskId": "t17896302659340znx"
+      },
+      "taskId": "t17896302659340znx"
+    },
     {
       "id": "t1789630182534t1i1",
       "time": "2026-09-17T07:29:42.534Z",
@@ -7283,35 +7313,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t17849788975506ucs",
-      "time": "2026-07-25T11:28:17.550Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_990649",
-            "machine": "Washing",
-            "category": "Mechanical",
-            "desc": "Washing machine piping and blower installation",
-            "priority": "High",
-            "progress": 90,
-            "status": "In Progress",
-            "responsible": "Arsalan",
-            "deadline": "2026-06-30",
-            "remarks": "",
-            "updated": "1 Jun 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Aurangzeb",
-            "image": "Photos/Washing/task_img_1780311879107.jpg"
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -7865,7 +7866,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-08-22T08:36:13.745Z",
-    "Aurangzeb": "2026-09-17T07:29:42.534Z",
+    "Aurangzeb": "2026-09-17T07:31:05.934Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-08-21T07:27:35.387Z"
