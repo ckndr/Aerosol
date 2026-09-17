@@ -4547,13 +4547,13 @@
       "category": "Electrical",
       "desc": "wire from the transformer to the main panel.",
       "priority": "Medium",
-      "progress": 88,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "remarks": "",
       "responsible": "",
-      "updated": "21 Aug 2026",
+      "updated": "17 Sept 2026",
       "createdBy": "Bilal",
-      "lastEditedBy": "Bilal",
+      "lastEditedBy": "Aurangzeb",
       "image": null,
       "waitingOn": "",
       "deadline": "",
@@ -4850,6 +4850,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1789641158538hjd9",
+      "time": "2026-09-17T10:32:38.538Z",
+      "action": "[Aurangzeb] Updated task \"wire from the transformer to t...\" [Status: In Progress → Completed, Progress: 88% → 100%] on Main Power Distribution",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1787297588327iqgi",
+          "machine": "Main Power Distribution",
+          "category": "Electrical",
+          "desc": "wire from the transformer to the main panel.",
+          "priority": "Medium",
+          "progress": 88,
+          "status": "In Progress",
+          "remarks": "",
+          "responsible": "",
+          "updated": "21 Aug 2026",
+          "createdBy": "Bilal",
+          "lastEditedBy": "Bilal",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t1787297588327iqgi"
+    },
     {
       "id": "t1789641151265twm0",
       "time": "2026-09-17T10:32:31.265Z",
@@ -7326,34 +7355,6 @@
         }
       },
       "taskId": "t_963673"
-    },
-    {
-      "id": "t1784979151575epv6",
-      "time": "2026-07-25T11:32:31.575Z",
-      "action": "[Saqib] Updated task \"Machine Operating Manuals...\" [Status: In Progress → Pending Procurement] on General",
-      "user": "Saqib",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_938713",
-          "machine": "General",
-          "category": "General",
-          "desc": "Machine Operating Manuals",
-          "priority": "Medium",
-          "progress": 10,
-          "status": "In Progress",
-          "responsible": "Saqib",
-          "deadline": "",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "",
-          "image": ""
-        }
-      },
-      "taskId": "t_938713"
     }
   ],
   "machineMeta": {
@@ -7907,7 +7908,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-08-22T08:36:13.745Z",
-    "Aurangzeb": "2026-09-17T10:32:31.265Z",
+    "Aurangzeb": "2026-09-17T10:32:38.538Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-08-21T07:27:35.387Z"
