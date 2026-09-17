@@ -1507,12 +1507,12 @@
       "category": "Mechanical",
       "desc": "Spare Rubberize rollers",
       "priority": "High",
-      "progress": 60,
-      "status": "Pending Procurement",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Saqib",
       "deadline": "2026-06-25",
       "remarks": "Rollers made not according to req. spec. need to be remade.",
-      "updated": "18 Jul 2026",
+      "updated": "17 Sept 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -4699,6 +4699,35 @@
   },
   "activityLog": [
     {
+      "id": "t17896297360869znc",
+      "time": "2026-09-17T07:22:16.086Z",
+      "action": "[Aurangzeb] Updated task \"Spare Rubberize rollers...\" [Status: Pending Procurement → Completed, Progress: 60% → 100%] on Over Varnish",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_895006",
+          "machine": "Over Varnish",
+          "category": "Mechanical",
+          "desc": "Spare Rubberize rollers",
+          "priority": "High",
+          "progress": 60,
+          "status": "Pending Procurement",
+          "responsible": "Saqib",
+          "deadline": "2026-06-25",
+          "remarks": "Rollers made not according to req. spec. need to be remade.",
+          "updated": "18 Jul 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": null,
+          "createdBy": ""
+        }
+      },
+      "taskId": "t_895006"
+    },
+    {
       "id": "t1789629729750p4es",
       "time": "2026-09-17T07:22:09.750Z",
       "action": "[Aurangzeb] Updated task \"PLC Automation and termination...\" [Status: In Progress → Completed, Progress: 0% → 100%] on Over Varnish",
@@ -7198,34 +7227,6 @@
         }
       },
       "taskId": "t1784953305116dkly"
-    },
-    {
-      "id": "t1784978584398315k",
-      "time": "2026-07-25T11:23:04.398Z",
-      "action": "[Saqib] Updated task \"rejection box for trim collect...\" [Status: Not Started → Pending Procurement] on Trimming",
-      "user": "Saqib",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t17849532213243tpd",
-          "machine": "Trimming",
-          "category": "Mechanical",
-          "desc": "rejection box for trim collection",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Not Started",
-          "remarks": "",
-          "responsible": "",
-          "updated": "25 Jul 2026",
-          "lastEditedBy": "Saqib",
-          "image": null,
-          "waitingOn": "",
-          "deadline": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t17849532213243tpd"
     }
   ],
   "machineMeta": {
@@ -7779,7 +7780,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-08-22T08:36:13.745Z",
-    "Aurangzeb": "2026-09-17T07:22:09.750Z",
+    "Aurangzeb": "2026-09-17T07:22:16.087Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-08-21T07:27:35.387Z"
