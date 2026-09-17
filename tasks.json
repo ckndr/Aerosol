@@ -1564,12 +1564,12 @@
       "category": "Mechanical",
       "desc": "varnish pump placement and installation with piping",
       "priority": "High",
-      "progress": 10,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "2026-06-25",
       "remarks": "",
-      "updated": "18 Jul 2026",
+      "updated": "17 Sept 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -4699,6 +4699,35 @@
   },
   "activityLog": [
     {
+      "id": "t1789629748358klr1",
+      "time": "2026-09-17T07:22:28.358Z",
+      "action": "[Aurangzeb] Updated task \"varnish pump placement and ins...\" [Status: In Progress → Completed, Progress: 10% → 100%] on Over Varnish",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_993093",
+          "machine": "Over Varnish",
+          "category": "Mechanical",
+          "desc": "varnish pump placement and installation with piping",
+          "priority": "High",
+          "progress": 10,
+          "status": "In Progress",
+          "responsible": "Arsalan",
+          "deadline": "2026-06-25",
+          "remarks": "",
+          "updated": "18 Jul 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": "Photos/Over Varnish/task_img_1780376684449.jpg",
+          "createdBy": ""
+        }
+      },
+      "taskId": "t_993093"
+    },
+    {
       "id": "t17896297360869znc",
       "time": "2026-09-17T07:22:16.086Z",
       "action": "[Aurangzeb] Updated task \"Spare Rubberize rollers...\" [Status: Pending Procurement → Completed, Progress: 60% → 100%] on Over Varnish",
@@ -7199,34 +7228,6 @@
         }
       },
       "taskId": "t_186924"
-    },
-    {
-      "id": "t1784978601678ylrj",
-      "time": "2026-07-25T11:23:21.678Z",
-      "action": "[Saqib] Updated task \"procurement of Can Holders...\" [Status: In Progress → Pending Procurement] on Lacquer",
-      "user": "Saqib",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t1784953305116dkly",
-          "machine": "Lacquer",
-          "category": "Mechanical",
-          "desc": "procurement of Can Holders",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "In Progress",
-          "remarks": "",
-          "responsible": "",
-          "updated": "25 Jul 2026",
-          "lastEditedBy": "Saqib",
-          "image": null,
-          "waitingOn": "",
-          "deadline": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t1784953305116dkly"
     }
   ],
   "machineMeta": {
@@ -7780,7 +7781,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-08-22T08:36:13.745Z",
-    "Aurangzeb": "2026-09-17T07:22:16.087Z",
+    "Aurangzeb": "2026-09-17T07:22:28.358Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-08-21T07:27:35.387Z"
