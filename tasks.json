@@ -4395,12 +4395,12 @@
       "category": "Mechanical",
       "desc": "PVC ejection pipe to be installed",
       "priority": "Medium",
-      "progress": 0,
-      "status": "Pending Procurement",
+      "progress": 100,
+      "status": "Completed",
       "remarks": "",
       "responsible": "",
-      "updated": "25 Jul 2026",
-      "lastEditedBy": "Saqib",
+      "updated": "17 Sept 2026",
+      "lastEditedBy": "Aurangzeb",
       "image": null,
       "waitingOn": "",
       "deadline": "",
@@ -4717,6 +4717,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17896298765746pgw",
+      "time": "2026-09-17T07:24:36.574Z",
+      "action": "[Aurangzeb] Updated task \"PVC ejection pipe to be instal...\" [Status: Pending Procurement → Completed, Progress: 0% → 100%] on Necking",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t17849790198225bj9",
+          "machine": "Necking",
+          "category": "Mechanical",
+          "desc": "PVC ejection pipe to be installed",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Pending Procurement",
+          "remarks": "",
+          "responsible": "",
+          "updated": "25 Jul 2026",
+          "lastEditedBy": "Saqib",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "createdBy": ""
+        }
+      },
+      "taskId": "t17849790198225bj9"
+    },
     {
       "id": "t1789629853838ax9k",
       "time": "2026-09-17T07:24:13.838Z",
@@ -7278,33 +7307,6 @@
         }
       },
       "taskId": "t17849533700399wqu"
-    },
-    {
-      "id": "t1784978805870x2vs",
-      "time": "2026-07-25T11:26:45.870Z",
-      "action": "[Saqib] Deleted task \"scrap collector container to b...\" from General",
-      "user": "Saqib",
-      "undoData": {
-        "type": "delete",
-        "prevTask": {
-          "id": "t_895031",
-          "machine": "General",
-          "category": "Mechanical",
-          "desc": "scrap collector container to be made/procured for trimming",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Saqib",
-          "deadline": "",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "",
-          "image": ""
-        }
-      }
     }
   ],
   "machineMeta": {
@@ -7858,7 +7860,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-08-22T08:36:13.745Z",
-    "Aurangzeb": "2026-09-17T07:24:13.838Z",
+    "Aurangzeb": "2026-09-17T07:24:36.574Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-08-21T07:27:35.387Z"
