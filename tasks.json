@@ -4319,12 +4319,12 @@
       "category": "Electrical",
       "desc": "PLC Automation and termination",
       "priority": "Medium",
-      "progress": 0,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "remarks": "",
       "responsible": "",
-      "updated": "5 Aug 2026",
-      "lastEditedBy": "Saqib",
+      "updated": "17 Sept 2026",
+      "lastEditedBy": "Aurangzeb",
       "image": null,
       "waitingOn": "",
       "deadline": "",
@@ -4584,6 +4584,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17896290774632aqq",
+      "time": "2026-09-17T07:11:17.463Z",
+      "action": "[Aurangzeb] Updated task \"PLC Automation and termination...\" [Status: In Progress → Completed, Progress: 0% → 100%] on Printing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1784978694854svhk",
+          "machine": "Printing",
+          "category": "Electrical",
+          "desc": "PLC Automation and termination",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "In Progress",
+          "remarks": "",
+          "responsible": "",
+          "updated": "5 Aug 2026",
+          "lastEditedBy": "Saqib",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "createdBy": ""
+        }
+      },
+      "taskId": "t1784978694854svhk"
+    },
     {
       "id": "t1789629071055cdej",
       "time": "2026-09-17T07:11:11.055Z",
@@ -7041,17 +7070,6 @@
         "taskId": "t1784954201453y733"
       },
       "taskId": "t1784954201453y733"
-    },
-    {
-      "id": "t1784954178108azb6",
-      "time": "2026-07-25T04:36:18.108Z",
-      "action": "[Saqib] Added task \"electrical Connection of auto ...\" to Compressor",
-      "user": "Saqib",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1784954178108dcem"
-      },
-      "taskId": "t1784954178108dcem"
     }
   ],
   "machineMeta": {
@@ -7605,7 +7623,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-08-22T08:36:13.745Z",
-    "Aurangzeb": "2026-09-17T07:11:11.055Z",
+    "Aurangzeb": "2026-09-17T07:11:17.463Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-08-21T07:27:35.387Z"
