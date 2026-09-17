@@ -4696,7 +4696,7 @@
     {
       "id": "t1789629847462s6su",
       "machine": "Necking",
-      "category": "Mechanical",
+      "category": "Electrical",
       "desc": "main cable connection with breaker pending.",
       "priority": "Medium",
       "progress": 0,
@@ -4717,6 +4717,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1789629853838ax9k",
+      "time": "2026-09-17T07:24:13.838Z",
+      "action": "[Aurangzeb] Updated task \"main cable connection with bre...\" on Necking",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1789629847462s6su",
+          "machine": "Necking",
+          "category": "Mechanical",
+          "desc": "main cable connection with breaker pending.",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "remarks": "",
+          "responsible": "",
+          "updated": "17 Sept 2026",
+          "createdBy": "Aurangzeb",
+          "lastEditedBy": "Aurangzeb",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t1789629847462s6su"
+    },
     {
       "id": "t178962984746225nz",
       "time": "2026-09-17T07:24:07.462Z",
@@ -7276,34 +7305,6 @@
           "image": ""
         }
       }
-    },
-    {
-      "id": "t1784978780030dssu",
-      "time": "2026-07-25T11:26:20.030Z",
-      "action": "[Saqib] Updated task \"Mixer installation and mountin...\" [Status: Not Started → Completed] on Tumbler",
-      "user": "Saqib",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_385603",
-          "machine": "Tumbler",
-          "category": "Electrical",
-          "desc": "Mixer installation and automation — auto feeding flow design",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Not Started",
-          "responsible": "Arsalan",
-          "deadline": "",
-          "remarks": "change of plan",
-          "updated": "18 Jul 2026",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "Aurangzeb",
-          "image": null
-        }
-      },
-      "taskId": "t_385603"
     }
   ],
   "machineMeta": {
@@ -7857,7 +7858,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-08-22T08:36:13.745Z",
-    "Aurangzeb": "2026-09-17T07:24:07.462Z",
+    "Aurangzeb": "2026-09-17T07:24:13.838Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-08-21T07:27:35.387Z"
