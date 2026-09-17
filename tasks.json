@@ -4376,12 +4376,12 @@
       "category": "Mechanical",
       "desc": "Accumulator dry run with printing unit",
       "priority": "Medium",
-      "progress": 0,
+      "progress": 50,
       "status": "In Progress",
-      "remarks": "",
+      "remarks": "chain derails, issue is being resolved",
       "responsible": "",
-      "updated": "25 Jul 2026",
-      "lastEditedBy": "Saqib",
+      "updated": "17 Sept 2026",
+      "lastEditedBy": "Aurangzeb",
       "image": null,
       "waitingOn": "",
       "deadline": "",
@@ -4774,6 +4774,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1789630182534t1i1",
+      "time": "2026-09-17T07:29:42.534Z",
+      "action": "[Aurangzeb] Updated task \"Accumulator dry run with print...\" [Progress: 0% → 50%, Remarks updated] on Accumulator",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1784978758502k69e",
+          "machine": "Accumulator",
+          "category": "Mechanical",
+          "desc": "Accumulator dry run with printing unit",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "In Progress",
+          "remarks": "",
+          "responsible": "",
+          "updated": "25 Jul 2026",
+          "lastEditedBy": "Saqib",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "createdBy": ""
+        }
+      },
+      "taskId": "t1784978758502k69e"
+    },
     {
       "id": "t1789630136023sxxs",
       "time": "2026-09-17T07:28:56.023Z",
@@ -7283,35 +7312,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1784978891742hr7h",
-      "time": "2026-07-25T11:28:11.742Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_788779",
-            "machine": "Washing",
-            "category": "Mechanical",
-            "desc": "Inspect all rubber pipes — replace if damaged",
-            "priority": "High",
-            "progress": 0,
-            "status": "Not Started",
-            "responsible": "Arsalan",
-            "deadline": "2026-06-30",
-            "remarks": "",
-            "updated": "13 Jul 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Saqib",
-            "image": "Photos/Washing/task_img_1780312620376.jpg"
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -7865,7 +7865,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-08-22T08:36:13.745Z",
-    "Aurangzeb": "2026-09-17T07:28:56.023Z",
+    "Aurangzeb": "2026-09-17T07:29:42.534Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-08-21T07:27:35.387Z"
