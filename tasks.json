@@ -2533,17 +2533,17 @@
       "category": "Mechanical",
       "desc": "Main frame displacement to be fixed",
       "priority": "High",
-      "progress": 0,
+      "progress": 70,
       "status": "In Progress",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "",
-      "updated": "",
+      "updated": "17 Sept 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "",
-      "image": "",
+      "lastEditedBy": "Aurangzeb",
+      "image": null,
       "createdBy": ""
     },
     {
@@ -4584,6 +4584,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1789629087703j27r",
+      "time": "2026-09-17T07:11:27.703Z",
+      "action": "[Aurangzeb] Updated task \"Main frame displacement to be ...\" [Progress: 0% → 70%] on Printing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1784022464370ep3t",
+          "machine": "Printing",
+          "category": "Mechanical",
+          "desc": "Main frame displacement to be fixed",
+          "priority": "High",
+          "progress": 0,
+          "status": "In Progress",
+          "responsible": "Arsalan",
+          "deadline": "",
+          "remarks": "",
+          "updated": "",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "",
+          "image": "",
+          "createdBy": ""
+        }
+      },
+      "taskId": "t1784022464370ep3t"
+    },
     {
       "id": "t17896290774632aqq",
       "time": "2026-09-17T07:11:17.463Z",
@@ -7059,17 +7088,6 @@
         "taskId": "t178495422108541x9"
       },
       "taskId": "t178495422108541x9"
-    },
-    {
-      "id": "t1784954201453y64o",
-      "time": "2026-07-25T04:36:41.453Z",
-      "action": "[Saqib] Added task \"Pneumatic pipes for auto drain...\" to Compressor",
-      "user": "Saqib",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1784954201453y733"
-      },
-      "taskId": "t1784954201453y733"
     }
   ],
   "machineMeta": {
@@ -7623,7 +7641,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-08-22T08:36:13.745Z",
-    "Aurangzeb": "2026-09-17T07:11:17.463Z",
+    "Aurangzeb": "2026-09-17T07:11:27.703Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-08-21T07:27:35.387Z"
