@@ -4167,12 +4167,12 @@
       "category": "Mechanical",
       "desc": "electrical Connection of auto drain system",
       "priority": "Medium",
-      "progress": 0,
-      "status": "Not Started",
+      "progress": 70,
+      "status": "In Progress",
       "remarks": "",
       "responsible": "",
-      "updated": "25 Jul 2026",
-      "lastEditedBy": "Saqib",
+      "updated": "22 Sept 2026",
+      "lastEditedBy": "Aurangzeb",
       "image": null,
       "waitingOn": "",
       "deadline": "",
@@ -4869,6 +4869,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1790059777226sli0",
+      "time": "2026-09-22T06:49:37.226Z",
+      "action": "[Aurangzeb] Updated task \"electrical Connection of auto ...\" [Status: Not Started → In Progress, Progress: 0% → 70%] on Compressor",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1784954178108dcem",
+          "machine": "Compressor",
+          "category": "Mechanical",
+          "desc": "electrical Connection of auto drain system",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "remarks": "",
+          "responsible": "",
+          "updated": "25 Jul 2026",
+          "lastEditedBy": "Saqib",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "createdBy": ""
+        }
+      },
+      "taskId": "t1784954178108dcem"
+    },
     {
       "id": "t1790059738457h1gf",
       "time": "2026-09-22T06:48:58.457Z",
@@ -7423,35 +7452,6 @@
         }
       },
       "taskId": "t_224710"
-    },
-    {
-      "id": "t1785904039548dwyt",
-      "time": "2026-08-05T04:27:19.548Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t1785217396485296r",
-            "machine": "Washing",
-            "category": "Mechanical",
-            "desc": "Straighten and align all washing chain pins",
-            "priority": "Medium",
-            "progress": 0,
-            "status": "In Progress",
-            "remarks": "",
-            "responsible": "",
-            "updated": "28 Jul 2026",
-            "lastEditedBy": "Saqib",
-            "image": null,
-            "waitingOn": "",
-            "deadline": "",
-            "dateStarted": "",
-            "dateFinished": ""
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -8133,7 +8133,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-09-19T18:31:15.336Z",
-    "Aurangzeb": "2026-09-22T06:48:58.457Z",
+    "Aurangzeb": "2026-09-22T06:49:37.226Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
