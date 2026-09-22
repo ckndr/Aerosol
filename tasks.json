@@ -4205,12 +4205,12 @@
       "category": "Mechanical",
       "desc": "testing of auto drain filters",
       "priority": "Medium",
-      "progress": 0,
-      "status": "Not Started",
+      "progress": 70,
+      "status": "In Progress",
       "remarks": "",
       "responsible": "",
-      "updated": "25 Jul 2026",
-      "lastEditedBy": "Saqib",
+      "updated": "22 Sept 2026",
+      "lastEditedBy": "Aurangzeb",
       "image": null,
       "waitingOn": "",
       "deadline": "",
@@ -4869,6 +4869,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1790059795809g1o0",
+      "time": "2026-09-22T06:49:55.809Z",
+      "action": "[Aurangzeb] Updated task \"testing of auto drain filters...\" [Status: Not Started → In Progress, Progress: 0% → 70%] on Compressor",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t178495422108541x9",
+          "machine": "Compressor",
+          "category": "Mechanical",
+          "desc": "testing of auto drain filters",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "remarks": "",
+          "responsible": "",
+          "updated": "25 Jul 2026",
+          "lastEditedBy": "Saqib",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "createdBy": ""
+        }
+      },
+      "taskId": "t178495422108541x9"
+    },
     {
       "id": "t1790059777226sli0",
       "time": "2026-09-22T06:49:37.226Z",
@@ -7424,34 +7453,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1785904102527rff7",
-      "time": "2026-08-05T04:28:22.527Z",
-      "action": "[Saqib] Updated task \"Heaters to be checked and repl...\" [Status: In Progress → Pending Procurement] on Decoration Oven",
-      "user": "Saqib",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_224710",
-          "machine": "Decoration Oven",
-          "category": "Electrical",
-          "desc": "Heaters to be checked and replaced if required",
-          "priority": "High",
-          "progress": 80,
-          "status": "In Progress",
-          "responsible": "Arsalan",
-          "deadline": "",
-          "remarks": "sample needed for ordering",
-          "updated": "2 Jun 2026",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "Aurangzeb",
-          "image": "Photos/Decoration Oven/task_img_1780375380135.jpg"
-        }
-      },
-      "taskId": "t_224710"
     }
   ],
   "machineMeta": {
@@ -8133,7 +8134,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-09-19T18:31:15.336Z",
-    "Aurangzeb": "2026-09-22T06:49:37.226Z",
+    "Aurangzeb": "2026-09-22T06:49:55.809Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
