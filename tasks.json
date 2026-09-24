@@ -4865,9 +4865,7 @@
       "dateFinished": ""
     }
   ],
-  "settings": {
-    "autoSync": true
-  },
+  "settings": {},
   "activityLog": [
     {
       "id": "t1790059868385nrxa",
@@ -7664,14 +7662,14 @@
       "dryRun": "Pending",
       "commercialRun": "None"
     },
-    "General": {
-      "dryRun": "None",
-      "commercialRun": "None"
-    },
     "Main Power Distribution": {
       "dryRun": "None",
       "commercialRun": "None",
       "referenceImages": []
+    },
+    "General": {
+      "dryRun": "None",
+      "commercialRun": "None"
     }
   },
   "timelineData": {
@@ -7679,6 +7677,10 @@
     "targetDate": "2026-06-30"
   },
   "loginHistory": [
+    {
+      "name": "Saqib",
+      "time": "2026-09-24T10:46:48.241Z"
+    },
     {
       "name": "Aurangzeb",
       "time": "2026-09-22T06:53:15.627Z"
@@ -8139,7 +8141,7 @@
   "activeSessions": {
     "Sikander": "2026-09-19T18:31:15.336Z",
     "Aurangzeb": "2026-09-22T06:53:15.627Z",
-    "Saqib": "2026-08-22T08:46:49.482Z",
+    "Saqib": "2026-09-24T10:46:48.241Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
   }
