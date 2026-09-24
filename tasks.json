@@ -4865,7 +4865,9 @@
       "dateFinished": ""
     }
   ],
-  "settings": {},
+  "settings": {
+    "autoSync": true
+  },
   "activityLog": [
     {
       "id": "t1790059868385nrxa",
@@ -7662,14 +7664,14 @@
       "dryRun": "Pending",
       "commercialRun": "None"
     },
+    "General": {
+      "dryRun": "None",
+      "commercialRun": "None"
+    },
     "Main Power Distribution": {
       "dryRun": "None",
       "commercialRun": "None",
       "referenceImages": []
-    },
-    "General": {
-      "dryRun": "None",
-      "commercialRun": "None"
     }
   },
   "timelineData": {
@@ -7678,12 +7680,20 @@
   },
   "loginHistory": [
     {
+      "name": "Sikander",
+      "time": "2026-09-24T11:49:12.684Z"
+    },
+    {
       "name": "Saqib",
       "time": "2026-09-24T10:46:48.243Z"
     },
     {
       "name": "Saqib",
       "time": "2026-09-24T10:46:48.241Z"
+    },
+    {
+      "name": "Sikander",
+      "time": "2026-09-24T04:23:00.328Z"
     },
     {
       "name": "Aurangzeb",
@@ -7714,12 +7724,20 @@
       "time": "2026-09-17T06:31:06.091Z"
     },
     {
+      "name": "Sikander",
+      "time": "2026-09-17T06:30:15.431Z"
+    },
+    {
       "name": "Aurangzeb",
       "time": "2026-09-17T06:16:59.341Z"
     },
     {
       "name": "Sikander",
       "time": "2026-09-15T06:25:36.281Z"
+    },
+    {
+      "name": "Sikander",
+      "time": "2026-09-14T10:08:31.180Z"
     },
     {
       "name": "Sikander",
@@ -8143,7 +8161,7 @@
     }
   ],
   "activeSessions": {
-    "Sikander": "2026-09-19T18:31:15.336Z",
+    "Sikander": "2026-09-24T11:49:12.684Z",
     "Aurangzeb": "2026-09-22T06:53:15.627Z",
     "Saqib": "2026-09-24T10:46:48.244Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
