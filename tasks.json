@@ -4863,12 +4863,42 @@
       "deadline": "",
       "dateStarted": "2026-09-01",
       "dateFinished": ""
+    },
+    {
+      "id": "t17904027685400lhh",
+      "machine": "Accumulator",
+      "category": "Mechanical",
+      "desc": "teflon guides to be fixed.",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "In Progress",
+      "remarks": "",
+      "responsible": "",
+      "updated": "26 Sept 2026",
+      "createdBy": "Aurangzeb",
+      "lastEditedBy": "Aurangzeb",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "2026-09-22",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1790402768540omu7",
+      "time": "2026-09-26T06:06:08.540Z",
+      "action": "[Aurangzeb] Added task \"teflon guides to be fixed....\" to Accumulator",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "add",
+        "taskId": "t17904027685400lhh"
+      },
+      "taskId": "t17904027685400lhh"
+    },
     {
       "id": "t1790059868385nrxa",
       "time": "2026-09-22T06:51:08.385Z",
@@ -7425,34 +7455,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1785904121596if5h",
-      "time": "2026-08-05T04:28:41.596Z",
-      "action": "[Saqib] Updated task \"Necking machine Dry run...\" [Status: In Progress → Completed] on Necking",
-      "user": "Saqib",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_503221",
-          "machine": "Necking",
-          "category": "Mechanical",
-          "desc": "Necking machine Dry run",
-          "priority": "High",
-          "progress": 50,
-          "status": "In Progress",
-          "responsible": "Arsalan",
-          "deadline": "",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "",
-          "image": ""
-        }
-      },
-      "taskId": "t_503221"
     }
   ],
   "machineMeta": {
@@ -7680,22 +7682,6 @@
   },
   "loginHistory": [
     {
-      "name": "Sikander",
-      "time": "2026-09-24T11:49:12.684Z"
-    },
-    {
-      "name": "Saqib",
-      "time": "2026-09-24T10:46:48.243Z"
-    },
-    {
-      "name": "Saqib",
-      "time": "2026-09-24T10:46:48.241Z"
-    },
-    {
-      "name": "Sikander",
-      "time": "2026-09-24T04:23:00.328Z"
-    },
-    {
       "name": "Aurangzeb",
       "time": "2026-09-22T06:53:15.627Z"
     },
@@ -7724,20 +7710,12 @@
       "time": "2026-09-17T06:31:06.091Z"
     },
     {
-      "name": "Sikander",
-      "time": "2026-09-17T06:30:15.431Z"
-    },
-    {
       "name": "Aurangzeb",
       "time": "2026-09-17T06:16:59.341Z"
     },
     {
       "name": "Sikander",
       "time": "2026-09-15T06:25:36.281Z"
-    },
-    {
-      "name": "Sikander",
-      "time": "2026-09-14T10:08:31.180Z"
     },
     {
       "name": "Sikander",
@@ -8161,9 +8139,9 @@
     }
   ],
   "activeSessions": {
-    "Sikander": "2026-09-24T11:49:12.684Z",
-    "Aurangzeb": "2026-09-22T06:53:15.627Z",
-    "Saqib": "2026-09-24T10:46:48.244Z",
+    "Sikander": "2026-09-19T18:31:15.336Z",
+    "Aurangzeb": "2026-09-26T06:06:08.540Z",
+    "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
   }
