@@ -3141,16 +3141,16 @@
       "category": "Mechanical",
       "desc": "contamination/ fumes collector to be checked and installed on top",
       "priority": "High",
-      "progress": 0,
-      "status": "In Progress",
-      "responsible": "Arsalan",
+      "progress": 100,
+      "status": "Completed",
+      "responsible": "Saqib",
       "deadline": "2026-06-30",
       "remarks": "",
-      "updated": "25 Jul 2026",
+      "updated": "26 Sept 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Saqib",
+      "lastEditedBy": "Aurangzeb",
       "image": "Photos/Washing/task_img_1780312241814.jpg",
       "createdBy": ""
     },
@@ -4888,6 +4888,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1790402967589wb9p",
+      "time": "2026-09-26T06:09:27.589Z",
+      "action": "[Aurangzeb] Updated task \"contamination/ fumes collector...\" [Status: In Progress → Completed, Progress: 0% → 100%, Responsible: Arsalan → Saqib] on Washing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_214906",
+          "machine": "Washing",
+          "category": "Mechanical",
+          "desc": "contamination/ fumes collector to be checked and installed on top",
+          "priority": "High",
+          "progress": 0,
+          "status": "In Progress",
+          "responsible": "Arsalan",
+          "deadline": "2026-06-30",
+          "remarks": "",
+          "updated": "25 Jul 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Saqib",
+          "image": "Photos/Washing/task_img_1780312241814.jpg",
+          "createdBy": ""
+        }
+      },
+      "taskId": "t_214906"
+    },
     {
       "id": "t1790402800029m0ro",
       "time": "2026-09-26T06:06:40.029Z",
@@ -7426,35 +7455,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1785904134308gbl3",
-      "time": "2026-08-05T04:28:54.308Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_513566",
-            "machine": "Trimming",
-            "category": "Electrical",
-            "desc": "Trimming Scrap collector wiring and troubleshooting",
-            "priority": "High",
-            "progress": 50,
-            "status": "In Progress",
-            "responsible": "Arsalan",
-            "deadline": "2026-06-19",
-            "remarks": "",
-            "updated": "1 Jun 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Aurangzeb",
-            "image": "Photos/Trimming/task_img_1780311363688.jpg"
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -8140,7 +8140,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-09-19T18:31:15.336Z",
-    "Aurangzeb": "2026-09-26T06:06:40.029Z",
+    "Aurangzeb": "2026-09-26T06:09:27.589Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
