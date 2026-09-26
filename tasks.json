@@ -4414,11 +4414,11 @@
       "category": "Mechanical",
       "desc": "Straighten and align all washing chain pins",
       "priority": "Medium",
-      "progress": 95,
+      "progress": 70,
       "status": "In Progress",
       "remarks": "",
       "responsible": "",
-      "updated": "17 Sept 2026",
+      "updated": "26 Sept 2026",
       "lastEditedBy": "Aurangzeb",
       "image": null,
       "waitingOn": "",
@@ -4888,6 +4888,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1790402979534zwib",
+      "time": "2026-09-26T06:09:39.534Z",
+      "action": "[Aurangzeb] Updated task \"Straighten and align all washi...\" [Progress: 95% → 70%] on Washing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1785217396485296r",
+          "machine": "Washing",
+          "category": "Mechanical",
+          "desc": "Straighten and align all washing chain pins",
+          "priority": "Medium",
+          "progress": 95,
+          "status": "In Progress",
+          "remarks": "",
+          "responsible": "",
+          "updated": "17 Sept 2026",
+          "lastEditedBy": "Aurangzeb",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "createdBy": ""
+        }
+      },
+      "taskId": "t1785217396485296r"
+    },
     {
       "id": "t1790402967589wb9p",
       "time": "2026-09-26T06:09:27.589Z",
@@ -7426,35 +7455,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1785904140236fvql",
-      "time": "2026-08-05T04:29:00.236Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"In Progress\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_934362",
-            "machine": "Trimming",
-            "category": "Mechanical",
-            "desc": "pneumatic pressure valve for ejector pressure to install",
-            "priority": "High",
-            "progress": 0,
-            "status": "In Progress",
-            "responsible": "Arsalan",
-            "deadline": "2026-06-19",
-            "remarks": "",
-            "updated": "25 Jul 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Saqib",
-            "image": "Photos/Trimming/task_img_1780311531849.jpg"
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -8140,7 +8140,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-09-19T18:31:15.336Z",
-    "Aurangzeb": "2026-09-26T06:09:27.589Z",
+    "Aurangzeb": "2026-09-26T06:09:39.534Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
