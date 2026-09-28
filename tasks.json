@@ -4851,11 +4851,11 @@
       "category": "Mechanical",
       "desc": "Chain fixation to be done and continuous uninterrupted smooth run to be made sure.",
       "priority": "Medium",
-      "progress": 0,
+      "progress": 10,
       "status": "In Progress",
       "remarks": "",
       "responsible": "",
-      "updated": "22 Sept 2026",
+      "updated": "28 Sept 2026",
       "createdBy": "Aurangzeb",
       "lastEditedBy": "Aurangzeb",
       "image": null,
@@ -4888,6 +4888,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1790576299286bsfu",
+      "time": "2026-09-28T06:18:19.286Z",
+      "action": "[Aurangzeb] Updated task \"Chain fixation to be done and ...\" [Progress: 0% → 10%] on Accumulator",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1790059607608f8nm",
+          "machine": "Accumulator",
+          "category": "Mechanical",
+          "desc": "Chain fixation to be done and continuous uninterrupted smooth run to be made sure.",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "In Progress",
+          "remarks": "",
+          "responsible": "",
+          "updated": "22 Sept 2026",
+          "createdBy": "Aurangzeb",
+          "lastEditedBy": "Aurangzeb",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "2026-09-01",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t1790059607608f8nm"
+    },
     {
       "id": "t1790402979534zwib",
       "time": "2026-09-26T06:09:39.534Z",
@@ -7426,35 +7455,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1785904153044u8od",
-      "time": "2026-08-05T04:29:13.044Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_612787",
-            "machine": "Washing",
-            "category": "Mechanical",
-            "desc": "Separate storage tanks installation(detergent / cold / hot water)",
-            "priority": "High",
-            "progress": 0,
-            "status": "In Progress",
-            "responsible": "Saqib",
-            "deadline": "2026-06-30",
-            "remarks": "under discussion",
-            "updated": "18 Jul 2026",
-            "waitingOn": "",
-            "dateStarted": "",
-            "dateFinished": "",
-            "lastEditedBy": "Aurangzeb",
-            "image": "Photos/Washing/task_img_1780312513275.jpg"
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -8140,7 +8140,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-09-19T18:31:15.336Z",
-    "Aurangzeb": "2026-09-26T06:09:39.534Z",
+    "Aurangzeb": "2026-09-28T06:18:19.286Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
