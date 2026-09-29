@@ -4585,11 +4585,11 @@
       "category": "Electrical",
       "desc": "Machine to be run on automatic mode.",
       "priority": "High",
-      "progress": 0,
-      "status": "Not Started",
+      "progress": 100,
+      "status": "Completed",
       "remarks": "",
       "responsible": "Arsalan",
-      "updated": "30 Aug 2026",
+      "updated": "29 Sept 2026",
       "createdBy": "Aurangzeb",
       "lastEditedBy": "Aurangzeb",
       "image": null,
@@ -4964,6 +4964,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1790663260019y6qp",
+      "time": "2026-09-29T06:27:40.019Z",
+      "action": "[Aurangzeb] Updated task \"Machine to be run on automatic...\" [Status: Not Started → Completed, Progress: 0% → 100%] on Necking",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1788077639640v34d",
+          "machine": "Necking",
+          "category": "Electrical",
+          "desc": "Machine to be run on automatic mode.",
+          "priority": "High",
+          "progress": 0,
+          "status": "Not Started",
+          "remarks": "",
+          "responsible": "Arsalan",
+          "updated": "30 Aug 2026",
+          "createdBy": "Aurangzeb",
+          "lastEditedBy": "Aurangzeb",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t1788077639640v34d"
+    },
     {
       "id": "t1790663229332xvmr",
       "time": "2026-09-29T06:27:09.332Z",
@@ -7456,34 +7485,6 @@
         }
       },
       "taskId": "t1784973607922bmrf"
-    },
-    {
-      "id": "t1786965759569bydq",
-      "time": "2026-08-17T11:22:39.569Z",
-      "action": "[Aurangzeb] Updated task \"Main Power Cable Termination &...\" [Progress: 20% → 40%] on Overall Machine Operation",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_378091",
-          "machine": "Overall Machine Operation",
-          "category": "Electrical",
-          "desc": "Main Power Cable Termination & Execution Plan",
-          "priority": "High",
-          "progress": 20,
-          "status": "In Progress",
-          "responsible": "Arsalan",
-          "deadline": "2026-06-13",
-          "remarks": "",
-          "updated": "9 Aug 2026",
-          "waitingOn": "",
-          "dateStarted": "2026-08-07",
-          "dateFinished": "",
-          "lastEditedBy": "Aurangzeb",
-          "image": null
-        }
-      },
-      "taskId": "t_378091"
     }
   ],
   "machineMeta": {
@@ -8169,7 +8170,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-09-02T09:43:02.726Z",
-    "Aurangzeb": "2026-09-29T06:27:09.332Z",
+    "Aurangzeb": "2026-09-29T06:27:40.020Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
