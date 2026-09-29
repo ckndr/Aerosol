@@ -4920,12 +4920,42 @@
       "deadline": "",
       "dateStarted": "2026-09-22",
       "dateFinished": "2026-09-26"
+    },
+    {
+      "id": "t1790662688947ad3y",
+      "machine": "Overall Machine Operation",
+      "category": "Electrical",
+      "desc": "Pressure switches to install at external coating units",
+      "priority": "Medium",
+      "progress": 100,
+      "status": "Completed",
+      "remarks": "",
+      "responsible": "",
+      "updated": "29 Sept 2026",
+      "createdBy": "Aurangzeb",
+      "lastEditedBy": "Aurangzeb",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": "2026-09-26"
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1790662688947inew",
+      "time": "2026-09-29T06:18:08.947Z",
+      "action": "[Aurangzeb] Added task \"Pressure switches to install a...\" to Overall Machine Operation",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1790662688947ad3y"
+      },
+      "taskId": "t1790662688947ad3y"
+    },
     {
       "id": "t1790662563285lgmh",
       "time": "2026-09-29T06:16:03.285Z",
@@ -7429,35 +7459,6 @@
         "taskId": "t1785904268676jxkp"
       },
       "taskId": "t1785904268676jxkp"
-    },
-    {
-      "id": "t1785904210564kahc",
-      "time": "2026-08-05T04:30:10.564Z",
-      "action": "[Saqib] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Saqib",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t178582866194765qo",
-            "machine": "Trimming",
-            "category": "Electrical",
-            "desc": "Scrap collector dry run",
-            "priority": "Medium",
-            "progress": 0,
-            "status": "In Progress",
-            "remarks": "motor is not running",
-            "responsible": "",
-            "updated": "5 Aug 2026",
-            "lastEditedBy": "Saqib",
-            "image": null,
-            "waitingOn": "",
-            "deadline": "",
-            "dateStarted": "2026-08-04",
-            "dateFinished": ""
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -8143,7 +8144,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-09-02T09:43:02.726Z",
-    "Aurangzeb": "2026-09-29T06:16:08.262Z",
+    "Aurangzeb": "2026-09-29T06:18:08.947Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
