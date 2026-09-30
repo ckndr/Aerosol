@@ -2875,16 +2875,16 @@
       "category": "Electrical",
       "desc": "Mixer installation and mounting",
       "priority": "Medium",
-      "progress": 0,
+      "progress": 100,
       "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "change of plan",
-      "updated": "25 Jul 2026",
+      "updated": "30 Sept 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Saqib",
+      "lastEditedBy": "Aurangzeb",
       "image": null,
       "createdBy": ""
     },
@@ -5021,6 +5021,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1790762135294qsdd",
+      "time": "2026-09-30T09:55:35.294Z",
+      "action": "[Aurangzeb] Updated task \"Mixer installation and mountin...\" [Progress: 0% → 100%] on Tumbler",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_385603",
+          "machine": "Tumbler",
+          "category": "Electrical",
+          "desc": "Mixer installation and mounting",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Completed",
+          "responsible": "Arsalan",
+          "deadline": "",
+          "remarks": "change of plan",
+          "updated": "25 Jul 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Saqib",
+          "image": null,
+          "createdBy": ""
+        }
+      },
+      "taskId": "t_385603"
+    },
     {
       "id": "t1790762093014lt59",
       "time": "2026-09-30T09:54:53.014Z",
@@ -7494,17 +7523,6 @@
         }
       },
       "taskId": "t_928413"
-    },
-    {
-      "id": "t1787297588327111s",
-      "time": "2026-08-21T07:33:08.327Z",
-      "action": "[Bilal] Added task \"wire from the transformer to t...\" to Main Power Distribution",
-      "user": "Bilal",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1787297588327iqgi"
-      },
-      "taskId": "t1787297588327iqgi"
     }
   ],
   "machineMeta": {
@@ -8199,7 +8217,7 @@
   "activeSessions": {
     "Sikander": "2026-09-02T09:43:02.726Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
-    "Aurangzeb": "2026-09-30T09:54:53.014Z",
+    "Aurangzeb": "2026-09-30T09:55:35.294Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
   }
