@@ -4977,12 +4977,42 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t1790762052930snlf",
+      "machine": "Printing",
+      "category": "Mechanical",
+      "desc": "Chain synchronisation with load/unload timing to be set",
+      "priority": "Medium",
+      "progress": 20,
+      "status": "In Progress",
+      "remarks": "",
+      "responsible": "",
+      "updated": "30 Sept 2026",
+      "createdBy": "Aurangzeb",
+      "lastEditedBy": "Aurangzeb",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17907620529305gdm",
+      "time": "2026-09-30T09:54:12.930Z",
+      "action": "[Aurangzeb] Added task \"Chain synchronisation with loa...\" to Printing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1790762052930snlf"
+      },
+      "taskId": "t1790762052930snlf"
+    },
     {
       "id": "t1790761989094mypf",
       "time": "2026-09-30T09:53:09.094Z",
@@ -7456,36 +7486,6 @@
         "taskId": "t178729744923813tc"
       },
       "taskId": "t178729744923813tc"
-    },
-    {
-      "id": "t1787297251808br7i",
-      "time": "2026-08-21T07:27:31.808Z",
-      "action": "[Bilal] Bulk updated 1 tasks to status \"Completed\"",
-      "user": "Bilal",
-      "undoData": {
-        "type": "bulk",
-        "prevTasks": [
-          {
-            "id": "t_378091",
-            "machine": "Main Power Distribution",
-            "category": "Electrical",
-            "desc": "Main Power Cable Termination & Execution Plan",
-            "priority": "High",
-            "progress": 40,
-            "status": "In Progress",
-            "responsible": "Arsalan",
-            "deadline": "2026-06-13",
-            "remarks": "",
-            "updated": "17 Aug 2026",
-            "waitingOn": "",
-            "dateStarted": "2026-08-07",
-            "dateFinished": "",
-            "lastEditedBy": "Aurangzeb",
-            "image": null,
-            "createdBy": ""
-          }
-        ]
-      }
     }
   ],
   "machineMeta": {
@@ -8180,7 +8180,7 @@
   "activeSessions": {
     "Sikander": "2026-09-02T09:43:02.726Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
-    "Aurangzeb": "2026-09-30T09:53:09.094Z",
+    "Aurangzeb": "2026-09-30T09:54:12.930Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
   }
