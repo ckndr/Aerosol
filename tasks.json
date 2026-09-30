@@ -4996,12 +4996,42 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t1790762093013gtlt",
+      "machine": "Over Varnish",
+      "category": "Mechanical",
+      "desc": "Chain synchronisation with load unload timing to be set",
+      "priority": "Medium",
+      "progress": 20,
+      "status": "In Progress",
+      "remarks": "",
+      "responsible": "",
+      "updated": "30 Sept 2026",
+      "createdBy": "Aurangzeb",
+      "lastEditedBy": "Aurangzeb",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1790762093014lt59",
+      "time": "2026-09-30T09:54:53.014Z",
+      "action": "[Aurangzeb] Added task \"Chain synchronisation with loa...\" to Over Varnish",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1790762093013gtlt"
+      },
+      "taskId": "t1790762093013gtlt"
+    },
     {
       "id": "t17907620529305gdm",
       "time": "2026-09-30T09:54:12.930Z",
@@ -7475,17 +7505,6 @@
         "taskId": "t1787297588327iqgi"
       },
       "taskId": "t1787297588327iqgi"
-    },
-    {
-      "id": "t17872974492397ld2",
-      "time": "2026-08-21T07:30:49.239Z",
-      "action": "[Bilal] Added task \"installed the wire from the ma...\" to Main Power Distribution",
-      "user": "Bilal",
-      "undoData": {
-        "type": "add",
-        "taskId": "t178729744923813tc"
-      },
-      "taskId": "t178729744923813tc"
     }
   ],
   "machineMeta": {
@@ -8180,7 +8199,7 @@
   "activeSessions": {
     "Sikander": "2026-09-02T09:43:02.726Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
-    "Aurangzeb": "2026-09-30T09:54:12.930Z",
+    "Aurangzeb": "2026-09-30T09:54:53.014Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
   }
