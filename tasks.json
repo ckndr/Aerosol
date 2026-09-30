@@ -3027,12 +3027,12 @@
       "category": "Mechanical",
       "desc": "Washing unit tanks — sizes and quantities for quotation",
       "priority": "Medium",
-      "progress": 0,
+      "progress": 50,
       "status": "In Progress",
       "responsible": "Saqib",
       "deadline": "2026-06-15",
       "remarks": "under discussion",
-      "updated": "18 Jul 2026",
+      "updated": "30 Sept 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -5059,6 +5059,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17907622597261c5m",
+      "time": "2026-09-30T09:57:39.726Z",
+      "action": "[Aurangzeb] Updated task \"Washing unit tanks — sizes and...\" [Progress: 0% → 50%] on Washing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_186021",
+          "machine": "Washing",
+          "category": "Mechanical",
+          "desc": "Washing unit tanks — sizes and quantities for quotation",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "In Progress",
+          "responsible": "Saqib",
+          "deadline": "2026-06-15",
+          "remarks": "under discussion",
+          "updated": "18 Jul 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": null,
+          "createdBy": ""
+        }
+      },
+      "taskId": "t_186021"
+    },
     {
       "id": "t179076221090687yt",
       "time": "2026-09-30T09:56:50.906Z",
@@ -7496,35 +7525,6 @@
         }
       },
       "taskId": "t1784953305116dkly"
-    },
-    {
-      "id": "t1789540722919ln9q",
-      "time": "2026-09-16T06:38:42.919Z",
-      "action": "[Aurangzeb] Updated task \"plc issue emergency not reseti...\" [Status: Not Started → Completed, Progress: 0% → 100%] on Lacquer",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t1785566960971gi4r",
-          "machine": "Lacquer",
-          "category": "Electrical",
-          "desc": "plc issue emergency not reseting",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Not Started",
-          "remarks": "",
-          "responsible": "",
-          "updated": "1 Aug 2026",
-          "lastEditedBy": "Aurangzeb",
-          "image": null,
-          "waitingOn": "",
-          "deadline": "",
-          "dateStarted": "2026-07-31",
-          "dateFinished": "",
-          "createdBy": ""
-        }
-      },
-      "taskId": "t1785566960971gi4r"
     }
   ],
   "machineMeta": {
@@ -8219,7 +8219,7 @@
   "activeSessions": {
     "Sikander": "2026-09-02T09:43:02.726Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
-    "Aurangzeb": "2026-09-30T09:57:14.978Z",
+    "Aurangzeb": "2026-09-30T09:57:39.726Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
   }
