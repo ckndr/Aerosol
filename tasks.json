@@ -4433,11 +4433,11 @@
       "category": "Mechanical",
       "desc": "Straighten and align all washing chain pins",
       "priority": "Medium",
-      "progress": 80,
+      "progress": 90,
       "status": "In Progress",
       "remarks": "",
       "responsible": "",
-      "updated": "28 Sept 2026",
+      "updated": "30 Sept 2026",
       "lastEditedBy": "Aurangzeb",
       "image": null,
       "waitingOn": "",
@@ -5059,6 +5059,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1790762273752y2zd",
+      "time": "2026-09-30T09:57:53.752Z",
+      "action": "[Aurangzeb] Updated task \"Straighten and align all washi...\" [Progress: 80% → 90%] on Washing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1785217396485296r",
+          "machine": "Washing",
+          "category": "Mechanical",
+          "desc": "Straighten and align all washing chain pins",
+          "priority": "Medium",
+          "progress": 80,
+          "status": "In Progress",
+          "remarks": "",
+          "responsible": "",
+          "updated": "28 Sept 2026",
+          "lastEditedBy": "Aurangzeb",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "createdBy": ""
+        }
+      },
+      "taskId": "t1785217396485296r"
+    },
     {
       "id": "t17907622597261c5m",
       "time": "2026-09-30T09:57:39.726Z",
@@ -7496,35 +7525,6 @@
         }
       },
       "taskId": "t_928413"
-    },
-    {
-      "id": "t1789540749510lcrd",
-      "time": "2026-09-16T06:39:09.510Z",
-      "action": "[Aurangzeb] Updated task \"procurement of Can Holders...\" [Status: Pending Procurement → Completed, Progress: 0% → 100%] on Lacquer",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t1784953305116dkly",
-          "machine": "Lacquer",
-          "category": "Mechanical",
-          "desc": "procurement of Can Holders",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Pending Procurement",
-          "remarks": "",
-          "responsible": "",
-          "updated": "25 Jul 2026",
-          "lastEditedBy": "Saqib",
-          "image": null,
-          "waitingOn": "",
-          "deadline": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "createdBy": ""
-        }
-      },
-      "taskId": "t1784953305116dkly"
     }
   ],
   "machineMeta": {
@@ -8219,7 +8219,7 @@
   "activeSessions": {
     "Sikander": "2026-09-02T09:43:02.726Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
-    "Aurangzeb": "2026-09-30T09:57:39.726Z",
+    "Aurangzeb": "2026-09-30T09:57:53.752Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
   }
