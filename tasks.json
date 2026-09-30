@@ -4958,12 +4958,42 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t1790761989094y381",
+      "machine": "Base Coat",
+      "category": "Mechanical",
+      "desc": "Chain synchronisation with load/unload timing to be set",
+      "priority": "Medium",
+      "progress": 20,
+      "status": "In Progress",
+      "remarks": "",
+      "responsible": "",
+      "updated": "30 Sept 2026",
+      "createdBy": "Aurangzeb",
+      "lastEditedBy": "Aurangzeb",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1790761989094mypf",
+      "time": "2026-09-30T09:53:09.094Z",
+      "action": "[Aurangzeb] Added task \"Chain synchronisation with loa...\" to Base Coat",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1790761989094y381"
+      },
+      "taskId": "t1790761989094y381"
+    },
     {
       "id": "t1790663260019y6qp",
       "time": "2026-09-29T06:27:40.019Z",
@@ -7456,35 +7486,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "t1787034545494w0lf",
-      "time": "2026-08-18T06:29:05.494Z",
-      "action": "[Bilal] Updated task \"emergency button needs to be f...\" [Status: Not Started → Completed, Progress: 0% → 100%, Photo added] on Press",
-      "user": "Bilal",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t1784973607922bmrf",
-          "machine": "Press",
-          "category": "Mechanical",
-          "desc": "emergency button needs to be fixed",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Not Started",
-          "remarks": "",
-          "responsible": "",
-          "updated": "25 Jul 2026",
-          "lastEditedBy": "Saqib",
-          "image": null,
-          "waitingOn": "",
-          "deadline": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "createdBy": ""
-        }
-      },
-      "taskId": "t1784973607922bmrf"
     }
   ],
   "machineMeta": {
@@ -8179,7 +8180,7 @@
   "activeSessions": {
     "Sikander": "2026-09-02T09:43:02.726Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
-    "Aurangzeb": "2026-09-30T09:51:20.335Z",
+    "Aurangzeb": "2026-09-30T09:53:09.094Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
   }
