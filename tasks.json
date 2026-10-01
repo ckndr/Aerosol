@@ -1830,12 +1830,12 @@
       "category": "Electrical",
       "desc": "Close all electrical panels and cable trays",
       "priority": "High",
-      "progress": 90,
+      "progress": 80,
       "status": "In Progress",
       "responsible": "Arsalan",
       "deadline": "2026-06-16",
       "remarks": "main cable to panel connections pending",
-      "updated": "17 Sept 2026",
+      "updated": "1 Oct 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -2875,16 +2875,16 @@
       "category": "Electrical",
       "desc": "Mixer installation and mounting",
       "priority": "Medium",
-      "progress": 100,
+      "progress": 0,
       "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "change of plan",
-      "updated": "30 Sept 2026",
+      "updated": "25 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Aurangzeb",
+      "lastEditedBy": "Saqib",
       "image": null,
       "createdBy": ""
     },
@@ -3027,12 +3027,12 @@
       "category": "Mechanical",
       "desc": "Washing unit tanks — sizes and quantities for quotation",
       "priority": "Medium",
-      "progress": 50,
+      "progress": 0,
       "status": "In Progress",
       "responsible": "Saqib",
       "deadline": "2026-06-15",
       "remarks": "under discussion",
-      "updated": "30 Sept 2026",
+      "updated": "18 Jul 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -4433,11 +4433,11 @@
       "category": "Mechanical",
       "desc": "Straighten and align all washing chain pins",
       "priority": "Medium",
-      "progress": 90,
+      "progress": 80,
       "status": "In Progress",
       "remarks": "",
       "responsible": "",
-      "updated": "30 Sept 2026",
+      "updated": "28 Sept 2026",
       "lastEditedBy": "Aurangzeb",
       "image": null,
       "waitingOn": "",
@@ -4958,101 +4958,6 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
-    },
-    {
-      "id": "t1790761989094y381",
-      "machine": "Base Coat",
-      "category": "Mechanical",
-      "desc": "Chain synchronisation with load/unload timing to be set",
-      "priority": "Medium",
-      "progress": 20,
-      "status": "In Progress",
-      "remarks": "",
-      "responsible": "",
-      "updated": "30 Sept 2026",
-      "createdBy": "Aurangzeb",
-      "lastEditedBy": "Aurangzeb",
-      "image": null,
-      "waitingOn": "",
-      "deadline": "",
-      "dateStarted": "",
-      "dateFinished": ""
-    },
-    {
-      "id": "t1790762052930snlf",
-      "machine": "Printing",
-      "category": "Mechanical",
-      "desc": "Chain synchronisation with load/unload timing to be set",
-      "priority": "Medium",
-      "progress": 20,
-      "status": "In Progress",
-      "remarks": "",
-      "responsible": "",
-      "updated": "30 Sept 2026",
-      "createdBy": "Aurangzeb",
-      "lastEditedBy": "Aurangzeb",
-      "image": null,
-      "waitingOn": "",
-      "deadline": "",
-      "dateStarted": "",
-      "dateFinished": ""
-    },
-    {
-      "id": "t1790762093013gtlt",
-      "machine": "Over Varnish",
-      "category": "Mechanical",
-      "desc": "Chain synchronisation with load unload timing to be set",
-      "priority": "Medium",
-      "progress": 20,
-      "status": "In Progress",
-      "remarks": "",
-      "responsible": "",
-      "updated": "30 Sept 2026",
-      "createdBy": "Aurangzeb",
-      "lastEditedBy": "Aurangzeb",
-      "image": null,
-      "waitingOn": "",
-      "deadline": "",
-      "dateStarted": "",
-      "dateFinished": ""
-    },
-    {
-      "id": "t1790762180370r1hd",
-      "machine": "Tumbler",
-      "category": "Mechanical",
-      "desc": "Leakages to be rectified",
-      "priority": "Medium",
-      "progress": 0,
-      "status": "Not Started",
-      "remarks": "",
-      "responsible": "",
-      "updated": "30 Sept 2026",
-      "createdBy": "Aurangzeb",
-      "lastEditedBy": "Aurangzeb",
-      "image": null,
-      "waitingOn": "",
-      "deadline": "",
-      "dateStarted": "",
-      "dateFinished": ""
-    },
-    {
-      "id": "t1790762210906pbd0",
-      "machine": "Tumbler",
-      "category": "Mechanical",
-      "desc": "Tumbler base to be anchored/fixed.",
-      "priority": "Medium",
-      "progress": 0,
-      "status": "Not Started",
-      "remarks": "",
-      "responsible": "",
-      "updated": "30 Sept 2026",
-      "createdBy": "Aurangzeb",
-      "lastEditedBy": "Aurangzeb",
-      "image": null,
-      "waitingOn": "",
-      "deadline": "",
-      "dateStarted": "",
-      "dateFinished": ""
     }
   ],
   "settings": {
@@ -5060,146 +4965,33 @@
   },
   "activityLog": [
     {
-      "id": "t1790762273752y2zd",
-      "time": "2026-09-30T09:57:53.752Z",
-      "action": "[Aurangzeb] Updated task \"Straighten and align all washi...\" [Progress: 80% → 90%] on Washing",
+      "id": "t1790837358710nrcf",
+      "time": "2026-10-01T06:49:18.710Z",
+      "action": "[Aurangzeb] Updated task \"Close all electrical panels an...\" [Progress: 90% → 80%] on Press",
       "user": "Aurangzeb",
       "undoData": {
         "type": "edit",
         "prevTask": {
-          "id": "t1785217396485296r",
-          "machine": "Washing",
-          "category": "Mechanical",
-          "desc": "Straighten and align all washing chain pins",
-          "priority": "Medium",
-          "progress": 80,
-          "status": "In Progress",
-          "remarks": "",
-          "responsible": "",
-          "updated": "28 Sept 2026",
-          "lastEditedBy": "Aurangzeb",
-          "image": null,
-          "waitingOn": "",
-          "deadline": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "createdBy": ""
-        }
-      },
-      "taskId": "t1785217396485296r"
-    },
-    {
-      "id": "t17907622597261c5m",
-      "time": "2026-09-30T09:57:39.726Z",
-      "action": "[Aurangzeb] Updated task \"Washing unit tanks — sizes and...\" [Progress: 0% → 50%] on Washing",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_186021",
-          "machine": "Washing",
-          "category": "Mechanical",
-          "desc": "Washing unit tanks — sizes and quantities for quotation",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "In Progress",
-          "responsible": "Saqib",
-          "deadline": "2026-06-15",
-          "remarks": "under discussion",
-          "updated": "18 Jul 2026",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "Aurangzeb",
-          "image": null,
-          "createdBy": ""
-        }
-      },
-      "taskId": "t_186021"
-    },
-    {
-      "id": "t179076221090687yt",
-      "time": "2026-09-30T09:56:50.906Z",
-      "action": "[Aurangzeb] Added task \"Tumbler base to be anchored/fi...\" to Tumbler",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1790762210906pbd0"
-      },
-      "taskId": "t1790762210906pbd0"
-    },
-    {
-      "id": "t1790762180370gb02",
-      "time": "2026-09-30T09:56:20.370Z",
-      "action": "[Aurangzeb] Added task \"Leakages to be rectified...\" to Tumbler",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1790762180370r1hd"
-      },
-      "taskId": "t1790762180370r1hd"
-    },
-    {
-      "id": "t1790762135294qsdd",
-      "time": "2026-09-30T09:55:35.294Z",
-      "action": "[Aurangzeb] Updated task \"Mixer installation and mountin...\" [Progress: 0% → 100%] on Tumbler",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_385603",
-          "machine": "Tumbler",
+          "id": "t_928413",
+          "machine": "Press",
           "category": "Electrical",
-          "desc": "Mixer installation and mounting",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Completed",
+          "desc": "Close all electrical panels and cable trays",
+          "priority": "High",
+          "progress": 90,
+          "status": "In Progress",
           "responsible": "Arsalan",
-          "deadline": "",
-          "remarks": "change of plan",
-          "updated": "25 Jul 2026",
+          "deadline": "2026-06-16",
+          "remarks": "main cable to panel connections pending",
+          "updated": "17 Sept 2026",
           "waitingOn": "",
           "dateStarted": "",
           "dateFinished": "",
-          "lastEditedBy": "Saqib",
-          "image": null,
+          "lastEditedBy": "Aurangzeb",
+          "image": "Photos/Press/task_img_1780310865005.jpg",
           "createdBy": ""
         }
       },
-      "taskId": "t_385603"
-    },
-    {
-      "id": "t1790762093014lt59",
-      "time": "2026-09-30T09:54:53.014Z",
-      "action": "[Aurangzeb] Added task \"Chain synchronisation with loa...\" to Over Varnish",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1790762093013gtlt"
-      },
-      "taskId": "t1790762093013gtlt"
-    },
-    {
-      "id": "t17907620529305gdm",
-      "time": "2026-09-30T09:54:12.930Z",
-      "action": "[Aurangzeb] Added task \"Chain synchronisation with loa...\" to Printing",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1790762052930snlf"
-      },
-      "taskId": "t1790762052930snlf"
-    },
-    {
-      "id": "t1790761989094mypf",
-      "time": "2026-09-30T09:53:09.094Z",
-      "action": "[Aurangzeb] Added task \"Chain synchronisation with loa...\" to Base Coat",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1790761989094y381"
-      },
-      "taskId": "t1790761989094y381"
+      "taskId": "t_928413"
     },
     {
       "id": "t1790663260019y6qp",
@@ -7525,6 +7317,174 @@
         }
       },
       "taskId": "t_928413"
+    },
+    {
+      "id": "t1789540749510lcrd",
+      "time": "2026-09-16T06:39:09.510Z",
+      "action": "[Aurangzeb] Updated task \"procurement of Can Holders...\" [Status: Pending Procurement → Completed, Progress: 0% → 100%] on Lacquer",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1784953305116dkly",
+          "machine": "Lacquer",
+          "category": "Mechanical",
+          "desc": "procurement of Can Holders",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Pending Procurement",
+          "remarks": "",
+          "responsible": "",
+          "updated": "25 Jul 2026",
+          "lastEditedBy": "Saqib",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "createdBy": ""
+        }
+      },
+      "taskId": "t1784953305116dkly"
+    },
+    {
+      "id": "t1789540722919ln9q",
+      "time": "2026-09-16T06:38:42.919Z",
+      "action": "[Aurangzeb] Updated task \"plc issue emergency not reseti...\" [Status: Not Started → Completed, Progress: 0% → 100%] on Lacquer",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1785566960971gi4r",
+          "machine": "Lacquer",
+          "category": "Electrical",
+          "desc": "plc issue emergency not reseting",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "remarks": "",
+          "responsible": "",
+          "updated": "1 Aug 2026",
+          "lastEditedBy": "Aurangzeb",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "2026-07-31",
+          "dateFinished": "",
+          "createdBy": ""
+        }
+      },
+      "taskId": "t1785566960971gi4r"
+    },
+    {
+      "id": "t1789540666327ssdq",
+      "time": "2026-09-16T06:37:46.327Z",
+      "action": "[Aurangzeb] Updated task \"closure of all cable trays/ pa...\" [Progress: 0% → 80%] on Trimming",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_461252",
+          "machine": "Trimming",
+          "category": "Electrical",
+          "desc": "closure of all cable trays/ panels",
+          "priority": "High",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Arsalan",
+          "deadline": "2026-06-19",
+          "remarks": "",
+          "updated": "1 Jun 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": "Photos/Trimming/task_img_1780311378372.jpg",
+          "createdBy": ""
+        }
+      },
+      "taskId": "t_461252"
+    },
+    {
+      "id": "t1789540178878lofo",
+      "time": "2026-09-16T06:29:38.878Z",
+      "action": "[Aurangzeb] Updated task \"Close all electrical panels an...\" [Progress: 20% → 80%] on Press",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_928413",
+          "machine": "Press",
+          "category": "Electrical",
+          "desc": "Close all electrical panels and cable trays",
+          "priority": "High",
+          "progress": 20,
+          "status": "In Progress",
+          "responsible": "Arsalan",
+          "deadline": "2026-06-16",
+          "remarks": "",
+          "updated": "1 Jun 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": "Photos/Press/task_img_1780310865005.jpg",
+          "createdBy": ""
+        }
+      },
+      "taskId": "t_928413"
+    },
+    {
+      "id": "t1787297588327111s",
+      "time": "2026-08-21T07:33:08.327Z",
+      "action": "[Bilal] Added task \"wire from the transformer to t...\" to Main Power Distribution",
+      "user": "Bilal",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1787297588327iqgi"
+      },
+      "taskId": "t1787297588327iqgi"
+    },
+    {
+      "id": "t17872974492397ld2",
+      "time": "2026-08-21T07:30:49.239Z",
+      "action": "[Bilal] Added task \"installed the wire from the ma...\" to Main Power Distribution",
+      "user": "Bilal",
+      "undoData": {
+        "type": "add",
+        "taskId": "t178729744923813tc"
+      },
+      "taskId": "t178729744923813tc"
+    },
+    {
+      "id": "t1787297251808br7i",
+      "time": "2026-08-21T07:27:31.808Z",
+      "action": "[Bilal] Bulk updated 1 tasks to status \"Completed\"",
+      "user": "Bilal",
+      "undoData": {
+        "type": "bulk",
+        "prevTasks": [
+          {
+            "id": "t_378091",
+            "machine": "Main Power Distribution",
+            "category": "Electrical",
+            "desc": "Main Power Cable Termination & Execution Plan",
+            "priority": "High",
+            "progress": 40,
+            "status": "In Progress",
+            "responsible": "Arsalan",
+            "deadline": "2026-06-13",
+            "remarks": "",
+            "updated": "17 Aug 2026",
+            "waitingOn": "",
+            "dateStarted": "2026-08-07",
+            "dateFinished": "",
+            "lastEditedBy": "Aurangzeb",
+            "image": null,
+            "createdBy": ""
+          }
+        ]
+      }
     }
   ],
   "machineMeta": {
@@ -7551,7 +7511,7 @@
       "commercialRun": "None"
     },
     "Washing": {
-      "dryRun": "Pending",
+      "dryRun": "Complete",
       "referenceImages": [
         "Photos/Washing/Washing Machine/IMG_20220518_140618.jpg",
         "Photos/Washing/Washing Machine/IMG_20220518_140642.jpg",
@@ -7751,18 +7711,6 @@
     "targetDate": "2026-06-30"
   },
   "loginHistory": [
-    {
-      "name": "Aurangzeb",
-      "time": "2026-10-01T05:42:24.427Z"
-    },
-    {
-      "name": "Aurangzeb",
-      "time": "2026-09-30T09:51:20.335Z"
-    },
-    {
-      "name": "Aurangzeb",
-      "time": "2026-09-29T06:12:42.895Z"
-    },
     {
       "name": "Aurangzeb",
       "time": "2026-09-22T06:53:15.627Z"
@@ -8222,8 +8170,8 @@
   ],
   "activeSessions": {
     "Sikander": "2026-09-02T09:43:02.726Z",
+    "Aurangzeb": "2026-10-01T06:49:18.710Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
-    "Aurangzeb": "2026-10-01T05:42:24.427Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
   }
