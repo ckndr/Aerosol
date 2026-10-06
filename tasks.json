@@ -2875,16 +2875,16 @@
       "category": "Electrical",
       "desc": "Mixer installation and mounting",
       "priority": "Medium",
-      "progress": 0,
+      "progress": 100,
       "status": "Completed",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "change of plan",
-      "updated": "25 Jul 2026",
+      "updated": "6 Oct 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Saqib",
+      "lastEditedBy": "Aurangzeb",
       "image": null,
       "createdBy": ""
     },
@@ -4964,6 +4964,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1791276122572h5si",
+      "time": "2026-10-06T08:42:02.572Z",
+      "action": "[Aurangzeb] Updated task \"Mixer installation and mountin...\" [Progress: 0% → 100%] on Tumbler",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_385603",
+          "machine": "Tumbler",
+          "category": "Electrical",
+          "desc": "Mixer installation and mounting",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Completed",
+          "responsible": "Arsalan",
+          "deadline": "",
+          "remarks": "change of plan",
+          "updated": "25 Jul 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Saqib",
+          "image": null,
+          "createdBy": ""
+        }
+      },
+      "taskId": "t_385603"
+    },
     {
       "id": "t1790840357803h4r1",
       "time": "2026-10-01T07:39:17.803Z",
@@ -7473,17 +7502,6 @@
         "taskId": "t1787297588327iqgi"
       },
       "taskId": "t1787297588327iqgi"
-    },
-    {
-      "id": "t17872974492397ld2",
-      "time": "2026-08-21T07:30:49.239Z",
-      "action": "[Bilal] Added task \"installed the wire from the ma...\" to Main Power Distribution",
-      "user": "Bilal",
-      "undoData": {
-        "type": "add",
-        "taskId": "t178729744923813tc"
-      },
-      "taskId": "t178729744923813tc"
     }
   ],
   "machineMeta": {
@@ -8177,7 +8195,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-10-01T12:48:49.380Z",
-    "Aurangzeb": "2026-10-02T10:43:38.433Z",
+    "Aurangzeb": "2026-10-06T08:42:02.573Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
