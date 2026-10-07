@@ -3844,12 +3844,12 @@
       "category": "General",
       "desc": "Attendance Time machine",
       "priority": "Medium",
-      "progress": 0,
+      "progress": 10,
       "status": "In Progress",
       "remarks": "",
       "responsible": "",
-      "updated": "25 Jul 2026",
-      "lastEditedBy": "Saqib",
+      "updated": "7 Oct 2026",
+      "lastEditedBy": "Aurangzeb",
       "image": null,
       "waitingOn": "",
       "deadline": "",
@@ -4964,6 +4964,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1791360828168f4f0",
+      "time": "2026-10-07T08:13:48.168Z",
+      "action": "[Aurangzeb] Updated task \"Attendance Time machine...\" [Progress: 0% → 10%] on General",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1784953443260tmah",
+          "machine": "General",
+          "category": "General",
+          "desc": "Attendance Time machine",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "In Progress",
+          "remarks": "",
+          "responsible": "",
+          "updated": "25 Jul 2026",
+          "lastEditedBy": "Saqib",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "createdBy": ""
+        }
+      },
+      "taskId": "t1784953443260tmah"
+    },
     {
       "id": "t1791360813616o7r1",
       "time": "2026-10-07T08:13:33.616Z",
@@ -7528,17 +7557,6 @@
         "taskId": "t1789629317703yhl9"
       },
       "taskId": "t1789629317703yhl9"
-    },
-    {
-      "id": "t1789629273647gxhz",
-      "time": "2026-09-17T07:14:33.647Z",
-      "action": "[Aurangzeb] Added task \"Unit 1 rollers not working ele...\" to Printing",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "add",
-        "taskId": "t17896292736474siv"
-      },
-      "taskId": "t17896292736474siv"
     }
   ],
   "machineMeta": {
@@ -8232,7 +8250,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-10-01T12:48:49.380Z",
-    "Aurangzeb": "2026-10-07T08:13:33.616Z",
+    "Aurangzeb": "2026-10-07T08:13:48.168Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
