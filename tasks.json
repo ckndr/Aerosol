@@ -4528,11 +4528,11 @@
       "category": "Mechanical",
       "desc": "The equidistance belt needs to be replaced.",
       "priority": "High",
-      "progress": 0,
-      "status": "Pending Procurement",
+      "progress": 100,
+      "status": "Completed",
       "remarks": "",
-      "responsible": "",
-      "updated": "17 Aug 2026",
+      "responsible": "Saqib",
+      "updated": "7 Oct 2026",
       "lastEditedBy": "Aurangzeb",
       "image": null,
       "waitingOn": "",
@@ -4964,6 +4964,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t179136057167308ji",
+      "time": "2026-10-07T08:09:31.673Z",
+      "action": "[Aurangzeb] Updated task \"The equidistance belt needs to...\" [Status: Pending Procurement → Completed, Progress: 0% → 100%, Responsible: — → Saqib] on FG Conveyor",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1785904268676jxkp",
+          "machine": "FG Conveyor",
+          "category": "Mechanical",
+          "desc": "The equidistance belt needs to be replaced.",
+          "priority": "High",
+          "progress": 0,
+          "status": "Pending Procurement",
+          "remarks": "",
+          "responsible": "",
+          "updated": "17 Aug 2026",
+          "lastEditedBy": "Aurangzeb",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "2026-08-17",
+          "dateFinished": "",
+          "createdBy": ""
+        }
+      },
+      "taskId": "t1785904268676jxkp"
+    },
     {
       "id": "t1791360551187n39s",
       "time": "2026-10-07T08:09:11.187Z",
@@ -7509,35 +7538,6 @@
         }
       },
       "taskId": "t_871623"
-    },
-    {
-      "id": "t1789629008223d09u",
-      "time": "2026-09-17T07:10:08.223Z",
-      "action": "[Aurangzeb] Updated task \"Fumes collector piping to inst...\" [Status: Pending Procurement → In Progress, Progress: 0% → 50%] on Base Coat",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_186924",
-          "machine": "Base Coat",
-          "category": "Mechanical",
-          "desc": "Fumes collector piping to install",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Pending Procurement",
-          "responsible": "Saqib",
-          "deadline": "2026-06-20",
-          "remarks": "",
-          "updated": "25 Jul 2026",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "Saqib",
-          "image": "Photos/Base Coat/task_img_1780373654935.jpg",
-          "createdBy": ""
-        }
-      },
-      "taskId": "t_186924"
     }
   ],
   "machineMeta": {
@@ -8231,7 +8231,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-10-01T12:48:49.380Z",
-    "Aurangzeb": "2026-10-07T08:09:11.187Z",
+    "Aurangzeb": "2026-10-07T08:09:31.674Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
