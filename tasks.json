@@ -3901,12 +3901,12 @@
       "category": "General",
       "desc": "money Plant for Factory",
       "priority": "Medium",
-      "progress": 0,
-      "status": "Not Started",
+      "progress": 10,
+      "status": "In Progress",
       "remarks": "",
       "responsible": "",
-      "updated": "25 Jul 2026",
-      "lastEditedBy": "Saqib",
+      "updated": "7 Oct 2026",
+      "lastEditedBy": "Aurangzeb",
       "image": null,
       "waitingOn": "",
       "deadline": "",
@@ -4964,6 +4964,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1791360842825eg7f",
+      "time": "2026-10-07T08:14:02.825Z",
+      "action": "[Aurangzeb] Updated task \"money Plant for Factory...\" [Status: Not Started → In Progress, Progress: 0% → 10%] on General",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1784953510716o289",
+          "machine": "General",
+          "category": "General",
+          "desc": "money Plant for Factory",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "remarks": "",
+          "responsible": "",
+          "updated": "25 Jul 2026",
+          "lastEditedBy": "Saqib",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "createdBy": ""
+        }
+      },
+      "taskId": "t1784953510716o289"
+    },
     {
       "id": "t1791360828168f4f0",
       "time": "2026-10-07T08:13:48.168Z",
@@ -7546,17 +7575,6 @@
         "taskId": "t1789629385206z2rk"
       },
       "taskId": "t1789629385206z2rk"
-    },
-    {
-      "id": "t1789629317703u7g3",
-      "time": "2026-09-17T07:15:17.703Z",
-      "action": "[Aurangzeb] Added task \"Unit 2 motor issue, heats up d...\" to Printing",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1789629317703yhl9"
-      },
-      "taskId": "t1789629317703yhl9"
     }
   ],
   "machineMeta": {
@@ -8250,7 +8268,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-10-01T12:48:49.380Z",
-    "Aurangzeb": "2026-10-07T08:13:48.168Z",
+    "Aurangzeb": "2026-10-07T08:14:02.825Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
