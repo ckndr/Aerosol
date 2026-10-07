@@ -4072,12 +4072,12 @@
       "category": "Electrical",
       "desc": "Electrical Basic Tools to be ordered",
       "priority": "Medium",
-      "progress": 0,
-      "status": "Not Started",
+      "progress": 50,
+      "status": "In Progress",
       "remarks": "",
       "responsible": "",
-      "updated": "25 Jul 2026",
-      "lastEditedBy": "Saqib",
+      "updated": "7 Oct 2026",
+      "lastEditedBy": "Aurangzeb",
       "image": null,
       "waitingOn": "",
       "deadline": "",
@@ -4964,6 +4964,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1791360742426ormr",
+      "time": "2026-10-07T08:12:22.426Z",
+      "action": "[Aurangzeb] Updated task \"Electrical Basic Tools to be o...\" [Status: Not Started → In Progress, Progress: 0% → 50%] on General",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1784953688572m1qq",
+          "machine": "General",
+          "category": "Electrical",
+          "desc": "Electrical Basic Tools to be ordered",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "remarks": "",
+          "responsible": "",
+          "updated": "25 Jul 2026",
+          "lastEditedBy": "Saqib",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "createdBy": ""
+        }
+      },
+      "taskId": "t1784953688572m1qq"
+    },
     {
       "id": "t1791360714152f1qs",
       "time": "2026-10-07T08:11:54.152Z",
@@ -7510,35 +7539,6 @@
         }
       },
       "taskId": "t1784357319657zw11"
-    },
-    {
-      "id": "t1789629087703j27r",
-      "time": "2026-09-17T07:11:27.703Z",
-      "action": "[Aurangzeb] Updated task \"Main frame displacement to be ...\" [Progress: 0% → 70%] on Printing",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t1784022464370ep3t",
-          "machine": "Printing",
-          "category": "Mechanical",
-          "desc": "Main frame displacement to be fixed",
-          "priority": "High",
-          "progress": 0,
-          "status": "In Progress",
-          "responsible": "Arsalan",
-          "deadline": "",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "",
-          "image": "",
-          "createdBy": ""
-        }
-      },
-      "taskId": "t1784022464370ep3t"
     }
   ],
   "machineMeta": {
@@ -8232,7 +8232,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-10-01T12:48:49.380Z",
-    "Aurangzeb": "2026-10-07T08:11:54.152Z",
+    "Aurangzeb": "2026-10-07T08:12:22.427Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
