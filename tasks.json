@@ -4167,12 +4167,12 @@
       "category": "Mechanical",
       "desc": "complete production run",
       "priority": "Medium",
-      "progress": 0,
-      "status": "Not Started",
+      "progress": 10,
+      "status": "In Progress",
       "remarks": "",
       "responsible": "",
-      "updated": "25 Jul 2026",
-      "lastEditedBy": "Saqib",
+      "updated": "7 Oct 2026",
+      "lastEditedBy": "Aurangzeb",
       "image": null,
       "waitingOn": "",
       "deadline": "",
@@ -4964,6 +4964,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1791360714152f1qs",
+      "time": "2026-10-07T08:11:54.152Z",
+      "action": "[Aurangzeb] Updated task \"complete production run...\" [Status: Not Started → In Progress, Progress: 0% → 10%] on Overall Machine Operation",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1784954133724cz1t",
+          "machine": "Overall Machine Operation",
+          "category": "Mechanical",
+          "desc": "complete production run",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "remarks": "",
+          "responsible": "",
+          "updated": "25 Jul 2026",
+          "lastEditedBy": "Saqib",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "createdBy": ""
+        }
+      },
+      "taskId": "t1784954133724cz1t"
+    },
     {
       "id": "t1791360699560x8kn",
       "time": "2026-10-07T08:11:39.560Z",
@@ -7510,35 +7539,6 @@
         }
       },
       "taskId": "t1784022464370ep3t"
-    },
-    {
-      "id": "t17896290774632aqq",
-      "time": "2026-09-17T07:11:17.463Z",
-      "action": "[Aurangzeb] Updated task \"PLC Automation and termination...\" [Status: In Progress → Completed, Progress: 0% → 100%] on Printing",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t1784978694854svhk",
-          "machine": "Printing",
-          "category": "Electrical",
-          "desc": "PLC Automation and termination",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "In Progress",
-          "remarks": "",
-          "responsible": "",
-          "updated": "5 Aug 2026",
-          "lastEditedBy": "Saqib",
-          "image": null,
-          "waitingOn": "",
-          "deadline": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "createdBy": ""
-        }
-      },
-      "taskId": "t1784978694854svhk"
     }
   ],
   "machineMeta": {
@@ -8232,7 +8232,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-10-01T12:48:49.380Z",
-    "Aurangzeb": "2026-10-07T08:11:39.560Z",
+    "Aurangzeb": "2026-10-07T08:11:54.152Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
