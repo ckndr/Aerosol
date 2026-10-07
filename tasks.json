@@ -101,12 +101,12 @@
       "category": "Electrical",
       "desc": "wiring and connections to be done",
       "priority": "Medium",
-      "progress": 0,
-      "status": "Not Started",
+      "progress": 25,
+      "status": "In Progress",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "",
-      "updated": "2 Jun 2026",
+      "updated": "7 Oct 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -4965,6 +4965,35 @@
   },
   "activityLog": [
     {
+      "id": "t1791360634264qn8t",
+      "time": "2026-10-07T08:10:34.264Z",
+      "action": "[Aurangzeb] Updated task \"wiring and connections to be d...\" [Status: Not Started → In Progress, Progress: 0% → 25%] on Auto Strapping Machine",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_412945",
+          "machine": "Auto Strapping Machine",
+          "category": "Electrical",
+          "desc": "wiring and connections to be done",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "responsible": "Arsalan",
+          "deadline": "",
+          "remarks": "",
+          "updated": "2 Jun 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": "Photos/Auto Strapping Machine/task_img_1780377510425.jpg",
+          "createdBy": ""
+        }
+      },
+      "taskId": "t_412945"
+    },
+    {
       "id": "t1791360590096h8wi",
       "time": "2026-10-07T08:09:50.096Z",
       "action": "[Aurangzeb] Updated task \"operation issues after reallig...\" [Status: Not Started → In Progress, Progress: 0% → 35%] on FG Conveyor",
@@ -7509,35 +7538,6 @@
         }
       },
       "taskId": "t1784709997569l6gd"
-    },
-    {
-      "id": "t1789629036967akjz",
-      "time": "2026-09-17T07:10:36.967Z",
-      "action": "[Aurangzeb] Updated task \"Teflon suction grippers to cha...\" [Status: In Progress → Completed, Progress: 30% → 100%] on Base Coat",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t1784709783912wgvo",
-          "machine": "Base Coat",
-          "category": "Mechanical",
-          "desc": "Teflon suction grippers to chain mount timing to be set",
-          "priority": "High",
-          "progress": 30,
-          "status": "In Progress",
-          "remarks": "",
-          "responsible": "",
-          "updated": "22 Jul 2026",
-          "lastEditedBy": "Aurangzeb",
-          "image": null,
-          "waitingOn": "",
-          "deadline": "",
-          "dateStarted": "2026-07-19",
-          "dateFinished": "",
-          "createdBy": ""
-        }
-      },
-      "taskId": "t1784709783912wgvo"
     }
   ],
   "machineMeta": {
@@ -8231,7 +8231,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-10-01T12:48:49.380Z",
-    "Aurangzeb": "2026-10-07T08:09:50.096Z",
+    "Aurangzeb": "2026-10-07T08:10:34.264Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
