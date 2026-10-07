@@ -4718,11 +4718,11 @@
       "category": "Electrical",
       "desc": "Heaters are getting overheated and do not stay at set point, need to check and fix.",
       "priority": "Medium",
-      "progress": 0,
-      "status": "Not Started",
+      "progress": 70,
+      "status": "In Progress",
       "remarks": "",
       "responsible": "",
-      "updated": "17 Sept 2026",
+      "updated": "7 Oct 2026",
       "createdBy": "Aurangzeb",
       "lastEditedBy": "Aurangzeb",
       "image": null,
@@ -4964,6 +4964,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1791360441113ifvs",
+      "time": "2026-10-07T08:07:21.113Z",
+      "action": "[Aurangzeb] Updated task \"Heaters are getting overheated...\" [Status: Not Started → In Progress, Progress: 0% → 70%] on Decoration Oven",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1789629680718f23k",
+          "machine": "Decoration Oven",
+          "category": "Electrical",
+          "desc": "Heaters are getting overheated and do not stay at set point, need to check and fix.",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "remarks": "",
+          "responsible": "",
+          "updated": "17 Sept 2026",
+          "createdBy": "Aurangzeb",
+          "lastEditedBy": "Aurangzeb",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t1789629680718f23k"
+    },
     {
       "id": "t17913604150410ax2",
       "time": "2026-10-07T08:06:55.041Z",
@@ -7491,35 +7520,6 @@
         }
       },
       "taskId": "t1784978474014axuk"
-    },
-    {
-      "id": "t178962613593606xj",
-      "time": "2026-09-17T06:22:15.936Z",
-      "action": "[Aurangzeb] Updated task \"dry run with oven...\" [Progress: 0% → 100%] on Lacquer Oven",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t1784978474014axuk",
-          "machine": "Lacquer Oven",
-          "category": "Mechanical",
-          "desc": "dry run with oven",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Not Started",
-          "remarks": "",
-          "responsible": "",
-          "updated": "25 Jul 2026",
-          "lastEditedBy": "Saqib",
-          "image": null,
-          "waitingOn": "",
-          "deadline": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "createdBy": ""
-        }
-      },
-      "taskId": "t1784978474014axuk"
     }
   ],
   "machineMeta": {
@@ -8213,7 +8213,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-10-01T12:48:49.380Z",
-    "Aurangzeb": "2026-10-07T08:06:55.041Z",
+    "Aurangzeb": "2026-10-07T08:07:21.113Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
