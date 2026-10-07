@@ -4395,11 +4395,11 @@
       "category": "Mechanical",
       "desc": "Accumulator dry run with printing unit",
       "priority": "Medium",
-      "progress": 50,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "remarks": "chain derails, issue is being resolved",
       "responsible": "",
-      "updated": "17 Sept 2026",
+      "updated": "7 Oct 2026",
       "lastEditedBy": "Aurangzeb",
       "image": null,
       "waitingOn": "",
@@ -4964,6 +4964,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1791360393881urtl",
+      "time": "2026-10-07T08:06:33.881Z",
+      "action": "[Aurangzeb] Updated task \"Accumulator dry run with print...\" [Status: In Progress → Completed, Progress: 50% → 100%] on Accumulator",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1784978758502k69e",
+          "machine": "Accumulator",
+          "category": "Mechanical",
+          "desc": "Accumulator dry run with printing unit",
+          "priority": "Medium",
+          "progress": 50,
+          "status": "In Progress",
+          "remarks": "chain derails, issue is being resolved",
+          "responsible": "",
+          "updated": "17 Sept 2026",
+          "lastEditedBy": "Aurangzeb",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "createdBy": ""
+        }
+      },
+      "taskId": "t1784978758502k69e"
+    },
     {
       "id": "t17913603723374f51",
       "time": "2026-10-07T08:06:12.337Z",
@@ -7491,35 +7520,6 @@
         }
       },
       "taskId": "t_461252"
-    },
-    {
-      "id": "t1789625859793duxk",
-      "time": "2026-09-17T06:17:39.793Z",
-      "action": "[Aurangzeb] Updated task \"Close all electrical panels an...\" [Progress: 80% → 90%, Remarks updated] on Press",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_928413",
-          "machine": "Press",
-          "category": "Electrical",
-          "desc": "Close all electrical panels and cable trays",
-          "priority": "High",
-          "progress": 80,
-          "status": "In Progress",
-          "responsible": "Arsalan",
-          "deadline": "2026-06-16",
-          "remarks": "",
-          "updated": "16 Sept 2026",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "Aurangzeb",
-          "image": "Photos/Press/task_img_1780310865005.jpg",
-          "createdBy": ""
-        }
-      },
-      "taskId": "t_928413"
     }
   ],
   "machineMeta": {
@@ -8213,7 +8213,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-10-01T12:48:49.380Z",
-    "Aurangzeb": "2026-10-07T08:06:12.337Z",
+    "Aurangzeb": "2026-10-07T08:06:33.881Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
