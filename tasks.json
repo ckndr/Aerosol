@@ -1773,12 +1773,12 @@
       "category": "Electrical",
       "desc": "Testing of Control Logics & Circuits",
       "priority": "High",
-      "progress": 70,
+      "progress": 80,
       "status": "In Progress",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "",
-      "updated": "7 Oct 2026",
+      "updated": "16 Oct 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -5003,6 +5003,35 @@
   },
   "activityLog": [
     {
+      "id": "t1792137106838bztr",
+      "time": "2026-10-16T07:51:46.838Z",
+      "action": "[Aurangzeb] Updated task \"Testing of Control Logics & Ci...\" [Progress: 70% → 80%] on Overall Machine Operation",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_242396",
+          "machine": "Overall Machine Operation",
+          "category": "Electrical",
+          "desc": "Testing of Control Logics & Circuits",
+          "priority": "High",
+          "progress": 70,
+          "status": "In Progress",
+          "responsible": "Arsalan",
+          "deadline": "",
+          "remarks": "",
+          "updated": "7 Oct 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": null,
+          "createdBy": ""
+        }
+      },
+      "taskId": "t_242396"
+    },
+    {
       "id": "t1792137085639mrpu",
       "time": "2026-10-16T07:51:25.639Z",
       "action": "[Aurangzeb] Updated task \"dry run...\" [Progress: 0% → 10%, Remarks updated] on Manual Strapping Machine",
@@ -7620,35 +7649,6 @@
         }
       },
       "taskId": "t1784954002548tn7i"
-    },
-    {
-      "id": "t17896297682547xw6",
-      "time": "2026-09-17T07:22:48.254Z",
-      "action": "[Aurangzeb] Updated task \"blower installation and connec...\" [Status: Not Started → Completed, Progress: 0% → 100%] on Over Varnish",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t1784794886030v2b1",
-          "machine": "Over Varnish",
-          "category": "Mechanical",
-          "desc": "blower installation and connections",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Not Started",
-          "remarks": "motor sent for rewinding",
-          "responsible": "",
-          "updated": "23 Jul 2026",
-          "lastEditedBy": "Aurangzeb",
-          "image": null,
-          "waitingOn": "",
-          "deadline": "",
-          "dateStarted": "2026-07-22",
-          "dateFinished": "",
-          "createdBy": ""
-        }
-      },
-      "taskId": "t1784794886030v2b1"
     }
   ],
   "machineMeta": {
@@ -8374,7 +8374,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-10-01T12:48:49.380Z",
-    "Aurangzeb": "2026-10-16T07:51:25.639Z",
+    "Aurangzeb": "2026-10-16T07:51:46.838Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
