@@ -4642,11 +4642,11 @@
       "category": "Electrical",
       "desc": "Unit 2 motor issue, heats up during operation, need to fix.",
       "priority": "Medium",
-      "progress": 80,
+      "progress": 90,
       "status": "In Progress",
       "remarks": "",
       "responsible": "",
-      "updated": "13 Oct 2026",
+      "updated": "16 Oct 2026",
       "createdBy": "Aurangzeb",
       "lastEditedBy": "Aurangzeb",
       "image": null,
@@ -4983,6 +4983,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1792136846607waxh",
+      "time": "2026-10-16T07:47:26.607Z",
+      "action": "[Aurangzeb] Updated task \"Unit 2 motor issue, heats up d...\" [Progress: 80% → 90%] on Printing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1789629317703yhl9",
+          "machine": "Printing",
+          "category": "Electrical",
+          "desc": "Unit 2 motor issue, heats up during operation, need to fix.",
+          "priority": "Medium",
+          "progress": 80,
+          "status": "In Progress",
+          "remarks": "",
+          "responsible": "",
+          "updated": "13 Oct 2026",
+          "createdBy": "Aurangzeb",
+          "lastEditedBy": "Aurangzeb",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t1789629317703yhl9"
+    },
     {
       "id": "t179213682405528hh",
       "time": "2026-10-16T07:47:04.055Z",
@@ -7619,35 +7648,6 @@
         }
       },
       "taskId": "t1784978723078niei"
-    },
-    {
-      "id": "t1789629724222ugub",
-      "time": "2026-09-17T07:22:04.222Z",
-      "action": "[Aurangzeb] Updated task \"Motors checking and troublesho...\" [Status: In Progress → Completed, Progress: 50% → 100%] on Over Varnish",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_309542",
-          "machine": "Over Varnish",
-          "category": "Electrical",
-          "desc": "Motors checking and troubleshooting",
-          "priority": "High",
-          "progress": 50,
-          "status": "In Progress",
-          "responsible": "Arsalan",
-          "deadline": "2026-06-25",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "",
-          "image": "",
-          "createdBy": ""
-        }
-      },
-      "taskId": "t_309542"
     }
   ],
   "machineMeta": {
@@ -8373,7 +8373,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-10-01T12:48:49.380Z",
-    "Aurangzeb": "2026-10-16T07:47:04.055Z",
+    "Aurangzeb": "2026-10-16T07:47:26.607Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
