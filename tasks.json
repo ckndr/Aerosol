@@ -4893,7 +4893,7 @@
       "status": "In Progress",
       "remarks": "",
       "responsible": "",
-      "updated": "7 Oct 2026",
+      "updated": "16 Oct 2026",
       "createdBy": "Aurangzeb",
       "lastEditedBy": "Aurangzeb",
       "image": null,
@@ -4964,6 +4964,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1792136752575yy16",
+      "time": "2026-10-16T07:45:52.575Z",
+      "action": "[Aurangzeb] Updated task \"Chain fixation to be done and ...\" on Accumulator",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1790059607608f8nm",
+          "machine": "Accumulator",
+          "category": "Mechanical",
+          "desc": "Chain fixation to be done and continuous uninterrupted smooth run to be made sure.",
+          "priority": "Medium",
+          "progress": 90,
+          "status": "In Progress",
+          "remarks": "",
+          "responsible": "",
+          "updated": "7 Oct 2026",
+          "createdBy": "Aurangzeb",
+          "lastEditedBy": "Aurangzeb",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "2026-09-01",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t1790059607608f8nm"
+    },
     {
       "id": "t1792136741368f659",
       "time": "2026-10-16T07:45:41.368Z",
@@ -7600,35 +7629,6 @@
         }
       },
       "taskId": "t_325587"
-    },
-    {
-      "id": "t1789629534991gzy8",
-      "time": "2026-09-17T07:18:54.991Z",
-      "action": "[Aurangzeb] Updated task \"temperature gauges to be check...\" [Status: In Progress → Completed, Progress: 70% → 100%] on Decoration Oven",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_593209",
-          "machine": "Decoration Oven",
-          "category": "Electrical",
-          "desc": "temperature gauges to be checked & installed",
-          "priority": "High",
-          "progress": 70,
-          "status": "In Progress",
-          "responsible": "Arsalan",
-          "deadline": "",
-          "remarks": "",
-          "updated": "2 Jun 2026",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "Aurangzeb",
-          "image": "Photos/Decoration Oven/task_img_1780375031540.jpg",
-          "createdBy": ""
-        }
-      },
-      "taskId": "t_593209"
     }
   ],
   "machineMeta": {
@@ -8354,7 +8354,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-10-01T12:48:49.380Z",
-    "Aurangzeb": "2026-10-16T07:45:41.368Z",
+    "Aurangzeb": "2026-10-16T07:45:52.575Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
