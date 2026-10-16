@@ -4958,12 +4958,42 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t17921368240556iek",
+      "machine": "Base Coat",
+      "category": "Mechanical",
+      "desc": "Base coat roller to be fabricated and installed",
+      "priority": "Medium",
+      "progress": 100,
+      "status": "Completed",
+      "remarks": "",
+      "responsible": "",
+      "updated": "16 Oct 2026",
+      "createdBy": "Aurangzeb",
+      "lastEditedBy": "Aurangzeb",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t179213682405528hh",
+      "time": "2026-10-16T07:47:04.055Z",
+      "action": "[Aurangzeb] Added task \"Base coat roller to be fabrica...\" to Base Coat",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "add",
+        "taskId": "t17921368240556iek"
+      },
+      "taskId": "t17921368240556iek"
+    },
     {
       "id": "t1792136759431owji",
       "time": "2026-10-16T07:45:59.431Z",
@@ -7618,17 +7648,6 @@
         }
       },
       "taskId": "t_309542"
-    },
-    {
-      "id": "t1789629680718bgqh",
-      "time": "2026-09-17T07:21:20.718Z",
-      "action": "[Aurangzeb] Added task \"Heaters are getting overheated...\" to Decoration Oven",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1789629680718f23k"
-      },
-      "taskId": "t1789629680718f23k"
     }
   ],
   "machineMeta": {
@@ -8354,7 +8373,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-10-01T12:48:49.380Z",
-    "Aurangzeb": "2026-10-16T07:45:59.431Z",
+    "Aurangzeb": "2026-10-16T07:47:04.055Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
