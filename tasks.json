@@ -4813,11 +4813,11 @@
       "category": "Electrical",
       "desc": "control logic to made with sensors and limit switches and other requisites for proper automatic fuction.",
       "priority": "High",
-      "progress": 35,
+      "progress": 95,
       "status": "In Progress",
       "remarks": "",
       "responsible": "",
-      "updated": "7 Oct 2026",
+      "updated": "16 Oct 2026",
       "createdBy": "Aurangzeb",
       "lastEditedBy": "Aurangzeb",
       "image": null,
@@ -4964,6 +4964,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1792136741368f659",
+      "time": "2026-10-16T07:45:41.368Z",
+      "action": "[Aurangzeb] Updated task \"control logic to made with sen...\" [Progress: 35% → 95%] on Accumulator",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t17896302659340znx",
+          "machine": "Accumulator",
+          "category": "Electrical",
+          "desc": "control logic to made with sensors and limit switches and other requisites for proper automatic fuction.",
+          "priority": "High",
+          "progress": 35,
+          "status": "In Progress",
+          "remarks": "",
+          "responsible": "",
+          "updated": "7 Oct 2026",
+          "createdBy": "Aurangzeb",
+          "lastEditedBy": "Aurangzeb",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t17896302659340znx"
+    },
     {
       "id": "t179189027411797tc",
       "time": "2026-10-13T11:17:54.117Z",
@@ -7600,35 +7629,6 @@
         }
       },
       "taskId": "t_593209"
-    },
-    {
-      "id": "t1789629523135ahif",
-      "time": "2026-09-17T07:18:43.135Z",
-      "action": "[Aurangzeb] Updated task \"Heaters to be checked and repl...\" [Status: Pending Procurement → Completed, Progress: 80% → 100%] on Decoration Oven",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_224710",
-          "machine": "Decoration Oven",
-          "category": "Electrical",
-          "desc": "Heaters to be checked and replaced if required",
-          "priority": "High",
-          "progress": 80,
-          "status": "Pending Procurement",
-          "responsible": "Arsalan",
-          "deadline": "",
-          "remarks": "sample needed for ordering",
-          "updated": "5 Aug 2026",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "Saqib",
-          "image": "Photos/Decoration Oven/task_img_1780375380135.jpg",
-          "createdBy": ""
-        }
-      },
-      "taskId": "t_224710"
     }
   ],
   "machineMeta": {
@@ -8354,7 +8354,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-10-01T12:48:49.380Z",
-    "Aurangzeb": "2026-10-16T07:45:08.860Z",
+    "Aurangzeb": "2026-10-16T07:45:41.368Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
