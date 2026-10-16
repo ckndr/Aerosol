@@ -4680,11 +4680,11 @@
       "category": "Mechanical",
       "desc": "Unit 6 stuck hydraulically, not moving, fixation required.",
       "priority": "Medium",
-      "progress": 0,
-      "status": "Not Started",
+      "progress": 5,
+      "status": "In Progress",
       "remarks": "",
       "responsible": "",
-      "updated": "17 Sept 2026",
+      "updated": "16 Oct 2026",
       "createdBy": "Aurangzeb",
       "lastEditedBy": "Aurangzeb",
       "image": null,
@@ -4983,6 +4983,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t179213686631958ax",
+      "time": "2026-10-16T07:47:46.319Z",
+      "action": "[Aurangzeb] Updated task \"Unit 6 stuck hydraulically, no...\" [Status: Not Started → In Progress, Progress: 0% → 5%] on Printing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1789629425095i64z",
+          "machine": "Printing",
+          "category": "Mechanical",
+          "desc": "Unit 6 stuck hydraulically, not moving, fixation required.",
+          "priority": "Medium",
+          "progress": 0,
+          "status": "Not Started",
+          "remarks": "",
+          "responsible": "",
+          "updated": "17 Sept 2026",
+          "createdBy": "Aurangzeb",
+          "lastEditedBy": "Aurangzeb",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t1789629425095i64z"
+    },
     {
       "id": "t1792136846607waxh",
       "time": "2026-10-16T07:47:26.607Z",
@@ -7619,35 +7648,6 @@
         }
       },
       "taskId": "t_895006"
-    },
-    {
-      "id": "t1789629729750p4es",
-      "time": "2026-09-17T07:22:09.750Z",
-      "action": "[Aurangzeb] Updated task \"PLC Automation and termination...\" [Status: In Progress → Completed, Progress: 0% → 100%] on Over Varnish",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t1784978723078niei",
-          "machine": "Over Varnish",
-          "category": "Electrical",
-          "desc": "PLC Automation and termination",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "In Progress",
-          "remarks": "",
-          "responsible": "",
-          "updated": "5 Aug 2026",
-          "lastEditedBy": "Saqib",
-          "image": null,
-          "waitingOn": "",
-          "deadline": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "createdBy": ""
-        }
-      },
-      "taskId": "t1784978723078niei"
     }
   ],
   "machineMeta": {
@@ -8373,7 +8373,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-10-01T12:48:49.380Z",
-    "Aurangzeb": "2026-10-16T07:47:26.607Z",
+    "Aurangzeb": "2026-10-16T07:47:46.319Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
