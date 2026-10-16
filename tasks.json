@@ -4737,11 +4737,11 @@
       "category": "Electrical",
       "desc": "main cable connection with breaker pending.",
       "priority": "Medium",
-      "progress": 70,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "remarks": "",
       "responsible": "",
-      "updated": "7 Oct 2026",
+      "updated": "16 Oct 2026",
       "createdBy": "Aurangzeb",
       "lastEditedBy": "Aurangzeb",
       "image": null,
@@ -4983,6 +4983,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17921369234873uby",
+      "time": "2026-10-16T07:48:43.487Z",
+      "action": "[Aurangzeb] Updated task \"main cable connection with bre...\" [Status: In Progress → Completed, Progress: 70% → 100%] on Necking",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1789629847462s6su",
+          "machine": "Necking",
+          "category": "Electrical",
+          "desc": "main cable connection with breaker pending.",
+          "priority": "Medium",
+          "progress": 70,
+          "status": "In Progress",
+          "remarks": "",
+          "responsible": "",
+          "updated": "7 Oct 2026",
+          "createdBy": "Aurangzeb",
+          "lastEditedBy": "Aurangzeb",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t1789629847462s6su"
+    },
     {
       "id": "t179213686631958ax",
       "time": "2026-10-16T07:47:46.319Z",
@@ -7619,35 +7648,6 @@
         }
       },
       "taskId": "t_993093"
-    },
-    {
-      "id": "t17896297360869znc",
-      "time": "2026-09-17T07:22:16.086Z",
-      "action": "[Aurangzeb] Updated task \"Spare Rubberize rollers...\" [Status: Pending Procurement → Completed, Progress: 60% → 100%] on Over Varnish",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_895006",
-          "machine": "Over Varnish",
-          "category": "Mechanical",
-          "desc": "Spare Rubberize rollers",
-          "priority": "High",
-          "progress": 60,
-          "status": "Pending Procurement",
-          "responsible": "Saqib",
-          "deadline": "2026-06-25",
-          "remarks": "Rollers made not according to req. spec. need to be remade.",
-          "updated": "18 Jul 2026",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "Aurangzeb",
-          "image": null,
-          "createdBy": ""
-        }
-      },
-      "taskId": "t_895006"
     }
   ],
   "machineMeta": {
@@ -8373,7 +8373,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-10-01T12:48:49.380Z",
-    "Aurangzeb": "2026-10-16T07:47:46.319Z",
+    "Aurangzeb": "2026-10-16T07:48:43.487Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
