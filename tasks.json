@@ -2761,12 +2761,12 @@
       "category": "Electrical",
       "desc": "closure of all cable trays/ panels",
       "priority": "High",
-      "progress": 70,
+      "progress": 90,
       "status": "In Progress",
       "responsible": "Arsalan",
       "deadline": "2026-06-19",
       "remarks": "",
-      "updated": "28 Sept 2026",
+      "updated": "24 Oct 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -5002,6 +5002,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1792817142751g8of",
+      "time": "2026-10-24T04:45:42.751Z",
+      "action": "[Aurangzeb] Updated task \"closure of all cable trays/ pa...\" [Progress: 70% → 90%] on Trimming",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_461252",
+          "machine": "Trimming",
+          "category": "Electrical",
+          "desc": "closure of all cable trays/ panels",
+          "priority": "High",
+          "progress": 70,
+          "status": "In Progress",
+          "responsible": "Arsalan",
+          "deadline": "2026-06-19",
+          "remarks": "",
+          "updated": "28 Sept 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": "Photos/Trimming/task_img_1780311378372.jpg",
+          "createdBy": ""
+        }
+      },
+      "taskId": "t_461252"
+    },
     {
       "id": "t1792817122583236j",
       "time": "2026-10-24T04:45:22.583Z",
@@ -7638,17 +7667,6 @@
         }
       },
       "taskId": "t1789629847462s6su"
-    },
-    {
-      "id": "t178962984746225nz",
-      "time": "2026-09-17T07:24:07.462Z",
-      "action": "[Aurangzeb] Added task \"main cable connection with bre...\" to Necking",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1789629847462s6su"
-      },
-      "taskId": "t1789629847462s6su"
     }
   ],
   "machineMeta": {
@@ -8382,7 +8400,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-10-01T12:48:49.380Z",
-    "Aurangzeb": "2026-10-24T04:45:22.583Z",
+    "Aurangzeb": "2026-10-24T04:45:42.752Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
