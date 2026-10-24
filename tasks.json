@@ -4851,11 +4851,11 @@
       "category": "Mechanical",
       "desc": "operation issues after reallignment of conveyor to be fixed ( cans falling etc. )",
       "priority": "Medium",
-      "progress": 35,
+      "progress": 70,
       "status": "In Progress",
       "remarks": "",
       "responsible": "",
-      "updated": "7 Oct 2026",
+      "updated": "24 Oct 2026",
       "createdBy": "Aurangzeb",
       "lastEditedBy": "Aurangzeb",
       "image": null,
@@ -5116,6 +5116,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1792818039679wlr5",
+      "time": "2026-10-24T05:00:39.679Z",
+      "action": "[Aurangzeb] Updated task \"operation issues after reallig...\" [Progress: 35% → 70%] on FG Conveyor",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1789640993322rrsh",
+          "machine": "FG Conveyor",
+          "category": "Mechanical",
+          "desc": "operation issues after reallignment of conveyor to be fixed ( cans falling etc. )",
+          "priority": "Medium",
+          "progress": 35,
+          "status": "In Progress",
+          "remarks": "",
+          "responsible": "",
+          "updated": "7 Oct 2026",
+          "createdBy": "Aurangzeb",
+          "lastEditedBy": "Aurangzeb",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t1789640993322rrsh"
+    },
     {
       "id": "t1792818019152mmrt",
       "time": "2026-10-24T05:00:19.152Z",
@@ -7770,35 +7799,6 @@
         }
       },
       "taskId": "t1784953674141abt5"
-    },
-    {
-      "id": "t1789641227498bgqi",
-      "time": "2026-09-17T10:33:47.498Z",
-      "action": "[Aurangzeb] Updated task \"Mechanical Spare parts to be o...\" [Progress: 0% → 10%] on General",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t1784953657670knqz",
-          "machine": "General",
-          "category": "Mechanical",
-          "desc": "Mechanical Spare parts to be ordered",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "In Progress",
-          "remarks": "",
-          "responsible": "",
-          "updated": "25 Jul 2026",
-          "lastEditedBy": "Saqib",
-          "image": null,
-          "waitingOn": "",
-          "deadline": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "createdBy": ""
-        }
-      },
-      "taskId": "t1784953657670knqz"
     }
   ],
   "machineMeta": {
@@ -8532,7 +8532,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-10-01T12:48:49.380Z",
-    "Aurangzeb": "2026-10-24T05:00:19.152Z",
+    "Aurangzeb": "2026-10-24T05:00:39.679Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
