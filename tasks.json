@@ -5034,12 +5034,42 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t1792817728104rz71",
+      "machine": "Printing",
+      "category": "General",
+      "desc": "there should be save option for Printing parameters settings",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "Not Started",
+      "remarks": "",
+      "responsible": "",
+      "updated": "24 Oct 2026",
+      "createdBy": "Aurangzeb",
+      "lastEditedBy": "Aurangzeb",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1792817728104b61h",
+      "time": "2026-10-24T04:55:28.104Z",
+      "action": "[Aurangzeb] Added task \"there should be save option fo...\" to Printing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1792817728104rz71"
+      },
+      "taskId": "t1792817728104rz71"
+    },
     {
       "id": "t1792817635318csxq",
       "time": "2026-10-24T04:53:55.318Z",
@@ -7748,17 +7778,6 @@
         "taskId": "t1789641034137njr2"
       },
       "taskId": "t1789641034137njr2"
-    },
-    {
-      "id": "t1789640993322brox",
-      "time": "2026-09-17T10:29:53.322Z",
-      "action": "[Aurangzeb] Added task \"operation issues after reallig...\" to FG Conveyor",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1789640993322rrsh"
-      },
-      "taskId": "t1789640993322rrsh"
     }
   ],
   "machineMeta": {
@@ -8492,7 +8511,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-10-01T12:48:49.380Z",
-    "Aurangzeb": "2026-10-24T04:53:55.318Z",
+    "Aurangzeb": "2026-10-24T04:55:28.104Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
