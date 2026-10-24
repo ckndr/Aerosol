@@ -4996,12 +4996,42 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t1792817558351sa1i",
+      "machine": "Printing",
+      "category": "Electrical",
+      "desc": "Blanket drum function should be dissociative of chain, and its actutaion automatically with cans sensor.",
+      "priority": "Medium",
+      "progress": 50,
+      "status": "In Progress",
+      "remarks": "",
+      "responsible": "",
+      "updated": "24 Oct 2026",
+      "createdBy": "Aurangzeb",
+      "lastEditedBy": "Aurangzeb",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1792817558351zj0j",
+      "time": "2026-10-24T04:52:38.351Z",
+      "action": "[Aurangzeb] Added task \"Blanket drum function should b...\" to Printing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1792817558351sa1i"
+      },
+      "taskId": "t1792817558351sa1i"
+    },
     {
       "id": "t1792817277623etxc",
       "time": "2026-10-24T04:47:57.623Z",
@@ -7710,35 +7740,6 @@
         "taskId": "t1789640930850pzo5"
       },
       "taskId": "t1789640930850pzo5"
-    },
-    {
-      "id": "t1789640885554jq4i",
-      "time": "2026-09-17T10:28:05.554Z",
-      "action": "[Aurangzeb] Updated task \"Pneumatic pipes for auto drain...\" [Progress: 0% → 80%] on Compressor",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t1784954201453y733",
-          "machine": "Compressor",
-          "category": "Mechanical",
-          "desc": "Pneumatic pipes for auto drain",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Not Started",
-          "remarks": "",
-          "responsible": "",
-          "updated": "25 Jul 2026",
-          "lastEditedBy": "Saqib",
-          "image": null,
-          "waitingOn": "",
-          "deadline": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "createdBy": ""
-        }
-      },
-      "taskId": "t1784954201453y733"
     }
   ],
   "machineMeta": {
@@ -8472,7 +8473,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-10-01T12:48:49.380Z",
-    "Aurangzeb": "2026-10-24T04:47:57.623Z",
+    "Aurangzeb": "2026-10-24T04:52:38.351Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
