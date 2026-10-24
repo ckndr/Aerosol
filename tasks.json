@@ -4205,11 +4205,11 @@
       "category": "Mechanical",
       "desc": "Pneumatic pipes for auto drain",
       "priority": "Medium",
-      "progress": 90,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "remarks": "",
       "responsible": "",
-      "updated": "7 Oct 2026",
+      "updated": "24 Oct 2026",
       "lastEditedBy": "Aurangzeb",
       "image": null,
       "waitingOn": "",
@@ -5116,6 +5116,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1792818019152mmrt",
+      "time": "2026-10-24T05:00:19.152Z",
+      "action": "[Aurangzeb] Updated task \"Pneumatic pipes for auto drain...\" [Status: In Progress → Completed, Progress: 90% → 100%] on Compressor",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t1784954201453y733",
+          "machine": "Compressor",
+          "category": "Mechanical",
+          "desc": "Pneumatic pipes for auto drain",
+          "priority": "Medium",
+          "progress": 90,
+          "status": "In Progress",
+          "remarks": "",
+          "responsible": "",
+          "updated": "7 Oct 2026",
+          "lastEditedBy": "Aurangzeb",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "createdBy": ""
+        }
+      },
+      "taskId": "t1784954201453y733"
+    },
     {
       "id": "t1792817967022rv65",
       "time": "2026-10-24T04:59:27.022Z",
@@ -7770,35 +7799,6 @@
         }
       },
       "taskId": "t1784953657670knqz"
-    },
-    {
-      "id": "t1789641197369r8hu",
-      "time": "2026-09-17T10:33:17.369Z",
-      "action": "[Aurangzeb] Updated task \"Test each machine individually...\" [Progress: 80% → 90%] on General",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_515621",
-          "machine": "General",
-          "category": "Mechanical",
-          "desc": "Test each machine individually without load",
-          "priority": "Medium",
-          "progress": 80,
-          "status": "In Progress",
-          "responsible": "Arsalan",
-          "deadline": "",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "",
-          "image": "",
-          "createdBy": ""
-        }
-      },
-      "taskId": "t_515621"
     }
   ],
   "machineMeta": {
@@ -8532,7 +8532,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-10-01T12:48:49.380Z",
-    "Aurangzeb": "2026-10-24T04:59:27.023Z",
+    "Aurangzeb": "2026-10-24T05:00:19.152Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
