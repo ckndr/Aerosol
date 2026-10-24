@@ -1203,12 +1203,12 @@
       "category": "Mechanical",
       "desc": "Oven back metallic cover sheet to be installed",
       "priority": "Medium",
-      "progress": 80,
+      "progress": 90,
       "status": "In Progress",
       "responsible": "Saqib",
       "deadline": "2026-06-15",
       "remarks": "",
-      "updated": "7 Oct 2026",
+      "updated": "24 Oct 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -5003,6 +5003,35 @@
   },
   "activityLog": [
     {
+      "id": "t1792817219071s3og",
+      "time": "2026-10-24T04:46:59.071Z",
+      "action": "[Aurangzeb] Updated task \"Oven back metallic cover sheet...\" [Progress: 80% → 90%] on Lacquer Oven",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_922079",
+          "machine": "Lacquer Oven",
+          "category": "Mechanical",
+          "desc": "Oven back metallic cover sheet to be installed",
+          "priority": "Medium",
+          "progress": 80,
+          "status": "In Progress",
+          "responsible": "Saqib",
+          "deadline": "2026-06-15",
+          "remarks": "",
+          "updated": "7 Oct 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": "Photos/Lacquer Oven/task_img_1780313004800.jpg",
+          "createdBy": ""
+        }
+      },
+      "taskId": "t_922079"
+    },
+    {
       "id": "t1792817202935mgx7",
       "time": "2026-10-24T04:46:42.935Z",
       "action": "[Aurangzeb] Updated task \"Spray and Drying section's win...\" [Progress: 80% → 90%] on Washing",
@@ -7674,17 +7703,6 @@
         "taskId": "t1789630136023l6qa"
       },
       "taskId": "t1789630136023l6qa"
-    },
-    {
-      "id": "t1789630113974m8s9",
-      "time": "2026-09-17T07:28:33.974Z",
-      "action": "[Aurangzeb] Added task \"blower connection pending...\" to Necking",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1789630113974kvcd"
-      },
-      "taskId": "t1789630113974kvcd"
     }
   ],
   "machineMeta": {
@@ -8418,7 +8436,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-10-01T12:48:49.380Z",
-    "Aurangzeb": "2026-10-24T04:46:42.935Z",
+    "Aurangzeb": "2026-10-24T04:46:59.071Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
