@@ -1792,12 +1792,12 @@
       "category": "Electrical",
       "desc": "Verify electrical panels, wiring & interlocks — Washing to Necking",
       "priority": "High",
-      "progress": 81,
+      "progress": 90,
       "status": "In Progress",
       "responsible": "Arsalan",
       "deadline": "",
       "remarks": "",
-      "updated": "7 Oct 2026",
+      "updated": "24 Oct 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -5117,6 +5117,35 @@
   },
   "activityLog": [
     {
+      "id": "t1792818107326b6o0",
+      "time": "2026-10-24T05:01:47.326Z",
+      "action": "[Aurangzeb] Updated task \"Verify electrical panels, wiri...\" [Progress: 81% → 90%] on Overall Machine Operation",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_357049",
+          "machine": "Overall Machine Operation",
+          "category": "Electrical",
+          "desc": "Verify electrical panels, wiring & interlocks — Washing to Necking",
+          "priority": "High",
+          "progress": 81,
+          "status": "In Progress",
+          "responsible": "Arsalan",
+          "deadline": "",
+          "remarks": "",
+          "updated": "7 Oct 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": null,
+          "createdBy": ""
+        }
+      },
+      "taskId": "t_357049"
+    },
+    {
       "id": "t17928180906220qqf",
       "time": "2026-10-24T05:01:30.622Z",
       "action": "[Aurangzeb] Updated task \"Testing of Control Logics & Ci...\" [Progress: 80% → 90%] on Overall Machine Operation",
@@ -7770,35 +7799,6 @@
         }
       },
       "taskId": "t1784954201453y733"
-    },
-    {
-      "id": "t178964134294598mp",
-      "time": "2026-09-17T10:35:42.945Z",
-      "action": "[Aurangzeb] Updated task \"departmental SOP's...\" [Progress: 0% → 70%] on General",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t1784953576214ol8l",
-          "machine": "General",
-          "category": "General",
-          "desc": "departmental SOP's",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Not Started",
-          "remarks": "",
-          "responsible": "",
-          "updated": "25 Jul 2026",
-          "lastEditedBy": "Saqib",
-          "image": null,
-          "waitingOn": "",
-          "deadline": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "createdBy": ""
-        }
-      },
-      "taskId": "t1784953576214ol8l"
     }
   ],
   "machineMeta": {
@@ -8532,7 +8532,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-10-01T12:48:49.380Z",
-    "Aurangzeb": "2026-10-24T05:01:30.623Z",
+    "Aurangzeb": "2026-10-24T05:01:47.327Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
