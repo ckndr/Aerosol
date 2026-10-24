@@ -3008,16 +3008,16 @@
       "category": "Mechanical",
       "desc": "Inspect all rubber pipes — replace if damaged",
       "priority": "High",
-      "progress": 0,
+      "progress": 5,
       "status": "In Progress",
       "responsible": "Arsalan",
       "deadline": "2026-06-30",
       "remarks": "",
-      "updated": "25 Jul 2026",
+      "updated": "24 Oct 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
-      "lastEditedBy": "Saqib",
+      "lastEditedBy": "Aurangzeb",
       "image": "Photos/Washing/task_img_1780312620376.jpg",
       "createdBy": ""
     },
@@ -5002,6 +5002,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1792817179367lfsa",
+      "time": "2026-10-24T04:46:19.367Z",
+      "action": "[Aurangzeb] Updated task \"Inspect all rubber pipes — rep...\" [Progress: 0% → 5%] on Washing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_788779",
+          "machine": "Washing",
+          "category": "Mechanical",
+          "desc": "Inspect all rubber pipes — replace if damaged",
+          "priority": "High",
+          "progress": 0,
+          "status": "In Progress",
+          "responsible": "Arsalan",
+          "deadline": "2026-06-30",
+          "remarks": "",
+          "updated": "25 Jul 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Saqib",
+          "image": "Photos/Washing/task_img_1780312620376.jpg",
+          "createdBy": ""
+        }
+      },
+      "taskId": "t_788779"
+    },
     {
       "id": "t1792817152495v7el",
       "time": "2026-10-24T04:45:52.495Z",
@@ -7638,35 +7667,6 @@
         "taskId": "t1789629915422cgwe"
       },
       "taskId": "t1789629915422cgwe"
-    },
-    {
-      "id": "t17896298765746pgw",
-      "time": "2026-09-17T07:24:36.574Z",
-      "action": "[Aurangzeb] Updated task \"PVC ejection pipe to be instal...\" [Status: Pending Procurement → Completed, Progress: 0% → 100%] on Necking",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t17849790198225bj9",
-          "machine": "Necking",
-          "category": "Mechanical",
-          "desc": "PVC ejection pipe to be installed",
-          "priority": "Medium",
-          "progress": 0,
-          "status": "Pending Procurement",
-          "remarks": "",
-          "responsible": "",
-          "updated": "25 Jul 2026",
-          "lastEditedBy": "Saqib",
-          "image": null,
-          "waitingOn": "",
-          "deadline": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "createdBy": ""
-        }
-      },
-      "taskId": "t17849790198225bj9"
     }
   ],
   "machineMeta": {
@@ -8400,7 +8400,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-10-01T12:48:49.380Z",
-    "Aurangzeb": "2026-10-24T04:45:52.495Z",
+    "Aurangzeb": "2026-10-24T04:46:19.367Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
