@@ -1830,12 +1830,12 @@
       "category": "Electrical",
       "desc": "Close all electrical panels and cable trays",
       "priority": "High",
-      "progress": 80,
+      "progress": 90,
       "status": "In Progress",
       "responsible": "Arsalan",
       "deadline": "2026-06-16",
       "remarks": "main cable to panel connections pending",
-      "updated": "1 Oct 2026",
+      "updated": "24 Oct 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -5003,6 +5003,35 @@
   },
   "activityLog": [
     {
+      "id": "t1792817122583236j",
+      "time": "2026-10-24T04:45:22.583Z",
+      "action": "[Aurangzeb] Updated task \"Close all electrical panels an...\" [Progress: 80% → 90%] on Press",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_928413",
+          "machine": "Press",
+          "category": "Electrical",
+          "desc": "Close all electrical panels and cable trays",
+          "priority": "High",
+          "progress": 80,
+          "status": "In Progress",
+          "responsible": "Arsalan",
+          "deadline": "2026-06-16",
+          "remarks": "main cable to panel connections pending",
+          "updated": "1 Oct 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": "Photos/Press/task_img_1780310865005.jpg",
+          "createdBy": ""
+        }
+      },
+      "taskId": "t_928413"
+    },
+    {
       "id": "t1792137153063ekix",
       "time": "2026-10-16T07:52:33.063Z",
       "action": "[Aurangzeb] Updated task \"Ball End Guide Rod  for Chain ...\" [Status: Not Started → In Progress, Progress: 0% → 10%] on Overall Machine Operation",
@@ -7620,35 +7649,6 @@
         "taskId": "t1789629847462s6su"
       },
       "taskId": "t1789629847462s6su"
-    },
-    {
-      "id": "t1789629807830hamx",
-      "time": "2026-09-17T07:23:27.830Z",
-      "action": "[Aurangzeb] Updated task \"Necking machine — electrical s...\" [Status: In Progress → Completed, Progress: 60% → 100%] on Necking",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_974583",
-          "machine": "Necking",
-          "category": "Electrical",
-          "desc": "Necking machine — electrical supply troubleshooting for dry run",
-          "priority": "High",
-          "progress": 60,
-          "status": "In Progress",
-          "responsible": "Arsalan",
-          "deadline": "",
-          "remarks": "Interlocking will be redesigned and checked",
-          "updated": "2 Jun 2026",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "Aurangzeb",
-          "image": "Photos/Necking/task_img_1780376966258.jpg",
-          "createdBy": ""
-        }
-      },
-      "taskId": "t_974583"
     }
   ],
   "machineMeta": {
@@ -8382,7 +8382,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-10-01T12:48:49.380Z",
-    "Aurangzeb": "2026-10-24T04:45:14.574Z",
+    "Aurangzeb": "2026-10-24T04:45:22.583Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
