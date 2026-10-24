@@ -5072,12 +5072,42 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t1792817853894vlqg",
+      "machine": "Necking",
+      "category": "Mechanical",
+      "desc": "Scrap collector tank filters to cleaned.",
+      "priority": "Medium",
+      "progress": 100,
+      "status": "Completed",
+      "remarks": "",
+      "responsible": "",
+      "updated": "24 Oct 2026",
+      "createdBy": "Aurangzeb",
+      "lastEditedBy": "Aurangzeb",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1792817853894actq",
+      "time": "2026-10-24T04:57:33.894Z",
+      "action": "[Aurangzeb] Added task \"Scrap collector tank filters t...\" to Necking",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1792817853894vlqg"
+      },
+      "taskId": "t1792817853894vlqg"
+    },
     {
       "id": "t1792817817774rkbp",
       "time": "2026-10-24T04:56:57.774Z",
@@ -7768,35 +7798,6 @@
         }
       },
       "taskId": "t_756784"
-    },
-    {
-      "id": "t1789641095138ae4h",
-      "time": "2026-09-17T10:31:35.138Z",
-      "action": "[Aurangzeb] Updated task \"Verify electrical panels, wiri...\" [Progress: 50% → 75%] on Overall Machine Operation",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_357049",
-          "machine": "Overall Machine Operation",
-          "category": "Electrical",
-          "desc": "Verify electrical panels, wiring & interlocks — Washing to Necking",
-          "priority": "High",
-          "progress": 50,
-          "status": "In Progress",
-          "responsible": "Arsalan",
-          "deadline": "",
-          "remarks": "",
-          "updated": "13 Jul 2026",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "Saqib",
-          "image": "",
-          "createdBy": ""
-        }
-      },
-      "taskId": "t_357049"
     }
   ],
   "machineMeta": {
@@ -8530,7 +8531,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-10-01T12:48:49.380Z",
-    "Aurangzeb": "2026-10-24T04:56:57.774Z",
+    "Aurangzeb": "2026-10-24T04:57:33.894Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
