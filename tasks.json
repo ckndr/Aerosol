@@ -5091,12 +5091,42 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t1792817967022zf8q",
+      "machine": "Decoration Oven",
+      "category": "Mechanical",
+      "desc": "Main oven cleaning to be carried out.",
+      "priority": "Medium",
+      "progress": 51,
+      "status": "In Progress",
+      "remarks": "",
+      "responsible": "",
+      "updated": "24 Oct 2026",
+      "createdBy": "Aurangzeb",
+      "lastEditedBy": "Aurangzeb",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1792817967022rv65",
+      "time": "2026-10-24T04:59:27.022Z",
+      "action": "[Aurangzeb] Added task \"Main oven cleaning to be carri...\" to Decoration Oven",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1792817967022zf8q"
+      },
+      "taskId": "t1792817967022zf8q"
+    },
     {
       "id": "t1792817929023el37",
       "time": "2026-10-24T04:58:49.023Z",
@@ -7769,35 +7799,6 @@
         }
       },
       "taskId": "t_515621"
-    },
-    {
-      "id": "t1789641158538hjd9",
-      "time": "2026-09-17T10:32:38.538Z",
-      "action": "[Aurangzeb] Updated task \"wire from the transformer to t...\" [Status: In Progress → Completed, Progress: 88% → 100%] on Main Power Distribution",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t1787297588327iqgi",
-          "machine": "Main Power Distribution",
-          "category": "Electrical",
-          "desc": "wire from the transformer to the main panel.",
-          "priority": "Medium",
-          "progress": 88,
-          "status": "In Progress",
-          "remarks": "",
-          "responsible": "",
-          "updated": "21 Aug 2026",
-          "createdBy": "Bilal",
-          "lastEditedBy": "Bilal",
-          "image": null,
-          "waitingOn": "",
-          "deadline": "",
-          "dateStarted": "",
-          "dateFinished": ""
-        }
-      },
-      "taskId": "t1787297588327iqgi"
     }
   ],
   "machineMeta": {
@@ -8531,7 +8532,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-10-01T12:48:49.380Z",
-    "Aurangzeb": "2026-10-24T04:58:49.023Z",
+    "Aurangzeb": "2026-10-24T04:59:27.023Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
