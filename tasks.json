@@ -5053,12 +5053,42 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t1792817799103qe5g",
+      "machine": "Decoration Oven",
+      "category": "Mechanical",
+      "desc": "oven chain pins to be replaced/fixed/installed.",
+      "priority": "Medium",
+      "progress": 5,
+      "status": "In Progress",
+      "remarks": "",
+      "responsible": "",
+      "updated": "24 Oct 2026",
+      "createdBy": "Aurangzeb",
+      "lastEditedBy": "Aurangzeb",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1792817799103x964",
+      "time": "2026-10-24T04:56:39.103Z",
+      "action": "[Aurangzeb] Added task \"oven chain pins to be replaced...\" to Decoration Oven",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "add",
+        "taskId": "t1792817799103qe5g"
+      },
+      "taskId": "t1792817799103qe5g"
+    },
     {
       "id": "t1792817728104b61h",
       "time": "2026-10-24T04:55:28.104Z",
@@ -7767,17 +7797,6 @@
         }
       },
       "taskId": "t_414385"
-    },
-    {
-      "id": "t1789641034137k7om",
-      "time": "2026-09-17T10:30:34.137Z",
-      "action": "[Aurangzeb] Added task \"dry run...\" to Manual Strapping Machine",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1789641034137njr2"
-      },
-      "taskId": "t1789641034137njr2"
     }
   ],
   "machineMeta": {
@@ -8511,7 +8530,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-10-01T12:48:49.380Z",
-    "Aurangzeb": "2026-10-24T04:55:28.104Z",
+    "Aurangzeb": "2026-10-24T04:56:39.103Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
