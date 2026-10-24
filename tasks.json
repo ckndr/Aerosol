@@ -2495,12 +2495,12 @@
       "category": "Electrical",
       "desc": "closure of all cable trays/ panels",
       "priority": "High",
-      "progress": 60,
+      "progress": 81,
       "status": "In Progress",
       "responsible": "Arsalan",
       "deadline": "2026-06-25",
       "remarks": "",
-      "updated": "22 Sept 2026",
+      "updated": "24 Oct 2026",
       "waitingOn": "",
       "dateStarted": "",
       "dateFinished": "",
@@ -5002,6 +5002,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t17928172554710gus",
+      "time": "2026-10-24T04:47:35.471Z",
+      "action": "[Aurangzeb] Updated task \"closure of all cable trays/ pa...\" [Progress: 60% → 81%] on Printing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t_522663",
+          "machine": "Printing",
+          "category": "Electrical",
+          "desc": "closure of all cable trays/ panels",
+          "priority": "High",
+          "progress": 60,
+          "status": "In Progress",
+          "responsible": "Arsalan",
+          "deadline": "2026-06-25",
+          "remarks": "",
+          "updated": "22 Sept 2026",
+          "waitingOn": "",
+          "dateStarted": "",
+          "dateFinished": "",
+          "lastEditedBy": "Aurangzeb",
+          "image": "Photos/Printing/task_img_1780374418973.jpg",
+          "createdBy": ""
+        }
+      },
+      "taskId": "t_522663"
+    },
     {
       "id": "t1792817239847h508",
       "time": "2026-10-24T04:47:19.847Z",
@@ -7710,17 +7739,6 @@
         }
       },
       "taskId": "t17896302659340znx"
-    },
-    {
-      "id": "t17896302659348z9i",
-      "time": "2026-09-17T07:31:05.934Z",
-      "action": "[Aurangzeb] Added task \"control logic to made with sen...\" to Accumulator",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "add",
-        "taskId": "t17896302659340znx"
-      },
-      "taskId": "t17896302659340znx"
     }
   ],
   "machineMeta": {
@@ -8454,7 +8472,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-10-01T12:48:49.380Z",
-    "Aurangzeb": "2026-10-24T04:47:19.847Z",
+    "Aurangzeb": "2026-10-24T04:47:35.471Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
