@@ -5015,12 +5015,42 @@
       "deadline": "",
       "dateStarted": "",
       "dateFinished": ""
+    },
+    {
+      "id": "t17928176353182d20",
+      "machine": "Printing",
+      "category": "Electrical",
+      "desc": "Print unit backward displacement speed is too slow, to be fixed.",
+      "priority": "Medium",
+      "progress": 0,
+      "status": "Not Started",
+      "remarks": "",
+      "responsible": "",
+      "updated": "24 Oct 2026",
+      "createdBy": "Aurangzeb",
+      "lastEditedBy": "Aurangzeb",
+      "image": null,
+      "waitingOn": "",
+      "deadline": "",
+      "dateStarted": "",
+      "dateFinished": ""
     }
   ],
   "settings": {
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t1792817635318csxq",
+      "time": "2026-10-24T04:53:55.318Z",
+      "action": "[Aurangzeb] Added task \"Print unit backward displaceme...\" to Printing",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "add",
+        "taskId": "t17928176353182d20"
+      },
+      "taskId": "t17928176353182d20"
+    },
     {
       "id": "t1792817558351zj0j",
       "time": "2026-10-24T04:52:38.351Z",
@@ -7729,17 +7759,6 @@
         "taskId": "t1789640993322rrsh"
       },
       "taskId": "t1789640993322rrsh"
-    },
-    {
-      "id": "t17896409308505i62",
-      "time": "2026-09-17T10:28:50.850Z",
-      "action": "[Aurangzeb] Added task \"motors connections to be done....\" to FG Conveyor",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "add",
-        "taskId": "t1789640930850pzo5"
-      },
-      "taskId": "t1789640930850pzo5"
     }
   ],
   "machineMeta": {
@@ -8473,7 +8492,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-10-01T12:48:49.380Z",
-    "Aurangzeb": "2026-10-24T04:52:38.351Z",
+    "Aurangzeb": "2026-10-24T04:53:55.318Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
