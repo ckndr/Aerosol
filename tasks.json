@@ -4813,11 +4813,11 @@
       "category": "Electrical",
       "desc": "control logic to made with sensors and limit switches and other requisites for proper automatic fuction.",
       "priority": "High",
-      "progress": 95,
-      "status": "In Progress",
+      "progress": 100,
+      "status": "Completed",
       "remarks": "",
       "responsible": "",
-      "updated": "16 Oct 2026",
+      "updated": "24 Oct 2026",
       "createdBy": "Aurangzeb",
       "lastEditedBy": "Aurangzeb",
       "image": null,
@@ -5097,6 +5097,35 @@
     "autoSync": true
   },
   "activityLog": [
+    {
+      "id": "t179281791731132jh",
+      "time": "2026-10-24T04:58:37.311Z",
+      "action": "[Aurangzeb] Updated task \"control logic to made with sen...\" [Status: In Progress → Completed, Progress: 95% → 100%] on Accumulator",
+      "user": "Aurangzeb",
+      "undoData": {
+        "type": "edit",
+        "prevTask": {
+          "id": "t17896302659340znx",
+          "machine": "Accumulator",
+          "category": "Electrical",
+          "desc": "control logic to made with sensors and limit switches and other requisites for proper automatic fuction.",
+          "priority": "High",
+          "progress": 95,
+          "status": "In Progress",
+          "remarks": "",
+          "responsible": "",
+          "updated": "16 Oct 2026",
+          "createdBy": "Aurangzeb",
+          "lastEditedBy": "Aurangzeb",
+          "image": null,
+          "waitingOn": "",
+          "deadline": "",
+          "dateStarted": "",
+          "dateFinished": ""
+        }
+      },
+      "taskId": "t17896302659340znx"
+    },
     {
       "id": "t1792817853894actq",
       "time": "2026-10-24T04:57:33.894Z",
@@ -7769,35 +7798,6 @@
         }
       },
       "taskId": "t178729744923813tc"
-    },
-    {
-      "id": "t1789641120137ys8j",
-      "time": "2026-09-17T10:32:00.137Z",
-      "action": "[Aurangzeb] Updated task \"Electrical panels for power di...\" [Status: In Progress → Completed, Progress: 20% → 100%] on Main Power Distribution",
-      "user": "Aurangzeb",
-      "undoData": {
-        "type": "edit",
-        "prevTask": {
-          "id": "t_756784",
-          "machine": "Main Power Distribution",
-          "category": "Electrical",
-          "desc": "Electrical panels for power distribution",
-          "priority": "High",
-          "progress": 20,
-          "status": "In Progress",
-          "responsible": "Arsalan",
-          "deadline": "",
-          "remarks": "",
-          "updated": "",
-          "waitingOn": "",
-          "dateStarted": "",
-          "dateFinished": "",
-          "lastEditedBy": "",
-          "image": "",
-          "createdBy": ""
-        }
-      },
-      "taskId": "t_756784"
     }
   ],
   "machineMeta": {
@@ -8531,7 +8531,7 @@
   ],
   "activeSessions": {
     "Sikander": "2026-10-01T12:48:49.380Z",
-    "Aurangzeb": "2026-10-24T04:57:33.894Z",
+    "Aurangzeb": "2026-10-24T04:58:37.311Z",
     "Saqib": "2026-08-22T08:46:49.482Z",
     "Bilal": "2026-08-21T07:35:38.328Z",
     "Saif": "2026-09-02T08:11:07.995Z"
